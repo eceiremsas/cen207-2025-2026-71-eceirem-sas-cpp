@@ -1,0 +1,64 @@
+\doxysection{heap.\+h}
+\hypertarget{heap_8h_source}{}\label{heap_8h_source}\index{include/heap.h@{include/heap.h}}
+\mbox{\hyperlink{heap_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ HEAP\_H\ \ }\textcolor{comment}{//\ Include\ guard\ start}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ HEAP\_H\ \ }\textcolor{comment}{//\ Define\ HEAP\_H\ macro}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{recipe_8h}{recipe.h}}"{}}\ \ \textcolor{comment}{//\ For\ the\ Recipe\ data\ structure}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \textcolor{comment}{/*\ ============================================================================}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ *\ DATA\ STRUCTURES}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ *\ ============================================================================\ */}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{struct_recipe}{Recipe}}**\ \mbox{\hyperlink{struct_heap_ac3ae85552cef8633752a8de26d1f1184}{recipes}};\ \ \textcolor{comment}{//\ Dynamic\ array\ of\ recipe\ pointers}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_heap_ac291cf589f86e95198621d33e21a05a6}{size}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Current\ number\ of\ elements\ in\ the\ heap}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_heap_a96f55831332665f95d0231ee59311246}{capacity}};\ \ \ \ \ \ \textcolor{comment}{//\ Maximum\ capacity\ of\ the\ heap}}
+\DoxyCodeLine{00027\ \}\ \mbox{\hyperlink{struct_heap}{Heap}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ ============================================================================}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ FUNCTION\ DECLARATIONS}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ ============================================================================\ */}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \mbox{\hyperlink{struct_heap}{Heap}}*\ \mbox{\hyperlink{heap_8h_a8fe6b045ac2b4491f0c062395acac430}{heap\_create}}(\textcolor{keywordtype}{int}\ capacity);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{heap_8h_a205d61f52bd64bb8ed9b738ab36af848}{heap\_insert}}(\mbox{\hyperlink{struct_heap}{Heap}}*\ heap,\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00056\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{heap_8h_a6c39fc1e805cc98ee4d41e3fdad7161a}{heap\_extract\_min}}(\mbox{\hyperlink{struct_heap}{Heap}}*\ heap);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00064\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{heap_8h_ae1a8c536a1afd85170a0244c568b18a2}{heap\_peek}}(\mbox{\hyperlink{struct_heap}{Heap}}*\ heap);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{heap_8h_a2f9f919fcbab3c57df84fa7db87d4af8}{heapify\_up}}(\mbox{\hyperlink{struct_heap}{Heap}}*\ heap,\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{heap_8h_aa33d7b3c74397a16d67a4f8b2ed301a5}{heapify\_down}}(\mbox{\hyperlink{struct_heap}{Heap}}*\ heap,\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00088\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{heap_8h_ac2fb89e79c07a9207780988bc6eff91b}{heap\_swap}}(\mbox{\hyperlink{struct_recipe}{Recipe}}**\ recipe1,\ \mbox{\hyperlink{struct_recipe}{Recipe}}**\ recipe2);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00096\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{heap_8h_ae360a8cd3262fa6a61f5a01c8090471c}{heap\_sort\_recipes}}(\mbox{\hyperlink{struct_recipe}{Recipe}}**\ recipes,\ \textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{heap_8h_a62f0b32d4ae7ebfa9780dbda1fcc71d6}{heap\_is\_empty}}(\mbox{\hyperlink{struct_heap}{Heap}}*\ heap);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{heap_8h_ab62b6464e8d5da1d06343441e1c36333}{heap\_is\_full}}(\mbox{\hyperlink{struct_heap}{Heap}}*\ heap);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00119\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{heap_8h_ae73ebec7e224ac8ea213a563985a1471}{heap\_destroy}}(\mbox{\hyperlink{struct_heap}{Heap}}*\ heap);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00127\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{heap_8h_ac9c81831cfff46fe54d120b772a2e22c}{heap\_parent}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00135\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{heap_8h_adf3fd90d8b5f71e543f780b6d61e6140}{heap\_left\_child}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00143\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{heap_8h_a7f6e4e28fbe87843db17da09ff5140d1}{heap\_right\_child}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \textcolor{comment}{//\ ===\ Binary\ File\ Operations\ ===}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{comment}{//\ Saves\ the\ heap\ to\ a\ binary\ file}}
+\DoxyCodeLine{00148\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{heap_8h_aecc5cdc687a35c01edc669e9dc6b918b}{heap\_save\_binary}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_heap}{Heap}}*\ heap,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{comment}{//\ Loads\ a\ heap\ from\ a\ binary\ file}}
+\DoxyCodeLine{00151\ \mbox{\hyperlink{struct_heap}{Heap}}*\ \mbox{\hyperlink{heap_8h_ae859e93dbbf9c17e97b78d977896c1f8}{heap\_load\_binary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HEAP\_H\ -\/\ Include\ guard\ end}}
+
+\end{DoxyCode}

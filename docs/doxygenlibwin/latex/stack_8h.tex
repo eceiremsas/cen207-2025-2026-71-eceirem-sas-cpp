@@ -1,0 +1,324 @@
+\doxysection{include/stack.h File Reference}
+\hypertarget{stack_8h}{}\label{stack_8h}\index{include/stack.h@{include/stack.h}}
+{\ttfamily \#include "{}recipe.\+h"{}}\newline
+Include dependency graph for stack.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{stack_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stack_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}}
+\begin{DoxyCompactList}\small\item\em Represents a single operation stored in the undo stack. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{struct_stack}{Stack}}
+\begin{DoxyCompactList}\small\item\em Represents a fixed-\/size stack used for undo operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{stack_8h_aec2864553519b450501f110ca0c3e3b7}{STACK\+\_\+H}}
+\item 
+\#define \mbox{\hyperlink{stack_8h_af94d2c1547a19bc8afb8f08e48847d1c}{UNDO\+\_\+\+STACK\+\_\+\+SIZE}}~50
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}} \{ \newline
+\mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a96186829480e5b34b1373288e956b1c8}{OP\+\_\+\+ADD}}
+, \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a2aee02a522cd2fb541ec508382fdc646}{OP\+\_\+\+EDIT}}
+, \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a4c629f6a90286b343e3f222ff96f94d5}{OP\+\_\+\+DELETE}}
+, \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9}{Add}}
+, \newline
+\mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35}{Edit}}
+, \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18}{Delete}}
+, \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047ad3a0f825f42df18a5e4f006151a92edb}{OP\+\_\+\+ADD}}
+, \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047ade36069b96f4e88cce87bb5c386cf900}{OP\+\_\+\+EDIT}}
+, \newline
+\mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a1f880f83d676db79c78a5f4952ff9a4c}{OP\+\_\+\+DELETE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the type of operation stored in the undo stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{stack_8h_ae5a3d0d7d18942221d081e0bffd143ff}{stack\+\_\+create}} (void)
+\begin{DoxyCompactList}\small\item\em Creates and initializes an empty stack. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stack_8h_ac23f75e620cc2a76c24293df4589b5b2}{stack\+\_\+push}} (\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}stack, \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}} type, \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe)
+\begin{DoxyCompactList}\small\item\em Pushes a new operation onto the stack. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{stack_8h_a7e8112ce73793707d705d8e9e7db0921}{stack\+\_\+pop}} (\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}stack)
+\begin{DoxyCompactList}\small\item\em Removes and returns the top operation from the stack. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{stack_8h_a7b52f4571b1420d83af2073b3e889850}{stack\+\_\+peek}} (\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}stack)
+\begin{DoxyCompactList}\small\item\em Returns the top operation without removing it. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stack_8h_ac354159d81eee1ef4b0fcbb688e5723e}{stack\+\_\+is\+\_\+empty}} (\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}stack)
+\begin{DoxyCompactList}\small\item\em Checks if the stack is empty. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stack_8h_ad606fb12d4acf6f88caf97f18e6e1acb}{stack\+\_\+is\+\_\+full}} (\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}stack)
+\begin{DoxyCompactList}\small\item\em Checks if the stack is full. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stack_8h_a56c0c535d6e76d010500763370052972}{stack\+\_\+size}} (\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}stack)
+\begin{DoxyCompactList}\small\item\em Returns the number of elements currently in the stack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stack_8h_a1c78193162bca5a7c494c0750a3d58ed}{stack\+\_\+destroy}} (\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}stack)
+\begin{DoxyCompactList}\small\item\em Frees all memory used by the stack. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stack_8h_af167f136d150224afd6dc677166a397d}{stack\+\_\+save\+\_\+binary}} (const \mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}stack, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Saves the stack to a binary file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{stack_8h_a0bf22eef5c99ad7871927ece0984b3ce}{stack\+\_\+load\+\_\+binary}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Loads a stack from a binary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{stack_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{stack_8h_aec2864553519b450501f110ca0c3e3b7}\index{stack.h@{stack.h}!STACK\_H@{STACK\_H}}
+\index{STACK\_H@{STACK\_H}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{STACK\_H}{STACK\_H}}
+{\footnotesize\ttfamily \label{stack_8h_aec2864553519b450501f110ca0c3e3b7} 
+\#define STACK\+\_\+H}
+
+\Hypertarget{stack_8h_af94d2c1547a19bc8afb8f08e48847d1c}\index{stack.h@{stack.h}!UNDO\_STACK\_SIZE@{UNDO\_STACK\_SIZE}}
+\index{UNDO\_STACK\_SIZE@{UNDO\_STACK\_SIZE}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{UNDO\_STACK\_SIZE}{UNDO\_STACK\_SIZE}}
+{\footnotesize\ttfamily \label{stack_8h_af94d2c1547a19bc8afb8f08e48847d1c} 
+\#define UNDO\+\_\+\+STACK\+\_\+\+SIZE~50}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{stack_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047}\index{stack.h@{stack.h}!OperationType@{OperationType}}
+\index{OperationType@{OperationType}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{OperationType}{OperationType}}
+{\footnotesize\ttfamily \label{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047} 
+enum \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}}}
+
+
+
+Represents the type of operation stored in the undo stack. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OP\_ADD@{OP\_ADD}!stack.h@{stack.h}}\index{stack.h@{stack.h}!OP\_ADD@{OP\_ADD}}}\Hypertarget{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a96186829480e5b34b1373288e956b1c8}\label{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a96186829480e5b34b1373288e956b1c8} 
+OP\+\_\+\+ADD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OP\_EDIT@{OP\_EDIT}!stack.h@{stack.h}}\index{stack.h@{stack.h}!OP\_EDIT@{OP\_EDIT}}}\Hypertarget{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a2aee02a522cd2fb541ec508382fdc646}\label{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a2aee02a522cd2fb541ec508382fdc646} 
+OP\+\_\+\+EDIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OP\_DELETE@{OP\_DELETE}!stack.h@{stack.h}}\index{stack.h@{stack.h}!OP\_DELETE@{OP\_DELETE}}}\Hypertarget{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a4c629f6a90286b343e3f222ff96f94d5}\label{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a4c629f6a90286b343e3f222ff96f94d5} 
+OP\+\_\+\+DELETE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Add@{Add}!stack.h@{stack.h}}\index{stack.h@{stack.h}!Add@{Add}}}\Hypertarget{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9}\label{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9} 
+Add&\doxylink{struct_recipe}{Recipe} addition. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Edit@{Edit}!stack.h@{stack.h}}\index{stack.h@{stack.h}!Edit@{Edit}}}\Hypertarget{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35}\label{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35} 
+Edit&\doxylink{struct_recipe}{Recipe} modification. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delete@{Delete}!stack.h@{stack.h}}\index{stack.h@{stack.h}!Delete@{Delete}}}\Hypertarget{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18}\label{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18} 
+Delete&\doxylink{struct_recipe}{Recipe} deletion. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OP\_ADD@{OP\_ADD}!stack.h@{stack.h}}\index{stack.h@{stack.h}!OP\_ADD@{OP\_ADD}}}\Hypertarget{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047ad3a0f825f42df18a5e4f006151a92edb}\label{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047ad3a0f825f42df18a5e4f006151a92edb} 
+OP\+\_\+\+ADD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OP\_EDIT@{OP\_EDIT}!stack.h@{stack.h}}\index{stack.h@{stack.h}!OP\_EDIT@{OP\_EDIT}}}\Hypertarget{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047ade36069b96f4e88cce87bb5c386cf900}\label{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047ade36069b96f4e88cce87bb5c386cf900} 
+OP\+\_\+\+EDIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OP\_DELETE@{OP\_DELETE}!stack.h@{stack.h}}\index{stack.h@{stack.h}!OP\_DELETE@{OP\_DELETE}}}\Hypertarget{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a1f880f83d676db79c78a5f4952ff9a4c}\label{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a1f880f83d676db79c78a5f4952ff9a4c} 
+OP\+\_\+\+DELETE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{stack_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{stack_8h_ae5a3d0d7d18942221d081e0bffd143ff}\index{stack.h@{stack.h}!stack\_create@{stack\_create}}
+\index{stack\_create@{stack\_create}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{stack\_create()}{stack\_create()}}
+{\footnotesize\ttfamily \label{stack_8h_ae5a3d0d7d18942221d081e0bffd143ff} 
+\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*} stack\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Creates and initializes an empty stack. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the created stack, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{stack_8h_a1c78193162bca5a7c494c0750a3d58ed}\index{stack.h@{stack.h}!stack\_destroy@{stack\_destroy}}
+\index{stack\_destroy@{stack\_destroy}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{stack\_destroy()}{stack\_destroy()}}
+{\footnotesize\ttfamily \label{stack_8h_a1c78193162bca5a7c494c0750a3d58ed} 
+void stack\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{}\end{DoxyParamCaption})}
+
+
+
+Frees all memory used by the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Pointer to the stack \\
+\hline
+\end{DoxyParams}
+\Hypertarget{stack_8h_ac354159d81eee1ef4b0fcbb688e5723e}\index{stack.h@{stack.h}!stack\_is\_empty@{stack\_is\_empty}}
+\index{stack\_is\_empty@{stack\_is\_empty}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{stack\_is\_empty()}{stack\_is\_empty()}}
+{\footnotesize\ttfamily \label{stack_8h_ac354159d81eee1ef4b0fcbb688e5723e} 
+int stack\+\_\+is\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the stack is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Pointer to the stack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if empty, 0 otherwise 
+\end{DoxyReturn}
+\Hypertarget{stack_8h_ad606fb12d4acf6f88caf97f18e6e1acb}\index{stack.h@{stack.h}!stack\_is\_full@{stack\_is\_full}}
+\index{stack\_is\_full@{stack\_is\_full}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{stack\_is\_full()}{stack\_is\_full()}}
+{\footnotesize\ttfamily \label{stack_8h_ad606fb12d4acf6f88caf97f18e6e1acb} 
+int stack\+\_\+is\+\_\+full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the stack is full. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Pointer to the stack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if full, 0 otherwise 
+\end{DoxyReturn}
+\Hypertarget{stack_8h_a0bf22eef5c99ad7871927ece0984b3ce}\index{stack.h@{stack.h}!stack\_load\_binary@{stack\_load\_binary}}
+\index{stack\_load\_binary@{stack\_load\_binary}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{stack\_load\_binary()}{stack\_load\_binary()}}
+{\footnotesize\ttfamily \label{stack_8h_a0bf22eef5c99ad7871927ece0984b3ce} 
+\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*} stack\+\_\+load\+\_\+binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Loads a stack from a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the loaded stack, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{stack_8h_a7b52f4571b1420d83af2073b3e889850}\index{stack.h@{stack.h}!stack\_peek@{stack\_peek}}
+\index{stack\_peek@{stack\_peek}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{stack\_peek()}{stack\_peek()}}
+{\footnotesize\ttfamily \label{stack_8h_a7b52f4571b1420d83af2073b3e889850} 
+\mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} \texorpdfstring{$\ast$}{*} stack\+\_\+peek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{}\end{DoxyParamCaption})}
+
+
+
+Returns the top operation without removing it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Pointer to the stack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the top operation, or NULL if stack is empty 
+\end{DoxyReturn}
+\Hypertarget{stack_8h_a7e8112ce73793707d705d8e9e7db0921}\index{stack.h@{stack.h}!stack\_pop@{stack\_pop}}
+\index{stack\_pop@{stack\_pop}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{stack\_pop()}{stack\_pop()}}
+{\footnotesize\ttfamily \label{stack_8h_a7e8112ce73793707d705d8e9e7db0921} 
+\mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} \texorpdfstring{$\ast$}{*} stack\+\_\+pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{}\end{DoxyParamCaption})}
+
+
+
+Removes and returns the top operation from the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Pointer to the stack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the top operation, or NULL if stack is empty 
+\end{DoxyReturn}
+\Hypertarget{stack_8h_ac23f75e620cc2a76c24293df4589b5b2}\index{stack.h@{stack.h}!stack\_push@{stack\_push}}
+\index{stack\_push@{stack\_push}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{stack\_push()}{stack\_push()}}
+{\footnotesize\ttfamily \label{stack_8h_ac23f75e620cc2a76c24293df4589b5b2} 
+int stack\+\_\+push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{, }\item[{\mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}}}]{type}{, }\item[{\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe}{}\end{DoxyParamCaption})}
+
+
+
+Pushes a new operation onto the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Pointer to the stack \\
+\hline
+{\em type} & Operation type \\
+\hline
+{\em recipe} & Pointer to the recipe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{stack_8h_af167f136d150224afd6dc677166a397d}\index{stack.h@{stack.h}!stack\_save\_binary@{stack\_save\_binary}}
+\index{stack\_save\_binary@{stack\_save\_binary}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{stack\_save\_binary()}{stack\_save\_binary()}}
+{\footnotesize\ttfamily \label{stack_8h_af167f136d150224afd6dc677166a397d} 
+int stack\+\_\+save\+\_\+binary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Saves the stack to a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Pointer to the stack \\
+\hline
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{stack_8h_a56c0c535d6e76d010500763370052972}\index{stack.h@{stack.h}!stack\_size@{stack\_size}}
+\index{stack\_size@{stack\_size}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{stack\_size()}{stack\_size()}}
+{\footnotesize\ttfamily \label{stack_8h_a56c0c535d6e76d010500763370052972} 
+int stack\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{}\end{DoxyParamCaption})}
+
+
+
+Returns the number of elements currently in the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Pointer to the stack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of elements 
+\end{DoxyReturn}

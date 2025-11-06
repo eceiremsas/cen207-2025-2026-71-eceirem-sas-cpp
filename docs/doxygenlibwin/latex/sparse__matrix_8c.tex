@@ -1,0 +1,219 @@
+\doxysection{src/sparse\+\_\+matrix.c File Reference}
+\hypertarget{sparse__matrix_8c}{}\label{sparse__matrix_8c}\index{src/sparse\_matrix.c@{src/sparse\_matrix.c}}
+
+
+Sparse Matrix implementation for ingredient-\/recipe relationships.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}sparse\+\_\+matrix.\+h"{}}\newline
+Include dependency graph for sparse\+\_\+matrix.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{sparse__matrix_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sparse__matrix_8c_ab766bcb718c51edfb2b98964ddd3ed9c}{sparse\+\_\+matrix\+\_\+create}} (void)
+\begin{DoxyCompactList}\small\item\em Creates and initializes an empty sparse matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sparse__matrix_8c_ac6d33da768694dfab65e0740ffb72581}{sparse\+\_\+matrix\+\_\+add\+\_\+entry}} (\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*}matrix, int row, int col, int value, const char \texorpdfstring{$\ast$}{*}ingredient)
+\begin{DoxyCompactList}\small\item\em Adds a new non-\/zero entry to the sparse matrix. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sparse__matrix_8c_a689ac680fdb17fdc24de1db56fe16c34}{sparse\+\_\+matrix\+\_\+get\+\_\+value}} (\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*}matrix, int row, int col)
+\begin{DoxyCompactList}\small\item\em Retrieves the value of a specific matrix cell (row, col). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sparse__matrix_8c_ab0aec6cac7e446701ad4d136e2dd7ef3}{sparse\+\_\+matrix\+\_\+find\+\_\+recipes\+\_\+by\+\_\+ingredient}} (\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*}matrix, const char \texorpdfstring{$\ast$}{*}ingredient, int \texorpdfstring{$\ast$}{*}recipe\+\_\+ids, int max\+\_\+results)
+\begin{DoxyCompactList}\small\item\em Finds all recipe IDs that include a specific ingredient. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sparse__matrix_8c_af4ab6655dfe045b9a86f328a2c52408d}{sparse\+\_\+matrix\+\_\+find\+\_\+ingredients\+\_\+by\+\_\+recipe}} (\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*}matrix, int recipe\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Finds all ingredients associated with a given recipe ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sparse__matrix_8c_a934ac7524b8952682f5d35f7cae67d32}{sparse\+\_\+matrix\+\_\+display}} (\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*}matrix)
+\begin{DoxyCompactList}\small\item\em Displays all non-\/zero entries in the sparse matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sparse__matrix_8c_af6943df380c6b7afde192c0c1492d6e0}{sparse\+\_\+matrix\+\_\+destroy}} (\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*}matrix)
+\begin{DoxyCompactList}\small\item\em Frees all memory allocated for the sparse matrix. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sparse__matrix_8c_a49f0b5d5b30884a12cc01426f18cd772}{sparse\+\_\+matrix\+\_\+save\+\_\+binary}} (const \mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*}matrix, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Saves the sparse matrix to a binary file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sparse__matrix_8c_ae3d03bd5066e8271d732e5c3a8424346}{sparse\+\_\+matrix\+\_\+load\+\_\+binary}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Loads a sparse matrix from a binary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sparse Matrix implementation for ingredient-\/recipe relationships. 
+
+Linked list-\/based sparse matrix for efficient ingredient search 
+
+\label{doc-func-members}
+\Hypertarget{sparse__matrix_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{sparse__matrix_8c_ac6d33da768694dfab65e0740ffb72581}\index{sparse\_matrix.c@{sparse\_matrix.c}!sparse\_matrix\_add\_entry@{sparse\_matrix\_add\_entry}}
+\index{sparse\_matrix\_add\_entry@{sparse\_matrix\_add\_entry}!sparse\_matrix.c@{sparse\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{sparse\_matrix\_add\_entry()}{sparse\_matrix\_add\_entry()}}
+{\footnotesize\ttfamily \label{sparse__matrix_8c_ac6d33da768694dfab65e0740ffb72581} 
+void sparse\+\_\+matrix\+\_\+add\+\_\+entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{int}]{row}{, }\item[{int}]{col}{, }\item[{int}]{value}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{ingredient}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new non-\/zero entry to the sparse matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the sparse matrix \\
+\hline
+{\em row} & Row index (typically recipe ID) \\
+\hline
+{\em col} & Column index (typically ingredient ID) \\
+\hline
+{\em value} & Non-\/zero value \\
+\hline
+{\em ingredient} & Ingredient name \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sparse__matrix_8c_ab766bcb718c51edfb2b98964ddd3ed9c}\index{sparse\_matrix.c@{sparse\_matrix.c}!sparse\_matrix\_create@{sparse\_matrix\_create}}
+\index{sparse\_matrix\_create@{sparse\_matrix\_create}!sparse\_matrix.c@{sparse\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{sparse\_matrix\_create()}{sparse\_matrix\_create()}}
+{\footnotesize\ttfamily \label{sparse__matrix_8c_ab766bcb718c51edfb2b98964ddd3ed9c} 
+\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*} sparse\+\_\+matrix\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Creates and initializes an empty sparse matrix. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the created sparse matrix, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{sparse__matrix_8c_af6943df380c6b7afde192c0c1492d6e0}\index{sparse\_matrix.c@{sparse\_matrix.c}!sparse\_matrix\_destroy@{sparse\_matrix\_destroy}}
+\index{sparse\_matrix\_destroy@{sparse\_matrix\_destroy}!sparse\_matrix.c@{sparse\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{sparse\_matrix\_destroy()}{sparse\_matrix\_destroy()}}
+{\footnotesize\ttfamily \label{sparse__matrix_8c_af6943df380c6b7afde192c0c1492d6e0} 
+void sparse\+\_\+matrix\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix}{}\end{DoxyParamCaption})}
+
+
+
+Frees all memory allocated for the sparse matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the sparse matrix \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sparse__matrix_8c_a934ac7524b8952682f5d35f7cae67d32}\index{sparse\_matrix.c@{sparse\_matrix.c}!sparse\_matrix\_display@{sparse\_matrix\_display}}
+\index{sparse\_matrix\_display@{sparse\_matrix\_display}!sparse\_matrix.c@{sparse\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{sparse\_matrix\_display()}{sparse\_matrix\_display()}}
+{\footnotesize\ttfamily \label{sparse__matrix_8c_a934ac7524b8952682f5d35f7cae67d32} 
+void sparse\+\_\+matrix\+\_\+display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix}{}\end{DoxyParamCaption})}
+
+
+
+Displays all non-\/zero entries in the sparse matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the sparse matrix \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sparse__matrix_8c_af4ab6655dfe045b9a86f328a2c52408d}\index{sparse\_matrix.c@{sparse\_matrix.c}!sparse\_matrix\_find\_ingredients\_by\_recipe@{sparse\_matrix\_find\_ingredients\_by\_recipe}}
+\index{sparse\_matrix\_find\_ingredients\_by\_recipe@{sparse\_matrix\_find\_ingredients\_by\_recipe}!sparse\_matrix.c@{sparse\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{sparse\_matrix\_find\_ingredients\_by\_recipe()}{sparse\_matrix\_find\_ingredients\_by\_recipe()}}
+{\footnotesize\ttfamily \label{sparse__matrix_8c_af4ab6655dfe045b9a86f328a2c52408d} 
+int sparse\+\_\+matrix\+\_\+find\+\_\+ingredients\+\_\+by\+\_\+recipe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{int}]{recipe\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Finds all ingredients associated with a given recipe ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the sparse matrix \\
+\hline
+{\em recipe\+\_\+id} & \doxylink{struct_recipe}{Recipe} ID to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of ingredients found 
+\end{DoxyReturn}
+\Hypertarget{sparse__matrix_8c_ab0aec6cac7e446701ad4d136e2dd7ef3}\index{sparse\_matrix.c@{sparse\_matrix.c}!sparse\_matrix\_find\_recipes\_by\_ingredient@{sparse\_matrix\_find\_recipes\_by\_ingredient}}
+\index{sparse\_matrix\_find\_recipes\_by\_ingredient@{sparse\_matrix\_find\_recipes\_by\_ingredient}!sparse\_matrix.c@{sparse\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{sparse\_matrix\_find\_recipes\_by\_ingredient()}{sparse\_matrix\_find\_recipes\_by\_ingredient()}}
+{\footnotesize\ttfamily \label{sparse__matrix_8c_ab0aec6cac7e446701ad4d136e2dd7ef3} 
+int sparse\+\_\+matrix\+\_\+find\+\_\+recipes\+\_\+by\+\_\+ingredient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{ingredient}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{recipe\+\_\+ids}{, }\item[{int}]{max\+\_\+results}{}\end{DoxyParamCaption})}
+
+
+
+Finds all recipe IDs that include a specific ingredient. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the sparse matrix \\
+\hline
+{\em ingredient} & Ingredient name to search for \\
+\hline
+{\em recipe\+\_\+ids} & Array to store found recipe IDs \\
+\hline
+{\em max\+\_\+results} & Maximum number of results \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of recipes found 
+\end{DoxyReturn}
+\Hypertarget{sparse__matrix_8c_a689ac680fdb17fdc24de1db56fe16c34}\index{sparse\_matrix.c@{sparse\_matrix.c}!sparse\_matrix\_get\_value@{sparse\_matrix\_get\_value}}
+\index{sparse\_matrix\_get\_value@{sparse\_matrix\_get\_value}!sparse\_matrix.c@{sparse\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{sparse\_matrix\_get\_value()}{sparse\_matrix\_get\_value()}}
+{\footnotesize\ttfamily \label{sparse__matrix_8c_a689ac680fdb17fdc24de1db56fe16c34} 
+int sparse\+\_\+matrix\+\_\+get\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{int}]{row}{, }\item[{int}]{col}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the value of a specific matrix cell (row, col). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the sparse matrix \\
+\hline
+{\em row} & Row index \\
+\hline
+{\em col} & Column index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value at (row, col), or 0 if not found 
+\end{DoxyReturn}
+\Hypertarget{sparse__matrix_8c_ae3d03bd5066e8271d732e5c3a8424346}\index{sparse\_matrix.c@{sparse\_matrix.c}!sparse\_matrix\_load\_binary@{sparse\_matrix\_load\_binary}}
+\index{sparse\_matrix\_load\_binary@{sparse\_matrix\_load\_binary}!sparse\_matrix.c@{sparse\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{sparse\_matrix\_load\_binary()}{sparse\_matrix\_load\_binary()}}
+{\footnotesize\ttfamily \label{sparse__matrix_8c_ae3d03bd5066e8271d732e5c3a8424346} 
+\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*} sparse\+\_\+matrix\+\_\+load\+\_\+binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Loads a sparse matrix from a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the loaded sparse matrix, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{sparse__matrix_8c_a49f0b5d5b30884a12cc01426f18cd772}\index{sparse\_matrix.c@{sparse\_matrix.c}!sparse\_matrix\_save\_binary@{sparse\_matrix\_save\_binary}}
+\index{sparse\_matrix\_save\_binary@{sparse\_matrix\_save\_binary}!sparse\_matrix.c@{sparse\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{sparse\_matrix\_save\_binary()}{sparse\_matrix\_save\_binary()}}
+{\footnotesize\ttfamily \label{sparse__matrix_8c_a49f0b5d5b30884a12cc01426f18cd772} 
+int sparse\+\_\+matrix\+\_\+save\+\_\+binary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Saves the sparse matrix to a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the sparse matrix \\
+\hline
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}

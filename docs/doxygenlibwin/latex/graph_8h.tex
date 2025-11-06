@@ -1,0 +1,352 @@
+\doxysection{include/graph.h File Reference}
+\hypertarget{graph_8h}{}\label{graph_8h}\index{include/graph.h@{include/graph.h}}
+{\ttfamily \#include "{}recipe.\+h"{}}\newline
+Include dependency graph for graph.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{graph_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graph_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_graph_edge}{Graph\+Edge}}
+\item 
+struct \mbox{\hyperlink{struct_graph_vertex}{Graph\+Vertex}}
+\item 
+class \mbox{\hyperlink{struct_graph}{Graph}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{graph_8h_acd7f50a6afbef2093ca1f57eb3768f01}{MAX\+\_\+\+GRAPH\+\_\+\+VERTICES}}~100
+\item 
+\#define \mbox{\hyperlink{graph_8h_a75f1d9ff4d7a931fe499453e94dd64e9}{GRAPH\+\_\+H}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Graph\+Edge \mbox{\hyperlink{graph_8h_aa373a3f8949b92436178c5c9e816214b}{Graph\+Edge}}
+\item 
+typedef struct Graph\+Vertex \mbox{\hyperlink{graph_8h_ae459975c186d04dc20f3b996e4f52f84}{Graph\+Vertex}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{graph_8h_afe0e1755a339d64c48012898e9c477ac}{graph\+\_\+create}} (void)
+\begin{DoxyCompactList}\small\item\em Creates and initializes a new \doxylink{struct_graph}{Graph} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graph_8h_afbf1116299f62bb1b472b80a1f695b5b}{graph\+\_\+add\+\_\+vertex}} (\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}graph, int recipe\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Adds a new vertex (recipe) to the graph. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graph_8h_a3a2134ed26598a36885b537d6190e72d}{graph\+\_\+add\+\_\+edge}} (\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}graph, int from\+\_\+recipe\+\_\+id, int to\+\_\+recipe\+\_\+id, const char \texorpdfstring{$\ast$}{*}label)
+\begin{DoxyCompactList}\small\item\em Adds a directed edge between two recipes with a given label. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_graph_vertex}{Graph\+Vertex}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{graph_8h_a9e6a899727f15619ddc47d1d58bcd314}{graph\+\_\+find\+\_\+vertex}} (\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}graph, int recipe\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Finds and returns a vertex pointer by its recipe ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graph_8h_ae080e05395403df88f3bc1dec98f2bad}{graph\+\_\+display\+\_\+dependencies}} (\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}graph, int recipe\+\_\+id, int depth)
+\begin{DoxyCompactList}\small\item\em Recursively displays all dependencies of a recipe. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graph_8h_a0d1e7ca98e68de8128951602b4d8336d}{graph\+\_\+has\+\_\+cycle}} (\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}graph)
+\begin{DoxyCompactList}\small\item\em Checks if the graph contains any cycle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graph_8h_a5c5c8f6414d86da1c1a46e351dd2ef0d}{graph\+\_\+dfs\+\_\+cycle\+\_\+helper}} (\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}graph, int vertex\+\_\+id, int visited\mbox{[}$\,$\mbox{]}, int rec\+\_\+stack\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Helper function for DFS-\/based cycle detection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graph_8h_ac42104632f5a79617fc14602b8b14fc1}{graph\+\_\+reset\+\_\+visited}} (\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}graph)
+\begin{DoxyCompactList}\small\item\em Resets the \textquotesingle{}visited\textquotesingle{} flag for all vertices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graph_8h_a0587b1cdbfee591e41793bef7f8e0c87}{graph\+\_\+destroy}} (\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}graph)
+\begin{DoxyCompactList}\small\item\em Frees all allocated memory associated with the graph. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graph_8h_ad0da44ec0a7d8e477051a8a24f11f4bc}{graph\+\_\+save\+\_\+binary}} (const \mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}graph, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Saves the graph to a binary file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{graph_8h_a1979ababd3cdf262c31941cdb0f16201}{graph\+\_\+load\+\_\+binary}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Loads a graph from a binary file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graph_8h_ac81a6f68744b2c0037b65bc196e581b7}{graph\+\_\+bfs}} (\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}graph, int start\+\_\+vertex\+\_\+id, void(\texorpdfstring{$\ast$}{*}visit)(int vertex\+\_\+id))
+\begin{DoxyCompactList}\small\item\em Performs Breadth-\/\+First Search (BFS) traversal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graph_8h_a119029bd09b2a9a61796553b208a0d07}{graph\+\_\+dfs}} (\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}graph, int start\+\_\+vertex\+\_\+id, void(\texorpdfstring{$\ast$}{*}visit)(int vertex\+\_\+id))
+\begin{DoxyCompactList}\small\item\em Performs Depth-\/\+First Search (DFS) traversal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{graph_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{graph_8h_a75f1d9ff4d7a931fe499453e94dd64e9}\index{graph.h@{graph.h}!GRAPH\_H@{GRAPH\_H}}
+\index{GRAPH\_H@{GRAPH\_H}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{GRAPH\_H}{GRAPH\_H}}
+{\footnotesize\ttfamily \label{graph_8h_a75f1d9ff4d7a931fe499453e94dd64e9} 
+\#define GRAPH\+\_\+H}
+
+\Hypertarget{graph_8h_acd7f50a6afbef2093ca1f57eb3768f01}\index{graph.h@{graph.h}!MAX\_GRAPH\_VERTICES@{MAX\_GRAPH\_VERTICES}}
+\index{MAX\_GRAPH\_VERTICES@{MAX\_GRAPH\_VERTICES}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_GRAPH\_VERTICES}{MAX\_GRAPH\_VERTICES}}
+{\footnotesize\ttfamily \label{graph_8h_acd7f50a6afbef2093ca1f57eb3768f01} 
+\#define MAX\+\_\+\+GRAPH\+\_\+\+VERTICES~100}
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{graph_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{graph_8h_aa373a3f8949b92436178c5c9e816214b}\index{graph.h@{graph.h}!GraphEdge@{GraphEdge}}
+\index{GraphEdge@{GraphEdge}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{GraphEdge}{GraphEdge}}
+{\footnotesize\ttfamily \label{graph_8h_aa373a3f8949b92436178c5c9e816214b} 
+typedef struct Graph\+Edge Graph\+Edge}
+
+\Hypertarget{graph_8h_ae459975c186d04dc20f3b996e4f52f84}\index{graph.h@{graph.h}!GraphVertex@{GraphVertex}}
+\index{GraphVertex@{GraphVertex}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{GraphVertex}{GraphVertex}}
+{\footnotesize\ttfamily \label{graph_8h_ae459975c186d04dc20f3b996e4f52f84} 
+typedef struct Graph\+Vertex Graph\+Vertex}
+
+
+
+\label{doc-func-members}
+\Hypertarget{graph_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{graph_8h_a3a2134ed26598a36885b537d6190e72d}\index{graph.h@{graph.h}!graph\_add\_edge@{graph\_add\_edge}}
+\index{graph\_add\_edge@{graph\_add\_edge}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{graph\_add\_edge()}{graph\_add\_edge()}}
+{\footnotesize\ttfamily \label{graph_8h_a3a2134ed26598a36885b537d6190e72d} 
+int graph\+\_\+add\+\_\+edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{, }\item[{int}]{from\+\_\+recipe\+\_\+id}{, }\item[{int}]{to\+\_\+recipe\+\_\+id}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{label}{}\end{DoxyParamCaption})}
+
+
+
+Adds a directed edge between two recipes with a given label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Pointer to the graph \\
+\hline
+{\em from\+\_\+recipe\+\_\+id} & Source recipe ID \\
+\hline
+{\em to\+\_\+recipe\+\_\+id} & Target recipe ID \\
+\hline
+{\em label} & Edge label \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{graph_8h_afbf1116299f62bb1b472b80a1f695b5b}\index{graph.h@{graph.h}!graph\_add\_vertex@{graph\_add\_vertex}}
+\index{graph\_add\_vertex@{graph\_add\_vertex}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{graph\_add\_vertex()}{graph\_add\_vertex()}}
+{\footnotesize\ttfamily \label{graph_8h_afbf1116299f62bb1b472b80a1f695b5b} 
+int graph\+\_\+add\+\_\+vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{, }\item[{int}]{recipe\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new vertex (recipe) to the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Pointer to the graph \\
+\hline
+{\em recipe\+\_\+id} & \doxylink{struct_recipe}{Recipe} ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{graph_8h_ac81a6f68744b2c0037b65bc196e581b7}\index{graph.h@{graph.h}!graph\_bfs@{graph\_bfs}}
+\index{graph\_bfs@{graph\_bfs}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{graph\_bfs()}{graph\_bfs()}}
+{\footnotesize\ttfamily \label{graph_8h_ac81a6f68744b2c0037b65bc196e581b7} 
+void graph\+\_\+bfs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{, }\item[{int}]{start\+\_\+vertex\+\_\+id}{, }\item[{void(\texorpdfstring{$\ast$}{*}}]{visit~}{)(int vertex\+\_\+id)}\end{DoxyParamCaption})}
+
+
+
+Performs Breadth-\/\+First Search (BFS) traversal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Pointer to the graph \\
+\hline
+{\em start\+\_\+vertex\+\_\+id} & Starting vertex ID \\
+\hline
+{\em visit} & Function pointer to call for each visited vertex \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graph_8h_afe0e1755a339d64c48012898e9c477ac}\index{graph.h@{graph.h}!graph\_create@{graph\_create}}
+\index{graph\_create@{graph\_create}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{graph\_create()}{graph\_create()}}
+{\footnotesize\ttfamily \label{graph_8h_afe0e1755a339d64c48012898e9c477ac} 
+\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*} graph\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Creates and initializes a new \doxylink{struct_graph}{Graph} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the created graph, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{graph_8h_a0587b1cdbfee591e41793bef7f8e0c87}\index{graph.h@{graph.h}!graph\_destroy@{graph\_destroy}}
+\index{graph\_destroy@{graph\_destroy}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{graph\_destroy()}{graph\_destroy()}}
+{\footnotesize\ttfamily \label{graph_8h_a0587b1cdbfee591e41793bef7f8e0c87} 
+void graph\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{}\end{DoxyParamCaption})}
+
+
+
+Frees all allocated memory associated with the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Pointer to the graph \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graph_8h_a119029bd09b2a9a61796553b208a0d07}\index{graph.h@{graph.h}!graph\_dfs@{graph\_dfs}}
+\index{graph\_dfs@{graph\_dfs}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{graph\_dfs()}{graph\_dfs()}}
+{\footnotesize\ttfamily \label{graph_8h_a119029bd09b2a9a61796553b208a0d07} 
+void graph\+\_\+dfs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{, }\item[{int}]{start\+\_\+vertex\+\_\+id}{, }\item[{void(\texorpdfstring{$\ast$}{*}}]{visit~}{)(int vertex\+\_\+id)}\end{DoxyParamCaption})}
+
+
+
+Performs Depth-\/\+First Search (DFS) traversal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Pointer to the graph \\
+\hline
+{\em start\+\_\+vertex\+\_\+id} & Starting vertex ID \\
+\hline
+{\em visit} & Function pointer to call for each visited vertex \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graph_8h_a5c5c8f6414d86da1c1a46e351dd2ef0d}\index{graph.h@{graph.h}!graph\_dfs\_cycle\_helper@{graph\_dfs\_cycle\_helper}}
+\index{graph\_dfs\_cycle\_helper@{graph\_dfs\_cycle\_helper}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{graph\_dfs\_cycle\_helper()}{graph\_dfs\_cycle\_helper()}}
+{\footnotesize\ttfamily \label{graph_8h_a5c5c8f6414d86da1c1a46e351dd2ef0d} 
+int graph\+\_\+dfs\+\_\+cycle\+\_\+helper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{, }\item[{int}]{vertex\+\_\+id}{, }\item[{int}]{visited}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{rec\+\_\+stack}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Helper function for DFS-\/based cycle detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Pointer to the graph \\
+\hline
+{\em vertex\+\_\+id} & Current vertex ID \\
+\hline
+{\em visited} & Visited array \\
+\hline
+{\em rec\+\_\+stack} & Recursion stack array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if cycle found, 0 otherwise 
+\end{DoxyReturn}
+\Hypertarget{graph_8h_ae080e05395403df88f3bc1dec98f2bad}\index{graph.h@{graph.h}!graph\_display\_dependencies@{graph\_display\_dependencies}}
+\index{graph\_display\_dependencies@{graph\_display\_dependencies}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{graph\_display\_dependencies()}{graph\_display\_dependencies()}}
+{\footnotesize\ttfamily \label{graph_8h_ae080e05395403df88f3bc1dec98f2bad} 
+void graph\+\_\+display\+\_\+dependencies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{, }\item[{int}]{recipe\+\_\+id}{, }\item[{int}]{depth}{}\end{DoxyParamCaption})}
+
+
+
+Recursively displays all dependencies of a recipe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Pointer to the graph \\
+\hline
+{\em recipe\+\_\+id} & \doxylink{struct_recipe}{Recipe} ID to display \\
+\hline
+{\em depth} & Current depth level \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graph_8h_a9e6a899727f15619ddc47d1d58bcd314}\index{graph.h@{graph.h}!graph\_find\_vertex@{graph\_find\_vertex}}
+\index{graph\_find\_vertex@{graph\_find\_vertex}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{graph\_find\_vertex()}{graph\_find\_vertex()}}
+{\footnotesize\ttfamily \label{graph_8h_a9e6a899727f15619ddc47d1d58bcd314} 
+\mbox{\hyperlink{struct_graph_vertex}{Graph\+Vertex}} \texorpdfstring{$\ast$}{*} graph\+\_\+find\+\_\+vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{, }\item[{int}]{recipe\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Finds and returns a vertex pointer by its recipe ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Pointer to the graph \\
+\hline
+{\em recipe\+\_\+id} & \doxylink{struct_recipe}{Recipe} ID to find \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the vertex, or NULL if not found 
+\end{DoxyReturn}
+\Hypertarget{graph_8h_a0d1e7ca98e68de8128951602b4d8336d}\index{graph.h@{graph.h}!graph\_has\_cycle@{graph\_has\_cycle}}
+\index{graph\_has\_cycle@{graph\_has\_cycle}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{graph\_has\_cycle()}{graph\_has\_cycle()}}
+{\footnotesize\ttfamily \label{graph_8h_a0d1e7ca98e68de8128951602b4d8336d} 
+int graph\+\_\+has\+\_\+cycle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the graph contains any cycle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Pointer to the graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if cycle found, 0 otherwise 
+\end{DoxyReturn}
+\Hypertarget{graph_8h_a1979ababd3cdf262c31941cdb0f16201}\index{graph.h@{graph.h}!graph\_load\_binary@{graph\_load\_binary}}
+\index{graph\_load\_binary@{graph\_load\_binary}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{graph\_load\_binary()}{graph\_load\_binary()}}
+{\footnotesize\ttfamily \label{graph_8h_a1979ababd3cdf262c31941cdb0f16201} 
+\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*} graph\+\_\+load\+\_\+binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Loads a graph from a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the loaded graph, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{graph_8h_ac42104632f5a79617fc14602b8b14fc1}\index{graph.h@{graph.h}!graph\_reset\_visited@{graph\_reset\_visited}}
+\index{graph\_reset\_visited@{graph\_reset\_visited}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{graph\_reset\_visited()}{graph\_reset\_visited()}}
+{\footnotesize\ttfamily \label{graph_8h_ac42104632f5a79617fc14602b8b14fc1} 
+void graph\+\_\+reset\+\_\+visited (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{}\end{DoxyParamCaption})}
+
+
+
+Resets the \textquotesingle{}visited\textquotesingle{} flag for all vertices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Pointer to the graph \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graph_8h_ad0da44ec0a7d8e477051a8a24f11f4bc}\index{graph.h@{graph.h}!graph\_save\_binary@{graph\_save\_binary}}
+\index{graph\_save\_binary@{graph\_save\_binary}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{graph\_save\_binary()}{graph\_save\_binary()}}
+{\footnotesize\ttfamily \label{graph_8h_ad0da44ec0a7d8e477051a8a24f11f4bc} 
+int graph\+\_\+save\+\_\+binary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Saves the graph to a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Pointer to the graph \\
+\hline
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}

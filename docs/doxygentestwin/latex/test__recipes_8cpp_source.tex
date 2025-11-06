@@ -1,0 +1,840 @@
+\doxysection{test\+\_\+recipes.\+cpp}
+\hypertarget{test__recipes_8cpp_source}{}\label{test__recipes_8cpp_source}\index{tests/test\_recipes.cpp@{tests/test\_recipes.cpp}}
+\mbox{\hyperlink{test__recipes_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <gtest/gtest.h>}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00014}00014\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}../include/recipe.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}../include/linked\_list.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}../include/xor\_linked\_list.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}../include/sparse\_matrix.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}../include/stack.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}../include/queue.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}../include/heap.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}../include/graph.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00023}00023\ \textcolor{preprocessor}{\#include\ "{}../include/hash\_table.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00026}00026\ \textcolor{comment}{//\ Helper\ variables\ for\ traversal\ tests}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00027}00027\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ g\_forward\_count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00028}00028\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ g\_backward\_count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00029}00029\ \textcolor{keyword}{static}\ std::vector<int>\ g\_visited\_order;}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00031}00031\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ forward\_visit\_counter(Recipe*\ r)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{if}\ (r)\ g\_forward\_count++;}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00035}00035\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ backward\_visit\_counter(Recipe*\ r)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{if}\ (r)\ g\_backward\_count++;}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00039}00039\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ graph\_visit\_func(\textcolor{keywordtype}{int}\ vertex\_id)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00040}00040\ \ \ \ \ g\_visited\_order.push\_back(vertex\_id);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00041}00041\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00046}\mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{00046}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(RecipeTest,\ CreateRecipe)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00047}00047\ \ \ \ \ Recipe*\ r\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00048}00048\ \ \ \ \ ASSERT\_NE(r,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00049}00049\ \ \ \ \ EXPECT\_EQ(r-\/>id,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00050}00050\ \ \ \ \ EXPECT\_STREQ(r-\/>name,\ \textcolor{stringliteral}{"{}Pizza"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00051}00051\ \ \ \ \ EXPECT\_STREQ(r-\/>category,\ \textcolor{stringliteral}{"{}Lunch"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00052}00052\ \ \ \ \ EXPECT\_EQ(r-\/>calories,\ 800);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00053}00053\ \ \ \ \ EXPECT\_EQ(r-\/>preparation\_time,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00054}00054\ \ \ \ \ recipe\_destroy(r);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00060}\mbox{\hyperlink{test__recipes_8cpp_a0f960edf77f6f4ba44352eb7fcbe62af}{00060}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(RecipeTest,\ AddIngredient)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00061}00061\ \ \ \ \ Recipe*\ r\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00062}00062\ \ \ \ \ ASSERT\_NE(r,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00063}00063\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00064}00064\ \ \ \ \ EXPECT\_EQ(recipe\_add\_ingredient(r,\ \textcolor{stringliteral}{"{}Flour"{}}),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00065}00065\ \ \ \ \ EXPECT\_EQ(recipe\_add\_ingredient(r,\ \textcolor{stringliteral}{"{}Cheese"{}}),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00066}00066\ \ \ \ \ EXPECT\_EQ(r-\/>ingredient\_count,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00067}00067\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00068}00068\ \ \ \ \ recipe\_destroy(r);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00074}\mbox{\hyperlink{test__recipes_8cpp_afa4b2f4a4b3a84643273da8c5c8201ed}{00074}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(RecipeTest,\ SetInstructions)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00075}00075\ \ \ \ \ Recipe*\ r\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00076}00076\ \ \ \ \ ASSERT\_NE(r,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00077}00077\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00078}00078\ \ \ \ \ recipe\_set\_instructions(r,\ \textcolor{stringliteral}{"{}Mix\ ingredients\ and\ bake"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00079}00079\ \ \ \ \ EXPECT\_STREQ(r-\/>instructions,\ \textcolor{stringliteral}{"{}Mix\ ingredients\ and\ bake"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00080}00080\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00081}00081\ \ \ \ \ recipe\_destroy(r);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00082}00082\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00087}\mbox{\hyperlink{test__recipes_8cpp_a504d09e8e06289f7ac6e036b214ce584}{00087}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(RecipeTest,\ CompareByID)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00088}00088\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00089}00089\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00090}00090\ \ \ \ \ ASSERT\_NE(r1,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00091}00091\ \ \ \ \ ASSERT\_NE(r2,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00092}00092\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00093}00093\ \ \ \ \ EXPECT\_LT(recipe\_compare\_by\_id(r1,\ r2),\ 0);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00094}00094\ \ \ \ \ EXPECT\_GT(recipe\_compare\_by\_id(r2,\ r1),\ 0);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00095}00095\ \ \ \ \ EXPECT\_EQ(recipe\_compare\_by\_id(r1,\ r1),\ 0);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00096}00096\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00097}00097\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00098}00098\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00099}00099\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00104}\mbox{\hyperlink{test__recipes_8cpp_ae359bdc058e904a3961af63b6dd4c5ee}{00104}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(RecipeTest,\ CompareByCalories)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00105}00105\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00106}00106\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Salad"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 200,\ 10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00107}00107\ \ \ \ \ ASSERT\_NE(r1,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00108}00108\ \ \ \ \ ASSERT\_NE(r2,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00109}00109\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00110}00110\ \ \ \ \ EXPECT\_GT(recipe\_compare\_by\_calories(r1,\ r2),\ 0);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00111}00111\ \ \ \ \ EXPECT\_LT(recipe\_compare\_by\_calories(r2,\ r1),\ 0);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00112}00112\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00113}00113\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00114}00114\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00115}00115\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00120}\mbox{\hyperlink{test__recipes_8cpp_a5f7004fd49781d7b40dc93896efe880c}{00120}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(RecipeTest,\ CopyRecipe)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00121}00121\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00122}00122\ \ \ \ \ ASSERT\_NE(r1,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00123}00123\ \ \ \ \ recipe\_add\_ingredient(r1,\ \textcolor{stringliteral}{"{}Flour"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00124}00124\ \ \ \ \ recipe\_set\_instructions(r1,\ \textcolor{stringliteral}{"{}Bake\ for\ 20\ minutes"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00125}00125\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00126}00126\ \ \ \ \ Recipe*\ r2\ =\ recipe\_copy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00127}00127\ \ \ \ \ ASSERT\_NE(r2,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00128}00128\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00129}00129\ \ \ \ \ EXPECT\_EQ(r2-\/>id,\ r1-\/>id);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00130}00130\ \ \ \ \ EXPECT\_STREQ(r2-\/>name,\ r1-\/>name);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00131}00131\ \ \ \ \ EXPECT\_EQ(r2-\/>ingredient\_count,\ r1-\/>ingredient\_count);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00132}00132\ \ \ \ \ EXPECT\_STREQ(r2-\/>instructions,\ r1-\/>instructions);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00133}00133\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00134}00134\ \ \ \ \ \textcolor{comment}{//\ Verify\ they\ are\ different\ objects}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00135}00135\ \ \ \ \ EXPECT\_NE(r1,\ r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00136}00136\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00137}00137\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00138}00138\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00139}00139\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00144}\mbox{\hyperlink{test__recipes_8cpp_a18803e3c7a27c351f149d46d09be0208}{00144}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(RecipeTest,\ BinaryFileOperations)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00145}00145\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00146}00146\ \ \ \ \ ASSERT\_NE(r1,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00147}00147\ \ \ \ \ recipe\_add\_ingredient(r1,\ \textcolor{stringliteral}{"{}Flour"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00148}00148\ \ \ \ \ recipe\_add\_ingredient(r1,\ \textcolor{stringliteral}{"{}Cheese"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00149}00149\ \ \ \ \ recipe\_set\_instructions(r1,\ \textcolor{stringliteral}{"{}Bake\ for\ 20\ minutes"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00150}00150\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00151}00151\ \ \ \ \ \textcolor{comment}{//\ Save\ to\ binary\ file}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00152}00152\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename\ =\ \textcolor{stringliteral}{"{}test\_recipe.bin"{}};}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00153}00153\ \ \ \ \ EXPECT\_EQ(recipe\_save\_binary(r1,\ filename),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00154}00154\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00155}00155\ \ \ \ \ \textcolor{comment}{//\ Load\ from\ binary\ file}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00156}00156\ \ \ \ \ Recipe*\ r2\ =\ recipe\_load\_binary(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00157}00157\ \ \ \ \ ASSERT\_NE(r2,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00158}00158\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00159}00159\ \ \ \ \ \textcolor{comment}{//\ Verify\ loaded\ data}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00160}00160\ \ \ \ \ EXPECT\_EQ(r2-\/>id,\ r1-\/>id);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00161}00161\ \ \ \ \ EXPECT\_STREQ(r2-\/>name,\ r1-\/>name);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00162}00162\ \ \ \ \ EXPECT\_STREQ(r2-\/>category,\ r1-\/>category);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00163}00163\ \ \ \ \ EXPECT\_EQ(r2-\/>calories,\ r1-\/>calories);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00164}00164\ \ \ \ \ EXPECT\_EQ(r2-\/>preparation\_time,\ r1-\/>preparation\_time);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00165}00165\ \ \ \ \ EXPECT\_EQ(r2-\/>ingredient\_count,\ r1-\/>ingredient\_count);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00166}00166\ \ \ \ \ EXPECT\_STREQ(r2-\/>instructions,\ r1-\/>instructions);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00167}00167\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00168}00168\ \ \ \ \ \textcolor{comment}{//\ Cleanup}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00169}00169\ \ \ \ \ remove(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00170}00170\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00171}00171\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00172}00172\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00174}00174\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00175}00175\ \textcolor{comment}{//\ LINKED\ LIST\ TESTS}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00176}00176\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00181}\mbox{\hyperlink{test__recipes_8cpp_a7be432be3dd29ed4f4fed0980aeb1460}{00181}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(LinkedListTest,\ CreateList)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00182}00182\ \ \ \ \ List*\ list\ =\ list\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00183}00183\ \ \ \ \ ASSERT\_NE(list,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00184}00184\ \ \ \ \ EXPECT\_EQ(list\_size(list),\ 0);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00185}00185\ \ \ \ \ EXPECT\_TRUE(list\_is\_empty(list));}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00186}00186\ \ \ \ \ list\_destroy(list);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00187}00187\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00192}\mbox{\hyperlink{test__recipes_8cpp_a197aed2618ca03c94d1583a7164015d4}{00192}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(LinkedListTest,\ InsertHead)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00193}00193\ \ \ \ \ List*\ list\ =\ list\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00194}00194\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00195}00195\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00196}00196\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00197}00197\ \ \ \ \ EXPECT\_EQ(list\_insert\_head(list,\ r1),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00198}00198\ \ \ \ \ EXPECT\_EQ(list\_insert\_head(list,\ r2),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00199}00199\ \ \ \ \ EXPECT\_EQ(list\_size(list),\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00200}00200\ \ \ \ \ EXPECT\_FALSE(list\_is\_empty(list));}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00201}00201\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00202}00202\ \ \ \ \ Recipe*\ found\ =\ list\_find(list,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00203}00203\ \ \ \ \ ASSERT\_NE(found,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00204}00204\ \ \ \ \ EXPECT\_EQ(found-\/>id,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00205}00205\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00206}00206\ \ \ \ \ list\_destroy(list);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00207}00207\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00208}00208\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00209}00209\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00214}\mbox{\hyperlink{test__recipes_8cpp_a0a04a60ecde1719e3cc04d84507aaf4d}{00214}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(LinkedListTest,\ InsertTail)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00215}00215\ \ \ \ \ List*\ list\ =\ list\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00216}00216\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00217}00217\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00218}00218\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00219}00219\ \ \ \ \ EXPECT\_EQ(list\_insert\_tail(list,\ r1),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00220}00220\ \ \ \ \ EXPECT\_EQ(list\_insert\_tail(list,\ r2),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00221}00221\ \ \ \ \ EXPECT\_EQ(list\_size(list),\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00222}00222\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00223}00223\ \ \ \ \ Recipe*\ found\ =\ list\_find(list,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00224}00224\ \ \ \ \ ASSERT\_NE(found,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00225}00225\ \ \ \ \ EXPECT\_EQ(found-\/>id,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00226}00226\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00227}00227\ \ \ \ \ list\_destroy(list);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00228}00228\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00229}00229\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00230}00230\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00235}\mbox{\hyperlink{test__recipes_8cpp_a54e05d38f0e48425d2b0d73d455525e6}{00235}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(LinkedListTest,\ RemoveFromList)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00236}00236\ \ \ \ \ List*\ list\ =\ list\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00237}00237\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00238}00238\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00239}00239\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00240}00240\ \ \ \ \ list\_insert\_head(list,\ r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00241}00241\ \ \ \ \ list\_insert\_head(list,\ r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00242}00242\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00243}00243\ \ \ \ \ Recipe*\ removed\ =\ list\_remove(list,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00244}00244\ \ \ \ \ ASSERT\_NE(removed,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00245}00245\ \ \ \ \ EXPECT\_EQ(removed-\/>id,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00246}00246\ \ \ \ \ EXPECT\_EQ(list\_size(list),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00247}00247\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00248}00248\ \ \ \ \ recipe\_destroy(removed);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00249}00249\ \ \ \ \ list\_destroy(list);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00250}00250\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00251}00251\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00256}\mbox{\hyperlink{test__recipes_8cpp_a00d4d285c5f8f9be83dbbc4bac9fce2b}{00256}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(LinkedListTest,\ BinaryFileOperations)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00257}00257\ \ \ \ \ List*\ list\ =\ list\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00258}00258\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00259}00259\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00260}00260\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00261}00261\ \ \ \ \ list\_insert\_tail(list,\ r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00262}00262\ \ \ \ \ list\_insert\_tail(list,\ r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00263}00263\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00264}00264\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename\ =\ \textcolor{stringliteral}{"{}test\_list.bin"{}};}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00265}00265\ \ \ \ \ EXPECT\_EQ(list\_save\_binary(list,\ filename),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00266}00266\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00267}00267\ \ \ \ \ List*\ loaded\ =\ list\_load\_binary(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00268}00268\ \ \ \ \ ASSERT\_NE(loaded,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00269}00269\ \ \ \ \ EXPECT\_EQ(list\_size(loaded),\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00270}00270\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00271}00271\ \ \ \ \ Recipe*\ found\ =\ list\_find(loaded,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00272}00272\ \ \ \ \ ASSERT\_NE(found,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00273}00273\ \ \ \ \ EXPECT\_EQ(found-\/>id,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00274}00274\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00275}00275\ \ \ \ \ remove(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00276}00276\ \ \ \ \ list\_destroy(list);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00277}00277\ \ \ \ \ list\_destroy(loaded);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00278}00278\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00279}00279\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00280}00280\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00281}00281\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00282}00282\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00283}00283\ \textcolor{comment}{//\ XOR\ LINKED\ LIST\ TESTS}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00284}00284\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00285}00285\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00289}\mbox{\hyperlink{test__recipes_8cpp_a9901f9140068a2680bbc8b6a3b2a9c40}{00289}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(XORLinkedListTest,\ CreateList)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00290}00290\ \ \ \ \ XORList*\ list\ =\ xor\_list\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00291}00291\ \ \ \ \ ASSERT\_NE(list,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00292}00292\ \ \ \ \ EXPECT\_EQ(xor\_list\_size(list),\ 0);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00293}00293\ \ \ \ \ EXPECT\_TRUE(xor\_list\_is\_empty(list));}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00294}00294\ \ \ \ \ xor\_list\_destroy(list);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00295}00295\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00296}00296\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00300}\mbox{\hyperlink{test__recipes_8cpp_a606153230a4eb6baa5292a60dc454e58}{00300}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(XORLinkedListTest,\ InsertOperations)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00301}00301\ \ \ \ \ XORList*\ list\ =\ xor\_list\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00302}00302\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00303}00303\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00304}00304\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00305}00305\ \ \ \ \ EXPECT\_EQ(xor\_list\_insert\_head(list,\ r1),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00306}00306\ \ \ \ \ EXPECT\_EQ(xor\_list\_insert\_tail(list,\ r2),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00307}00307\ \ \ \ \ EXPECT\_EQ(xor\_list\_size(list),\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00308}00308\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00309}00309\ \ \ \ \ Recipe*\ found\ =\ xor\_list\_find(list,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00310}00310\ \ \ \ \ ASSERT\_NE(found,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00311}00311\ \ \ \ \ EXPECT\_EQ(found-\/>id,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00312}00312\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00313}00313\ \ \ \ \ xor\_list\_destroy(list);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00314}00314\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00315}00315\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00316}00316\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00317}00317\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00321}\mbox{\hyperlink{test__recipes_8cpp_ab3d6fa2b661e874f20fc99aa4e681cf8}{00321}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(XORLinkedListTest,\ BidirectionalTraversal)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00322}00322\ \ \ \ \ XORList*\ list\ =\ xor\_list\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00323}00323\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00324}00324\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00325}00325\ \ \ \ \ Recipe*\ r3\ =\ recipe\_create(3,\ \textcolor{stringliteral}{"{}Salad"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 200,\ 10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00326}00326\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00327}00327\ \ \ \ \ xor\_list\_insert\_tail(list,\ r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00328}00328\ \ \ \ \ xor\_list\_insert\_tail(list,\ r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00329}00329\ \ \ \ \ xor\_list\_insert\_tail(list,\ r3);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00330}00330\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00331}00331\ \ \ \ \ g\_forward\_count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00332}00332\ \ \ \ \ xor\_list\_traverse\_forward(list,\ forward\_visit\_counter);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00333}00333\ \ \ \ \ EXPECT\_EQ(g\_forward\_count,\ 3);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00334}00334\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00335}00335\ \ \ \ \ g\_backward\_count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00336}00336\ \ \ \ \ xor\_list\_traverse\_backward(list,\ backward\_visit\_counter);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00337}00337\ \ \ \ \ EXPECT\_EQ(g\_backward\_count,\ 3);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00338}00338\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00339}00339\ \ \ \ \ xor\_list\_destroy(list);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00340}00340\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00341}00341\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00342}00342\ \ \ \ \ recipe\_destroy(r3);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00343}00343\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00344}00344\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00348}\mbox{\hyperlink{test__recipes_8cpp_a7150e45d275c76aa70574bc5b2e6f10c}{00348}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(XORLinkedListTest,\ BinaryFileOperations)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00349}00349\ \ \ \ \ XORList*\ list\ =\ xor\_list\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00350}00350\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00351}00351\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00352}00352\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00353}00353\ \ \ \ \ xor\_list\_insert\_tail(list,\ r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00354}00354\ \ \ \ \ xor\_list\_insert\_tail(list,\ r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00355}00355\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00356}00356\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename\ =\ \textcolor{stringliteral}{"{}test\_xor\_list.bin"{}};}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00357}00357\ \ \ \ \ EXPECT\_EQ(xor\_list\_save\_binary(list,\ filename),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00358}00358\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00359}00359\ \ \ \ \ XORList*\ loaded\ =\ xor\_list\_load\_binary(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00360}00360\ \ \ \ \ ASSERT\_NE(loaded,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00361}00361\ \ \ \ \ EXPECT\_EQ(xor\_list\_size(loaded),\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00362}00362\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00363}00363\ \ \ \ \ remove(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00364}00364\ \ \ \ \ xor\_list\_destroy(list);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00365}00365\ \ \ \ \ xor\_list\_destroy(loaded);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00366}00366\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00367}00367\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00368}00368\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00369}00369\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00370}00370\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00371}00371\ \textcolor{comment}{//\ SPARSE\ MATRIX\ TESTS}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00372}00372\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00373}00373\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00377}\mbox{\hyperlink{test__recipes_8cpp_a0431982bdd7205780c607a9964acd718}{00377}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(SparseMatrixTest,\ CreateMatrix)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00378}00378\ \ \ \ \ SparseMatrix*\ matrix\ =\ sparse\_matrix\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00379}00379\ \ \ \ \ ASSERT\_NE(matrix,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00380}00380\ \ \ \ \ EXPECT\_EQ(matrix-\/>entry\_count,\ 0);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00381}00381\ \ \ \ \ sparse\_matrix\_destroy(matrix);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00382}00382\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00383}00383\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00387}\mbox{\hyperlink{test__recipes_8cpp_a5fef04031dc53d6257dde87ef87d6c21}{00387}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(SparseMatrixTest,\ AddEntry)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00388}00388\ \ \ \ \ SparseMatrix*\ matrix\ =\ sparse\_matrix\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00389}00389\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00390}00390\ \ \ \ \ sparse\_matrix\_add\_entry(matrix,\ 0,\ 0,\ 5,\ \textcolor{stringliteral}{"{}Flour"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00391}00391\ \ \ \ \ sparse\_matrix\_add\_entry(matrix,\ 0,\ 1,\ 3,\ \textcolor{stringliteral}{"{}Cheese"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00392}00392\ \ \ \ \ sparse\_matrix\_add\_entry(matrix,\ 1,\ 0,\ 2,\ \textcolor{stringliteral}{"{}Flour"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00393}00393\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00394}00394\ \ \ \ \ EXPECT\_EQ(sparse\_matrix\_get\_value(matrix,\ 0,\ 0),\ 5);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00395}00395\ \ \ \ \ EXPECT\_EQ(sparse\_matrix\_get\_value(matrix,\ 0,\ 1),\ 3);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00396}00396\ \ \ \ \ EXPECT\_EQ(sparse\_matrix\_get\_value(matrix,\ 1,\ 0),\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00397}00397\ \ \ \ \ EXPECT\_EQ(sparse\_matrix\_get\_value(matrix,\ 1,\ 1),\ 0);\ \textcolor{comment}{//\ Non-\/existent\ entry}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00398}00398\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00399}00399\ \ \ \ \ sparse\_matrix\_destroy(matrix);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00400}00400\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00401}00401\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00405}\mbox{\hyperlink{test__recipes_8cpp_a3560c7f64198234c7ee43a4fcbcbe9ff}{00405}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(SparseMatrixTest,\ FindRecipesByIngredient)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00406}00406\ \ \ \ \ SparseMatrix*\ matrix\ =\ sparse\_matrix\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00407}00407\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00408}00408\ \ \ \ \ sparse\_matrix\_add\_entry(matrix,\ 0,\ 0,\ 5,\ \textcolor{stringliteral}{"{}Flour"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00409}00409\ \ \ \ \ sparse\_matrix\_add\_entry(matrix,\ 1,\ 0,\ 2,\ \textcolor{stringliteral}{"{}Flour"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00410}00410\ \ \ \ \ sparse\_matrix\_add\_entry(matrix,\ 2,\ 1,\ 3,\ \textcolor{stringliteral}{"{}Cheese"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00411}00411\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00412}00412\ \ \ \ \ \textcolor{keywordtype}{int}\ recipe\_ids[10];}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00413}00413\ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ sparse\_matrix\_find\_recipes\_by\_ingredient(matrix,\ \textcolor{stringliteral}{"{}Flour"{}},\ recipe\_ids,\ 10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00414}00414\ \ \ \ \ EXPECT\_EQ(count,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00415}00415\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00416}00416\ \ \ \ \ sparse\_matrix\_destroy(matrix);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00417}00417\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00418}00418\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00422}\mbox{\hyperlink{test__recipes_8cpp_afc3d6411e886cb75c2e2cc09e515e5d7}{00422}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(SparseMatrixTest,\ BinaryFileOperations)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00423}00423\ \ \ \ \ SparseMatrix*\ matrix\ =\ sparse\_matrix\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00424}00424\ \ \ \ \ sparse\_matrix\_add\_entry(matrix,\ 0,\ 0,\ 5,\ \textcolor{stringliteral}{"{}Flour"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00425}00425\ \ \ \ \ sparse\_matrix\_add\_entry(matrix,\ 0,\ 1,\ 3,\ \textcolor{stringliteral}{"{}Cheese"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00426}00426\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00427}00427\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename\ =\ \textcolor{stringliteral}{"{}test\_matrix.bin"{}};}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00428}00428\ \ \ \ \ EXPECT\_EQ(sparse\_matrix\_save\_binary(matrix,\ filename),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00429}00429\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00430}00430\ \ \ \ \ SparseMatrix*\ loaded\ =\ sparse\_matrix\_load\_binary(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00431}00431\ \ \ \ \ ASSERT\_NE(loaded,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00432}00432\ \ \ \ \ EXPECT\_EQ(loaded-\/>entry\_count,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00433}00433\ \ \ \ \ EXPECT\_EQ(sparse\_matrix\_get\_value(loaded,\ 0,\ 0),\ 5);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00434}00434\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00435}00435\ \ \ \ \ remove(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00436}00436\ \ \ \ \ sparse\_matrix\_destroy(matrix);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00437}00437\ \ \ \ \ sparse\_matrix\_destroy(loaded);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00438}00438\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00439}00439\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00440}00440\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00441}00441\ \textcolor{comment}{//\ STACK\ TESTS}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00442}00442\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00443}00443\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00447}\mbox{\hyperlink{test__recipes_8cpp_a51c1cbf166531bcdeaa8855979d78138}{00447}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(StackTest,\ CreateStack)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00448}00448\ \ \ \ \ Stack*\ stack\ =\ stack\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00449}00449\ \ \ \ \ ASSERT\_NE(stack,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00450}00450\ \ \ \ \ EXPECT\_TRUE(stack\_is\_empty(stack));}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00451}00451\ \ \ \ \ EXPECT\_FALSE(stack\_is\_full(stack));}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00452}00452\ \ \ \ \ EXPECT\_EQ(stack\_size(stack),\ 0);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00453}00453\ \ \ \ \ stack\_destroy(stack);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00454}00454\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00455}00455\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00459}\mbox{\hyperlink{test__recipes_8cpp_a6b0ce19c64853bc0bb851aa87023bd32}{00459}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(StackTest,\ PushPop)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00460}00460\ \ \ \ \ Stack*\ stack\ =\ stack\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00461}00461\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00462}00462\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00463}00463\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00464}00464\ \ \ \ \ EXPECT\_EQ(stack\_push(stack,\ OP\_ADD,\ r1),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00465}00465\ \ \ \ \ EXPECT\_EQ(stack\_push(stack,\ OP\_EDIT,\ r2),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00466}00466\ \ \ \ \ EXPECT\_EQ(stack\_size(stack),\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00467}00467\ \ \ \ \ EXPECT\_FALSE(stack\_is\_empty(stack));}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00468}00468\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00469}00469\ \ \ \ \ StackOperation*\ op\ =\ stack\_pop(stack);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00470}00470\ \ \ \ \ ASSERT\_NE(op,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00471}00471\ \ \ \ \ EXPECT\_EQ(op-\/>type,\ OP\_EDIT);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00472}00472\ \ \ \ \ EXPECT\_EQ(op-\/>recipe-\/>id,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00473}00473\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00474}00474\ \ \ \ \ op\ =\ stack\_pop(stack);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00475}00475\ \ \ \ \ ASSERT\_NE(op,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00476}00476\ \ \ \ \ EXPECT\_EQ(op-\/>type,\ OP\_ADD);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00477}00477\ \ \ \ \ EXPECT\_EQ(op-\/>recipe-\/>id,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00478}00478\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00479}00479\ \ \ \ \ EXPECT\_TRUE(stack\_is\_empty(stack));}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00480}00480\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00481}00481\ \ \ \ \ stack\_destroy(stack);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00482}00482\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00483}00483\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00484}00484\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00485}00485\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00489}\mbox{\hyperlink{test__recipes_8cpp_afaeb2c1356cbf3a266f8ea02dfd34863}{00489}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(StackTest,\ Peek)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00490}00490\ \ \ \ \ Stack*\ stack\ =\ stack\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00491}00491\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00492}00492\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00493}00493\ \ \ \ \ stack\_push(stack,\ OP\_ADD,\ r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00494}00494\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00495}00495\ \ \ \ \ StackOperation*\ op\ =\ stack\_peek(stack);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00496}00496\ \ \ \ \ ASSERT\_NE(op,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00497}00497\ \ \ \ \ EXPECT\_EQ(op-\/>type,\ OP\_ADD);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00498}00498\ \ \ \ \ EXPECT\_EQ(stack\_size(stack),\ 1);\ \textcolor{comment}{//\ Size\ should\ not\ change}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00499}00499\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00500}00500\ \ \ \ \ stack\_destroy(stack);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00501}00501\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00502}00502\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00503}00503\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00507}\mbox{\hyperlink{test__recipes_8cpp_a1288510dfcbadb628ee0df3a4d475e19}{00507}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(StackTest,\ BinaryFileOperations)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00508}00508\ \ \ \ \ Stack*\ stack\ =\ stack\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00509}00509\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00510}00510\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00511}00511\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00512}00512\ \ \ \ \ stack\_push(stack,\ OP\_ADD,\ r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00513}00513\ \ \ \ \ stack\_push(stack,\ OP\_EDIT,\ r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00514}00514\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00515}00515\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename\ =\ \textcolor{stringliteral}{"{}test\_stack.bin"{}};}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00516}00516\ \ \ \ \ EXPECT\_EQ(stack\_save\_binary(stack,\ filename),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00517}00517\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00518}00518\ \ \ \ \ Stack*\ loaded\ =\ stack\_load\_binary(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00519}00519\ \ \ \ \ ASSERT\_NE(loaded,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00520}00520\ \ \ \ \ EXPECT\_EQ(stack\_size(loaded),\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00521}00521\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00522}00522\ \ \ \ \ remove(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00523}00523\ \ \ \ \ stack\_destroy(stack);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00524}00524\ \ \ \ \ stack\_destroy(loaded);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00525}00525\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00526}00526\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00527}00527\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00528}00528\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00529}00529\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00530}00530\ \textcolor{comment}{//\ QUEUE\ TESTS}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00531}00531\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00532}00532\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00536}\mbox{\hyperlink{test__recipes_8cpp_a3eaa6b14f902d34d8d5017de50782b76}{00536}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(QueueTest,\ CreateQueue)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00537}00537\ \ \ \ \ Queue*\ queue\ =\ queue\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00538}00538\ \ \ \ \ ASSERT\_NE(queue,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00539}00539\ \ \ \ \ EXPECT\_TRUE(queue\_is\_empty(queue));}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00540}00540\ \ \ \ \ EXPECT\_FALSE(queue\_is\_full(queue));}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00541}00541\ \ \ \ \ EXPECT\_EQ(queue\_size(queue),\ 0);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00542}00542\ \ \ \ \ queue\_destroy(queue);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00543}00543\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00544}00544\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00548}\mbox{\hyperlink{test__recipes_8cpp_aa8492eebfc4447598e0531874d655d3e}{00548}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(QueueTest,\ EnqueueDequeue)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00549}00549\ \ \ \ \ Queue*\ queue\ =\ queue\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00550}00550\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00551}00551\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00552}00552\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00553}00553\ \ \ \ \ EXPECT\_EQ(queue\_enqueue(queue,\ r1),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00554}00554\ \ \ \ \ EXPECT\_EQ(queue\_enqueue(queue,\ r2),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00555}00555\ \ \ \ \ EXPECT\_EQ(queue\_size(queue),\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00556}00556\ \ \ \ \ EXPECT\_FALSE(queue\_is\_empty(queue));}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00557}00557\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00558}00558\ \ \ \ \ Recipe*\ dequeued\ =\ queue\_dequeue(queue);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00559}00559\ \ \ \ \ ASSERT\_NE(dequeued,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00560}00560\ \ \ \ \ EXPECT\_EQ(dequeued-\/>id,\ 1);\ \textcolor{comment}{//\ FIFO\ -\/\ first\ in,\ first\ out}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00561}00561\ \ \ \ \ EXPECT\_EQ(queue\_size(queue),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00562}00562\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00563}00563\ \ \ \ \ dequeued\ =\ queue\_dequeue(queue);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00564}00564\ \ \ \ \ ASSERT\_NE(dequeued,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00565}00565\ \ \ \ \ EXPECT\_EQ(dequeued-\/>id,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00566}00566\ \ \ \ \ EXPECT\_TRUE(queue\_is\_empty(queue));}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00567}00567\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00568}00568\ \ \ \ \ queue\_destroy(queue);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00569}00569\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00570}00570\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00571}00571\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00572}00572\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00576}\mbox{\hyperlink{test__recipes_8cpp_a91beed3eda3b1f95e630b290a7f0aef1}{00576}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(QueueTest,\ Peek)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00577}00577\ \ \ \ \ Queue*\ queue\ =\ queue\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00578}00578\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00579}00579\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00580}00580\ \ \ \ \ queue\_enqueue(queue,\ r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00581}00581\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00582}00582\ \ \ \ \ Recipe*\ peeked\ =\ queue\_peek(queue);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00583}00583\ \ \ \ \ ASSERT\_NE(peeked,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00584}00584\ \ \ \ \ EXPECT\_EQ(peeked-\/>id,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00585}00585\ \ \ \ \ EXPECT\_EQ(queue\_size(queue),\ 1);\ \textcolor{comment}{//\ Size\ should\ not\ change}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00586}00586\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00587}00587\ \ \ \ \ queue\_destroy(queue);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00588}00588\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00589}00589\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00590}00590\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00594}\mbox{\hyperlink{test__recipes_8cpp_af4d1717444089da33353fc7453781b89}{00594}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(QueueTest,\ BinaryFileOperations)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00595}00595\ \ \ \ \ Queue*\ queue\ =\ queue\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00596}00596\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00597}00597\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00598}00598\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00599}00599\ \ \ \ \ queue\_enqueue(queue,\ r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00600}00600\ \ \ \ \ queue\_enqueue(queue,\ r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00601}00601\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00602}00602\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename\ =\ \textcolor{stringliteral}{"{}test\_queue.bin"{}};}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00603}00603\ \ \ \ \ EXPECT\_EQ(queue\_save\_binary(queue,\ filename),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00604}00604\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00605}00605\ \ \ \ \ Queue*\ loaded\ =\ queue\_load\_binary(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00606}00606\ \ \ \ \ ASSERT\_NE(loaded,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00607}00607\ \ \ \ \ EXPECT\_EQ(queue\_size(loaded),\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00608}00608\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00609}00609\ \ \ \ \ remove(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00610}00610\ \ \ \ \ queue\_destroy(queue);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00611}00611\ \ \ \ \ queue\_destroy(loaded);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00612}00612\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00613}00613\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00614}00614\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00615}00615\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00616}00616\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00617}00617\ \textcolor{comment}{//\ HEAP\ TESTS}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00618}00618\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00619}00619\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00623}\mbox{\hyperlink{test__recipes_8cpp_abcae85d7b26eb815bada7dad61de0575}{00623}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(HeapTest,\ CreateHeap)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00624}00624\ \ \ \ \ Heap*\ heap\ =\ heap\_create(10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00625}00625\ \ \ \ \ ASSERT\_NE(heap,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00626}00626\ \ \ \ \ EXPECT\_TRUE(heap\_is\_empty(heap));}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00627}00627\ \ \ \ \ EXPECT\_FALSE(heap\_is\_full(heap));}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00628}00628\ \ \ \ \ heap\_destroy(heap);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00629}00629\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00630}00630\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00634}\mbox{\hyperlink{test__recipes_8cpp_a54b9be791a82de4fba87f6c8ec16bb23}{00634}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(HeapTest,\ InsertExtractMin)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00635}00635\ \ \ \ \ Heap*\ heap\ =\ heap\_create(10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00636}00636\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00637}00637\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Salad"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 200,\ 10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00638}00638\ \ \ \ \ Recipe*\ r3\ =\ recipe\_create(3,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00639}00639\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00640}00640\ \ \ \ \ EXPECT\_EQ(heap\_insert(heap,\ r1),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00641}00641\ \ \ \ \ EXPECT\_EQ(heap\_insert(heap,\ r2),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00642}00642\ \ \ \ \ EXPECT\_EQ(heap\_insert(heap,\ r3),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00643}00643\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00644}00644\ \ \ \ \ Recipe*\ min\ =\ heap\_extract\_min(heap);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00645}00645\ \ \ \ \ ASSERT\_NE(min,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00646}00646\ \ \ \ \ EXPECT\_EQ(min-\/>id,\ 2);\ \textcolor{comment}{//\ Salad\ has\ lowest\ calories\ (200)}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00647}00647\ \ \ \ \ EXPECT\_EQ(min-\/>calories,\ 200);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00648}00648\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00649}00649\ \ \ \ \ min\ =\ heap\_extract\_min(heap);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00650}00650\ \ \ \ \ ASSERT\_NE(min,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00651}00651\ \ \ \ \ EXPECT\_EQ(min-\/>id,\ 3);\ \textcolor{comment}{//\ Burger\ has\ next\ lowest\ (600)}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00652}00652\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00653}00653\ \ \ \ \ min\ =\ heap\_extract\_min(heap);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00654}00654\ \ \ \ \ ASSERT\_NE(min,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00655}00655\ \ \ \ \ EXPECT\_EQ(min-\/>id,\ 1);\ \textcolor{comment}{//\ Pizza\ has\ highest\ (800)}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00656}00656\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00657}00657\ \ \ \ \ EXPECT\_TRUE(heap\_is\_empty(heap));}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00658}00658\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00659}00659\ \ \ \ \ heap\_destroy(heap);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00660}00660\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00661}00661\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00662}00662\ \ \ \ \ recipe\_destroy(r3);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00663}00663\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00664}00664\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00668}\mbox{\hyperlink{test__recipes_8cpp_a314431e5201d6896c49e45110b15771f}{00668}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(HeapTest,\ HeapSort)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00669}00669\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00670}00670\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Salad"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 200,\ 10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00671}00671\ \ \ \ \ Recipe*\ r3\ =\ recipe\_create(3,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00672}00672\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00673}00673\ \ \ \ \ Recipe*\ recipes[]\ =\ \{r1,\ r2,\ r3\};}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00674}00674\ \ \ \ \ heap\_sort\_recipes(recipes,\ 3);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00675}00675\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00676}00676\ \ \ \ \ \textcolor{comment}{//\ After\ sorting,\ recipes\ should\ be\ ordered\ by\ calories\ (ascending)}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00677}00677\ \ \ \ \ EXPECT\_EQ(recipes[0]-\/>\textcolor{keywordtype}{id},\ 2);\ \textcolor{comment}{//\ Salad\ (200)}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00678}00678\ \ \ \ \ EXPECT\_EQ(recipes[1]-\/>\textcolor{keywordtype}{id},\ 3);\ \textcolor{comment}{//\ Burger\ (600)}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00679}00679\ \ \ \ \ EXPECT\_EQ(recipes[2]-\/>\textcolor{keywordtype}{id},\ 1);\ \textcolor{comment}{//\ Pizza\ (800)}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00680}00680\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00681}00681\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00682}00682\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00683}00683\ \ \ \ \ recipe\_destroy(r3);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00684}00684\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00685}00685\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00689}\mbox{\hyperlink{test__recipes_8cpp_a5a9f4bd1c2babd668c49a0aae080670a}{00689}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(HeapTest,\ BinaryFileOperations)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00690}00690\ \ \ \ \ Heap*\ heap\ =\ heap\_create(10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00691}00691\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00692}00692\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Salad"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 200,\ 10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00693}00693\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00694}00694\ \ \ \ \ heap\_insert(heap,\ r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00695}00695\ \ \ \ \ heap\_insert(heap,\ r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00696}00696\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00697}00697\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename\ =\ \textcolor{stringliteral}{"{}test\_heap.bin"{}};}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00698}00698\ \ \ \ \ EXPECT\_EQ(heap\_save\_binary(heap,\ filename),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00699}00699\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00700}00700\ \ \ \ \ Heap*\ loaded\ =\ heap\_load\_binary(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00701}00701\ \ \ \ \ ASSERT\_NE(loaded,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00702}00702\ \ \ \ \ EXPECT\_EQ(loaded-\/>size,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00703}00703\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00704}00704\ \ \ \ \ Recipe*\ min\ =\ heap\_extract\_min(loaded);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00705}00705\ \ \ \ \ ASSERT\_NE(min,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00706}00706\ \ \ \ \ EXPECT\_EQ(min-\/>id,\ 2);\ \textcolor{comment}{//\ Salad\ has\ lowest\ calories}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00707}00707\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00708}00708\ \ \ \ \ remove(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00709}00709\ \ \ \ \ heap\_destroy(heap);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00710}00710\ \ \ \ \ heap\_destroy(loaded);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00711}00711\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00712}00712\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00713}00713\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00714}00714\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00715}00715\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00716}00716\ \textcolor{comment}{//\ GRAPH\ TESTS\ (BFS/DFS)}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00717}00717\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00718}00718\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00722}\mbox{\hyperlink{test__recipes_8cpp_a40aa997817ba455b7fb3acfefe1ff347}{00722}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(GraphTest,\ CreateGraph)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00723}00723\ \ \ \ \ Graph*\ graph\ =\ graph\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00724}00724\ \ \ \ \ ASSERT\_NE(graph,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00725}00725\ \ \ \ \ EXPECT\_EQ(graph-\/>vertex\_count,\ 0);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00726}00726\ \ \ \ \ graph\_destroy(graph);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00727}00727\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00728}00728\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00732}\mbox{\hyperlink{test__recipes_8cpp_a2b4fffcbc5cbe80e257b69321367aedc}{00732}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(GraphTest,\ AddVertexEdge)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00733}00733\ \ \ \ \ Graph*\ graph\ =\ graph\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00734}00734\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00735}00735\ \ \ \ \ EXPECT\_EQ(graph\_add\_vertex(graph,\ 1),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00736}00736\ \ \ \ \ EXPECT\_EQ(graph\_add\_vertex(graph,\ 2),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00737}00737\ \ \ \ \ EXPECT\_EQ(graph\_add\_vertex(graph,\ 3),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00738}00738\ \ \ \ \ EXPECT\_EQ(graph-\/>vertex\_count,\ 3);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00739}00739\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00740}00740\ \ \ \ \ EXPECT\_EQ(graph\_add\_edge(graph,\ 1,\ 2,\ \textcolor{stringliteral}{"{}dough"{}}),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00741}00741\ \ \ \ \ EXPECT\_EQ(graph\_add\_edge(graph,\ 2,\ 3,\ \textcolor{stringliteral}{"{}sauce"{}}),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00742}00742\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00743}00743\ \ \ \ \ GraphVertex*\ v\ =\ graph\_find\_vertex(graph,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00744}00744\ \ \ \ \ ASSERT\_NE(v,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00745}00745\ \ \ \ \ EXPECT\_EQ(v-\/>recipe\_id,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00746}00746\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00747}00747\ \ \ \ \ graph\_destroy(graph);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00748}00748\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00749}00749\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00753}\mbox{\hyperlink{test__recipes_8cpp_a4fde40036c335c7db5e1c080ac1d3206}{00753}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(GraphTest,\ BFSTraversal)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00754}00754\ \ \ \ \ Graph*\ graph\ =\ graph\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00755}00755\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00756}00756\ \ \ \ \ graph\_add\_vertex(graph,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00757}00757\ \ \ \ \ graph\_add\_vertex(graph,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00758}00758\ \ \ \ \ graph\_add\_vertex(graph,\ 3);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00759}00759\ \ \ \ \ graph\_add\_vertex(graph,\ 4);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00760}00760\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00761}00761\ \ \ \ \ graph\_add\_edge(graph,\ 1,\ 2,\ \textcolor{stringliteral}{"{}edge1"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00762}00762\ \ \ \ \ graph\_add\_edge(graph,\ 1,\ 3,\ \textcolor{stringliteral}{"{}edge2"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00763}00763\ \ \ \ \ graph\_add\_edge(graph,\ 2,\ 4,\ \textcolor{stringliteral}{"{}edge3"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00764}00764\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00765}00765\ \ \ \ \ g\_visited\_order.clear();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00766}00766\ \ \ \ \ graph\_bfs(graph,\ 1,\ graph\_visit\_func);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00767}00767\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00768}00768\ \ \ \ \ \textcolor{comment}{//\ BFS\ should\ visit\ vertices\ level\ by\ level}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00769}00769\ \ \ \ \ EXPECT\_GE(g\_visited\_order.size(),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00770}00770\ \ \ \ \ EXPECT\_EQ(g\_visited\_order[0],\ 1);\ \textcolor{comment}{//\ Start\ vertex}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00771}00771\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00772}00772\ \ \ \ \ graph\_destroy(graph);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00773}00773\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00774}00774\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00778}\mbox{\hyperlink{test__recipes_8cpp_a5b351ee0875670584c44bd75e9fe958b}{00778}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(GraphTest,\ DFSTraversal)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00779}00779\ \ \ \ \ Graph*\ graph\ =\ graph\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00780}00780\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00781}00781\ \ \ \ \ graph\_add\_vertex(graph,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00782}00782\ \ \ \ \ graph\_add\_vertex(graph,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00783}00783\ \ \ \ \ graph\_add\_vertex(graph,\ 3);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00784}00784\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00785}00785\ \ \ \ \ graph\_add\_edge(graph,\ 1,\ 2,\ \textcolor{stringliteral}{"{}edge1"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00786}00786\ \ \ \ \ graph\_add\_edge(graph,\ 2,\ 3,\ \textcolor{stringliteral}{"{}edge2"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00787}00787\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00788}00788\ \ \ \ \ g\_visited\_order.clear();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00789}00789\ \ \ \ \ graph\_dfs(graph,\ 1,\ graph\_visit\_func);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00790}00790\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00791}00791\ \ \ \ \ \textcolor{comment}{//\ DFS\ should\ visit\ vertices\ depth-\/first}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00792}00792\ \ \ \ \ EXPECT\_GE(g\_visited\_order.size(),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00793}00793\ \ \ \ \ EXPECT\_EQ(g\_visited\_order[0],\ 1);\ \textcolor{comment}{//\ Start\ vertex}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00794}00794\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00795}00795\ \ \ \ \ graph\_destroy(graph);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00796}00796\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00797}00797\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00801}\mbox{\hyperlink{test__recipes_8cpp_a3237b311181f94e5d60ed4e1abed857b}{00801}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(GraphTest,\ CycleDetection)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00802}00802\ \ \ \ \ Graph*\ graph\ =\ graph\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00803}00803\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00804}00804\ \ \ \ \ graph\_add\_vertex(graph,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00805}00805\ \ \ \ \ graph\_add\_vertex(graph,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00806}00806\ \ \ \ \ graph\_add\_vertex(graph,\ 3);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00807}00807\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00808}00808\ \ \ \ \ graph\_add\_edge(graph,\ 1,\ 2,\ \textcolor{stringliteral}{"{}edge1"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00809}00809\ \ \ \ \ graph\_add\_edge(graph,\ 2,\ 3,\ \textcolor{stringliteral}{"{}edge2"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00810}00810\ \ \ \ \ \textcolor{comment}{//\ No\ cycle\ -\/\ should\ return\ 0}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00811}00811\ \ \ \ \ EXPECT\_EQ(graph\_has\_cycle(graph),\ 0);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00812}00812\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00813}00813\ \ \ \ \ \textcolor{comment}{//\ Add\ cycle}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00814}00814\ \ \ \ \ graph\_add\_edge(graph,\ 3,\ 1,\ \textcolor{stringliteral}{"{}edge3"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00815}00815\ \ \ \ \ EXPECT\_EQ(graph\_has\_cycle(graph),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00816}00816\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00817}00817\ \ \ \ \ graph\_destroy(graph);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00818}00818\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00819}00819\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00823}\mbox{\hyperlink{test__recipes_8cpp_a914b1046c6f4b67974a706f354742108}{00823}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(GraphTest,\ BinaryFileOperations)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00824}00824\ \ \ \ \ Graph*\ graph\ =\ graph\_create();}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00825}00825\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00826}00826\ \ \ \ \ graph\_add\_vertex(graph,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00827}00827\ \ \ \ \ graph\_add\_vertex(graph,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00828}00828\ \ \ \ \ graph\_add\_edge(graph,\ 1,\ 2,\ \textcolor{stringliteral}{"{}dough"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00829}00829\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00830}00830\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename\ =\ \textcolor{stringliteral}{"{}test\_graph.bin"{}};}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00831}00831\ \ \ \ \ EXPECT\_EQ(graph\_save\_binary(graph,\ filename),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00832}00832\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00833}00833\ \ \ \ \ Graph*\ loaded\ =\ graph\_load\_binary(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00834}00834\ \ \ \ \ ASSERT\_NE(loaded,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00835}00835\ \ \ \ \ EXPECT\_EQ(loaded-\/>vertex\_count,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00836}00836\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00837}00837\ \ \ \ \ GraphVertex*\ v\ =\ graph\_find\_vertex(loaded,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00838}00838\ \ \ \ \ ASSERT\_NE(v,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00839}00839\ \ \ \ \ EXPECT\_EQ(v-\/>recipe\_id,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00840}00840\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00841}00841\ \ \ \ \ remove(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00842}00842\ \ \ \ \ graph\_destroy(graph);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00843}00843\ \ \ \ \ graph\_destroy(loaded);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00844}00844\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00845}00845\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00846}00846\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00847}00847\ \textcolor{comment}{//\ HASH\ TABLE\ TESTS}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00848}00848\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00849}00849\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00853}\mbox{\hyperlink{test__recipes_8cpp_ac7ea7cdb2655736dfd382950670ddc63}{00853}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(HashTableTest,\ CreateHashTable)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00854}00854\ \ \ \ \ HashTable*\ ht\ =\ hash\_table\_create(10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00855}00855\ \ \ \ \ ASSERT\_NE(ht,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00856}00856\ \ \ \ \ EXPECT\_EQ(ht-\/>size,\ 10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00857}00857\ \ \ \ \ EXPECT\_EQ(ht-\/>count,\ 0);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00858}00858\ \ \ \ \ hash\_table\_destroy(ht);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00859}00859\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00860}00860\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00864}\mbox{\hyperlink{test__recipes_8cpp_a0d453ee495cf1244d601151804569b32}{00864}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(HashTableTest,\ InsertSearch)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00865}00865\ \ \ \ \ HashTable*\ ht\ =\ hash\_table\_create(10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00866}00866\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00867}00867\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00868}00868\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00869}00869\ \ \ \ \ EXPECT\_EQ(hash\_table\_insert(ht,\ r1),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00870}00870\ \ \ \ \ EXPECT\_EQ(hash\_table\_insert(ht,\ r2),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00871}00871\ \ \ \ \ EXPECT\_EQ(ht-\/>count,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00872}00872\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00873}00873\ \ \ \ \ Recipe*\ found\ =\ hash\_table\_search(ht,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00874}00874\ \ \ \ \ ASSERT\_NE(found,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00875}00875\ \ \ \ \ EXPECT\_EQ(found-\/>id,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00876}00876\ \ \ \ \ EXPECT\_STREQ(found-\/>name,\ \textcolor{stringliteral}{"{}Pizza"{}});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00877}00877\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00878}00878\ \ \ \ \ found\ =\ hash\_table\_search(ht,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00879}00879\ \ \ \ \ ASSERT\_NE(found,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00880}00880\ \ \ \ \ EXPECT\_EQ(found-\/>id,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00881}00881\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00882}00882\ \ \ \ \ found\ =\ hash\_table\_search(ht,\ 999);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00883}00883\ \ \ \ \ EXPECT\_EQ(found,\ \textcolor{keyword}{nullptr});\ \textcolor{comment}{//\ Not\ found}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00884}00884\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00885}00885\ \ \ \ \ hash\_table\_destroy(ht);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00886}00886\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00887}00887\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00888}00888\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00889}00889\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00893}\mbox{\hyperlink{test__recipes_8cpp_a56038936de4c4c44cc70d417e8275dcc}{00893}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(HashTableTest,\ Delete)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00894}00894\ \ \ \ \ HashTable*\ ht\ =\ hash\_table\_create(10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00895}00895\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00896}00896\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00897}00897\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00898}00898\ \ \ \ \ hash\_table\_insert(ht,\ r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00899}00899\ \ \ \ \ hash\_table\_insert(ht,\ r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00900}00900\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00901}00901\ \ \ \ \ EXPECT\_EQ(hash\_table\_delete(ht,\ 1),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00902}00902\ \ \ \ \ EXPECT\_EQ(ht-\/>count,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00903}00903\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00904}00904\ \ \ \ \ Recipe*\ found\ =\ hash\_table\_search(ht,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00905}00905\ \ \ \ \ EXPECT\_EQ(found,\ \textcolor{keyword}{nullptr});\ \textcolor{comment}{//\ Should\ be\ deleted}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00906}00906\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00907}00907\ \ \ \ \ found\ =\ hash\_table\_search(ht,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00908}00908\ \ \ \ \ ASSERT\_NE(found,\ \textcolor{keyword}{nullptr});\ \textcolor{comment}{//\ Should\ still\ exist}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00909}00909\ \ \ \ \ EXPECT\_EQ(found-\/>id,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00910}00910\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00911}00911\ \ \ \ \ hash\_table\_destroy(ht);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00912}00912\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00913}00913\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00914}00914\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00915}00915\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00919}\mbox{\hyperlink{test__recipes_8cpp_a95266149cfe575100a826cede9e6da66}{00919}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(HashTableTest,\ CollisionHandling)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00920}00920\ \ \ \ \ HashTable*\ ht\ =\ hash\_table\_create(5);\ \textcolor{comment}{//\ Small\ size\ to\ force\ collisions}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00921}00921\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00922}00922\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00923}00923\ \ \ \ \ Recipe*\ r3\ =\ recipe\_create(3,\ \textcolor{stringliteral}{"{}Salad"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 200,\ 10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00924}00924\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00925}00925\ \ \ \ \ \textcolor{comment}{//\ All\ should\ insert\ successfully\ even\ with\ collisions}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00926}00926\ \ \ \ \ EXPECT\_EQ(hash\_table\_insert(ht,\ r1),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00927}00927\ \ \ \ \ EXPECT\_EQ(hash\_table\_insert(ht,\ r2),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00928}00928\ \ \ \ \ EXPECT\_EQ(hash\_table\_insert(ht,\ r3),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00929}00929\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00930}00930\ \ \ \ \ \textcolor{comment}{//\ All\ should\ be\ searchable}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00931}00931\ \ \ \ \ EXPECT\_NE(hash\_table\_search(ht,\ 1),\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00932}00932\ \ \ \ \ EXPECT\_NE(hash\_table\_search(ht,\ 2),\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00933}00933\ \ \ \ \ EXPECT\_NE(hash\_table\_search(ht,\ 3),\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00934}00934\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00935}00935\ \ \ \ \ hash\_table\_destroy(ht);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00936}00936\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00937}00937\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00938}00938\ \ \ \ \ recipe\_destroy(r3);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00939}00939\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00940}00940\ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00944}\mbox{\hyperlink{test__recipes_8cpp_a9f0c9cf1ad10a200a1497b6dacd0aa10}{00944}}\ \mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}}(HashTableTest,\ BinaryFileOperations)\ \{}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00945}00945\ \ \ \ \ HashTable*\ ht\ =\ hash\_table\_create(10);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00946}00946\ \ \ \ \ Recipe*\ r1\ =\ recipe\_create(1,\ \textcolor{stringliteral}{"{}Pizza"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 800,\ 45);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00947}00947\ \ \ \ \ Recipe*\ r2\ =\ recipe\_create(2,\ \textcolor{stringliteral}{"{}Burger"{}},\ \textcolor{stringliteral}{"{}Lunch"{}},\ 600,\ 30);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00948}00948\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00949}00949\ \ \ \ \ hash\_table\_insert(ht,\ r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00950}00950\ \ \ \ \ hash\_table\_insert(ht,\ r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00951}00951\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00952}00952\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename\ =\ \textcolor{stringliteral}{"{}test\_hash\_table.bin"{}};}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00953}00953\ \ \ \ \ EXPECT\_EQ(hash\_table\_save\_binary(ht,\ filename),\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00954}00954\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00955}00955\ \ \ \ \ HashTable*\ loaded\ =\ hash\_table\_load\_binary(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00956}00956\ \ \ \ \ ASSERT\_NE(loaded,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00957}00957\ \ \ \ \ EXPECT\_EQ(loaded-\/>count,\ 2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00958}00958\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00959}00959\ \ \ \ \ Recipe*\ found\ =\ hash\_table\_search(loaded,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00960}00960\ \ \ \ \ ASSERT\_NE(found,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00961}00961\ \ \ \ \ EXPECT\_EQ(found-\/>id,\ 1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00962}00962\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00963}00963\ \ \ \ \ remove(filename);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00964}00964\ \ \ \ \ hash\_table\_destroy(ht);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00965}00965\ \ \ \ \ hash\_table\_destroy(loaded);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00966}00966\ \ \ \ \ recipe\_destroy(r1);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00967}00967\ \ \ \ \ recipe\_destroy(r2);}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00968}00968\ \}}
+\DoxyCodeLine{\Hypertarget{test__recipes_8cpp_source_l00969}00969\ }
+
+\end{DoxyCode}

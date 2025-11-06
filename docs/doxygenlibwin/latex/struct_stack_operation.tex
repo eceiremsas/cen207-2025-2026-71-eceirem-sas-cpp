@@ -1,0 +1,106 @@
+\doxysection{Stack\+Operation Struct Reference}
+\hypertarget{struct_stack_operation}{}\label{struct_stack_operation}\index{StackOperation@{StackOperation}}
+
+
+Represents a single operation stored in the undo stack.  
+
+
+
+
+{\ttfamily \#include $<$stack.\+h$>$}
+
+
+
+Collaboration diagram for Stack\+Operation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{struct_stack_operation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_stack_operation_a3de1e4d65970189931c5be2aefc6c0a6}{Stack\+Operation}} (\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}} t, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ r)
+\item 
+\mbox{\hyperlink{struct_stack_operation_a3de1e4d65970189931c5be2aefc6c0a6}{Stack\+Operation}} (\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}} t, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ r)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_stack_operation_a9e5459b5f778ee92f661573b20fbe364}{type}}
+\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_stack_operation_a5b5bb536a85fc0f28b5e252a7dff617f}{recipe}}
+\item 
+\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}} \mbox{\hyperlink{struct_stack_operation_a9e5459b5f778ee92f661573b20fbe364}{type}}
+\begin{DoxyCompactList}\small\item\em Type of the operation (Add/\+Edit/\+Delete). \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \mbox{\hyperlink{struct_stack_operation_a2c97d5a48126f827e77e9f8628bf9acc}{recipe}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_recipe}{Recipe} involved in the operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single operation stored in the undo stack. 
+
+Represents a single recorded operation for undo purposes.
+
+Each operation records its type and the related recipe. 
+
+\label{doc-constructors}
+\Hypertarget{struct_stack_operation_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_stack_operation_a3de1e4d65970189931c5be2aefc6c0a6}\index{StackOperation@{StackOperation}!StackOperation@{StackOperation}}
+\index{StackOperation@{StackOperation}!StackOperation@{StackOperation}}
+\doxysubsubsection{\texorpdfstring{StackOperation()}{StackOperation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_stack_operation_a3de1e4d65970189931c5be2aefc6c0a6} 
+Stack\+Operation\+::\+Stack\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}}}]{t}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$}]{r}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_stack_operation_a3de1e4d65970189931c5be2aefc6c0a6}\index{StackOperation@{StackOperation}!StackOperation@{StackOperation}}
+\index{StackOperation@{StackOperation}!StackOperation@{StackOperation}}
+\doxysubsubsection{\texorpdfstring{StackOperation()}{StackOperation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_stack_operation_a3de1e4d65970189931c5be2aefc6c0a6} 
+Stack\+Operation\+::\+Stack\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}}}]{t}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$}]{r}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_stack_operation_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_stack_operation_a5b5bb536a85fc0f28b5e252a7dff617f}\index{StackOperation@{StackOperation}!recipe@{recipe}}
+\index{recipe@{recipe}!StackOperation@{StackOperation}}
+\doxysubsubsection{\texorpdfstring{recipe}{recipe}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_stack_operation_a5b5bb536a85fc0f28b5e252a7dff617f} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ Stack\+Operation\+::recipe}
+
+\Hypertarget{struct_stack_operation_a2c97d5a48126f827e77e9f8628bf9acc}\index{StackOperation@{StackOperation}!recipe@{recipe}}
+\index{recipe@{recipe}!StackOperation@{StackOperation}}
+\doxysubsubsection{\texorpdfstring{recipe}{recipe}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_stack_operation_a2c97d5a48126f827e77e9f8628bf9acc} 
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{struct_recipe}{Recipe}}$>$ Stack\+Operation\+::recipe}
+
+
+
+\doxylink{struct_recipe}{Recipe} involved in the operation. 
+
+\Hypertarget{struct_stack_operation_a9e5459b5f778ee92f661573b20fbe364}\index{StackOperation@{StackOperation}!type@{type}}
+\index{type@{type}!StackOperation@{StackOperation}}
+\doxysubsubsection{\texorpdfstring{type}{type}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_stack_operation_a9e5459b5f778ee92f661573b20fbe364} 
+\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}} Stack\+Operation\+::type}
+
+\Hypertarget{struct_stack_operation_a9e5459b5f778ee92f661573b20fbe364}\index{StackOperation@{StackOperation}!type@{type}}
+\index{type@{type}!StackOperation@{StackOperation}}
+\doxysubsubsection{\texorpdfstring{type}{type}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_stack_operation_a9e5459b5f778ee92f661573b20fbe364} 
+\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}} Stack\+Operation\+::type}
+
+
+
+Type of the operation (Add/\+Edit/\+Delete). 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{stack_8h}{stack.\+h}}\item 
+src/recipe/header/\mbox{\hyperlink{stack_8hpp}{stack.\+hpp}}\item 
+src/recipe/src/\mbox{\hyperlink{stack_8cpp}{stack.\+cpp}}\end{DoxyCompactItemize}

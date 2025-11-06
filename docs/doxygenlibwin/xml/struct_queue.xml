@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="struct_queue" kind="class" language="C++" prot="public">
+    <compoundname>Queue</compoundname>
+    <includes refid="queue_8h" local="no">queue.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_queue_1ac938597c53e24ca6f36e0ec9bce41334" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+        <definition>Recipe* Queue::recipes[WEEKLY_PLAN_SIZE]</definition>
+        <argsstring>[WEEKLY_PLAN_SIZE]</argsstring>
+        <name>recipes</name>
+        <qualifiedname>Queue::recipes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/queue.h" line="16" column="12" bodyfile="include/queue.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_1aa14801d5c5fea47f3d08483d103e0b57" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Queue::front</definition>
+        <argsstring></argsstring>
+        <name>front</name>
+        <qualifiedname>Queue::front</qualifiedname>
+        <briefdescription>
+<para>Index of the front element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/queue.h" line="17" column="9" bodyfile="include/queue.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_1a8303807ce298d63d958f7e5765034d70" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Queue::rear</definition>
+        <argsstring></argsstring>
+        <name>rear</name>
+        <qualifiedname>Queue::rear</qualifiedname>
+        <briefdescription>
+<para>Index of the rear element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/queue.h" line="18" column="9" bodyfile="include/queue.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_1a0f56b04440d87d231b06f3e287c8eb6a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Queue::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <qualifiedname>Queue::count</qualifiedname>
+        <briefdescription>
+<para>Number of elements currently in the queue. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/queue.h" line="19" column="9" bodyfile="include/queue.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="struct_queue_1a0a9ddba8df3a8097b56c2be82667e2bd" prot="private" static="no" mutable="no">
+        <type>std::array&lt; std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;, <ref refid="queue_8hpp_1ad75f181decfdb796a92c7100d1f8223b" kindref="member">WEEKLY_PLAN_SIZE</ref> &gt;</type>
+        <definition>std::array&lt;std::shared_ptr&lt;Recipe&gt;, WEEKLY_PLAN_SIZE&gt; Queue::recipes</definition>
+        <argsstring></argsstring>
+        <name>recipes</name>
+        <qualifiedname>Queue::recipes</qualifiedname>
+        <briefdescription>
+<para>Circular storage for recipes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/queue.hpp" line="25" column="16" bodyfile="src/recipe/header/queue.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_queue_1a7cfca3637d57c4a9e37351b3426ffd40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Queue::Queue</definition>
+        <argsstring>()</argsstring>
+        <name>Queue</name>
+        <qualifiedname>Queue::Queue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/queue.hpp" line="32" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_queue_1a163f52a62cceb678725b810e7c20d8b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Queue::~Queue</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Queue</name>
+        <qualifiedname>Queue::~Queue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/queue.hpp" line="33" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_queue_1a9b1daa34b3e2dabb214d10b5ba38bc31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Queue::enqueue</definition>
+        <argsstring>(const std::shared_ptr&lt; Recipe &gt; &amp;recipe)</argsstring>
+        <name>enqueue</name>
+        <qualifiedname>Queue::enqueue</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt; &amp;</type>
+          <declname>recipe</declname>
+        </param>
+        <briefdescription>
+<para>Adds a recipe to the end of the queue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>recipe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the recipe. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the recipe was added successfully. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/queue.hpp" line="42" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_queue_1a7b6ed7bf2c861972479c4e9c81f25831" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Recipe &gt; Queue::dequeue</definition>
+        <argsstring>()</argsstring>
+        <name>dequeue</name>
+        <qualifiedname>Queue::dequeue</qualifiedname>
+        <briefdescription>
+<para>Removes and returns the recipe at the front of the queue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Shared pointer to the removed recipe, or nullptr if empty. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/queue.hpp" line="48" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_queue_1a32a0d6d0f9741c4dc34b6229985e28e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Recipe &gt; Queue::peek</definition>
+        <argsstring>() const</argsstring>
+        <name>peek</name>
+        <qualifiedname>Queue::peek</qualifiedname>
+        <briefdescription>
+<para>Returns the recipe at the front without removing it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Shared pointer to the recipe, or nullptr if empty. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/queue.hpp" line="54" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_queue_1a7614672eed4a720bf0d78d94002bd022" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Queue::isEmpty</definition>
+        <argsstring>() const</argsstring>
+        <name>isEmpty</name>
+        <qualifiedname>Queue::isEmpty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/queue.hpp" line="57" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_queue_1a20268d0ce4bb6b9f9a98ad77d30a5a18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Queue::isFull</definition>
+        <argsstring>() const</argsstring>
+        <name>isFull</name>
+        <qualifiedname>Queue::isFull</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/queue.hpp" line="58" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_queue_1a718803e822635006c843fc28e08041f0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Queue::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>Queue::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/queue.hpp" line="59" column="9" bodyfile="src/recipe/header/queue.hpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_queue_1ad0a95c08d8f38b0c1c92416d115e86de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Queue::display</definition>
+        <argsstring>() const</argsstring>
+        <name>display</name>
+        <qualifiedname>Queue::display</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/queue.hpp" line="62" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_queue_1ab6eb2c745db2cbc5595eb2510da003cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Queue::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>Queue::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/queue.hpp" line="65" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Circular queue structure used for weekly meal planning. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Implements a circular queue structure for managing weekly meal plans.</para>
+<para>Each element represents one day of the week.</para>
+<para>Each element represents one day of the week (Monday–Sunday). </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Queue</label>
+        <link refid="struct_queue"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+recipes</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Recipe</label>
+        <link refid="struct_recipe"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/queue.h" line="15" column="1" bodyfile="include/queue.h" bodystart="15" bodyend="20"/>
+    <listofallmembers>
+      <member refid="struct_queue_1ab6eb2c745db2cbc5595eb2510da003cd" prot="public" virt="non-virtual"><scope>Queue</scope><name>clear</name></member>
+      <member refid="struct_queue_1a0f56b04440d87d231b06f3e287c8eb6a" prot="public" virt="non-virtual"><scope>Queue</scope><name>count</name></member>
+      <member refid="struct_queue_1a7b6ed7bf2c861972479c4e9c81f25831" prot="public" virt="non-virtual"><scope>Queue</scope><name>dequeue</name></member>
+      <member refid="struct_queue_1ad0a95c08d8f38b0c1c92416d115e86de" prot="public" virt="non-virtual"><scope>Queue</scope><name>display</name></member>
+      <member refid="struct_queue_1a9b1daa34b3e2dabb214d10b5ba38bc31" prot="public" virt="non-virtual"><scope>Queue</scope><name>enqueue</name></member>
+      <member refid="struct_queue_1aa14801d5c5fea47f3d08483d103e0b57" prot="public" virt="non-virtual"><scope>Queue</scope><name>front</name></member>
+      <member refid="struct_queue_1a7614672eed4a720bf0d78d94002bd022" prot="public" virt="non-virtual"><scope>Queue</scope><name>isEmpty</name></member>
+      <member refid="struct_queue_1a20268d0ce4bb6b9f9a98ad77d30a5a18" prot="public" virt="non-virtual"><scope>Queue</scope><name>isFull</name></member>
+      <member refid="struct_queue_1a32a0d6d0f9741c4dc34b6229985e28e6" prot="public" virt="non-virtual"><scope>Queue</scope><name>peek</name></member>
+      <member refid="struct_queue_1a7cfca3637d57c4a9e37351b3426ffd40" prot="public" virt="non-virtual"><scope>Queue</scope><name>Queue</name></member>
+      <member refid="struct_queue_1a8303807ce298d63d958f7e5765034d70" prot="public" virt="non-virtual"><scope>Queue</scope><name>rear</name></member>
+      <member refid="struct_queue_1ac938597c53e24ca6f36e0ec9bce41334" prot="public" virt="non-virtual"><scope>Queue</scope><name>recipes</name></member>
+      <member refid="struct_queue_1a0a9ddba8df3a8097b56c2be82667e2bd" prot="private" virt="non-virtual"><scope>Queue</scope><name>recipes</name></member>
+      <member refid="struct_queue_1a718803e822635006c843fc28e08041f0" prot="public" virt="non-virtual"><scope>Queue</scope><name>size</name></member>
+      <member refid="struct_queue_1a163f52a62cceb678725b810e7c20d8b3" prot="public" virt="non-virtual"><scope>Queue</scope><name>~Queue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

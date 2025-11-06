@@ -1,0 +1,811 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="xor__linked__list_8c" kind="file" language="C++">
+    <compoundname>xor_linked_list.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes refid="xor__linked__list_8h" local="yes">xor_linked_list.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>recipe.h</label>
+        <link refid="recipe_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>xor_linked_list.h</label>
+        <link refid="xor__linked__list_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/xor_linked_list.c</label>
+        <link refid="xor__linked__list_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="xor__linked__list_8c_1a2122361da74168635fd135ae4798473d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref> *</type>
+        <definition>XORListNode * xor_list_xor</definition>
+        <argsstring>(XORListNode *a, XORListNode *b)</argsstring>
+        <name>xor_list_xor</name>
+        <param>
+          <type><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Computes XOR of two pointers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second pointer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>XOR of the two pointers </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xor_linked_list.c" line="19" column="13" bodyfile="src/xor_linked_list.c" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="xor__linked__list_8c_1a367636ea694da4b7ef3dac970e1d0ae1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref> *</type>
+        <definition>XORList * xor_list_create</definition>
+        <argsstring>(void)</argsstring>
+        <name>xor_list_create</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Creates and initializes an empty XOR linked list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the created list, or NULL on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xor_linked_list.c" line="27" column="9" bodyfile="src/xor_linked_list.c" bodystart="27" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="xor__linked__list_8c_1af1dba2d420ad45bd3e9f755ae72f4f30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xor_list_insert_head</definition>
+        <argsstring>(XORList *list, Recipe *recipe)</argsstring>
+        <name>xor_list_insert_head</name>
+        <param>
+          <type><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+          <declname>recipe</declname>
+        </param>
+        <briefdescription>
+<para>Inserts a recipe at the beginning of the list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the XOR list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the recipe to insert </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xor_linked_list.c" line="46" column="5" bodyfile="src/xor_linked_list.c" bodystart="46" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="xor__linked__list_8c_1a9456fcc3cd8f6a6e433ceeca9a7809d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xor_list_insert_tail</definition>
+        <argsstring>(XORList *list, Recipe *recipe)</argsstring>
+        <name>xor_list_insert_tail</name>
+        <param>
+          <type><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+          <declname>recipe</declname>
+        </param>
+        <briefdescription>
+<para>Inserts a recipe at the end of the list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the XOR list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the recipe to insert </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xor_linked_list.c" line="77" column="5" bodyfile="src/xor_linked_list.c" bodystart="77" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="xor__linked__list_8c_1aed41953cab9c1ba248daae9303eb1a90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+        <definition>Recipe * xor_list_remove</definition>
+        <argsstring>(XORList *list, int id)</argsstring>
+        <name>xor_list_remove</name>
+        <param>
+          <type><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Removes a recipe from the list by its ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the XOR list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> ID to remove </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the removed recipe, or NULL if not found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xor_linked_list.c" line="108" column="8" bodyfile="src/xor_linked_list.c" bodystart="108" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="xor__linked__list_8c_1abb83e9e9645839eb39f62b50759d9ba2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+        <definition>Recipe * xor_list_find</definition>
+        <argsstring>(XORList *list, int id)</argsstring>
+        <name>xor_list_find</name>
+        <param>
+          <type><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Searches for and returns a recipe by its ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the XOR list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> ID to search for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the found recipe, or NULL if not found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xor_linked_list.c" line="153" column="8" bodyfile="src/xor_linked_list.c" bodystart="153" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="xor__linked__list_8c_1a0dbd50e0b8191802ac4c759ce0fc2527" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xor_list_traverse_forward</definition>
+        <argsstring>(XORList *list, void(*visit)(Recipe *recipe))</argsstring>
+        <name>xor_list_traverse_forward</name>
+        <param>
+          <type><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="struct_recipe" kindref="compound">Recipe</ref> *recipe)</type>
+          <declname>visit</declname>
+        </param>
+        <briefdescription>
+<para>Traverses the list forward (head to tail). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the XOR list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>visit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function pointer to call for each recipe </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xor_linked_list.c" line="180" column="6" bodyfile="src/xor_linked_list.c" bodystart="180" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="xor__linked__list_8c_1ac75b2c97504ecc1fc60b6ca1eae75e2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xor_list_traverse_backward</definition>
+        <argsstring>(XORList *list, void(*visit)(Recipe *recipe))</argsstring>
+        <name>xor_list_traverse_backward</name>
+        <param>
+          <type><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="struct_recipe" kindref="compound">Recipe</ref> *recipe)</type>
+          <declname>visit</declname>
+        </param>
+        <briefdescription>
+<para>Traverses the list backward (tail to head). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the XOR list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>visit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function pointer to call for each recipe </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xor_linked_list.c" line="202" column="6" bodyfile="src/xor_linked_list.c" bodystart="202" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="xor__linked__list_8c_1a9d8c48af7a8bc99bb3eaa5709a95b738" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xor_list_size</definition>
+        <argsstring>(const XORList *list)</argsstring>
+        <name>xor_list_size</name>
+        <param>
+          <type>const <ref refid="struct_x_o_r_list" kindref="compound">XORList</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Returns the number of recipes in the list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the XOR list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of recipes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xor_linked_list.c" line="224" column="5" bodyfile="src/xor_linked_list.c" bodystart="224" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="xor__linked__list_8c_1a0af0ffa3c653553453baf92ec5c9b350" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xor_list_is_empty</definition>
+        <argsstring>(const XORList *list)</argsstring>
+        <name>xor_list_is_empty</name>
+        <param>
+          <type>const <ref refid="struct_x_o_r_list" kindref="compound">XORList</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the list is empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the XOR list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if empty, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xor_linked_list.c" line="233" column="5" bodyfile="src/xor_linked_list.c" bodystart="233" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="xor__linked__list_8c_1a628f822f02458bb6dfaf16b5cbeac97f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xor_list_destroy</definition>
+        <argsstring>(XORList *list)</argsstring>
+        <name>xor_list_destroy</name>
+        <param>
+          <type><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Frees all memory associated with the list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the XOR list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xor_linked_list.c" line="241" column="6" bodyfile="src/xor_linked_list.c" bodystart="241" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="xor__linked__list_8c_1abf6f9bb0bbc194d68b6d2d9b0e8e1da7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xor_list_save_binary</definition>
+        <argsstring>(const XORList *list, const char *filename)</argsstring>
+        <name>xor_list_save_binary</name>
+        <param>
+          <type>const <ref refid="struct_x_o_r_list" kindref="compound">XORList</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Saves the XOR linked list to a binary file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the XOR list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the binary file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xor_linked_list.c" line="266" column="5" bodyfile="src/xor_linked_list.c" bodystart="266" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="xor__linked__list_8c_1a3b669ba2dff4565088f8c0a73084b330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref> *</type>
+        <definition>XORList * xor_list_load_binary</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>xor_list_load_binary</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Loads an XOR linked list from a binary file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the binary file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the loaded list, or NULL on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xor_linked_list.c" line="306" column="9" bodyfile="src/xor_linked_list.c" bodystart="306" bodyend="343"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>XOR Linked <ref refid="struct_list" kindref="compound">List</ref> implementation for memory-efficient bidirectional traversal. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Uses XOR pointer technique to store both next and previous pointers in a single field </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="xor__linked__list_8h" kindref="compound">xor_linked_list.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/><ref refid="xor__linked__list_8c_1a2122361da74168635fd135ae4798473d" kindref="member">xor_list_xor</ref>(<ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>a,<sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*)((uintptr_t)a<sp/>^<sp/>(uintptr_t)b);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*<sp/><ref refid="xor__linked__list_8c_1a367636ea694da4b7ef3dac970e1d0ae1" kindref="member">xor_list_create</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*<sp/>list<sp/>=<sp/>(<ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>));</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!list)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>list-&gt;<ref refid="struct_x_o_r_list_1aac1e9d0b20ed8d352094b50ebd47c744" kindref="member">tail</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>list-&gt;<ref refid="struct_x_o_r_list_1af623f41bb01a1e9cb740fc28cf9a8ff0" kindref="member">count</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>list;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="xor__linked__list_8c_1af1dba2d420ad45bd3e9f755ae72f4f30" kindref="member">xor_list_insert_head</ref>(<ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*<sp/>list,<sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/>recipe)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!list<sp/>||<sp/>!recipe)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>new_node<sp/>=<sp/>(<ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!new_node)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>new_node-&gt;<ref refid="struct_x_o_r_list_node_1a150b3fe6fbeabefa12fb3e60bfd473e7" kindref="member">recipe</ref><sp/>=<sp/>recipe;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>new_node-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref><sp/>=<sp/>list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref>-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref><sp/>=<sp/><ref refid="xor__linked__list_8c_1a2122361da74168635fd135ae4798473d" kindref="member">xor_list_xor</ref>(new_node,<sp/>list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref>-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list-&gt;<ref refid="struct_x_o_r_list_1aac1e9d0b20ed8d352094b50ebd47c744" kindref="member">tail</ref><sp/>=<sp/>new_node;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref><sp/>=<sp/>new_node;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>list-&gt;<ref refid="struct_x_o_r_list_1af623f41bb01a1e9cb740fc28cf9a8ff0" kindref="member">count</ref>++;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="xor__linked__list_8c_1a9456fcc3cd8f6a6e433ceeca9a7809d8" kindref="member">xor_list_insert_tail</ref>(<ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*<sp/>list,<sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/>recipe)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!list<sp/>||<sp/>!recipe)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>new_node<sp/>=<sp/>(<ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!new_node)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>new_node-&gt;<ref refid="struct_x_o_r_list_node_1a150b3fe6fbeabefa12fb3e60bfd473e7" kindref="member">recipe</ref><sp/>=<sp/>recipe;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>new_node-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref><sp/>=<sp/>list-&gt;<ref refid="struct_x_o_r_list_1aac1e9d0b20ed8d352094b50ebd47c744" kindref="member">tail</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(list-&gt;<ref refid="struct_x_o_r_list_1aac1e9d0b20ed8d352094b50ebd47c744" kindref="member">tail</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list-&gt;<ref refid="struct_x_o_r_list_1aac1e9d0b20ed8d352094b50ebd47c744" kindref="member">tail</ref>-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref><sp/>=<sp/><ref refid="xor__linked__list_8c_1a2122361da74168635fd135ae4798473d" kindref="member">xor_list_xor</ref>(list-&gt;<ref refid="struct_x_o_r_list_1aac1e9d0b20ed8d352094b50ebd47c744" kindref="member">tail</ref>-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref>,<sp/>new_node);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref><sp/>=<sp/>new_node;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>list-&gt;<ref refid="struct_x_o_r_list_1aac1e9d0b20ed8d352094b50ebd47c744" kindref="member">tail</ref><sp/>=<sp/>new_node;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>list-&gt;<ref refid="struct_x_o_r_list_1af623f41bb01a1e9cb740fc28cf9a8ff0" kindref="member">count</ref>++;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/><ref refid="xor__linked__list_8c_1aed41953cab9c1ba248daae9303eb1a90" kindref="member">xor_list_remove</ref>(<ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*<sp/>list,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!list<sp/>||<sp/>!list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>current<sp/>=<sp/>list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>prev<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>next;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(current)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next<sp/>=<sp/><ref refid="xor__linked__list_8c_1a2122361da74168635fd135ae4798473d" kindref="member">xor_list_xor</ref>(prev,<sp/>current-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(current-&gt;<ref refid="struct_x_o_r_list_node_1a150b3fe6fbeabefa12fb3e60bfd473e7" kindref="member">recipe</ref><sp/>&amp;&amp;<sp/>current-&gt;<ref refid="struct_x_o_r_list_node_1a150b3fe6fbeabefa12fb3e60bfd473e7" kindref="member">recipe</ref>-&gt;<ref refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" kindref="member">id</ref><sp/>==<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/>recipe<sp/>=<sp/>current-&gt;<ref refid="struct_x_o_r_list_node_1a150b3fe6fbeabefa12fb3e60bfd473e7" kindref="member">recipe</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prev)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prev-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref><sp/>=<sp/><ref refid="xor__linked__list_8c_1a2122361da74168635fd135ae4798473d" kindref="member">xor_list_xor</ref>(<ref refid="xor__linked__list_8c_1a2122361da74168635fd135ae4798473d" kindref="member">xor_list_xor</ref>(prev-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref>,<sp/>current),<sp/>next);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref><sp/>=<sp/>next;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(next)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref><sp/>=<sp/><ref refid="xor__linked__list_8c_1a2122361da74168635fd135ae4798473d" kindref="member">xor_list_xor</ref>(<ref refid="xor__linked__list_8c_1a2122361da74168635fd135ae4798473d" kindref="member">xor_list_xor</ref>(next-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref>,<sp/>current),<sp/>prev);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list-&gt;<ref refid="struct_x_o_r_list_1aac1e9d0b20ed8d352094b50ebd47c744" kindref="member">tail</ref><sp/>=<sp/>prev;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(current);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list-&gt;<ref refid="struct_x_o_r_list_1af623f41bb01a1e9cb740fc28cf9a8ff0" kindref="member">count</ref>--;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>recipe;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prev<sp/>=<sp/>current;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current<sp/>=<sp/>next;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/><ref refid="xor__linked__list_8c_1abb83e9e9645839eb39f62b50759d9ba2" kindref="member">xor_list_find</ref>(<ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*<sp/>list,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!list<sp/>||<sp/>!list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>current<sp/>=<sp/>list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>prev<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>next;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(current)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(current-&gt;<ref refid="struct_x_o_r_list_node_1a150b3fe6fbeabefa12fb3e60bfd473e7" kindref="member">recipe</ref><sp/>&amp;&amp;<sp/>current-&gt;<ref refid="struct_x_o_r_list_node_1a150b3fe6fbeabefa12fb3e60bfd473e7" kindref="member">recipe</ref>-&gt;<ref refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" kindref="member">id</ref><sp/>==<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>current-&gt;<ref refid="struct_x_o_r_list_node_1a150b3fe6fbeabefa12fb3e60bfd473e7" kindref="member">recipe</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next<sp/>=<sp/><ref refid="xor__linked__list_8c_1a2122361da74168635fd135ae4798473d" kindref="member">xor_list_xor</ref>(prev,<sp/>current-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prev<sp/>=<sp/>current;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current<sp/>=<sp/>next;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="xor__linked__list_8c_1a0dbd50e0b8191802ac4c759ce0fc2527" kindref="member">xor_list_traverse_forward</ref>(<ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*<sp/>list,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*visit)(<ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/>recipe))<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!list<sp/>||<sp/>!list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref><sp/>||<sp/>!visit)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>current<sp/>=<sp/>list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>prev<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>next;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(current)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>visit(current-&gt;<ref refid="struct_x_o_r_list_node_1a150b3fe6fbeabefa12fb3e60bfd473e7" kindref="member">recipe</ref>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next<sp/>=<sp/><ref refid="xor__linked__list_8c_1a2122361da74168635fd135ae4798473d" kindref="member">xor_list_xor</ref>(prev,<sp/>current-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref>);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prev<sp/>=<sp/>current;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current<sp/>=<sp/>next;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="xor__linked__list_8c_1ac75b2c97504ecc1fc60b6ca1eae75e2a" kindref="member">xor_list_traverse_backward</ref>(<ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*<sp/>list,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*visit)(<ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/>recipe))<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!list<sp/>||<sp/>!list-&gt;<ref refid="struct_x_o_r_list_1aac1e9d0b20ed8d352094b50ebd47c744" kindref="member">tail</ref><sp/>||<sp/>!visit)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>current<sp/>=<sp/>list-&gt;<ref refid="struct_x_o_r_list_1aac1e9d0b20ed8d352094b50ebd47c744" kindref="member">tail</ref>;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>next<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>prev;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(current)<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>visit(current-&gt;<ref refid="struct_x_o_r_list_node_1a150b3fe6fbeabefa12fb3e60bfd473e7" kindref="member">recipe</ref>);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prev<sp/>=<sp/><ref refid="xor__linked__list_8c_1a2122361da74168635fd135ae4798473d" kindref="member">xor_list_xor</ref>(next,<sp/>current-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref>);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next<sp/>=<sp/>current;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current<sp/>=<sp/>prev;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="xor__linked__list_8c_1a9d8c48af7a8bc99bb3eaa5709a95b738" kindref="member">xor_list_size</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*<sp/>list)<sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(list)<sp/>?<sp/>list-&gt;<ref refid="struct_x_o_r_list_1af623f41bb01a1e9cb740fc28cf9a8ff0" kindref="member">count</ref><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="xor__linked__list_8c_1a0af0ffa3c653553453baf92ec5c9b350" kindref="member">xor_list_is_empty</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*<sp/>list)<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(list<sp/>&amp;&amp;<sp/>list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref>)<sp/>?<sp/>0<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="xor__linked__list_8c_1a628f822f02458bb6dfaf16b5cbeac97f" kindref="member">xor_list_destroy</ref>(<ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*<sp/>list)<sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!list)<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>current<sp/>=<sp/>list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref>;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>prev<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>next;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(current)<sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next<sp/>=<sp/><ref refid="xor__linked__list_8c_1a2122361da74168635fd135ae4798473d" kindref="member">xor_list_xor</ref>(prev,<sp/>current-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref>);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(current);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prev<sp/>=<sp/>current;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current<sp/>=<sp/>next;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>free(list);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="xor__linked__list_8c_1abf6f9bb0bbc194d68b6d2d9b0e8e1da7" kindref="member">xor_list_save_binary</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*<sp/>list,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename)<sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!list<sp/>||<sp/>!filename)<sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>file<sp/>=<sp/>fopen(filename,<sp/></highlight><highlight class="stringliteral">&quot;wb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!file)<sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fwrite(&amp;list-&gt;<ref refid="struct_x_o_r_list_1af623f41bb01a1e9cb740fc28cf9a8ff0" kindref="member">count</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/>1,<sp/>file)<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(file);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>current<sp/>=<sp/>list-&gt;<ref refid="struct_x_o_r_list_1a0c165a6987ec46f52ecc6781097f113a" kindref="member">head</ref>;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>prev<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref>*<sp/>next;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(current)<sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(current-&gt;<ref refid="struct_x_o_r_list_node_1a150b3fe6fbeabefa12fb3e60bfd473e7" kindref="member">recipe</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fwrite(current-&gt;<ref refid="struct_x_o_r_list_node_1a150b3fe6fbeabefa12fb3e60bfd473e7" kindref="member">recipe</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_recipe" kindref="compound">Recipe</ref>),<sp/>1,<sp/>file)<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(file);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next<sp/>=<sp/><ref refid="xor__linked__list_8c_1a2122361da74168635fd135ae4798473d" kindref="member">xor_list_xor</ref>(prev,<sp/>current-&gt;<ref refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" kindref="member">npx</ref>);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prev<sp/>=<sp/>current;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current<sp/>=<sp/>next;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(file);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*<sp/><ref refid="xor__linked__list_8c_1a3b669ba2dff4565088f8c0a73084b330" kindref="member">xor_list_load_binary</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename)<sp/>{</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!filename)<sp/>{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>file<sp/>=<sp/>fopen(filename,<sp/></highlight><highlight class="stringliteral">&quot;rb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!file)<sp/>{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_o_r_list" kindref="compound">XORList</ref>*<sp/>list<sp/>=<sp/><ref refid="xor__linked__list_8c_1a367636ea694da4b7ef3dac970e1d0ae1" kindref="member">xor_list_create</ref>();</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!list)<sp/>{</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(file);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fread(&amp;count,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/>1,<sp/>file)<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(file);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="xor__linked__list_8c_1a628f822f02458bb6dfaf16b5cbeac97f" kindref="member">xor_list_destroy</ref>(list);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>count;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/>recipe<sp/>=<sp/>(<ref refid="struct_recipe" kindref="compound">Recipe</ref>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_recipe" kindref="compound">Recipe</ref>));</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!recipe)<sp/>{</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fread(recipe,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_recipe" kindref="compound">Recipe</ref>),<sp/>1,<sp/>file)<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(recipe);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="xor__linked__list_8c_1a9456fcc3cd8f6a6e433ceeca9a7809d8" kindref="member">xor_list_insert_tail</ref>(list,<sp/>recipe);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(file);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>list;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/xor_linked_list.c"/>
+  </compounddef>
+</doxygen>

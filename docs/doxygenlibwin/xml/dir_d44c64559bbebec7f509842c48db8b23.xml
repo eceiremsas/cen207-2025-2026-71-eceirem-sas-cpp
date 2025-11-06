@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>include</compoundname>
+    <innerfile refid="graph_8h">graph.h</innerfile>
+    <innerfile refid="hash__table_8h">hash_table.h</innerfile>
+    <innerfile refid="heap_8h">heap.h</innerfile>
+    <innerfile refid="linked__list_8h">linked_list.h</innerfile>
+    <innerfile refid="menu_8h">menu.h</innerfile>
+    <innerfile refid="queue_8h">queue.h</innerfile>
+    <innerfile refid="recipe_8h">recipe.h</innerfile>
+    <innerfile refid="sparse__matrix_8h">sparse_matrix.h</innerfile>
+    <innerfile refid="stack_8h">stack.h</innerfile>
+    <innerfile refid="xor__linked__list_8h">xor_linked_list.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/"/>
+  </compounddef>
+</doxygen>

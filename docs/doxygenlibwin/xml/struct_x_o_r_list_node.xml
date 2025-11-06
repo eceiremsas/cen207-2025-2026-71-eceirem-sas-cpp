@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="struct_x_o_r_list_node" kind="struct" language="C++" prot="public">
+    <compoundname>XORListNode</compoundname>
+    <includes refid="xor__linked__list_8h" local="no">xor_linked_list.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_x_o_r_list_node_1a150b3fe6fbeabefa12fb3e60bfd473e7" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+        <definition>Recipe* XORListNode::recipe</definition>
+        <argsstring></argsstring>
+        <name>recipe</name>
+        <qualifiedname>XORListNode::recipe</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xor_linked_list.h" line="24" column="12" bodyfile="include/xor_linked_list.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_x_o_r_list_node" kindref="compound">XORListNode</ref> *</type>
+        <definition>struct XORListNode* XORListNode::npx</definition>
+        <argsstring></argsstring>
+        <name>npx</name>
+        <qualifiedname>XORListNode::npx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xor_linked_list.h" line="25" column="23" bodyfile="include/xor_linked_list.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Node in XOR linked list. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The npx field stores the XOR of next and previous node addresses </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Recipe</label>
+        <link refid="struct_recipe"/>
+      </node>
+      <node id="1">
+        <label>XORListNode</label>
+        <link refid="struct_x_o_r_list_node"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+recipe</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>+npx</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xor_linked_list.h" line="23" column="1" bodyfile="include/xor_linked_list.h" bodystart="23" bodyend="26"/>
+    <listofallmembers>
+      <member refid="struct_x_o_r_list_node_1ab3f4528d2ed3f9eb2516055476a51ad1" prot="public" virt="non-virtual"><scope>XORListNode</scope><name>npx</name></member>
+      <member refid="struct_x_o_r_list_node_1a150b3fe6fbeabefa12fb3e60bfd473e7" prot="public" virt="non-virtual"><scope>XORListNode</scope><name>recipe</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,651 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="struct_heap" kind="class" language="C++" prot="public">
+    <compoundname>Heap</compoundname>
+    <includes refid="heap_8h" local="no">heap.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_heap_1ac3ae85552cef8633752a8de26d1f1184" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> **</type>
+        <definition>std::vector&lt; std::shared_ptr&lt; Recipe &gt; &gt; Heap::recipes</definition>
+        <argsstring></argsstring>
+        <name>recipes</name>
+        <qualifiedname>Heap::recipes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="24" column="12" bodyfile="include/heap.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_heap_1ac291cf589f86e95198621d33e21a05a6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Heap::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>Heap::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="25" column="9" bodyfile="include/heap.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_heap_1a96f55831332665f95d0231ee59311246" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Heap::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <qualifiedname>Heap::capacity</qualifiedname>
+        <briefdescription>
+<para>Maximum allowed elements. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="26" column="9" bodyfile="include/heap.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="struct_heap_1ab613e8fe02e8e1c7a7cc95ef18e67ed8" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Recipe&gt; &gt; Heap::recipes</definition>
+        <argsstring></argsstring>
+        <name>recipes</name>
+        <qualifiedname>Heap::recipes</qualifiedname>
+        <briefdescription>
+<para><ref refid="struct_heap" kindref="compound">Heap</ref> storage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="24" column="17" bodyfile="src/recipe/header/heap.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="struct_heap_1a18d58b0aeb106c2f3f42e5dfeeecfef9" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Heap::parent</definition>
+        <argsstring>(int index)</argsstring>
+        <name>parent</name>
+        <qualifiedname>Heap::parent</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="28" column="16" bodyfile="src/recipe/header/heap.hpp" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1ab5202fa6c3b8a2149a7dc6b0d869e46f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Heap::leftChild</definition>
+        <argsstring>(int index)</argsstring>
+        <name>leftChild</name>
+        <qualifiedname>Heap::leftChild</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="29" column="16" bodyfile="src/recipe/header/heap.hpp" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1ac183568173ce7822c911b2bd39c1d516" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Heap::rightChild</definition>
+        <argsstring>(int index)</argsstring>
+        <name>rightChild</name>
+        <qualifiedname>Heap::rightChild</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="30" column="16" bodyfile="src/recipe/header/heap.hpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a18d58b0aeb106c2f3f42e5dfeeecfef9" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Heap::parent</definition>
+        <argsstring>(int index)</argsstring>
+        <name>parent</name>
+        <qualifiedname>Heap::parent</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="19" column="16" bodyfile="src/recipe/src/heap.cpp" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1ab5202fa6c3b8a2149a7dc6b0d869e46f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Heap::leftChild</definition>
+        <argsstring>(int index)</argsstring>
+        <name>leftChild</name>
+        <qualifiedname>Heap::leftChild</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="20" column="16" bodyfile="src/recipe/src/heap.cpp" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1ac183568173ce7822c911b2bd39c1d516" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Heap::rightChild</definition>
+        <argsstring>(int index)</argsstring>
+        <name>rightChild</name>
+        <qualifiedname>Heap::rightChild</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="21" column="16" bodyfile="src/recipe/src/heap.cpp" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1ab2c4002145e854a213409c783bc3e5f3" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Heap::swap</definition>
+        <argsstring>(std::shared_ptr&lt; Recipe &gt; &amp;a, std::shared_ptr&lt; Recipe &gt; &amp;b)</argsstring>
+        <name>swap</name>
+        <qualifiedname>Heap::swap</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt; &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="24" column="17" bodyfile="src/recipe/src/heap.cpp" bodystart="24" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="struct_heap_1af8382600fed5fc3c18049e4bbbb958c6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Heap::swapNodes</definition>
+        <argsstring>(int i, int j)</argsstring>
+        <name>swapNodes</name>
+        <qualifiedname>Heap::swapNodes</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="33" column="10" bodyfile="src/recipe/header/heap.hpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a692cce19ba18f8e709358d335bbd5691" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Heap::heapifyUp</definition>
+        <argsstring>(int index)</argsstring>
+        <name>heapifyUp</name>
+        <qualifiedname>Heap::heapifyUp</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="38" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a1e77b23e735d8ef87753ae6ca2e11a39" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Heap::heapifyDown</definition>
+        <argsstring>(int index)</argsstring>
+        <name>heapifyDown</name>
+        <qualifiedname>Heap::heapifyDown</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a692cce19ba18f8e709358d335bbd5691" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Heap::heapifyUp</definition>
+        <argsstring>(int index)</argsstring>
+        <name>heapifyUp</name>
+        <qualifiedname>Heap::heapifyUp</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="31" column="10" bodyfile="src/recipe/src/heap.cpp" bodystart="31" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a1e77b23e735d8ef87753ae6ca2e11a39" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Heap::heapifyDown</definition>
+        <argsstring>(int index)</argsstring>
+        <name>heapifyDown</name>
+        <qualifiedname>Heap::heapifyDown</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="44" column="10" bodyfile="src/recipe/src/heap.cpp" bodystart="44" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_heap_1a817e70af29601d05a9c305f8a95e45a8" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Heap::Heap</definition>
+        <argsstring>(int maxCapacity=100)</argsstring>
+        <name>Heap</name>
+        <qualifiedname>Heap::Heap</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>maxCapacity</declname>
+          <defval>100</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="43" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a4ad004e8471499a2eb6c1062683057b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Heap::insert</definition>
+        <argsstring>(const std::shared_ptr&lt; Recipe &gt; &amp;recipe)</argsstring>
+        <name>insert</name>
+        <qualifiedname>Heap::insert</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt; &amp;</type>
+          <declname>recipe</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="46" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a74ee7f92c266e326080aee3295a94625" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Recipe &gt; Heap::extractMin</definition>
+        <argsstring>()</argsstring>
+        <name>extractMin</name>
+        <qualifiedname>Heap::extractMin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="47" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a7e2e3f497068d28b08dcbdb1f69eced2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Recipe &gt; Heap::peek</definition>
+        <argsstring>() const</argsstring>
+        <name>peek</name>
+        <qualifiedname>Heap::peek</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="48" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a0be15b94ddfdd9789ba7dfe54f814ff5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Heap::isEmpty</definition>
+        <argsstring>() const</argsstring>
+        <name>isEmpty</name>
+        <qualifiedname>Heap::isEmpty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="54" column="10" bodyfile="src/recipe/header/heap.hpp" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1abec5205e1390e48661c50d9e437b0448" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Heap::isFull</definition>
+        <argsstring>() const</argsstring>
+        <name>isFull</name>
+        <qualifiedname>Heap::isFull</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="55" column="10" bodyfile="src/recipe/header/heap.hpp" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a672b1f9f5be335a29feb0d72ee5d61d7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Heap::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>Heap::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="56" column="9" bodyfile="src/recipe/header/heap.hpp" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a69c97af6f6bc2c61e92c9abc70d2f6c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Heap::display</definition>
+        <argsstring>() const</argsstring>
+        <name>display</name>
+        <qualifiedname>Heap::display</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="59" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a42e6cbed41247be900004a82d7f9de9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Heap::~Heap</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Heap</name>
+        <qualifiedname>Heap::~Heap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="62" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a6b0516bdc82092b0fa589e20dbe68ad2" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Heap::Heap</definition>
+        <argsstring>(int cap)</argsstring>
+        <name>Heap</name>
+        <qualifiedname>Heap::Heap</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>cap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="65" column="14" bodyfile="src/recipe/src/heap.cpp" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a0be15b94ddfdd9789ba7dfe54f814ff5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Heap::isEmpty</definition>
+        <argsstring>() const</argsstring>
+        <name>isEmpty</name>
+        <qualifiedname>Heap::isEmpty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="70" column="10" bodyfile="src/recipe/src/heap.cpp" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1abec5205e1390e48661c50d9e437b0448" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Heap::isFull</definition>
+        <argsstring>() const</argsstring>
+        <name>isFull</name>
+        <qualifiedname>Heap::isFull</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="71" column="10" bodyfile="src/recipe/src/heap.cpp" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a672b1f9f5be335a29feb0d72ee5d61d7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Heap::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>Heap::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="72" column="9" bodyfile="src/recipe/src/heap.cpp" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1aadb48dcfba5b8d34e29fca2df660c563" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Heap::insert</definition>
+        <argsstring>(std::shared_ptr&lt; Recipe &gt; recipe)</argsstring>
+        <name>insert</name>
+        <qualifiedname>Heap::insert</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
+          <declname>recipe</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="75" column="10" bodyfile="src/recipe/src/heap.cpp" bodystart="75" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a7e2e3f497068d28b08dcbdb1f69eced2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Recipe &gt; Heap::peek</definition>
+        <argsstring>() const</argsstring>
+        <name>peek</name>
+        <qualifiedname>Heap::peek</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="86" column="21" bodyfile="src/recipe/src/heap.cpp" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a74ee7f92c266e326080aee3295a94625" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Recipe &gt; Heap::extractMin</definition>
+        <argsstring>()</argsstring>
+        <name>extractMin</name>
+        <qualifiedname>Heap::extractMin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="91" column="21" bodyfile="src/recipe/src/heap.cpp" bodystart="91" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a42e6cbed41247be900004a82d7f9de9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Heap::~Heap</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Heap</name>
+        <qualifiedname>Heap::~Heap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="114" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_heap_1af7c247e8794a6e9b561b3cd080b16cf1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Heap::sortRecipes</definition>
+        <argsstring>(std::vector&lt; std::shared_ptr&lt; Recipe &gt; &gt; &amp;recipeList)</argsstring>
+        <name>sortRecipes</name>
+        <qualifiedname>Heap::sortRecipes</qualifiedname>
+        <param>
+          <type>std::vector&lt; std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt; &gt; &amp;</type>
+          <declname>recipeList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/heap.hpp" line="51" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_heap_1a5edd450baecf062227491ef34f292254" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Heap::heapSort</definition>
+        <argsstring>(std::vector&lt; std::shared_ptr&lt; Recipe &gt; &gt; &amp;recipeList)</argsstring>
+        <name>heapSort</name>
+        <qualifiedname>Heap::heapSort</qualifiedname>
+        <param>
+          <type>std::vector&lt; std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt; &gt; &amp;</type>
+          <declname>recipeList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/heap.cpp" line="102" column="17" bodyfile="src/recipe/src/heap.cpp" bodystart="102" bodyend="111"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Min-Heap structure. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Min-Heap implementation using a dynamic array (std::vector).</para>
+<para>Array-based implementation of a complete binary tree. The parent node always has a smaller calorie value than its child nodes.</para>
+<para>Maintains the heap property based on <ref refid="struct_recipe" kindref="compound">Recipe</ref> calorie values. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Heap</label>
+        <link refid="struct_heap"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+recipes</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Recipe</label>
+        <link refid="struct_recipe"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/heap.h" line="23" column="1" bodyfile="include/heap.h" bodystart="23" bodyend="27"/>
+    <listofallmembers>
+      <member refid="struct_heap_1a96f55831332665f95d0231ee59311246" prot="public" virt="non-virtual"><scope>Heap</scope><name>capacity</name></member>
+      <member refid="struct_heap_1a69c97af6f6bc2c61e92c9abc70d2f6c7" prot="public" virt="non-virtual"><scope>Heap</scope><name>display</name></member>
+      <member refid="struct_heap_1a74ee7f92c266e326080aee3295a94625" prot="public" virt="non-virtual"><scope>Heap</scope><name>extractMin</name></member>
+      <member refid="struct_heap_1a74ee7f92c266e326080aee3295a94625" prot="public" virt="non-virtual"><scope>Heap</scope><name>extractMin</name></member>
+      <member refid="struct_heap_1a817e70af29601d05a9c305f8a95e45a8" prot="public" virt="non-virtual"><scope>Heap</scope><name>Heap</name></member>
+      <member refid="struct_heap_1a6b0516bdc82092b0fa589e20dbe68ad2" prot="public" virt="non-virtual"><scope>Heap</scope><name>Heap</name></member>
+      <member refid="struct_heap_1a1e77b23e735d8ef87753ae6ca2e11a39" prot="private" virt="non-virtual"><scope>Heap</scope><name>heapifyDown</name></member>
+      <member refid="struct_heap_1a1e77b23e735d8ef87753ae6ca2e11a39" prot="private" virt="non-virtual"><scope>Heap</scope><name>heapifyDown</name></member>
+      <member refid="struct_heap_1a692cce19ba18f8e709358d335bbd5691" prot="private" virt="non-virtual"><scope>Heap</scope><name>heapifyUp</name></member>
+      <member refid="struct_heap_1a692cce19ba18f8e709358d335bbd5691" prot="private" virt="non-virtual"><scope>Heap</scope><name>heapifyUp</name></member>
+      <member refid="struct_heap_1a5edd450baecf062227491ef34f292254" prot="public" virt="non-virtual"><scope>Heap</scope><name>heapSort</name></member>
+      <member refid="struct_heap_1a4ad004e8471499a2eb6c1062683057b4" prot="public" virt="non-virtual"><scope>Heap</scope><name>insert</name></member>
+      <member refid="struct_heap_1aadb48dcfba5b8d34e29fca2df660c563" prot="public" virt="non-virtual"><scope>Heap</scope><name>insert</name></member>
+      <member refid="struct_heap_1a0be15b94ddfdd9789ba7dfe54f814ff5" prot="public" virt="non-virtual"><scope>Heap</scope><name>isEmpty</name></member>
+      <member refid="struct_heap_1a0be15b94ddfdd9789ba7dfe54f814ff5" prot="public" virt="non-virtual"><scope>Heap</scope><name>isEmpty</name></member>
+      <member refid="struct_heap_1abec5205e1390e48661c50d9e437b0448" prot="public" virt="non-virtual"><scope>Heap</scope><name>isFull</name></member>
+      <member refid="struct_heap_1abec5205e1390e48661c50d9e437b0448" prot="public" virt="non-virtual"><scope>Heap</scope><name>isFull</name></member>
+      <member refid="struct_heap_1ab5202fa6c3b8a2149a7dc6b0d869e46f" prot="private" virt="non-virtual"><scope>Heap</scope><name>leftChild</name></member>
+      <member refid="struct_heap_1ab5202fa6c3b8a2149a7dc6b0d869e46f" prot="private" virt="non-virtual"><scope>Heap</scope><name>leftChild</name></member>
+      <member refid="struct_heap_1a18d58b0aeb106c2f3f42e5dfeeecfef9" prot="private" virt="non-virtual"><scope>Heap</scope><name>parent</name></member>
+      <member refid="struct_heap_1a18d58b0aeb106c2f3f42e5dfeeecfef9" prot="private" virt="non-virtual"><scope>Heap</scope><name>parent</name></member>
+      <member refid="struct_heap_1a7e2e3f497068d28b08dcbdb1f69eced2" prot="public" virt="non-virtual"><scope>Heap</scope><name>peek</name></member>
+      <member refid="struct_heap_1a7e2e3f497068d28b08dcbdb1f69eced2" prot="public" virt="non-virtual"><scope>Heap</scope><name>peek</name></member>
+      <member refid="struct_heap_1ac3ae85552cef8633752a8de26d1f1184" prot="public" virt="non-virtual"><scope>Heap</scope><name>recipes</name></member>
+      <member refid="struct_heap_1ab613e8fe02e8e1c7a7cc95ef18e67ed8" prot="private" virt="non-virtual"><scope>Heap</scope><name>recipes</name></member>
+      <member refid="struct_heap_1ac183568173ce7822c911b2bd39c1d516" prot="private" virt="non-virtual"><scope>Heap</scope><name>rightChild</name></member>
+      <member refid="struct_heap_1ac183568173ce7822c911b2bd39c1d516" prot="private" virt="non-virtual"><scope>Heap</scope><name>rightChild</name></member>
+      <member refid="struct_heap_1ac291cf589f86e95198621d33e21a05a6" prot="public" virt="non-virtual"><scope>Heap</scope><name>size</name></member>
+      <member refid="struct_heap_1a672b1f9f5be335a29feb0d72ee5d61d7" prot="public" virt="non-virtual"><scope>Heap</scope><name>size</name></member>
+      <member refid="struct_heap_1a672b1f9f5be335a29feb0d72ee5d61d7" prot="public" virt="non-virtual"><scope>Heap</scope><name>size</name></member>
+      <member refid="struct_heap_1af7c247e8794a6e9b561b3cd080b16cf1" prot="public" virt="non-virtual"><scope>Heap</scope><name>sortRecipes</name></member>
+      <member refid="struct_heap_1ab2c4002145e854a213409c783bc3e5f3" prot="private" virt="non-virtual"><scope>Heap</scope><name>swap</name></member>
+      <member refid="struct_heap_1af8382600fed5fc3c18049e4bbbb958c6" prot="private" virt="non-virtual"><scope>Heap</scope><name>swapNodes</name></member>
+      <member refid="struct_heap_1a42e6cbed41247be900004a82d7f9de9a" prot="public" virt="non-virtual"><scope>Heap</scope><name>~Heap</name></member>
+      <member refid="struct_heap_1a42e6cbed41247be900004a82d7f9de9a" prot="public" virt="non-virtual"><scope>Heap</scope><name>~Heap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

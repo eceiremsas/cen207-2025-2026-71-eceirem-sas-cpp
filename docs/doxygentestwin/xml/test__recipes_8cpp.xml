@@ -1,0 +1,1895 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="test__recipes_8cpp" kind="file" language="C++">
+    <compoundname>test_recipes.cpp</compoundname>
+    <includes local="no">gtest/gtest.h</includes>
+    <includes local="no">cstdio</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">../include/recipe.h</includes>
+    <includes local="yes">../include/linked_list.h</includes>
+    <includes local="yes">../include/xor_linked_list.h</includes>
+    <includes local="yes">../include/sparse_matrix.h</includes>
+    <includes local="yes">../include/stack.h</includes>
+    <includes local="yes">../include/queue.h</includes>
+    <includes local="yes">../include/heap.h</includes>
+    <includes local="yes">../include/graph.h</includes>
+    <includes local="yes">../include/hash_table.h</includes>
+    <incdepgraph>
+      <node id="14">
+        <label>../include/graph.h</label>
+      </node>
+      <node id="15">
+        <label>../include/hash_table.h</label>
+      </node>
+      <node id="13">
+        <label>../include/heap.h</label>
+      </node>
+      <node id="8">
+        <label>../include/linked_list.h</label>
+      </node>
+      <node id="12">
+        <label>../include/queue.h</label>
+      </node>
+      <node id="7">
+        <label>../include/recipe.h</label>
+      </node>
+      <node id="10">
+        <label>../include/sparse_matrix.h</label>
+      </node>
+      <node id="11">
+        <label>../include/stack.h</label>
+      </node>
+      <node id="9">
+        <label>../include/xor_linked_list.h</label>
+      </node>
+      <node id="1">
+        <label>tests/test_recipes.cpp</label>
+        <link refid="test__recipes_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstdio</label>
+      </node>
+      <node id="4">
+        <label>cstdlib</label>
+      </node>
+      <node id="5">
+        <label>cstring</label>
+      </node>
+      <node id="2">
+        <label>gtest/gtest.h</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="test__recipes_8cpp_1a3c94dc07ceb18c6a85da9a659f60bf9a" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int g_forward_count</definition>
+        <argsstring></argsstring>
+        <name>g_forward_count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="27" column="12" bodyfile="tests/test_recipes.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__recipes_8cpp_1aacb2b334f6033c8271802cc957e76281" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int g_backward_count</definition>
+        <argsstring></argsstring>
+        <name>g_backward_count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="28" column="12" bodyfile="tests/test_recipes.cpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__recipes_8cpp_1a7903bf3468c5b0d22cc8b6bbacfdb695" prot="public" static="yes" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; g_visited_order</definition>
+        <argsstring></argsstring>
+        <name>g_visited_order</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="29" column="20" bodyfile="tests/test_recipes.cpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="test__recipes_8cpp_1aaed279753a2cee30fe2709134cf593d6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void forward_visit_counter</definition>
+        <argsstring>(Recipe *r)</argsstring>
+        <name>forward_visit_counter</name>
+        <param>
+          <type>Recipe *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="31" column="13" bodyfile="tests/test_recipes.cpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a9510586b6322a63e86f9e51ee96e6fbb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void backward_visit_counter</definition>
+        <argsstring>(Recipe *r)</argsstring>
+        <name>backward_visit_counter</name>
+        <param>
+          <type>Recipe *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="35" column="13" bodyfile="tests/test_recipes.cpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a2f75fdfddb0aff7f688a2230611014f7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void graph_visit_func</definition>
+        <argsstring>(int vertex_id)</argsstring>
+        <name>graph_visit_func</name>
+        <param>
+          <type>int</type>
+          <declname>vertex_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="39" column="13" bodyfile="tests/test_recipes.cpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(RecipeTest, CreateRecipe)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>RecipeTest</type>
+        </param>
+        <param>
+          <type>CreateRecipe</type>
+        </param>
+        <briefdescription>
+<para>Test recipe creation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="46" column="1" bodyfile="tests/test_recipes.cpp" bodystart="46" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a0f960edf77f6f4ba44352eb7fcbe62af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(RecipeTest, AddIngredient)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>RecipeTest</type>
+        </param>
+        <param>
+          <type>AddIngredient</type>
+        </param>
+        <briefdescription>
+<para>Test adding ingredients to recipe. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="60" column="1" bodyfile="tests/test_recipes.cpp" bodystart="60" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1afa4b2f4a4b3a84643273da8c5c8201ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(RecipeTest, SetInstructions)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>RecipeTest</type>
+        </param>
+        <param>
+          <type>SetInstructions</type>
+        </param>
+        <briefdescription>
+<para>Test setting instructions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="74" column="1" bodyfile="tests/test_recipes.cpp" bodystart="74" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a504d09e8e06289f7ac6e036b214ce584" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(RecipeTest, CompareByID)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>RecipeTest</type>
+        </param>
+        <param>
+          <type>CompareByID</type>
+        </param>
+        <briefdescription>
+<para>Test recipe comparison by ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="87" column="1" bodyfile="tests/test_recipes.cpp" bodystart="87" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1ae359bdc058e904a3961af63b6dd4c5ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(RecipeTest, CompareByCalories)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>RecipeTest</type>
+        </param>
+        <param>
+          <type>CompareByCalories</type>
+        </param>
+        <briefdescription>
+<para>Test recipe comparison by calories. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="104" column="1" bodyfile="tests/test_recipes.cpp" bodystart="104" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a5f7004fd49781d7b40dc93896efe880c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(RecipeTest, CopyRecipe)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>RecipeTest</type>
+        </param>
+        <param>
+          <type>CopyRecipe</type>
+        </param>
+        <briefdescription>
+<para>Test recipe copy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="120" column="1" bodyfile="tests/test_recipes.cpp" bodystart="120" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a18803e3c7a27c351f149d46d09be0208" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(RecipeTest, BinaryFileOperations)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>RecipeTest</type>
+        </param>
+        <param>
+          <type>BinaryFileOperations</type>
+        </param>
+        <briefdescription>
+<para>Test binary file save and load. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="144" column="1" bodyfile="tests/test_recipes.cpp" bodystart="144" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a7be432be3dd29ed4f4fed0980aeb1460" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(LinkedListTest, CreateList)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>LinkedListTest</type>
+        </param>
+        <param>
+          <type>CreateList</type>
+        </param>
+        <briefdescription>
+<para>Test linked list creation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="181" column="1" bodyfile="tests/test_recipes.cpp" bodystart="181" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a197aed2618ca03c94d1583a7164015d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(LinkedListTest, InsertHead)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>LinkedListTest</type>
+        </param>
+        <param>
+          <type>InsertHead</type>
+        </param>
+        <briefdescription>
+<para>Test inserting at head. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="192" column="1" bodyfile="tests/test_recipes.cpp" bodystart="192" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a0a04a60ecde1719e3cc04d84507aaf4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(LinkedListTest, InsertTail)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>LinkedListTest</type>
+        </param>
+        <param>
+          <type>InsertTail</type>
+        </param>
+        <briefdescription>
+<para>Test inserting at tail. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="214" column="1" bodyfile="tests/test_recipes.cpp" bodystart="214" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a54e05d38f0e48425d2b0d73d455525e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(LinkedListTest, RemoveFromList)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>LinkedListTest</type>
+        </param>
+        <param>
+          <type>RemoveFromList</type>
+        </param>
+        <briefdescription>
+<para>Test removing from list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="235" column="1" bodyfile="tests/test_recipes.cpp" bodystart="235" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a00d4d285c5f8f9be83dbbc4bac9fce2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(LinkedListTest, BinaryFileOperations)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>LinkedListTest</type>
+        </param>
+        <param>
+          <type>BinaryFileOperations</type>
+        </param>
+        <briefdescription>
+<para>Test binary file operations for linked list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="256" column="1" bodyfile="tests/test_recipes.cpp" bodystart="256" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a9901f9140068a2680bbc8b6a3b2a9c40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(XORLinkedListTest, CreateList)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>XORLinkedListTest</type>
+        </param>
+        <param>
+          <type>CreateList</type>
+        </param>
+        <briefdescription>
+<para>Test XOR linked list creation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="289" column="1" bodyfile="tests/test_recipes.cpp" bodystart="289" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a606153230a4eb6baa5292a60dc454e58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(XORLinkedListTest, InsertOperations)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>XORLinkedListTest</type>
+        </param>
+        <param>
+          <type>InsertOperations</type>
+        </param>
+        <briefdescription>
+<para>Test inserting at head and tail. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="300" column="1" bodyfile="tests/test_recipes.cpp" bodystart="300" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1ab3d6fa2b661e874f20fc99aa4e681cf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(XORLinkedListTest, BidirectionalTraversal)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>XORLinkedListTest</type>
+        </param>
+        <param>
+          <type>BidirectionalTraversal</type>
+        </param>
+        <briefdescription>
+<para>Test bidirectional traversal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="321" column="1" bodyfile="tests/test_recipes.cpp" bodystart="321" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a7150e45d275c76aa70574bc5b2e6f10c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(XORLinkedListTest, BinaryFileOperations)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>XORLinkedListTest</type>
+        </param>
+        <param>
+          <type>BinaryFileOperations</type>
+        </param>
+        <briefdescription>
+<para>Test binary file operations for XOR linked list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="348" column="1" bodyfile="tests/test_recipes.cpp" bodystart="348" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a0431982bdd7205780c607a9964acd718" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(SparseMatrixTest, CreateMatrix)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>SparseMatrixTest</type>
+        </param>
+        <param>
+          <type>CreateMatrix</type>
+        </param>
+        <briefdescription>
+<para>Test sparse matrix creation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="377" column="1" bodyfile="tests/test_recipes.cpp" bodystart="377" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a5fef04031dc53d6257dde87ef87d6c21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(SparseMatrixTest, AddEntry)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>SparseMatrixTest</type>
+        </param>
+        <param>
+          <type>AddEntry</type>
+        </param>
+        <briefdescription>
+<para>Test adding entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="387" column="1" bodyfile="tests/test_recipes.cpp" bodystart="387" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a3560c7f64198234c7ee43a4fcbcbe9ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(SparseMatrixTest, FindRecipesByIngredient)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>SparseMatrixTest</type>
+        </param>
+        <param>
+          <type>FindRecipesByIngredient</type>
+        </param>
+        <briefdescription>
+<para>Test finding recipes by ingredient. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="405" column="1" bodyfile="tests/test_recipes.cpp" bodystart="405" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1afc3d6411e886cb75c2e2cc09e515e5d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(SparseMatrixTest, BinaryFileOperations)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>SparseMatrixTest</type>
+        </param>
+        <param>
+          <type>BinaryFileOperations</type>
+        </param>
+        <briefdescription>
+<para>Test binary file operations for sparse matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="422" column="1" bodyfile="tests/test_recipes.cpp" bodystart="422" bodyend="438"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a51c1cbf166531bcdeaa8855979d78138" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(StackTest, CreateStack)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>StackTest</type>
+        </param>
+        <param>
+          <type>CreateStack</type>
+        </param>
+        <briefdescription>
+<para>Test stack creation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="447" column="1" bodyfile="tests/test_recipes.cpp" bodystart="447" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a6b0ce19c64853bc0bb851aa87023bd32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(StackTest, PushPop)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>StackTest</type>
+        </param>
+        <param>
+          <type>PushPop</type>
+        </param>
+        <briefdescription>
+<para>Test push and pop operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="459" column="1" bodyfile="tests/test_recipes.cpp" bodystart="459" bodyend="484"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1afaeb2c1356cbf3a266f8ea02dfd34863" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(StackTest, Peek)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>StackTest</type>
+        </param>
+        <param>
+          <type>Peek</type>
+        </param>
+        <briefdescription>
+<para>Test peek operation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="489" column="1" bodyfile="tests/test_recipes.cpp" bodystart="489" bodyend="502"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a1288510dfcbadb628ee0df3a4d475e19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(StackTest, BinaryFileOperations)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>StackTest</type>
+        </param>
+        <param>
+          <type>BinaryFileOperations</type>
+        </param>
+        <briefdescription>
+<para>Test binary file operations for stack. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="507" column="1" bodyfile="tests/test_recipes.cpp" bodystart="507" bodyend="527"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a3eaa6b14f902d34d8d5017de50782b76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(QueueTest, CreateQueue)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>QueueTest</type>
+        </param>
+        <param>
+          <type>CreateQueue</type>
+        </param>
+        <briefdescription>
+<para>Test queue creation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="536" column="1" bodyfile="tests/test_recipes.cpp" bodystart="536" bodyend="543"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1aa8492eebfc4447598e0531874d655d3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(QueueTest, EnqueueDequeue)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>QueueTest</type>
+        </param>
+        <param>
+          <type>EnqueueDequeue</type>
+        </param>
+        <briefdescription>
+<para>Test enqueue and dequeue operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="548" column="1" bodyfile="tests/test_recipes.cpp" bodystart="548" bodyend="571"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a91beed3eda3b1f95e630b290a7f0aef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(QueueTest, Peek)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>QueueTest</type>
+        </param>
+        <param>
+          <type>Peek</type>
+        </param>
+        <briefdescription>
+<para>Test peek operation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="576" column="1" bodyfile="tests/test_recipes.cpp" bodystart="576" bodyend="589"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1af4d1717444089da33353fc7453781b89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(QueueTest, BinaryFileOperations)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>QueueTest</type>
+        </param>
+        <param>
+          <type>BinaryFileOperations</type>
+        </param>
+        <briefdescription>
+<para>Test binary file operations for queue. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="594" column="1" bodyfile="tests/test_recipes.cpp" bodystart="594" bodyend="614"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1abcae85d7b26eb815bada7dad61de0575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(HeapTest, CreateHeap)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>HeapTest</type>
+        </param>
+        <param>
+          <type>CreateHeap</type>
+        </param>
+        <briefdescription>
+<para>Test heap creation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="623" column="1" bodyfile="tests/test_recipes.cpp" bodystart="623" bodyend="629"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a54b9be791a82de4fba87f6c8ec16bb23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(HeapTest, InsertExtractMin)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>HeapTest</type>
+        </param>
+        <param>
+          <type>InsertExtractMin</type>
+        </param>
+        <briefdescription>
+<para>Test heap insert and extract min. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="634" column="1" bodyfile="tests/test_recipes.cpp" bodystart="634" bodyend="663"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a314431e5201d6896c49e45110b15771f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(HeapTest, HeapSort)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>HeapTest</type>
+        </param>
+        <param>
+          <type>HeapSort</type>
+        </param>
+        <briefdescription>
+<para>Test heap sort. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="668" column="1" bodyfile="tests/test_recipes.cpp" bodystart="668" bodyend="684"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a5a9f4bd1c2babd668c49a0aae080670a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(HeapTest, BinaryFileOperations)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>HeapTest</type>
+        </param>
+        <param>
+          <type>BinaryFileOperations</type>
+        </param>
+        <briefdescription>
+<para>Test binary file operations for heap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="689" column="1" bodyfile="tests/test_recipes.cpp" bodystart="689" bodyend="713"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a40aa997817ba455b7fb3acfefe1ff347" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(GraphTest, CreateGraph)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>GraphTest</type>
+        </param>
+        <param>
+          <type>CreateGraph</type>
+        </param>
+        <briefdescription>
+<para>Test graph creation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="722" column="1" bodyfile="tests/test_recipes.cpp" bodystart="722" bodyend="727"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a2b4fffcbc5cbe80e257b69321367aedc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(GraphTest, AddVertexEdge)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>GraphTest</type>
+        </param>
+        <param>
+          <type>AddVertexEdge</type>
+        </param>
+        <briefdescription>
+<para>Test adding vertices and edges. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="732" column="1" bodyfile="tests/test_recipes.cpp" bodystart="732" bodyend="748"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a4fde40036c335c7db5e1c080ac1d3206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(GraphTest, BFSTraversal)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>GraphTest</type>
+        </param>
+        <param>
+          <type>BFSTraversal</type>
+        </param>
+        <briefdescription>
+<para>Test BFS traversal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="753" column="1" bodyfile="tests/test_recipes.cpp" bodystart="753" bodyend="773"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a5b351ee0875670584c44bd75e9fe958b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(GraphTest, DFSTraversal)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>GraphTest</type>
+        </param>
+        <param>
+          <type>DFSTraversal</type>
+        </param>
+        <briefdescription>
+<para>Test DFS traversal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="778" column="1" bodyfile="tests/test_recipes.cpp" bodystart="778" bodyend="796"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a3237b311181f94e5d60ed4e1abed857b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(GraphTest, CycleDetection)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>GraphTest</type>
+        </param>
+        <param>
+          <type>CycleDetection</type>
+        </param>
+        <briefdescription>
+<para>Test cycle detection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="801" column="1" bodyfile="tests/test_recipes.cpp" bodystart="801" bodyend="818"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a914b1046c6f4b67974a706f354742108" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(GraphTest, BinaryFileOperations)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>GraphTest</type>
+        </param>
+        <param>
+          <type>BinaryFileOperations</type>
+        </param>
+        <briefdescription>
+<para>Test binary file operations for graph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="823" column="1" bodyfile="tests/test_recipes.cpp" bodystart="823" bodyend="844"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1ac7ea7cdb2655736dfd382950670ddc63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(HashTableTest, CreateHashTable)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>HashTableTest</type>
+        </param>
+        <param>
+          <type>CreateHashTable</type>
+        </param>
+        <briefdescription>
+<para>Test hash table creation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="853" column="1" bodyfile="tests/test_recipes.cpp" bodystart="853" bodyend="859"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a0d453ee495cf1244d601151804569b32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(HashTableTest, InsertSearch)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>HashTableTest</type>
+        </param>
+        <param>
+          <type>InsertSearch</type>
+        </param>
+        <briefdescription>
+<para>Test insert and search operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="864" column="1" bodyfile="tests/test_recipes.cpp" bodystart="864" bodyend="888"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a56038936de4c4c44cc70d417e8275dcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(HashTableTest, Delete)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>HashTableTest</type>
+        </param>
+        <param>
+          <type>Delete</type>
+        </param>
+        <briefdescription>
+<para>Test delete operation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="893" column="1" bodyfile="tests/test_recipes.cpp" bodystart="893" bodyend="914"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a95266149cfe575100a826cede9e6da66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(HashTableTest, CollisionHandling)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>HashTableTest</type>
+        </param>
+        <param>
+          <type>CollisionHandling</type>
+        </param>
+        <briefdescription>
+<para>Test collision handling. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="919" column="1" bodyfile="tests/test_recipes.cpp" bodystart="919" bodyend="939"/>
+      </memberdef>
+      <memberdef kind="function" id="test__recipes_8cpp_1a9f0c9cf1ad10a200a1497b6dacd0aa10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(HashTableTest, BinaryFileOperations)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>HashTableTest</type>
+        </param>
+        <param>
+          <type>BinaryFileOperations</type>
+        </param>
+        <briefdescription>
+<para>Test binary file operations for hash table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_recipes.cpp" line="944" column="1" bodyfile="tests/test_recipes.cpp" bodystart="944" bodyend="968"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Comprehensive unit tests for all data structures using GoogleTest. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Tests all 7 midterm algorithms: Recipe, Linked List, XOR Linked List, Sparse Matrix, Stack, Queue, Heap, Graph (BFS/DFS), Hash Table All tests run automatically without user interaction </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtest/gtest.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/recipe.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/linked_list.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/xor_linked_list.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/sparse_matrix.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/stack.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/queue.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/heap.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/graph.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/hash_table.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Helper<sp/>variables<sp/>for<sp/>traversal<sp/>tests</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>g_forward_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>g_backward_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/>g_visited_order;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>forward_visit_counter(Recipe*<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(r)<sp/>g_forward_count++;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>backward_visit_counter(Recipe*<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(r)<sp/>g_backward_count++;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>graph_visit_func(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vertex_id)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>g_visited_order.push_back(vertex_id);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(RecipeTest,<sp/>CreateRecipe)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(r,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(r-&gt;id,<sp/>1);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(r-&gt;name,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(r-&gt;category,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(r-&gt;calories,<sp/>800);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(r-&gt;preparation_time,<sp/>45);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="test__recipes_8cpp_1a0f960edf77f6f4ba44352eb7fcbe62af" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(RecipeTest,<sp/>AddIngredient)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(r,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(recipe_add_ingredient(r,<sp/></highlight><highlight class="stringliteral">&quot;Flour&quot;</highlight><highlight class="normal">),<sp/>1);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(recipe_add_ingredient(r,<sp/></highlight><highlight class="stringliteral">&quot;Cheese&quot;</highlight><highlight class="normal">),<sp/>1);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(r-&gt;ingredient_count,<sp/>2);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="test__recipes_8cpp_1afa4b2f4a4b3a84643273da8c5c8201ed" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(RecipeTest,<sp/>SetInstructions)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(r,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_set_instructions(r,<sp/></highlight><highlight class="stringliteral">&quot;Mix<sp/>ingredients<sp/>and<sp/>bake&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(r-&gt;instructions,<sp/></highlight><highlight class="stringliteral">&quot;Mix<sp/>ingredients<sp/>and<sp/>bake&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="test__recipes_8cpp_1a504d09e8e06289f7ac6e036b214ce584" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(RecipeTest,<sp/>CompareByID)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(r1,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(r2,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_LT(recipe_compare_by_id(r1,<sp/>r2),<sp/>0);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_GT(recipe_compare_by_id(r2,<sp/>r1),<sp/>0);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(recipe_compare_by_id(r1,<sp/>r1),<sp/>0);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="test__recipes_8cpp_1ae359bdc058e904a3961af63b6dd4c5ee" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(RecipeTest,<sp/>CompareByCalories)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Salad&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>200,<sp/>10);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(r1,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(r2,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_GT(recipe_compare_by_calories(r1,<sp/>r2),<sp/>0);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_LT(recipe_compare_by_calories(r2,<sp/>r1),<sp/>0);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="test__recipes_8cpp_1a5f7004fd49781d7b40dc93896efe880c" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(RecipeTest,<sp/>CopyRecipe)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(r1,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_add_ingredient(r1,<sp/></highlight><highlight class="stringliteral">&quot;Flour&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_set_instructions(r1,<sp/></highlight><highlight class="stringliteral">&quot;Bake<sp/>for<sp/>20<sp/>minutes&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_copy(r1);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(r2,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(r2-&gt;id,<sp/>r1-&gt;id);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(r2-&gt;name,<sp/>r1-&gt;name);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(r2-&gt;ingredient_count,<sp/>r1-&gt;ingredient_count);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(r2-&gt;instructions,<sp/>r1-&gt;instructions);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Verify<sp/>they<sp/>are<sp/>different<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_NE(r1,<sp/>r2);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="test__recipes_8cpp_1a18803e3c7a27c351f149d46d09be0208" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(RecipeTest,<sp/>BinaryFileOperations)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(r1,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_add_ingredient(r1,<sp/></highlight><highlight class="stringliteral">&quot;Flour&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_add_ingredient(r1,<sp/></highlight><highlight class="stringliteral">&quot;Cheese&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_set_instructions(r1,<sp/></highlight><highlight class="stringliteral">&quot;Bake<sp/>for<sp/>20<sp/>minutes&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>to<sp/>binary<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;test_recipe.bin&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(recipe_save_binary(r1,<sp/>filename),<sp/>1);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>from<sp/>binary<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_load_binary(filename);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(r2,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Verify<sp/>loaded<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(r2-&gt;id,<sp/>r1-&gt;id);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(r2-&gt;name,<sp/>r1-&gt;name);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(r2-&gt;category,<sp/>r1-&gt;category);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(r2-&gt;calories,<sp/>r1-&gt;calories);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(r2-&gt;preparation_time,<sp/>r1-&gt;preparation_time);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(r2-&gt;ingredient_count,<sp/>r1-&gt;ingredient_count);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(r2-&gt;instructions,<sp/>r1-&gt;instructions);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cleanup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>remove(filename);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment">//<sp/>LINKED<sp/>LIST<sp/>TESTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="test__recipes_8cpp_1a7be432be3dd29ed4f4fed0980aeb1460" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(LinkedListTest,<sp/>CreateList)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>List*<sp/>list<sp/>=<sp/>list_create();</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(list,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(list_size(list),<sp/>0);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(list_is_empty(list));</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>list_destroy(list);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="test__recipes_8cpp_1a197aed2618ca03c94d1583a7164015d4" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(LinkedListTest,<sp/>InsertHead)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>List*<sp/>list<sp/>=<sp/>list_create();</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(list_insert_head(list,<sp/>r1),<sp/>1);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(list_insert_head(list,<sp/>r2),<sp/>1);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(list_size(list),<sp/>2);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_FALSE(list_is_empty(list));</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>found<sp/>=<sp/>list_find(list,<sp/>2);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(found,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(found-&gt;id,<sp/>2);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>list_destroy(list);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="test__recipes_8cpp_1a0a04a60ecde1719e3cc04d84507aaf4d" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(LinkedListTest,<sp/>InsertTail)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>List*<sp/>list<sp/>=<sp/>list_create();</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(list_insert_tail(list,<sp/>r1),<sp/>1);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(list_insert_tail(list,<sp/>r2),<sp/>1);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(list_size(list),<sp/>2);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>found<sp/>=<sp/>list_find(list,<sp/>1);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(found,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(found-&gt;id,<sp/>1);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>list_destroy(list);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="test__recipes_8cpp_1a54e05d38f0e48425d2b0d73d455525e6" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(LinkedListTest,<sp/>RemoveFromList)<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>List*<sp/>list<sp/>=<sp/>list_create();</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>list_insert_head(list,<sp/>r1);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>list_insert_head(list,<sp/>r2);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>removed<sp/>=<sp/>list_remove(list,<sp/>1);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(removed,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(removed-&gt;id,<sp/>1);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(list_size(list),<sp/>1);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(removed);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>list_destroy(list);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="test__recipes_8cpp_1a00d4d285c5f8f9be83dbbc4bac9fce2b" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(LinkedListTest,<sp/>BinaryFileOperations)<sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>List*<sp/>list<sp/>=<sp/>list_create();</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>list_insert_tail(list,<sp/>r1);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>list_insert_tail(list,<sp/>r2);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;test_list.bin&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(list_save_binary(list,<sp/>filename),<sp/>1);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>List*<sp/>loaded<sp/>=<sp/>list_load_binary(filename);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(loaded,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(list_size(loaded),<sp/>2);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>found<sp/>=<sp/>list_find(loaded,<sp/>1);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(found,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(found-&gt;id,<sp/>1);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>remove(filename);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>list_destroy(list);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>list_destroy(loaded);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="comment">//<sp/>XOR<sp/>LINKED<sp/>LIST<sp/>TESTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289" refid="test__recipes_8cpp_1a9901f9140068a2680bbc8b6a3b2a9c40" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(XORLinkedListTest,<sp/>CreateList)<sp/>{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>XORList*<sp/>list<sp/>=<sp/>xor_list_create();</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(list,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(xor_list_size(list),<sp/>0);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(xor_list_is_empty(list));</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>xor_list_destroy(list);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300" refid="test__recipes_8cpp_1a606153230a4eb6baa5292a60dc454e58" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(XORLinkedListTest,<sp/>InsertOperations)<sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>XORList*<sp/>list<sp/>=<sp/>xor_list_create();</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(xor_list_insert_head(list,<sp/>r1),<sp/>1);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(xor_list_insert_tail(list,<sp/>r2),<sp/>1);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(xor_list_size(list),<sp/>2);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>found<sp/>=<sp/>xor_list_find(list,<sp/>1);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(found,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(found-&gt;id,<sp/>1);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>xor_list_destroy(list);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321" refid="test__recipes_8cpp_1ab3d6fa2b661e874f20fc99aa4e681cf8" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(XORLinkedListTest,<sp/>BidirectionalTraversal)<sp/>{</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>XORList*<sp/>list<sp/>=<sp/>xor_list_create();</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r3<sp/>=<sp/>recipe_create(3,<sp/></highlight><highlight class="stringliteral">&quot;Salad&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>200,<sp/>10);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>xor_list_insert_tail(list,<sp/>r1);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>xor_list_insert_tail(list,<sp/>r2);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>xor_list_insert_tail(list,<sp/>r3);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>g_forward_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>xor_list_traverse_forward(list,<sp/>forward_visit_counter);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(g_forward_count,<sp/>3);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/>g_backward_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>xor_list_traverse_backward(list,<sp/>backward_visit_counter);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(g_backward_count,<sp/>3);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>xor_list_destroy(list);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r3);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348" refid="test__recipes_8cpp_1a7150e45d275c76aa70574bc5b2e6f10c" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(XORLinkedListTest,<sp/>BinaryFileOperations)<sp/>{</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/>XORList*<sp/>list<sp/>=<sp/>xor_list_create();</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>xor_list_insert_tail(list,<sp/>r1);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/>xor_list_insert_tail(list,<sp/>r2);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;test_xor_list.bin&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(xor_list_save_binary(list,<sp/>filename),<sp/>1);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>XORList*<sp/>loaded<sp/>=<sp/>xor_list_load_binary(filename);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(loaded,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(xor_list_size(loaded),<sp/>2);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>remove(filename);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/>xor_list_destroy(list);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/>xor_list_destroy(loaded);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPARSE<sp/>MATRIX<sp/>TESTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377" refid="test__recipes_8cpp_1a0431982bdd7205780c607a9964acd718" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(SparseMatrixTest,<sp/>CreateMatrix)<sp/>{</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>SparseMatrix*<sp/>matrix<sp/>=<sp/>sparse_matrix_create();</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(matrix,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(matrix-&gt;entry_count,<sp/>0);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_matrix_destroy(matrix);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387" refid="test__recipes_8cpp_1a5fef04031dc53d6257dde87ef87d6c21" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(SparseMatrixTest,<sp/>AddEntry)<sp/>{</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/>SparseMatrix*<sp/>matrix<sp/>=<sp/>sparse_matrix_create();</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_matrix_add_entry(matrix,<sp/>0,<sp/>0,<sp/>5,<sp/></highlight><highlight class="stringliteral">&quot;Flour&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_matrix_add_entry(matrix,<sp/>0,<sp/>1,<sp/>3,<sp/></highlight><highlight class="stringliteral">&quot;Cheese&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_matrix_add_entry(matrix,<sp/>1,<sp/>0,<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;Flour&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(sparse_matrix_get_value(matrix,<sp/>0,<sp/>0),<sp/>5);</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(sparse_matrix_get_value(matrix,<sp/>0,<sp/>1),<sp/>3);</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(sparse_matrix_get_value(matrix,<sp/>1,<sp/>0),<sp/>2);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(sparse_matrix_get_value(matrix,<sp/>1,<sp/>1),<sp/>0);<sp/></highlight><highlight class="comment">//<sp/>Non-existent<sp/>entry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_matrix_destroy(matrix);</highlight></codeline>
+<codeline lineno="400"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405" refid="test__recipes_8cpp_1a3560c7f64198234c7ee43a4fcbcbe9ff" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(SparseMatrixTest,<sp/>FindRecipesByIngredient)<sp/>{</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/>SparseMatrix*<sp/>matrix<sp/>=<sp/>sparse_matrix_create();</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_matrix_add_entry(matrix,<sp/>0,<sp/>0,<sp/>5,<sp/></highlight><highlight class="stringliteral">&quot;Flour&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_matrix_add_entry(matrix,<sp/>1,<sp/>0,<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;Flour&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_matrix_add_entry(matrix,<sp/>2,<sp/>1,<sp/>3,<sp/></highlight><highlight class="stringliteral">&quot;Cheese&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recipe_ids[10];</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>sparse_matrix_find_recipes_by_ingredient(matrix,<sp/></highlight><highlight class="stringliteral">&quot;Flour&quot;</highlight><highlight class="normal">,<sp/>recipe_ids,<sp/>10);</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(count,<sp/>2);</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_matrix_destroy(matrix);</highlight></codeline>
+<codeline lineno="417"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="422" refid="test__recipes_8cpp_1afc3d6411e886cb75c2e2cc09e515e5d7" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(SparseMatrixTest,<sp/>BinaryFileOperations)<sp/>{</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/>SparseMatrix*<sp/>matrix<sp/>=<sp/>sparse_matrix_create();</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_matrix_add_entry(matrix,<sp/>0,<sp/>0,<sp/>5,<sp/></highlight><highlight class="stringliteral">&quot;Flour&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_matrix_add_entry(matrix,<sp/>0,<sp/>1,<sp/>3,<sp/></highlight><highlight class="stringliteral">&quot;Cheese&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;test_matrix.bin&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(sparse_matrix_save_binary(matrix,<sp/>filename),<sp/>1);</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/>SparseMatrix*<sp/>loaded<sp/>=<sp/>sparse_matrix_load_binary(filename);</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(loaded,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(loaded-&gt;entry_count,<sp/>2);</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(sparse_matrix_get_value(loaded,<sp/>0,<sp/>0),<sp/>5);</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/>remove(filename);</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_matrix_destroy(matrix);</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_matrix_destroy(loaded);</highlight></codeline>
+<codeline lineno="438"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="441"><highlight class="normal"></highlight><highlight class="comment">//<sp/>STACK<sp/>TESTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"></highlight></codeline>
+<codeline lineno="447" refid="test__recipes_8cpp_1a51c1cbf166531bcdeaa8855979d78138" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(StackTest,<sp/>CreateStack)<sp/>{</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/>Stack*<sp/>stack<sp/>=<sp/>stack_create();</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(stack,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(stack_is_empty(stack));</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_FALSE(stack_is_full(stack));</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(stack_size(stack),<sp/>0);</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/>stack_destroy(stack);</highlight></codeline>
+<codeline lineno="454"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight></codeline>
+<codeline lineno="459" refid="test__recipes_8cpp_1a6b0ce19c64853bc0bb851aa87023bd32" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(StackTest,<sp/>PushPop)<sp/>{</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/>Stack*<sp/>stack<sp/>=<sp/>stack_create();</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(stack_push(stack,<sp/>OP_ADD,<sp/>r1),<sp/>1);</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(stack_push(stack,<sp/>OP_EDIT,<sp/>r2),<sp/>1);</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(stack_size(stack),<sp/>2);</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_FALSE(stack_is_empty(stack));</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/>StackOperation*<sp/>op<sp/>=<sp/>stack_pop(stack);</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(op,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(op-&gt;type,<sp/>OP_EDIT);</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(op-&gt;recipe-&gt;id,<sp/>2);</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/>op<sp/>=<sp/>stack_pop(stack);</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(op,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(op-&gt;type,<sp/>OP_ADD);</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(op-&gt;recipe-&gt;id,<sp/>1);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(stack_is_empty(stack));</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/>stack_destroy(stack);</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="484"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"></highlight></codeline>
+<codeline lineno="489" refid="test__recipes_8cpp_1afaeb2c1356cbf3a266f8ea02dfd34863" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(StackTest,<sp/>Peek)<sp/>{</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/>Stack*<sp/>stack<sp/>=<sp/>stack_create();</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/>stack_push(stack,<sp/>OP_ADD,<sp/>r1);</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/>StackOperation*<sp/>op<sp/>=<sp/>stack_peek(stack);</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(op,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(op-&gt;type,<sp/>OP_ADD);</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(stack_size(stack),<sp/>1);<sp/></highlight><highlight class="comment">//<sp/>Size<sp/>should<sp/>not<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/>stack_destroy(stack);</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="502"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"></highlight></codeline>
+<codeline lineno="507" refid="test__recipes_8cpp_1a1288510dfcbadb628ee0df3a4d475e19" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(StackTest,<sp/>BinaryFileOperations)<sp/>{</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/>Stack*<sp/>stack<sp/>=<sp/>stack_create();</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/>stack_push(stack,<sp/>OP_ADD,<sp/>r1);</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/>stack_push(stack,<sp/>OP_EDIT,<sp/>r2);</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;test_stack.bin&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(stack_save_binary(stack,<sp/>filename),<sp/>1);</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/>Stack*<sp/>loaded<sp/>=<sp/>stack_load_binary(filename);</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(loaded,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(stack_size(loaded),<sp/>2);</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/>remove(filename);</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/>stack_destroy(stack);</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/>stack_destroy(loaded);</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="527"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight><highlight class="comment">//<sp/>QUEUE<sp/>TESTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="532"><highlight class="normal"></highlight></codeline>
+<codeline lineno="536" refid="test__recipes_8cpp_1a3eaa6b14f902d34d8d5017de50782b76" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(QueueTest,<sp/>CreateQueue)<sp/>{</highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/>Queue*<sp/>queue<sp/>=<sp/>queue_create();</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(queue,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(queue_is_empty(queue));</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_FALSE(queue_is_full(queue));</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(queue_size(queue),<sp/>0);</highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/>queue_destroy(queue);</highlight></codeline>
+<codeline lineno="543"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"></highlight></codeline>
+<codeline lineno="548" refid="test__recipes_8cpp_1aa8492eebfc4447598e0531874d655d3e" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(QueueTest,<sp/>EnqueueDequeue)<sp/>{</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/>Queue*<sp/>queue<sp/>=<sp/>queue_create();</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(queue_enqueue(queue,<sp/>r1),<sp/>1);</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(queue_enqueue(queue,<sp/>r2),<sp/>1);</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(queue_size(queue),<sp/>2);</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_FALSE(queue_is_empty(queue));</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>dequeued<sp/>=<sp/>queue_dequeue(queue);</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(dequeued,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(dequeued-&gt;id,<sp/>1);<sp/></highlight><highlight class="comment">//<sp/>FIFO<sp/>-<sp/>first<sp/>in,<sp/>first<sp/>out</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="561"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(queue_size(queue),<sp/>1);</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="563"><highlight class="normal"><sp/><sp/><sp/><sp/>dequeued<sp/>=<sp/>queue_dequeue(queue);</highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(dequeued,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="565"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(dequeued-&gt;id,<sp/>2);</highlight></codeline>
+<codeline lineno="566"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(queue_is_empty(queue));</highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/>queue_destroy(queue);</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="571"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"></highlight></codeline>
+<codeline lineno="576" refid="test__recipes_8cpp_1a91beed3eda3b1f95e630b290a7f0aef1" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(QueueTest,<sp/>Peek)<sp/>{</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"><sp/><sp/><sp/><sp/>Queue*<sp/>queue<sp/>=<sp/>queue_create();</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="580"><highlight class="normal"><sp/><sp/><sp/><sp/>queue_enqueue(queue,<sp/>r1);</highlight></codeline>
+<codeline lineno="581"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="582"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>peeked<sp/>=<sp/>queue_peek(queue);</highlight></codeline>
+<codeline lineno="583"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(peeked,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="584"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(peeked-&gt;id,<sp/>1);</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(queue_size(queue),<sp/>1);<sp/></highlight><highlight class="comment">//<sp/>Size<sp/>should<sp/>not<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="586"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="587"><highlight class="normal"><sp/><sp/><sp/><sp/>queue_destroy(queue);</highlight></codeline>
+<codeline lineno="588"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="589"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="590"><highlight class="normal"></highlight></codeline>
+<codeline lineno="594" refid="test__recipes_8cpp_1af4d1717444089da33353fc7453781b89" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(QueueTest,<sp/>BinaryFileOperations)<sp/>{</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"><sp/><sp/><sp/><sp/>Queue*<sp/>queue<sp/>=<sp/>queue_create();</highlight></codeline>
+<codeline lineno="596"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="597"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="598"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="599"><highlight class="normal"><sp/><sp/><sp/><sp/>queue_enqueue(queue,<sp/>r1);</highlight></codeline>
+<codeline lineno="600"><highlight class="normal"><sp/><sp/><sp/><sp/>queue_enqueue(queue,<sp/>r2);</highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="602"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;test_queue.bin&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(queue_save_binary(queue,<sp/>filename),<sp/>1);</highlight></codeline>
+<codeline lineno="604"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="605"><highlight class="normal"><sp/><sp/><sp/><sp/>Queue*<sp/>loaded<sp/>=<sp/>queue_load_binary(filename);</highlight></codeline>
+<codeline lineno="606"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(loaded,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="607"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(queue_size(loaded),<sp/>2);</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="609"><highlight class="normal"><sp/><sp/><sp/><sp/>remove(filename);</highlight></codeline>
+<codeline lineno="610"><highlight class="normal"><sp/><sp/><sp/><sp/>queue_destroy(queue);</highlight></codeline>
+<codeline lineno="611"><highlight class="normal"><sp/><sp/><sp/><sp/>queue_destroy(loaded);</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="613"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="614"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="615"><highlight class="normal"></highlight></codeline>
+<codeline lineno="616"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="617"><highlight class="normal"></highlight><highlight class="comment">//<sp/>HEAP<sp/>TESTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="618"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="619"><highlight class="normal"></highlight></codeline>
+<codeline lineno="623" refid="test__recipes_8cpp_1abcae85d7b26eb815bada7dad61de0575" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(HeapTest,<sp/>CreateHeap)<sp/>{</highlight></codeline>
+<codeline lineno="624"><highlight class="normal"><sp/><sp/><sp/><sp/>Heap*<sp/>heap<sp/>=<sp/>heap_create(10);</highlight></codeline>
+<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(heap,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="626"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(heap_is_empty(heap));</highlight></codeline>
+<codeline lineno="627"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_FALSE(heap_is_full(heap));</highlight></codeline>
+<codeline lineno="628"><highlight class="normal"><sp/><sp/><sp/><sp/>heap_destroy(heap);</highlight></codeline>
+<codeline lineno="629"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="630"><highlight class="normal"></highlight></codeline>
+<codeline lineno="634" refid="test__recipes_8cpp_1a54b9be791a82de4fba87f6c8ec16bb23" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(HeapTest,<sp/>InsertExtractMin)<sp/>{</highlight></codeline>
+<codeline lineno="635"><highlight class="normal"><sp/><sp/><sp/><sp/>Heap*<sp/>heap<sp/>=<sp/>heap_create(10);</highlight></codeline>
+<codeline lineno="636"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="637"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Salad&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>200,<sp/>10);</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r3<sp/>=<sp/>recipe_create(3,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="639"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="640"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(heap_insert(heap,<sp/>r1),<sp/>1);</highlight></codeline>
+<codeline lineno="641"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(heap_insert(heap,<sp/>r2),<sp/>1);</highlight></codeline>
+<codeline lineno="642"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(heap_insert(heap,<sp/>r3),<sp/>1);</highlight></codeline>
+<codeline lineno="643"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="644"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>min<sp/>=<sp/>heap_extract_min(heap);</highlight></codeline>
+<codeline lineno="645"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(min,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="646"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(min-&gt;id,<sp/>2);<sp/></highlight><highlight class="comment">//<sp/>Salad<sp/>has<sp/>lowest<sp/>calories<sp/>(200)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="647"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(min-&gt;calories,<sp/>200);</highlight></codeline>
+<codeline lineno="648"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="649"><highlight class="normal"><sp/><sp/><sp/><sp/>min<sp/>=<sp/>heap_extract_min(heap);</highlight></codeline>
+<codeline lineno="650"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(min,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="651"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(min-&gt;id,<sp/>3);<sp/></highlight><highlight class="comment">//<sp/>Burger<sp/>has<sp/>next<sp/>lowest<sp/>(600)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="652"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="653"><highlight class="normal"><sp/><sp/><sp/><sp/>min<sp/>=<sp/>heap_extract_min(heap);</highlight></codeline>
+<codeline lineno="654"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(min,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="655"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(min-&gt;id,<sp/>1);<sp/></highlight><highlight class="comment">//<sp/>Pizza<sp/>has<sp/>highest<sp/>(800)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="656"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="657"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(heap_is_empty(heap));</highlight></codeline>
+<codeline lineno="658"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="659"><highlight class="normal"><sp/><sp/><sp/><sp/>heap_destroy(heap);</highlight></codeline>
+<codeline lineno="660"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="661"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="662"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r3);</highlight></codeline>
+<codeline lineno="663"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="664"><highlight class="normal"></highlight></codeline>
+<codeline lineno="668" refid="test__recipes_8cpp_1a314431e5201d6896c49e45110b15771f" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(HeapTest,<sp/>HeapSort)<sp/>{</highlight></codeline>
+<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="670"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Salad&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>200,<sp/>10);</highlight></codeline>
+<codeline lineno="671"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r3<sp/>=<sp/>recipe_create(3,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>recipes[]<sp/>=<sp/>{r1,<sp/>r2,<sp/>r3};</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/>heap_sort_recipes(recipes,<sp/>3);</highlight></codeline>
+<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="676"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>After<sp/>sorting,<sp/>recipes<sp/>should<sp/>be<sp/>ordered<sp/>by<sp/>calories<sp/>(ascending)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="677"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(recipes[0]-&gt;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>2);<sp/></highlight><highlight class="comment">//<sp/>Salad<sp/>(200)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(recipes[1]-&gt;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>3);<sp/></highlight><highlight class="comment">//<sp/>Burger<sp/>(600)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(recipes[2]-&gt;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>1);<sp/></highlight><highlight class="comment">//<sp/>Pizza<sp/>(800)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="680"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="681"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="682"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="683"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r3);</highlight></codeline>
+<codeline lineno="684"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="685"><highlight class="normal"></highlight></codeline>
+<codeline lineno="689" refid="test__recipes_8cpp_1a5a9f4bd1c2babd668c49a0aae080670a" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(HeapTest,<sp/>BinaryFileOperations)<sp/>{</highlight></codeline>
+<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/>Heap*<sp/>heap<sp/>=<sp/>heap_create(10);</highlight></codeline>
+<codeline lineno="691"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Salad&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>200,<sp/>10);</highlight></codeline>
+<codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="694"><highlight class="normal"><sp/><sp/><sp/><sp/>heap_insert(heap,<sp/>r1);</highlight></codeline>
+<codeline lineno="695"><highlight class="normal"><sp/><sp/><sp/><sp/>heap_insert(heap,<sp/>r2);</highlight></codeline>
+<codeline lineno="696"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="697"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;test_heap.bin&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(heap_save_binary(heap,<sp/>filename),<sp/>1);</highlight></codeline>
+<codeline lineno="699"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="700"><highlight class="normal"><sp/><sp/><sp/><sp/>Heap*<sp/>loaded<sp/>=<sp/>heap_load_binary(filename);</highlight></codeline>
+<codeline lineno="701"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(loaded,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="702"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(loaded-&gt;size,<sp/>2);</highlight></codeline>
+<codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="704"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>min<sp/>=<sp/>heap_extract_min(loaded);</highlight></codeline>
+<codeline lineno="705"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(min,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="706"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(min-&gt;id,<sp/>2);<sp/></highlight><highlight class="comment">//<sp/>Salad<sp/>has<sp/>lowest<sp/>calories</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="707"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="708"><highlight class="normal"><sp/><sp/><sp/><sp/>remove(filename);</highlight></codeline>
+<codeline lineno="709"><highlight class="normal"><sp/><sp/><sp/><sp/>heap_destroy(heap);</highlight></codeline>
+<codeline lineno="710"><highlight class="normal"><sp/><sp/><sp/><sp/>heap_destroy(loaded);</highlight></codeline>
+<codeline lineno="711"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="712"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="713"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="714"><highlight class="normal"></highlight></codeline>
+<codeline lineno="715"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="716"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GRAPH<sp/>TESTS<sp/>(BFS/DFS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="717"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="718"><highlight class="normal"></highlight></codeline>
+<codeline lineno="722" refid="test__recipes_8cpp_1a40aa997817ba455b7fb3acfefe1ff347" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(GraphTest,<sp/>CreateGraph)<sp/>{</highlight></codeline>
+<codeline lineno="723"><highlight class="normal"><sp/><sp/><sp/><sp/>Graph*<sp/>graph<sp/>=<sp/>graph_create();</highlight></codeline>
+<codeline lineno="724"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(graph,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="725"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(graph-&gt;vertex_count,<sp/>0);</highlight></codeline>
+<codeline lineno="726"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_destroy(graph);</highlight></codeline>
+<codeline lineno="727"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="728"><highlight class="normal"></highlight></codeline>
+<codeline lineno="732" refid="test__recipes_8cpp_1a2b4fffcbc5cbe80e257b69321367aedc" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(GraphTest,<sp/>AddVertexEdge)<sp/>{</highlight></codeline>
+<codeline lineno="733"><highlight class="normal"><sp/><sp/><sp/><sp/>Graph*<sp/>graph<sp/>=<sp/>graph_create();</highlight></codeline>
+<codeline lineno="734"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="735"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(graph_add_vertex(graph,<sp/>1),<sp/>1);</highlight></codeline>
+<codeline lineno="736"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(graph_add_vertex(graph,<sp/>2),<sp/>1);</highlight></codeline>
+<codeline lineno="737"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(graph_add_vertex(graph,<sp/>3),<sp/>1);</highlight></codeline>
+<codeline lineno="738"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(graph-&gt;vertex_count,<sp/>3);</highlight></codeline>
+<codeline lineno="739"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="740"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(graph_add_edge(graph,<sp/>1,<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;dough&quot;</highlight><highlight class="normal">),<sp/>1);</highlight></codeline>
+<codeline lineno="741"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(graph_add_edge(graph,<sp/>2,<sp/>3,<sp/></highlight><highlight class="stringliteral">&quot;sauce&quot;</highlight><highlight class="normal">),<sp/>1);</highlight></codeline>
+<codeline lineno="742"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="743"><highlight class="normal"><sp/><sp/><sp/><sp/>GraphVertex*<sp/>v<sp/>=<sp/>graph_find_vertex(graph,<sp/>1);</highlight></codeline>
+<codeline lineno="744"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(v,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="745"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(v-&gt;recipe_id,<sp/>1);</highlight></codeline>
+<codeline lineno="746"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="747"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_destroy(graph);</highlight></codeline>
+<codeline lineno="748"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="749"><highlight class="normal"></highlight></codeline>
+<codeline lineno="753" refid="test__recipes_8cpp_1a4fde40036c335c7db5e1c080ac1d3206" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(GraphTest,<sp/>BFSTraversal)<sp/>{</highlight></codeline>
+<codeline lineno="754"><highlight class="normal"><sp/><sp/><sp/><sp/>Graph*<sp/>graph<sp/>=<sp/>graph_create();</highlight></codeline>
+<codeline lineno="755"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="756"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_vertex(graph,<sp/>1);</highlight></codeline>
+<codeline lineno="757"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_vertex(graph,<sp/>2);</highlight></codeline>
+<codeline lineno="758"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_vertex(graph,<sp/>3);</highlight></codeline>
+<codeline lineno="759"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_vertex(graph,<sp/>4);</highlight></codeline>
+<codeline lineno="760"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="761"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_edge(graph,<sp/>1,<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;edge1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="762"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_edge(graph,<sp/>1,<sp/>3,<sp/></highlight><highlight class="stringliteral">&quot;edge2&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="763"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_edge(graph,<sp/>2,<sp/>4,<sp/></highlight><highlight class="stringliteral">&quot;edge3&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="764"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="765"><highlight class="normal"><sp/><sp/><sp/><sp/>g_visited_order.clear();</highlight></codeline>
+<codeline lineno="766"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_bfs(graph,<sp/>1,<sp/>graph_visit_func);</highlight></codeline>
+<codeline lineno="767"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="768"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>BFS<sp/>should<sp/>visit<sp/>vertices<sp/>level<sp/>by<sp/>level</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="769"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_GE(g_visited_order.size(),<sp/>1);</highlight></codeline>
+<codeline lineno="770"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(g_visited_order[0],<sp/>1);<sp/></highlight><highlight class="comment">//<sp/>Start<sp/>vertex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="771"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="772"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_destroy(graph);</highlight></codeline>
+<codeline lineno="773"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="774"><highlight class="normal"></highlight></codeline>
+<codeline lineno="778" refid="test__recipes_8cpp_1a5b351ee0875670584c44bd75e9fe958b" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(GraphTest,<sp/>DFSTraversal)<sp/>{</highlight></codeline>
+<codeline lineno="779"><highlight class="normal"><sp/><sp/><sp/><sp/>Graph*<sp/>graph<sp/>=<sp/>graph_create();</highlight></codeline>
+<codeline lineno="780"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="781"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_vertex(graph,<sp/>1);</highlight></codeline>
+<codeline lineno="782"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_vertex(graph,<sp/>2);</highlight></codeline>
+<codeline lineno="783"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_vertex(graph,<sp/>3);</highlight></codeline>
+<codeline lineno="784"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="785"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_edge(graph,<sp/>1,<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;edge1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="786"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_edge(graph,<sp/>2,<sp/>3,<sp/></highlight><highlight class="stringliteral">&quot;edge2&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="787"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="788"><highlight class="normal"><sp/><sp/><sp/><sp/>g_visited_order.clear();</highlight></codeline>
+<codeline lineno="789"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_dfs(graph,<sp/>1,<sp/>graph_visit_func);</highlight></codeline>
+<codeline lineno="790"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="791"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DFS<sp/>should<sp/>visit<sp/>vertices<sp/>depth-first</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="792"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_GE(g_visited_order.size(),<sp/>1);</highlight></codeline>
+<codeline lineno="793"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(g_visited_order[0],<sp/>1);<sp/></highlight><highlight class="comment">//<sp/>Start<sp/>vertex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="794"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="795"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_destroy(graph);</highlight></codeline>
+<codeline lineno="796"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="797"><highlight class="normal"></highlight></codeline>
+<codeline lineno="801" refid="test__recipes_8cpp_1a3237b311181f94e5d60ed4e1abed857b" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(GraphTest,<sp/>CycleDetection)<sp/>{</highlight></codeline>
+<codeline lineno="802"><highlight class="normal"><sp/><sp/><sp/><sp/>Graph*<sp/>graph<sp/>=<sp/>graph_create();</highlight></codeline>
+<codeline lineno="803"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="804"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_vertex(graph,<sp/>1);</highlight></codeline>
+<codeline lineno="805"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_vertex(graph,<sp/>2);</highlight></codeline>
+<codeline lineno="806"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_vertex(graph,<sp/>3);</highlight></codeline>
+<codeline lineno="807"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="808"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_edge(graph,<sp/>1,<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;edge1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="809"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_edge(graph,<sp/>2,<sp/>3,<sp/></highlight><highlight class="stringliteral">&quot;edge2&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="810"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>cycle<sp/>-<sp/>should<sp/>return<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="811"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(graph_has_cycle(graph),<sp/>0);</highlight></codeline>
+<codeline lineno="812"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="813"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="814"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_edge(graph,<sp/>3,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;edge3&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="815"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(graph_has_cycle(graph),<sp/>1);</highlight></codeline>
+<codeline lineno="816"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="817"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_destroy(graph);</highlight></codeline>
+<codeline lineno="818"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="819"><highlight class="normal"></highlight></codeline>
+<codeline lineno="823" refid="test__recipes_8cpp_1a914b1046c6f4b67974a706f354742108" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(GraphTest,<sp/>BinaryFileOperations)<sp/>{</highlight></codeline>
+<codeline lineno="824"><highlight class="normal"><sp/><sp/><sp/><sp/>Graph*<sp/>graph<sp/>=<sp/>graph_create();</highlight></codeline>
+<codeline lineno="825"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="826"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_vertex(graph,<sp/>1);</highlight></codeline>
+<codeline lineno="827"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_vertex(graph,<sp/>2);</highlight></codeline>
+<codeline lineno="828"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_add_edge(graph,<sp/>1,<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;dough&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="829"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="830"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;test_graph.bin&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="831"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(graph_save_binary(graph,<sp/>filename),<sp/>1);</highlight></codeline>
+<codeline lineno="832"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="833"><highlight class="normal"><sp/><sp/><sp/><sp/>Graph*<sp/>loaded<sp/>=<sp/>graph_load_binary(filename);</highlight></codeline>
+<codeline lineno="834"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(loaded,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="835"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(loaded-&gt;vertex_count,<sp/>2);</highlight></codeline>
+<codeline lineno="836"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="837"><highlight class="normal"><sp/><sp/><sp/><sp/>GraphVertex*<sp/>v<sp/>=<sp/>graph_find_vertex(loaded,<sp/>1);</highlight></codeline>
+<codeline lineno="838"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(v,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="839"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(v-&gt;recipe_id,<sp/>1);</highlight></codeline>
+<codeline lineno="840"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="841"><highlight class="normal"><sp/><sp/><sp/><sp/>remove(filename);</highlight></codeline>
+<codeline lineno="842"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_destroy(graph);</highlight></codeline>
+<codeline lineno="843"><highlight class="normal"><sp/><sp/><sp/><sp/>graph_destroy(loaded);</highlight></codeline>
+<codeline lineno="844"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="845"><highlight class="normal"></highlight></codeline>
+<codeline lineno="846"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="847"><highlight class="normal"></highlight><highlight class="comment">//<sp/>HASH<sp/>TABLE<sp/>TESTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="848"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="849"><highlight class="normal"></highlight></codeline>
+<codeline lineno="853" refid="test__recipes_8cpp_1ac7ea7cdb2655736dfd382950670ddc63" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(HashTableTest,<sp/>CreateHashTable)<sp/>{</highlight></codeline>
+<codeline lineno="854"><highlight class="normal"><sp/><sp/><sp/><sp/>HashTable*<sp/>ht<sp/>=<sp/>hash_table_create(10);</highlight></codeline>
+<codeline lineno="855"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(ht,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="856"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(ht-&gt;size,<sp/>10);</highlight></codeline>
+<codeline lineno="857"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(ht-&gt;count,<sp/>0);</highlight></codeline>
+<codeline lineno="858"><highlight class="normal"><sp/><sp/><sp/><sp/>hash_table_destroy(ht);</highlight></codeline>
+<codeline lineno="859"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="860"><highlight class="normal"></highlight></codeline>
+<codeline lineno="864" refid="test__recipes_8cpp_1a0d453ee495cf1244d601151804569b32" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(HashTableTest,<sp/>InsertSearch)<sp/>{</highlight></codeline>
+<codeline lineno="865"><highlight class="normal"><sp/><sp/><sp/><sp/>HashTable*<sp/>ht<sp/>=<sp/>hash_table_create(10);</highlight></codeline>
+<codeline lineno="866"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="867"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="868"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="869"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(hash_table_insert(ht,<sp/>r1),<sp/>1);</highlight></codeline>
+<codeline lineno="870"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(hash_table_insert(ht,<sp/>r2),<sp/>1);</highlight></codeline>
+<codeline lineno="871"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(ht-&gt;count,<sp/>2);</highlight></codeline>
+<codeline lineno="872"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="873"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>found<sp/>=<sp/>hash_table_search(ht,<sp/>1);</highlight></codeline>
+<codeline lineno="874"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(found,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="875"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(found-&gt;id,<sp/>1);</highlight></codeline>
+<codeline lineno="876"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(found-&gt;name,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="877"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="878"><highlight class="normal"><sp/><sp/><sp/><sp/>found<sp/>=<sp/>hash_table_search(ht,<sp/>2);</highlight></codeline>
+<codeline lineno="879"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(found,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="880"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(found-&gt;id,<sp/>2);</highlight></codeline>
+<codeline lineno="881"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="882"><highlight class="normal"><sp/><sp/><sp/><sp/>found<sp/>=<sp/>hash_table_search(ht,<sp/>999);</highlight></codeline>
+<codeline lineno="883"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(found,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Not<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="884"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="885"><highlight class="normal"><sp/><sp/><sp/><sp/>hash_table_destroy(ht);</highlight></codeline>
+<codeline lineno="886"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="887"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="888"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="889"><highlight class="normal"></highlight></codeline>
+<codeline lineno="893" refid="test__recipes_8cpp_1a56038936de4c4c44cc70d417e8275dcc" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(HashTableTest,<sp/>Delete)<sp/>{</highlight></codeline>
+<codeline lineno="894"><highlight class="normal"><sp/><sp/><sp/><sp/>HashTable*<sp/>ht<sp/>=<sp/>hash_table_create(10);</highlight></codeline>
+<codeline lineno="895"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="896"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="897"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="898"><highlight class="normal"><sp/><sp/><sp/><sp/>hash_table_insert(ht,<sp/>r1);</highlight></codeline>
+<codeline lineno="899"><highlight class="normal"><sp/><sp/><sp/><sp/>hash_table_insert(ht,<sp/>r2);</highlight></codeline>
+<codeline lineno="900"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="901"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(hash_table_delete(ht,<sp/>1),<sp/>1);</highlight></codeline>
+<codeline lineno="902"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(ht-&gt;count,<sp/>1);</highlight></codeline>
+<codeline lineno="903"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="904"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>found<sp/>=<sp/>hash_table_search(ht,<sp/>1);</highlight></codeline>
+<codeline lineno="905"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(found,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Should<sp/>be<sp/>deleted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="906"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="907"><highlight class="normal"><sp/><sp/><sp/><sp/>found<sp/>=<sp/>hash_table_search(ht,<sp/>2);</highlight></codeline>
+<codeline lineno="908"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(found,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Should<sp/>still<sp/>exist</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="909"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(found-&gt;id,<sp/>2);</highlight></codeline>
+<codeline lineno="910"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="911"><highlight class="normal"><sp/><sp/><sp/><sp/>hash_table_destroy(ht);</highlight></codeline>
+<codeline lineno="912"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="913"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="914"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="915"><highlight class="normal"></highlight></codeline>
+<codeline lineno="919" refid="test__recipes_8cpp_1a95266149cfe575100a826cede9e6da66" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(HashTableTest,<sp/>CollisionHandling)<sp/>{</highlight></codeline>
+<codeline lineno="920"><highlight class="normal"><sp/><sp/><sp/><sp/>HashTable*<sp/>ht<sp/>=<sp/>hash_table_create(5);<sp/></highlight><highlight class="comment">//<sp/>Small<sp/>size<sp/>to<sp/>force<sp/>collisions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="921"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="922"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="923"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r3<sp/>=<sp/>recipe_create(3,<sp/></highlight><highlight class="stringliteral">&quot;Salad&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>200,<sp/>10);</highlight></codeline>
+<codeline lineno="924"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="925"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>All<sp/>should<sp/>insert<sp/>successfully<sp/>even<sp/>with<sp/>collisions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="926"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(hash_table_insert(ht,<sp/>r1),<sp/>1);</highlight></codeline>
+<codeline lineno="927"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(hash_table_insert(ht,<sp/>r2),<sp/>1);</highlight></codeline>
+<codeline lineno="928"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(hash_table_insert(ht,<sp/>r3),<sp/>1);</highlight></codeline>
+<codeline lineno="929"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="930"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>All<sp/>should<sp/>be<sp/>searchable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="931"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_NE(hash_table_search(ht,<sp/>1),<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="932"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_NE(hash_table_search(ht,<sp/>2),<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="933"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_NE(hash_table_search(ht,<sp/>3),<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="934"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="935"><highlight class="normal"><sp/><sp/><sp/><sp/>hash_table_destroy(ht);</highlight></codeline>
+<codeline lineno="936"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="937"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="938"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r3);</highlight></codeline>
+<codeline lineno="939"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="940"><highlight class="normal"></highlight></codeline>
+<codeline lineno="944" refid="test__recipes_8cpp_1a9f0c9cf1ad10a200a1497b6dacd0aa10" refkind="member"><highlight class="normal"><ref refid="test__recipes_8cpp_1ae3fd79ef9590cc1f94b8144b827cf997" kindref="member">TEST</ref>(HashTableTest,<sp/>BinaryFileOperations)<sp/>{</highlight></codeline>
+<codeline lineno="945"><highlight class="normal"><sp/><sp/><sp/><sp/>HashTable*<sp/>ht<sp/>=<sp/>hash_table_create(10);</highlight></codeline>
+<codeline lineno="946"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r1<sp/>=<sp/>recipe_create(1,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="947"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>r2<sp/>=<sp/>recipe_create(2,<sp/></highlight><highlight class="stringliteral">&quot;Burger&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>600,<sp/>30);</highlight></codeline>
+<codeline lineno="948"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="949"><highlight class="normal"><sp/><sp/><sp/><sp/>hash_table_insert(ht,<sp/>r1);</highlight></codeline>
+<codeline lineno="950"><highlight class="normal"><sp/><sp/><sp/><sp/>hash_table_insert(ht,<sp/>r2);</highlight></codeline>
+<codeline lineno="951"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="952"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;test_hash_table.bin&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="953"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(hash_table_save_binary(ht,<sp/>filename),<sp/>1);</highlight></codeline>
+<codeline lineno="954"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="955"><highlight class="normal"><sp/><sp/><sp/><sp/>HashTable*<sp/>loaded<sp/>=<sp/>hash_table_load_binary(filename);</highlight></codeline>
+<codeline lineno="956"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(loaded,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="957"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(loaded-&gt;count,<sp/>2);</highlight></codeline>
+<codeline lineno="958"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="959"><highlight class="normal"><sp/><sp/><sp/><sp/>Recipe*<sp/>found<sp/>=<sp/>hash_table_search(loaded,<sp/>1);</highlight></codeline>
+<codeline lineno="960"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_NE(found,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="961"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(found-&gt;id,<sp/>1);</highlight></codeline>
+<codeline lineno="962"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="963"><highlight class="normal"><sp/><sp/><sp/><sp/>remove(filename);</highlight></codeline>
+<codeline lineno="964"><highlight class="normal"><sp/><sp/><sp/><sp/>hash_table_destroy(ht);</highlight></codeline>
+<codeline lineno="965"><highlight class="normal"><sp/><sp/><sp/><sp/>hash_table_destroy(loaded);</highlight></codeline>
+<codeline lineno="966"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r1);</highlight></codeline>
+<codeline lineno="967"><highlight class="normal"><sp/><sp/><sp/><sp/>recipe_destroy(r2);</highlight></codeline>
+<codeline lineno="968"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="969"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tests/test_recipes.cpp"/>
+  </compounddef>
+</doxygen>

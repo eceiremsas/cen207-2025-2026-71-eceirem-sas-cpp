@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="struct_matrix_entry" kind="class" language="C++" prot="public">
+    <compoundname>MatrixEntry</compoundname>
+    <includes refid="sparse__matrix_8h" local="no">sparse_matrix.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_matrix_entry_1afe064054e73e474a808ad3015883b9c3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MatrixEntry::row</definition>
+        <argsstring></argsstring>
+        <name>row</name>
+        <qualifiedname>MatrixEntry::row</qualifiedname>
+        <briefdescription>
+<para>Row index (recipe ID). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sparse_matrix.h" line="20" column="9" bodyfile="include/sparse_matrix.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_matrix_entry_1ae084b6bb5422830be3ed2797ebbb617c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MatrixEntry::col</definition>
+        <argsstring></argsstring>
+        <name>col</name>
+        <qualifiedname>MatrixEntry::col</qualifiedname>
+        <briefdescription>
+<para>Column index (ingredient index). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sparse_matrix.h" line="21" column="9" bodyfile="include/sparse_matrix.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_matrix_entry_1ad402a80ab39df62021e00a1890c6baf9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MatrixEntry::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>MatrixEntry::value</qualifiedname>
+        <briefdescription>
+<para>Non-zero value (usually 1). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sparse_matrix.h" line="22" column="9" bodyfile="include/sparse_matrix.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_matrix_entry_1ad8b53a80918f8cb3ab84cf0ea950dd5c" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>std::string MatrixEntry::ingredient</definition>
+        <argsstring>[MAX_INGREDIENT_NAME]</argsstring>
+        <name>ingredient</name>
+        <qualifiedname>MatrixEntry::ingredient</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sparse_matrix.h" line="23" column="10" bodyfile="include/sparse_matrix.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_matrix_entry_1ad84f7c9e34131569a4d31c09e2ce9f89" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_matrix_entry" kindref="compound">MatrixEntry</ref> *</type>
+        <definition>std::shared_ptr&lt; MatrixEntry &gt; MatrixEntry::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <qualifiedname>MatrixEntry::next</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sparse_matrix.h" line="24" column="23" bodyfile="include/sparse_matrix.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_matrix_entry_1a45c86ecebd75c5c43fc07feb12572543" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MatrixEntry::ingredient</definition>
+        <argsstring></argsstring>
+        <name>ingredient</name>
+        <qualifiedname>MatrixEntry::ingredient</qualifiedname>
+        <briefdescription>
+<para>Ingredient name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/sparse_matrix.hpp" line="32" column="17" bodyfile="src/recipe/header/sparse_matrix.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_matrix_entry_1abe485e2ae6b118a94eb87e5ed906d14f" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="struct_matrix_entry" kindref="compound">MatrixEntry</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;MatrixEntry&gt; MatrixEntry::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <qualifiedname>MatrixEntry::next</qualifiedname>
+        <briefdescription>
+<para>Pointer to next entry (singly linked). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/sparse_matrix.hpp" line="33" column="21" bodyfile="src/recipe/header/sparse_matrix.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_matrix_entry_1aa9b7a9307fdce655f45ed7a90ab8ac7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MatrixEntry::MatrixEntry</definition>
+        <argsstring>(int r, int c, int val, std::string ingr)</argsstring>
+        <name>MatrixEntry</name>
+        <qualifiedname>MatrixEntry::MatrixEntry</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>ingr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/sparse_matrix.hpp" line="35" column="5" bodyfile="src/recipe/header/sparse_matrix.hpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_matrix_entry_1aa22e36defc179467d6520ba2ffc332af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MatrixEntry::MatrixEntry</definition>
+        <argsstring>(int r, int c, int v, const std::string &amp;ing)</argsstring>
+        <name>MatrixEntry</name>
+        <qualifiedname>MatrixEntry::MatrixEntry</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/sparse_matrix.cpp" line="27" column="5" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="27" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a single non-zero entry in a sparse matrix. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Represents a single non-zero entry in the sparse matrix.</para>
+<para>Each entry contains the position (row, column), a numeric value, the ingredient name, and a pointer to the next entry.</para>
+<para>Each entry includes a row (recipe ID), column (ingredient ID or index), a numeric value (association strength), an ingredient name, and a pointer to the next entry. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>MatrixEntry</label>
+        <link refid="struct_matrix_entry"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>+next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/sparse_matrix.h" line="19" column="1" bodyfile="include/sparse_matrix.h" bodystart="19" bodyend="25"/>
+    <listofallmembers>
+      <member refid="struct_matrix_entry_1ae084b6bb5422830be3ed2797ebbb617c" prot="public" virt="non-virtual"><scope>MatrixEntry</scope><name>col</name></member>
+      <member refid="struct_matrix_entry_1ad8b53a80918f8cb3ab84cf0ea950dd5c" prot="public" virt="non-virtual"><scope>MatrixEntry</scope><name>ingredient</name></member>
+      <member refid="struct_matrix_entry_1a45c86ecebd75c5c43fc07feb12572543" prot="public" virt="non-virtual"><scope>MatrixEntry</scope><name>ingredient</name></member>
+      <member refid="struct_matrix_entry_1aa9b7a9307fdce655f45ed7a90ab8ac7a" prot="public" virt="non-virtual"><scope>MatrixEntry</scope><name>MatrixEntry</name></member>
+      <member refid="struct_matrix_entry_1aa22e36defc179467d6520ba2ffc332af" prot="public" virt="non-virtual"><scope>MatrixEntry</scope><name>MatrixEntry</name></member>
+      <member refid="struct_matrix_entry_1ad84f7c9e34131569a4d31c09e2ce9f89" prot="public" virt="non-virtual"><scope>MatrixEntry</scope><name>next</name></member>
+      <member refid="struct_matrix_entry_1abe485e2ae6b118a94eb87e5ed906d14f" prot="public" virt="non-virtual"><scope>MatrixEntry</scope><name>next</name></member>
+      <member refid="struct_matrix_entry_1afe064054e73e474a808ad3015883b9c3" prot="public" virt="non-virtual"><scope>MatrixEntry</scope><name>row</name></member>
+      <member refid="struct_matrix_entry_1ad402a80ab39df62021e00a1890c6baf9" prot="public" virt="non-virtual"><scope>MatrixEntry</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

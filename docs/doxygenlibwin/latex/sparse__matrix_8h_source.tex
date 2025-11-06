@@ -1,0 +1,65 @@
+\doxysection{sparse\+\_\+matrix.\+h}
+\hypertarget{sparse__matrix_8h_source}{}\label{sparse__matrix_8h_source}\index{include/sparse\_matrix.h@{include/sparse\_matrix.h}}
+\mbox{\hyperlink{sparse__matrix_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SPARSE\_MATRIX\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SPARSE\_MATRIX\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{recipe_8h}{recipe.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MAX\_INGREDIENT\_NAME\ 50}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ ===\ Structure\ Definitions\ ===}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_matrix_entry_aa9b7a9307fdce655f45ed7a90ab8ac7a}{MatrixEntry}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_matrix_entry_afe064054e73e474a808ad3015883b9c3}{row}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Row\ index\ (typically\ represents\ recipe\ ID)}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_matrix_entry_ae084b6bb5422830be3ed2797ebbb617c}{col}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Column\ index\ (typically\ represents\ ingredient\ ID)}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_matrix_entry_ad402a80ab39df62021e00a1890c6baf9}{value}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Non-\/zero\ value\ (e.g.,\ occurrence\ or\ relation\ weight)}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_matrix_entry_ad8b53a80918f8cb3ab84cf0ea950dd5c}{ingredient}}[\mbox{\hyperlink{sparse__matrix_8cpp_aabe8b04ee4fd802edbb42785a3629d70}{MAX\_INGREDIENT\_NAME}}];\ \ \ \textcolor{comment}{//\ Ingredient\ name}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_matrix_entry_aa9b7a9307fdce655f45ed7a90ab8ac7a}{MatrixEntry}}*\ \mbox{\hyperlink{struct_matrix_entry_ad84f7c9e34131569a4d31c09e2ce9f89}{next}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ next\ matrix\ entry}}
+\DoxyCodeLine{00025\ \}\ \mbox{\hyperlink{struct_matrix_entry}{MatrixEntry}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{struct_matrix_entry}{MatrixEntry}}*\ \mbox{\hyperlink{struct_sparse_matrix_a5079494b50c195eba794c73b6133e92a}{head}};\ \ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ first\ matrix\ entry}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_sparse_matrix_a36a390290bd0ad50690a46c0c120b6b4}{row\_count}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Number\ of\ rows\ (recipes)}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_sparse_matrix_aea0a88b857ba065bfe367b547ac72a5a}{col\_count}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Number\ of\ columns\ (ingredients)}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_sparse_matrix_a5d32364b49543c3ef09a1463488712c3}{entry\_count}};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Total\ number\ of\ non-\/zero\ entries}}
+\DoxyCodeLine{00037\ \}\ \mbox{\hyperlink{struct_sparse_matrix}{SparseMatrix}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ ===\ Function\ Declarations\ ===}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ Creates\ and\ initializes\ an\ empty\ sparse\ matrix}}
+\DoxyCodeLine{00042\ \mbox{\hyperlink{struct_sparse_matrix}{SparseMatrix}}*\ \mbox{\hyperlink{sparse__matrix_8h_ab766bcb718c51edfb2b98964ddd3ed9c}{sparse\_matrix\_create}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ Adds\ a\ new\ non-\/zero\ entry\ to\ the\ sparse\ matrix}}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sparse__matrix_8h_ac6d33da768694dfab65e0740ffb72581}{sparse\_matrix\_add\_entry}}(\mbox{\hyperlink{struct_sparse_matrix}{SparseMatrix}}*\ matrix,\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col,\ \textcolor{keywordtype}{int}\ value,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ ingredient);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ Retrieves\ the\ value\ of\ a\ specific\ matrix\ cell\ (row,\ col)}}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sparse__matrix_8h_a689ac680fdb17fdc24de1db56fe16c34}{sparse\_matrix\_get\_value}}(\mbox{\hyperlink{struct_sparse_matrix}{SparseMatrix}}*\ matrix,\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ Finds\ all\ recipe\ IDs\ that\ include\ a\ specific\ ingredient}}
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sparse__matrix_8h_ab0aec6cac7e446701ad4d136e2dd7ef3}{sparse\_matrix\_find\_recipes\_by\_ingredient}}(\mbox{\hyperlink{struct_sparse_matrix}{SparseMatrix}}*\ matrix,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ ingredient,\ \textcolor{keywordtype}{int}*\ recipe\_ids,\ \textcolor{keywordtype}{int}\ max\_results);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ Finds\ all\ ingredients\ associated\ with\ a\ given\ recipe\ ID}}
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sparse__matrix_8h_af4ab6655dfe045b9a86f328a2c52408d}{sparse\_matrix\_find\_ingredients\_by\_recipe}}(\mbox{\hyperlink{struct_sparse_matrix}{SparseMatrix}}*\ matrix,\ \textcolor{keywordtype}{int}\ recipe\_id);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ Displays\ all\ non-\/zero\ entries\ in\ the\ sparse\ matrix}}
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sparse__matrix_8h_a934ac7524b8952682f5d35f7cae67d32}{sparse\_matrix\_display}}(\mbox{\hyperlink{struct_sparse_matrix}{SparseMatrix}}*\ matrix);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{//\ Frees\ all\ memory\ allocated\ for\ the\ sparse\ matrix}}
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sparse__matrix_8h_af6943df380c6b7afde192c0c1492d6e0}{sparse\_matrix\_destroy}}(\mbox{\hyperlink{struct_sparse_matrix}{SparseMatrix}}*\ matrix);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{//\ ===\ Binary\ File\ Operations\ ===}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{comment}{//\ Saves\ the\ sparse\ matrix\ to\ a\ binary\ file}}
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sparse__matrix_8h_a49f0b5d5b30884a12cc01426f18cd772}{sparse\_matrix\_save\_binary}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_sparse_matrix}{SparseMatrix}}*\ matrix,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{comment}{//\ Loads\ a\ sparse\ matrix\ from\ a\ binary\ file}}
+\DoxyCodeLine{00068\ \mbox{\hyperlink{struct_sparse_matrix}{SparseMatrix}}*\ \mbox{\hyperlink{sparse__matrix_8h_ae3d03bd5066e8271d732e5c3a8424346}{sparse\_matrix\_load\_binary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SPARSE\_MATRIX\_H}}
+
+\end{DoxyCode}

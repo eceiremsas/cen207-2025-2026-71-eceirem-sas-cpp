@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="recipe_8hpp" kind="file" language="C++">
+    <compoundname>recipe.hpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">algorithm</includes>
+    <includedby refid="graph_8hpp" local="yes">src/recipe/header/graph.hpp</includedby>
+    <includedby refid="hash__table_8hpp" local="yes">src/recipe/header/hash_table.hpp</includedby>
+    <includedby refid="heap_8hpp" local="yes">src/recipe/header/heap.hpp</includedby>
+    <includedby refid="linked__list_8hpp" local="yes">src/recipe/header/linked_list.hpp</includedby>
+    <includedby refid="header_2menu_8hpp" local="yes">src/recipe/header/menu.hpp</includedby>
+    <includedby refid="queue_8hpp" local="yes">src/recipe/header/queue.hpp</includedby>
+    <includedby refid="sparse__matrix_8hpp" local="yes">src/recipe/header/sparse_matrix.hpp</includedby>
+    <includedby refid="stack_8hpp" local="yes">src/recipe/header/stack.hpp</includedby>
+    <includedby refid="pp_2header_2menu_8hpp" local="yes">src/recipeapp/header/menu.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/recipe/header/recipe.hpp</label>
+        <link refid="recipe_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>algorithm</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/recipe/header/graph.hpp</label>
+        <link refid="graph_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/recipe/header/hash_table.hpp</label>
+        <link refid="hash__table_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/recipe/header/heap.hpp</label>
+        <link refid="heap_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>src/recipe/header/linked_list.hpp</label>
+        <link refid="linked__list_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/recipe/header/menu.hpp</label>
+        <link refid="header_2menu_8hpp"/>
+      </node>
+      <node id="8">
+        <label>src/recipe/header/queue.hpp</label>
+        <link refid="queue_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/recipe/header/recipe.hpp</label>
+        <link refid="recipe_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>src/recipe/header/sparse_matrix.hpp</label>
+        <link refid="sparse__matrix_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>src/recipe/header/stack.hpp</label>
+        <link refid="stack_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/recipeapp/header/menu.hpp</label>
+        <link refid="pp_2header_2menu_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_recipe" prot="public">Recipe</innerclass>
+    <briefdescription>
+<para>Represents a <ref refid="struct_recipe" kindref="compound">Recipe</ref> entity in the <ref refid="struct_recipe" kindref="compound">Recipe</ref> &amp; Nutrition Tracker (C++ version). </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Each recipe contains a unique ID, name, category, calorie count, preparation time, ingredients, and preparation instructions. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RECIPE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RECIPE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="struct_recipe" kindref="compound">Recipe</ref><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" kindref="member">id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="struct_recipe_1a50091cc91548be3bf3399bd0471667f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct_recipe_1a0feced1fd0c5dc7fca786dcf4455fd1c" kindref="member">name</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="struct_recipe_1a1f07e5fb045937bf62e5e66d3de679ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct_recipe_1a820764c4de5022a91ed0b1de33b70759" kindref="member">category</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a002bab56be7d0e7f3d959ed27648eaa0" kindref="member">calories</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="struct_recipe_1a76147c2557ad7c36b21f13a1a98e725b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a76147c2557ad7c36b21f13a1a98e725b" kindref="member">preparationTime</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="struct_recipe_1a029737b52953e9b6519549d23ca54de0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="struct_recipe_1ae4275d8e6368c7fcb133e099057a919c" kindref="member">ingredients</ref>;<sp/></highlight></codeline>
+<codeline lineno="29" refid="struct_recipe_1afbcfa44d4c0b4867707e142889000938" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct_recipe_1a38f0e37ae413fbb8b9c72189d43b120f" kindref="member">instructions</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Constructors<sp/>&amp;<sp/>Destructor<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="struct_recipe_1a69257c85a87c134b5be816b3bf9f79c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_recipe_1a69257c85a87c134b5be816b3bf9f79c5" kindref="member">Recipe</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34" refid="struct_recipe_1a17fbaac388f7ce45f7b57f67999aa894" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_recipe_1a17fbaac388f7ce45f7b57f67999aa894" kindref="member">Recipe</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>std::string<sp/><ref refid="struct_recipe_1a0feced1fd0c5dc7fca786dcf4455fd1c" kindref="member">name</ref>,<sp/>std::string<sp/><ref refid="struct_recipe_1a820764c4de5022a91ed0b1de33b70759" kindref="member">category</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a002bab56be7d0e7f3d959ed27648eaa0" kindref="member">calories</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prepTime);</highlight></codeline>
+<codeline lineno="35" refid="struct_recipe_1a3eb528c2e2412a629e28a82960598aa7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_recipe_1a3eb528c2e2412a629e28a82960598aa7" kindref="member">~Recipe</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Getters<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="struct_recipe_1a3fb4b986c7d092ca4b146f15b0093759" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a3fb4b986c7d092ca4b146f15b0093759" kindref="member">getId</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" kindref="member">id</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="39" refid="struct_recipe_1a2ca59542ac8bc5e83da4352d9cc8b940" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="struct_recipe_1a2ca59542ac8bc5e83da4352d9cc8b940" kindref="member">getName</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a0feced1fd0c5dc7fca786dcf4455fd1c" kindref="member">name</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="40" refid="struct_recipe_1a37f65cdf8588c156de3913cc68dd0ec7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="struct_recipe_1a37f65cdf8588c156de3913cc68dd0ec7" kindref="member">getCategory</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a820764c4de5022a91ed0b1de33b70759" kindref="member">category</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="41" refid="struct_recipe_1a48111ae50295a4d2d24e955fd85421d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a48111ae50295a4d2d24e955fd85421d2" kindref="member">getCalories</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a002bab56be7d0e7f3d959ed27648eaa0" kindref="member">calories</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="42" refid="struct_recipe_1a8436982c8f5be417b9ad1f871fff2b02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a8436982c8f5be417b9ad1f871fff2b02" kindref="member">getPreparationTime</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a76147c2557ad7c36b21f13a1a98e725b" kindref="member">preparationTime</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="43" refid="struct_recipe_1aa576268d75e51161dd453d20485e469c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/><ref refid="struct_recipe_1aa576268d75e51161dd453d20485e469c" kindref="member">getIngredients</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1ae4275d8e6368c7fcb133e099057a919c" kindref="member">ingredients</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="44" refid="struct_recipe_1ac9cc7ae6eea2a46e94df8d823edfa307" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="struct_recipe_1ac9cc7ae6eea2a46e94df8d823edfa307" kindref="member">getInstructions</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a38f0e37ae413fbb8b9c72189d43b120f" kindref="member">instructions</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Setters<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="struct_recipe_1abeb7f55824c62097dfb686d50fcf2047" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1abeb7f55824c62097dfb686d50fcf2047" kindref="member">setName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>n)<sp/>{<sp/><ref refid="struct_recipe_1a0feced1fd0c5dc7fca786dcf4455fd1c" kindref="member">name</ref><sp/>=<sp/>n;<sp/>}</highlight></codeline>
+<codeline lineno="48" refid="struct_recipe_1a43c8842b9887a7a05d72060a2c63fdb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a43c8842b9887a7a05d72060a2c63fdb1" kindref="member">setCategory</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>c)<sp/>{<sp/><ref refid="struct_recipe_1a820764c4de5022a91ed0b1de33b70759" kindref="member">category</ref><sp/>=<sp/>c;<sp/>}</highlight></codeline>
+<codeline lineno="49" refid="struct_recipe_1ae06dfab7449bb227907b75890ad1207b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1ae06dfab7449bb227907b75890ad1207b" kindref="member">setCalories</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c)<sp/>{<sp/><ref refid="struct_recipe_1a002bab56be7d0e7f3d959ed27648eaa0" kindref="member">calories</ref><sp/>=<sp/>c;<sp/>}</highlight></codeline>
+<codeline lineno="50" refid="struct_recipe_1a66bdee8ac5d502f388f485c23e4db16e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a66bdee8ac5d502f388f485c23e4db16e" kindref="member">setPreparationTime</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t)<sp/>{<sp/><ref refid="struct_recipe_1a76147c2557ad7c36b21f13a1a98e725b" kindref="member">preparationTime</ref><sp/>=<sp/>t;<sp/>}</highlight></codeline>
+<codeline lineno="51" refid="struct_recipe_1aef3eefc56944f9483f51a35c3769aa7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1aef3eefc56944f9483f51a35c3769aa7e" kindref="member">setInstructions</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>instr)<sp/>{<sp/><ref refid="struct_recipe_1a38f0e37ae413fbb8b9c72189d43b120f" kindref="member">instructions</ref><sp/>=<sp/>instr;<sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Functional<sp/>Methods<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="struct_recipe_1ab012e2c461e55ebe05553b89714fe52d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1ab012e2c461e55ebe05553b89714fe52d" kindref="member">addIngredient</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>ingredient);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="struct_recipe_1a06a0c4bd94fc0b1e285c839e45952f78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a06a0c4bd94fc0b1e285c839e45952f78" kindref="member">display</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="struct_recipe_1ab05da34e3f9568e4ba2301157e9b56ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;Recipe&gt;<sp/><ref refid="struct_recipe_1ab05da34e3f9568e4ba2301157e9b56ef" kindref="member">clone</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Comparison<sp/>Operators<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="struct_recipe_1af5b90cedae70a72d171f8fb6a5891d14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1af5b90cedae70a72d171f8fb6a5891d14" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a69257c85a87c134b5be816b3bf9f79c5" kindref="member">Recipe</ref>&amp;<sp/>other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a002bab56be7d0e7f3d959ed27648eaa0" kindref="member">calories</ref><sp/>&lt;<sp/>other.<ref refid="struct_recipe_1a002bab56be7d0e7f3d959ed27648eaa0" kindref="member">calories</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="74" refid="struct_recipe_1a7d4b95637e8aabc4ca3c48d784832c5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a7d4b95637e8aabc4ca3c48d784832c5a" kindref="member">operator&gt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a69257c85a87c134b5be816b3bf9f79c5" kindref="member">Recipe</ref>&amp;<sp/>other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a002bab56be7d0e7f3d959ed27648eaa0" kindref="member">calories</ref><sp/>&gt;<sp/>other.<ref refid="struct_recipe_1a002bab56be7d0e7f3d959ed27648eaa0" kindref="member">calories</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="75" refid="struct_recipe_1aaef9304796bb72fc9f28724052203e80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1aaef9304796bb72fc9f28724052203e80" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_recipe_1a69257c85a87c134b5be816b3bf9f79c5" kindref="member">Recipe</ref>&amp;<sp/>other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>==<sp/>other.<ref refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" kindref="member">id</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>RECIPE_HPP</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/recipe/header/recipe.hpp"/>
+  </compounddef>
+</doxygen>

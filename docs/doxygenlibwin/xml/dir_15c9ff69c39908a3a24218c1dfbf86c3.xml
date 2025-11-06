@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="dir_15c9ff69c39908a3a24218c1dfbf86c3" kind="dir">
+    <compoundname>src/recipe/header</compoundname>
+    <innerfile refid="graph_8hpp">graph.hpp</innerfile>
+    <innerfile refid="hash__table_8hpp">hash_table.hpp</innerfile>
+    <innerfile refid="heap_8hpp">heap.hpp</innerfile>
+    <innerfile refid="linked__list_8hpp">linked_list.hpp</innerfile>
+    <innerfile refid="header_2menu_8hpp">menu.hpp</innerfile>
+    <innerfile refid="queue_8hpp">queue.hpp</innerfile>
+    <innerfile refid="recipe_8hpp">recipe.hpp</innerfile>
+    <innerfile refid="sparse__matrix_8hpp">sparse_matrix.hpp</innerfile>
+    <innerfile refid="stack_8hpp">stack.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/recipe/header/"/>
+  </compounddef>
+</doxygen>

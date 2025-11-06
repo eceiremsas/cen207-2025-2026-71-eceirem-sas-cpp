@@ -1,16 +1,17 @@
-# Calculator Project Library Generation and Testing Template
+# CEN207 Data Structures Project - Recipe and Nutrition Tracker
 
 ## Overview
 
-This project provides a suite of modules aimed to show how Cmake used with Ctest. Also combines doxygen documentation and test coverage reports
+This project implements 7 data structures and algorithms for the midterm phase of CEN207 Data Structures course. The project uses C language with CMake build system, GoogleTest for unit testing, and Doxygen for documentation.
 
 ## Requirements
 
 - CMake >= 3.12
-- C++ Standard >= 11
-- GoogleTest (for testing modules)
-- Visual Studio Communit Edition for Windows Generator
+- C Standard >= C99
+- GoogleTest (automatically fetched by CMake)
+- Visual Studio Community Edition for Windows Generator
 - Ninja for WSL/Linux
+- Doxygen (for documentation generation)
 
 ## Setup Development Environment
 

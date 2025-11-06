@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerdir refid="dir_51028be6ec94055a76c3d18287eae15d">src/recipe</innerdir>
+    <innerdir refid="dir_7f10de9576654c8aed84222cb6ef822c">src/recipeapp</innerdir>
+    <innerdir refid="dir_d93a1d4020dea85bb71b237545b5e722">src/tests</innerdir>
+    <innerdir refid="dir_0619a8f54b4fad7043a6de45be8fde0b">src/utility</innerdir>
+    <innerfile refid="graph_8c">graph.c</innerfile>
+    <innerfile refid="hash__table_8c">hash_table.c</innerfile>
+    <innerfile refid="heap_8c">heap.c</innerfile>
+    <innerfile refid="linked__list_8c">linked_list.c</innerfile>
+    <innerfile refid="main_8c">main.c</innerfile>
+    <innerfile refid="menu_8c">menu.c</innerfile>
+    <innerfile refid="queue_8c">queue.c</innerfile>
+    <innerfile refid="recipe_8c">recipe.c</innerfile>
+    <innerfile refid="sparse__matrix_8c">sparse_matrix.c</innerfile>
+    <innerfile refid="stack_8c">stack.c</innerfile>
+    <innerfile refid="temp_code_runner_file_8cpp">tempCodeRunnerFile.cpp</innerfile>
+    <innerfile refid="xor__linked__list_8c">xor_linked_list.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

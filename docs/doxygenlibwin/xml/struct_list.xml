@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="struct_list" kind="struct" language="C++" prot="public">
+    <compoundname>List</compoundname>
+    <includes refid="linked__list_8h" local="no">linked_list.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_list_1a6c5449b1dd158368840801d0cdc86f5e" prot="public" static="no" mutable="no">
+        <type><ref refid="linked__list_8h_1a3786f70ab7091247a621d0d253967e13" kindref="member">ListNode</ref><ref refid="struct_list_node" kindref="compound">ListNode</ref> *</type>
+        <definition>ListNode* List::head</definition>
+        <argsstring></argsstring>
+        <name>head</name>
+        <qualifiedname>List::head</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/linked_list.h" line="18" column="14" bodyfile="include/linked_list.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_list_1a7d50f0a95a04faab8c250bc6ea28a67d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int List::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <qualifiedname>List::count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/linked_list.h" line="19" column="9" bodyfile="include/linked_list.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>List</label>
+        <link refid="struct_list"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+head</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ListNode</label>
+        <link refid="struct_list_node"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+recipe</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+next</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Recipe</label>
+        <link refid="struct_recipe"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/linked_list.h" line="17" column="1" bodyfile="include/linked_list.h" bodystart="17" bodyend="20"/>
+    <listofallmembers>
+      <member refid="struct_list_1a7d50f0a95a04faab8c250bc6ea28a67d" prot="public" virt="non-virtual"><scope>List</scope><name>count</name></member>
+      <member refid="struct_list_1a6c5449b1dd158368840801d0cdc86f5e" prot="public" virt="non-virtual"><scope>List</scope><name>head</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

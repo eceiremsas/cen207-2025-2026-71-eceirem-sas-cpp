@@ -1,0 +1,64 @@
+\doxysection{recipe.\+hpp}
+\hypertarget{recipe_8hpp_source}{}\label{recipe_8hpp_source}\index{src/recipe/header/recipe.hpp@{src/recipe/header/recipe.hpp}}
+\mbox{\hyperlink{recipe_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ RECIPE\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ RECIPE\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_recipe}{Recipe}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_recipe_ad50e37749f923e4ff1db3571bcf173ba}{id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_recipe_a0feced1fd0c5dc7fca786dcf4455fd1c}{name}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_recipe_a820764c4de5022a91ed0b1de33b70759}{category}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_recipe_a002bab56be7d0e7f3d959ed27648eaa0}{calories}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_recipe_a76147c2557ad7c36b21f13a1a98e725b}{preparationTime}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{struct_recipe_ae4275d8e6368c7fcb133e099057a919c}{ingredients}};\ }
+\DoxyCodeLine{00029\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_recipe_a38f0e37ae413fbb8b9c72189d43b120f}{instructions}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ ===\ Constructors\ \&\ Destructor\ ===}}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{struct_recipe_a69257c85a87c134b5be816b3bf9f79c5}{Recipe}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{struct_recipe_a17fbaac388f7ce45f7b57f67999aa894}{Recipe}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ std::string\ \mbox{\hyperlink{struct_recipe_a0feced1fd0c5dc7fca786dcf4455fd1c}{name}},\ std::string\ \mbox{\hyperlink{struct_recipe_a820764c4de5022a91ed0b1de33b70759}{category}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_recipe_a002bab56be7d0e7f3d959ed27648eaa0}{calories}},\ \textcolor{keywordtype}{int}\ prepTime);}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{struct_recipe_a3eb528c2e2412a629e28a82960598aa7}{\string~Recipe}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ ===\ Getters\ ===}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_recipe_a3fb4b986c7d092ca4b146f15b0093759}{getId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_recipe_ad50e37749f923e4ff1db3571bcf173ba}{id}};\ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{struct_recipe_a2ca59542ac8bc5e83da4352d9cc8b940}{getName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_recipe_a0feced1fd0c5dc7fca786dcf4455fd1c}{name}};\ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{struct_recipe_a37f65cdf8588c156de3913cc68dd0ec7}{getCategory}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_recipe_a820764c4de5022a91ed0b1de33b70759}{category}};\ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_recipe_a48111ae50295a4d2d24e955fd85421d2}{getCalories}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_recipe_a002bab56be7d0e7f3d959ed27648eaa0}{calories}};\ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_recipe_a8436982c8f5be417b9ad1f871fff2b02}{getPreparationTime}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_recipe_a76147c2557ad7c36b21f13a1a98e725b}{preparationTime}};\ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\&\ \mbox{\hyperlink{struct_recipe_aa576268d75e51161dd453d20485e469c}{getIngredients}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_recipe_ae4275d8e6368c7fcb133e099057a919c}{ingredients}};\ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{struct_recipe_ac9cc7ae6eea2a46e94df8d823edfa307}{getInstructions}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_recipe_a38f0e37ae413fbb8b9c72189d43b120f}{instructions}};\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ ===\ Setters\ ===}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_recipe_abeb7f55824c62097dfb686d50fcf2047}{setName}}(\textcolor{keyword}{const}\ std::string\&\ n)\ \{\ \mbox{\hyperlink{struct_recipe_a0feced1fd0c5dc7fca786dcf4455fd1c}{name}}\ =\ n;\ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_recipe_a43c8842b9887a7a05d72060a2c63fdb1}{setCategory}}(\textcolor{keyword}{const}\ std::string\&\ c)\ \{\ \mbox{\hyperlink{struct_recipe_a820764c4de5022a91ed0b1de33b70759}{category}}\ =\ c;\ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_recipe_ae06dfab7449bb227907b75890ad1207b}{setCalories}}(\textcolor{keywordtype}{int}\ c)\ \{\ \mbox{\hyperlink{struct_recipe_a002bab56be7d0e7f3d959ed27648eaa0}{calories}}\ =\ c;\ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_recipe_a66bdee8ac5d502f388f485c23e4db16e}{setPreparationTime}}(\textcolor{keywordtype}{int}\ t)\ \{\ \mbox{\hyperlink{struct_recipe_a76147c2557ad7c36b21f13a1a98e725b}{preparationTime}}\ =\ t;\ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_recipe_aef3eefc56944f9483f51a35c3769aa7e}{setInstructions}}(\textcolor{keyword}{const}\ std::string\&\ instr)\ \{\ \mbox{\hyperlink{struct_recipe_a38f0e37ae413fbb8b9c72189d43b120f}{instructions}}\ =\ instr;\ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ ===\ Functional\ Methods\ ===}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_recipe_ab012e2c461e55ebe05553b89714fe52d}{addIngredient}}(\textcolor{keyword}{const}\ std::string\&\ ingredient);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_recipe_a06a0c4bd94fc0b1e285c839e45952f78}{display}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ std::shared\_ptr<Recipe>\ \mbox{\hyperlink{struct_recipe_ab05da34e3f9568e4ba2301157e9b56ef}{clone}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ ===\ Comparison\ Operators\ ===}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_recipe_af5b90cedae70a72d171f8fb6a5891d14}{operator<}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_recipe_a69257c85a87c134b5be816b3bf9f79c5}{Recipe}}\&\ other)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_recipe_a002bab56be7d0e7f3d959ed27648eaa0}{calories}}\ <\ other.\mbox{\hyperlink{struct_recipe_a002bab56be7d0e7f3d959ed27648eaa0}{calories}};\ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_recipe_a7d4b95637e8aabc4ca3c48d784832c5a}{operator>}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_recipe_a69257c85a87c134b5be816b3bf9f79c5}{Recipe}}\&\ other)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_recipe_a002bab56be7d0e7f3d959ed27648eaa0}{calories}}\ >\ other.\mbox{\hyperlink{struct_recipe_a002bab56be7d0e7f3d959ed27648eaa0}{calories}};\ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_recipe_aaef9304796bb72fc9f28724052203e80}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_recipe_a69257c85a87c134b5be816b3bf9f79c5}{Recipe}}\&\ other)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keywordtype}{id}\ ==\ other.\mbox{\hyperlink{struct_recipe_ad50e37749f923e4ff1db3571bcf173ba}{id}};\ \}}
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ RECIPE\_HPP}}
+
+\end{DoxyCode}

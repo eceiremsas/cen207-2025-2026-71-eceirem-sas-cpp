@@ -1,0 +1,68 @@
+\doxysection{stack.\+h}
+\hypertarget{stack_8h_source}{}\label{stack_8h_source}\index{include/stack.h@{include/stack.h}}
+\mbox{\hyperlink{stack_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STACK\_H\ \ }\textcolor{comment}{//\ Include\ guard\ start}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STACK\_H\ \ }\textcolor{comment}{//\ Define\ STACK\_H\ macro}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{recipe_8h}{recipe.h}}"{}}\ \ \textcolor{comment}{//\ For\ the\ Recipe\ data\ structure}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ UNDO\_STACK\_SIZE\ 50\ \ }\textcolor{comment}{//\ Maximum\ number\ of\ undo\ operations\ stored\ in\ the\ stack}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ ===\ Enum\ Definitions\ ===}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a96186829480e5b34b1373288e956b1c8}{OP\_ADD}},\ \ \ \ \ \textcolor{comment}{//\ Recipe\ addition\ operation}}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a2aee02a522cd2fb541ec508382fdc646}{OP\_EDIT}},\ \ \ \ \textcolor{comment}{//\ Recipe\ editing\ operation}}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a4c629f6a90286b343e3f222ff96f94d5}{OP\_DELETE}}\ \ \ \textcolor{comment}{//\ Recipe\ deletion\ operation}}
+\DoxyCodeLine{00018\ \}\ \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047}{OperationType}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ ===\ Structure\ Definitions\ ===}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stack_operation_a9e5459b5f778ee92f661573b20fbe364}{type}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation\ type\ (e.g.,\ OP\_ADD,\ OP\_EDIT,\ OP\_DELETE)}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{struct_stack_operation_a5b5bb536a85fc0f28b5e252a7dff617f}{recipe}};\ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ recipe\ affected\ by\ the\ operation}}
+\DoxyCodeLine{00030\ \}\ \mbox{\hyperlink{struct_stack_operation}{StackOperation}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{struct_stack_operation}{StackOperation}}\ \mbox{\hyperlink{struct_stack_a6dac34556c1d3d06087ee1a015ce60a2}{operations}}[\mbox{\hyperlink{stack_8cpp_af302896a110a0713b53fca4e5e3529d8}{UNDO\_STACK\_SIZE}}];\ \ \textcolor{comment}{//\ Array\ holding\ stored\ operations}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stack_ad62fb36816185f3eef3a6f735a61f54a}{top}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Index\ of\ the\ top\ element\ (-\/1\ if\ stack\ is\ empty)}}
+\DoxyCodeLine{00040\ \}\ \mbox{\hyperlink{struct_stack}{Stack}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{//\ ===\ Function\ Declarations\ ===}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ Creates\ and\ initializes\ an\ empty\ stack}}
+\DoxyCodeLine{00045\ \mbox{\hyperlink{struct_stack}{Stack}}*\ \mbox{\hyperlink{stack_8h_ae5a3d0d7d18942221d081e0bffd143ff}{stack\_create}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ Pushes\ a\ new\ operation\ onto\ the\ stack}}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{stack_8h_ac23f75e620cc2a76c24293df4589b5b2}{stack\_push}}(\mbox{\hyperlink{struct_stack}{Stack}}*\ stack,\ \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047}{OperationType}}\ type,\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ Removes\ and\ returns\ the\ top\ operation\ from\ the\ stack}}
+\DoxyCodeLine{00051\ \mbox{\hyperlink{struct_stack_operation}{StackOperation}}*\ \mbox{\hyperlink{stack_8h_a7e8112ce73793707d705d8e9e7db0921}{stack\_pop}}(\mbox{\hyperlink{struct_stack}{Stack}}*\ stack);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ Returns\ the\ top\ operation\ without\ removing\ it}}
+\DoxyCodeLine{00054\ \mbox{\hyperlink{struct_stack_operation}{StackOperation}}*\ \mbox{\hyperlink{stack_8h_a7b52f4571b1420d83af2073b3e889850}{stack\_peek}}(\mbox{\hyperlink{struct_stack}{Stack}}*\ stack);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ Checks\ if\ the\ stack\ is\ empty}}
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{stack_8h_ac354159d81eee1ef4b0fcbb688e5723e}{stack\_is\_empty}}(\mbox{\hyperlink{struct_stack}{Stack}}*\ stack);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{//\ Checks\ if\ the\ stack\ is\ full}}
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{stack_8h_ad606fb12d4acf6f88caf97f18e6e1acb}{stack\_is\_full}}(\mbox{\hyperlink{struct_stack}{Stack}}*\ stack);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{//\ Returns\ the\ number\ of\ elements\ currently\ in\ the\ stack}}
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{stack_8h_a56c0c535d6e76d010500763370052972}{stack\_size}}(\mbox{\hyperlink{struct_stack}{Stack}}*\ stack);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{comment}{//\ Frees\ all\ memory\ used\ by\ the\ stack}}
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{stack_8h_a1c78193162bca5a7c494c0750a3d58ed}{stack\_destroy}}(\mbox{\hyperlink{struct_stack}{Stack}}*\ stack);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{comment}{//\ ===\ Binary\ File\ Operations\ ===}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{comment}{//\ Saves\ the\ stack\ to\ a\ binary\ file}}
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{stack_8h_af167f136d150224afd6dc677166a397d}{stack\_save\_binary}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_stack}{Stack}}*\ stack,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{//\ Loads\ a\ stack\ from\ a\ binary\ file}}
+\DoxyCodeLine{00074\ \mbox{\hyperlink{struct_stack}{Stack}}*\ \mbox{\hyperlink{stack_8h_a0bf22eef5c99ad7871927ece0984b3ce}{stack\_load\_binary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ STACK\_H\ -\/\ Include\ guard\ end}}
+
+\end{DoxyCode}

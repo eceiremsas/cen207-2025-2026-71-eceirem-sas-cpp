@@ -1,0 +1,80 @@
+\doxysection{menu.\+hpp}
+\hypertarget{header_2menu_8hpp_source}{}\label{header_2menu_8hpp_source}\index{src/recipe/header/menu.hpp@{src/recipe/header/menu.hpp}}
+\mbox{\hyperlink{header_2menu_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ MENU\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MENU\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <cctype>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{heap_8hpp}{heap.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stack_8hpp}{stack.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{linked__list_8hpp}{linked\_list.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{queue_8hpp}{queue.hpp}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{graph_8hpp}{graph.hpp}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sparse__matrix_8hpp}{sparse\_matrix.hpp}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hash__table_8hpp}{hash\_table.hpp}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{recipe_8hpp}{recipe.hpp}}"{}}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{menu_8h_a5fc412260341c1565eba673766b7bf17}{MAX\_RECIPES}}\ =\ 100;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_app_context}{AppContext}}\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ std::unique\_ptr<HashTable>\ \mbox{\hyperlink{struct_app_context_a91f2333ee98a18943768f9f36809c7df}{hashTable}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ std::unique\_ptr<LinkedList>\ \mbox{\hyperlink{struct_app_context_a443e900763328e3118f34bf240089856}{list}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ std::unique\_ptr<Stack>\ \mbox{\hyperlink{struct_app_context_a2b04297ece2f796355c3eefad1f0b57f}{stack}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ std::unique\_ptr<Queue>\ \mbox{\hyperlink{struct_app_context_a3e670241d88dd7b219cdb6653b7844b9}{queue}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ std::unique\_ptr<Graph>\ \mbox{\hyperlink{struct_app_context_a081b5f9c7add607a935ac2892454e34e}{graph}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ std::unique\_ptr<SparseMatrix>\ \mbox{\hyperlink{struct_app_context_a166b6bd5350bac0f79eef573b31b469d}{sparseMatrix}};\ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_app_context_a80ef31a47c38ca99ed72cd8e20986529}{nextRecipeId}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ ===\ Constructor\ /\ Destructor\ ===}}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{struct_app_context_acbbcd910e22c12d8c7325a3f95622b78}{AppContext}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{struct_app_context_a784eed27ef924a71820bfd16d954371a}{\string~AppContext}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ ===\ Initialization\ ===}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{static}\ std::unique\_ptr<AppContext>\ \mbox{\hyperlink{struct_app_context_ad9b9d7f6568ebee7074e35ae153089b7}{create}}();}
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_menu_af6564496c677fadcf4ad99d92b016335}{Menu}}\ \{}
+\DoxyCodeLine{00055\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ ===\ Console\ Utilities\ ===}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a16bdb80a53c2d8ca16020f742eb2a422}{clearConsole}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_ac01b2958589ccecad9f3a0b64c73a30c}{waitForEnter}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_menu_a5611bdcfb5da07ec6f7698abace2ed7b}{safeStringInput}}(\textcolor{keyword}{const}\ std::string\&\ prompt);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_menu_a0b283e7b2906f7db9c05a05a0699303e}{safeIntInput}}(\textcolor{keyword}{const}\ std::string\&\ prompt);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ ===\ Display\ ===}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_aac422100403b122d7a00d2986fdace5e}{displayMain}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a037541da89d7a9e9931e621710720537}{loadSampleData}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}});}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ ===\ Menu\ Operations\ ===}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a35aca9efc64e1695cacdadaf103fe315}{addRecipe}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}});}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_acabdf8425b80fa9aad6cb0f66f0a3a8b}{editRecipe}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}});}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a1cc3c099c687a43da6d8111e97d47353}{deleteRecipe}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}});}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_af1d403ece3e823927d318d1fefffbb20}{searchRecipes}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}});}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_aff638fdf89ce1e11f1aa5957d49810b4}{searchByName}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}});}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a32dc85d9dca8c970e38d5107de99d497}{searchByCategory}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}});}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_ac81bab3e70216dd2693accbb2fc132f3}{searchByCalorieRange}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}});}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a9ee79d31b076151f0f2a43e4ff56d5ea}{viewAllRecipes}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}});}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a730bc727dfd4c7f53158c86d2242185f}{sortByCalories}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}});}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a1cf2cb89188ce0f3efdc17c4bc1bbad5}{createWeeklyPlan}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}});}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a5e35ce862a1d691729353c4a260e8e20}{viewDependencies}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}});}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a632004d5e9e8e571e55963cc37bb5172}{findByIngredient}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}});}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a1f8445d50027ed0c2c3809d996a35367}{undoLastOperation}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}});}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//\ ===\ Main\ Dispatcher\ ===}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_abde82cd0e32b36a6afd4a2a6e1f0551e}{handleChoice}}(\mbox{\hyperlink{struct_app_context}{AppContext}}\&\ \mbox{\hyperlink{class_menu_aab7ab6c6a7ac03571a1aecd2fabb1eb4}{ctx}},\ \textcolor{keywordtype}{int}\ choice);}
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MENU\_HPP}}
+
+\end{DoxyCode}

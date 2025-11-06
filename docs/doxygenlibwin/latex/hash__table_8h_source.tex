@@ -1,0 +1,57 @@
+\doxysection{hash\+\_\+table.\+h}
+\hypertarget{hash__table_8h_source}{}\label{hash__table_8h_source}\index{include/hash\_table.h@{include/hash\_table.h}}
+\mbox{\hyperlink{hash__table_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HASH\_TABLE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HASH\_TABLE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{recipe_8h}{recipe.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ ===\ Structure\ Definitions\ ===}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ Represents\ a\ single\ node\ in\ the\ hash\ table's\ linked\ list\ (chaining\ method)}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_hash_node_a23a0a3f59e07dbf7bcb46520ee7455f7}{HashNode}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{struct_hash_node_ad21df694c824c7c52cb5babc8bfc2375}{recipe}};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ recipe\ stored\ in\ this\ node}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_hash_node_a23a0a3f59e07dbf7bcb46520ee7455f7}{HashNode}}*\ \mbox{\hyperlink{struct_hash_node_a3213171b5cdc2bfab119ce74c9971e36}{next}};\ \ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ next\ node\ in\ the\ same\ bucket}}
+\DoxyCodeLine{00014\ \}\ \mbox{\hyperlink{struct_hash_node}{HashNode}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ Represents\ the\ hash\ table\ structure}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_hash_table_ad732056fce42df5162c810b4dd28fca1}{size}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Total\ number\ of\ buckets\ in\ the\ hash\ table}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_hash_table_a1136fdb10c41f4d0515d447e20d795e7}{count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Number\ of\ recipes\ currently\ stored}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{struct_hash_node}{HashNode}}**\ \mbox{\hyperlink{struct_hash_table_a83630b321ea0c602db49745e4b6fec16}{table}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Array\ of\ pointers\ to\ hash\ buckets}}
+\DoxyCodeLine{00021\ \}\ \mbox{\hyperlink{struct_hash_table}{HashTable}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ ===\ Function\ Declarations\ ===}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ Creates\ and\ initializes\ a\ new\ hash\ table\ with\ the\ given\ size}}
+\DoxyCodeLine{00026\ \mbox{\hyperlink{struct_hash_table}{HashTable}}*\ \mbox{\hyperlink{hash__table_8h_a6a646d3a96e37d37ce2b365a965c3ddd}{hash\_table\_create}}(\textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ Inserts\ a\ recipe\ into\ the\ hash\ table}}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{hash__table_8h_a4b9b4c9c1c914cfad355767e131dd1fd}{hash\_table\_insert}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}*\ ht,\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ Searches\ for\ a\ recipe\ by\ its\ ID}}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{hash__table_8h_a492aaf8bb9282349d9fc08a55efb3b18}{hash\_table\_search}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}*\ ht,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ Deletes\ a\ recipe\ entry\ by\ its\ ID}}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{hash__table_8h_a4d8a2a9f4ac673a039f16bd5ba77b1a4}{hash\_table\_delete}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}*\ ht,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ Displays\ all\ recipes\ currently\ stored\ in\ the\ hash\ table}}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{hash__table_8h_a438fb6f1397da5b503c096b73fef1d80}{hash\_table\_display}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}*\ ht);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ Frees\ all\ memory\ used\ by\ the\ hash\ table}}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{hash__table_8h_ab64885ca531b5336f9cffd8169665c3b}{hash\_table\_destroy}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}*\ ht);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//\ ===\ Binary\ File\ Operations\ ===}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ Saves\ the\ hash\ table\ to\ a\ binary\ file}}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{hash__table_8h_ab2d7a83c1729da70ed65010c15b212dd}{hash\_table\_save\_binary}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hash_table}{HashTable}}*\ ht,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{comment}{//\ Loads\ a\ hash\ table\ from\ a\ binary\ file}}
+\DoxyCodeLine{00049\ \mbox{\hyperlink{struct_hash_table}{HashTable}}*\ \mbox{\hyperlink{hash__table_8h_a138c22881c7f92e6a7a09c4a4140ffd3}{hash\_table\_load\_binary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HASH\_TABLE\_H}}
+
+\end{DoxyCode}

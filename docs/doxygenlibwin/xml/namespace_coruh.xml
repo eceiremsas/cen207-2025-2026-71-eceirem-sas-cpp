@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="namespace_coruh" kind="namespace" language="C++">
+    <compoundname>Coruh</compoundname>
+    <innernamespace refid="namespace_coruh_1_1_utility">Coruh::Utility</innernamespace>
+    <innernamespace refid="namespace_coruh_1_1_calculator">Coruh::Calculator</innernamespace>
+    <briefdescription>
+<para>Root namespace for all Coruh-related code. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is the top-level namespace for all components, classes, and functions related to the <ref refid="namespace_coruh" kindref="compound">Coruh</ref> library. </para>
+    </detaileddescription>
+    <location file="src/namespaces.dox" line="7" column="1"/>
+  </compounddef>
+</doxygen>

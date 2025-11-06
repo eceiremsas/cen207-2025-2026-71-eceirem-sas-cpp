@@ -1,0 +1,764 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="struct_recipe" kind="class" language="C++" prot="public">
+    <compoundname>Recipe</compoundname>
+    <includes refid="recipe_8h" local="no">recipe.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Recipe::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>Recipe::id</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Unique recipe ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/recipe.h" line="22" column="9" bodyfile="include/recipe.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_recipe_1a0feced1fd0c5dc7fca786dcf4455fd1c" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>std::string Recipe::name</definition>
+        <argsstring>[MAX_NAME_LENGTH]</argsstring>
+        <name>name</name>
+        <qualifiedname>Recipe::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/recipe.h" line="23" column="10" bodyfile="include/recipe.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_recipe_1a820764c4de5022a91ed0b1de33b70759" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>std::string Recipe::category</definition>
+        <argsstring>[MAX_CATEGORY_LENGTH]</argsstring>
+        <name>category</name>
+        <qualifiedname>Recipe::category</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/recipe.h" line="24" column="10" bodyfile="include/recipe.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_recipe_1a002bab56be7d0e7f3d959ed27648eaa0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Recipe::calories</definition>
+        <argsstring></argsstring>
+        <name>calories</name>
+        <qualifiedname>Recipe::calories</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Calorie count. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/recipe.h" line="25" column="9" bodyfile="include/recipe.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_recipe_1aa25de8c204e9a9051492ee4c5d8d6467" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Recipe::preparation_time</definition>
+        <argsstring></argsstring>
+        <name>preparation_time</name>
+        <qualifiedname>Recipe::preparation_time</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/recipe.h" line="26" column="9" bodyfile="include/recipe.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_recipe_1ae4275d8e6368c7fcb133e099057a919c" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>std::vector&lt; std::string &gt; Recipe::ingredients</definition>
+        <argsstring>[MAX_INGREDIENTS][MAX_INGREDIENT_LENGTH]</argsstring>
+        <name>ingredients</name>
+        <qualifiedname>Recipe::ingredients</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/recipe.h" line="27" column="10" bodyfile="include/recipe.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_recipe_1aac29ee4b38aeadc035e53537ce01780a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Recipe::ingredient_count</definition>
+        <argsstring></argsstring>
+        <name>ingredient_count</name>
+        <qualifiedname>Recipe::ingredient_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/recipe.h" line="28" column="9" bodyfile="include/recipe.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_recipe_1a38f0e37ae413fbb8b9c72189d43b120f" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>std::string Recipe::instructions</definition>
+        <argsstring>[MAX_INSTRUCTIONS]</argsstring>
+        <name>instructions</name>
+        <qualifiedname>Recipe::instructions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/recipe.h" line="29" column="10" bodyfile="include/recipe.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="struct_recipe_1a50091cc91548be3bf3399bd0471667f1" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Recipe::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>Recipe::name</qualifiedname>
+        <briefdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="24" column="17" bodyfile="src/recipe/header/recipe.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_recipe_1a1f07e5fb045937bf62e5e66d3de679ea" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Recipe::category</definition>
+        <argsstring></argsstring>
+        <name>category</name>
+        <qualifiedname>Recipe::category</qualifiedname>
+        <briefdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> category (e.g., &quot;Dessert&quot;, &quot;Main Course&quot;). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="25" column="17" bodyfile="src/recipe/header/recipe.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_recipe_1a76147c2557ad7c36b21f13a1a98e725b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Recipe::preparationTime</definition>
+        <argsstring></argsstring>
+        <name>preparationTime</name>
+        <qualifiedname>Recipe::preparationTime</qualifiedname>
+        <briefdescription>
+<para>Preparation time in minutes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="27" column="9" bodyfile="src/recipe/header/recipe.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_recipe_1a029737b52953e9b6519549d23ca54de0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; Recipe::ingredients</definition>
+        <argsstring></argsstring>
+        <name>ingredients</name>
+        <qualifiedname>Recipe::ingredients</qualifiedname>
+        <briefdescription>
+<para><ref refid="struct_list" kindref="compound">List</ref> of ingredients. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="28" column="17" bodyfile="src/recipe/header/recipe.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_recipe_1afbcfa44d4c0b4867707e142889000938" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Recipe::instructions</definition>
+        <argsstring></argsstring>
+        <name>instructions</name>
+        <qualifiedname>Recipe::instructions</qualifiedname>
+        <briefdescription>
+<para>Cooking instructions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="29" column="17" bodyfile="src/recipe/header/recipe.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_recipe_1a69257c85a87c134b5be816b3bf9f79c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Recipe::Recipe</definition>
+        <argsstring>()=default</argsstring>
+        <name>Recipe</name>
+        <qualifiedname>Recipe::Recipe</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="33" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1a17fbaac388f7ce45f7b57f67999aa894" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Recipe::Recipe</definition>
+        <argsstring>(int id, std::string name, std::string category, int calories, int prepTime)</argsstring>
+        <name>Recipe</name>
+        <qualifiedname>Recipe::Recipe</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>calories</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>prepTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1a3eb528c2e2412a629e28a82960598aa7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Recipe::~Recipe</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Recipe</name>
+        <qualifiedname>Recipe::~Recipe</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1a3fb4b986c7d092ca4b146f15b0093759" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Recipe::getId</definition>
+        <argsstring>() const</argsstring>
+        <name>getId</name>
+        <qualifiedname>Recipe::getId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="38" column="9" bodyfile="src/recipe/header/recipe.hpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1a2ca59542ac8bc5e83da4352d9cc8b940" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; Recipe::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <qualifiedname>Recipe::getName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="39" column="23" bodyfile="src/recipe/header/recipe.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1a37f65cdf8588c156de3913cc68dd0ec7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; Recipe::getCategory</definition>
+        <argsstring>() const</argsstring>
+        <name>getCategory</name>
+        <qualifiedname>Recipe::getCategory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="40" column="23" bodyfile="src/recipe/header/recipe.hpp" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1a48111ae50295a4d2d24e955fd85421d2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Recipe::getCalories</definition>
+        <argsstring>() const</argsstring>
+        <name>getCalories</name>
+        <qualifiedname>Recipe::getCalories</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="41" column="9" bodyfile="src/recipe/header/recipe.hpp" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1a8436982c8f5be417b9ad1f871fff2b02" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Recipe::getPreparationTime</definition>
+        <argsstring>() const</argsstring>
+        <name>getPreparationTime</name>
+        <qualifiedname>Recipe::getPreparationTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="42" column="9" bodyfile="src/recipe/header/recipe.hpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1aa576268d75e51161dd453d20485e469c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; std::string &gt; &amp;</type>
+        <definition>const std::vector&lt; std::string &gt; &amp; Recipe::getIngredients</definition>
+        <argsstring>() const</argsstring>
+        <name>getIngredients</name>
+        <qualifiedname>Recipe::getIngredients</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="43" column="23" bodyfile="src/recipe/header/recipe.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1ac9cc7ae6eea2a46e94df8d823edfa307" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; Recipe::getInstructions</definition>
+        <argsstring>() const</argsstring>
+        <name>getInstructions</name>
+        <qualifiedname>Recipe::getInstructions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="44" column="23" bodyfile="src/recipe/header/recipe.hpp" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1abeb7f55824c62097dfb686d50fcf2047" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Recipe::setName</definition>
+        <argsstring>(const std::string &amp;n)</argsstring>
+        <name>setName</name>
+        <qualifiedname>Recipe::setName</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="47" column="10" bodyfile="src/recipe/header/recipe.hpp" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1a43c8842b9887a7a05d72060a2c63fdb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Recipe::setCategory</definition>
+        <argsstring>(const std::string &amp;c)</argsstring>
+        <name>setCategory</name>
+        <qualifiedname>Recipe::setCategory</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="48" column="10" bodyfile="src/recipe/header/recipe.hpp" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1ae06dfab7449bb227907b75890ad1207b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Recipe::setCalories</definition>
+        <argsstring>(int c)</argsstring>
+        <name>setCalories</name>
+        <qualifiedname>Recipe::setCalories</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="49" column="10" bodyfile="src/recipe/header/recipe.hpp" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1a66bdee8ac5d502f388f485c23e4db16e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Recipe::setPreparationTime</definition>
+        <argsstring>(int t)</argsstring>
+        <name>setPreparationTime</name>
+        <qualifiedname>Recipe::setPreparationTime</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="50" column="10" bodyfile="src/recipe/header/recipe.hpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1aef3eefc56944f9483f51a35c3769aa7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Recipe::setInstructions</definition>
+        <argsstring>(const std::string &amp;instr)</argsstring>
+        <name>setInstructions</name>
+        <qualifiedname>Recipe::setInstructions</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>instr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="51" column="10" bodyfile="src/recipe/header/recipe.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1ab012e2c461e55ebe05553b89714fe52d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Recipe::addIngredient</definition>
+        <argsstring>(const std::string &amp;ingredient)</argsstring>
+        <name>addIngredient</name>
+        <qualifiedname>Recipe::addIngredient</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ingredient</declname>
+        </param>
+        <briefdescription>
+<para>Adds an ingredient to the recipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ingredient</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ingredient name to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="59" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1a06a0c4bd94fc0b1e285c839e45952f78" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Recipe::display</definition>
+        <argsstring>() const</argsstring>
+        <name>display</name>
+        <qualifiedname>Recipe::display</qualifiedname>
+        <briefdescription>
+<para>Displays all recipe information to the console. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="64" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1ab05da34e3f9568e4ba2301157e9b56ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Recipe &gt; Recipe::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <qualifiedname>Recipe::clone</qualifiedname>
+        <briefdescription>
+<para>Creates a deep copy of the current recipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::shared_ptr&lt;Recipe&gt; pointing to the cloned recipe. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="70" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1af5b90cedae70a72d171f8fb6a5891d14" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Recipe::operator&lt;</definition>
+        <argsstring>(const Recipe &amp;other) const</argsstring>
+        <name>operator&lt;</name>
+        <qualifiedname>Recipe::operator&lt;</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_recipe" kindref="compound">Recipe</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="73" column="5" bodyfile="src/recipe/header/recipe.hpp" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1a7d4b95637e8aabc4ca3c48d784832c5a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Recipe::operator&gt;</definition>
+        <argsstring>(const Recipe &amp;other) const</argsstring>
+        <name>operator&gt;</name>
+        <qualifiedname>Recipe::operator&gt;</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_recipe" kindref="compound">Recipe</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="74" column="10" bodyfile="src/recipe/header/recipe.hpp" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1aaef9304796bb72fc9f28724052203e80" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Recipe::operator==</definition>
+        <argsstring>(const Recipe &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>Recipe::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_recipe" kindref="compound">Recipe</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/recipe.hpp" line="75" column="10" bodyfile="src/recipe/header/recipe.hpp" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1a69257c85a87c134b5be816b3bf9f79c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Recipe::Recipe</definition>
+        <argsstring>()=default</argsstring>
+        <name>Recipe</name>
+        <qualifiedname>Recipe::Recipe</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/recipe.cpp" line="28" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1a3adb792b79eadbb5b7a49f77d38f9d35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Recipe::Recipe</definition>
+        <argsstring>(int id_, std::string name_, std::string category_, int cal, int prep)</argsstring>
+        <name>Recipe</name>
+        <qualifiedname>Recipe::Recipe</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id_</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name_</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>category_</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cal</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>prep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/recipe.cpp" line="29" column="5" bodyfile="src/recipe/src/recipe.cpp" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1ab05da34e3f9568e4ba2301157e9b56ef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Recipe &gt; Recipe::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <qualifiedname>Recipe::clone</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/recipe.cpp" line="34" column="21" bodyfile="src/recipe/src/recipe.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1ad6e9f08c24906ccff5bfbebf0bdeb433" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Recipe::addIngredient</definition>
+        <argsstring>(const std::string &amp;ingredient)</argsstring>
+        <name>addIngredient</name>
+        <qualifiedname>Recipe::addIngredient</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ingredient</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/recipe.cpp" line="40" column="10" bodyfile="src/recipe/src/recipe.cpp" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1ab85029ecefe164fb7d21548cfe1da91c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Recipe::setInstructions</definition>
+        <argsstring>(const std::string &amp;text)</argsstring>
+        <name>setInstructions</name>
+        <qualifiedname>Recipe::setInstructions</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/recipe.cpp" line="47" column="10" bodyfile="src/recipe/src/recipe.cpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_recipe_1a06a0c4bd94fc0b1e285c839e45952f78" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Recipe::display</definition>
+        <argsstring>() const</argsstring>
+        <name>display</name>
+        <qualifiedname>Recipe::display</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/recipe.cpp" line="52" column="10" bodyfile="src/recipe/src/recipe.cpp" bodystart="52" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_recipe_1ad925848e2d1daf2c65f19083fe228d5d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Recipe::compareByCalories</definition>
+        <argsstring>(const std::shared_ptr&lt; Recipe &gt; &amp;a, const std::shared_ptr&lt; Recipe &gt; &amp;b)</argsstring>
+        <name>compareByCalories</name>
+        <qualifiedname>Recipe::compareByCalories</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt; &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/recipe.cpp" line="64" column="16" bodyfile="src/recipe/src/recipe.cpp" bodystart="64" bodyend="70"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a recipe with its properties and related data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Encapsulates all information related to a single recipe.</para>
+<para>Each recipe contains a unique ID, name, category, calorie count, preparation time, a list of ingredients, and preparation instructions. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Recipe</label>
+        <link refid="struct_recipe"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/recipe.h" line="21" column="1" bodyfile="include/recipe.h" bodystart="21" bodyend="30"/>
+    <listofallmembers>
+      <member refid="struct_recipe_1ab012e2c461e55ebe05553b89714fe52d" prot="public" virt="non-virtual"><scope>Recipe</scope><name>addIngredient</name></member>
+      <member refid="struct_recipe_1ad6e9f08c24906ccff5bfbebf0bdeb433" prot="public" virt="non-virtual"><scope>Recipe</scope><name>addIngredient</name></member>
+      <member refid="struct_recipe_1a002bab56be7d0e7f3d959ed27648eaa0" prot="public" virt="non-virtual"><scope>Recipe</scope><name>calories</name></member>
+      <member refid="struct_recipe_1a820764c4de5022a91ed0b1de33b70759" prot="public" virt="non-virtual"><scope>Recipe</scope><name>category</name></member>
+      <member refid="struct_recipe_1a1f07e5fb045937bf62e5e66d3de679ea" prot="private" virt="non-virtual"><scope>Recipe</scope><name>category</name></member>
+      <member refid="struct_recipe_1ab05da34e3f9568e4ba2301157e9b56ef" prot="public" virt="non-virtual"><scope>Recipe</scope><name>clone</name></member>
+      <member refid="struct_recipe_1ab05da34e3f9568e4ba2301157e9b56ef" prot="public" virt="non-virtual"><scope>Recipe</scope><name>clone</name></member>
+      <member refid="struct_recipe_1ad925848e2d1daf2c65f19083fe228d5d" prot="public" virt="non-virtual"><scope>Recipe</scope><name>compareByCalories</name></member>
+      <member refid="struct_recipe_1a06a0c4bd94fc0b1e285c839e45952f78" prot="public" virt="non-virtual"><scope>Recipe</scope><name>display</name></member>
+      <member refid="struct_recipe_1a06a0c4bd94fc0b1e285c839e45952f78" prot="public" virt="non-virtual"><scope>Recipe</scope><name>display</name></member>
+      <member refid="struct_recipe_1a48111ae50295a4d2d24e955fd85421d2" prot="public" virt="non-virtual"><scope>Recipe</scope><name>getCalories</name></member>
+      <member refid="struct_recipe_1a37f65cdf8588c156de3913cc68dd0ec7" prot="public" virt="non-virtual"><scope>Recipe</scope><name>getCategory</name></member>
+      <member refid="struct_recipe_1a3fb4b986c7d092ca4b146f15b0093759" prot="public" virt="non-virtual"><scope>Recipe</scope><name>getId</name></member>
+      <member refid="struct_recipe_1aa576268d75e51161dd453d20485e469c" prot="public" virt="non-virtual"><scope>Recipe</scope><name>getIngredients</name></member>
+      <member refid="struct_recipe_1ac9cc7ae6eea2a46e94df8d823edfa307" prot="public" virt="non-virtual"><scope>Recipe</scope><name>getInstructions</name></member>
+      <member refid="struct_recipe_1a2ca59542ac8bc5e83da4352d9cc8b940" prot="public" virt="non-virtual"><scope>Recipe</scope><name>getName</name></member>
+      <member refid="struct_recipe_1a8436982c8f5be417b9ad1f871fff2b02" prot="public" virt="non-virtual"><scope>Recipe</scope><name>getPreparationTime</name></member>
+      <member refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" prot="public" virt="non-virtual"><scope>Recipe</scope><name>id</name></member>
+      <member refid="struct_recipe_1aac29ee4b38aeadc035e53537ce01780a" prot="public" virt="non-virtual"><scope>Recipe</scope><name>ingredient_count</name></member>
+      <member refid="struct_recipe_1ae4275d8e6368c7fcb133e099057a919c" prot="public" virt="non-virtual"><scope>Recipe</scope><name>ingredients</name></member>
+      <member refid="struct_recipe_1a029737b52953e9b6519549d23ca54de0" prot="private" virt="non-virtual"><scope>Recipe</scope><name>ingredients</name></member>
+      <member refid="struct_recipe_1a38f0e37ae413fbb8b9c72189d43b120f" prot="public" virt="non-virtual"><scope>Recipe</scope><name>instructions</name></member>
+      <member refid="struct_recipe_1afbcfa44d4c0b4867707e142889000938" prot="private" virt="non-virtual"><scope>Recipe</scope><name>instructions</name></member>
+      <member refid="struct_recipe_1a0feced1fd0c5dc7fca786dcf4455fd1c" prot="public" virt="non-virtual"><scope>Recipe</scope><name>name</name></member>
+      <member refid="struct_recipe_1a50091cc91548be3bf3399bd0471667f1" prot="private" virt="non-virtual"><scope>Recipe</scope><name>name</name></member>
+      <member refid="struct_recipe_1af5b90cedae70a72d171f8fb6a5891d14" prot="public" virt="non-virtual"><scope>Recipe</scope><name>operator&lt;</name></member>
+      <member refid="struct_recipe_1aaef9304796bb72fc9f28724052203e80" prot="public" virt="non-virtual"><scope>Recipe</scope><name>operator==</name></member>
+      <member refid="struct_recipe_1a7d4b95637e8aabc4ca3c48d784832c5a" prot="public" virt="non-virtual"><scope>Recipe</scope><name>operator&gt;</name></member>
+      <member refid="struct_recipe_1aa25de8c204e9a9051492ee4c5d8d6467" prot="public" virt="non-virtual"><scope>Recipe</scope><name>preparation_time</name></member>
+      <member refid="struct_recipe_1a76147c2557ad7c36b21f13a1a98e725b" prot="private" virt="non-virtual"><scope>Recipe</scope><name>preparationTime</name></member>
+      <member refid="struct_recipe_1a69257c85a87c134b5be816b3bf9f79c5" prot="public" virt="non-virtual"><scope>Recipe</scope><name>Recipe</name></member>
+      <member refid="struct_recipe_1a17fbaac388f7ce45f7b57f67999aa894" prot="public" virt="non-virtual"><scope>Recipe</scope><name>Recipe</name></member>
+      <member refid="struct_recipe_1a69257c85a87c134b5be816b3bf9f79c5" prot="public" virt="non-virtual"><scope>Recipe</scope><name>Recipe</name></member>
+      <member refid="struct_recipe_1a3adb792b79eadbb5b7a49f77d38f9d35" prot="public" virt="non-virtual"><scope>Recipe</scope><name>Recipe</name></member>
+      <member refid="struct_recipe_1ae06dfab7449bb227907b75890ad1207b" prot="public" virt="non-virtual"><scope>Recipe</scope><name>setCalories</name></member>
+      <member refid="struct_recipe_1a43c8842b9887a7a05d72060a2c63fdb1" prot="public" virt="non-virtual"><scope>Recipe</scope><name>setCategory</name></member>
+      <member refid="struct_recipe_1aef3eefc56944f9483f51a35c3769aa7e" prot="public" virt="non-virtual"><scope>Recipe</scope><name>setInstructions</name></member>
+      <member refid="struct_recipe_1ab85029ecefe164fb7d21548cfe1da91c" prot="public" virt="non-virtual"><scope>Recipe</scope><name>setInstructions</name></member>
+      <member refid="struct_recipe_1abeb7f55824c62097dfb686d50fcf2047" prot="public" virt="non-virtual"><scope>Recipe</scope><name>setName</name></member>
+      <member refid="struct_recipe_1a66bdee8ac5d502f388f485c23e4db16e" prot="public" virt="non-virtual"><scope>Recipe</scope><name>setPreparationTime</name></member>
+      <member refid="struct_recipe_1a3eb528c2e2412a629e28a82960598aa7" prot="public" virt="non-virtual"><scope>Recipe</scope><name>~Recipe</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

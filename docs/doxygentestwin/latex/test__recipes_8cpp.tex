@@ -1,0 +1,733 @@
+\doxysection{tests/test\+\_\+recipes.cpp File Reference}
+\hypertarget{test__recipes_8cpp}{}\label{test__recipes_8cpp}\index{tests/test\_recipes.cpp@{tests/test\_recipes.cpp}}
+
+
+Comprehensive unit tests for all data structures using Google\+Test.  
+
+
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}../include/recipe.\+h"{}}\newline
+{\ttfamily \#include "{}../include/linked\+\_\+list.\+h"{}}\newline
+{\ttfamily \#include "{}../include/xor\+\_\+linked\+\_\+list.\+h"{}}\newline
+{\ttfamily \#include "{}../include/sparse\+\_\+matrix.\+h"{}}\newline
+{\ttfamily \#include "{}../include/stack.\+h"{}}\newline
+{\ttfamily \#include "{}../include/queue.\+h"{}}\newline
+{\ttfamily \#include "{}../include/heap.\+h"{}}\newline
+{\ttfamily \#include "{}../include/graph.\+h"{}}\newline
+{\ttfamily \#include "{}../include/hash\+\_\+table.\+h"{}}\newline
+Include dependency graph for test\+\_\+recipes.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__recipes_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}{TEST}} (Recipe\+Test, Create\+Recipe)
+\begin{DoxyCompactList}\small\item\em Test recipe creation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a0f960edf77f6f4ba44352eb7fcbe62af}{TEST}} (Recipe\+Test, Add\+Ingredient)
+\begin{DoxyCompactList}\small\item\em Test adding ingredients to recipe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_afa4b2f4a4b3a84643273da8c5c8201ed}{TEST}} (Recipe\+Test, Set\+Instructions)
+\begin{DoxyCompactList}\small\item\em Test setting instructions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a504d09e8e06289f7ac6e036b214ce584}{TEST}} (Recipe\+Test, Compare\+By\+ID)
+\begin{DoxyCompactList}\small\item\em Test recipe comparison by ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_ae359bdc058e904a3961af63b6dd4c5ee}{TEST}} (Recipe\+Test, Compare\+By\+Calories)
+\begin{DoxyCompactList}\small\item\em Test recipe comparison by calories. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a5f7004fd49781d7b40dc93896efe880c}{TEST}} (Recipe\+Test, Copy\+Recipe)
+\begin{DoxyCompactList}\small\item\em Test recipe copy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a18803e3c7a27c351f149d46d09be0208}{TEST}} (Recipe\+Test, Binary\+File\+Operations)
+\begin{DoxyCompactList}\small\item\em Test binary file save and load. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a7be432be3dd29ed4f4fed0980aeb1460}{TEST}} (Linked\+List\+Test, Create\+List)
+\begin{DoxyCompactList}\small\item\em Test linked list creation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a197aed2618ca03c94d1583a7164015d4}{TEST}} (Linked\+List\+Test, Insert\+Head)
+\begin{DoxyCompactList}\small\item\em Test inserting at head. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a0a04a60ecde1719e3cc04d84507aaf4d}{TEST}} (Linked\+List\+Test, Insert\+Tail)
+\begin{DoxyCompactList}\small\item\em Test inserting at tail. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a54e05d38f0e48425d2b0d73d455525e6}{TEST}} (Linked\+List\+Test, Remove\+From\+List)
+\begin{DoxyCompactList}\small\item\em Test removing from list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a00d4d285c5f8f9be83dbbc4bac9fce2b}{TEST}} (Linked\+List\+Test, Binary\+File\+Operations)
+\begin{DoxyCompactList}\small\item\em Test binary file operations for linked list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a9901f9140068a2680bbc8b6a3b2a9c40}{TEST}} (XORLinked\+List\+Test, Create\+List)
+\begin{DoxyCompactList}\small\item\em Test XOR linked list creation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a606153230a4eb6baa5292a60dc454e58}{TEST}} (XORLinked\+List\+Test, Insert\+Operations)
+\begin{DoxyCompactList}\small\item\em Test inserting at head and tail. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_ab3d6fa2b661e874f20fc99aa4e681cf8}{TEST}} (XORLinked\+List\+Test, Bidirectional\+Traversal)
+\begin{DoxyCompactList}\small\item\em Test bidirectional traversal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a7150e45d275c76aa70574bc5b2e6f10c}{TEST}} (XORLinked\+List\+Test, Binary\+File\+Operations)
+\begin{DoxyCompactList}\small\item\em Test binary file operations for XOR linked list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a0431982bdd7205780c607a9964acd718}{TEST}} (Sparse\+Matrix\+Test, Create\+Matrix)
+\begin{DoxyCompactList}\small\item\em Test sparse matrix creation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a5fef04031dc53d6257dde87ef87d6c21}{TEST}} (Sparse\+Matrix\+Test, Add\+Entry)
+\begin{DoxyCompactList}\small\item\em Test adding entries. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a3560c7f64198234c7ee43a4fcbcbe9ff}{TEST}} (Sparse\+Matrix\+Test, Find\+Recipes\+By\+Ingredient)
+\begin{DoxyCompactList}\small\item\em Test finding recipes by ingredient. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_afc3d6411e886cb75c2e2cc09e515e5d7}{TEST}} (Sparse\+Matrix\+Test, Binary\+File\+Operations)
+\begin{DoxyCompactList}\small\item\em Test binary file operations for sparse matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a51c1cbf166531bcdeaa8855979d78138}{TEST}} (Stack\+Test, Create\+Stack)
+\begin{DoxyCompactList}\small\item\em Test stack creation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a6b0ce19c64853bc0bb851aa87023bd32}{TEST}} (Stack\+Test, Push\+Pop)
+\begin{DoxyCompactList}\small\item\em Test push and pop operations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_afaeb2c1356cbf3a266f8ea02dfd34863}{TEST}} (Stack\+Test, Peek)
+\begin{DoxyCompactList}\small\item\em Test peek operation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a1288510dfcbadb628ee0df3a4d475e19}{TEST}} (Stack\+Test, Binary\+File\+Operations)
+\begin{DoxyCompactList}\small\item\em Test binary file operations for stack. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a3eaa6b14f902d34d8d5017de50782b76}{TEST}} (Queue\+Test, Create\+Queue)
+\begin{DoxyCompactList}\small\item\em Test queue creation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_aa8492eebfc4447598e0531874d655d3e}{TEST}} (Queue\+Test, Enqueue\+Dequeue)
+\begin{DoxyCompactList}\small\item\em Test enqueue and dequeue operations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a91beed3eda3b1f95e630b290a7f0aef1}{TEST}} (Queue\+Test, Peek)
+\begin{DoxyCompactList}\small\item\em Test peek operation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_af4d1717444089da33353fc7453781b89}{TEST}} (Queue\+Test, Binary\+File\+Operations)
+\begin{DoxyCompactList}\small\item\em Test binary file operations for queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_abcae85d7b26eb815bada7dad61de0575}{TEST}} (Heap\+Test, Create\+Heap)
+\begin{DoxyCompactList}\small\item\em Test heap creation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a54b9be791a82de4fba87f6c8ec16bb23}{TEST}} (Heap\+Test, Insert\+Extract\+Min)
+\begin{DoxyCompactList}\small\item\em Test heap insert and extract min. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a314431e5201d6896c49e45110b15771f}{TEST}} (Heap\+Test, Heap\+Sort)
+\begin{DoxyCompactList}\small\item\em Test heap sort. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a5a9f4bd1c2babd668c49a0aae080670a}{TEST}} (Heap\+Test, Binary\+File\+Operations)
+\begin{DoxyCompactList}\small\item\em Test binary file operations for heap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a40aa997817ba455b7fb3acfefe1ff347}{TEST}} (Graph\+Test, Create\+Graph)
+\begin{DoxyCompactList}\small\item\em Test graph creation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a2b4fffcbc5cbe80e257b69321367aedc}{TEST}} (Graph\+Test, Add\+Vertex\+Edge)
+\begin{DoxyCompactList}\small\item\em Test adding vertices and edges. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a4fde40036c335c7db5e1c080ac1d3206}{TEST}} (Graph\+Test, BFSTraversal)
+\begin{DoxyCompactList}\small\item\em Test BFS traversal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a5b351ee0875670584c44bd75e9fe958b}{TEST}} (Graph\+Test, DFSTraversal)
+\begin{DoxyCompactList}\small\item\em Test DFS traversal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a3237b311181f94e5d60ed4e1abed857b}{TEST}} (Graph\+Test, Cycle\+Detection)
+\begin{DoxyCompactList}\small\item\em Test cycle detection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a914b1046c6f4b67974a706f354742108}{TEST}} (Graph\+Test, Binary\+File\+Operations)
+\begin{DoxyCompactList}\small\item\em Test binary file operations for graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_ac7ea7cdb2655736dfd382950670ddc63}{TEST}} (Hash\+Table\+Test, Create\+Hash\+Table)
+\begin{DoxyCompactList}\small\item\em Test hash table creation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a0d453ee495cf1244d601151804569b32}{TEST}} (Hash\+Table\+Test, Insert\+Search)
+\begin{DoxyCompactList}\small\item\em Test insert and search operations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a56038936de4c4c44cc70d417e8275dcc}{TEST}} (Hash\+Table\+Test, Delete)
+\begin{DoxyCompactList}\small\item\em Test delete operation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a95266149cfe575100a826cede9e6da66}{TEST}} (Hash\+Table\+Test, Collision\+Handling)
+\begin{DoxyCompactList}\small\item\em Test collision handling. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__recipes_8cpp_a9f0c9cf1ad10a200a1497b6dacd0aa10}{TEST}} (Hash\+Table\+Test, Binary\+File\+Operations)
+\begin{DoxyCompactList}\small\item\em Test binary file operations for hash table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Comprehensive unit tests for all data structures using Google\+Test. 
+
+Tests all 7 midterm algorithms\+: Recipe, Linked List, XOR Linked List, Sparse Matrix, Stack, Queue, Heap, Graph (BFS/\+DFS), Hash Table All tests run automatically without user interaction 
+
+Definition in file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{test__recipes_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{test__recipes_8cpp_a2b4fffcbc5cbe80e257b69321367aedc}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a2b4fffcbc5cbe80e257b69321367aedc} 
+TEST (\begin{DoxyParamCaption}\item[{Graph\+Test}]{}{, }\item[{Add\+Vertex\+Edge}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test adding vertices and edges. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00732}{732}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a4fde40036c335c7db5e1c080ac1d3206}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a4fde40036c335c7db5e1c080ac1d3206} 
+TEST (\begin{DoxyParamCaption}\item[{Graph\+Test}]{}{, }\item[{BFSTraversal}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test BFS traversal. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00753}{753}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a914b1046c6f4b67974a706f354742108}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a914b1046c6f4b67974a706f354742108} 
+TEST (\begin{DoxyParamCaption}\item[{Graph\+Test}]{}{, }\item[{Binary\+File\+Operations}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test binary file operations for graph. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00823}{823}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a40aa997817ba455b7fb3acfefe1ff347}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a40aa997817ba455b7fb3acfefe1ff347} 
+TEST (\begin{DoxyParamCaption}\item[{Graph\+Test}]{}{, }\item[{Create\+Graph}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test graph creation. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00722}{722}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a3237b311181f94e5d60ed4e1abed857b}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a3237b311181f94e5d60ed4e1abed857b} 
+TEST (\begin{DoxyParamCaption}\item[{Graph\+Test}]{}{, }\item[{Cycle\+Detection}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test cycle detection. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00801}{801}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a5b351ee0875670584c44bd75e9fe958b}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a5b351ee0875670584c44bd75e9fe958b} 
+TEST (\begin{DoxyParamCaption}\item[{Graph\+Test}]{}{, }\item[{DFSTraversal}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test DFS traversal. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00778}{778}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a9f0c9cf1ad10a200a1497b6dacd0aa10}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a9f0c9cf1ad10a200a1497b6dacd0aa10} 
+TEST (\begin{DoxyParamCaption}\item[{Hash\+Table\+Test}]{}{, }\item[{Binary\+File\+Operations}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test binary file operations for hash table. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00944}{944}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a95266149cfe575100a826cede9e6da66}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a95266149cfe575100a826cede9e6da66} 
+TEST (\begin{DoxyParamCaption}\item[{Hash\+Table\+Test}]{}{, }\item[{Collision\+Handling}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test collision handling. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00919}{919}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_ac7ea7cdb2655736dfd382950670ddc63}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_ac7ea7cdb2655736dfd382950670ddc63} 
+TEST (\begin{DoxyParamCaption}\item[{Hash\+Table\+Test}]{}{, }\item[{Create\+Hash\+Table}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test hash table creation. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00853}{853}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a56038936de4c4c44cc70d417e8275dcc}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a56038936de4c4c44cc70d417e8275dcc} 
+TEST (\begin{DoxyParamCaption}\item[{Hash\+Table\+Test}]{}{, }\item[{Delete}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test delete operation. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00893}{893}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a0d453ee495cf1244d601151804569b32}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a0d453ee495cf1244d601151804569b32} 
+TEST (\begin{DoxyParamCaption}\item[{Hash\+Table\+Test}]{}{, }\item[{Insert\+Search}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test insert and search operations. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00864}{864}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a5a9f4bd1c2babd668c49a0aae080670a}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a5a9f4bd1c2babd668c49a0aae080670a} 
+TEST (\begin{DoxyParamCaption}\item[{Heap\+Test}]{}{, }\item[{Binary\+File\+Operations}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test binary file operations for heap. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00689}{689}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_abcae85d7b26eb815bada7dad61de0575}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_abcae85d7b26eb815bada7dad61de0575} 
+TEST (\begin{DoxyParamCaption}\item[{Heap\+Test}]{}{, }\item[{Create\+Heap}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test heap creation. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00623}{623}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a314431e5201d6896c49e45110b15771f}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a314431e5201d6896c49e45110b15771f} 
+TEST (\begin{DoxyParamCaption}\item[{Heap\+Test}]{}{, }\item[{Heap\+Sort}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test heap sort. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00668}{668}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a54b9be791a82de4fba87f6c8ec16bb23}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a54b9be791a82de4fba87f6c8ec16bb23} 
+TEST (\begin{DoxyParamCaption}\item[{Heap\+Test}]{}{, }\item[{Insert\+Extract\+Min}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test heap insert and extract min. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00634}{634}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a00d4d285c5f8f9be83dbbc4bac9fce2b}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [16/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a00d4d285c5f8f9be83dbbc4bac9fce2b} 
+TEST (\begin{DoxyParamCaption}\item[{Linked\+List\+Test}]{}{, }\item[{Binary\+File\+Operations}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test binary file operations for linked list. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00256}{256}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a7be432be3dd29ed4f4fed0980aeb1460}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [17/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a7be432be3dd29ed4f4fed0980aeb1460} 
+TEST (\begin{DoxyParamCaption}\item[{Linked\+List\+Test}]{}{, }\item[{Create\+List}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test linked list creation. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00181}{181}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a197aed2618ca03c94d1583a7164015d4}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [18/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a197aed2618ca03c94d1583a7164015d4} 
+TEST (\begin{DoxyParamCaption}\item[{Linked\+List\+Test}]{}{, }\item[{Insert\+Head}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test inserting at head. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00192}{192}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a0a04a60ecde1719e3cc04d84507aaf4d}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [19/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a0a04a60ecde1719e3cc04d84507aaf4d} 
+TEST (\begin{DoxyParamCaption}\item[{Linked\+List\+Test}]{}{, }\item[{Insert\+Tail}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test inserting at tail. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00214}{214}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a54e05d38f0e48425d2b0d73d455525e6}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [20/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a54e05d38f0e48425d2b0d73d455525e6} 
+TEST (\begin{DoxyParamCaption}\item[{Linked\+List\+Test}]{}{, }\item[{Remove\+From\+List}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test removing from list. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00235}{235}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_af4d1717444089da33353fc7453781b89}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [21/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_af4d1717444089da33353fc7453781b89} 
+TEST (\begin{DoxyParamCaption}\item[{Queue\+Test}]{}{, }\item[{Binary\+File\+Operations}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test binary file operations for queue. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00594}{594}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a3eaa6b14f902d34d8d5017de50782b76}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [22/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a3eaa6b14f902d34d8d5017de50782b76} 
+TEST (\begin{DoxyParamCaption}\item[{Queue\+Test}]{}{, }\item[{Create\+Queue}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test queue creation. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00536}{536}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_aa8492eebfc4447598e0531874d655d3e}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [23/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_aa8492eebfc4447598e0531874d655d3e} 
+TEST (\begin{DoxyParamCaption}\item[{Queue\+Test}]{}{, }\item[{Enqueue\+Dequeue}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test enqueue and dequeue operations. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00548}{548}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a91beed3eda3b1f95e630b290a7f0aef1}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [24/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a91beed3eda3b1f95e630b290a7f0aef1} 
+TEST (\begin{DoxyParamCaption}\item[{Queue\+Test}]{}{, }\item[{Peek}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test peek operation. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00576}{576}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a0f960edf77f6f4ba44352eb7fcbe62af}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [25/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a0f960edf77f6f4ba44352eb7fcbe62af} 
+TEST (\begin{DoxyParamCaption}\item[{Recipe\+Test}]{}{, }\item[{Add\+Ingredient}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test adding ingredients to recipe. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a18803e3c7a27c351f149d46d09be0208}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [26/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a18803e3c7a27c351f149d46d09be0208} 
+TEST (\begin{DoxyParamCaption}\item[{Recipe\+Test}]{}{, }\item[{Binary\+File\+Operations}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test binary file save and load. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00144}{144}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_ae359bdc058e904a3961af63b6dd4c5ee}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [27/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_ae359bdc058e904a3961af63b6dd4c5ee} 
+TEST (\begin{DoxyParamCaption}\item[{Recipe\+Test}]{}{, }\item[{Compare\+By\+Calories}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test recipe comparison by calories. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00104}{104}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a504d09e8e06289f7ac6e036b214ce584}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [28/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a504d09e8e06289f7ac6e036b214ce584} 
+TEST (\begin{DoxyParamCaption}\item[{Recipe\+Test}]{}{, }\item[{Compare\+By\+ID}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test recipe comparison by ID. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00087}{87}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a5f7004fd49781d7b40dc93896efe880c}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [29/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a5f7004fd49781d7b40dc93896efe880c} 
+TEST (\begin{DoxyParamCaption}\item[{Recipe\+Test}]{}{, }\item[{Copy\+Recipe}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test recipe copy. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00120}{120}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [30/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_ae3fd79ef9590cc1f94b8144b827cf997} 
+TEST (\begin{DoxyParamCaption}\item[{Recipe\+Test}]{}{, }\item[{Create\+Recipe}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test recipe creation. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_afa4b2f4a4b3a84643273da8c5c8201ed}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [31/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_afa4b2f4a4b3a84643273da8c5c8201ed} 
+TEST (\begin{DoxyParamCaption}\item[{Recipe\+Test}]{}{, }\item[{Set\+Instructions}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test setting instructions. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00074}{74}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a5fef04031dc53d6257dde87ef87d6c21}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [32/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a5fef04031dc53d6257dde87ef87d6c21} 
+TEST (\begin{DoxyParamCaption}\item[{Sparse\+Matrix\+Test}]{}{, }\item[{Add\+Entry}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test adding entries. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00387}{387}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_afc3d6411e886cb75c2e2cc09e515e5d7}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [33/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_afc3d6411e886cb75c2e2cc09e515e5d7} 
+TEST (\begin{DoxyParamCaption}\item[{Sparse\+Matrix\+Test}]{}{, }\item[{Binary\+File\+Operations}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test binary file operations for sparse matrix. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00422}{422}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a0431982bdd7205780c607a9964acd718}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [34/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a0431982bdd7205780c607a9964acd718} 
+TEST (\begin{DoxyParamCaption}\item[{Sparse\+Matrix\+Test}]{}{, }\item[{Create\+Matrix}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test sparse matrix creation. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00377}{377}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a3560c7f64198234c7ee43a4fcbcbe9ff}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [35/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a3560c7f64198234c7ee43a4fcbcbe9ff} 
+TEST (\begin{DoxyParamCaption}\item[{Sparse\+Matrix\+Test}]{}{, }\item[{Find\+Recipes\+By\+Ingredient}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test finding recipes by ingredient. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00405}{405}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a1288510dfcbadb628ee0df3a4d475e19}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [36/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a1288510dfcbadb628ee0df3a4d475e19} 
+TEST (\begin{DoxyParamCaption}\item[{Stack\+Test}]{}{, }\item[{Binary\+File\+Operations}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test binary file operations for stack. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00507}{507}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a51c1cbf166531bcdeaa8855979d78138}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [37/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a51c1cbf166531bcdeaa8855979d78138} 
+TEST (\begin{DoxyParamCaption}\item[{Stack\+Test}]{}{, }\item[{Create\+Stack}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test stack creation. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00447}{447}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_afaeb2c1356cbf3a266f8ea02dfd34863}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [38/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_afaeb2c1356cbf3a266f8ea02dfd34863} 
+TEST (\begin{DoxyParamCaption}\item[{Stack\+Test}]{}{, }\item[{Peek}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test peek operation. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00489}{489}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a6b0ce19c64853bc0bb851aa87023bd32}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [39/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a6b0ce19c64853bc0bb851aa87023bd32} 
+TEST (\begin{DoxyParamCaption}\item[{Stack\+Test}]{}{, }\item[{Push\+Pop}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test push and pop operations. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00459}{459}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_ab3d6fa2b661e874f20fc99aa4e681cf8}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [40/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_ab3d6fa2b661e874f20fc99aa4e681cf8} 
+TEST (\begin{DoxyParamCaption}\item[{XORLinked\+List\+Test}]{}{, }\item[{Bidirectional\+Traversal}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test bidirectional traversal. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00321}{321}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a7150e45d275c76aa70574bc5b2e6f10c}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [41/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a7150e45d275c76aa70574bc5b2e6f10c} 
+TEST (\begin{DoxyParamCaption}\item[{XORLinked\+List\+Test}]{}{, }\item[{Binary\+File\+Operations}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test binary file operations for XOR linked list. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00348}{348}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a9901f9140068a2680bbc8b6a3b2a9c40}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [42/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a9901f9140068a2680bbc8b6a3b2a9c40} 
+TEST (\begin{DoxyParamCaption}\item[{XORLinked\+List\+Test}]{}{, }\item[{Create\+List}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test XOR linked list creation. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00289}{289}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+
+\Hypertarget{test__recipes_8cpp_a606153230a4eb6baa5292a60dc454e58}\index{test\_recipes.cpp@{test\_recipes.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes.cpp@{test\_recipes.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [43/43]}}
+{\footnotesize\ttfamily \label{test__recipes_8cpp_a606153230a4eb6baa5292a60dc454e58} 
+TEST (\begin{DoxyParamCaption}\item[{XORLinked\+List\+Test}]{}{, }\item[{Insert\+Operations}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test inserting at head and tail. 
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes_8cpp_source_l00300}{300}} of file \mbox{\hyperlink{test__recipes_8cpp_source}{test\+\_\+recipes.\+cpp}}.
+

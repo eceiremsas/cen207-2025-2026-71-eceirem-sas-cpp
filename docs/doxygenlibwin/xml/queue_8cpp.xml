@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="queue_8cpp" kind="file" language="C++">
+    <compoundname>queue.cpp</compoundname>
+    <includes refid="queue_8h" local="yes">queue.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>recipe.h</label>
+        <link refid="recipe_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/recipe/src/queue.cpp</label>
+        <link refid="queue_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="queue_8cpp_1a9771bdb407a7026eb675edbac5809d31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_queue" kindref="compound">Queue</ref> *</type>
+        <definition>Queue * queue_create</definition>
+        <argsstring>(void)</argsstring>
+        <name>queue_create</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Creates and initializes an empty queue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the created queue, or NULL on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/queue.cpp" line="9" column="7" bodyfile="src/recipe/src/queue.cpp" bodystart="9" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="queue_8cpp_1a00a32b0e06376d1f4d1afa609b7bbd10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int queue_enqueue</definition>
+        <argsstring>(Queue *queue, Recipe *recipe)</argsstring>
+        <name>queue_enqueue</name>
+        <param>
+          <type><ref refid="struct_queue" kindref="compound">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+          <declname>recipe</declname>
+        </param>
+        <briefdescription>
+<para>Adds a recipe to the rear of the queue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the queue </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the recipe to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/queue.cpp" line="22" column="5" bodyfile="src/recipe/src/queue.cpp" bodystart="22" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="queue_8cpp_1a10a9464fc764a3362fa624aa6b619481" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+        <definition>Recipe * queue_dequeue</definition>
+        <argsstring>(Queue *queue)</argsstring>
+        <name>queue_dequeue</name>
+        <param>
+          <type><ref refid="struct_queue" kindref="compound">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>Removes and returns a recipe from the front of the queue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the removed recipe, or NULL if queue is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/queue.cpp" line="41" column="8" bodyfile="src/recipe/src/queue.cpp" bodystart="41" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="queue_8cpp_1a234b00afeb03cae5310caf13b752bd90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+        <definition>Recipe * queue_peek</definition>
+        <argsstring>(Queue *queue)</argsstring>
+        <name>queue_peek</name>
+        <param>
+          <type><ref refid="struct_queue" kindref="compound">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>Returns the recipe at the front without removing it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the front recipe, or NULL if queue is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/queue.cpp" line="54" column="8" bodyfile="src/recipe/src/queue.cpp" bodystart="54" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="queue_8cpp_1a9ac9b90b97da28b8c1a98a5c4d784110" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int queue_is_empty</definition>
+        <argsstring>(Queue *queue)</argsstring>
+        <name>queue_is_empty</name>
+        <param>
+          <type><ref refid="struct_queue" kindref="compound">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the queue is empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if empty, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/queue.cpp" line="62" column="5" bodyfile="src/recipe/src/queue.cpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="queue_8cpp_1ae48395a15f19bcae25ef49d99c5d551d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int queue_is_full</definition>
+        <argsstring>(Queue *queue)</argsstring>
+        <name>queue_is_full</name>
+        <param>
+          <type><ref refid="struct_queue" kindref="compound">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the queue is full. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if full, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/queue.cpp" line="67" column="5" bodyfile="src/recipe/src/queue.cpp" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="queue_8cpp_1a325b018dee6bbc016b24698c8bcb040d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void queue_display</definition>
+        <argsstring>(Queue *queue)</argsstring>
+        <name>queue_display</name>
+        <param>
+          <type><ref refid="struct_queue" kindref="compound">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>Displays all recipes currently in the queue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/queue.cpp" line="72" column="6" bodyfile="src/recipe/src/queue.cpp" bodystart="72" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="queue_8cpp_1a85d100eab6e9830eb90e28fee9eec559" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int queue_size</definition>
+        <argsstring>(Queue *queue)</argsstring>
+        <name>queue_size</name>
+        <param>
+          <type><ref refid="struct_queue" kindref="compound">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>Returns the number of elements in the queue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of elements </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/queue.cpp" line="103" column="5" bodyfile="src/recipe/src/queue.cpp" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="queue_8cpp_1ad0429aac8d8b9595953b6e25e97797ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void queue_destroy</definition>
+        <argsstring>(Queue *queue)</argsstring>
+        <name>queue_destroy</name>
+        <param>
+          <type><ref refid="struct_queue" kindref="compound">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>Frees all memory associated with the queue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/queue.cpp" line="108" column="6" bodyfile="src/recipe/src/queue.cpp" bodystart="108" bodyend="112"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="queue_8h" kindref="compound">queue.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Queue<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Creates<sp/>and<sp/>initializes<sp/>an<sp/>empty<sp/>queue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="struct_queue" kindref="compound">Queue</ref>*<sp/><ref refid="queue_8cpp_1a9771bdb407a7026eb675edbac5809d31" kindref="member">queue_create</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_queue" kindref="compound">Queue</ref>*<sp/>queue<sp/>=<sp/>(<ref refid="struct_queue" kindref="compound">Queue</ref>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_queue" kindref="compound">Queue</ref>));</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(queue<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;ERROR:<sp/>Failed<sp/>to<sp/>create<sp/>queue!\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="struct_queue_1aa14801d5c5fea47f3d08483d103e0b57" kindref="member">front</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>element<sp/>starts<sp/>at<sp/>index<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="struct_queue_1a8303807ce298d63d958f7e5765034d70" kindref="member">rear</ref><sp/>=<sp/>-1;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>elements<sp/>yet<sp/>(-1<sp/>=<sp/>empty)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="struct_queue_1a0f56b04440d87d231b06f3e287c8eb6a" kindref="member">count</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initially<sp/>empty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>queue;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Adds<sp/>a<sp/>recipe<sp/>to<sp/>the<sp/>queue<sp/>(enqueue)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="queue_8cpp_1a00a32b0e06376d1f4d1afa609b7bbd10" kindref="member">queue_enqueue</ref>(<ref refid="struct_queue" kindref="compound">Queue</ref>*<sp/>queue,<sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/>recipe)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(queue<sp/>==<sp/>NULL<sp/>||<sp/>recipe<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="queue_8cpp_1ae48395a15f19bcae25ef49d99c5d551d" kindref="member">queue_is_full</ref>(queue))<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;WARNING:<sp/>Weekly<sp/>plan<sp/>is<sp/>full<sp/>(7<sp/>days)!\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Circular<sp/>logic<sp/>–<sp/>increment<sp/>rear<sp/>(wrap<sp/>around<sp/>after<sp/>reaching<sp/>7)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="struct_queue_1a8303807ce298d63d958f7e5765034d70" kindref="member">rear</ref><sp/>=<sp/>(queue-&gt;<ref refid="struct_queue_1a8303807ce298d63d958f7e5765034d70" kindref="member">rear</ref><sp/>+<sp/>1)<sp/>%<sp/><ref refid="queue_8h_1aaeb376445ddec378a36a6538f9e14090" kindref="member">WEEKLY_PLAN_SIZE</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="struct_queue_1ac938597c53e24ca6f36e0ec9bce41334" kindref="member">recipes</ref>[queue-&gt;<ref refid="struct_queue_1a8303807ce298d63d958f7e5765034d70" kindref="member">rear</ref>]<sp/>=<sp/>recipe;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="struct_queue_1a0f56b04440d87d231b06f3e287c8eb6a" kindref="member">count</ref>++;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Removes<sp/>a<sp/>recipe<sp/>from<sp/>the<sp/>queue<sp/>(dequeue)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/><ref refid="queue_8cpp_1a10a9464fc764a3362fa624aa6b619481" kindref="member">queue_dequeue</ref>(<ref refid="struct_queue" kindref="compound">Queue</ref>*<sp/>queue)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(queue<sp/>==<sp/>NULL<sp/>||<sp/><ref refid="queue_8cpp_1a9ac9b90b97da28b8c1a98a5c4d784110" kindref="member">queue_is_empty</ref>(queue))<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/>recipe<sp/>=<sp/>queue-&gt;<ref refid="struct_queue_1ac938597c53e24ca6f36e0ec9bce41334" kindref="member">recipes</ref>[queue-&gt;<ref refid="struct_queue_1aa14801d5c5fea47f3d08483d103e0b57" kindref="member">front</ref>];<sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>front<sp/>recipe</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="struct_queue_1aa14801d5c5fea47f3d08483d103e0b57" kindref="member">front</ref><sp/>=<sp/>(queue-&gt;<ref refid="struct_queue_1aa14801d5c5fea47f3d08483d103e0b57" kindref="member">front</ref><sp/>+<sp/>1)<sp/>%<sp/><ref refid="queue_8h_1aaeb376445ddec378a36a6538f9e14090" kindref="member">WEEKLY_PLAN_SIZE</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>Move<sp/>front<sp/>forward<sp/>(circular)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="struct_queue_1a0f56b04440d87d231b06f3e287c8eb6a" kindref="member">count</ref>--;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>recipe;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>the<sp/>recipe<sp/>at<sp/>the<sp/>front<sp/>without<sp/>removing<sp/>it<sp/>(peek)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/><ref refid="queue_8cpp_1a234b00afeb03cae5310caf13b752bd90" kindref="member">queue_peek</ref>(<ref refid="struct_queue" kindref="compound">Queue</ref>*<sp/>queue)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(queue<sp/>==<sp/>NULL<sp/>||<sp/><ref refid="queue_8cpp_1a9ac9b90b97da28b8c1a98a5c4d784110" kindref="member">queue_is_empty</ref>(queue))<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>queue-&gt;<ref refid="struct_queue_1ac938597c53e24ca6f36e0ec9bce41334" kindref="member">recipes</ref>[queue-&gt;<ref refid="struct_queue_1aa14801d5c5fea47f3d08483d103e0b57" kindref="member">front</ref>];</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Checks<sp/>if<sp/>the<sp/>queue<sp/>is<sp/>empty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="queue_8cpp_1a9ac9b90b97da28b8c1a98a5c4d784110" kindref="member">queue_is_empty</ref>(<ref refid="struct_queue" kindref="compound">Queue</ref>*<sp/>queue)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(queue<sp/>==<sp/>NULL<sp/>||<sp/>queue-&gt;<ref refid="struct_queue_1a0f56b04440d87d231b06f3e287c8eb6a" kindref="member">count</ref><sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Checks<sp/>if<sp/>the<sp/>queue<sp/>is<sp/>full</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="queue_8cpp_1ae48395a15f19bcae25ef49d99c5d551d" kindref="member">queue_is_full</ref>(<ref refid="struct_queue" kindref="compound">Queue</ref>*<sp/>queue)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(queue<sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>queue-&gt;<ref refid="struct_queue_1a0f56b04440d87d231b06f3e287c8eb6a" kindref="member">count</ref><sp/>==<sp/><ref refid="queue_8h_1aaeb376445ddec378a36a6538f9e14090" kindref="member">WEEKLY_PLAN_SIZE</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Displays<sp/>the<sp/>7-day<sp/>weekly<sp/>meal<sp/>plan</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="queue_8cpp_1a325b018dee6bbc016b24698c8bcb040d" kindref="member">queue_display</ref>(<ref refid="struct_queue" kindref="compound">Queue</ref>*<sp/>queue)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(queue<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;ERROR:<sp/>Invalid<sp/>queue!\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="queue_8cpp_1a9ac9b90b97da28b8c1a98a5c4d784110" kindref="member">queue_is_empty</ref>(queue))<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nWeekly<sp/>meal<sp/>plan<sp/>is<sp/>empty.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n===<sp/>7-DAY<sp/>WEEKLY<sp/>MEAL<sp/>PLAN<sp/>===\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>of<sp/>day<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>days[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Monday&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Tuesday&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Wednesday&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Thursday&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Friday&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Saturday&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Sunday&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Display<sp/>each<sp/>recipe<sp/>in<sp/>the<sp/>queue<sp/>in<sp/>order</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>queue-&gt;<ref refid="struct_queue_1aa14801d5c5fea47f3d08483d103e0b57" kindref="member">front</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>queue-&gt;<ref refid="struct_queue_1a0f56b04440d87d231b06f3e287c8eb6a" kindref="member">count</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n%s:\n&quot;</highlight><highlight class="normal">,<sp/>days[i]);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>-&gt;<sp/>%s<sp/>(%d<sp/>kcal)\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="struct_queue_1ac938597c53e24ca6f36e0ec9bce41334" kindref="member">recipes</ref>[index]-&gt;<ref refid="struct_recipe_1a0feced1fd0c5dc7fca786dcf4455fd1c" kindref="member">name</ref>,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="struct_queue_1ac938597c53e24ca6f36e0ec9bce41334" kindref="member">recipes</ref>[index]-&gt;<ref refid="struct_recipe_1a002bab56be7d0e7f3d959ed27648eaa0" kindref="member">calories</ref>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(index<sp/>+<sp/>1)<sp/>%<sp/><ref refid="queue_8h_1aaeb376445ddec378a36a6538f9e14090" kindref="member">WEEKLY_PLAN_SIZE</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>the<sp/>current<sp/>number<sp/>of<sp/>recipes<sp/>in<sp/>the<sp/>queue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="queue_8cpp_1a85d100eab6e9830eb90e28fee9eec559" kindref="member">queue_size</ref>(<ref refid="struct_queue" kindref="compound">Queue</ref>*<sp/>queue)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(queue<sp/>!=<sp/>NULL)<sp/>?<sp/>queue-&gt;<ref refid="struct_queue_1a0f56b04440d87d231b06f3e287c8eb6a" kindref="member">count</ref><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Frees<sp/>all<sp/>memory<sp/>used<sp/>by<sp/>the<sp/>queue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="queue_8cpp_1ad0429aac8d8b9595953b6e25e97797ce" kindref="member">queue_destroy</ref>(<ref refid="struct_queue" kindref="compound">Queue</ref>*<sp/>queue)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(queue<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(queue);<sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>free<sp/>the<sp/>queue<sp/>structure<sp/>(recipes<sp/>are<sp/>managed<sp/>elsewhere)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/recipe/src/queue.cpp"/>
+  </compounddef>
+</doxygen>

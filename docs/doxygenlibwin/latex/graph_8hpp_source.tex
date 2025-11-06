@@ -1,0 +1,91 @@
+\doxysection{graph.\+hpp}
+\hypertarget{graph_8hpp_source}{}\label{graph_8hpp_source}\index{src/recipe/header/graph.hpp@{src/recipe/header/graph.hpp}}
+\mbox{\hyperlink{graph_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ GRAPH\_HPP}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ GRAPH\_HPP}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{recipe_8hpp}{recipe.hpp}}"{}}\ \ \textcolor{comment}{//\ Include\ Recipe\ class\ definition}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{graph_8h_acd7f50a6afbef2093ca1f57eb3768f01}{MAX\_GRAPH\_VERTICES}}\ =\ 100;\ \ \textcolor{comment}{//\ Maximum\ number\ of\ vertices\ allowed\ in\ the\ graph}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ ============================================================}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ Forward\ Declarations}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ ============================================================}}
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_graph_edge}{GraphEdge}};}
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_graph_vertex}{GraphVertex}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ ============================================================}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ \ Class:\ GraphEdge}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ ============================================================}}
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_graph_edge}{GraphEdge}}\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_graph_edge_a9e5446f687da912ce7016923b5bdd045}{vertex\_id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_graph_edge_aa6e55cc398840ade9b2588ce3664651d}{edge\_label}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ std::shared\_ptr<GraphEdge>\ \mbox{\hyperlink{struct_graph_edge_ab800f80484335c8fc96a5f093af6b6dc}{next}};\ \ \ \ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{struct_graph_edge_a01ff1bab935fe7452b561defd17fd5b1}{GraphEdge}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ std::string\&\ label)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_graph_edge_a9e5446f687da912ce7016923b5bdd045}{vertex\_id}}(id),\ \mbox{\hyperlink{struct_graph_edge_aa6e55cc398840ade9b2588ce3664651d}{edge\_label}}(label),\ \mbox{\hyperlink{struct_graph_edge_ab800f80484335c8fc96a5f093af6b6dc}{next}}(nullptr)\ \{\}}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ ============================================================}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ \ Class:\ GraphVertex}}
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ ============================================================}}
+\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_graph_vertex}{GraphVertex}}\ \{}
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_graph_vertex_a7c3343f6f4297cddb96216cc41747bab}{recipe\_id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ std::shared\_ptr<GraphEdge>\ \mbox{\hyperlink{struct_graph_vertex_af0f4f598619135666912aaeffeb5383f}{edges}};\ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_graph_vertex_afef08c8d5ad632ed89c22e49c0a1ffb4}{visited}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{struct_graph_vertex_a36824e3dff00a9b2e77be09eb00bc6e8}{GraphVertex}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_graph_vertex_a7c3343f6f4297cddb96216cc41747bab}{recipe\_id}}(id),\ \mbox{\hyperlink{struct_graph_vertex_af0f4f598619135666912aaeffeb5383f}{edges}}(nullptr),\ \mbox{\hyperlink{struct_graph_vertex_afef08c8d5ad632ed89c22e49c0a1ffb4}{visited}}(false)\ \{\}}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ ============================================================}}
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ \ Class:\ Graph}}
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ ============================================================}}
+\DoxyCodeLine{00055\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_graph}{Graph}}\ \{}
+\DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00057\ \ \ \ \ std::array<std::shared\_ptr<GraphVertex>,\ \mbox{\hyperlink{graph_8cpp_aa83461ae9374f00837b575180d2cd5e2}{MAX\_GRAPH\_VERTICES}}>\ \mbox{\hyperlink{struct_graph_afac2bc7d92334c0692254392ca6464f4}{vertices}};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_graph_ab20e1f45cb2c2d3c26968eadd7290f4d}{vertex\_count}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ Helper\ for\ cycle\ detection\ (DFS)}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_graph_a64096724a9157efc362ff7bd2ff99bd8}{dfsCycleHelper}}(\textcolor{keywordtype}{int}\ vertex\_id,\ std::vector<int>\&\ visited,\ std::vector<int>\&\ rec\_stack)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{struct_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ ===\ Vertex\ Operations\ ===}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_graph_a0b3b4e427b55bf0b61be72467924d8a7}{addVertex}}(\textcolor{keywordtype}{int}\ recipe\_id);}
+\DoxyCodeLine{00068\ \ \ \ \ std::shared\_ptr<GraphVertex>\ \mbox{\hyperlink{struct_graph_a971d05259d030a81a36b809f14db04a7}{findVertex}}(\textcolor{keywordtype}{int}\ recipe\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ ===\ Edge\ Operations\ ===}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_graph_ad6a883b5623c30f2b9a011932fbb9f22}{addEdge}}(\textcolor{keywordtype}{int}\ from\_recipe\_id,\ \textcolor{keywordtype}{int}\ to\_recipe\_id,\ \textcolor{keyword}{const}\ std::string\&\ label);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//\ ===\ Display\ Operations\ ===}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_graph_a52e448ac213c053062bfed6405ede84b}{displayDependencies}}(\textcolor{keywordtype}{int}\ recipe\_id,\ \textcolor{keywordtype}{int}\ depth\ =\ 0);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//\ ===\ Utility\ ===}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_graph_a00c89f9300992b2ac69104bb7ddcc868}{resetVisited}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_graph_a5668aece8de3c0021417b8d00a1796ac}{hasCycle}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//\ ===\ Getters\ ===}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_graph_ac6dcb77084447618b65514ce25bd7d2a}{getVertexCount}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_graph_ab20e1f45cb2c2d3c26968eadd7290f4d}{vertex\_count}};\ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//\ ===\ Destructor\ ===}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_graph_ac6192a41101102ca8aa6acca607c84f3}{clear}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{struct_graph_a902c5b3eacb66d60752525ab23297a95}{\string~Graph}}();}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GRAPH\_HPP}}
+
+\end{DoxyCode}

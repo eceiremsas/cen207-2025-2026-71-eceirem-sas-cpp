@@ -1,0 +1,777 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="graph_8h" kind="file" language="C++">
+    <compoundname>graph.h</compoundname>
+    <includes refid="recipe_8h" local="yes">recipe.h</includes>
+    <includedby refid="menu_8h" local="yes">include/menu.h</includedby>
+    <includedby refid="graph_8c" local="yes">src/graph.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/graph.h</label>
+        <link refid="graph_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>recipe.h</label>
+        <link refid="recipe_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/graph.h</label>
+        <link refid="graph_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/menu.h</label>
+        <link refid="menu_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>src/graph.c</label>
+        <link refid="graph_8c"/>
+      </node>
+      <node id="3">
+        <label>src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="4">
+        <label>src/menu.c</label>
+        <link refid="menu_8c"/>
+      </node>
+      <node id="5">
+        <label>src/recipe/src/main.cpp</label>
+        <link refid="src_2main_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/recipe/src/menu.cpp</label>
+        <link refid="src_2menu_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/recipeapp/src/main.cpp</label>
+        <link refid="pp_2src_2main_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/recipeapp/src/menu.cpp</label>
+        <link refid="pp_2src_2menu_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_graph_edge" prot="public">GraphEdge</innerclass>
+    <innerclass refid="struct_graph_vertex" prot="public">GraphVertex</innerclass>
+    <innerclass refid="struct_graph" prot="public">Graph</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="graph_8h_1acd7f50a6afbef2093ca1f57eb3768f01" prot="public" static="no">
+        <name>MAX_GRAPH_VERTICES</name>
+        <initializer>100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="2" column="9" bodyfile="include/graph.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1a75f1d9ff4d7a931fe499453e94dd64e9" prot="public" static="no">
+        <name>GRAPH_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="6" column="9" bodyfile="include/graph.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="graph_8h_1aa373a3f8949b92436178c5c9e816214b" prot="public" static="no">
+        <type>struct GraphEdge</type>
+        <definition>typedef struct GraphEdge GraphEdge</definition>
+        <argsstring></argsstring>
+        <name>GraphEdge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="17" column="11"/>
+      </memberdef>
+      <memberdef kind="typedef" id="graph_8h_1ae459975c186d04dc20f3b996e4f52f84" prot="public" static="no">
+        <type>struct GraphVertex</type>
+        <definition>typedef struct GraphVertex GraphVertex</definition>
+        <argsstring></argsstring>
+        <name>GraphVertex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="24" column="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="graph_8h_1afe0e1755a339d64c48012898e9c477ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_graph" kindref="compound">Graph</ref> *</type>
+        <definition>Graph * graph_create</definition>
+        <argsstring>(void)</argsstring>
+        <name>graph_create</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Creates and initializes a new <ref refid="struct_graph" kindref="compound">Graph</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the created graph, or NULL on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="35" column="7" bodyfile="src/graph.c" bodystart="52" bodyend="64" declfile="include/graph.h" declline="35" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1afbf1116299f62bb1b472b80a1f695b5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int graph_add_vertex</definition>
+        <argsstring>(Graph *graph, int recipe_id)</argsstring>
+        <name>graph_add_vertex</name>
+        <param>
+          <type><ref refid="struct_graph" kindref="compound">Graph</ref> *</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>recipe_id</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new vertex (recipe) to the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the graph </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipe_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> ID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="38" column="5" bodyfile="src/graph.c" bodystart="92" bodyend="118" declfile="include/graph.h" declline="38" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a3a2134ed26598a36885b537d6190e72d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int graph_add_edge</definition>
+        <argsstring>(Graph *graph, int from_recipe_id, int to_recipe_id, const char *label)</argsstring>
+        <name>graph_add_edge</name>
+        <param>
+          <type><ref refid="struct_graph" kindref="compound">Graph</ref> *</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>from_recipe_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>to_recipe_id</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+<para>Adds a directed edge between two recipes with a given label. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the graph </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>from_recipe_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source recipe ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to_recipe_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target recipe ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Edge label </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="41" column="5" bodyfile="src/graph.c" bodystart="128" bodyend="155" declfile="include/graph.h" declline="41" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a9e6a899727f15619ddc47d1d58bcd314" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_graph_vertex" kindref="compound">GraphVertex</ref> *</type>
+        <definition>GraphVertex * graph_find_vertex</definition>
+        <argsstring>(Graph *graph, int recipe_id)</argsstring>
+        <name>graph_find_vertex</name>
+        <param>
+          <type><ref refid="struct_graph" kindref="compound">Graph</ref> *</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>recipe_id</declname>
+        </param>
+        <briefdescription>
+<para>Finds and returns a vertex pointer by its recipe ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the graph </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipe_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> ID to find </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the vertex, or NULL if not found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="44" column="13" bodyfile="src/graph.c" bodystart="72" bodyend="84" declfile="include/graph.h" declline="44" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1ae080e05395403df88f3bc1dec98f2bad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graph_display_dependencies</definition>
+        <argsstring>(Graph *graph, int recipe_id, int depth)</argsstring>
+        <name>graph_display_dependencies</name>
+        <param>
+          <type><ref refid="struct_graph" kindref="compound">Graph</ref> *</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>recipe_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+<para>Recursively displays all dependencies of a recipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the graph </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipe_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> ID to display </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current depth level </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="47" column="6" bodyfile="src/graph.c" bodystart="235" bodyend="267" declfile="include/graph.h" declline="47" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a0d1e7ca98e68de8128951602b4d8336d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int graph_has_cycle</definition>
+        <argsstring>(Graph *graph)</argsstring>
+        <name>graph_has_cycle</name>
+        <param>
+          <type><ref refid="struct_graph" kindref="compound">Graph</ref> *</type>
+          <declname>graph</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the graph contains any cycle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the graph </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if cycle found, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="50" column="5" bodyfile="src/graph.c" bodystart="210" bodyend="227" declfile="include/graph.h" declline="50" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a5c5c8f6414d86da1c1a46e351dd2ef0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int graph_dfs_cycle_helper</definition>
+        <argsstring>(Graph *graph, int vertex_id, int visited[], int rec_stack[])</argsstring>
+        <name>graph_dfs_cycle_helper</name>
+        <param>
+          <type><ref refid="struct_graph" kindref="compound">Graph</ref> *</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vertex_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>visited</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rec_stack</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>Helper function for DFS-based cycle detection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the graph </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vertex_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current vertex ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>visited</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Visited array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rec_stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Recursion stack array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if cycle found, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="53" column="5" bodyfile="src/graph.c" bodystart="181" bodyend="203" declfile="include/graph.h" declline="53" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1ac42104632f5a79617fc14602b8b14fc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graph_reset_visited</definition>
+        <argsstring>(Graph *graph)</argsstring>
+        <name>graph_reset_visited</name>
+        <param>
+          <type><ref refid="struct_graph" kindref="compound">Graph</ref> *</type>
+          <declname>graph</declname>
+        </param>
+        <briefdescription>
+<para>Resets the &apos;visited&apos; flag for all vertices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the graph </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="56" column="6" bodyfile="src/graph.c" bodystart="161" bodyend="171" declfile="include/graph.h" declline="56" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a0587b1cdbfee591e41793bef7f8e0c87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graph_destroy</definition>
+        <argsstring>(Graph *graph)</argsstring>
+        <name>graph_destroy</name>
+        <param>
+          <type><ref refid="struct_graph" kindref="compound">Graph</ref> *</type>
+          <declname>graph</declname>
+        </param>
+        <briefdescription>
+<para>Frees all allocated memory associated with the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the graph </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="59" column="6" bodyfile="src/graph.c" bodystart="354" bodyend="372" declfile="include/graph.h" declline="59" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1ad0da44ec0a7d8e477051a8a24f11f4bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int graph_save_binary</definition>
+        <argsstring>(const Graph *graph, const char *filename)</argsstring>
+        <name>graph_save_binary</name>
+        <param>
+          <type>const <ref refid="struct_graph" kindref="compound">Graph</ref> *</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Saves the graph to a binary file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the graph </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the binary file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="64" column="5" bodyfile="src/graph.c" bodystart="380" bodyend="432" declfile="include/graph.h" declline="64" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a1979ababd3cdf262c31941cdb0f16201" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_graph" kindref="compound">Graph</ref> *</type>
+        <definition>Graph * graph_load_binary</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>graph_load_binary</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Loads a graph from a binary file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the binary file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the loaded graph, or NULL on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="67" column="7" bodyfile="src/graph.c" bodystart="439" bodyend="490" declfile="include/graph.h" declline="67" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1ac81a6f68744b2c0037b65bc196e581b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graph_bfs</definition>
+        <argsstring>(Graph *graph, int start_vertex_id, void(*visit)(int vertex_id))</argsstring>
+        <name>graph_bfs</name>
+        <param>
+          <type><ref refid="struct_graph" kindref="compound">Graph</ref> *</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_vertex_id</declname>
+        </param>
+        <param>
+          <type>void(*)(int vertex_id)</type>
+          <declname>visit</declname>
+        </param>
+        <briefdescription>
+<para>Performs Breadth-First Search (BFS) traversal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the graph </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_vertex_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting vertex ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>visit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function pointer to call for each visited vertex </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="72" column="6" bodyfile="src/graph.c" bodystart="275" bodyend="314" declfile="include/graph.h" declline="72" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a119029bd09b2a9a61796553b208a0d07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graph_dfs</definition>
+        <argsstring>(Graph *graph, int start_vertex_id, void(*visit)(int vertex_id))</argsstring>
+        <name>graph_dfs</name>
+        <param>
+          <type><ref refid="struct_graph" kindref="compound">Graph</ref> *</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_vertex_id</declname>
+        </param>
+        <param>
+          <type>void(*)(int vertex_id)</type>
+          <declname>visit</declname>
+        </param>
+        <briefdescription>
+<para>Performs Depth-First Search (DFS) traversal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the graph </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_vertex_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting vertex ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>visit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function pointer to call for each visited vertex </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="75" column="6" bodyfile="src/graph.c" bodystart="341" bodyend="348" declfile="include/graph.h" declline="75" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MAX_GRAPH_VERTICES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="graph_8h_1acd7f50a6afbef2093ca1f57eb3768f01" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_GRAPH_VERTICES<sp/>100<sp/><sp/></highlight><highlight class="comment">//<sp/>Maximum<sp/>number<sp/>of<sp/>vertices<sp/>allowed<sp/>in<sp/>the<sp/>graph</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GRAPH_H<sp/><sp/></highlight><highlight class="comment">//<sp/>Include<sp/>guard<sp/>start</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="graph_8h_1a75f1d9ff4d7a931fe499453e94dd64e9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GRAPH_H<sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>GRAPH_H<sp/>macro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="recipe_8h" kindref="compound">recipe.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>the<sp/>Recipe<sp/>data<sp/>structure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Structure<sp/>Definitions<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Represents<sp/>an<sp/>edge<sp/>in<sp/>the<sp/>graph<sp/>(e.g.,<sp/>&quot;dough&quot;,<sp/>&quot;sauce&quot;<sp/>connection<sp/>between<sp/>recipes)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="struct_graph_edge" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_graph_edge_1a01ff1bab935fe7452b561defd17fd5b1" kindref="member">GraphEdge</ref><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="struct_graph_edge_1a9e5446f687da912ce7016923b5bdd045" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_graph_edge_1a9e5446f687da912ce7016923b5bdd045" kindref="member">vertex_id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Target<sp/>vertex<sp/>(recipe)<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="struct_graph_edge_1aa6e55cc398840ade9b2588ce3664651d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_graph_edge_1aa6e55cc398840ade9b2588ce3664651d" kindref="member">edge_label</ref>[50];<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Label<sp/>of<sp/>the<sp/>edge<sp/>(e.g.,<sp/>&quot;dough&quot;,<sp/>&quot;sauce&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="struct_graph_edge_1ab800f80484335c8fc96a5f093af6b6dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_graph_edge_1a01ff1bab935fe7452b561defd17fd5b1" kindref="member">GraphEdge</ref>*<sp/><ref refid="struct_graph_edge_1ab800f80484335c8fc96a5f093af6b6dc" kindref="member">next</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>next<sp/>outgoing<sp/>edge<sp/>from<sp/>the<sp/>same<sp/>vertex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="graph_8h_1aa373a3f8949b92436178c5c9e816214b" refkind="member"><highlight class="normal">}<sp/><ref refid="struct_graph_edge" kindref="compound">GraphEdge</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Represents<sp/>a<sp/>vertex<sp/>in<sp/>the<sp/>graph</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="struct_graph_vertex" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_graph_vertex_1a36824e3dff00a9b2e77be09eb00bc6e8" kindref="member">GraphVertex</ref><sp/>{</highlight></codeline>
+<codeline lineno="21" refid="struct_graph_vertex_1a7c3343f6f4297cddb96216cc41747bab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_graph_vertex_1a7c3343f6f4297cddb96216cc41747bab" kindref="member">recipe_id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>recipe<sp/>ID<sp/>represented<sp/>by<sp/>this<sp/>vertex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="struct_graph_vertex_1af0f4f598619135666912aaeffeb5383f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_graph_edge" kindref="compound">GraphEdge</ref>*<sp/><ref refid="struct_graph_vertex_1af0f4f598619135666912aaeffeb5383f" kindref="member">edges</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>List<sp/>of<sp/>outgoing<sp/>edges<sp/>from<sp/>this<sp/>vertex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="struct_graph_vertex_1afef08c8d5ad632ed89c22e49c0a1ffb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_graph_vertex_1afef08c8d5ad632ed89c22e49c0a1ffb4" kindref="member">visited</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Visited<sp/>flag<sp/>for<sp/>DFS/BFS<sp/>(0:<sp/>not<sp/>visited,<sp/>1:<sp/>visited)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="graph_8h_1ae459975c186d04dc20f3b996e4f52f84" refkind="member"><highlight class="normal">}<sp/><ref refid="struct_graph_vertex" kindref="compound">GraphVertex</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Represents<sp/>the<sp/>overall<sp/>graph<sp/>structure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="struct_graph" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="struct_graph_1afac2bc7d92334c0692254392ca6464f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_graph_vertex" kindref="compound">GraphVertex</ref>*<sp/><ref refid="struct_graph_1afac2bc7d92334c0692254392ca6464f4" kindref="member">vertices</ref>[<ref refid="graph_8cpp_1aa83461ae9374f00837b575180d2cd5e2" kindref="member">MAX_GRAPH_VERTICES</ref>];<sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>of<sp/>vertex<sp/>pointers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="struct_graph_1ab20e1f45cb2c2d3c26968eadd7290f4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_graph_1ab20e1f45cb2c2d3c26968eadd7290f4d" kindref="member">vertex_count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Current<sp/>number<sp/>of<sp/>vertices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/><ref refid="struct_graph" kindref="compound">Graph</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Function<sp/>Declarations<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Creates<sp/>and<sp/>initializes<sp/>a<sp/>new<sp/>Graph<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="struct_graph" kindref="compound">Graph</ref>*<sp/><ref refid="graph_8h_1afe0e1755a339d64c48012898e9c477ac" kindref="member">graph_create</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Adds<sp/>a<sp/>new<sp/>vertex<sp/>(recipe)<sp/>to<sp/>the<sp/>graph</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1afbf1116299f62bb1b472b80a1f695b5b" kindref="member">graph_add_vertex</ref>(<ref refid="struct_graph" kindref="compound">Graph</ref>*<sp/>graph,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recipe_id);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Adds<sp/>a<sp/>directed<sp/>edge<sp/>between<sp/>two<sp/>recipes<sp/>with<sp/>a<sp/>given<sp/>label</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a3a2134ed26598a36885b537d6190e72d" kindref="member">graph_add_edge</ref>(<ref refid="struct_graph" kindref="compound">Graph</ref>*<sp/>graph,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>from_recipe_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>to_recipe_id,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>label);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Finds<sp/>and<sp/>returns<sp/>a<sp/>vertex<sp/>pointer<sp/>by<sp/>its<sp/>recipe<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="struct_graph_vertex" kindref="compound">GraphVertex</ref>*<sp/><ref refid="graph_8h_1a9e6a899727f15619ddc47d1d58bcd314" kindref="member">graph_find_vertex</ref>(<ref refid="struct_graph" kindref="compound">Graph</ref>*<sp/>graph,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recipe_id);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Recursively<sp/>displays<sp/>all<sp/>dependencies<sp/>of<sp/>a<sp/>recipe<sp/>(for<sp/>visualization)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1ae080e05395403df88f3bc1dec98f2bad" kindref="member">graph_display_dependencies</ref>(<ref refid="struct_graph" kindref="compound">Graph</ref>*<sp/>graph,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recipe_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>depth);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Checks<sp/>if<sp/>the<sp/>graph<sp/>contains<sp/>any<sp/>cycle<sp/>(e.g.,<sp/>circular<sp/>dependency<sp/>between<sp/>recipes)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a0d1e7ca98e68de8128951602b4d8336d" kindref="member">graph_has_cycle</ref>(<ref refid="struct_graph" kindref="compound">Graph</ref>*<sp/>graph);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Helper<sp/>function<sp/>for<sp/>DFS-based<sp/>cycle<sp/>detection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a5c5c8f6414d86da1c1a46e351dd2ef0d" kindref="member">graph_dfs_cycle_helper</ref>(<ref refid="struct_graph" kindref="compound">Graph</ref>*<sp/>graph,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vertex_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>visited[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rec_stack[]);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Resets<sp/>the<sp/>&apos;visited&apos;<sp/>flag<sp/>for<sp/>all<sp/>vertices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1ac42104632f5a79617fc14602b8b14fc1" kindref="member">graph_reset_visited</ref>(<ref refid="struct_graph" kindref="compound">Graph</ref>*<sp/>graph);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Frees<sp/>all<sp/>allocated<sp/>memory<sp/>associated<sp/>with<sp/>the<sp/>graph</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a0587b1cdbfee591e41793bef7f8e0c87" kindref="member">graph_destroy</ref>(<ref refid="struct_graph" kindref="compound">Graph</ref>*<sp/>graph);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Binary<sp/>File<sp/>Operations<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Saves<sp/>the<sp/>graph<sp/>to<sp/>a<sp/>binary<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1ad0da44ec0a7d8e477051a8a24f11f4bc" kindref="member">graph_save_binary</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_graph" kindref="compound">Graph</ref>*<sp/>graph,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Loads<sp/>a<sp/>graph<sp/>from<sp/>a<sp/>binary<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><ref refid="struct_graph" kindref="compound">Graph</ref>*<sp/><ref refid="graph_8h_1a1979ababd3cdf262c31941cdb0f16201" kindref="member">graph_load_binary</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Graph<sp/>Traversal<sp/>Algorithms<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Performs<sp/>Breadth-First<sp/>Search<sp/>(BFS)<sp/>traversal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1ac81a6f68744b2c0037b65bc196e581b7" kindref="member">graph_bfs</ref>(<ref refid="struct_graph" kindref="compound">Graph</ref>*<sp/>graph,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_vertex_id,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*visit)(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vertex_id));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Performs<sp/>Depth-First<sp/>Search<sp/>(DFS)<sp/>traversal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a119029bd09b2a9a61796553b208a0d07" kindref="member">graph_dfs</ref>(<ref refid="struct_graph" kindref="compound">Graph</ref>*<sp/>graph,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_vertex_id,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*visit)(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vertex_id));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>GRAPH_H<sp/>-<sp/>Include<sp/>guard<sp/>end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/graph.h"/>
+  </compounddef>
+</doxygen>

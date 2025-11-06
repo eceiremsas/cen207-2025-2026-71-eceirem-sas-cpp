@@ -1,0 +1,65 @@
+\doxysection{sparse\+\_\+matrix.\+hpp}
+\hypertarget{sparse__matrix_8hpp_source}{}\label{sparse__matrix_8hpp_source}\index{src/recipe/header/sparse\_matrix.hpp@{src/recipe/header/sparse\_matrix.hpp}}
+\mbox{\hyperlink{sparse__matrix_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ SPARSE\_MATRIX\_HPP}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ SPARSE\_MATRIX\_HPP}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{recipe_8hpp}{recipe.hpp}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sparse__matrix_8h_acf2326e5c53fdea18adbac33dc88fc20}{MAX\_INGREDIENT\_NAME}}\ =\ 50;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_matrix_entry}{MatrixEntry}}\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_matrix_entry_afe064054e73e474a808ad3015883b9c3}{row}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_matrix_entry_ae084b6bb5422830be3ed2797ebbb617c}{col}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_matrix_entry_ad402a80ab39df62021e00a1890c6baf9}{value}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_matrix_entry_ad8b53a80918f8cb3ab84cf0ea950dd5c}{ingredient}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ std::shared\_ptr<MatrixEntry>\ \mbox{\hyperlink{struct_matrix_entry_ad84f7c9e34131569a4d31c09e2ce9f89}{next}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{struct_matrix_entry_aa9b7a9307fdce655f45ed7a90ab8ac7a}{MatrixEntry}}(\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ c,\ \textcolor{keywordtype}{int}\ val,\ std::string\ ingr)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_matrix_entry_afe064054e73e474a808ad3015883b9c3}{row}}(r),\ \mbox{\hyperlink{struct_matrix_entry_ae084b6bb5422830be3ed2797ebbb617c}{col}}(c),\ \mbox{\hyperlink{struct_matrix_entry_ad402a80ab39df62021e00a1890c6baf9}{value}}(val),\ \mbox{\hyperlink{struct_matrix_entry_ad8b53a80918f8cb3ab84cf0ea950dd5c}{ingredient}}(std::move(ingr)),\ \mbox{\hyperlink{struct_matrix_entry_ad84f7c9e34131569a4d31c09e2ce9f89}{next}}(nullptr)\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_sparse_matrix}{SparseMatrix}}\ \{}
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ \ \ std::shared\_ptr<MatrixEntry>\ \mbox{\hyperlink{struct_sparse_matrix_a5079494b50c195eba794c73b6133e92a}{head}};\ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_sparse_matrix_a8b3f58407333a0c35e95ddae9bac9032}{rowCount}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_sparse_matrix_acebc561f9d8588fc524b560e1faa58bb}{colCount}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_sparse_matrix_a30e236c39002837c6c028b4f609afcb0}{entryCount}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ ===\ Constructors\ \&\ Destructor\ ===}}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{struct_sparse_matrix_ac010252479e500b34324cb10c9dd4e98}{SparseMatrix}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{struct_sparse_matrix_a6f3f21c6e0343c80594808b470c798fe}{\string~SparseMatrix}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//\ ===\ Core\ Operations\ ===}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_sparse_matrix_a9cf6a5df026171fb44e35b3808a8a45e}{addEntry}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col,\ \textcolor{keywordtype}{int}\ value,\ \textcolor{keyword}{const}\ std::string\&\ ingredient);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_sparse_matrix_a24047ad48b2611f81ad80eb5e049dace}{getValue}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ ===\ Search\ Operations\ ===}}
+\DoxyCodeLine{00062\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{struct_sparse_matrix_a2636bc1381e384fbdcc4c030db5d1510}{findRecipesByIngredient}}(\textcolor{keyword}{const}\ std::string\&\ ingredient)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{struct_sparse_matrix_a88cceb27a6188be6ca5819ba4e8cf744}{findIngredientsByRecipe}}(\textcolor{keywordtype}{int}\ recipeId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//\ ===\ Display\ \&\ Info\ ===}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_sparse_matrix_ab32de7f94523a9d2561aaa33b7ba205e}{display}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_sparse_matrix_a891aeef27fb5b625683b2b871fe683cc}{getEntryCount}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_sparse_matrix_a30e236c39002837c6c028b4f609afcb0}{entryCount}};\ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_sparse_matrix_ab40751e5749fb55d80bbaf03d4702252}{getRowCount}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_sparse_matrix_a8b3f58407333a0c35e95ddae9bac9032}{rowCount}};\ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_sparse_matrix_a781e02bb42e5ecda924cba746a41d581}{getColCount}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_sparse_matrix_acebc561f9d8588fc524b560e1faa58bb}{colCount}};\ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//\ ===\ Utility\ ===}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_sparse_matrix_a8624e99c23cc0d0d9f517909b85883f5}{clear}}();}
+\DoxyCodeLine{00073\ \};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SPARSE\_MATRIX\_HPP}}
+
+\end{DoxyCode}
