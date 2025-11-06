@@ -20,7 +20,7 @@ constexpr int MAX_INGREDIENT_NAME = 50;
 /**
  * @class MatrixEntry
  * @brief Represents a single non-zero entry in the sparse matrix.
- * @details Each entry includes a row (recipe ID), column (ingredient ID or index),
+ * @details Each entry includes a row (recipe ID), column (ingredient ID or index)
  *          a numeric value (association strength), an ingredient name, and a pointer
  *          to the next entry.
  */

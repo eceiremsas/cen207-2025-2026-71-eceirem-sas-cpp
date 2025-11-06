@@ -16,7 +16,7 @@
 
  /**
   * @class Recipe
-  * @brief Encapsulates all information related to a single recipe.
+  * @brief Encapsulates all information related to a single recipe..
   */
 class Recipe {
 private:
