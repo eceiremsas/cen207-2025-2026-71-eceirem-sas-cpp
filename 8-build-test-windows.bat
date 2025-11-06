@@ -31,25 +31,29 @@ cd ..
 
 echo Running Test Executable
 
-call .\publish_win\bin\utility_tests.exe
-call .\publish_win\bin\calculator_tests.exe
-call .\publish_win\bin\calculatorapp.exe
+if exist ".\publish_win\bin\recipe_tests.exe" (
+    call .\publish_win\bin\recipe_tests.exe
+) else (
+    echo Warning: recipe_tests.exe not found in publish_win\bin
+    echo Trying build_win\build\Debug\recipe_tests.exe
+    if exist ".\build_win\build\Debug\recipe_tests.exe" (
+        call .\build_win\build\Debug\recipe_tests.exe
+    )
+)
+
+if exist ".\publish_win\bin\recipeapp.exe" (
+    call .\publish_win\bin\recipeapp.exe
+)
 
 echo Files and folders copied successfully.
 
 echo Package Publish Windows Binaries
-tar -czvf release\windows-publish-binaries.tar.gz -C publish .
+tar -czvf release_win\windows-publish-binaries.tar.gz -C publish_win .
 
 echo Package Publish Windows Binaries
-call robocopy src\utility\header "build_win\build\Release" /E
-call robocopy src\calculator\header "build_win\build\Release" /E
-call robocopy src\calculatorapp\header "build_win\build\Release" /E
 tar -czvf release_win\windows-release-binaries.tar.gz -C build_win\build\Release .
 
 echo Package Publish Debug Windows Binaries
-call robocopy src\utility\header "build_win\build\Debug" /E
-call robocopy src\calculator\header "build_win\build\Debug" /E
-call robocopy src\calculatorapp\header "build_win\build\Debug" /E
 tar -czvf release_win\windows-debug-binaries.tar.gz -C build_win\build\Debug .
 
 echo ....................

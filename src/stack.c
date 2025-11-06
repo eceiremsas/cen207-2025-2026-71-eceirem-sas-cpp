@@ -1,88 +1,225 @@
 /**
  * @file stack.c
- * @brief Stack implementasyonu - Geri alma (undo) için LIFO yapısı
+ * @brief Stack implementation for undo operations
+ * @details LIFO structure used for storing recipe operations
  */
 
-#include "stack.h"  // Stack header
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "stack.h"
 
-// Boş stack oluştur
+/**
+ * @brief Creates and initializes an empty stack
+ * @return Pointer to the created stack, or NULL on failure
+ */
 Stack* stack_create(void) {
-    Stack* stack = (Stack*)malloc(sizeof(Stack));  // Bellek ayır
-    if (stack == NULL) {
-        printf("HATA: Stack olusturulamadi!\n");
+    Stack* stack = (Stack*)malloc(sizeof(Stack));
+    if (!stack) {
         return NULL;
     }
-    stack->top = -1;  // Stack boş - top = -1 (index -1 demek boş demek)
+
+    stack->top = -1;
+    for (int i = 0; i < UNDO_STACK_SIZE; i++) {
+        stack->operations[i].type = 0;
+        stack->operations[i].recipe = NULL;
+    }
+
     return stack;
 }
 
-// Stack'e işlem ekle (push)
+/**
+ * @brief Pushes a new operation onto the stack
+ * @param stack Pointer to the stack
+ * @param type Operation type
+ * @param recipe Pointer to the recipe
+ * @return 1 on success, 0 on failure
+ */
 int stack_push(Stack* stack, OperationType type, Recipe* recipe) {
-    if (stack == NULL) {  // Stack kontrolü
+    if (!stack || !recipe) {
         return 0;
     }
-    
-    if (stack_is_full(stack)) {  // Stack dolu mu?
-        printf("UYARI: Undo stack dolu - en eski islem siliniyor.\n");
-        // Circular davranış - en eski işlemi sil
+
+    if (stack_is_full(stack)) {
+        // Remove oldest operation (shift all operations)
         for (int i = 0; i < UNDO_STACK_SIZE - 1; i++) {
-            stack->operations[i] = stack->operations[i + 1];  // Kaydır
+            stack->operations[i] = stack->operations[i + 1];
         }
-        stack->top = UNDO_STACK_SIZE - 2;  // Top'u ayarla
+        stack->top = UNDO_STACK_SIZE - 2;
     }
-    
-    stack->top++;  // Top'u bir artır (yeni eleman için yer aç)
-    stack->operations[stack->top].type = type;  // İşlem tipini kaydet
-    stack->operations[stack->top].recipe = recipe_copy(recipe);  // Tarif kopyasını sakla
-    
+
+    stack->top++;
+    stack->operations[stack->top].type = (int)type;
+    stack->operations[stack->top].recipe = recipe_copy(recipe);
+
     return 1;
 }
 
-// Stack'ten işlem çıkar (pop)
+/**
+ * @brief Removes and returns the top operation from the stack
+ * @param stack Pointer to the stack
+ * @return Pointer to the top operation, or NULL if stack is empty
+ */
 StackOperation* stack_pop(Stack* stack) {
-    if (stack == NULL || stack_is_empty(stack)) {  // Boş kontrolü
+    if (!stack || stack_is_empty(stack)) {
         return NULL;
     }
-    
-    // En üstteki işlemi döndür ve top'u azalt
-    StackOperation* op = &stack->operations[stack->top];
-    stack->top--;  // Top'u azalt (bir eleman çıktı)
-    return op;
+
+    static StackOperation result;
+    result = stack->operations[stack->top];
+    stack->top--;
+
+    return &result;
 }
 
-// Stack'in tepesine bak (peek)
+/**
+ * @brief Returns the top operation without removing it
+ * @param stack Pointer to the stack
+ * @return Pointer to the top operation, or NULL if stack is empty
+ */
 StackOperation* stack_peek(Stack* stack) {
-    if (stack == NULL || stack_is_empty(stack)) {
+    if (!stack || stack_is_empty(stack)) {
         return NULL;
     }
-    return &stack->operations[stack->top];  // En üstteki işlemi döndür (ama çıkarma)
+
+    return &stack->operations[stack->top];
 }
 
-// Stack boş mu?
+/**
+ * @brief Checks if the stack is empty
+ * @param stack Pointer to the stack
+ * @return 1 if empty, 0 otherwise
+ */
 int stack_is_empty(Stack* stack) {
-    return (stack == NULL || stack->top == -1);  // Top -1 ise boş
+    return (stack && stack->top >= 0) ? 0 : 1;
 }
 
-// Stack dolu mu?
+/**
+ * @brief Checks if the stack is full
+ * @param stack Pointer to the stack
+ * @return 1 if full, 0 otherwise
+ */
 int stack_is_full(Stack* stack) {
-    return (stack != NULL && stack->top == UNDO_STACK_SIZE - 1);  // Top maksimuma ulaştı mı?
+    return (stack && stack->top >= UNDO_STACK_SIZE - 1) ? 1 : 0;
 }
 
-// Stack boyutu
+/**
+ * @brief Returns the number of elements currently in the stack
+ * @param stack Pointer to the stack
+ * @return Number of elements
+ */
 int stack_size(Stack* stack) {
-    return (stack != NULL) ? (stack->top + 1) : 0;  // Top+1 = eleman sayısı
+    return (stack && stack->top >= 0) ? stack->top + 1 : 0;
 }
 
-// Stack'i temizle
+/**
+ * @brief Frees all memory used by the stack
+ * @param stack Pointer to the stack
+ */
 void stack_destroy(Stack* stack) {
-    if (stack == NULL) {
+    if (!stack) {
         return;
     }
-    
-    // Tüm kopyalanmış tarifleri sil
+
+    // Free all recipe copies
     for (int i = 0; i <= stack->top; i++) {
-        recipe_destroy(stack->operations[i].recipe);  // Her tarifin kopyasını sil
+        if (stack->operations[i].recipe) {
+            recipe_destroy(stack->operations[i].recipe);
+        }
     }
-    
-    free(stack);  // Stack'i sil
+
+    free(stack);
 }
+
+/**
+ * @brief Saves the stack to a binary file
+ * @param stack Pointer to the stack
+ * @param filename Name of the binary file
+ * @return 1 on success, 0 on failure
+ */
+int stack_save_binary(const Stack* stack, const char* filename) {
+    if (!stack || !filename) {
+        return 0;
+    }
+
+    FILE* file = fopen(filename, "wb");
+    if (!file) {
+        return 0;
+    }
+
+    int size = stack_size(stack);
+    if (fwrite(&size, sizeof(int), 1, file) != 1) {
+        fclose(file);
+        return 0;
+    }
+
+    for (int i = 0; i < size; i++) {
+        if (fwrite(&stack->operations[i].type, sizeof(int), 1, file) != 1) {
+            fclose(file);
+            return 0;
+        }
+        if (stack->operations[i].recipe) {
+            if (fwrite(stack->operations[i].recipe, sizeof(Recipe), 1, file) != 1) {
+                fclose(file);
+                return 0;
+            }
+        }
+    }
+
+    fclose(file);
+    return 1;
+}
+
+/**
+ * @brief Loads a stack from a binary file
+ * @param filename Name of the binary file
+ * @return Pointer to the loaded stack, or NULL on failure
+ */
+Stack* stack_load_binary(const char* filename) {
+    if (!filename) {
+        return NULL;
+    }
+
+    FILE* file = fopen(filename, "rb");
+    if (!file) {
+        return NULL;
+    }
+
+    Stack* stack = stack_create();
+    if (!stack) {
+        fclose(file);
+        return NULL;
+    }
+
+    int size;
+    if (fread(&size, sizeof(int), 1, file) != 1) {
+        fclose(file);
+        stack_destroy(stack);
+        return NULL;
+    }
+
+    for (int i = 0; i < size && i < UNDO_STACK_SIZE; i++) {
+        int type;
+        if (fread(&type, sizeof(int), 1, file) != 1) {
+            break;
+        }
+
+        Recipe* recipe = (Recipe*)malloc(sizeof(Recipe));
+        if (!recipe) {
+            break;
+        }
+
+        if (fread(recipe, sizeof(Recipe), 1, file) != 1) {
+            free(recipe);
+            break;
+        }
+
+        stack->operations[i].type = type;
+        stack->operations[i].recipe = recipe;
+        stack->top = i;
+    }
+
+    fclose(file);
+    return stack;
+}
+

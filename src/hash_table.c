@@ -1,248 +1,273 @@
 /**
  * @file hash_table.c
- * @brief Hash Table implementasyonu
- * @details Tarif ID'sine göre O(1) zamanda erişim sağlar.
- *          Collision durumlarında separate chaining (ayrık zincirleme) kullanır.
+ * @brief Hash Table implementation with separate chaining
+ * @details Provides O(1) average-time access to recipes by their ID
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "hash_table.h"  // Hash table header dosyası
-#include "recipe.h"
+#include "hash_table.h"
 
 /**
- * @brief Hash table oluşturur ve başlatır
+ * @brief Hash function using modulo operation
+ * @param id Recipe ID
+ * @param size Hash table size
+ * @return Hash index
  */
-HashTable* hash_table_create(int size) {
-    // Hash table için bellek ayır
-    HashTable* ht = (HashTable*)malloc(sizeof(HashTable));
-    
-    // Bellek ayırma kontrolü
-    if (ht == NULL) {
-        printf("HATA: Hash table olusturulamadi!\n");
-        return NULL;
-    }
-    
-    // Hash table boyutunu ayarla
-    ht->size = size;
-    
-    // Başlangıçta hiç tarif yok
-    ht->count = 0;
-    
-    // Hash node pointer dizisi için bellek ayır
-    // Her slot bir linked list başı olacak
-    ht->table = (HashNode**)malloc(sizeof(HashNode*) * size);
-    
-    // Tablo belleği ayırma kontrolü
-    if (ht->table == NULL) {
-        printf("HATA: Hash table dizisi olusturulamadi!\n");
-        free(ht);  // Ana yapıyı serbest bırak
-        return NULL;
-    }
-    
-    // Tüm slotları NULL ile başlat (boş liste)
-    for (int i = 0; i < size; i++) {
-        ht->table[i] = NULL;  // i. slot'ta henüz düğüm yok
-    }
-    
-    // Oluşturulan hash table'ı döndür
-    return ht;
-}
-
-/**
- * @brief Hash fonksiyonu - ID'den hash değeri hesaplar
- * @details Basit modulo işlemi kullanır
- */
-int hash_function(int id, int size) {
-    // ID'yi table boyutuna böl ve kalanı al
-    // Sonuç 0 ile size-1 arasında olacak
+static int hash_function(int id, int size) {
     return id % size;
 }
 
 /**
- * @brief Hash table'a yeni tarif ekler
+ * @brief Creates and initializes a new hash table with the given size
+ * @param size Number of buckets in the hash table
+ * @return Pointer to the created hash table, or NULL on failure
  */
-int hash_table_insert(HashTable* ht, Recipe* recipe) {
-    // Parametre kontrolü
-    if (ht == NULL || recipe == NULL) {
-        printf("HATA: Gecersiz parametre!\n");
-        return 0;
+HashTable* hash_table_create(int size) {
+    if (size <= 0) {
+        return NULL;
     }
-    
-    // Hash değerini hesapla (hangi slot'a gideceğini bul)
-    int index = hash_function(recipe->id, ht->size);
-    
-    // Yeni hash node oluştur
-    HashNode* new_node = (HashNode*)malloc(sizeof(HashNode));
-    
-    // Bellek kontrolü
-    if (new_node == NULL) {
-        printf("HATA: Hash node olusturulamadi!\n");
-        return 0;
+
+    HashTable* ht = (HashTable*)malloc(sizeof(HashTable));
+    if (!ht) {
+        return NULL;
     }
-    
-    // Node'a tarifi ata
-    new_node->recipe = recipe;
-    
-    // Yeni node'u listenin başına ekle (separate chaining)
-    // Mevcut baş node'u yeni node'un next'i yap
-    new_node->next = ht->table[index];
-    
-    // Yeni node'u liste başı yap
-    ht->table[index] = new_node;
-    
-    // Toplam tarif sayısını artır
-    ht->count++;
-    
-    return 1;  // Başarılı
+
+    ht->size = size;
+    ht->count = 0;
+    ht->table = (HashNode**)calloc(size, sizeof(HashNode*));
+    if (!ht->table) {
+        free(ht);
+        return NULL;
+    }
+
+    return ht;
 }
 
 /**
- * @brief Hash table'da ID'ye göre tarif arar
+ * @brief Inserts a recipe into the hash table
+ * @param ht Pointer to the hash table
+ * @param recipe Pointer to the recipe to insert
+ * @return 1 on success, 0 on failure
+ */
+int hash_table_insert(HashTable* ht, Recipe* recipe) {
+    if (!ht || !recipe) {
+        return 0;
+    }
+
+    int index = hash_function(recipe->id, ht->size);
+    HashNode* new_node = (HashNode*)malloc(sizeof(HashNode));
+    if (!new_node) {
+        return 0;
+    }
+
+    new_node->recipe = recipe;
+    new_node->next = ht->table[index];
+    ht->table[index] = new_node;
+    ht->count++;
+
+    return 1;
+}
+
+/**
+ * @brief Searches for a recipe by its ID
+ * @param ht Pointer to the hash table
+ * @param id Recipe ID to search for
+ * @return Pointer to the found recipe, or NULL if not found
  */
 Recipe* hash_table_search(HashTable* ht, int id) {
-    // Parametre kontrolü
-    if (ht == NULL) {
+    if (!ht) {
         return NULL;
     }
-    
-    // Hash değerini hesapla (hangi slot'a bakacağımızı bul)
+
     int index = hash_function(id, ht->size);
-    
-    // O slot'taki linked list'i dolaş
     HashNode* current = ht->table[index];
-    
-    // Liste boş değilken devam et
-    while (current != NULL) {
-        // Bu node'un tarifinin ID'si aradığımız ID'ye eşit mi?
-        if (current->recipe->id == id) {
-            return current->recipe;  // Bulundu! Tarifi döndür
+
+    while (current) {
+        if (current->recipe && current->recipe->id == id) {
+            return current->recipe;
         }
-        
-        // Bir sonraki node'a geç
         current = current->next;
     }
-    
-    // Bulunamadı
+
     return NULL;
 }
 
 /**
- * @brief Hash table'dan tarif siler
+ * @brief Deletes a recipe entry by its ID
+ * @param ht Pointer to the hash table
+ * @param id Recipe ID to delete
+ * @return 1 on success, 0 on failure
  */
 int hash_table_delete(HashTable* ht, int id) {
-    // Parametre kontrolü
-    if (ht == NULL) {
-        printf("HATA: Gecersiz hash table!\n");
+    if (!ht) {
         return 0;
     }
-    
-    // Hash değerini hesapla
+
     int index = hash_function(id, ht->size);
-    
-    // O slot'taki linked list'i dolaş
     HashNode* current = ht->table[index];
-    HashNode* prev = NULL;  // Bir önceki node'u takip et
-    
-    // Liste boş değilken ara
-    while (current != NULL) {
-        // Aradığımız tarifi bulduk mu?
-        if (current->recipe->id == id) {
-            // Bulduk! Şimdi listeden çıkar
-            
-            // Eğer liste başındaysa
-            if (prev == NULL) {
-                ht->table[index] = current->next;  // Başı güncelle
+    HashNode* prev = NULL;
+
+    while (current) {
+        if (current->recipe && current->recipe->id == id) {
+            if (prev) {
+                prev->next = current->next;
             } else {
-                // Ortada veya sondaysa
-                prev->next = current->next;  // Öncekinin next'ini güncelle
+                ht->table[index] = current->next;
             }
-            
-            // Node'u serbest bırak (ama tarifi değil - başka yerde kullanılabilir)
             free(current);
-            
-            // Toplam sayıyı azalt
             ht->count--;
-            
-            return 1;  // Başarılı
+            return 1;
         }
-        
-        // Bir sonraki node'a geç
         prev = current;
         current = current->next;
     }
-    
-    // Bulunamadı
-    printf("UYARI: Silinecek tarif bulunamadi (ID: %d)\n", id);
+
     return 0;
 }
 
 /**
- * @brief Hash table'daki tüm tarifleri gösterir
+ * @brief Displays all recipes currently stored in the hash table
+ * @param ht Pointer to the hash table
  */
 void hash_table_display(HashTable* ht) {
-    // Parametre kontrolü
-    if (ht == NULL) {
-        printf("HATA: Gecersiz hash table!\n");
+    if (!ht) {
+        printf("Hash table pointer is NULL.\n");
         return;
     }
-    
-    printf("\n=== HASH TABLE ICERIGI ===\n");
-    printf("Toplam Tarif Sayisi: %d\n\n", ht->count);
-    
-    // Tüm slotları dolaş
+
+    printf("\n=== HASH TABLE CONTENT ===\n");
+    printf("Total Recipes: %d\n\n", ht->count);
+
     for (int i = 0; i < ht->size; i++) {
-        // Bu slot boş mu?
-        if (ht->table[i] != NULL) {
+        if (ht->table[i]) {
             printf("Slot %d:\n", i);
-            
-            // Bu slot'taki linked list'i dolaş
-            HashNode* current = ht->table[i];
             int node_count = 0;
-            
-            while (current != NULL) {
+            HashNode* current = ht->table[i];
+
+            while (current) {
                 node_count++;
-                printf("  -> Tarif #%d: %s\n", 
-                       current->recipe->id, 
-                       current->recipe->name);
-                
+                if (current->recipe) {
+                    printf("  -> Recipe #%d: %s\n",
+                           current->recipe->id,
+                           current->recipe->name);
+                }
                 current = current->next;
             }
-            
-            printf("  (Toplam %d tarif)\n\n", node_count);
+            printf("  (Total %d recipes)\n\n", node_count);
         }
     }
 }
 
 /**
- * @brief Hash table'ı ve içindekileri temizler
+ * @brief Frees all memory used by the hash table
+ * @param ht Pointer to the hash table
  */
 void hash_table_destroy(HashTable* ht) {
-    // Parametre kontrolü
-    if (ht == NULL) {
+    if (!ht) {
         return;
     }
-    
-    // Tüm slotları dolaş
+
     for (int i = 0; i < ht->size; i++) {
         HashNode* current = ht->table[i];
-        
-        // Bu slot'taki tüm node'ları sil
-        while (current != NULL) {
-            HashNode* temp = current;  // Şu anki node'u sakla
-            current = current->next;   // Bir sonrakine geç
-            
-            // Tarifi sil (bellek sızıntısı önleme)
-            recipe_destroy(temp->recipe);
-            
-            // Node'u sil
-            free(temp);
+        while (current) {
+            HashNode* next = current->next;
+            free(current);
+            current = next;
         }
     }
-    
-    // Table dizisini sil
+
     free(ht->table);
-    
-    // Hash table yapısını sil
     free(ht);
 }
+
+/**
+ * @brief Saves the hash table to a binary file
+ * @param ht Pointer to the hash table
+ * @param filename Name of the binary file
+ * @return 1 on success, 0 on failure
+ */
+int hash_table_save_binary(const HashTable* ht, const char* filename) {
+    if (!ht || !filename) {
+        return 0;
+    }
+
+    FILE* file = fopen(filename, "wb");
+    if (!file) {
+        return 0;
+    }
+
+    if (fwrite(&ht->size, sizeof(int), 1, file) != 1) {
+        fclose(file);
+        return 0;
+    }
+    if (fwrite(&ht->count, sizeof(int), 1, file) != 1) {
+        fclose(file);
+        return 0;
+    }
+
+    for (int i = 0; i < ht->size; i++) {
+        HashNode* current = ht->table[i];
+        while (current) {
+            if (current->recipe) {
+                if (fwrite(current->recipe, sizeof(Recipe), 1, file) != 1) {
+                    fclose(file);
+                    return 0;
+                }
+            }
+            current = current->next;
+        }
+    }
+
+    fclose(file);
+    return 1;
+}
+
+/**
+ * @brief Loads a hash table from a binary file
+ * @param filename Name of the binary file
+ * @return Pointer to the loaded hash table, or NULL on failure
+ */
+HashTable* hash_table_load_binary(const char* filename) {
+    if (!filename) {
+        return NULL;
+    }
+
+    FILE* file = fopen(filename, "rb");
+    if (!file) {
+        return NULL;
+    }
+
+    int size, count;
+    if (fread(&size, sizeof(int), 1, file) != 1) {
+        fclose(file);
+        return NULL;
+    }
+    if (fread(&count, sizeof(int), 1, file) != 1) {
+        fclose(file);
+        return NULL;
+    }
+
+    HashTable* ht = hash_table_create(size);
+    if (!ht) {
+        fclose(file);
+        return NULL;
+    }
+
+    for (int i = 0; i < count; i++) {
+        Recipe* recipe = (Recipe*)malloc(sizeof(Recipe));
+        if (!recipe) {
+            break;
+        }
+        if (fread(recipe, sizeof(Recipe), 1, file) != 1) {
+            free(recipe);
+            break;
+        }
+        hash_table_insert(ht, recipe);
+    }
+
+    fclose(file);
+    return ht;
+}
+
