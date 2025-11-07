@@ -19,7 +19,7 @@ constexpr int WEEKLY_PLAN_SIZE = 7;
  * @class Queue
  * @brief Implements a circular queue structure for managing weekly meal plans.
  * @details Each element represents one day of the week (Monday–Sunday).
- */
+ */  
 class Queue {
 private:
     std::array<std::shared_ptr<Recipe>, WEEKLY_PLAN_SIZE> recipes;  ///< Circular storage for recipes

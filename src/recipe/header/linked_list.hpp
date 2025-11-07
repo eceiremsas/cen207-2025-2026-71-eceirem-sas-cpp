@@ -19,7 +19,7 @@
   */
 class LinkedList {
 private:
-    // === Node Structure ===
+    // === Node Structure =
     struct Node {
         std::shared_ptr<Recipe> recipe;   ///< Stored recipe
         std::shared_ptr<Node> next;       ///< Pointer to next node

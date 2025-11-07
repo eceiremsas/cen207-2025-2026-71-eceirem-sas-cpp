@@ -14,13 +14,17 @@
 
 constexpr int UNDO_STACK_SIZE = 50;
 
+
+// project 
+
+
 /**
  * @enum OperationType
  * @brief Represents the type of operation recorded for undo functionality.
  */
 enum class OperationType {
     Add,     ///< Recipe addition
-    Edit,    ///< Recipe modification
+    Edit,    ///< Recipe modification     
     Delete   ///< Recipe deletion
 };
 
