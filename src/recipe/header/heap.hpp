@@ -21,7 +21,7 @@
   */
 class Heap {
 private:
-    std::vector<std::shared_ptr<Recipe>> recipes;  ///< Heap storage
+    std::vector<std::shared_ptr<Recipe>> recipes;  ///< Heap storage 
     int capacity;                                 ///< Maximum allowed elements
 
     // === Index utility functions ===
