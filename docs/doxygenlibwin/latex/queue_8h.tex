@@ -1,0 +1,267 @@
+\doxysection{include/queue.h File Reference}
+\hypertarget{queue_8h}{}\label{queue_8h}\index{include/queue.h@{include/queue.h}}
+{\ttfamily \#include "{}recipe.\+h"{}}\newline
+Include dependency graph for queue.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{queue_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{struct_queue}{Queue}}
+\begin{DoxyCompactList}\small\item\em Circular queue structure used for weekly meal planning. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{queue_8h_ad59fa78f9f8b51c5d045bfe45bdb6207}{QUEUE\+\_\+H}}
+\item 
+\#define \mbox{\hyperlink{queue_8h_aaeb376445ddec378a36a6538f9e14090}{WEEKLY\+\_\+\+PLAN\+\_\+\+SIZE}}~7
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{queue_8h_a9771bdb407a7026eb675edbac5809d31}{queue\+\_\+create}} (void)
+\begin{DoxyCompactList}\small\item\em Creates and initializes an empty queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{queue_8h_a00a32b0e06376d1f4d1afa609b7bbd10}{queue\+\_\+enqueue}} (\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue, \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe)
+\begin{DoxyCompactList}\small\item\em Adds a recipe to the rear of the queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{queue_8h_a10a9464fc764a3362fa624aa6b619481}{queue\+\_\+dequeue}} (\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Removes and returns a recipe from the front of the queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{queue_8h_a234b00afeb03cae5310caf13b752bd90}{queue\+\_\+peek}} (\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Returns the recipe at the front without removing it. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{queue_8h_a9ac9b90b97da28b8c1a98a5c4d784110}{queue\+\_\+is\+\_\+empty}} (\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Checks if the queue is empty. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{queue_8h_ae48395a15f19bcae25ef49d99c5d551d}{queue\+\_\+is\+\_\+full}} (\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Checks if the queue is full. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queue_8h_a325b018dee6bbc016b24698c8bcb040d}{queue\+\_\+display}} (\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Displays all recipes currently in the queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{queue_8h_a85d100eab6e9830eb90e28fee9eec559}{queue\+\_\+size}} (\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Returns the number of elements in the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queue_8h_ad0429aac8d8b9595953b6e25e97797ce}{queue\+\_\+destroy}} (\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Frees all memory associated with the queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{queue_8h_a32bd0a39b4c25e9837a2504f9724bca9}{queue\+\_\+save\+\_\+binary}} (const \mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Saves the queue to a binary file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{queue_8h_a47576b33b34e8c14a939c39d5ea9a0c1}{queue\+\_\+load\+\_\+binary}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Loads a queue from a binary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{queue_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{queue_8h_ad59fa78f9f8b51c5d045bfe45bdb6207}\index{queue.h@{queue.h}!QUEUE\_H@{QUEUE\_H}}
+\index{QUEUE\_H@{QUEUE\_H}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{QUEUE\_H}{QUEUE\_H}}
+{\footnotesize\ttfamily \label{queue_8h_ad59fa78f9f8b51c5d045bfe45bdb6207} 
+\#define QUEUE\+\_\+H}
+
+\Hypertarget{queue_8h_aaeb376445ddec378a36a6538f9e14090}\index{queue.h@{queue.h}!WEEKLY\_PLAN\_SIZE@{WEEKLY\_PLAN\_SIZE}}
+\index{WEEKLY\_PLAN\_SIZE@{WEEKLY\_PLAN\_SIZE}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{WEEKLY\_PLAN\_SIZE}{WEEKLY\_PLAN\_SIZE}}
+{\footnotesize\ttfamily \label{queue_8h_aaeb376445ddec378a36a6538f9e14090} 
+\#define WEEKLY\+\_\+\+PLAN\+\_\+\+SIZE~7}
+
+
+
+\label{doc-func-members}
+\Hypertarget{queue_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{queue_8h_a9771bdb407a7026eb675edbac5809d31}\index{queue.h@{queue.h}!queue\_create@{queue\_create}}
+\index{queue\_create@{queue\_create}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_create()}{queue\_create()}}
+{\footnotesize\ttfamily \label{queue_8h_a9771bdb407a7026eb675edbac5809d31} 
+\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*} queue\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Creates and initializes an empty queue. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the created queue, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{queue_8h_a10a9464fc764a3362fa624aa6b619481}\index{queue.h@{queue.h}!queue\_dequeue@{queue\_dequeue}}
+\index{queue\_dequeue@{queue\_dequeue}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_dequeue()}{queue\_dequeue()}}
+{\footnotesize\ttfamily \label{queue_8h_a10a9464fc764a3362fa624aa6b619481} 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} queue\+\_\+dequeue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Removes and returns a recipe from the front of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the removed recipe, or NULL if queue is empty 
+\end{DoxyReturn}
+\Hypertarget{queue_8h_ad0429aac8d8b9595953b6e25e97797ce}\index{queue.h@{queue.h}!queue\_destroy@{queue\_destroy}}
+\index{queue\_destroy@{queue\_destroy}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_destroy()}{queue\_destroy()}}
+{\footnotesize\ttfamily \label{queue_8h_ad0429aac8d8b9595953b6e25e97797ce} 
+void queue\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Frees all memory associated with the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the queue \\
+\hline
+\end{DoxyParams}
+\Hypertarget{queue_8h_a325b018dee6bbc016b24698c8bcb040d}\index{queue.h@{queue.h}!queue\_display@{queue\_display}}
+\index{queue\_display@{queue\_display}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_display()}{queue\_display()}}
+{\footnotesize\ttfamily \label{queue_8h_a325b018dee6bbc016b24698c8bcb040d} 
+void queue\+\_\+display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Displays all recipes currently in the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the queue \\
+\hline
+\end{DoxyParams}
+\Hypertarget{queue_8h_a00a32b0e06376d1f4d1afa609b7bbd10}\index{queue.h@{queue.h}!queue\_enqueue@{queue\_enqueue}}
+\index{queue\_enqueue@{queue\_enqueue}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_enqueue()}{queue\_enqueue()}}
+{\footnotesize\ttfamily \label{queue_8h_a00a32b0e06376d1f4d1afa609b7bbd10} 
+int queue\+\_\+enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{, }\item[{\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe}{}\end{DoxyParamCaption})}
+
+
+
+Adds a recipe to the rear of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the queue \\
+\hline
+{\em recipe} & Pointer to the recipe to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{queue_8h_a9ac9b90b97da28b8c1a98a5c4d784110}\index{queue.h@{queue.h}!queue\_is\_empty@{queue\_is\_empty}}
+\index{queue\_is\_empty@{queue\_is\_empty}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_is\_empty()}{queue\_is\_empty()}}
+{\footnotesize\ttfamily \label{queue_8h_a9ac9b90b97da28b8c1a98a5c4d784110} 
+int queue\+\_\+is\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the queue is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if empty, 0 otherwise 
+\end{DoxyReturn}
+\Hypertarget{queue_8h_ae48395a15f19bcae25ef49d99c5d551d}\index{queue.h@{queue.h}!queue\_is\_full@{queue\_is\_full}}
+\index{queue\_is\_full@{queue\_is\_full}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_is\_full()}{queue\_is\_full()}}
+{\footnotesize\ttfamily \label{queue_8h_ae48395a15f19bcae25ef49d99c5d551d} 
+int queue\+\_\+is\+\_\+full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the queue is full. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if full, 0 otherwise 
+\end{DoxyReturn}
+\Hypertarget{queue_8h_a47576b33b34e8c14a939c39d5ea9a0c1}\index{queue.h@{queue.h}!queue\_load\_binary@{queue\_load\_binary}}
+\index{queue\_load\_binary@{queue\_load\_binary}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_load\_binary()}{queue\_load\_binary()}}
+{\footnotesize\ttfamily \label{queue_8h_a47576b33b34e8c14a939c39d5ea9a0c1} 
+\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*} queue\+\_\+load\+\_\+binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Loads a queue from a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the loaded queue, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{queue_8h_a234b00afeb03cae5310caf13b752bd90}\index{queue.h@{queue.h}!queue\_peek@{queue\_peek}}
+\index{queue\_peek@{queue\_peek}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_peek()}{queue\_peek()}}
+{\footnotesize\ttfamily \label{queue_8h_a234b00afeb03cae5310caf13b752bd90} 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} queue\+\_\+peek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Returns the recipe at the front without removing it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the front recipe, or NULL if queue is empty 
+\end{DoxyReturn}
+\Hypertarget{queue_8h_a32bd0a39b4c25e9837a2504f9724bca9}\index{queue.h@{queue.h}!queue\_save\_binary@{queue\_save\_binary}}
+\index{queue\_save\_binary@{queue\_save\_binary}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_save\_binary()}{queue\_save\_binary()}}
+{\footnotesize\ttfamily \label{queue_8h_a32bd0a39b4c25e9837a2504f9724bca9} 
+int queue\+\_\+save\+\_\+binary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Saves the queue to a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the queue \\
+\hline
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{queue_8h_a85d100eab6e9830eb90e28fee9eec559}\index{queue.h@{queue.h}!queue\_size@{queue\_size}}
+\index{queue\_size@{queue\_size}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_size()}{queue\_size()}}
+{\footnotesize\ttfamily \label{queue_8h_a85d100eab6e9830eb90e28fee9eec559} 
+int queue\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Returns the number of elements in the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of elements 
+\end{DoxyReturn}

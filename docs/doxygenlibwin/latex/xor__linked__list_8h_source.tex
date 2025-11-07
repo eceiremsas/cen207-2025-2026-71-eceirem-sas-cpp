@@ -1,0 +1,63 @@
+\doxysection{xor\+\_\+linked\+\_\+list.\+h}
+\hypertarget{xor__linked__list_8h_source}{}\label{xor__linked__list_8h_source}\index{include/xor\_linked\_list.h@{include/xor\_linked\_list.h}}
+\mbox{\hyperlink{xor__linked__list_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ XOR\_LINKED\_LIST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ XOR\_LINKED\_LIST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{recipe_8h}{recipe.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ ===\ Structure\ Definitions\ ===}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_x_o_r_list_node}{XORListNode}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{struct_x_o_r_list_node_a150b3fe6fbeabefa12fb3e60bfd473e7}{recipe}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ recipe\ stored\ in\ this\ node}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_x_o_r_list_node}{XORListNode}}*\ \mbox{\hyperlink{struct_x_o_r_list_node_ab3f4528d2ed3f9eb2516055476a51ad1}{npx}};\ \ \ \ \ \textcolor{comment}{//\ XOR\ of\ next\ and\ previous\ node\ pointers}}
+\DoxyCodeLine{00026\ \}\ \mbox{\hyperlink{struct_x_o_r_list_node}{XORListNode}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{struct_x_o_r_list_node}{XORListNode}}*\ \mbox{\hyperlink{struct_x_o_r_list_a0c165a6987ec46f52ecc6781097f113a}{head}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ first\ node}}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{struct_x_o_r_list_node}{XORListNode}}*\ \mbox{\hyperlink{struct_x_o_r_list_aac1e9d0b20ed8d352094b50ebd47c744}{tail}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ last\ node}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_x_o_r_list_af623f41bb01a1e9cb740fc28cf9a8ff0}{count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Number\ of\ recipes\ currently\ stored}}
+\DoxyCodeLine{00036\ \}\ \mbox{\hyperlink{struct_x_o_r_list}{XORList}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{//\ ===\ Function\ Declarations\ ===}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \mbox{\hyperlink{struct_x_o_r_list}{XORList}}*\ \mbox{\hyperlink{xor__linked__list_8h_a367636ea694da4b7ef3dac970e1d0ae1}{xor\_list\_create}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{xor__linked__list_8h_af1dba2d420ad45bd3e9f755ae72f4f30}{xor\_list\_insert\_head}}(\mbox{\hyperlink{struct_x_o_r_list}{XORList}}*\ list,\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{xor__linked__list_8h_a9456fcc3cd8f6a6e433ceeca9a7809d8}{xor\_list\_insert\_tail}}(\mbox{\hyperlink{struct_x_o_r_list}{XORList}}*\ list,\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00068\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{xor__linked__list_8h_aed41953cab9c1ba248daae9303eb1a90}{xor\_list\_remove}}(\mbox{\hyperlink{struct_x_o_r_list}{XORList}}*\ list,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00076\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{xor__linked__list_8h_abb83e9e9645839eb39f62b50759d9ba2}{xor\_list\_find}}(\mbox{\hyperlink{struct_x_o_r_list}{XORList}}*\ list,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xor__linked__list_8h_a0dbd50e0b8191802ac4c759ce0fc2527}{xor\_list\_traverse\_forward}}(\mbox{\hyperlink{struct_x_o_r_list}{XORList}}*\ list,\ \textcolor{keywordtype}{void}\ (*visit)(\mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe));}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xor__linked__list_8h_ac75b2c97504ecc1fc60b6ca1eae75e2a}{xor\_list\_traverse\_backward}}(\mbox{\hyperlink{struct_x_o_r_list}{XORList}}*\ list,\ \textcolor{keywordtype}{void}\ (*visit)(\mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe));}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{xor__linked__list_8h_a9d8c48af7a8bc99bb3eaa5709a95b738}{xor\_list\_size}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_x_o_r_list}{XORList}}*\ list);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{xor__linked__list_8h_a0af0ffa3c653553453baf92ec5c9b350}{xor\_list\_is\_empty}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_x_o_r_list}{XORList}}*\ list);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00110\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xor__linked__list_8h_a628f822f02458bb6dfaf16b5cbeac97f}{xor\_list\_destroy}}(\mbox{\hyperlink{struct_x_o_r_list}{XORList}}*\ list);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{comment}{//\ ===\ Binary\ File\ Operations\ ===}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00120\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{xor__linked__list_8h_abf6f9bb0bbc194d68b6d2d9b0e8e1da7}{xor\_list\_save\_binary}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_x_o_r_list}{XORList}}*\ list,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00127\ \mbox{\hyperlink{struct_x_o_r_list}{XORList}}*\ \mbox{\hyperlink{xor__linked__list_8h_a3b669ba2dff4565088f8c0a73084b330}{xor\_list\_load\_binary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{comment}{//\ ===\ Helper\ Functions\ ===}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00137\ \mbox{\hyperlink{struct_x_o_r_list_node}{XORListNode}}*\ \mbox{\hyperlink{xor__linked__list_8h_a2122361da74168635fd135ae4798473d}{xor\_list\_xor}}(\mbox{\hyperlink{struct_x_o_r_list_node}{XORListNode}}*\ a,\ \mbox{\hyperlink{struct_x_o_r_list_node}{XORListNode}}*\ b);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ XOR\_LINKED\_LIST\_H}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ }
+
+\end{DoxyCode}

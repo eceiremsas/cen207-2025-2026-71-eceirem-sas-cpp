@@ -1,0 +1,212 @@
+\doxysection{include/hash\+\_\+table.h File Reference}
+\hypertarget{hash__table_8h}{}\label{hash__table_8h}\index{include/hash\_table.h@{include/hash\_table.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}recipe.\+h"{}}\newline
+Include dependency graph for hash\+\_\+table.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{hash__table_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hash__table_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_hash_node}{Hash\+Node}}
+\item 
+class \mbox{\hyperlink{struct_hash_table}{Hash\+Table}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Hash\+Node \mbox{\hyperlink{hash__table_8h_a9a999a0999ddfe3f538476912add9107}{Hash\+Node}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{hash__table_8h_a6a646d3a96e37d37ce2b365a965c3ddd}{hash\+\_\+table\+\_\+create}} (int size)
+\begin{DoxyCompactList}\small\item\em Creates and initializes a new hash table with the given size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{hash__table_8h_a4b9b4c9c1c914cfad355767e131dd1fd}{hash\+\_\+table\+\_\+insert}} (\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*}ht, \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe)
+\begin{DoxyCompactList}\small\item\em Inserts a recipe into the hash table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{hash__table_8h_a492aaf8bb9282349d9fc08a55efb3b18}{hash\+\_\+table\+\_\+search}} (\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*}ht, int id)
+\begin{DoxyCompactList}\small\item\em Searches for a recipe by its ID. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{hash__table_8h_a4d8a2a9f4ac673a039f16bd5ba77b1a4}{hash\+\_\+table\+\_\+delete}} (\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*}ht, int id)
+\begin{DoxyCompactList}\small\item\em Deletes a recipe entry by its ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hash__table_8h_a438fb6f1397da5b503c096b73fef1d80}{hash\+\_\+table\+\_\+display}} (\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*}ht)
+\begin{DoxyCompactList}\small\item\em Displays all recipes currently stored in the hash table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hash__table_8h_ab64885ca531b5336f9cffd8169665c3b}{hash\+\_\+table\+\_\+destroy}} (\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*}ht)
+\begin{DoxyCompactList}\small\item\em Frees all memory used by the hash table. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{hash__table_8h_ab2d7a83c1729da70ed65010c15b212dd}{hash\+\_\+table\+\_\+save\+\_\+binary}} (const \mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*}ht, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Saves the hash table to a binary file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{hash__table_8h_a138c22881c7f92e6a7a09c4a4140ffd3}{hash\+\_\+table\+\_\+load\+\_\+binary}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Loads a hash table from a binary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{hash__table_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{hash__table_8h_a9a999a0999ddfe3f538476912add9107}\index{hash\_table.h@{hash\_table.h}!HashNode@{HashNode}}
+\index{HashNode@{HashNode}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{HashNode}{HashNode}}
+{\footnotesize\ttfamily \label{hash__table_8h_a9a999a0999ddfe3f538476912add9107} 
+typedef struct Hash\+Node Hash\+Node}
+
+
+
+\label{doc-func-members}
+\Hypertarget{hash__table_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{hash__table_8h_a6a646d3a96e37d37ce2b365a965c3ddd}\index{hash\_table.h@{hash\_table.h}!hash\_table\_create@{hash\_table\_create}}
+\index{hash\_table\_create@{hash\_table\_create}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{hash\_table\_create()}{hash\_table\_create()}}
+{\footnotesize\ttfamily \label{hash__table_8h_a6a646d3a96e37d37ce2b365a965c3ddd} 
+\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*} hash\+\_\+table\+\_\+create (\begin{DoxyParamCaption}\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Creates and initializes a new hash table with the given size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Number of buckets in the hash table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created hash table, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{hash__table_8h_a4d8a2a9f4ac673a039f16bd5ba77b1a4}\index{hash\_table.h@{hash\_table.h}!hash\_table\_delete@{hash\_table\_delete}}
+\index{hash\_table\_delete@{hash\_table\_delete}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{hash\_table\_delete()}{hash\_table\_delete()}}
+{\footnotesize\ttfamily \label{hash__table_8h_a4d8a2a9f4ac673a039f16bd5ba77b1a4} 
+int hash\+\_\+table\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*}}]{ht}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Deletes a recipe entry by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ht} & Pointer to the hash table \\
+\hline
+{\em id} & \doxylink{struct_recipe}{Recipe} ID to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{hash__table_8h_ab64885ca531b5336f9cffd8169665c3b}\index{hash\_table.h@{hash\_table.h}!hash\_table\_destroy@{hash\_table\_destroy}}
+\index{hash\_table\_destroy@{hash\_table\_destroy}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{hash\_table\_destroy()}{hash\_table\_destroy()}}
+{\footnotesize\ttfamily \label{hash__table_8h_ab64885ca531b5336f9cffd8169665c3b} 
+void hash\+\_\+table\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*}}]{ht}{}\end{DoxyParamCaption})}
+
+
+
+Frees all memory used by the hash table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ht} & Pointer to the hash table \\
+\hline
+\end{DoxyParams}
+\Hypertarget{hash__table_8h_a438fb6f1397da5b503c096b73fef1d80}\index{hash\_table.h@{hash\_table.h}!hash\_table\_display@{hash\_table\_display}}
+\index{hash\_table\_display@{hash\_table\_display}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{hash\_table\_display()}{hash\_table\_display()}}
+{\footnotesize\ttfamily \label{hash__table_8h_a438fb6f1397da5b503c096b73fef1d80} 
+void hash\+\_\+table\+\_\+display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*}}]{ht}{}\end{DoxyParamCaption})}
+
+
+
+Displays all recipes currently stored in the hash table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ht} & Pointer to the hash table \\
+\hline
+\end{DoxyParams}
+\Hypertarget{hash__table_8h_a4b9b4c9c1c914cfad355767e131dd1fd}\index{hash\_table.h@{hash\_table.h}!hash\_table\_insert@{hash\_table\_insert}}
+\index{hash\_table\_insert@{hash\_table\_insert}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{hash\_table\_insert()}{hash\_table\_insert()}}
+{\footnotesize\ttfamily \label{hash__table_8h_a4b9b4c9c1c914cfad355767e131dd1fd} 
+int hash\+\_\+table\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*}}]{ht}{, }\item[{\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe}{}\end{DoxyParamCaption})}
+
+
+
+Inserts a recipe into the hash table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ht} & Pointer to the hash table \\
+\hline
+{\em recipe} & Pointer to the recipe to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{hash__table_8h_a138c22881c7f92e6a7a09c4a4140ffd3}\index{hash\_table.h@{hash\_table.h}!hash\_table\_load\_binary@{hash\_table\_load\_binary}}
+\index{hash\_table\_load\_binary@{hash\_table\_load\_binary}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{hash\_table\_load\_binary()}{hash\_table\_load\_binary()}}
+{\footnotesize\ttfamily \label{hash__table_8h_a138c22881c7f92e6a7a09c4a4140ffd3} 
+\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*} hash\+\_\+table\+\_\+load\+\_\+binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Loads a hash table from a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the loaded hash table, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{hash__table_8h_ab2d7a83c1729da70ed65010c15b212dd}\index{hash\_table.h@{hash\_table.h}!hash\_table\_save\_binary@{hash\_table\_save\_binary}}
+\index{hash\_table\_save\_binary@{hash\_table\_save\_binary}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{hash\_table\_save\_binary()}{hash\_table\_save\_binary()}}
+{\footnotesize\ttfamily \label{hash__table_8h_ab2d7a83c1729da70ed65010c15b212dd} 
+int hash\+\_\+table\+\_\+save\+\_\+binary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*}}]{ht}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Saves the hash table to a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ht} & Pointer to the hash table \\
+\hline
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{hash__table_8h_a492aaf8bb9282349d9fc08a55efb3b18}\index{hash\_table.h@{hash\_table.h}!hash\_table\_search@{hash\_table\_search}}
+\index{hash\_table\_search@{hash\_table\_search}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{hash\_table\_search()}{hash\_table\_search()}}
+{\footnotesize\ttfamily \label{hash__table_8h_a492aaf8bb9282349d9fc08a55efb3b18} 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} hash\+\_\+table\+\_\+search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*}}]{ht}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Searches for a recipe by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ht} & Pointer to the hash table \\
+\hline
+{\em id} & \doxylink{struct_recipe}{Recipe} ID to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the found recipe, or NULL if not found 
+\end{DoxyReturn}

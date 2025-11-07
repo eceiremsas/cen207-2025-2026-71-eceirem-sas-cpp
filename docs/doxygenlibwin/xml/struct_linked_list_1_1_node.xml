@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="struct_linked_list_1_1_node" kind="struct" language="C++" prot="private">
+    <compoundname>LinkedList::Node</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_linked_list_1_1_node_1a7349a4726d23878a9fda009c4ae12b17" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Recipe&gt; LinkedList::Node::recipe</definition>
+        <argsstring></argsstring>
+        <name>recipe</name>
+        <qualifiedname>LinkedList::Node::recipe</qualifiedname>
+        <briefdescription>
+<para>Stored recipe. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/linked_list.hpp" line="24" column="25" bodyfile="src/recipe/header/linked_list.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_linked_list_1_1_node_1a2187a079ed75f3ad7eaa6eb5fc801e7c" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="struct_linked_list_1_1_node_1aaaf543d244e3097568a031fbf5ee90c5" kindref="member">Node</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Node&gt; LinkedList::Node::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <qualifiedname>LinkedList::Node::next</qualifiedname>
+        <briefdescription>
+<para>Pointer to next node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/linked_list.hpp" line="25" column="25" bodyfile="src/recipe/header/linked_list.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_linked_list_1_1_node_1aaaf543d244e3097568a031fbf5ee90c5" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LinkedList::Node::Node</definition>
+        <argsstring>(std::shared_ptr&lt; Recipe &gt; r)</argsstring>
+        <name>Node</name>
+        <qualifiedname>LinkedList::Node::Node</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/linked_list.hpp" line="27" column="18" bodyfile="src/recipe/header/linked_list.hpp" bodystart="27" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>LinkedList::Node</label>
+        <link refid="struct_linked_list_1_1_node"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/recipe/header/linked_list.hpp" line="23" column="5" bodyfile="src/recipe/header/linked_list.hpp" bodystart="23" bodyend="30"/>
+    <listofallmembers>
+      <member refid="struct_linked_list_1_1_node_1a2187a079ed75f3ad7eaa6eb5fc801e7c" prot="public" virt="non-virtual"><scope>LinkedList::Node</scope><name>next</name></member>
+      <member refid="struct_linked_list_1_1_node_1aaaf543d244e3097568a031fbf5ee90c5" prot="public" virt="non-virtual"><scope>LinkedList::Node</scope><name>Node</name></member>
+      <member refid="struct_linked_list_1_1_node_1a7349a4726d23878a9fda009c4ae12b17" prot="public" virt="non-virtual"><scope>LinkedList::Node</scope><name>recipe</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

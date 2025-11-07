@@ -1,0 +1,508 @@
+\doxysection{include/heap.h File Reference}
+\hypertarget{heap_8h}{}\label{heap_8h}\index{include/heap.h@{include/heap.h}}
+
+
+Header file for the Min-\/\+Heap data structure.  
+
+
+{\ttfamily \#include "{}recipe.\+h"{}}\newline
+Include dependency graph for heap.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{heap_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{heap_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{struct_heap}{Heap}}
+\begin{DoxyCompactList}\small\item\em Min-\/\+Heap structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{heap_8h_a1896d6fe7648dcc9830c42174809d4c6}{HEAP\+\_\+H}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{heap_8h_a8fe6b045ac2b4491f0c062395acac430}{heap\+\_\+create}} (int capacity)
+\begin{DoxyCompactList}\small\item\em Creates a new empty heap. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{heap_8h_a205d61f52bd64bb8ed9b738ab36af848}{heap\+\_\+insert}} (\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}heap, \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe)
+\begin{DoxyCompactList}\small\item\em Inserts a new recipe into the heap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{heap_8h_a6c39fc1e805cc98ee4d41e3fdad7161a}{heap\+\_\+extract\+\_\+min}} (\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}heap)
+\begin{DoxyCompactList}\small\item\em Removes and returns the recipe with the smallest calorie value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{heap_8h_ae1a8c536a1afd85170a0244c568b18a2}{heap\+\_\+peek}} (\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}heap)
+\begin{DoxyCompactList}\small\item\em Returns the root recipe without removing it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{heap_8h_a2f9f919fcbab3c57df84fa7db87d4af8}{heapify\+\_\+up}} (\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}heap, int index)
+\begin{DoxyCompactList}\small\item\em Restores the heap property by moving upward from a given index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{heap_8h_aa33d7b3c74397a16d67a4f8b2ed301a5}{heapify\+\_\+down}} (\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}heap, int index)
+\begin{DoxyCompactList}\small\item\em Restores the heap property by moving downward from a given index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{heap_8h_ac2fb89e79c07a9207780988bc6eff91b}{heap\+\_\+swap}} (\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}recipe1, \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}recipe2)
+\begin{DoxyCompactList}\small\item\em Swaps two recipes in the heap. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{heap_8h_ae360a8cd3262fa6a61f5a01c8090471c}{heap\+\_\+sort\+\_\+recipes}} (\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}recipes, int count)
+\begin{DoxyCompactList}\small\item\em Sorts recipes based on their calorie values using heap sort. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{heap_8h_a62f0b32d4ae7ebfa9780dbda1fcc71d6}{heap\+\_\+is\+\_\+empty}} (\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}heap)
+\begin{DoxyCompactList}\small\item\em Checks if the heap is empty. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{heap_8h_ab62b6464e8d5da1d06343441e1c36333}{heap\+\_\+is\+\_\+full}} (\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}heap)
+\begin{DoxyCompactList}\small\item\em Checks if the heap is full. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{heap_8h_ae73ebec7e224ac8ea213a563985a1471}{heap\+\_\+destroy}} (\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}heap)
+\begin{DoxyCompactList}\small\item\em Frees all memory used by the heap and its elements. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{heap_8h_ac9c81831cfff46fe54d120b772a2e22c}{heap\+\_\+parent}} (int index)
+\begin{DoxyCompactList}\small\item\em Computes the index of a parent node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{heap_8h_adf3fd90d8b5f71e543f780b6d61e6140}{heap\+\_\+left\+\_\+child}} (int index)
+\begin{DoxyCompactList}\small\item\em Computes the index of the left child node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{heap_8h_a7f6e4e28fbe87843db17da09ff5140d1}{heap\+\_\+right\+\_\+child}} (int index)
+\begin{DoxyCompactList}\small\item\em Computes the index of the right child node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{heap_8h_aecc5cdc687a35c01edc669e9dc6b918b}{heap\+\_\+save\+\_\+binary}} (const \mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}heap, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Saves the heap to a binary file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{heap_8h_ae859e93dbbf9c17e97b78d977896c1f8}{heap\+\_\+load\+\_\+binary}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Loads a heap from a binary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the Min-\/\+Heap data structure. 
+
+Used to sort recipes based on their calorie values. The recipe with the lowest calorie count is always at the top (root) of the heap. 
+
+\label{doc-define-members}
+\Hypertarget{heap_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{heap_8h_a1896d6fe7648dcc9830c42174809d4c6}\index{heap.h@{heap.h}!HEAP\_H@{HEAP\_H}}
+\index{HEAP\_H@{HEAP\_H}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{HEAP\_H}{HEAP\_H}}
+{\footnotesize\ttfamily \label{heap_8h_a1896d6fe7648dcc9830c42174809d4c6} 
+\#define HEAP\+\_\+H}
+
+
+
+\label{doc-func-members}
+\Hypertarget{heap_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{heap_8h_a8fe6b045ac2b4491f0c062395acac430}\index{heap.h@{heap.h}!heap\_create@{heap\_create}}
+\index{heap\_create@{heap\_create}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heap\_create()}{heap\_create()}}
+{\footnotesize\ttfamily \label{heap_8h_a8fe6b045ac2b4491f0c062395acac430} 
+\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*} heap\+\_\+create (\begin{DoxyParamCaption}\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new empty heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & Maximum capacity of the heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created heap, or NULL on failure
+\end{DoxyReturn}
+Allocates memory for the recipe pointer array
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & Maximum capacity of the heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created heap, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{heap_8h_ae73ebec7e224ac8ea213a563985a1471}\index{heap.h@{heap.h}!heap\_destroy@{heap\_destroy}}
+\index{heap\_destroy@{heap\_destroy}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heap\_destroy()}{heap\_destroy()}}
+{\footnotesize\ttfamily \label{heap_8h_ae73ebec7e224ac8ea213a563985a1471} 
+void heap\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}}]{heap}{}\end{DoxyParamCaption})}
+
+
+
+Frees all memory used by the heap and its elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap structure\\
+\hline
+\end{DoxyParams}
+Releases both the recipe array and the heap itself
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap \\
+\hline
+\end{DoxyParams}
+\Hypertarget{heap_8h_a6c39fc1e805cc98ee4d41e3fdad7161a}\index{heap.h@{heap.h}!heap\_extract\_min@{heap\_extract\_min}}
+\index{heap\_extract\_min@{heap\_extract\_min}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heap\_extract\_min()}{heap\_extract\_min()}}
+{\footnotesize\ttfamily \label{heap_8h_a6c39fc1e805cc98ee4d41e3fdad7161a} 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} heap\+\_\+extract\+\_\+min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}}]{heap}{}\end{DoxyParamCaption})}
+
+
+
+Removes and returns the recipe with the smallest calorie value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the recipe with the smallest calorie value, or NULL if heap is empty
+\end{DoxyReturn}
+The root element is removed, and heapify\+\_\+down is called to maintain heap property
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the recipe with the smallest calorie value, or NULL if heap is empty 
+\end{DoxyReturn}
+\Hypertarget{heap_8h_a205d61f52bd64bb8ed9b738ab36af848}\index{heap.h@{heap.h}!heap\_insert@{heap\_insert}}
+\index{heap\_insert@{heap\_insert}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heap\_insert()}{heap\_insert()}}
+{\footnotesize\ttfamily \label{heap_8h_a205d61f52bd64bb8ed9b738ab36af848} 
+int heap\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}}]{heap}{, }\item[{\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe}{}\end{DoxyParamCaption})}
+
+
+
+Inserts a new recipe into the heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap structure \\
+\hline
+{\em recipe} & \doxylink{struct_recipe}{Recipe} to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure
+\end{DoxyReturn}
+The recipe is added at the end and repositioned using heapify\+\_\+up
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap \\
+\hline
+{\em recipe} & \doxylink{struct_recipe}{Recipe} to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{heap_8h_a62f0b32d4ae7ebfa9780dbda1fcc71d6}\index{heap.h@{heap.h}!heap\_is\_empty@{heap\_is\_empty}}
+\index{heap\_is\_empty@{heap\_is\_empty}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heap\_is\_empty()}{heap\_is\_empty()}}
+{\footnotesize\ttfamily \label{heap_8h_a62f0b32d4ae7ebfa9780dbda1fcc71d6} 
+int heap\+\_\+is\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}}]{heap}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the heap is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the heap is empty, 0 otherwise
+\end{DoxyReturn}
+The heap is empty if its size equals 0
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if empty, 0 otherwise 
+\end{DoxyReturn}
+\Hypertarget{heap_8h_ab62b6464e8d5da1d06343441e1c36333}\index{heap.h@{heap.h}!heap\_is\_full@{heap\_is\_full}}
+\index{heap\_is\_full@{heap\_is\_full}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heap\_is\_full()}{heap\_is\_full()}}
+{\footnotesize\ttfamily \label{heap_8h_ab62b6464e8d5da1d06343441e1c36333} 
+int heap\+\_\+is\+\_\+full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}}]{heap}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the heap is full. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the heap is full, 0 otherwise
+\end{DoxyReturn}
+The heap is full if its size equals its capacity
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if full, 0 otherwise 
+\end{DoxyReturn}
+\Hypertarget{heap_8h_adf3fd90d8b5f71e543f780b6d61e6140}\index{heap.h@{heap.h}!heap\_left\_child@{heap\_left\_child}}
+\index{heap\_left\_child@{heap\_left\_child}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heap\_left\_child()}{heap\_left\_child()}}
+{\footnotesize\ttfamily \label{heap_8h_adf3fd90d8b5f71e543f780b6d61e6140} 
+int heap\+\_\+left\+\_\+child (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Computes the index of the left child node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the parent node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of the left child node
+\end{DoxyReturn}
+Formula\+: (2 \texorpdfstring{$\ast$}{*} index) + 1
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the parent node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of the left child node 
+\end{DoxyReturn}
+\Hypertarget{heap_8h_ae859e93dbbf9c17e97b78d977896c1f8}\index{heap.h@{heap.h}!heap\_load\_binary@{heap\_load\_binary}}
+\index{heap\_load\_binary@{heap\_load\_binary}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heap\_load\_binary()}{heap\_load\_binary()}}
+{\footnotesize\ttfamily \label{heap_8h_ae859e93dbbf9c17e97b78d977896c1f8} 
+\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*} heap\+\_\+load\+\_\+binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Loads a heap from a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the loaded heap, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{heap_8h_ac9c81831cfff46fe54d120b772a2e22c}\index{heap.h@{heap.h}!heap\_parent@{heap\_parent}}
+\index{heap\_parent@{heap\_parent}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heap\_parent()}{heap\_parent()}}
+{\footnotesize\ttfamily \label{heap_8h_ac9c81831cfff46fe54d120b772a2e22c} 
+int heap\+\_\+parent (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Computes the index of a parent node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the child node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of the parent node
+\end{DoxyReturn}
+Formula\+: (index -\/ 1) / 2
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the child node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of the parent node 
+\end{DoxyReturn}
+\Hypertarget{heap_8h_ae1a8c536a1afd85170a0244c568b18a2}\index{heap.h@{heap.h}!heap\_peek@{heap\_peek}}
+\index{heap\_peek@{heap\_peek}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heap\_peek()}{heap\_peek()}}
+{\footnotesize\ttfamily \label{heap_8h_ae1a8c536a1afd85170a0244c568b18a2} 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} heap\+\_\+peek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}}]{heap}{}\end{DoxyParamCaption})}
+
+
+
+Returns the root recipe without removing it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the recipe with the smallest calorie value, or NULL if heap is empty
+\end{DoxyReturn}
+Unlike extract\+\_\+min, this function does not remove the recipe from the heap
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the recipe with the smallest calorie value, or NULL if heap is empty 
+\end{DoxyReturn}
+\Hypertarget{heap_8h_a7f6e4e28fbe87843db17da09ff5140d1}\index{heap.h@{heap.h}!heap\_right\_child@{heap\_right\_child}}
+\index{heap\_right\_child@{heap\_right\_child}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heap\_right\_child()}{heap\_right\_child()}}
+{\footnotesize\ttfamily \label{heap_8h_a7f6e4e28fbe87843db17da09ff5140d1} 
+int heap\+\_\+right\+\_\+child (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Computes the index of the right child node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the parent node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of the right child node
+\end{DoxyReturn}
+Formula\+: (2 \texorpdfstring{$\ast$}{*} index) + 2
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the parent node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of the right child node 
+\end{DoxyReturn}
+\Hypertarget{heap_8h_aecc5cdc687a35c01edc669e9dc6b918b}\index{heap.h@{heap.h}!heap\_save\_binary@{heap\_save\_binary}}
+\index{heap\_save\_binary@{heap\_save\_binary}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heap\_save\_binary()}{heap\_save\_binary()}}
+{\footnotesize\ttfamily \label{heap_8h_aecc5cdc687a35c01edc669e9dc6b918b} 
+int heap\+\_\+save\+\_\+binary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}}]{heap}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Saves the heap to a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap \\
+\hline
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{heap_8h_ae360a8cd3262fa6a61f5a01c8090471c}\index{heap.h@{heap.h}!heap\_sort\_recipes@{heap\_sort\_recipes}}
+\index{heap\_sort\_recipes@{heap\_sort\_recipes}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heap\_sort\_recipes()}{heap\_sort\_recipes()}}
+{\footnotesize\ttfamily \label{heap_8h_ae360a8cd3262fa6a61f5a01c8090471c} 
+void heap\+\_\+sort\+\_\+recipes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{recipes}{, }\item[{int}]{count}{}\end{DoxyParamCaption})}
+
+
+
+Sorts recipes based on their calorie values using heap sort. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipes} & Array of recipe pointers \\
+\hline
+{\em count} & Number of recipes in the array\\
+\hline
+\end{DoxyParams}
+Inserts all recipes into the heap and extracts them in sorted order
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipes} & Array of recipe pointers \\
+\hline
+{\em count} & Number of recipes in the array \\
+\hline
+\end{DoxyParams}
+\Hypertarget{heap_8h_ac2fb89e79c07a9207780988bc6eff91b}\index{heap.h@{heap.h}!heap\_swap@{heap\_swap}}
+\index{heap\_swap@{heap\_swap}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heap\_swap()}{heap\_swap()}}
+{\footnotesize\ttfamily \label{heap_8h_ac2fb89e79c07a9207780988bc6eff91b} 
+void heap\+\_\+swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{recipe1}{, }\item[{\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{recipe2}{}\end{DoxyParamCaption})}
+
+
+
+Swaps two recipes in the heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipe1} & Address of the first recipe pointer \\
+\hline
+{\em recipe2} & Address of the second recipe pointer\\
+\hline
+\end{DoxyParams}
+Used during heapify operations
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipe1} & Address of the first recipe pointer \\
+\hline
+{\em recipe2} & Address of the second recipe pointer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{heap_8h_aa33d7b3c74397a16d67a4f8b2ed301a5}\index{heap.h@{heap.h}!heapify\_down@{heapify\_down}}
+\index{heapify\_down@{heapify\_down}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heapify\_down()}{heapify\_down()}}
+{\footnotesize\ttfamily \label{heap_8h_aa33d7b3c74397a16d67a4f8b2ed301a5} 
+void heapify\+\_\+down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}}]{heap}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Restores the heap property by moving downward from a given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap structure \\
+\hline
+{\em index} & Starting index\\
+\hline
+\end{DoxyParams}
+Called after extraction. Swaps elements if the parent is larger than its children.
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap \\
+\hline
+{\em index} & Starting index \\
+\hline
+\end{DoxyParams}
+\Hypertarget{heap_8h_a2f9f919fcbab3c57df84fa7db87d4af8}\index{heap.h@{heap.h}!heapify\_up@{heapify\_up}}
+\index{heapify\_up@{heapify\_up}!heap.h@{heap.h}}
+\doxysubsubsection{\texorpdfstring{heapify\_up()}{heapify\_up()}}
+{\footnotesize\ttfamily \label{heap_8h_a2f9f919fcbab3c57df84fa7db87d4af8} 
+void heapify\+\_\+up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_heap}{Heap}} \texorpdfstring{$\ast$}{*}}]{heap}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Restores the heap property by moving upward from a given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap structure \\
+\hline
+{\em index} & Starting index\\
+\hline
+\end{DoxyParams}
+Called after insertion. Swaps elements if the child is smaller than its parent.
+
+
+\begin{DoxyParams}{Parameters}
+{\em heap} & Pointer to the heap \\
+\hline
+{\em index} & Starting index \\
+\hline
+\end{DoxyParams}

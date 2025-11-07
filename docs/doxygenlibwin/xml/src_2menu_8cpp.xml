@@ -1,0 +1,597 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="src_2menu_8cpp" kind="file" language="C++">
+    <compoundname>menu.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">cstdlib</includes>
+    <includes refid="menu_8h" local="yes">menu.h</includes>
+    <includes refid="recipe_8h" local="yes">recipe.h</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>graph.h</label>
+        <link refid="graph_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>hash_table.h</label>
+        <link refid="hash__table_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>heap.h</label>
+        <link refid="heap_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>linked_list.h</label>
+        <link refid="linked__list_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>menu.h</label>
+        <link refid="menu_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>recipe.h</label>
+        <link refid="recipe_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>sparse_matrix.h</label>
+        <link refid="sparse__matrix_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>stack.h</label>
+        <link refid="stack_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/recipe/src/menu.cpp</label>
+        <link refid="src_2menu_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstdlib</label>
+      </node>
+      <node id="20">
+        <label>ctype.h</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>limits</label>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+      <node id="11">
+        <label>stdio.h</label>
+      </node>
+      <node id="12">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="18">
+        <label>string.h</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_menu" prot="public">Menu</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="src_2menu_8cpp_1aff6c831918692405e75fc55c43424304" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearConsole</definition>
+        <argsstring>()</argsstring>
+        <name>clearConsole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/menu.cpp" line="23" column="6" bodyfile="src/recipe/src/menu.cpp" bodystart="23" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="src_2menu_8cpp_1ab80f005039b55cdbdbea52bbbad3c622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void waitForEnter</definition>
+        <argsstring>()</argsstring>
+        <name>waitForEnter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/menu.cpp" line="31" column="6" bodyfile="src/recipe/src/menu.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="src_2menu_8cpp_1a19cad918a5c50d77ebaa53ac53c56c6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string safeStringInput</definition>
+        <argsstring>(const std::string &amp;prompt)</argsstring>
+        <name>safeStringInput</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>prompt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/menu.cpp" line="36" column="13" bodyfile="src/recipe/src/menu.cpp" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="src_2menu_8cpp_1ab790bb98171d4a4ecc359895f72b482c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int safeIntInput</definition>
+        <argsstring>(const std::string &amp;prompt=&quot;&quot;)</argsstring>
+        <name>safeIntInput</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>prompt</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/menu.cpp" line="43" column="5" bodyfile="src/recipe/src/menu.cpp" bodystart="43" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="src_2menu_8cpp_1a3526a651681886822cccec13250be5b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="struct_app_context" kindref="compound">AppContext</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; AppContext &gt; app_context_create</definition>
+        <argsstring>()</argsstring>
+        <name>app_context_create</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Creates and initializes the application context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the created context, or NULL on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/menu.cpp" line="62" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="62" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="src_2menu_8cpp_1a47f43863a0d425d022a1c7df37d73ac9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void app_context_destroy</definition>
+        <argsstring>(AppContext *ctx)</argsstring>
+        <name>app_context_destroy</name>
+        <param>
+          <type><ref refid="struct_app_context" kindref="compound">AppContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Frees all memory used by the application context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the context </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/menu.cpp" line="80" column="6" bodyfile="src/recipe/src/menu.cpp" bodystart="80" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="src_2menu_8cpp_1a57464d54cf94f6b514c90b096e59997d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_menu" kindref="compound">Menu</ref> *</type>
+        <definition>Menu * createMenu</definition>
+        <argsstring>(AppContext *ctx)</argsstring>
+        <name>createMenu</name>
+        <param>
+          <type><ref refid="struct_app_context" kindref="compound">AppContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/menu.cpp" line="309" column="6" bodyfile="src/recipe/src/menu.cpp" bodystart="309" bodyend="311"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="class_menu" kindref="compound">Menu</ref> system for <ref refid="struct_recipe" kindref="compound">Recipe</ref> &amp; Nutrition Tracker (C++ version). </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides application context creation, data loading, and user-driven operations such as adding, viewing, sorting, and searching recipes. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="menu_8h" kindref="compound">menu.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="recipe_8h" kindref="compound">recipe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Helper<sp/>Utilities</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="src_2menu_8cpp_1aff6c831918692405e75fc55c43424304" kindref="member">clearConsole</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_WIN32)<sp/>||<sp/>defined(_WIN64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;cls&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;clear&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="src_2menu_8cpp_1ab80f005039b55cdbdbea52bbbad3c622" kindref="member">waitForEnter</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nPress<sp/>Enter<sp/>to<sp/>continue...&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cin.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(),<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">std::string<sp/><ref refid="src_2menu_8cpp_1a19cad918a5c50d77ebaa53ac53c56c6b" kindref="member">safeStringInput</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>prompt)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>prompt;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>input;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>std::getline(std::cin,<sp/>input);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>input;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="src_2main_8cpp_1a5c7c1d313663e545e15dc7118492596f" kindref="member">safeIntInput</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>prompt<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!prompt.empty())<sp/>std::cout<sp/>&lt;&lt;<sp/>prompt;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(std::cin<sp/>&gt;&gt;<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cin.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(),<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>input!<sp/>Please<sp/>enter<sp/>a<sp/>number.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cin.clear();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cin.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(),<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Application<sp/>Context<sp/>Management</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">std::unique_ptr&lt;AppContext&gt;<sp/><ref refid="src_2menu_8cpp_1a3526a651681886822cccec13250be5b4" kindref="member">app_context_create</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref><sp/>=<sp/>std::make_unique&lt;AppContext&gt;();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;hash_table<sp/><sp/><sp/><sp/>=<sp/><ref refid="hash__table_8h_1a6a646d3a96e37d37ce2b365a965c3ddd" kindref="member">hash_table_create</ref>(<ref refid="menu_8h_1a5fc412260341c1565eba673766b7bf17" kindref="member">MAX_RECIPES</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;list<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="linked__list_8h_1a8668cbe6c584fe11e610d2895f0f16c7" kindref="member">list_create</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;stack<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="stack_8h_1ae5a3d0d7d18942221d081e0bffd143ff" kindref="member">stack_create</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;queue<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="queue_8h_1a9771bdb407a7026eb675edbac5809d31" kindref="member">queue_create</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;graph<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="graph_8h_1afe0e1755a339d64c48012898e9c477ac" kindref="member">graph_create</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;sparse_matrix<sp/>=<sp/><ref refid="sparse__matrix_8h_1ab766bcb718c51edfb2b98964ddd3ed9c" kindref="member">sparse_matrix_create</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;next_recipe_id<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;hash_table<sp/>||<sp/>!<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;list<sp/>||<sp/>!<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;stack<sp/>||</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;queue<sp/>||<sp/>!<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;graph<sp/>||<sp/>!<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;sparse_matrix)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="src_2menu_8cpp_1a47f43863a0d425d022a1c7df37d73ac9" kindref="member">app_context_destroy</ref>(<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>.get());</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="src_2menu_8cpp_1a47f43863a0d425d022a1c7df37d73ac9" kindref="member">app_context_destroy</ref>(<ref refid="struct_app_context" kindref="compound">AppContext</ref>*<sp/><ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;hash_table)<sp/><sp/><sp/><sp/><ref refid="hash__table_8h_1ab64885ca531b5336f9cffd8169665c3b" kindref="member">hash_table_destroy</ref>(<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;hash_table);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;list)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="linked__list_8h_1ad720671a4abc61ed689060cacc592565" kindref="member">list_destroy</ref>(<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;list);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;stack)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stack_8h_1a1c78193162bca5a7c494c0750a3d58ed" kindref="member">stack_destroy</ref>(<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;stack);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;queue)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="queue_8h_1ad0429aac8d8b9595953b6e25e97797ce" kindref="member">queue_destroy</ref>(<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;queue);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;graph)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="graph_8h_1a0587b1cdbfee591e41793bef7f8e0c87" kindref="member">graph_destroy</ref>(<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;graph);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;sparse_matrix)<sp/><ref refid="sparse__matrix_8h_1af6943df380c6b7afde192c0c1492d6e0" kindref="member">sparse_matrix_destroy</ref>(<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>-&gt;sparse_matrix);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Menu<sp/>Class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_menu" kindref="compound">Menu</ref><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>AppContext*<sp/><ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1af76eaa4a562a452b167705ad5fd87448" kindref="member">safeSparseAddRecipe</ref>(AppContext*<sp/><ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Recipe*<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref><sp/>||<sp/>!<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;sparse_matrix<sp/>||<sp/>!r)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(r-&gt;<ref refid="struct_recipe_1aac29ee4b38aeadc035e53537ce01780a" kindref="member">ingredient_count</ref><sp/>&lt;=<sp/>0<sp/>||<sp/>!r-&gt;<ref refid="struct_recipe_1ae4275d8e6368c7fcb133e099057a919c" kindref="member">ingredients</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>limit<sp/>=<sp/>r-&gt;<ref refid="struct_recipe_1aac29ee4b38aeadc035e53537ce01780a" kindref="member">ingredient_count</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MAX_INGREDIENTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(limit<sp/>&gt;<sp/><ref refid="recipe_8h_1af928cf0c579d7c9386d5038cc1ce9562" kindref="member">MAX_INGREDIENTS</ref>)<sp/>limit<sp/>=<sp/><ref refid="recipe_8h_1af928cf0c579d7c9386d5038cc1ce9562" kindref="member">MAX_INGREDIENTS</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>limit;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/>r-&gt;<ref refid="struct_recipe_1ae4275d8e6368c7fcb133e099057a919c" kindref="member">ingredients</ref>[i];</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(name<sp/>&amp;&amp;<sp/>name[0]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sparse__matrix_8h_1ac6d33da768694dfab65e0740ffb72581" kindref="member">sparse_matrix_add_entry</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;sparse_matrix,<sp/>r-&gt;<ref refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" kindref="member">id</ref>,<sp/>i,<sp/>1,<sp/>name);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_menu_1af6564496c677fadcf4ad99d92b016335" kindref="member">Menu</ref>(AppContext*<sp/>context)<sp/>:<sp/><ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>(context)<sp/>{}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1abc5eb356f1b442b1e27c2a2912a579c8" kindref="member">display</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n===<sp/>RECIPE<sp/>AND<sp/>NUTRITION<sp/>TRACKER<sp/>===\n\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>1.<sp/><sp/>Add<sp/>New<sp/>Recipe\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>2.<sp/><sp/>Edit<sp/>Recipe\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>3.<sp/><sp/>Delete<sp/>Recipe\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>4.<sp/><sp/>Search<sp/>Recipes\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>5.<sp/><sp/>View<sp/>All<sp/>Recipes\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>6.<sp/><sp/>Sort<sp/>Recipes<sp/>by<sp/>Calories\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>7.<sp/><sp/>Create<sp/>Weekly<sp/>Meal<sp/>Plan\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>8.<sp/><sp/>View<sp/>Recipe<sp/>Dependencies\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>9.<sp/><sp/>Find<sp/>Recipes<sp/>by<sp/>Ingredient\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>10.<sp/><sp/>Undo<sp/>Last<sp/>Operation\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>0.<sp/><sp/>Exit\n\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Your<sp/>choice:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1a8657f8c69928d4898f2d6b587b8b76f0" kindref="member">loadSampleData</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Loading<sp/>sample<sp/>recipes...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Recipe*<sp/>pizza<sp/>=<sp/><ref refid="recipe_8h_1a3a010d7d14830ed5a0d045452478edb2" kindref="member">recipe_create</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;next_recipe_id++,<sp/></highlight><highlight class="stringliteral">&quot;Pizza&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lunch&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>45);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(pizza,<sp/></highlight><highlight class="stringliteral">&quot;Flour&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(pizza,<sp/></highlight><highlight class="stringliteral">&quot;Water&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(pizza,<sp/></highlight><highlight class="stringliteral">&quot;Yeast&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(pizza,<sp/></highlight><highlight class="stringliteral">&quot;Tomato<sp/>sauce&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(pizza,<sp/></highlight><highlight class="stringliteral">&quot;Cheese&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a11c82a881ee301bff1d0fc0cbc2e1a46" kindref="member">recipe_set_instructions</ref>(pizza,<sp/></highlight><highlight class="stringliteral">&quot;Prepare<sp/>the<sp/>dough,<sp/>spread<sp/>the<sp/>sauce,<sp/>add<sp/>toppings,<sp/>bake<sp/>at<sp/>200°C<sp/>for<sp/>20<sp/>minutes.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hash__table_8h_1a4b9b4c9c1c914cfad355767e131dd1fd" kindref="member">hash_table_insert</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;hash_table,<sp/>pizza);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="linked__list_8h_1a07c42855eb19c2d8ec4018b5906837c6" kindref="member">list_insert_tail</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;list,<sp/>pizza);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="graph_8h_1afbf1116299f62bb1b472b80a1f695b5b" kindref="member">graph_add_vertex</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;graph,<sp/>pizza-&gt;<ref refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1af76eaa4a562a452b167705ad5fd87448" kindref="member">safeSparseAddRecipe</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>,<sp/>pizza);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Recipe*<sp/>salad<sp/>=<sp/><ref refid="recipe_8h_1a3a010d7d14830ed5a0d045452478edb2" kindref="member">recipe_create</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;next_recipe_id++,<sp/></highlight><highlight class="stringliteral">&quot;Caesar<sp/>Salad&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Dinner&quot;</highlight><highlight class="normal">,<sp/>350,<sp/>20);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(salad,<sp/></highlight><highlight class="stringliteral">&quot;Lettuce&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(salad,<sp/></highlight><highlight class="stringliteral">&quot;Chicken&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(salad,<sp/></highlight><highlight class="stringliteral">&quot;Croutons&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(salad,<sp/></highlight><highlight class="stringliteral">&quot;Parmesan&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(salad,<sp/></highlight><highlight class="stringliteral">&quot;Dressing&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a11c82a881ee301bff1d0fc0cbc2e1a46" kindref="member">recipe_set_instructions</ref>(salad,<sp/></highlight><highlight class="stringliteral">&quot;Wash<sp/>lettuce,<sp/>cook<sp/>chicken,<sp/>mix<sp/>all<sp/>ingredients<sp/>together.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hash__table_8h_1a4b9b4c9c1c914cfad355767e131dd1fd" kindref="member">hash_table_insert</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;hash_table,<sp/>salad);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="linked__list_8h_1a07c42855eb19c2d8ec4018b5906837c6" kindref="member">list_insert_tail</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;list,<sp/>salad);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="graph_8h_1afbf1116299f62bb1b472b80a1f695b5b" kindref="member">graph_add_vertex</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;graph,<sp/>salad-&gt;<ref refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1af76eaa4a562a452b167705ad5fd87448" kindref="member">safeSparseAddRecipe</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>,<sp/>salad);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Recipe*<sp/>smoothie<sp/>=<sp/><ref refid="recipe_8h_1a3a010d7d14830ed5a0d045452478edb2" kindref="member">recipe_create</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;next_recipe_id++,<sp/></highlight><highlight class="stringliteral">&quot;Berry<sp/>Smoothie&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Breakfast&quot;</highlight><highlight class="normal">,<sp/>180,<sp/>5);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(smoothie,<sp/></highlight><highlight class="stringliteral">&quot;Strawberry&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(smoothie,<sp/></highlight><highlight class="stringliteral">&quot;Banana&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(smoothie,<sp/></highlight><highlight class="stringliteral">&quot;Yogurt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(smoothie,<sp/></highlight><highlight class="stringliteral">&quot;Honey&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a11c82a881ee301bff1d0fc0cbc2e1a46" kindref="member">recipe_set_instructions</ref>(smoothie,<sp/></highlight><highlight class="stringliteral">&quot;Place<sp/>all<sp/>ingredients<sp/>in<sp/>a<sp/>blender<sp/>and<sp/>mix<sp/>until<sp/>smooth.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hash__table_8h_1a4b9b4c9c1c914cfad355767e131dd1fd" kindref="member">hash_table_insert</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;hash_table,<sp/>smoothie);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="linked__list_8h_1a07c42855eb19c2d8ec4018b5906837c6" kindref="member">list_insert_tail</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;list,<sp/>smoothie);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="graph_8h_1afbf1116299f62bb1b472b80a1f695b5b" kindref="member">graph_add_vertex</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;graph,<sp/>smoothie-&gt;<ref refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1af76eaa4a562a452b167705ad5fd87448" kindref="member">safeSparseAddRecipe</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>,<sp/>smoothie);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;3<sp/>sample<sp/>recipes<sp/>loaded!\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1acddbb6fb0e281db41d099f69bdd4bcf7" kindref="member">addRecipe</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1a16bdb80a53c2d8ca16020f742eb2a422" kindref="member">clearConsole</ref>();</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n===<sp/>ADD<sp/>NEW<sp/>RECIPE<sp/>===\n\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>name<sp/>=<sp/><ref refid="class_menu_1a5611bdcfb5da07ec6f7698abace2ed7b" kindref="member">safeStringInput</ref>(</highlight><highlight class="stringliteral">&quot;Recipe<sp/>name:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>category<sp/>=<sp/><ref refid="class_menu_1a5611bdcfb5da07ec6f7698abace2ed7b" kindref="member">safeStringInput</ref>(</highlight><highlight class="stringliteral">&quot;Category:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>calories<sp/>=<sp/><ref refid="src_2main_8cpp_1a5c7c1d313663e545e15dc7118492596f" kindref="member">safeIntInput</ref>(</highlight><highlight class="stringliteral">&quot;Calories:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prepTime<sp/>=<sp/><ref refid="src_2main_8cpp_1a5c7c1d313663e545e15dc7118492596f" kindref="member">safeIntInput</ref>(</highlight><highlight class="stringliteral">&quot;Preparation<sp/>time<sp/>(min):<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Recipe*<sp/>r<sp/>=<sp/><ref refid="recipe_8h_1a3a010d7d14830ed5a0d045452478edb2" kindref="member">recipe_create</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;next_recipe_id++,<sp/>name.c_str(),<sp/>category.c_str(),<sp/>calories,<sp/>prepTime);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!r)<sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Memory<sp/>error!\n&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/><ref refid="src_2main_8cpp_1a5c7c1d313663e545e15dc7118492596f" kindref="member">safeIntInput</ref>(</highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>ingredients:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>ingredient<sp/>=<sp/><ref refid="class_menu_1a5611bdcfb5da07ec6f7698abace2ed7b" kindref="member">safeStringInput</ref>(</highlight><highlight class="stringliteral">&quot;Ingredient<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(i<sp/>+<sp/>1)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a80d4dcf1f02dd97b365a11e06b05f0f3" kindref="member">recipe_add_ingredient</ref>(r,<sp/>ingredient.c_str());</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sparse__matrix_8h_1ac6d33da768694dfab65e0740ffb72581" kindref="member">sparse_matrix_add_entry</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;sparse_matrix,<sp/>r-&gt;<ref refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" kindref="member">id</ref>,<sp/>i,<sp/>1,<sp/>ingredient.c_str());</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>inst<sp/>=<sp/><ref refid="class_menu_1a5611bdcfb5da07ec6f7698abace2ed7b" kindref="member">safeStringInput</ref>(</highlight><highlight class="stringliteral">&quot;Instructions:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="recipe_8h_1a11c82a881ee301bff1d0fc0cbc2e1a46" kindref="member">recipe_set_instructions</ref>(r,<sp/>inst.c_str());</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hash__table_8h_1a4b9b4c9c1c914cfad355767e131dd1fd" kindref="member">hash_table_insert</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;hash_table,<sp/>r);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="linked__list_8h_1a07c42855eb19c2d8ec4018b5906837c6" kindref="member">list_insert_tail</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;list,<sp/>r);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="graph_8h_1afbf1116299f62bb1b472b80a1f695b5b" kindref="member">graph_add_vertex</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;graph,<sp/>r-&gt;<ref refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stack_8h_1ac23f75e620cc2a76c24293df4589b5b2" kindref="member">stack_push</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;stack,<sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a96186829480e5b34b1373288e956b1c8" kindref="member">OP_ADD</ref>,<sp/>r);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nSuccessfully<sp/>added!<sp/>ID:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>r-&gt;<ref refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" kindref="member">id</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1ac01b2958589ccecad9f3a0b64c73a30c" kindref="member">waitForEnter</ref>();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1aed724863673f9df5501223bcf19d16a1" kindref="member">viewAllRecipes</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1a16bdb80a53c2d8ca16020f742eb2a422" kindref="member">clearConsole</ref>();</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="linked__list_8h_1a0a0567bba92425d79f4cf96516b5438c" kindref="member">list_display</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;list);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1ac01b2958589ccecad9f3a0b64c73a30c" kindref="member">waitForEnter</ref>();</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1adafb832758ec8f2fc3763362efb65dcf" kindref="member">sortByCalories</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1a16bdb80a53c2d8ca16020f742eb2a422" kindref="member">clearConsole</ref>();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="linked__list_8h_1a76fc18cf55979638bb5e37c25e00a3b2" kindref="member">list_is_empty</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;list))<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;The<sp/>list<sp/>is<sp/>empty!\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1ac01b2958589ccecad9f3a0b64c73a30c" kindref="member">waitForEnter</ref>();</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/><ref refid="linked__list_8h_1a2e0b573f5ab9221c82af4a5eb5a48379" kindref="member">list_size</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;list);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Recipe*&gt;<sp/>arr;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arr.reserve(count);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="linked__list_8h_1a3786f70ab7091247a621d0d253967e13" kindref="member">ListNode</ref>*<sp/>cur<sp/>=<sp/><ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;list-&gt;head;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(cur)<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arr.push_back(cur-&gt;<ref refid="struct_list_node_1af098883f56bf066b15c37ea3f273482f" kindref="member">recipe</ref>);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cur<sp/>=<sp/>cur-&gt;<ref refid="struct_list_node_1ac7af9e18e0586f13d59a52b3501ac4ca" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="heap_8h_1ae360a8cd3262fa6a61f5a01c8090471c" kindref="member">heap_sort_recipes</ref>(arr.data(),<sp/>count);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>count;<sp/>++i)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>i<sp/>+<sp/>1<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>arr[i]-&gt;name<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>arr[i]-&gt;calories<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>kcal\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1ac01b2958589ccecad9f3a0b64c73a30c" kindref="member">waitForEnter</ref>();</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1a757734e223d510705850cbf445a7c57f" kindref="member">createWeeklyPlan</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1a16bdb80a53c2d8ca16020f742eb2a422" kindref="member">clearConsole</ref>();</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="queue_8h_1a9ac9b90b97da28b8c1a98a5c4d784110" kindref="member">queue_is_empty</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;queue))</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="queue_8h_1a10a9464fc764a3362fa624aa6b619481" kindref="member">queue_dequeue</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;queue);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d<sp/>=<sp/>1;<sp/>d<sp/>&lt;=<sp/>7;<sp/>++d)<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/><ref refid="src_2main_8cpp_1a5c7c1d313663e545e15dc7118492596f" kindref="member">safeIntInput</ref>(</highlight><highlight class="stringliteral">&quot;Recipe<sp/>ID<sp/>for<sp/>Day<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(d)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Recipe*<sp/>r<sp/>=<sp/><ref refid="hash__table_8h_1a492aaf8bb9282349d9fc08a55efb3b18" kindref="member">hash_table_search</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;hash_table,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(r)<sp/><ref refid="queue_8h_1a00a32b0e06376d1f4d1afa609b7bbd10" kindref="member">queue_enqueue</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;queue,<sp/>r);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Not<sp/>found!\n&quot;</highlight><highlight class="normal">;<sp/>--d;<sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Weekly<sp/>Plan:\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="queue_8h_1a325b018dee6bbc016b24698c8bcb040d" kindref="member">queue_display</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;queue);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1ac01b2958589ccecad9f3a0b64c73a30c" kindref="member">waitForEnter</ref>();</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1a04000a152cafd2c1147964745cde913e" kindref="member">viewDependencies</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1a16bdb80a53c2d8ca16020f742eb2a422" kindref="member">clearConsole</ref>();</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/><ref refid="src_2main_8cpp_1a5c7c1d313663e545e15dc7118492596f" kindref="member">safeIntInput</ref>(</highlight><highlight class="stringliteral">&quot;Starting<sp/>Recipe<sp/>ID:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="graph_8h_1ac42104632f5a79617fc14602b8b14fc1" kindref="member">graph_reset_visited</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;graph);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="graph_8h_1ae080e05395403df88f3bc1dec98f2bad" kindref="member">graph_display_dependencies</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;graph,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1ac01b2958589ccecad9f3a0b64c73a30c" kindref="member">waitForEnter</ref>();</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1abbe8b9a0323c7a0430e2aa037f208e78" kindref="member">findByIngredient</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1a16bdb80a53c2d8ca16020f742eb2a422" kindref="member">clearConsole</ref>();</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>ing<sp/>=<sp/><ref refid="class_menu_1a5611bdcfb5da07ec6f7698abace2ed7b" kindref="member">safeStringInput</ref>(</highlight><highlight class="stringliteral">&quot;Ingredient:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ids[<ref refid="menu_8h_1a5fc412260341c1565eba673766b7bf17" kindref="member">MAX_RECIPES</ref>];</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>found<sp/>=<sp/><ref refid="sparse__matrix_8h_1ab0aec6cac7e446701ad4d136e2dd7ef3" kindref="member">sparse_matrix_find_recipes_by_ingredient</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;sparse_matrix,<sp/>ing.c_str(),<sp/>ids,<sp/><ref refid="menu_8h_1a5fc412260341c1565eba673766b7bf17" kindref="member">MAX_RECIPES</ref>);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(found<sp/>&lt;=<sp/>0)<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>recipes<sp/>found.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>found<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>recipe(s)<sp/>found:\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>found;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Recipe*<sp/>r<sp/>=<sp/><ref refid="hash__table_8h_1a492aaf8bb9282349d9fc08a55efb3b18" kindref="member">hash_table_search</ref>(<ref refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kindref="member">ctx</ref>-&gt;hash_table,<sp/>ids[i]);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(r)<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>-<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>r-&gt;<ref refid="struct_recipe_1a0feced1fd0c5dc7fca786dcf4455fd1c" kindref="member">name</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(ID:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>r-&gt;<ref refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" kindref="member">id</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_menu_1ac01b2958589ccecad9f3a0b64c73a30c" kindref="member">waitForEnter</ref>();</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1abde82cd0e32b36a6afd4a2a6e1f0551e" kindref="member">handleChoice</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>choice)<sp/>{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(choice)<sp/>{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/><sp/><ref refid="class_menu_1acddbb6fb0e281db41d099f69bdd4bcf7" kindref="member">addRecipe</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>5:<sp/><sp/><ref refid="class_menu_1aed724863673f9df5501223bcf19d16a1" kindref="member">viewAllRecipes</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>6:<sp/><sp/><ref refid="class_menu_1adafb832758ec8f2fc3763362efb65dcf" kindref="member">sortByCalories</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>7:<sp/><sp/><ref refid="class_menu_1a757734e223d510705850cbf445a7c57f" kindref="member">createWeeklyPlan</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>8:<sp/><sp/><ref refid="class_menu_1a04000a152cafd2c1147964745cde913e" kindref="member">viewDependencies</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>9:<sp/><sp/><ref refid="class_menu_1abbe8b9a0323c7a0430e2aa037f208e78" kindref="member">findByIngredient</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Exiting...\n&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>choice!\n&quot;</highlight><highlight class="normal">;<sp/><ref refid="class_menu_1ac01b2958589ccecad9f3a0b64c73a30c" kindref="member">waitForEnter</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Global<sp/>Accessor<sp/>(for<sp/>main.cpp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><ref refid="class_menu" kindref="compound">Menu</ref>*<sp/><ref refid="src_2menu_8cpp_1a57464d54cf94f6b514c90b096e59997d" kindref="member">createMenu</ref>(<ref refid="struct_app_context" kindref="compound">AppContext</ref>*<sp/><ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_menu" kindref="compound">Menu</ref>(<ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/recipe/src/menu.cpp"/>
+  </compounddef>
+</doxygen>

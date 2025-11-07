@@ -1,0 +1,433 @@
+\doxysection{src/menu.c File Reference}
+\hypertarget{menu_8c}{}\label{menu_8c}\index{src/menu.c@{src/menu.c}}
+
+
+\doxylink{class_menu}{Menu} system for \doxylink{struct_recipe}{Recipe} \& Nutrition Tracker.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include "{}menu.\+h"{}}\newline
+Include dependency graph for menu.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_8c_abb7afcb2aac00d64858f447425f8d5a0}{clear\+\_\+console}} (void)
+\begin{DoxyCompactList}\small\item\em Clears the console screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a3390fb57a224a8d98c40e3ce19875315}{wait\+\_\+for\+\_\+enter}} (void)
+\begin{DoxyCompactList}\small\item\em Waits for user to press Enter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_acc60357744b6ce1c8642099e46811eb7}{safe\+\_\+string\+\_\+input}} (char \texorpdfstring{$\ast$}{*}buffer, int size)
+\begin{DoxyCompactList}\small\item\em Safely reads a string input. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{menu_8c_a4c191867e8356303703fb0e2ade94267}{safe\+\_\+int\+\_\+input}} (void)
+\begin{DoxyCompactList}\small\item\em Safely reads an integer input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_a5ebbf48427c43b83a94a321a1714bc2d}{app\+\_\+context\+\_\+create}} (void)
+\begin{DoxyCompactList}\small\item\em Creates and initializes the application context. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a47f43863a0d425d022a1c7df37d73ac9}{app\+\_\+context\+\_\+destroy}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Frees all memory used by the application context. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a507138c5706ae00e0882cfa4fb5b6260}{menu\+\_\+display}} (void)
+\begin{DoxyCompactList}\small\item\em Displays the main menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_ae2e67c2cb4a6f982994df8738767abfa}{menu\+\_\+load\+\_\+sample\+\_\+data}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Loads sample recipe data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_afab4bc71e52345d9369a9be827e7a488}{menu\+\_\+add\+\_\+recipe}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Adds a new recipe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a3a4ca97b58c86009ff703d761d310eca}{menu\+\_\+edit\+\_\+recipe}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Edits an existing recipe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a25745bbb89dbc0157a8a6a785f59435c}{menu\+\_\+delete\+\_\+recipe}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Deletes a recipe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a57ff4d96dc52c6556ad71c0c1f353681}{menu\+\_\+search\+\_\+recipes}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Search submenu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a4fac6502ce9e46a0f43e514ef834364a}{menu\+\_\+search\+\_\+by\+\_\+name}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Search by name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a2777890153059bfe5c9249f076112b7b}{menu\+\_\+search\+\_\+by\+\_\+category}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Search by category. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a8109d2e2da7112863add2a6d82d477f6}{menu\+\_\+search\+\_\+by\+\_\+calorie\+\_\+range}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Search by calorie range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a2f23d198698731a0cd984ae9919d296b}{menu\+\_\+view\+\_\+all\+\_\+recipes}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Displays all recipes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a813d6e03175dda18b8c505b7d8fc36cb}{menu\+\_\+sort\+\_\+by\+\_\+calories}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Sorts recipes by calorie count. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a569a11d7e2b7106c3b2bcfd9c82a4eed}{menu\+\_\+create\+\_\+weekly\+\_\+plan}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Creates a weekly meal plan. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_afd6905a38a0ee313dd2d9bf560387d76}{menu\+\_\+view\+\_\+dependencies}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Displays recipe dependency graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a1b845c0abd7ce5f94ee5a835076d7aaa}{menu\+\_\+find\+\_\+by\+\_\+ingredient}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Finds recipes containing a specific ingredient. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_af1905d874a4b35be85efb0e537c1c0fb}{menu\+\_\+undo}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Undoes the last operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_ae504e5a396a5b84b8160cacfe82fc3b7}{menu\+\_\+handle\+\_\+choice}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}}, int choice)
+\begin{DoxyCompactList}\small\item\em Handles user menu choices. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{menu_8c_a391bd6d0228304fb91eafade11f32977}{menu\+\_\+save\+\_\+context\+\_\+binary}} (const \mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}}, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Saves the entire application context to a binary file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_a537e676a303a454ce785de30bd786eeb}{menu\+\_\+load\+\_\+context\+\_\+binary}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Loads the entire application context from a binary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_menu}{Menu} system for \doxylink{struct_recipe}{Recipe} \& Nutrition Tracker. 
+
+Provides application context management and user interface operations 
+
+\label{doc-func-members}
+\Hypertarget{menu_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{menu_8c_a5ebbf48427c43b83a94a321a1714bc2d}\index{menu.c@{menu.c}!app\_context\_create@{app\_context\_create}}
+\index{app\_context\_create@{app\_context\_create}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{app\_context\_create()}{app\_context\_create()}}
+{\footnotesize\ttfamily \label{menu_8c_a5ebbf48427c43b83a94a321a1714bc2d} 
+\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*} app\+\_\+context\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Creates and initializes the application context. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the created context, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{menu_8c_a47f43863a0d425d022a1c7df37d73ac9}\index{menu.c@{menu.c}!app\_context\_destroy@{app\_context\_destroy}}
+\index{app\_context\_destroy@{app\_context\_destroy}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{app\_context\_destroy()}{app\_context\_destroy()}}
+{\footnotesize\ttfamily \label{menu_8c_a47f43863a0d425d022a1c7df37d73ac9} 
+void app\+\_\+context\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Frees all memory used by the application context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_abb7afcb2aac00d64858f447425f8d5a0}\index{menu.c@{menu.c}!clear\_console@{clear\_console}}
+\index{clear\_console@{clear\_console}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{clear\_console()}{clear\_console()}}
+{\footnotesize\ttfamily \label{menu_8c_abb7afcb2aac00d64858f447425f8d5a0} 
+void clear\+\_\+console (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Clears the console screen. 
+
+\Hypertarget{menu_8c_afab4bc71e52345d9369a9be827e7a488}\index{menu.c@{menu.c}!menu\_add\_recipe@{menu\_add\_recipe}}
+\index{menu\_add\_recipe@{menu\_add\_recipe}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_add\_recipe()}{menu\_add\_recipe()}}
+{\footnotesize\ttfamily \label{menu_8c_afab4bc71e52345d9369a9be827e7a488} 
+void menu\+\_\+add\+\_\+recipe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new recipe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_a569a11d7e2b7106c3b2bcfd9c82a4eed}\index{menu.c@{menu.c}!menu\_create\_weekly\_plan@{menu\_create\_weekly\_plan}}
+\index{menu\_create\_weekly\_plan@{menu\_create\_weekly\_plan}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_create\_weekly\_plan()}{menu\_create\_weekly\_plan()}}
+{\footnotesize\ttfamily \label{menu_8c_a569a11d7e2b7106c3b2bcfd9c82a4eed} 
+void menu\+\_\+create\+\_\+weekly\+\_\+plan (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Creates a weekly meal plan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_a25745bbb89dbc0157a8a6a785f59435c}\index{menu.c@{menu.c}!menu\_delete\_recipe@{menu\_delete\_recipe}}
+\index{menu\_delete\_recipe@{menu\_delete\_recipe}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_delete\_recipe()}{menu\_delete\_recipe()}}
+{\footnotesize\ttfamily \label{menu_8c_a25745bbb89dbc0157a8a6a785f59435c} 
+void menu\+\_\+delete\+\_\+recipe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Deletes a recipe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_a507138c5706ae00e0882cfa4fb5b6260}\index{menu.c@{menu.c}!menu\_display@{menu\_display}}
+\index{menu\_display@{menu\_display}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_display()}{menu\_display()}}
+{\footnotesize\ttfamily \label{menu_8c_a507138c5706ae00e0882cfa4fb5b6260} 
+void menu\+\_\+display (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Displays the main menu. 
+
+\Hypertarget{menu_8c_a3a4ca97b58c86009ff703d761d310eca}\index{menu.c@{menu.c}!menu\_edit\_recipe@{menu\_edit\_recipe}}
+\index{menu\_edit\_recipe@{menu\_edit\_recipe}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_edit\_recipe()}{menu\_edit\_recipe()}}
+{\footnotesize\ttfamily \label{menu_8c_a3a4ca97b58c86009ff703d761d310eca} 
+void menu\+\_\+edit\+\_\+recipe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Edits an existing recipe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_a1b845c0abd7ce5f94ee5a835076d7aaa}\index{menu.c@{menu.c}!menu\_find\_by\_ingredient@{menu\_find\_by\_ingredient}}
+\index{menu\_find\_by\_ingredient@{menu\_find\_by\_ingredient}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_find\_by\_ingredient()}{menu\_find\_by\_ingredient()}}
+{\footnotesize\ttfamily \label{menu_8c_a1b845c0abd7ce5f94ee5a835076d7aaa} 
+void menu\+\_\+find\+\_\+by\+\_\+ingredient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Finds recipes containing a specific ingredient. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_ae504e5a396a5b84b8160cacfe82fc3b7}\index{menu.c@{menu.c}!menu\_handle\_choice@{menu\_handle\_choice}}
+\index{menu\_handle\_choice@{menu\_handle\_choice}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_handle\_choice()}{menu\_handle\_choice()}}
+{\footnotesize\ttfamily \label{menu_8c_ae504e5a396a5b84b8160cacfe82fc3b7} 
+void menu\+\_\+handle\+\_\+choice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{int}]{choice}{}\end{DoxyParamCaption})}
+
+
+
+Handles user menu choices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+{\em choice} & User\textquotesingle{}s menu choice \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_a537e676a303a454ce785de30bd786eeb}\index{menu.c@{menu.c}!menu\_load\_context\_binary@{menu\_load\_context\_binary}}
+\index{menu\_load\_context\_binary@{menu\_load\_context\_binary}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_load\_context\_binary()}{menu\_load\_context\_binary()}}
+{\footnotesize\ttfamily \label{menu_8c_a537e676a303a454ce785de30bd786eeb} 
+\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*} menu\+\_\+load\+\_\+context\+\_\+binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Loads the entire application context from a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the loaded context, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{menu_8c_ae2e67c2cb4a6f982994df8738767abfa}\index{menu.c@{menu.c}!menu\_load\_sample\_data@{menu\_load\_sample\_data}}
+\index{menu\_load\_sample\_data@{menu\_load\_sample\_data}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_load\_sample\_data()}{menu\_load\_sample\_data()}}
+{\footnotesize\ttfamily \label{menu_8c_ae2e67c2cb4a6f982994df8738767abfa} 
+void menu\+\_\+load\+\_\+sample\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Loads sample recipe data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_a391bd6d0228304fb91eafade11f32977}\index{menu.c@{menu.c}!menu\_save\_context\_binary@{menu\_save\_context\_binary}}
+\index{menu\_save\_context\_binary@{menu\_save\_context\_binary}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_save\_context\_binary()}{menu\_save\_context\_binary()}}
+{\footnotesize\ttfamily \label{menu_8c_a391bd6d0228304fb91eafade11f32977} 
+int menu\+\_\+save\+\_\+context\+\_\+binary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Saves the entire application context to a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{menu_8c_a8109d2e2da7112863add2a6d82d477f6}\index{menu.c@{menu.c}!menu\_search\_by\_calorie\_range@{menu\_search\_by\_calorie\_range}}
+\index{menu\_search\_by\_calorie\_range@{menu\_search\_by\_calorie\_range}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_search\_by\_calorie\_range()}{menu\_search\_by\_calorie\_range()}}
+{\footnotesize\ttfamily \label{menu_8c_a8109d2e2da7112863add2a6d82d477f6} 
+void menu\+\_\+search\+\_\+by\+\_\+calorie\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Search by calorie range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_a2777890153059bfe5c9249f076112b7b}\index{menu.c@{menu.c}!menu\_search\_by\_category@{menu\_search\_by\_category}}
+\index{menu\_search\_by\_category@{menu\_search\_by\_category}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_search\_by\_category()}{menu\_search\_by\_category()}}
+{\footnotesize\ttfamily \label{menu_8c_a2777890153059bfe5c9249f076112b7b} 
+void menu\+\_\+search\+\_\+by\+\_\+category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Search by category. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_a4fac6502ce9e46a0f43e514ef834364a}\index{menu.c@{menu.c}!menu\_search\_by\_name@{menu\_search\_by\_name}}
+\index{menu\_search\_by\_name@{menu\_search\_by\_name}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_search\_by\_name()}{menu\_search\_by\_name()}}
+{\footnotesize\ttfamily \label{menu_8c_a4fac6502ce9e46a0f43e514ef834364a} 
+void menu\+\_\+search\+\_\+by\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Search by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_a57ff4d96dc52c6556ad71c0c1f353681}\index{menu.c@{menu.c}!menu\_search\_recipes@{menu\_search\_recipes}}
+\index{menu\_search\_recipes@{menu\_search\_recipes}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_search\_recipes()}{menu\_search\_recipes()}}
+{\footnotesize\ttfamily \label{menu_8c_a57ff4d96dc52c6556ad71c0c1f353681} 
+void menu\+\_\+search\+\_\+recipes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Search submenu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_a813d6e03175dda18b8c505b7d8fc36cb}\index{menu.c@{menu.c}!menu\_sort\_by\_calories@{menu\_sort\_by\_calories}}
+\index{menu\_sort\_by\_calories@{menu\_sort\_by\_calories}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_sort\_by\_calories()}{menu\_sort\_by\_calories()}}
+{\footnotesize\ttfamily \label{menu_8c_a813d6e03175dda18b8c505b7d8fc36cb} 
+void menu\+\_\+sort\+\_\+by\+\_\+calories (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Sorts recipes by calorie count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_af1905d874a4b35be85efb0e537c1c0fb}\index{menu.c@{menu.c}!menu\_undo@{menu\_undo}}
+\index{menu\_undo@{menu\_undo}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_undo()}{menu\_undo()}}
+{\footnotesize\ttfamily \label{menu_8c_af1905d874a4b35be85efb0e537c1c0fb} 
+void menu\+\_\+undo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Undoes the last operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_a2f23d198698731a0cd984ae9919d296b}\index{menu.c@{menu.c}!menu\_view\_all\_recipes@{menu\_view\_all\_recipes}}
+\index{menu\_view\_all\_recipes@{menu\_view\_all\_recipes}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_view\_all\_recipes()}{menu\_view\_all\_recipes()}}
+{\footnotesize\ttfamily \label{menu_8c_a2f23d198698731a0cd984ae9919d296b} 
+void menu\+\_\+view\+\_\+all\+\_\+recipes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Displays all recipes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_afd6905a38a0ee313dd2d9bf560387d76}\index{menu.c@{menu.c}!menu\_view\_dependencies@{menu\_view\_dependencies}}
+\index{menu\_view\_dependencies@{menu\_view\_dependencies}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_view\_dependencies()}{menu\_view\_dependencies()}}
+{\footnotesize\ttfamily \label{menu_8c_afd6905a38a0ee313dd2d9bf560387d76} 
+void menu\+\_\+view\+\_\+dependencies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Displays recipe dependency graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the application context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_a4c191867e8356303703fb0e2ade94267}\index{menu.c@{menu.c}!safe\_int\_input@{safe\_int\_input}}
+\index{safe\_int\_input@{safe\_int\_input}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{safe\_int\_input()}{safe\_int\_input()}}
+{\footnotesize\ttfamily \label{menu_8c_a4c191867e8356303703fb0e2ade94267} 
+int safe\+\_\+int\+\_\+input (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Safely reads an integer input. 
+
+\begin{DoxyReturn}{Returns}
+Integer value read 
+\end{DoxyReturn}
+\Hypertarget{menu_8c_acc60357744b6ce1c8642099e46811eb7}\index{menu.c@{menu.c}!safe\_string\_input@{safe\_string\_input}}
+\index{safe\_string\_input@{safe\_string\_input}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{safe\_string\_input()}{safe\_string\_input()}}
+{\footnotesize\ttfamily \label{menu_8c_acc60357744b6ce1c8642099e46811eb7} 
+void safe\+\_\+string\+\_\+input (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Safely reads a string input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Buffer to store the input \\
+\hline
+{\em size} & Size of the buffer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_a3390fb57a224a8d98c40e3ce19875315}\index{menu.c@{menu.c}!wait\_for\_enter@{wait\_for\_enter}}
+\index{wait\_for\_enter@{wait\_for\_enter}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{wait\_for\_enter()}{wait\_for\_enter()}}
+{\footnotesize\ttfamily \label{menu_8c_a3390fb57a224a8d98c40e3ce19875315} 
+void wait\+\_\+for\+\_\+enter (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Waits for user to press Enter. 
+

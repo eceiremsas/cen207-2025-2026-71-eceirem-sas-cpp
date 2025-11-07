@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="struct_graph_edge" kind="struct" language="C++" prot="public">
+    <compoundname>GraphEdge</compoundname>
+    <includes refid="graph_8h" local="no">graph.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_graph_edge_1a9e5446f687da912ce7016923b5bdd045" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GraphEdge::vertex_id</definition>
+        <argsstring></argsstring>
+        <name>vertex_id</name>
+        <qualifiedname>GraphEdge::vertex_id</qualifiedname>
+        <briefdescription>
+<para>Target vertex (recipe) ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="14" column="9" bodyfile="include/graph.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_graph_edge_1aa6e55cc398840ade9b2588ce3664651d" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>std::string GraphEdge::edge_label</definition>
+        <argsstring>[50]</argsstring>
+        <name>edge_label</name>
+        <qualifiedname>GraphEdge::edge_label</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="15" column="10" bodyfile="include/graph.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_graph_edge_1ab800f80484335c8fc96a5f093af6b6dc" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_graph_edge" kindref="compound">GraphEdge</ref> *</type>
+        <definition>std::shared_ptr&lt; GraphEdge &gt; GraphEdge::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <qualifiedname>GraphEdge::next</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="16" column="21" bodyfile="include/graph.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_graph_edge_1a51926090dae6259f169165b9d4cd090b" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string GraphEdge::edge_label</definition>
+        <argsstring></argsstring>
+        <name>edge_label</name>
+        <qualifiedname>GraphEdge::edge_label</qualifiedname>
+        <briefdescription>
+<para>Label of the edge (e.g., &quot;dough&quot;, &quot;sauce&quot;). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/graph.hpp" line="32" column="17" bodyfile="src/recipe/header/graph.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_graph_edge_1aa45671570b3b7c527468351e39ae3135" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="struct_graph_edge" kindref="compound">GraphEdge</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;GraphEdge&gt; GraphEdge::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <qualifiedname>GraphEdge::next</qualifiedname>
+        <briefdescription>
+<para>Pointer to next outgoing edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/graph.hpp" line="33" column="21" bodyfile="src/recipe/header/graph.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_graph_edge_1a01ff1bab935fe7452b561defd17fd5b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GraphEdge::GraphEdge</definition>
+        <argsstring>(int id, const std::string &amp;label)</argsstring>
+        <name>GraphEdge</name>
+        <qualifiedname>GraphEdge::GraphEdge</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/graph.hpp" line="35" column="5" bodyfile="src/recipe/header/graph.hpp" bodystart="35" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_graph_edge_1a01ff1bab935fe7452b561defd17fd5b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GraphEdge::GraphEdge</definition>
+        <argsstring>(int id, const std::string &amp;label)</argsstring>
+        <name>GraphEdge</name>
+        <qualifiedname>GraphEdge::GraphEdge</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/graph.cpp" line="24" column="5" bodyfile="src/recipe/src/graph.cpp" bodystart="24" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>GraphEdge</label>
+        <link refid="struct_graph_edge"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>+next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/graph.h" line="13" column="1" bodyfile="include/graph.h" bodystart="13" bodyend="17"/>
+    <listofallmembers>
+      <member refid="struct_graph_edge_1aa6e55cc398840ade9b2588ce3664651d" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>edge_label</name></member>
+      <member refid="struct_graph_edge_1a51926090dae6259f169165b9d4cd090b" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>edge_label</name></member>
+      <member refid="struct_graph_edge_1a01ff1bab935fe7452b561defd17fd5b1" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>GraphEdge</name></member>
+      <member refid="struct_graph_edge_1a01ff1bab935fe7452b561defd17fd5b1" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>GraphEdge</name></member>
+      <member refid="struct_graph_edge_1ab800f80484335c8fc96a5f093af6b6dc" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>next</name></member>
+      <member refid="struct_graph_edge_1aa45671570b3b7c527468351e39ae3135" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>next</name></member>
+      <member refid="struct_graph_edge_1a9e5446f687da912ce7016923b5bdd045" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>vertex_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

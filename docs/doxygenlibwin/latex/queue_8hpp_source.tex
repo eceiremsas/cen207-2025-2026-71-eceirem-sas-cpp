@@ -1,0 +1,52 @@
+\doxysection{queue.\+hpp}
+\hypertarget{queue_8hpp_source}{}\label{queue_8hpp_source}\index{src/recipe/header/queue.hpp@{src/recipe/header/queue.hpp}}
+\mbox{\hyperlink{queue_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ QUEUE\_HPP}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ QUEUE\_HPP}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{recipe_8hpp}{recipe.hpp}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{queue_8h_aaeb376445ddec378a36a6538f9e14090}{WEEKLY\_PLAN\_SIZE}}\ =\ 7;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_queue}{Queue}}\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ std::array<std::shared\_ptr<Recipe>,\ \mbox{\hyperlink{queue_8hpp_ad75f181decfdb796a92c7100d1f8223b}{WEEKLY\_PLAN\_SIZE}}>\ \mbox{\hyperlink{struct_queue_ac938597c53e24ca6f36e0ec9bce41334}{recipes}};\ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_queue_aa14801d5c5fea47f3d08483d103e0b57}{front}};\ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_queue_a8303807ce298d63d958f7e5765034d70}{rear}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_queue_a0f56b04440d87d231b06f3e287c8eb6a}{count}};\ \ \ \ \ \ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ ===\ Constructor\ /\ Destructor\ ===}}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{struct_queue_a7cfca3637d57c4a9e37351b3426ffd40}{Queue}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{struct_queue_a163f52a62cceb678725b810e7c20d8b3}{\string~Queue}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ ===\ Core\ Operations\ ===}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_queue_a9b1daa34b3e2dabb214d10b5ba38bc31}{enqueue}}(\textcolor{keyword}{const}\ std::shared\_ptr<Recipe>\&\ recipe);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ std::shared\_ptr<Recipe>\ \mbox{\hyperlink{struct_queue_a7b6ed7bf2c861972479c4e9c81f25831}{dequeue}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ std::shared\_ptr<Recipe>\ \mbox{\hyperlink{struct_queue_a32a0d6d0f9741c4dc34b6229985e28e6}{peek}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ ===\ Status\ Checks\ ===}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_queue_a7614672eed4a720bf0d78d94002bd022}{isEmpty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_queue_a20268d0ce4bb6b9f9a98ad77d30a5a18}{isFull}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_queue_a718803e822635006c843fc28e08041f0}{size}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_queue_a0f56b04440d87d231b06f3e287c8eb6a}{count}};\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ ===\ Display\ ===}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_queue_ad0a95c08d8f38b0c1c92416d115e86de}{display}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//\ ===\ Reset\ /\ Clear\ ===}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_queue_ab6eb2c745db2cbc5595eb2510da003cd}{clear}}();}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ QUEUE\_HPP}}
+
+\end{DoxyCode}

@@ -1,0 +1,33 @@
+\doxysection{src/recipe/src/hash\+\_\+table.cpp File Reference}
+\hypertarget{hash__table_8cpp}{}\label{hash__table_8cpp}\index{src/recipe/src/hash\_table.cpp@{src/recipe/src/hash\_table.cpp}}
+
+
+Hash Table implementation (C++ version).  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include "{}recipe.\+h"{}}\newline
+Include dependency graph for hash\+\_\+table.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hash__table_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_hash_node}{Hash\+Node}}
+\item 
+class \mbox{\hyperlink{struct_hash_table}{Hash\+Table}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hash Table implementation (C++ version). 
+
+Provides O(1) average-\/time access to recipes by their ID. Uses separate chaining with linked lists for collisions. 

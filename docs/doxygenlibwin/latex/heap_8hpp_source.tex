@@ -1,0 +1,62 @@
+\doxysection{heap.\+hpp}
+\hypertarget{heap_8hpp_source}{}\label{heap_8hpp_source}\index{src/recipe/header/heap.hpp@{src/recipe/header/heap.hpp}}
+\mbox{\hyperlink{heap_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ HEAP\_HPP}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ HEAP\_HPP}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{recipe_8hpp}{recipe.hpp}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_heap}{Heap}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ std::vector<std::shared\_ptr<Recipe>>\ \mbox{\hyperlink{struct_heap_ac3ae85552cef8633752a8de26d1f1184}{recipes}};\ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_heap_a96f55831332665f95d0231ee59311246}{capacity}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ ===\ Index\ utility\ functions\ ===}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_heap_a18d58b0aeb106c2f3f42e5dfeeecfef9}{parent}}(\textcolor{keywordtype}{int}\ index)\ \{\ \textcolor{keywordflow}{return}\ (index\ -\/\ 1)\ /\ 2;\ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_heap_ab5202fa6c3b8a2149a7dc6b0d869e46f}{leftChild}}(\textcolor{keywordtype}{int}\ index)\ \{\ \textcolor{keywordflow}{return}\ (2\ *\ index)\ +\ 1;\ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_heap_ac183568173ce7822c911b2bd39c1d516}{rightChild}}(\textcolor{keywordtype}{int}\ index)\ \{\ \textcolor{keywordflow}{return}\ (2\ *\ index)\ +\ 2;\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ ===\ Swap\ helper\ ===}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_heap_af8382600fed5fc3c18049e4bbbb958c6}{swapNodes}}(\textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{int}\ j)\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::swap(\mbox{\hyperlink{struct_heap_ac3ae85552cef8633752a8de26d1f1184}{recipes}}[i],\ \mbox{\hyperlink{struct_heap_ac3ae85552cef8633752a8de26d1f1184}{recipes}}[j]);}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ ===\ Heapify\ helpers\ ===}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_heap_a692cce19ba18f8e709358d335bbd5691}{heapifyUp}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_heap_a1e77b23e735d8ef87753ae6ca2e11a39}{heapifyDown}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ ===\ Constructor\ ===}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{struct_heap_a817e70af29601d05a9c305f8a95e45a8}{Heap}}(\textcolor{keywordtype}{int}\ maxCapacity\ =\ 100);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ ===\ Core\ Operations\ ===}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_heap_a4ad004e8471499a2eb6c1062683057b4}{insert}}(\textcolor{keyword}{const}\ std::shared\_ptr<Recipe>\&\ recipe);}
+\DoxyCodeLine{00047\ \ \ \ \ std::shared\_ptr<Recipe>\ \mbox{\hyperlink{struct_heap_a74ee7f92c266e326080aee3295a94625}{extractMin}}();}
+\DoxyCodeLine{00048\ \ \ \ \ std::shared\_ptr<Recipe>\ \mbox{\hyperlink{struct_heap_a7e2e3f497068d28b08dcbdb1f69eced2}{peek}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ ===\ Sorting\ Utility\ ===}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_heap_af7c247e8794a6e9b561b3cd080b16cf1}{sortRecipes}}(std::vector<std::shared\_ptr<Recipe>>\&\ recipeList);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ ===\ State\ Checks\ ===}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_heap_a0be15b94ddfdd9789ba7dfe54f814ff5}{isEmpty}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_heap_ac3ae85552cef8633752a8de26d1f1184}{recipes}}.empty();\ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_heap_abec5205e1390e48661c50d9e437b0448}{isFull}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\mbox{\hyperlink{struct_heap_ac3ae85552cef8633752a8de26d1f1184}{recipes}}.size())\ >=\ \mbox{\hyperlink{struct_heap_a96f55831332665f95d0231ee59311246}{capacity}};\ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_heap_a672b1f9f5be335a29feb0d72ee5d61d7}{size}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\mbox{\hyperlink{struct_heap_ac3ae85552cef8633752a8de26d1f1184}{recipes}}.size());\ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//\ ===\ Display\ for\ debugging\ ===}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_heap_a69c97af6f6bc2c61e92c9abc70d2f6c7}{display}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ ===\ Destructor\ ===}}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{struct_heap_a42e6cbed41247be900004a82d7f9de9a}{\string~Heap}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HEAP\_HPP}}
+
+\end{DoxyCode}

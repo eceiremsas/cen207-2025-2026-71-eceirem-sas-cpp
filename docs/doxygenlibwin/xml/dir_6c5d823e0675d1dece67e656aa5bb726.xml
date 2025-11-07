@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="dir_6c5d823e0675d1dece67e656aa5bb726" kind="dir">
+    <compoundname>C:/Users/eceir/OneDrive/Masaüstü/cursorunkicen207-2025-2026-71-eceirem-sas-cpp/src/utility</compoundname>
+    <innerdir refid="dir_819403bfbee7eaa3ec74108ab7c64a59">C:/Users/eceir/OneDrive/Masaüstü/cursorunkicen207-2025-2026-71-eceirem-sas-cpp/src/utility/header</innerdir>
+    <innerdir refid="dir_6881701ea82ac38f0edc1c99b8ca70b6">C:/Users/eceir/OneDrive/Masaüstü/cursorunkicen207-2025-2026-71-eceirem-sas-cpp/src/utility/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/eceir/OneDrive/Masaüstü/cursorunkicen207-2025-2026-71-eceirem-sas-cpp/src/utility/"/>
+  </compounddef>
+</doxygen>

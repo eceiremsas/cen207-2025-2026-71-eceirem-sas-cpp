@@ -1,0 +1,3563 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s6\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs12\cgrid \sbasedon0 \snext0 heading 6;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\*\listtable
+{\list\listtemplateid1
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8226 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8226 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8662 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid1}
+{\list\listtemplateid2
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid2}
+{\list\listtemplateid3
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid3}
+}
+{\listoverridetable
+{\listoverride\listid1\listoverridecount0\ls1}
+{\listoverride\listid2\listoverridecount0\ls2}
+{\listoverride\listid3\listoverridecount0\ls3}
+}
+{\info 
+{\title {\comment Recipe Windows Library API Unit Test Documentation  {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+1.0 \par
+}}Recipe Windows Library API Unit Test Documentation}
+{\comment Generated by doxygen 1.15.0.}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt Recipe Windows Library API Unit Test Documentation}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Version 1.0\par\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Table of Contents\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\par \pard\plain 
+\pard\plain \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Calculator Project Library Generation and Testing Template }\par \pard\plain 
+{\tc\tcl1 \v Calculator Project Library Generation and Testing Template}
+{\xe \v Calculator Project Library Generation and Testing Template}
+{\bkmkstart AAAAAAABHY}
+{\bkmkend AAAAAAABHY}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\bkmkstart AAAAAAABHZ}
+{\bkmkend AAAAAAABHZ}
+\par
+{\bkmkstart AAAAAAABIA}
+{\bkmkend AAAAAAABIA}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Overview
+\par}
+{\tc\tcl2 \v Overview}
+This project provides a suite of modules aimed to show how Cmake used with Ctest. Also combines doxygen documentation and test coverage reports\par}
+{\bkmkstart AAAAAAABIB}
+{\bkmkend AAAAAAABIB}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Requirements
+\par}
+{\tc\tcl2 \v Requirements}
+{
+\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+CMake >= 3.12\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+C++ Standard >= 11\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+GoogleTest (for testing modules)\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Visual Studio Communit Edition for Windows Generator\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Ninja for WSL/Linux\par}
+\par
+\par}
+{\bkmkstart AAAAAAABIC}
+{\bkmkend AAAAAAABIC}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Setup Development Environment
+\par}
+{\tc\tcl2 \v Setup Development Environment}
+{\bkmkstart AAAAAAABID}
+{\bkmkend AAAAAAABID}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Step-1 (Run on Windows, Can Effect on WSL)
+\par}
+{\tc\tcl3 \v Step-1 (Run on Windows, Can Effect on WSL)}
+Run 1-configure-pre-commit.bat file to copy 1-pre-commit script to .git/hooks that checkes. {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABHV" }{}}{\fldrslt {\cs37\ul\cf2 README.md}}}, gitignore and doxygenfiles. Also format code with astyle tool\par}
+{\bkmkstart AAAAAAABIE}
+{\bkmkend AAAAAAABIE}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Step-2 (Run on Windows, Can Effect on WSL)
+\par}
+{\tc\tcl3 \v Step-2 (Run on Windows, Can Effect on WSL)}
+If gitignore missing then you can create gitignore with 2-create-git-ignore.bat file run this file.\par}
+{\bkmkstart AAAAAAABIF}
+{\bkmkend AAAAAAABIF}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Step-3 (Only Windows)
+\par}
+{\tc\tcl3 \v Step-3 (Only Windows)}
+Install package managers that we will use to install applications. Run 3-install-package-manager.bat to install choco and scoop package managers\par}
+{\bkmkstart AAAAAAABIG}
+{\bkmkend AAAAAAABIG}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Step-4 (Only Windows)
+\par}
+{\tc\tcl3 \v Step-4 (Only Windows)}
+Run 4-install-windows-enviroment.bat to install required applications.\par}
+{\bkmkstart AAAAAAABIH}
+{\bkmkend AAAAAAABIH}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Step-5 (Only WSL)
+\par}
+{\tc\tcl3 \v Step-5 (Only WSL)}
+Open powershell as admin and enter WSL then goto project folder and run 4-install-wsl-environment.sh to setup WSL environment\par}
+\par}
+{\bkmkstart AAAAAAABII}
+{\bkmkend AAAAAAABII}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Generate Development Environment
+\par}
+{\tc\tcl2 \v Generate Development Environment}
+You can run 9-clean-configure-app-windows.bat to generate Visual Studio Communit Edition Project of this file. Or You can use Cmake project development with Visual Studio Community Edition\par}
+{\bkmkstart AAAAAAABIJ}
+{\bkmkend AAAAAAABIJ}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Build, Test and Package Application on Windows
+\par}
+{\tc\tcl2 \v Build, Test and Package Application on Windows}
+Run 7-build-app-windows.bat to build, test and generate packed binaries for your application on windows.\par
+Also you can run 7-build-doc-windows.bat to only generate documentation and 8-build-test-windows.bat to only test application.\par}
+{\bkmkstart AAAAAAABIK}
+{\bkmkend AAAAAAABIK}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Build, Test and Package Application on WSL
+\par}
+{\tc\tcl2 \v Build, Test and Package Application on WSL}
+Run 7-build-app-linux.sh to build, test and generate packed binaries for your application on WSL environment.\par}
+{\bkmkstart AAAAAAABIL}
+{\bkmkend AAAAAAABIL}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Clean Project
+\par}
+{\tc\tcl2 \v Clean Project}
+You can run 9-clean-project.bat to clean project outputs.\par}
+{\bkmkstart AAAAAAABIM}
+{\bkmkend AAAAAAABIM}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Supported Platforms
+\par}
+{\tc\tcl2 \v Supported Platforms}
+  \par
+{
+\pard\plain 
+\par
+\pard \qc { \field\flddirty {\*\fldinst  INCLUDEPICTURE "badge-ubuntu.svg" \\d \\*MERGEFORMAT}{\fldrslt Image}}
+\par
+\pard \qc \b{Image \field\flddirty{\*\fldinst { SEQ Image \\*Arabic }}{\fldrslt {\noproof 1}} Ubuntu badge}
+\par}
+  \par
+  \par
+{
+\pard\plain 
+\par
+\pard \qc { \field\flddirty {\*\fldinst  INCLUDEPICTURE "badge-macos.svg" \\d \\*MERGEFORMAT}{\fldrslt Image}}
+\par
+\pard \qc \b{Image \field\flddirty{\*\fldinst { SEQ Image \\*Arabic }}{\fldrslt {\noproof 1}} macOS badge}
+\par}
+  \par
+  \par
+{
+\pard\plain 
+\par
+\pard \qc { \field\flddirty {\*\fldinst  INCLUDEPICTURE "badge-windows.svg" \\d \\*MERGEFORMAT}{\fldrslt Image}}
+\par
+\pard \qc \b{Image \field\flddirty{\*\fldinst { SEQ Image \\*Arabic }}{\fldrslt {\noproof 1}} Windows badge}
+\par}
+  \par
+{\bkmkstart AAAAAAABIN}
+{\bkmkend AAAAAAABIN}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Test Coverage Ratios
+\par}
+{\tc\tcl3 \v Test Coverage Ratios}
+{\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\b Note}  : There is a known bug on doxygen following badges are in different folder but has same name for this reason in doxygen html report use same image for all content {\field {\*\fldinst { HYPERLINK "https://github.com/doxygen/doxygen/issues/8362" }{}}{\fldrslt {\cs37\ul\cf2 Images with same name overwrite each other in output directory \'B7 Issue #8362 \'B7 doxygen/doxygen \'B7 GitHub}}}. {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABHV" }{}}{\fldrslt {\cs37\ul\cf2 README.md}}} and WebPage show correct badges. \par
+}\trowd \trgaph108\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\clcbpat16\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx2916
+\clcbpat16\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx5832
+\clcbpat16\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{Coverage Type  \cell }{Windows OS  \cell }{Linux OS (WSL-Ubuntu 20.04)  \cell }
+\pard \widctlpar\intbl\adjustright
+{\row }
+\trowd \trgaph108\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx2916
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx5832
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{Line Based  \cell }{  { \field\flddirty {\*\fldinst  INCLUDEPICTURE "badge_linecoverage.svg" \\d \\*MERGEFORMAT}{\fldrslt Image}}
+{\comment Line Coverage }  \par
+\cell }{  { \field\flddirty {\*\fldinst  INCLUDEPICTURE "badge_linecoverage.svg" \\d \\*MERGEFORMAT}{\fldrslt Image}}
+{\comment Line Coverage }  \par
+\cell }
+\pard \widctlpar\intbl\adjustright
+{\row }
+\trowd \trgaph108\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx2916
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx5832
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{Branch Based  \cell }{  { \field\flddirty {\*\fldinst  INCLUDEPICTURE "badge_branchcoverage.svg" \\d \\*MERGEFORMAT}{\fldrslt Image}}
+{\comment Branch Coverage }  \par
+\cell }{  { \field\flddirty {\*\fldinst  INCLUDEPICTURE "badge_branchcoverage.svg" \\d \\*MERGEFORMAT}{\fldrslt Image}}
+{\comment Branch Coverage }  \par
+\cell }
+\pard \widctlpar\intbl\adjustright
+{\row }
+\trowd \trgaph108\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx2916
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx5832
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{Method Based  \cell }{  { \field\flddirty {\*\fldinst  INCLUDEPICTURE "badge_methodcoverage.svg" \\d \\*MERGEFORMAT}{\fldrslt Image}}
+{\comment Method Coverage }  \par
+\cell }{  { \field\flddirty {\*\fldinst  INCLUDEPICTURE "badge_methodcoverage.svg" \\d \\*MERGEFORMAT}{\fldrslt Image}}
+{\comment Method Coverage }  \par
+\cell }
+\pard \widctlpar\intbl\adjustright
+{\row }
+\pard\plain
+\par
+\par}
+{\bkmkstart AAAAAAABIO}
+{\bkmkend AAAAAAABIO}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentation Coverage Ratios
+\par}
+{\tc\tcl3 \v Documentation Coverage Ratios}
+\trowd \trgaph108\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\clcbpat16\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx2916
+\clcbpat16\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx5832
+\clcbpat16\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{\cell }{Windows OS  \cell }{Linux OS (WSL-Ubuntu 20.04)  \cell }
+\pard \widctlpar\intbl\adjustright
+{\row }
+\trowd \trgaph108\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx2916
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx5832
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\b Coverage Ratio}   \cell }{  { \field\flddirty {\*\fldinst  INCLUDEPICTURE "badge_linecoverage.svg" \\d \\*MERGEFORMAT}{\fldrslt Image}}
+{\comment Line Coverage }  \par
+\cell }{  { \field\flddirty {\*\fldinst  INCLUDEPICTURE "badge_linecoverage.svg" \\d \\*MERGEFORMAT}{\fldrslt Image}}
+{\comment Line Coverage }  \par
+\cell }
+\pard \widctlpar\intbl\adjustright
+{\row }
+\pard\plain
+\par
+{\bkmkstart AAAAAAABIP}
+{\bkmkend AAAAAAABIP}
+{{\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Install Test Results to HTML Converter
+\par}
+{\tc\tcl4 \v Install Test Results to HTML Converter}
+We are using {\field {\*\fldinst { HYPERLINK "https://github.com/inorton/junit2html" }{}}{\fldrslt {\cs37\ul\cf2 GitHub - inorton/junit2html: Turn Junit XML reports into self contained HTML reports}}} to convert junit xml formatted test results to HTML page for reporting also we store logs during test. Use following commands to install this module with pip\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid pip install junit2html\par
+}
+\par}
+\par}
+{\bkmkstart AAAAAAABIQ}
+{\bkmkend AAAAAAABIQ}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Github Actions
+\par}
+{\tc\tcl3 \v Github Actions}
+This project also compiled and tested with Github Actions. If there is a missing setup or problem follow github action script for both Windows and WSL under\par
+{\f2 .github/workflows/cpp.yml} \par
+Github actions take too much time more than 1 hour take to complete build for Windows, MacOS and Linux. Also its paid operation for this reason we use offline batch scripts easy to use.\par}
+{\bkmkstart AAAAAAABIR}
+{\bkmkend AAAAAAABIR}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Build App on Windows
+\par}
+{\tc\tcl3 \v Build App on Windows}
+We have already configured script for build operations. {\f2 7-build-app-windows.bat}  have complete all required tasks and copy outputs to release folder. \par
+{\b Operation Completed in 11-15 minutes.} \par
+{
+\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Clean project outputs\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Create required folders\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Run doxygen for documentation\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Run coverxygen for document coverage report\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Run Report Generator for Documentation Coverage Report\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Configure project for Visual Studio Community Edition\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Build Project Debug and Release\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Install/Copy Required Library and Headers\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Run Tests\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Run OpeCppCoverage for Coverage Data Collection\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Run Reportgenerator for Test Coverage Report\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Copy output report to webpage folder\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Run mkdocs to build webpage\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Compress outputs to release folder, everything is ready for deployment.\par}
+\par
+\par}
+{\bkmkstart AAAAAAABIS}
+{\bkmkend AAAAAAABIS}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Build App on WSL/Linux
+\par}
+{\tc\tcl3 \v Build App on WSL/Linux}
+We are running WSL on Windows 10 and solve our virtual machine problem. We make cross-platform development. After development before commit we run and test app on Windows and WSL with this scripts. To run on WSL you need to install WSL first.\par
+you can use our public notes\par
+{
+\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+{\field {\*\fldinst { HYPERLINK "https://github.com/coruhtech/vs-docker-wsl-cpp-development" }{}}{\fldrslt {\cs37\ul\cf2 https://github.com/coruhtech/vs-docker-wsl-cpp-development}}}
+\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+{\field {\*\fldinst { HYPERLINK "https://github.com/ucoruh/ns3-wsl-win10-setup" }{}}{\fldrslt {\cs37\ul\cf2 GitHub - ucoruh/ns3-wsl-win10-setup: ns3 windows 10 WSL2 setup and usage}}}\par}
+\par
+After WSL installation, right click and open WSL bash and run {\f2 7-build-app-linux.sh}  this will provide similart task with windows and will generate report and libraries on release folder.\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+$End-Of-File$ \par}
+\par}
+}}
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Directory Hierarchy\par \pard\plain 
+{\tc \v Directory Hierarchy}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Directories\par \pard\plain 
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+tests }\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAABHX \\*MERGEFORMAT}{\fldrslt pagenum}}
+{
+\par
+\pard\plain \s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+test_recipes.cpp }\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+}
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Index\par \pard\plain 
+{\tc \v File Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+File List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here is a list of all files with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b tests/{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAB" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+ ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Comprehensive unit tests for all data structures using GoogleTest })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Directory Documentation{\tc \v Directory Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+tests Directory Reference\par \pard\plain 
+{\tc\tcl2 \v tests Directory Reference}
+{\xe \v tests Directory Reference}
+{\bkmkstart AAAAAAABHX}
+{\bkmkend AAAAAAABHX}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Files\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAB" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Comprehensive unit tests for all data structures using GoogleTest. }}\par}
+}
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Documentation{\tc \v File Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+README.md File Reference\par \pard\plain 
+{\tc\tcl2 \v README.md}
+{\xe \v README.md}
+{\bkmkstart AAAAAAABHV}
+{\bkmkend AAAAAAABHV}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+tests/test_recipes.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v tests/test_recipes.cpp}
+{\xe \v tests/test_recipes.cpp}
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Comprehensive unit tests for all data structures using GoogleTest. }}\par
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <gtest/gtest.h>}\par
+{\f2 #include <cstdio>}\par
+{\f2 #include <cstdlib>}\par
+{\f2 #include <cstring>}\par
+{\f2 #include <vector>}\par
+{\f2 #include "../include/recipe.h"}\par
+{\f2 #include "../include/linked_list.h"}\par
+{\f2 #include "../include/xor_linked_list.h"}\par
+{\f2 #include "../include/sparse_matrix.h"}\par
+{\f2 #include "../include/stack.h"}\par
+{\f2 #include "../include/queue.h"}\par
+{\f2 #include "../include/heap.h"}\par
+{\f2 #include "../include/graph.h"}\par
+{\f2 #include "../include/hash_table.h"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for test_recipes.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "test__recipes_8cpp__incl.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (RecipeTest, CreateRecipe)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test recipe creation. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABZ" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (RecipeTest, AddIngredient)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test adding ingredients to recipe. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAACL" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (RecipeTest, SetInstructions)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test setting instructions. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAACW" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (RecipeTest, CompareByID)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test recipe comparison by ID. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADL" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (RecipeTest, CompareByCalories)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test recipe comparison by calories. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADZ" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (RecipeTest, CopyRecipe)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test recipe copy. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAEV" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (RecipeTest, BinaryFileOperations)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file save and load. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAGE" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (LinkedListTest, CreateList)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test linked list creation. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAGN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (LinkedListTest, InsertHead)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test inserting at head. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAHH" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (LinkedListTest, InsertTail)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test inserting at tail. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAIA" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (LinkedListTest, RemoveFromList)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test removing from list. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAIT" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (LinkedListTest, BinaryFileOperations)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for linked list. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJY" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (XORLinkedListTest, CreateList)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test XOR linked list creation. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKH" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (XORLinkedListTest, InsertOperations)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test inserting at head and tail. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAALA" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (XORLinkedListTest, BidirectionalTraversal)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test bidirectional traversal. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAALZ" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (XORLinkedListTest, BinaryFileOperations)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for XOR linked list. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAANA" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (SparseMatrixTest, CreateMatrix)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test sparse matrix creation. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAANI" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (SparseMatrixTest, AddEntry)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test adding entries. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAANY" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (SparseMatrixTest, FindRecipesByIngredient)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test finding recipes by ingredient. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAON" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (SparseMatrixTest, BinaryFileOperations)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for sparse matrix. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAPK" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (StackTest, CreateStack)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test stack creation. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAPU" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (StackTest, PushPop)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test push and pop operations. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAQW" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (StackTest, Peek)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test peek operation. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAARM" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (StackTest, BinaryFileOperations)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for stack. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAASN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (QueueTest, CreateQueue)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test queue creation. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAASX" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (QueueTest, EnqueueDequeue)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test enqueue and dequeue operations. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAATX" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (QueueTest, Peek)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test peek operation. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAUN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (QueueTest, BinaryFileOperations)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for queue. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAVO" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (HeapTest, CreateHeap)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test heap creation. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAVX" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (HeapTest, InsertExtractMin)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test heap insert and extract min. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAXD" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (HeapTest, HeapSort)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test heap sort. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAXW" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (HeapTest, BinaryFileOperations)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for heap. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (GraphTest, CreateGraph)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test graph creation. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZJ" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (GraphTest, AddVertexEdge)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test adding vertices and edges. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABAC" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (GraphTest, BFSTraversal)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test BFS traversal. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABAZ" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (GraphTest, DFSTraversal)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test DFS traversal. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABBU" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (GraphTest, CycleDetection)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test cycle detection. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABCO" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (GraphTest, BinaryFileOperations)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for graph. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABDQ" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (HashTableTest, CreateHashTable)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test hash table creation. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABDZ" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (HashTableTest, InsertSearch)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test insert and search operations. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABFA" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (HashTableTest, Delete)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test delete operation. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABFY" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (HashTableTest, CollisionHandling)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test collision handling. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABGV" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+ (HashTableTest, BinaryFileOperations)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for hash table. }{
+}\par
+}\par}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Comprehensive unit tests for all data structures using GoogleTest. \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Tests all 7 midterm algorithms: Recipe, Linked List, XOR Linked List, Sparse Matrix, Stack, Queue, Heap, Graph (BFS/DFS), Hash Table All tests run automatically without user interaction \par
+}{
+Definition in file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+{\bkmkstart AAAAAAABHW}
+{\bkmkend AAAAAAABHW}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (GraphTest , AddVertexEdge )}}
+\par
+{\bkmkstart AAAAAAAAZJ}
+{\bkmkend AAAAAAAAZJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test adding vertices and edges. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZI" }{}}{\fldrslt {\cs37\ul\cf2 732}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (GraphTest , BFSTraversal )}}
+\par
+{\bkmkstart AAAAAAABAC}
+{\bkmkend AAAAAAABAC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test BFS traversal. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABAB" }{}}{\fldrslt {\cs37\ul\cf2 753}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (GraphTest , BinaryFileOperations )}}
+\par
+{\bkmkstart AAAAAAABCO}
+{\bkmkend AAAAAAABCO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for graph. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABCN" }{}}{\fldrslt {\cs37\ul\cf2 823}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (GraphTest , CreateGraph )}}
+\par
+{\bkmkstart AAAAAAAAZB}
+{\bkmkend AAAAAAAAZB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test graph creation. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZA" }{}}{\fldrslt {\cs37\ul\cf2 722}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (GraphTest , CycleDetection )}}
+\par
+{\bkmkstart AAAAAAABBU}
+{\bkmkend AAAAAAABBU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test cycle detection. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABBT" }{}}{\fldrslt {\cs37\ul\cf2 801}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (GraphTest , DFSTraversal )}}
+\par
+{\bkmkstart AAAAAAABAZ}
+{\bkmkend AAAAAAABAZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test DFS traversal. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABAY" }{}}{\fldrslt {\cs37\ul\cf2 778}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (HashTableTest , BinaryFileOperations )}}
+\par
+{\bkmkstart AAAAAAABGV}
+{\bkmkend AAAAAAABGV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for hash table. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABGU" }{}}{\fldrslt {\cs37\ul\cf2 944}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (HashTableTest , CollisionHandling )}}
+\par
+{\bkmkstart AAAAAAABFY}
+{\bkmkend AAAAAAABFY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test collision handling. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABFX" }{}}{\fldrslt {\cs37\ul\cf2 919}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (HashTableTest , CreateHashTable )}}
+\par
+{\bkmkstart AAAAAAABDQ}
+{\bkmkend AAAAAAABDQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test hash table creation. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABDP" }{}}{\fldrslt {\cs37\ul\cf2 853}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (HashTableTest , Delete )}}
+\par
+{\bkmkstart AAAAAAABFA}
+{\bkmkend AAAAAAABFA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test delete operation. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABEZ" }{}}{\fldrslt {\cs37\ul\cf2 893}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (HashTableTest , InsertSearch )}}
+\par
+{\bkmkstart AAAAAAABDZ}
+{\bkmkend AAAAAAABDZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test insert and search operations. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABDY" }{}}{\fldrslt {\cs37\ul\cf2 864}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (HeapTest , BinaryFileOperations )}}
+\par
+{\bkmkstart AAAAAAAAXW}
+{\bkmkend AAAAAAAAXW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for heap. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAXV" }{}}{\fldrslt {\cs37\ul\cf2 689}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (HeapTest , CreateHeap )}}
+\par
+{\bkmkstart AAAAAAAAVO}
+{\bkmkend AAAAAAAAVO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test heap creation. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAVN" }{}}{\fldrslt {\cs37\ul\cf2 623}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (HeapTest , HeapSort )}}
+\par
+{\bkmkstart AAAAAAAAXD}
+{\bkmkend AAAAAAAAXD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test heap sort. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAXC" }{}}{\fldrslt {\cs37\ul\cf2 668}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (HeapTest , InsertExtractMin )}}
+\par
+{\bkmkstart AAAAAAAAVX}
+{\bkmkend AAAAAAAAVX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test heap insert and extract min. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAVW" }{}}{\fldrslt {\cs37\ul\cf2 634}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (LinkedListTest , BinaryFileOperations )}}
+\par
+{\bkmkstart AAAAAAAAIT}
+{\bkmkend AAAAAAAAIT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for linked list. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAIS" }{}}{\fldrslt {\cs37\ul\cf2 256}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (LinkedListTest , CreateList )}}
+\par
+{\bkmkstart AAAAAAAAGE}
+{\bkmkend AAAAAAAAGE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test linked list creation. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAGD" }{}}{\fldrslt {\cs37\ul\cf2 181}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (LinkedListTest , InsertHead )}}
+\par
+{\bkmkstart AAAAAAAAGN}
+{\bkmkend AAAAAAAAGN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test inserting at head. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAGM" }{}}{\fldrslt {\cs37\ul\cf2 192}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (LinkedListTest , InsertTail )}}
+\par
+{\bkmkstart AAAAAAAAHH}
+{\bkmkend AAAAAAAAHH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test inserting at tail. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAHG" }{}}{\fldrslt {\cs37\ul\cf2 214}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (LinkedListTest , RemoveFromList )}}
+\par
+{\bkmkstart AAAAAAAAIA}
+{\bkmkend AAAAAAAAIA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test removing from list. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAHZ" }{}}{\fldrslt {\cs37\ul\cf2 235}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (QueueTest , BinaryFileOperations )}}
+\par
+{\bkmkstart AAAAAAAAUN}
+{\bkmkend AAAAAAAAUN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for queue. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAUM" }{}}{\fldrslt {\cs37\ul\cf2 594}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (QueueTest , CreateQueue )}}
+\par
+{\bkmkstart AAAAAAAASN}
+{\bkmkend AAAAAAAASN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test queue creation. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAASM" }{}}{\fldrslt {\cs37\ul\cf2 536}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (QueueTest , EnqueueDequeue )}}
+\par
+{\bkmkstart AAAAAAAASX}
+{\bkmkend AAAAAAAASX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test enqueue and dequeue operations. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAASW" }{}}{\fldrslt {\cs37\ul\cf2 548}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (QueueTest , Peek )}}
+\par
+{\bkmkstart AAAAAAAATX}
+{\bkmkend AAAAAAAATX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test peek operation. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAATW" }{}}{\fldrslt {\cs37\ul\cf2 576}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (RecipeTest , AddIngredient )}}
+\par
+{\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test adding ingredients to recipe. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABY" }{}}{\fldrslt {\cs37\ul\cf2 60}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (RecipeTest , BinaryFileOperations )}}
+\par
+{\bkmkstart AAAAAAAAEV}
+{\bkmkend AAAAAAAAEV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file save and load. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAEU" }{}}{\fldrslt {\cs37\ul\cf2 144}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (RecipeTest , CompareByCalories )}}
+\par
+{\bkmkstart AAAAAAAADL}
+{\bkmkend AAAAAAAADL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test recipe comparison by calories. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADK" }{}}{\fldrslt {\cs37\ul\cf2 104}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (RecipeTest , CompareByID )}}
+\par
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test recipe comparison by ID. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAACV" }{}}{\fldrslt {\cs37\ul\cf2 87}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (RecipeTest , CopyRecipe )}}
+\par
+{\bkmkstart AAAAAAAADZ}
+{\bkmkend AAAAAAAADZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test recipe copy. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADY" }{}}{\fldrslt {\cs37\ul\cf2 120}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (RecipeTest , CreateRecipe )}}
+\par
+{\bkmkstart AAAAAAAABN}
+{\bkmkend AAAAAAAABN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test recipe creation. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABM" }{}}{\fldrslt {\cs37\ul\cf2 46}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (RecipeTest , SetInstructions )}}
+\par
+{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test setting instructions. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAACK" }{}}{\fldrslt {\cs37\ul\cf2 74}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (SparseMatrixTest , AddEntry )}}
+\par
+{\bkmkstart AAAAAAAANI}
+{\bkmkend AAAAAAAANI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test adding entries. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAANH" }{}}{\fldrslt {\cs37\ul\cf2 387}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (SparseMatrixTest , BinaryFileOperations )}}
+\par
+{\bkmkstart AAAAAAAAON}
+{\bkmkend AAAAAAAAON}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for sparse matrix. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAOM" }{}}{\fldrslt {\cs37\ul\cf2 422}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (SparseMatrixTest , CreateMatrix )}}
+\par
+{\bkmkstart AAAAAAAANA}
+{\bkmkend AAAAAAAANA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test sparse matrix creation. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAMZ" }{}}{\fldrslt {\cs37\ul\cf2 377}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (SparseMatrixTest , FindRecipesByIngredient )}}
+\par
+{\bkmkstart AAAAAAAANY}
+{\bkmkend AAAAAAAANY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test finding recipes by ingredient. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAANX" }{}}{\fldrslt {\cs37\ul\cf2 405}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (StackTest , BinaryFileOperations )}}
+\par
+{\bkmkstart AAAAAAAARM}
+{\bkmkend AAAAAAAARM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for stack. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAARL" }{}}{\fldrslt {\cs37\ul\cf2 507}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (StackTest , CreateStack )}}
+\par
+{\bkmkstart AAAAAAAAPK}
+{\bkmkend AAAAAAAAPK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test stack creation. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAPJ" }{}}{\fldrslt {\cs37\ul\cf2 447}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (StackTest , Peek )}}
+\par
+{\bkmkstart AAAAAAAAQW}
+{\bkmkend AAAAAAAAQW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test peek operation. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAQV" }{}}{\fldrslt {\cs37\ul\cf2 489}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (StackTest , PushPop )}}
+\par
+{\bkmkstart AAAAAAAAPU}
+{\bkmkend AAAAAAAAPU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test push and pop operations. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAPT" }{}}{\fldrslt {\cs37\ul\cf2 459}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (XORLinkedListTest , BidirectionalTraversal )}}
+\par
+{\bkmkstart AAAAAAAALA}
+{\bkmkend AAAAAAAALA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test bidirectional traversal. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKZ" }{}}{\fldrslt {\cs37\ul\cf2 321}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (XORLinkedListTest , BinaryFileOperations )}}
+\par
+{\bkmkstart AAAAAAAALZ}
+{\bkmkend AAAAAAAALZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test binary file operations for XOR linked list. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAALY" }{}}{\fldrslt {\cs37\ul\cf2 348}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (XORLinkedListTest , CreateList )}}
+\par
+{\bkmkstart AAAAAAAAJY}
+{\bkmkend AAAAAAAAJY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test XOR linked list creation. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJX" }{}}{\fldrslt {\cs37\ul\cf2 289}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+{\xe \v TEST\:test_recipes.cpp}
+{\xe \v test_recipes.cpp\:TEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+TEST (XORLinkedListTest , InsertOperations )}}
+\par
+{\bkmkstart AAAAAAAAKH}
+{\bkmkend AAAAAAAAKH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Test inserting at head and tail. }}\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKG" }{}}{\fldrslt {\cs37\ul\cf2 300}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAA" }{}}{\fldrslt {\cs37\ul\cf2 test_recipes.cpp}}}
+.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+test_recipes.cpp\par \pard\plain 
+{\tc\tcl2 \v tests/test_recipes.cpp}
+{\xe \v tests/test_recipes.cpp}
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAB" }{}}{\fldrslt {\cs37\ul\cf2 Go to the documentation of this file.}}}
+\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAAAAAC}{\bkmkend AAAAAAAAAC}
+00001 \par
+{\bkmkstart AAAAAAAAAD}{\bkmkend AAAAAAAAAD}
+00008 \par
+{\bkmkstart AAAAAAAAAE}{\bkmkend AAAAAAAAAE}
+00009 {\cf21 #include <gtest/gtest.h>}\par
+{\bkmkstart AAAAAAAAAF}{\bkmkend AAAAAAAAAF}
+00010 {\cf21 #include <cstdio>}\par
+{\bkmkstart AAAAAAAAAG}{\bkmkend AAAAAAAAAG}
+00011 {\cf21 #include <cstdlib>}\par
+{\bkmkstart AAAAAAAAAH}{\bkmkend AAAAAAAAAH}
+00012 {\cf21 #include <cstring>}\par
+{\bkmkstart AAAAAAAAAI}{\bkmkend AAAAAAAAAI}
+00013 {\cf21 #include <vector>}\par
+{\bkmkstart AAAAAAAAAJ}{\bkmkend AAAAAAAAAJ}
+00014 {\cf17 extern} {\cf22 "C"} \{\par
+{\bkmkstart AAAAAAAAAK}{\bkmkend AAAAAAAAAK}
+00015 {\cf21 #include "../include/recipe.h"}\par
+{\bkmkstart AAAAAAAAAL}{\bkmkend AAAAAAAAAL}
+00016 {\cf21 #include "../include/linked_list.h"}\par
+{\bkmkstart AAAAAAAAAM}{\bkmkend AAAAAAAAAM}
+00017 {\cf21 #include "../include/xor_linked_list.h"}\par
+{\bkmkstart AAAAAAAAAN}{\bkmkend AAAAAAAAAN}
+00018 {\cf21 #include "../include/sparse_matrix.h"}\par
+{\bkmkstart AAAAAAAAAO}{\bkmkend AAAAAAAAAO}
+00019 {\cf21 #include "../include/stack.h"}\par
+{\bkmkstart AAAAAAAAAP}{\bkmkend AAAAAAAAAP}
+00020 {\cf21 #include "../include/queue.h"}\par
+{\bkmkstart AAAAAAAAAQ}{\bkmkend AAAAAAAAAQ}
+00021 {\cf21 #include "../include/heap.h"}\par
+{\bkmkstart AAAAAAAAAR}{\bkmkend AAAAAAAAAR}
+00022 {\cf21 #include "../include/graph.h"}\par
+{\bkmkstart AAAAAAAAAS}{\bkmkend AAAAAAAAAS}
+00023 {\cf21 #include "../include/hash_table.h"}\par
+{\bkmkstart AAAAAAAAAT}{\bkmkend AAAAAAAAAT}
+00024 \}\par
+{\bkmkstart AAAAAAAAAU}{\bkmkend AAAAAAAAAU}
+00025 \par
+{\bkmkstart AAAAAAAAAV}{\bkmkend AAAAAAAAAV}
+00026 {\cf20 // Helper variables for traversal tests}\par
+{\bkmkstart AAAAAAAAAW}{\bkmkend AAAAAAAAAW}
+00027 {\cf17 static} {\cf18 int} g_forward_count = 0;\par
+{\bkmkstart AAAAAAAAAX}{\bkmkend AAAAAAAAAX}
+00028 {\cf17 static} {\cf18 int} g_backward_count = 0;\par
+{\bkmkstart AAAAAAAAAY}{\bkmkend AAAAAAAAAY}
+00029 {\cf17 static} std::vector<int> g_visited_order;\par
+{\bkmkstart AAAAAAAAAZ}{\bkmkend AAAAAAAAAZ}
+00030 \par
+{\bkmkstart AAAAAAAABA}{\bkmkend AAAAAAAABA}
+00031 {\cf17 static} {\cf18 void} forward_visit_counter(Recipe* r) \{\par
+{\bkmkstart AAAAAAAABB}{\bkmkend AAAAAAAABB}
+00032     {\cf19 if} (r) g_forward_count++;\par
+{\bkmkstart AAAAAAAABC}{\bkmkend AAAAAAAABC}
+00033 \}\par
+{\bkmkstart AAAAAAAABD}{\bkmkend AAAAAAAABD}
+00034 \par
+{\bkmkstart AAAAAAAABE}{\bkmkend AAAAAAAABE}
+00035 {\cf17 static} {\cf18 void} backward_visit_counter(Recipe* r) \{\par
+{\bkmkstart AAAAAAAABF}{\bkmkend AAAAAAAABF}
+00036     {\cf19 if} (r) g_backward_count++;\par
+{\bkmkstart AAAAAAAABG}{\bkmkend AAAAAAAABG}
+00037 \}\par
+{\bkmkstart AAAAAAAABH}{\bkmkend AAAAAAAABH}
+00038 \par
+{\bkmkstart AAAAAAAABI}{\bkmkend AAAAAAAABI}
+00039 {\cf17 static} {\cf18 void} graph_visit_func({\cf18 int} vertex_id) \{\par
+{\bkmkstart AAAAAAAABJ}{\bkmkend AAAAAAAABJ}
+00040     g_visited_order.push_back(vertex_id);\par
+{\bkmkstart AAAAAAAABK}{\bkmkend AAAAAAAABK}
+00041 \}\par
+{\bkmkstart AAAAAAAABL}{\bkmkend AAAAAAAABL}
+00042 \par
+{\bkmkstart AAAAAAAABM}{\bkmkend AAAAAAAABM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 00046}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(RecipeTest, CreateRecipe) \{\par
+{\bkmkstart AAAAAAAABO}{\bkmkend AAAAAAAABO}
+00047     Recipe* r = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAABP}{\bkmkend AAAAAAAABP}
+00048     ASSERT_NE(r, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAABQ}{\bkmkend AAAAAAAABQ}
+00049     EXPECT_EQ(r->id, 1);\par
+{\bkmkstart AAAAAAAABR}{\bkmkend AAAAAAAABR}
+00050     EXPECT_STREQ(r->name, {\cf22 "Pizza"});\par
+{\bkmkstart AAAAAAAABS}{\bkmkend AAAAAAAABS}
+00051     EXPECT_STREQ(r->category, {\cf22 "Lunch"});\par
+{\bkmkstart AAAAAAAABT}{\bkmkend AAAAAAAABT}
+00052     EXPECT_EQ(r->calories, 800);\par
+{\bkmkstart AAAAAAAABU}{\bkmkend AAAAAAAABU}
+00053     EXPECT_EQ(r->preparation_time, 45);\par
+{\bkmkstart AAAAAAAABV}{\bkmkend AAAAAAAABV}
+00054     recipe_destroy(r);\par
+{\bkmkstart AAAAAAAABW}{\bkmkend AAAAAAAABW}
+00055 \}\par
+{\bkmkstart AAAAAAAABX}{\bkmkend AAAAAAAABX}
+00056 \par
+{\bkmkstart AAAAAAAABY}{\bkmkend AAAAAAAABY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABZ" }{}}{\fldrslt {\cs37\ul\cf2 00060}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(RecipeTest, AddIngredient) \{\par
+{\bkmkstart AAAAAAAACA}{\bkmkend AAAAAAAACA}
+00061     Recipe* r = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAACB}{\bkmkend AAAAAAAACB}
+00062     ASSERT_NE(r, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAACC}{\bkmkend AAAAAAAACC}
+00063     \par
+{\bkmkstart AAAAAAAACD}{\bkmkend AAAAAAAACD}
+00064     EXPECT_EQ(recipe_add_ingredient(r, {\cf22 "Flour"}), 1);\par
+{\bkmkstart AAAAAAAACE}{\bkmkend AAAAAAAACE}
+00065     EXPECT_EQ(recipe_add_ingredient(r, {\cf22 "Cheese"}), 1);\par
+{\bkmkstart AAAAAAAACF}{\bkmkend AAAAAAAACF}
+00066     EXPECT_EQ(r->ingredient_count, 2);\par
+{\bkmkstart AAAAAAAACG}{\bkmkend AAAAAAAACG}
+00067     \par
+{\bkmkstart AAAAAAAACH}{\bkmkend AAAAAAAACH}
+00068     recipe_destroy(r);\par
+{\bkmkstart AAAAAAAACI}{\bkmkend AAAAAAAACI}
+00069 \}\par
+{\bkmkstart AAAAAAAACJ}{\bkmkend AAAAAAAACJ}
+00070 \par
+{\bkmkstart AAAAAAAACK}{\bkmkend AAAAAAAACK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAACL" }{}}{\fldrslt {\cs37\ul\cf2 00074}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(RecipeTest, SetInstructions) \{\par
+{\bkmkstart AAAAAAAACM}{\bkmkend AAAAAAAACM}
+00075     Recipe* r = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAACN}{\bkmkend AAAAAAAACN}
+00076     ASSERT_NE(r, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAACO}{\bkmkend AAAAAAAACO}
+00077     \par
+{\bkmkstart AAAAAAAACP}{\bkmkend AAAAAAAACP}
+00078     recipe_set_instructions(r, {\cf22 "Mix ingredients and bake"});\par
+{\bkmkstart AAAAAAAACQ}{\bkmkend AAAAAAAACQ}
+00079     EXPECT_STREQ(r->instructions, {\cf22 "Mix ingredients and bake"});\par
+{\bkmkstart AAAAAAAACR}{\bkmkend AAAAAAAACR}
+00080     \par
+{\bkmkstart AAAAAAAACS}{\bkmkend AAAAAAAACS}
+00081     recipe_destroy(r);\par
+{\bkmkstart AAAAAAAACT}{\bkmkend AAAAAAAACT}
+00082 \}\par
+{\bkmkstart AAAAAAAACU}{\bkmkend AAAAAAAACU}
+00083 \par
+{\bkmkstart AAAAAAAACV}{\bkmkend AAAAAAAACV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAACW" }{}}{\fldrslt {\cs37\ul\cf2 00087}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(RecipeTest, CompareByID) \{\par
+{\bkmkstart AAAAAAAACX}{\bkmkend AAAAAAAACX}
+00088     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAACY}{\bkmkend AAAAAAAACY}
+00089     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAAACZ}{\bkmkend AAAAAAAACZ}
+00090     ASSERT_NE(r1, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAADA}{\bkmkend AAAAAAAADA}
+00091     ASSERT_NE(r2, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAADB}{\bkmkend AAAAAAAADB}
+00092     \par
+{\bkmkstart AAAAAAAADC}{\bkmkend AAAAAAAADC}
+00093     EXPECT_LT(recipe_compare_by_id(r1, r2), 0);\par
+{\bkmkstart AAAAAAAADD}{\bkmkend AAAAAAAADD}
+00094     EXPECT_GT(recipe_compare_by_id(r2, r1), 0);\par
+{\bkmkstart AAAAAAAADE}{\bkmkend AAAAAAAADE}
+00095     EXPECT_EQ(recipe_compare_by_id(r1, r1), 0);\par
+{\bkmkstart AAAAAAAADF}{\bkmkend AAAAAAAADF}
+00096     \par
+{\bkmkstart AAAAAAAADG}{\bkmkend AAAAAAAADG}
+00097     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAADH}{\bkmkend AAAAAAAADH}
+00098     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAADI}{\bkmkend AAAAAAAADI}
+00099 \}\par
+{\bkmkstart AAAAAAAADJ}{\bkmkend AAAAAAAADJ}
+00100 \par
+{\bkmkstart AAAAAAAADK}{\bkmkend AAAAAAAADK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADL" }{}}{\fldrslt {\cs37\ul\cf2 00104}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(RecipeTest, CompareByCalories) \{\par
+{\bkmkstart AAAAAAAADM}{\bkmkend AAAAAAAADM}
+00105     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAADN}{\bkmkend AAAAAAAADN}
+00106     Recipe* r2 = recipe_create(2, {\cf22 "Salad"}, {\cf22 "Lunch"}, 200, 10);\par
+{\bkmkstart AAAAAAAADO}{\bkmkend AAAAAAAADO}
+00107     ASSERT_NE(r1, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAADP}{\bkmkend AAAAAAAADP}
+00108     ASSERT_NE(r2, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAADQ}{\bkmkend AAAAAAAADQ}
+00109     \par
+{\bkmkstart AAAAAAAADR}{\bkmkend AAAAAAAADR}
+00110     EXPECT_GT(recipe_compare_by_calories(r1, r2), 0);\par
+{\bkmkstart AAAAAAAADS}{\bkmkend AAAAAAAADS}
+00111     EXPECT_LT(recipe_compare_by_calories(r2, r1), 0);\par
+{\bkmkstart AAAAAAAADT}{\bkmkend AAAAAAAADT}
+00112     \par
+{\bkmkstart AAAAAAAADU}{\bkmkend AAAAAAAADU}
+00113     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAADV}{\bkmkend AAAAAAAADV}
+00114     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAADW}{\bkmkend AAAAAAAADW}
+00115 \}\par
+{\bkmkstart AAAAAAAADX}{\bkmkend AAAAAAAADX}
+00116 \par
+{\bkmkstart AAAAAAAADY}{\bkmkend AAAAAAAADY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADZ" }{}}{\fldrslt {\cs37\ul\cf2 00120}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(RecipeTest, CopyRecipe) \{\par
+{\bkmkstart AAAAAAAAEA}{\bkmkend AAAAAAAAEA}
+00121     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAEB}{\bkmkend AAAAAAAAEB}
+00122     ASSERT_NE(r1, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAEC}{\bkmkend AAAAAAAAEC}
+00123     recipe_add_ingredient(r1, {\cf22 "Flour"});\par
+{\bkmkstart AAAAAAAAED}{\bkmkend AAAAAAAAED}
+00124     recipe_set_instructions(r1, {\cf22 "Bake for 20 minutes"});\par
+{\bkmkstart AAAAAAAAEE}{\bkmkend AAAAAAAAEE}
+00125     \par
+{\bkmkstart AAAAAAAAEF}{\bkmkend AAAAAAAAEF}
+00126     Recipe* r2 = recipe_copy(r1);\par
+{\bkmkstart AAAAAAAAEG}{\bkmkend AAAAAAAAEG}
+00127     ASSERT_NE(r2, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAEH}{\bkmkend AAAAAAAAEH}
+00128     \par
+{\bkmkstart AAAAAAAAEI}{\bkmkend AAAAAAAAEI}
+00129     EXPECT_EQ(r2->id, r1->id);\par
+{\bkmkstart AAAAAAAAEJ}{\bkmkend AAAAAAAAEJ}
+00130     EXPECT_STREQ(r2->name, r1->name);\par
+{\bkmkstart AAAAAAAAEK}{\bkmkend AAAAAAAAEK}
+00131     EXPECT_EQ(r2->ingredient_count, r1->ingredient_count);\par
+{\bkmkstart AAAAAAAAEL}{\bkmkend AAAAAAAAEL}
+00132     EXPECT_STREQ(r2->instructions, r1->instructions);\par
+{\bkmkstart AAAAAAAAEM}{\bkmkend AAAAAAAAEM}
+00133     \par
+{\bkmkstart AAAAAAAAEN}{\bkmkend AAAAAAAAEN}
+00134     {\cf20 // Verify they are different objects}\par
+{\bkmkstart AAAAAAAAEO}{\bkmkend AAAAAAAAEO}
+00135     EXPECT_NE(r1, r2);\par
+{\bkmkstart AAAAAAAAEP}{\bkmkend AAAAAAAAEP}
+00136     \par
+{\bkmkstart AAAAAAAAEQ}{\bkmkend AAAAAAAAEQ}
+00137     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAAER}{\bkmkend AAAAAAAAER}
+00138     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAAES}{\bkmkend AAAAAAAAES}
+00139 \}\par
+{\bkmkstart AAAAAAAAET}{\bkmkend AAAAAAAAET}
+00140 \par
+{\bkmkstart AAAAAAAAEU}{\bkmkend AAAAAAAAEU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAEV" }{}}{\fldrslt {\cs37\ul\cf2 00144}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(RecipeTest, BinaryFileOperations) \{\par
+{\bkmkstart AAAAAAAAEW}{\bkmkend AAAAAAAAEW}
+00145     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAEX}{\bkmkend AAAAAAAAEX}
+00146     ASSERT_NE(r1, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAEY}{\bkmkend AAAAAAAAEY}
+00147     recipe_add_ingredient(r1, {\cf22 "Flour"});\par
+{\bkmkstart AAAAAAAAEZ}{\bkmkend AAAAAAAAEZ}
+00148     recipe_add_ingredient(r1, {\cf22 "Cheese"});\par
+{\bkmkstart AAAAAAAAFA}{\bkmkend AAAAAAAAFA}
+00149     recipe_set_instructions(r1, {\cf22 "Bake for 20 minutes"});\par
+{\bkmkstart AAAAAAAAFB}{\bkmkend AAAAAAAAFB}
+00150     \par
+{\bkmkstart AAAAAAAAFC}{\bkmkend AAAAAAAAFC}
+00151     {\cf20 // Save to binary file}\par
+{\bkmkstart AAAAAAAAFD}{\bkmkend AAAAAAAAFD}
+00152     {\cf17 const} {\cf18 char}* filename = {\cf22 "test_recipe.bin"};\par
+{\bkmkstart AAAAAAAAFE}{\bkmkend AAAAAAAAFE}
+00153     EXPECT_EQ(recipe_save_binary(r1, filename), 1);\par
+{\bkmkstart AAAAAAAAFF}{\bkmkend AAAAAAAAFF}
+00154     \par
+{\bkmkstart AAAAAAAAFG}{\bkmkend AAAAAAAAFG}
+00155     {\cf20 // Load from binary file}\par
+{\bkmkstart AAAAAAAAFH}{\bkmkend AAAAAAAAFH}
+00156     Recipe* r2 = recipe_load_binary(filename);\par
+{\bkmkstart AAAAAAAAFI}{\bkmkend AAAAAAAAFI}
+00157     ASSERT_NE(r2, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAFJ}{\bkmkend AAAAAAAAFJ}
+00158     \par
+{\bkmkstart AAAAAAAAFK}{\bkmkend AAAAAAAAFK}
+00159     {\cf20 // Verify loaded data}\par
+{\bkmkstart AAAAAAAAFL}{\bkmkend AAAAAAAAFL}
+00160     EXPECT_EQ(r2->id, r1->id);\par
+{\bkmkstart AAAAAAAAFM}{\bkmkend AAAAAAAAFM}
+00161     EXPECT_STREQ(r2->name, r1->name);\par
+{\bkmkstart AAAAAAAAFN}{\bkmkend AAAAAAAAFN}
+00162     EXPECT_STREQ(r2->category, r1->category);\par
+{\bkmkstart AAAAAAAAFO}{\bkmkend AAAAAAAAFO}
+00163     EXPECT_EQ(r2->calories, r1->calories);\par
+{\bkmkstart AAAAAAAAFP}{\bkmkend AAAAAAAAFP}
+00164     EXPECT_EQ(r2->preparation_time, r1->preparation_time);\par
+{\bkmkstart AAAAAAAAFQ}{\bkmkend AAAAAAAAFQ}
+00165     EXPECT_EQ(r2->ingredient_count, r1->ingredient_count);\par
+{\bkmkstart AAAAAAAAFR}{\bkmkend AAAAAAAAFR}
+00166     EXPECT_STREQ(r2->instructions, r1->instructions);\par
+{\bkmkstart AAAAAAAAFS}{\bkmkend AAAAAAAAFS}
+00167     \par
+{\bkmkstart AAAAAAAAFT}{\bkmkend AAAAAAAAFT}
+00168     {\cf20 // Cleanup}\par
+{\bkmkstart AAAAAAAAFU}{\bkmkend AAAAAAAAFU}
+00169     remove(filename);\par
+{\bkmkstart AAAAAAAAFV}{\bkmkend AAAAAAAAFV}
+00170     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAAFW}{\bkmkend AAAAAAAAFW}
+00171     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAAFX}{\bkmkend AAAAAAAAFX}
+00172 \}\par
+{\bkmkstart AAAAAAAAFY}{\bkmkend AAAAAAAAFY}
+00173 \par
+{\bkmkstart AAAAAAAAFZ}{\bkmkend AAAAAAAAFZ}
+00174 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAAAGA}{\bkmkend AAAAAAAAGA}
+00175 {\cf20 // LINKED LIST TESTS}\par
+{\bkmkstart AAAAAAAAGB}{\bkmkend AAAAAAAAGB}
+00176 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAAAGC}{\bkmkend AAAAAAAAGC}
+00177 \par
+{\bkmkstart AAAAAAAAGD}{\bkmkend AAAAAAAAGD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAGE" }{}}{\fldrslt {\cs37\ul\cf2 00181}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(LinkedListTest, CreateList) \{\par
+{\bkmkstart AAAAAAAAGF}{\bkmkend AAAAAAAAGF}
+00182     List* list = list_create();\par
+{\bkmkstart AAAAAAAAGG}{\bkmkend AAAAAAAAGG}
+00183     ASSERT_NE(list, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAGH}{\bkmkend AAAAAAAAGH}
+00184     EXPECT_EQ(list_size(list), 0);\par
+{\bkmkstart AAAAAAAAGI}{\bkmkend AAAAAAAAGI}
+00185     EXPECT_TRUE(list_is_empty(list));\par
+{\bkmkstart AAAAAAAAGJ}{\bkmkend AAAAAAAAGJ}
+00186     list_destroy(list);\par
+{\bkmkstart AAAAAAAAGK}{\bkmkend AAAAAAAAGK}
+00187 \}\par
+{\bkmkstart AAAAAAAAGL}{\bkmkend AAAAAAAAGL}
+00188 \par
+{\bkmkstart AAAAAAAAGM}{\bkmkend AAAAAAAAGM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAGN" }{}}{\fldrslt {\cs37\ul\cf2 00192}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(LinkedListTest, InsertHead) \{\par
+{\bkmkstart AAAAAAAAGO}{\bkmkend AAAAAAAAGO}
+00193     List* list = list_create();\par
+{\bkmkstart AAAAAAAAGP}{\bkmkend AAAAAAAAGP}
+00194     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAGQ}{\bkmkend AAAAAAAAGQ}
+00195     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAAAGR}{\bkmkend AAAAAAAAGR}
+00196     \par
+{\bkmkstart AAAAAAAAGS}{\bkmkend AAAAAAAAGS}
+00197     EXPECT_EQ(list_insert_head(list, r1), 1);\par
+{\bkmkstart AAAAAAAAGT}{\bkmkend AAAAAAAAGT}
+00198     EXPECT_EQ(list_insert_head(list, r2), 1);\par
+{\bkmkstart AAAAAAAAGU}{\bkmkend AAAAAAAAGU}
+00199     EXPECT_EQ(list_size(list), 2);\par
+{\bkmkstart AAAAAAAAGV}{\bkmkend AAAAAAAAGV}
+00200     EXPECT_FALSE(list_is_empty(list));\par
+{\bkmkstart AAAAAAAAGW}{\bkmkend AAAAAAAAGW}
+00201     \par
+{\bkmkstart AAAAAAAAGX}{\bkmkend AAAAAAAAGX}
+00202     Recipe* found = list_find(list, 2);\par
+{\bkmkstart AAAAAAAAGY}{\bkmkend AAAAAAAAGY}
+00203     ASSERT_NE(found, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAGZ}{\bkmkend AAAAAAAAGZ}
+00204     EXPECT_EQ(found->id, 2);\par
+{\bkmkstart AAAAAAAAHA}{\bkmkend AAAAAAAAHA}
+00205     \par
+{\bkmkstart AAAAAAAAHB}{\bkmkend AAAAAAAAHB}
+00206     list_destroy(list);\par
+{\bkmkstart AAAAAAAAHC}{\bkmkend AAAAAAAAHC}
+00207     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAAHD}{\bkmkend AAAAAAAAHD}
+00208     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAAHE}{\bkmkend AAAAAAAAHE}
+00209 \}\par
+{\bkmkstart AAAAAAAAHF}{\bkmkend AAAAAAAAHF}
+00210 \par
+{\bkmkstart AAAAAAAAHG}{\bkmkend AAAAAAAAHG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAHH" }{}}{\fldrslt {\cs37\ul\cf2 00214}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(LinkedListTest, InsertTail) \{\par
+{\bkmkstart AAAAAAAAHI}{\bkmkend AAAAAAAAHI}
+00215     List* list = list_create();\par
+{\bkmkstart AAAAAAAAHJ}{\bkmkend AAAAAAAAHJ}
+00216     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAHK}{\bkmkend AAAAAAAAHK}
+00217     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAAAHL}{\bkmkend AAAAAAAAHL}
+00218     \par
+{\bkmkstart AAAAAAAAHM}{\bkmkend AAAAAAAAHM}
+00219     EXPECT_EQ(list_insert_tail(list, r1), 1);\par
+{\bkmkstart AAAAAAAAHN}{\bkmkend AAAAAAAAHN}
+00220     EXPECT_EQ(list_insert_tail(list, r2), 1);\par
+{\bkmkstart AAAAAAAAHO}{\bkmkend AAAAAAAAHO}
+00221     EXPECT_EQ(list_size(list), 2);\par
+{\bkmkstart AAAAAAAAHP}{\bkmkend AAAAAAAAHP}
+00222     \par
+{\bkmkstart AAAAAAAAHQ}{\bkmkend AAAAAAAAHQ}
+00223     Recipe* found = list_find(list, 1);\par
+{\bkmkstart AAAAAAAAHR}{\bkmkend AAAAAAAAHR}
+00224     ASSERT_NE(found, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAHS}{\bkmkend AAAAAAAAHS}
+00225     EXPECT_EQ(found->id, 1);\par
+{\bkmkstart AAAAAAAAHT}{\bkmkend AAAAAAAAHT}
+00226     \par
+{\bkmkstart AAAAAAAAHU}{\bkmkend AAAAAAAAHU}
+00227     list_destroy(list);\par
+{\bkmkstart AAAAAAAAHV}{\bkmkend AAAAAAAAHV}
+00228     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAAHW}{\bkmkend AAAAAAAAHW}
+00229     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAAHX}{\bkmkend AAAAAAAAHX}
+00230 \}\par
+{\bkmkstart AAAAAAAAHY}{\bkmkend AAAAAAAAHY}
+00231 \par
+{\bkmkstart AAAAAAAAHZ}{\bkmkend AAAAAAAAHZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAIA" }{}}{\fldrslt {\cs37\ul\cf2 00235}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(LinkedListTest, RemoveFromList) \{\par
+{\bkmkstart AAAAAAAAIB}{\bkmkend AAAAAAAAIB}
+00236     List* list = list_create();\par
+{\bkmkstart AAAAAAAAIC}{\bkmkend AAAAAAAAIC}
+00237     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAID}{\bkmkend AAAAAAAAID}
+00238     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAAAIE}{\bkmkend AAAAAAAAIE}
+00239     \par
+{\bkmkstart AAAAAAAAIF}{\bkmkend AAAAAAAAIF}
+00240     list_insert_head(list, r1);\par
+{\bkmkstart AAAAAAAAIG}{\bkmkend AAAAAAAAIG}
+00241     list_insert_head(list, r2);\par
+{\bkmkstart AAAAAAAAIH}{\bkmkend AAAAAAAAIH}
+00242     \par
+{\bkmkstart AAAAAAAAII}{\bkmkend AAAAAAAAII}
+00243     Recipe* removed = list_remove(list, 1);\par
+{\bkmkstart AAAAAAAAIJ}{\bkmkend AAAAAAAAIJ}
+00244     ASSERT_NE(removed, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAIK}{\bkmkend AAAAAAAAIK}
+00245     EXPECT_EQ(removed->id, 1);\par
+{\bkmkstart AAAAAAAAIL}{\bkmkend AAAAAAAAIL}
+00246     EXPECT_EQ(list_size(list), 1);\par
+{\bkmkstart AAAAAAAAIM}{\bkmkend AAAAAAAAIM}
+00247     \par
+{\bkmkstart AAAAAAAAIN}{\bkmkend AAAAAAAAIN}
+00248     recipe_destroy(removed);\par
+{\bkmkstart AAAAAAAAIO}{\bkmkend AAAAAAAAIO}
+00249     list_destroy(list);\par
+{\bkmkstart AAAAAAAAIP}{\bkmkend AAAAAAAAIP}
+00250     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAAIQ}{\bkmkend AAAAAAAAIQ}
+00251 \}\par
+{\bkmkstart AAAAAAAAIR}{\bkmkend AAAAAAAAIR}
+00252 \par
+{\bkmkstart AAAAAAAAIS}{\bkmkend AAAAAAAAIS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAIT" }{}}{\fldrslt {\cs37\ul\cf2 00256}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(LinkedListTest, BinaryFileOperations) \{\par
+{\bkmkstart AAAAAAAAIU}{\bkmkend AAAAAAAAIU}
+00257     List* list = list_create();\par
+{\bkmkstart AAAAAAAAIV}{\bkmkend AAAAAAAAIV}
+00258     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAIW}{\bkmkend AAAAAAAAIW}
+00259     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAAAIX}{\bkmkend AAAAAAAAIX}
+00260     \par
+{\bkmkstart AAAAAAAAIY}{\bkmkend AAAAAAAAIY}
+00261     list_insert_tail(list, r1);\par
+{\bkmkstart AAAAAAAAIZ}{\bkmkend AAAAAAAAIZ}
+00262     list_insert_tail(list, r2);\par
+{\bkmkstart AAAAAAAAJA}{\bkmkend AAAAAAAAJA}
+00263     \par
+{\bkmkstart AAAAAAAAJB}{\bkmkend AAAAAAAAJB}
+00264     {\cf17 const} {\cf18 char}* filename = {\cf22 "test_list.bin"};\par
+{\bkmkstart AAAAAAAAJC}{\bkmkend AAAAAAAAJC}
+00265     EXPECT_EQ(list_save_binary(list, filename), 1);\par
+{\bkmkstart AAAAAAAAJD}{\bkmkend AAAAAAAAJD}
+00266     \par
+{\bkmkstart AAAAAAAAJE}{\bkmkend AAAAAAAAJE}
+00267     List* loaded = list_load_binary(filename);\par
+{\bkmkstart AAAAAAAAJF}{\bkmkend AAAAAAAAJF}
+00268     ASSERT_NE(loaded, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAJG}{\bkmkend AAAAAAAAJG}
+00269     EXPECT_EQ(list_size(loaded), 2);\par
+{\bkmkstart AAAAAAAAJH}{\bkmkend AAAAAAAAJH}
+00270     \par
+{\bkmkstart AAAAAAAAJI}{\bkmkend AAAAAAAAJI}
+00271     Recipe* found = list_find(loaded, 1);\par
+{\bkmkstart AAAAAAAAJJ}{\bkmkend AAAAAAAAJJ}
+00272     ASSERT_NE(found, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAJK}{\bkmkend AAAAAAAAJK}
+00273     EXPECT_EQ(found->id, 1);\par
+{\bkmkstart AAAAAAAAJL}{\bkmkend AAAAAAAAJL}
+00274     \par
+{\bkmkstart AAAAAAAAJM}{\bkmkend AAAAAAAAJM}
+00275     remove(filename);\par
+{\bkmkstart AAAAAAAAJN}{\bkmkend AAAAAAAAJN}
+00276     list_destroy(list);\par
+{\bkmkstart AAAAAAAAJO}{\bkmkend AAAAAAAAJO}
+00277     list_destroy(loaded);\par
+{\bkmkstart AAAAAAAAJP}{\bkmkend AAAAAAAAJP}
+00278     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAAJQ}{\bkmkend AAAAAAAAJQ}
+00279     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAAJR}{\bkmkend AAAAAAAAJR}
+00280 \}\par
+{\bkmkstart AAAAAAAAJS}{\bkmkend AAAAAAAAJS}
+00281 \par
+{\bkmkstart AAAAAAAAJT}{\bkmkend AAAAAAAAJT}
+00282 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAAAJU}{\bkmkend AAAAAAAAJU}
+00283 {\cf20 // XOR LINKED LIST TESTS}\par
+{\bkmkstart AAAAAAAAJV}{\bkmkend AAAAAAAAJV}
+00284 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAAAJW}{\bkmkend AAAAAAAAJW}
+00285 \par
+{\bkmkstart AAAAAAAAJX}{\bkmkend AAAAAAAAJX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJY" }{}}{\fldrslt {\cs37\ul\cf2 00289}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(XORLinkedListTest, CreateList) \{\par
+{\bkmkstart AAAAAAAAJZ}{\bkmkend AAAAAAAAJZ}
+00290     XORList* list = xor_list_create();\par
+{\bkmkstart AAAAAAAAKA}{\bkmkend AAAAAAAAKA}
+00291     ASSERT_NE(list, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAKB}{\bkmkend AAAAAAAAKB}
+00292     EXPECT_EQ(xor_list_size(list), 0);\par
+{\bkmkstart AAAAAAAAKC}{\bkmkend AAAAAAAAKC}
+00293     EXPECT_TRUE(xor_list_is_empty(list));\par
+{\bkmkstart AAAAAAAAKD}{\bkmkend AAAAAAAAKD}
+00294     xor_list_destroy(list);\par
+{\bkmkstart AAAAAAAAKE}{\bkmkend AAAAAAAAKE}
+00295 \}\par
+{\bkmkstart AAAAAAAAKF}{\bkmkend AAAAAAAAKF}
+00296 \par
+{\bkmkstart AAAAAAAAKG}{\bkmkend AAAAAAAAKG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKH" }{}}{\fldrslt {\cs37\ul\cf2 00300}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(XORLinkedListTest, InsertOperations) \{\par
+{\bkmkstart AAAAAAAAKI}{\bkmkend AAAAAAAAKI}
+00301     XORList* list = xor_list_create();\par
+{\bkmkstart AAAAAAAAKJ}{\bkmkend AAAAAAAAKJ}
+00302     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAKK}{\bkmkend AAAAAAAAKK}
+00303     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAAAKL}{\bkmkend AAAAAAAAKL}
+00304     \par
+{\bkmkstart AAAAAAAAKM}{\bkmkend AAAAAAAAKM}
+00305     EXPECT_EQ(xor_list_insert_head(list, r1), 1);\par
+{\bkmkstart AAAAAAAAKN}{\bkmkend AAAAAAAAKN}
+00306     EXPECT_EQ(xor_list_insert_tail(list, r2), 1);\par
+{\bkmkstart AAAAAAAAKO}{\bkmkend AAAAAAAAKO}
+00307     EXPECT_EQ(xor_list_size(list), 2);\par
+{\bkmkstart AAAAAAAAKP}{\bkmkend AAAAAAAAKP}
+00308     \par
+{\bkmkstart AAAAAAAAKQ}{\bkmkend AAAAAAAAKQ}
+00309     Recipe* found = xor_list_find(list, 1);\par
+{\bkmkstart AAAAAAAAKR}{\bkmkend AAAAAAAAKR}
+00310     ASSERT_NE(found, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAKS}{\bkmkend AAAAAAAAKS}
+00311     EXPECT_EQ(found->id, 1);\par
+{\bkmkstart AAAAAAAAKT}{\bkmkend AAAAAAAAKT}
+00312     \par
+{\bkmkstart AAAAAAAAKU}{\bkmkend AAAAAAAAKU}
+00313     xor_list_destroy(list);\par
+{\bkmkstart AAAAAAAAKV}{\bkmkend AAAAAAAAKV}
+00314     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAAKW}{\bkmkend AAAAAAAAKW}
+00315     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAAKX}{\bkmkend AAAAAAAAKX}
+00316 \}\par
+{\bkmkstart AAAAAAAAKY}{\bkmkend AAAAAAAAKY}
+00317 \par
+{\bkmkstart AAAAAAAAKZ}{\bkmkend AAAAAAAAKZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAALA" }{}}{\fldrslt {\cs37\ul\cf2 00321}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(XORLinkedListTest, BidirectionalTraversal) \{\par
+{\bkmkstart AAAAAAAALB}{\bkmkend AAAAAAAALB}
+00322     XORList* list = xor_list_create();\par
+{\bkmkstart AAAAAAAALC}{\bkmkend AAAAAAAALC}
+00323     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAALD}{\bkmkend AAAAAAAALD}
+00324     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAAALE}{\bkmkend AAAAAAAALE}
+00325     Recipe* r3 = recipe_create(3, {\cf22 "Salad"}, {\cf22 "Lunch"}, 200, 10);\par
+{\bkmkstart AAAAAAAALF}{\bkmkend AAAAAAAALF}
+00326     \par
+{\bkmkstart AAAAAAAALG}{\bkmkend AAAAAAAALG}
+00327     xor_list_insert_tail(list, r1);\par
+{\bkmkstart AAAAAAAALH}{\bkmkend AAAAAAAALH}
+00328     xor_list_insert_tail(list, r2);\par
+{\bkmkstart AAAAAAAALI}{\bkmkend AAAAAAAALI}
+00329     xor_list_insert_tail(list, r3);\par
+{\bkmkstart AAAAAAAALJ}{\bkmkend AAAAAAAALJ}
+00330     \par
+{\bkmkstart AAAAAAAALK}{\bkmkend AAAAAAAALK}
+00331     g_forward_count = 0;\par
+{\bkmkstart AAAAAAAALL}{\bkmkend AAAAAAAALL}
+00332     xor_list_traverse_forward(list, forward_visit_counter);\par
+{\bkmkstart AAAAAAAALM}{\bkmkend AAAAAAAALM}
+00333     EXPECT_EQ(g_forward_count, 3);\par
+{\bkmkstart AAAAAAAALN}{\bkmkend AAAAAAAALN}
+00334     \par
+{\bkmkstart AAAAAAAALO}{\bkmkend AAAAAAAALO}
+00335     g_backward_count = 0;\par
+{\bkmkstart AAAAAAAALP}{\bkmkend AAAAAAAALP}
+00336     xor_list_traverse_backward(list, backward_visit_counter);\par
+{\bkmkstart AAAAAAAALQ}{\bkmkend AAAAAAAALQ}
+00337     EXPECT_EQ(g_backward_count, 3);\par
+{\bkmkstart AAAAAAAALR}{\bkmkend AAAAAAAALR}
+00338     \par
+{\bkmkstart AAAAAAAALS}{\bkmkend AAAAAAAALS}
+00339     xor_list_destroy(list);\par
+{\bkmkstart AAAAAAAALT}{\bkmkend AAAAAAAALT}
+00340     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAALU}{\bkmkend AAAAAAAALU}
+00341     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAALV}{\bkmkend AAAAAAAALV}
+00342     recipe_destroy(r3);\par
+{\bkmkstart AAAAAAAALW}{\bkmkend AAAAAAAALW}
+00343 \}\par
+{\bkmkstart AAAAAAAALX}{\bkmkend AAAAAAAALX}
+00344 \par
+{\bkmkstart AAAAAAAALY}{\bkmkend AAAAAAAALY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAALZ" }{}}{\fldrslt {\cs37\ul\cf2 00348}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(XORLinkedListTest, BinaryFileOperations) \{\par
+{\bkmkstart AAAAAAAAMA}{\bkmkend AAAAAAAAMA}
+00349     XORList* list = xor_list_create();\par
+{\bkmkstart AAAAAAAAMB}{\bkmkend AAAAAAAAMB}
+00350     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAMC}{\bkmkend AAAAAAAAMC}
+00351     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAAAMD}{\bkmkend AAAAAAAAMD}
+00352     \par
+{\bkmkstart AAAAAAAAME}{\bkmkend AAAAAAAAME}
+00353     xor_list_insert_tail(list, r1);\par
+{\bkmkstart AAAAAAAAMF}{\bkmkend AAAAAAAAMF}
+00354     xor_list_insert_tail(list, r2);\par
+{\bkmkstart AAAAAAAAMG}{\bkmkend AAAAAAAAMG}
+00355     \par
+{\bkmkstart AAAAAAAAMH}{\bkmkend AAAAAAAAMH}
+00356     {\cf17 const} {\cf18 char}* filename = {\cf22 "test_xor_list.bin"};\par
+{\bkmkstart AAAAAAAAMI}{\bkmkend AAAAAAAAMI}
+00357     EXPECT_EQ(xor_list_save_binary(list, filename), 1);\par
+{\bkmkstart AAAAAAAAMJ}{\bkmkend AAAAAAAAMJ}
+00358     \par
+{\bkmkstart AAAAAAAAMK}{\bkmkend AAAAAAAAMK}
+00359     XORList* loaded = xor_list_load_binary(filename);\par
+{\bkmkstart AAAAAAAAML}{\bkmkend AAAAAAAAML}
+00360     ASSERT_NE(loaded, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAMM}{\bkmkend AAAAAAAAMM}
+00361     EXPECT_EQ(xor_list_size(loaded), 2);\par
+{\bkmkstart AAAAAAAAMN}{\bkmkend AAAAAAAAMN}
+00362     \par
+{\bkmkstart AAAAAAAAMO}{\bkmkend AAAAAAAAMO}
+00363     remove(filename);\par
+{\bkmkstart AAAAAAAAMP}{\bkmkend AAAAAAAAMP}
+00364     xor_list_destroy(list);\par
+{\bkmkstart AAAAAAAAMQ}{\bkmkend AAAAAAAAMQ}
+00365     xor_list_destroy(loaded);\par
+{\bkmkstart AAAAAAAAMR}{\bkmkend AAAAAAAAMR}
+00366     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAAMS}{\bkmkend AAAAAAAAMS}
+00367     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAAMT}{\bkmkend AAAAAAAAMT}
+00368 \}\par
+{\bkmkstart AAAAAAAAMU}{\bkmkend AAAAAAAAMU}
+00369 \par
+{\bkmkstart AAAAAAAAMV}{\bkmkend AAAAAAAAMV}
+00370 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAAAMW}{\bkmkend AAAAAAAAMW}
+00371 {\cf20 // SPARSE MATRIX TESTS}\par
+{\bkmkstart AAAAAAAAMX}{\bkmkend AAAAAAAAMX}
+00372 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAAAMY}{\bkmkend AAAAAAAAMY}
+00373 \par
+{\bkmkstart AAAAAAAAMZ}{\bkmkend AAAAAAAAMZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAANA" }{}}{\fldrslt {\cs37\ul\cf2 00377}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(SparseMatrixTest, CreateMatrix) \{\par
+{\bkmkstart AAAAAAAANB}{\bkmkend AAAAAAAANB}
+00378     SparseMatrix* matrix = sparse_matrix_create();\par
+{\bkmkstart AAAAAAAANC}{\bkmkend AAAAAAAANC}
+00379     ASSERT_NE(matrix, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAND}{\bkmkend AAAAAAAAND}
+00380     EXPECT_EQ(matrix->entry_count, 0);\par
+{\bkmkstart AAAAAAAANE}{\bkmkend AAAAAAAANE}
+00381     sparse_matrix_destroy(matrix);\par
+{\bkmkstart AAAAAAAANF}{\bkmkend AAAAAAAANF}
+00382 \}\par
+{\bkmkstart AAAAAAAANG}{\bkmkend AAAAAAAANG}
+00383 \par
+{\bkmkstart AAAAAAAANH}{\bkmkend AAAAAAAANH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAANI" }{}}{\fldrslt {\cs37\ul\cf2 00387}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(SparseMatrixTest, AddEntry) \{\par
+{\bkmkstart AAAAAAAANJ}{\bkmkend AAAAAAAANJ}
+00388     SparseMatrix* matrix = sparse_matrix_create();\par
+{\bkmkstart AAAAAAAANK}{\bkmkend AAAAAAAANK}
+00389     \par
+{\bkmkstart AAAAAAAANL}{\bkmkend AAAAAAAANL}
+00390     sparse_matrix_add_entry(matrix, 0, 0, 5, {\cf22 "Flour"});\par
+{\bkmkstart AAAAAAAANM}{\bkmkend AAAAAAAANM}
+00391     sparse_matrix_add_entry(matrix, 0, 1, 3, {\cf22 "Cheese"});\par
+{\bkmkstart AAAAAAAANN}{\bkmkend AAAAAAAANN}
+00392     sparse_matrix_add_entry(matrix, 1, 0, 2, {\cf22 "Flour"});\par
+{\bkmkstart AAAAAAAANO}{\bkmkend AAAAAAAANO}
+00393     \par
+{\bkmkstart AAAAAAAANP}{\bkmkend AAAAAAAANP}
+00394     EXPECT_EQ(sparse_matrix_get_value(matrix, 0, 0), 5);\par
+{\bkmkstart AAAAAAAANQ}{\bkmkend AAAAAAAANQ}
+00395     EXPECT_EQ(sparse_matrix_get_value(matrix, 0, 1), 3);\par
+{\bkmkstart AAAAAAAANR}{\bkmkend AAAAAAAANR}
+00396     EXPECT_EQ(sparse_matrix_get_value(matrix, 1, 0), 2);\par
+{\bkmkstart AAAAAAAANS}{\bkmkend AAAAAAAANS}
+00397     EXPECT_EQ(sparse_matrix_get_value(matrix, 1, 1), 0); {\cf20 // Non-existent entry}\par
+{\bkmkstart AAAAAAAANT}{\bkmkend AAAAAAAANT}
+00398     \par
+{\bkmkstart AAAAAAAANU}{\bkmkend AAAAAAAANU}
+00399     sparse_matrix_destroy(matrix);\par
+{\bkmkstart AAAAAAAANV}{\bkmkend AAAAAAAANV}
+00400 \}\par
+{\bkmkstart AAAAAAAANW}{\bkmkend AAAAAAAANW}
+00401 \par
+{\bkmkstart AAAAAAAANX}{\bkmkend AAAAAAAANX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAANY" }{}}{\fldrslt {\cs37\ul\cf2 00405}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(SparseMatrixTest, FindRecipesByIngredient) \{\par
+{\bkmkstart AAAAAAAANZ}{\bkmkend AAAAAAAANZ}
+00406     SparseMatrix* matrix = sparse_matrix_create();\par
+{\bkmkstart AAAAAAAAOA}{\bkmkend AAAAAAAAOA}
+00407     \par
+{\bkmkstart AAAAAAAAOB}{\bkmkend AAAAAAAAOB}
+00408     sparse_matrix_add_entry(matrix, 0, 0, 5, {\cf22 "Flour"});\par
+{\bkmkstart AAAAAAAAOC}{\bkmkend AAAAAAAAOC}
+00409     sparse_matrix_add_entry(matrix, 1, 0, 2, {\cf22 "Flour"});\par
+{\bkmkstart AAAAAAAAOD}{\bkmkend AAAAAAAAOD}
+00410     sparse_matrix_add_entry(matrix, 2, 1, 3, {\cf22 "Cheese"});\par
+{\bkmkstart AAAAAAAAOE}{\bkmkend AAAAAAAAOE}
+00411     \par
+{\bkmkstart AAAAAAAAOF}{\bkmkend AAAAAAAAOF}
+00412     {\cf18 int} recipe_ids[10];\par
+{\bkmkstart AAAAAAAAOG}{\bkmkend AAAAAAAAOG}
+00413     {\cf18 int} count = sparse_matrix_find_recipes_by_ingredient(matrix, {\cf22 "Flour"}, recipe_ids, 10);\par
+{\bkmkstart AAAAAAAAOH}{\bkmkend AAAAAAAAOH}
+00414     EXPECT_EQ(count, 2);\par
+{\bkmkstart AAAAAAAAOI}{\bkmkend AAAAAAAAOI}
+00415     \par
+{\bkmkstart AAAAAAAAOJ}{\bkmkend AAAAAAAAOJ}
+00416     sparse_matrix_destroy(matrix);\par
+{\bkmkstart AAAAAAAAOK}{\bkmkend AAAAAAAAOK}
+00417 \}\par
+{\bkmkstart AAAAAAAAOL}{\bkmkend AAAAAAAAOL}
+00418 \par
+{\bkmkstart AAAAAAAAOM}{\bkmkend AAAAAAAAOM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAON" }{}}{\fldrslt {\cs37\ul\cf2 00422}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(SparseMatrixTest, BinaryFileOperations) \{\par
+{\bkmkstart AAAAAAAAOO}{\bkmkend AAAAAAAAOO}
+00423     SparseMatrix* matrix = sparse_matrix_create();\par
+{\bkmkstart AAAAAAAAOP}{\bkmkend AAAAAAAAOP}
+00424     sparse_matrix_add_entry(matrix, 0, 0, 5, {\cf22 "Flour"});\par
+{\bkmkstart AAAAAAAAOQ}{\bkmkend AAAAAAAAOQ}
+00425     sparse_matrix_add_entry(matrix, 0, 1, 3, {\cf22 "Cheese"});\par
+{\bkmkstart AAAAAAAAOR}{\bkmkend AAAAAAAAOR}
+00426     \par
+{\bkmkstart AAAAAAAAOS}{\bkmkend AAAAAAAAOS}
+00427     {\cf17 const} {\cf18 char}* filename = {\cf22 "test_matrix.bin"};\par
+{\bkmkstart AAAAAAAAOT}{\bkmkend AAAAAAAAOT}
+00428     EXPECT_EQ(sparse_matrix_save_binary(matrix, filename), 1);\par
+{\bkmkstart AAAAAAAAOU}{\bkmkend AAAAAAAAOU}
+00429     \par
+{\bkmkstart AAAAAAAAOV}{\bkmkend AAAAAAAAOV}
+00430     SparseMatrix* loaded = sparse_matrix_load_binary(filename);\par
+{\bkmkstart AAAAAAAAOW}{\bkmkend AAAAAAAAOW}
+00431     ASSERT_NE(loaded, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAOX}{\bkmkend AAAAAAAAOX}
+00432     EXPECT_EQ(loaded->entry_count, 2);\par
+{\bkmkstart AAAAAAAAOY}{\bkmkend AAAAAAAAOY}
+00433     EXPECT_EQ(sparse_matrix_get_value(loaded, 0, 0), 5);\par
+{\bkmkstart AAAAAAAAOZ}{\bkmkend AAAAAAAAOZ}
+00434     \par
+{\bkmkstart AAAAAAAAPA}{\bkmkend AAAAAAAAPA}
+00435     remove(filename);\par
+{\bkmkstart AAAAAAAAPB}{\bkmkend AAAAAAAAPB}
+00436     sparse_matrix_destroy(matrix);\par
+{\bkmkstart AAAAAAAAPC}{\bkmkend AAAAAAAAPC}
+00437     sparse_matrix_destroy(loaded);\par
+{\bkmkstart AAAAAAAAPD}{\bkmkend AAAAAAAAPD}
+00438 \}\par
+{\bkmkstart AAAAAAAAPE}{\bkmkend AAAAAAAAPE}
+00439 \par
+{\bkmkstart AAAAAAAAPF}{\bkmkend AAAAAAAAPF}
+00440 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAAAPG}{\bkmkend AAAAAAAAPG}
+00441 {\cf20 // STACK TESTS}\par
+{\bkmkstart AAAAAAAAPH}{\bkmkend AAAAAAAAPH}
+00442 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAAAPI}{\bkmkend AAAAAAAAPI}
+00443 \par
+{\bkmkstart AAAAAAAAPJ}{\bkmkend AAAAAAAAPJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAPK" }{}}{\fldrslt {\cs37\ul\cf2 00447}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(StackTest, CreateStack) \{\par
+{\bkmkstart AAAAAAAAPL}{\bkmkend AAAAAAAAPL}
+00448     Stack* stack = stack_create();\par
+{\bkmkstart AAAAAAAAPM}{\bkmkend AAAAAAAAPM}
+00449     ASSERT_NE(stack, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAPN}{\bkmkend AAAAAAAAPN}
+00450     EXPECT_TRUE(stack_is_empty(stack));\par
+{\bkmkstart AAAAAAAAPO}{\bkmkend AAAAAAAAPO}
+00451     EXPECT_FALSE(stack_is_full(stack));\par
+{\bkmkstart AAAAAAAAPP}{\bkmkend AAAAAAAAPP}
+00452     EXPECT_EQ(stack_size(stack), 0);\par
+{\bkmkstart AAAAAAAAPQ}{\bkmkend AAAAAAAAPQ}
+00453     stack_destroy(stack);\par
+{\bkmkstart AAAAAAAAPR}{\bkmkend AAAAAAAAPR}
+00454 \}\par
+{\bkmkstart AAAAAAAAPS}{\bkmkend AAAAAAAAPS}
+00455 \par
+{\bkmkstart AAAAAAAAPT}{\bkmkend AAAAAAAAPT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAPU" }{}}{\fldrslt {\cs37\ul\cf2 00459}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(StackTest, PushPop) \{\par
+{\bkmkstart AAAAAAAAPV}{\bkmkend AAAAAAAAPV}
+00460     Stack* stack = stack_create();\par
+{\bkmkstart AAAAAAAAPW}{\bkmkend AAAAAAAAPW}
+00461     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAPX}{\bkmkend AAAAAAAAPX}
+00462     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAAAPY}{\bkmkend AAAAAAAAPY}
+00463     \par
+{\bkmkstart AAAAAAAAPZ}{\bkmkend AAAAAAAAPZ}
+00464     EXPECT_EQ(stack_push(stack, OP_ADD, r1), 1);\par
+{\bkmkstart AAAAAAAAQA}{\bkmkend AAAAAAAAQA}
+00465     EXPECT_EQ(stack_push(stack, OP_EDIT, r2), 1);\par
+{\bkmkstart AAAAAAAAQB}{\bkmkend AAAAAAAAQB}
+00466     EXPECT_EQ(stack_size(stack), 2);\par
+{\bkmkstart AAAAAAAAQC}{\bkmkend AAAAAAAAQC}
+00467     EXPECT_FALSE(stack_is_empty(stack));\par
+{\bkmkstart AAAAAAAAQD}{\bkmkend AAAAAAAAQD}
+00468     \par
+{\bkmkstart AAAAAAAAQE}{\bkmkend AAAAAAAAQE}
+00469     StackOperation* op = stack_pop(stack);\par
+{\bkmkstart AAAAAAAAQF}{\bkmkend AAAAAAAAQF}
+00470     ASSERT_NE(op, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAQG}{\bkmkend AAAAAAAAQG}
+00471     EXPECT_EQ(op->type, OP_EDIT);\par
+{\bkmkstart AAAAAAAAQH}{\bkmkend AAAAAAAAQH}
+00472     EXPECT_EQ(op->recipe->id, 2);\par
+{\bkmkstart AAAAAAAAQI}{\bkmkend AAAAAAAAQI}
+00473     \par
+{\bkmkstart AAAAAAAAQJ}{\bkmkend AAAAAAAAQJ}
+00474     op = stack_pop(stack);\par
+{\bkmkstart AAAAAAAAQK}{\bkmkend AAAAAAAAQK}
+00475     ASSERT_NE(op, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAQL}{\bkmkend AAAAAAAAQL}
+00476     EXPECT_EQ(op->type, OP_ADD);\par
+{\bkmkstart AAAAAAAAQM}{\bkmkend AAAAAAAAQM}
+00477     EXPECT_EQ(op->recipe->id, 1);\par
+{\bkmkstart AAAAAAAAQN}{\bkmkend AAAAAAAAQN}
+00478     \par
+{\bkmkstart AAAAAAAAQO}{\bkmkend AAAAAAAAQO}
+00479     EXPECT_TRUE(stack_is_empty(stack));\par
+{\bkmkstart AAAAAAAAQP}{\bkmkend AAAAAAAAQP}
+00480     \par
+{\bkmkstart AAAAAAAAQQ}{\bkmkend AAAAAAAAQQ}
+00481     stack_destroy(stack);\par
+{\bkmkstart AAAAAAAAQR}{\bkmkend AAAAAAAAQR}
+00482     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAAQS}{\bkmkend AAAAAAAAQS}
+00483     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAAQT}{\bkmkend AAAAAAAAQT}
+00484 \}\par
+{\bkmkstart AAAAAAAAQU}{\bkmkend AAAAAAAAQU}
+00485 \par
+{\bkmkstart AAAAAAAAQV}{\bkmkend AAAAAAAAQV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAQW" }{}}{\fldrslt {\cs37\ul\cf2 00489}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(StackTest, Peek) \{\par
+{\bkmkstart AAAAAAAAQX}{\bkmkend AAAAAAAAQX}
+00490     Stack* stack = stack_create();\par
+{\bkmkstart AAAAAAAAQY}{\bkmkend AAAAAAAAQY}
+00491     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAQZ}{\bkmkend AAAAAAAAQZ}
+00492     \par
+{\bkmkstart AAAAAAAARA}{\bkmkend AAAAAAAARA}
+00493     stack_push(stack, OP_ADD, r1);\par
+{\bkmkstart AAAAAAAARB}{\bkmkend AAAAAAAARB}
+00494     \par
+{\bkmkstart AAAAAAAARC}{\bkmkend AAAAAAAARC}
+00495     StackOperation* op = stack_peek(stack);\par
+{\bkmkstart AAAAAAAARD}{\bkmkend AAAAAAAARD}
+00496     ASSERT_NE(op, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAARE}{\bkmkend AAAAAAAARE}
+00497     EXPECT_EQ(op->type, OP_ADD);\par
+{\bkmkstart AAAAAAAARF}{\bkmkend AAAAAAAARF}
+00498     EXPECT_EQ(stack_size(stack), 1); {\cf20 // Size should not change}\par
+{\bkmkstart AAAAAAAARG}{\bkmkend AAAAAAAARG}
+00499     \par
+{\bkmkstart AAAAAAAARH}{\bkmkend AAAAAAAARH}
+00500     stack_destroy(stack);\par
+{\bkmkstart AAAAAAAARI}{\bkmkend AAAAAAAARI}
+00501     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAARJ}{\bkmkend AAAAAAAARJ}
+00502 \}\par
+{\bkmkstart AAAAAAAARK}{\bkmkend AAAAAAAARK}
+00503 \par
+{\bkmkstart AAAAAAAARL}{\bkmkend AAAAAAAARL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAARM" }{}}{\fldrslt {\cs37\ul\cf2 00507}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(StackTest, BinaryFileOperations) \{\par
+{\bkmkstart AAAAAAAARN}{\bkmkend AAAAAAAARN}
+00508     Stack* stack = stack_create();\par
+{\bkmkstart AAAAAAAARO}{\bkmkend AAAAAAAARO}
+00509     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAARP}{\bkmkend AAAAAAAARP}
+00510     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAAARQ}{\bkmkend AAAAAAAARQ}
+00511     \par
+{\bkmkstart AAAAAAAARR}{\bkmkend AAAAAAAARR}
+00512     stack_push(stack, OP_ADD, r1);\par
+{\bkmkstart AAAAAAAARS}{\bkmkend AAAAAAAARS}
+00513     stack_push(stack, OP_EDIT, r2);\par
+{\bkmkstart AAAAAAAART}{\bkmkend AAAAAAAART}
+00514     \par
+{\bkmkstart AAAAAAAARU}{\bkmkend AAAAAAAARU}
+00515     {\cf17 const} {\cf18 char}* filename = {\cf22 "test_stack.bin"};\par
+{\bkmkstart AAAAAAAARV}{\bkmkend AAAAAAAARV}
+00516     EXPECT_EQ(stack_save_binary(stack, filename), 1);\par
+{\bkmkstart AAAAAAAARW}{\bkmkend AAAAAAAARW}
+00517     \par
+{\bkmkstart AAAAAAAARX}{\bkmkend AAAAAAAARX}
+00518     Stack* loaded = stack_load_binary(filename);\par
+{\bkmkstart AAAAAAAARY}{\bkmkend AAAAAAAARY}
+00519     ASSERT_NE(loaded, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAARZ}{\bkmkend AAAAAAAARZ}
+00520     EXPECT_EQ(stack_size(loaded), 2);\par
+{\bkmkstart AAAAAAAASA}{\bkmkend AAAAAAAASA}
+00521     \par
+{\bkmkstart AAAAAAAASB}{\bkmkend AAAAAAAASB}
+00522     remove(filename);\par
+{\bkmkstart AAAAAAAASC}{\bkmkend AAAAAAAASC}
+00523     stack_destroy(stack);\par
+{\bkmkstart AAAAAAAASD}{\bkmkend AAAAAAAASD}
+00524     stack_destroy(loaded);\par
+{\bkmkstart AAAAAAAASE}{\bkmkend AAAAAAAASE}
+00525     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAASF}{\bkmkend AAAAAAAASF}
+00526     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAASG}{\bkmkend AAAAAAAASG}
+00527 \}\par
+{\bkmkstart AAAAAAAASH}{\bkmkend AAAAAAAASH}
+00528 \par
+{\bkmkstart AAAAAAAASI}{\bkmkend AAAAAAAASI}
+00529 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAAASJ}{\bkmkend AAAAAAAASJ}
+00530 {\cf20 // QUEUE TESTS}\par
+{\bkmkstart AAAAAAAASK}{\bkmkend AAAAAAAASK}
+00531 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAAASL}{\bkmkend AAAAAAAASL}
+00532 \par
+{\bkmkstart AAAAAAAASM}{\bkmkend AAAAAAAASM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAASN" }{}}{\fldrslt {\cs37\ul\cf2 00536}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(QueueTest, CreateQueue) \{\par
+{\bkmkstart AAAAAAAASO}{\bkmkend AAAAAAAASO}
+00537     Queue* queue = queue_create();\par
+{\bkmkstart AAAAAAAASP}{\bkmkend AAAAAAAASP}
+00538     ASSERT_NE(queue, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAASQ}{\bkmkend AAAAAAAASQ}
+00539     EXPECT_TRUE(queue_is_empty(queue));\par
+{\bkmkstart AAAAAAAASR}{\bkmkend AAAAAAAASR}
+00540     EXPECT_FALSE(queue_is_full(queue));\par
+{\bkmkstart AAAAAAAASS}{\bkmkend AAAAAAAASS}
+00541     EXPECT_EQ(queue_size(queue), 0);\par
+{\bkmkstart AAAAAAAAST}{\bkmkend AAAAAAAAST}
+00542     queue_destroy(queue);\par
+{\bkmkstart AAAAAAAASU}{\bkmkend AAAAAAAASU}
+00543 \}\par
+{\bkmkstart AAAAAAAASV}{\bkmkend AAAAAAAASV}
+00544 \par
+{\bkmkstart AAAAAAAASW}{\bkmkend AAAAAAAASW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAASX" }{}}{\fldrslt {\cs37\ul\cf2 00548}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(QueueTest, EnqueueDequeue) \{\par
+{\bkmkstart AAAAAAAASY}{\bkmkend AAAAAAAASY}
+00549     Queue* queue = queue_create();\par
+{\bkmkstart AAAAAAAASZ}{\bkmkend AAAAAAAASZ}
+00550     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAATA}{\bkmkend AAAAAAAATA}
+00551     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAAATB}{\bkmkend AAAAAAAATB}
+00552     \par
+{\bkmkstart AAAAAAAATC}{\bkmkend AAAAAAAATC}
+00553     EXPECT_EQ(queue_enqueue(queue, r1), 1);\par
+{\bkmkstart AAAAAAAATD}{\bkmkend AAAAAAAATD}
+00554     EXPECT_EQ(queue_enqueue(queue, r2), 1);\par
+{\bkmkstart AAAAAAAATE}{\bkmkend AAAAAAAATE}
+00555     EXPECT_EQ(queue_size(queue), 2);\par
+{\bkmkstart AAAAAAAATF}{\bkmkend AAAAAAAATF}
+00556     EXPECT_FALSE(queue_is_empty(queue));\par
+{\bkmkstart AAAAAAAATG}{\bkmkend AAAAAAAATG}
+00557     \par
+{\bkmkstart AAAAAAAATH}{\bkmkend AAAAAAAATH}
+00558     Recipe* dequeued = queue_dequeue(queue);\par
+{\bkmkstart AAAAAAAATI}{\bkmkend AAAAAAAATI}
+00559     ASSERT_NE(dequeued, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAATJ}{\bkmkend AAAAAAAATJ}
+00560     EXPECT_EQ(dequeued->id, 1); {\cf20 // FIFO - first in, first out}\par
+{\bkmkstart AAAAAAAATK}{\bkmkend AAAAAAAATK}
+00561     EXPECT_EQ(queue_size(queue), 1);\par
+{\bkmkstart AAAAAAAATL}{\bkmkend AAAAAAAATL}
+00562     \par
+{\bkmkstart AAAAAAAATM}{\bkmkend AAAAAAAATM}
+00563     dequeued = queue_dequeue(queue);\par
+{\bkmkstart AAAAAAAATN}{\bkmkend AAAAAAAATN}
+00564     ASSERT_NE(dequeued, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAATO}{\bkmkend AAAAAAAATO}
+00565     EXPECT_EQ(dequeued->id, 2);\par
+{\bkmkstart AAAAAAAATP}{\bkmkend AAAAAAAATP}
+00566     EXPECT_TRUE(queue_is_empty(queue));\par
+{\bkmkstart AAAAAAAATQ}{\bkmkend AAAAAAAATQ}
+00567     \par
+{\bkmkstart AAAAAAAATR}{\bkmkend AAAAAAAATR}
+00568     queue_destroy(queue);\par
+{\bkmkstart AAAAAAAATS}{\bkmkend AAAAAAAATS}
+00569     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAATT}{\bkmkend AAAAAAAATT}
+00570     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAATU}{\bkmkend AAAAAAAATU}
+00571 \}\par
+{\bkmkstart AAAAAAAATV}{\bkmkend AAAAAAAATV}
+00572 \par
+{\bkmkstart AAAAAAAATW}{\bkmkend AAAAAAAATW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAATX" }{}}{\fldrslt {\cs37\ul\cf2 00576}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(QueueTest, Peek) \{\par
+{\bkmkstart AAAAAAAATY}{\bkmkend AAAAAAAATY}
+00577     Queue* queue = queue_create();\par
+{\bkmkstart AAAAAAAATZ}{\bkmkend AAAAAAAATZ}
+00578     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAUA}{\bkmkend AAAAAAAAUA}
+00579     \par
+{\bkmkstart AAAAAAAAUB}{\bkmkend AAAAAAAAUB}
+00580     queue_enqueue(queue, r1);\par
+{\bkmkstart AAAAAAAAUC}{\bkmkend AAAAAAAAUC}
+00581     \par
+{\bkmkstart AAAAAAAAUD}{\bkmkend AAAAAAAAUD}
+00582     Recipe* peeked = queue_peek(queue);\par
+{\bkmkstart AAAAAAAAUE}{\bkmkend AAAAAAAAUE}
+00583     ASSERT_NE(peeked, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAUF}{\bkmkend AAAAAAAAUF}
+00584     EXPECT_EQ(peeked->id, 1);\par
+{\bkmkstart AAAAAAAAUG}{\bkmkend AAAAAAAAUG}
+00585     EXPECT_EQ(queue_size(queue), 1); {\cf20 // Size should not change}\par
+{\bkmkstart AAAAAAAAUH}{\bkmkend AAAAAAAAUH}
+00586     \par
+{\bkmkstart AAAAAAAAUI}{\bkmkend AAAAAAAAUI}
+00587     queue_destroy(queue);\par
+{\bkmkstart AAAAAAAAUJ}{\bkmkend AAAAAAAAUJ}
+00588     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAAUK}{\bkmkend AAAAAAAAUK}
+00589 \}\par
+{\bkmkstart AAAAAAAAUL}{\bkmkend AAAAAAAAUL}
+00590 \par
+{\bkmkstart AAAAAAAAUM}{\bkmkend AAAAAAAAUM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAUN" }{}}{\fldrslt {\cs37\ul\cf2 00594}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(QueueTest, BinaryFileOperations) \{\par
+{\bkmkstart AAAAAAAAUO}{\bkmkend AAAAAAAAUO}
+00595     Queue* queue = queue_create();\par
+{\bkmkstart AAAAAAAAUP}{\bkmkend AAAAAAAAUP}
+00596     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAUQ}{\bkmkend AAAAAAAAUQ}
+00597     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAAAUR}{\bkmkend AAAAAAAAUR}
+00598     \par
+{\bkmkstart AAAAAAAAUS}{\bkmkend AAAAAAAAUS}
+00599     queue_enqueue(queue, r1);\par
+{\bkmkstart AAAAAAAAUT}{\bkmkend AAAAAAAAUT}
+00600     queue_enqueue(queue, r2);\par
+{\bkmkstart AAAAAAAAUU}{\bkmkend AAAAAAAAUU}
+00601     \par
+{\bkmkstart AAAAAAAAUV}{\bkmkend AAAAAAAAUV}
+00602     {\cf17 const} {\cf18 char}* filename = {\cf22 "test_queue.bin"};\par
+{\bkmkstart AAAAAAAAUW}{\bkmkend AAAAAAAAUW}
+00603     EXPECT_EQ(queue_save_binary(queue, filename), 1);\par
+{\bkmkstart AAAAAAAAUX}{\bkmkend AAAAAAAAUX}
+00604     \par
+{\bkmkstart AAAAAAAAUY}{\bkmkend AAAAAAAAUY}
+00605     Queue* loaded = queue_load_binary(filename);\par
+{\bkmkstart AAAAAAAAUZ}{\bkmkend AAAAAAAAUZ}
+00606     ASSERT_NE(loaded, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAVA}{\bkmkend AAAAAAAAVA}
+00607     EXPECT_EQ(queue_size(loaded), 2);\par
+{\bkmkstart AAAAAAAAVB}{\bkmkend AAAAAAAAVB}
+00608     \par
+{\bkmkstart AAAAAAAAVC}{\bkmkend AAAAAAAAVC}
+00609     remove(filename);\par
+{\bkmkstart AAAAAAAAVD}{\bkmkend AAAAAAAAVD}
+00610     queue_destroy(queue);\par
+{\bkmkstart AAAAAAAAVE}{\bkmkend AAAAAAAAVE}
+00611     queue_destroy(loaded);\par
+{\bkmkstart AAAAAAAAVF}{\bkmkend AAAAAAAAVF}
+00612     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAAVG}{\bkmkend AAAAAAAAVG}
+00613     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAAVH}{\bkmkend AAAAAAAAVH}
+00614 \}\par
+{\bkmkstart AAAAAAAAVI}{\bkmkend AAAAAAAAVI}
+00615 \par
+{\bkmkstart AAAAAAAAVJ}{\bkmkend AAAAAAAAVJ}
+00616 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAAAVK}{\bkmkend AAAAAAAAVK}
+00617 {\cf20 // HEAP TESTS}\par
+{\bkmkstart AAAAAAAAVL}{\bkmkend AAAAAAAAVL}
+00618 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAAAVM}{\bkmkend AAAAAAAAVM}
+00619 \par
+{\bkmkstart AAAAAAAAVN}{\bkmkend AAAAAAAAVN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAVO" }{}}{\fldrslt {\cs37\ul\cf2 00623}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(HeapTest, CreateHeap) \{\par
+{\bkmkstart AAAAAAAAVP}{\bkmkend AAAAAAAAVP}
+00624     Heap* heap = heap_create(10);\par
+{\bkmkstart AAAAAAAAVQ}{\bkmkend AAAAAAAAVQ}
+00625     ASSERT_NE(heap, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAVR}{\bkmkend AAAAAAAAVR}
+00626     EXPECT_TRUE(heap_is_empty(heap));\par
+{\bkmkstart AAAAAAAAVS}{\bkmkend AAAAAAAAVS}
+00627     EXPECT_FALSE(heap_is_full(heap));\par
+{\bkmkstart AAAAAAAAVT}{\bkmkend AAAAAAAAVT}
+00628     heap_destroy(heap);\par
+{\bkmkstart AAAAAAAAVU}{\bkmkend AAAAAAAAVU}
+00629 \}\par
+{\bkmkstart AAAAAAAAVV}{\bkmkend AAAAAAAAVV}
+00630 \par
+{\bkmkstart AAAAAAAAVW}{\bkmkend AAAAAAAAVW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAVX" }{}}{\fldrslt {\cs37\ul\cf2 00634}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(HeapTest, InsertExtractMin) \{\par
+{\bkmkstart AAAAAAAAVY}{\bkmkend AAAAAAAAVY}
+00635     Heap* heap = heap_create(10);\par
+{\bkmkstart AAAAAAAAVZ}{\bkmkend AAAAAAAAVZ}
+00636     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAWA}{\bkmkend AAAAAAAAWA}
+00637     Recipe* r2 = recipe_create(2, {\cf22 "Salad"}, {\cf22 "Lunch"}, 200, 10);\par
+{\bkmkstart AAAAAAAAWB}{\bkmkend AAAAAAAAWB}
+00638     Recipe* r3 = recipe_create(3, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAAAWC}{\bkmkend AAAAAAAAWC}
+00639     \par
+{\bkmkstart AAAAAAAAWD}{\bkmkend AAAAAAAAWD}
+00640     EXPECT_EQ(heap_insert(heap, r1), 1);\par
+{\bkmkstart AAAAAAAAWE}{\bkmkend AAAAAAAAWE}
+00641     EXPECT_EQ(heap_insert(heap, r2), 1);\par
+{\bkmkstart AAAAAAAAWF}{\bkmkend AAAAAAAAWF}
+00642     EXPECT_EQ(heap_insert(heap, r3), 1);\par
+{\bkmkstart AAAAAAAAWG}{\bkmkend AAAAAAAAWG}
+00643     \par
+{\bkmkstart AAAAAAAAWH}{\bkmkend AAAAAAAAWH}
+00644     Recipe* min = heap_extract_min(heap);\par
+{\bkmkstart AAAAAAAAWI}{\bkmkend AAAAAAAAWI}
+00645     ASSERT_NE(min, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAWJ}{\bkmkend AAAAAAAAWJ}
+00646     EXPECT_EQ(min->id, 2); {\cf20 // Salad has lowest calories (200)}\par
+{\bkmkstart AAAAAAAAWK}{\bkmkend AAAAAAAAWK}
+00647     EXPECT_EQ(min->calories, 200);\par
+{\bkmkstart AAAAAAAAWL}{\bkmkend AAAAAAAAWL}
+00648     \par
+{\bkmkstart AAAAAAAAWM}{\bkmkend AAAAAAAAWM}
+00649     min = heap_extract_min(heap);\par
+{\bkmkstart AAAAAAAAWN}{\bkmkend AAAAAAAAWN}
+00650     ASSERT_NE(min, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAWO}{\bkmkend AAAAAAAAWO}
+00651     EXPECT_EQ(min->id, 3); {\cf20 // Burger has next lowest (600)}\par
+{\bkmkstart AAAAAAAAWP}{\bkmkend AAAAAAAAWP}
+00652     \par
+{\bkmkstart AAAAAAAAWQ}{\bkmkend AAAAAAAAWQ}
+00653     min = heap_extract_min(heap);\par
+{\bkmkstart AAAAAAAAWR}{\bkmkend AAAAAAAAWR}
+00654     ASSERT_NE(min, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAWS}{\bkmkend AAAAAAAAWS}
+00655     EXPECT_EQ(min->id, 1); {\cf20 // Pizza has highest (800)}\par
+{\bkmkstart AAAAAAAAWT}{\bkmkend AAAAAAAAWT}
+00656     \par
+{\bkmkstart AAAAAAAAWU}{\bkmkend AAAAAAAAWU}
+00657     EXPECT_TRUE(heap_is_empty(heap));\par
+{\bkmkstart AAAAAAAAWV}{\bkmkend AAAAAAAAWV}
+00658     \par
+{\bkmkstart AAAAAAAAWW}{\bkmkend AAAAAAAAWW}
+00659     heap_destroy(heap);\par
+{\bkmkstart AAAAAAAAWX}{\bkmkend AAAAAAAAWX}
+00660     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAAWY}{\bkmkend AAAAAAAAWY}
+00661     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAAWZ}{\bkmkend AAAAAAAAWZ}
+00662     recipe_destroy(r3);\par
+{\bkmkstart AAAAAAAAXA}{\bkmkend AAAAAAAAXA}
+00663 \}\par
+{\bkmkstart AAAAAAAAXB}{\bkmkend AAAAAAAAXB}
+00664 \par
+{\bkmkstart AAAAAAAAXC}{\bkmkend AAAAAAAAXC}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAXD" }{}}{\fldrslt {\cs37\ul\cf2 00668}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(HeapTest, HeapSort) \{\par
+{\bkmkstart AAAAAAAAXE}{\bkmkend AAAAAAAAXE}
+00669     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAXF}{\bkmkend AAAAAAAAXF}
+00670     Recipe* r2 = recipe_create(2, {\cf22 "Salad"}, {\cf22 "Lunch"}, 200, 10);\par
+{\bkmkstart AAAAAAAAXG}{\bkmkend AAAAAAAAXG}
+00671     Recipe* r3 = recipe_create(3, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAAAXH}{\bkmkend AAAAAAAAXH}
+00672     \par
+{\bkmkstart AAAAAAAAXI}{\bkmkend AAAAAAAAXI}
+00673     Recipe* recipes[] = \{r1, r2, r3\};\par
+{\bkmkstart AAAAAAAAXJ}{\bkmkend AAAAAAAAXJ}
+00674     heap_sort_recipes(recipes, 3);\par
+{\bkmkstart AAAAAAAAXK}{\bkmkend AAAAAAAAXK}
+00675     \par
+{\bkmkstart AAAAAAAAXL}{\bkmkend AAAAAAAAXL}
+00676     {\cf20 // After sorting, recipes should be ordered by calories (ascending)}\par
+{\bkmkstart AAAAAAAAXM}{\bkmkend AAAAAAAAXM}
+00677     EXPECT_EQ(recipes[0]->{\cf18 id}, 2); {\cf20 // Salad (200)}\par
+{\bkmkstart AAAAAAAAXN}{\bkmkend AAAAAAAAXN}
+00678     EXPECT_EQ(recipes[1]->{\cf18 id}, 3); {\cf20 // Burger (600)}\par
+{\bkmkstart AAAAAAAAXO}{\bkmkend AAAAAAAAXO}
+00679     EXPECT_EQ(recipes[2]->{\cf18 id}, 1); {\cf20 // Pizza (800)}\par
+{\bkmkstart AAAAAAAAXP}{\bkmkend AAAAAAAAXP}
+00680     \par
+{\bkmkstart AAAAAAAAXQ}{\bkmkend AAAAAAAAXQ}
+00681     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAAXR}{\bkmkend AAAAAAAAXR}
+00682     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAAXS}{\bkmkend AAAAAAAAXS}
+00683     recipe_destroy(r3);\par
+{\bkmkstart AAAAAAAAXT}{\bkmkend AAAAAAAAXT}
+00684 \}\par
+{\bkmkstart AAAAAAAAXU}{\bkmkend AAAAAAAAXU}
+00685 \par
+{\bkmkstart AAAAAAAAXV}{\bkmkend AAAAAAAAXV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAXW" }{}}{\fldrslt {\cs37\ul\cf2 00689}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(HeapTest, BinaryFileOperations) \{\par
+{\bkmkstart AAAAAAAAXX}{\bkmkend AAAAAAAAXX}
+00690     Heap* heap = heap_create(10);\par
+{\bkmkstart AAAAAAAAXY}{\bkmkend AAAAAAAAXY}
+00691     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAAAXZ}{\bkmkend AAAAAAAAXZ}
+00692     Recipe* r2 = recipe_create(2, {\cf22 "Salad"}, {\cf22 "Lunch"}, 200, 10);\par
+{\bkmkstart AAAAAAAAYA}{\bkmkend AAAAAAAAYA}
+00693     \par
+{\bkmkstart AAAAAAAAYB}{\bkmkend AAAAAAAAYB}
+00694     heap_insert(heap, r1);\par
+{\bkmkstart AAAAAAAAYC}{\bkmkend AAAAAAAAYC}
+00695     heap_insert(heap, r2);\par
+{\bkmkstart AAAAAAAAYD}{\bkmkend AAAAAAAAYD}
+00696     \par
+{\bkmkstart AAAAAAAAYE}{\bkmkend AAAAAAAAYE}
+00697     {\cf17 const} {\cf18 char}* filename = {\cf22 "test_heap.bin"};\par
+{\bkmkstart AAAAAAAAYF}{\bkmkend AAAAAAAAYF}
+00698     EXPECT_EQ(heap_save_binary(heap, filename), 1);\par
+{\bkmkstart AAAAAAAAYG}{\bkmkend AAAAAAAAYG}
+00699     \par
+{\bkmkstart AAAAAAAAYH}{\bkmkend AAAAAAAAYH}
+00700     Heap* loaded = heap_load_binary(filename);\par
+{\bkmkstart AAAAAAAAYI}{\bkmkend AAAAAAAAYI}
+00701     ASSERT_NE(loaded, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAYJ}{\bkmkend AAAAAAAAYJ}
+00702     EXPECT_EQ(loaded->size, 2);\par
+{\bkmkstart AAAAAAAAYK}{\bkmkend AAAAAAAAYK}
+00703     \par
+{\bkmkstart AAAAAAAAYL}{\bkmkend AAAAAAAAYL}
+00704     Recipe* min = heap_extract_min(loaded);\par
+{\bkmkstart AAAAAAAAYM}{\bkmkend AAAAAAAAYM}
+00705     ASSERT_NE(min, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAYN}{\bkmkend AAAAAAAAYN}
+00706     EXPECT_EQ(min->id, 2); {\cf20 // Salad has lowest calories}\par
+{\bkmkstart AAAAAAAAYO}{\bkmkend AAAAAAAAYO}
+00707     \par
+{\bkmkstart AAAAAAAAYP}{\bkmkend AAAAAAAAYP}
+00708     remove(filename);\par
+{\bkmkstart AAAAAAAAYQ}{\bkmkend AAAAAAAAYQ}
+00709     heap_destroy(heap);\par
+{\bkmkstart AAAAAAAAYR}{\bkmkend AAAAAAAAYR}
+00710     heap_destroy(loaded);\par
+{\bkmkstart AAAAAAAAYS}{\bkmkend AAAAAAAAYS}
+00711     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAAAYT}{\bkmkend AAAAAAAAYT}
+00712     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAAAYU}{\bkmkend AAAAAAAAYU}
+00713 \}\par
+{\bkmkstart AAAAAAAAYV}{\bkmkend AAAAAAAAYV}
+00714 \par
+{\bkmkstart AAAAAAAAYW}{\bkmkend AAAAAAAAYW}
+00715 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAAAYX}{\bkmkend AAAAAAAAYX}
+00716 {\cf20 // GRAPH TESTS (BFS/DFS)}\par
+{\bkmkstart AAAAAAAAYY}{\bkmkend AAAAAAAAYY}
+00717 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAAAYZ}{\bkmkend AAAAAAAAYZ}
+00718 \par
+{\bkmkstart AAAAAAAAZA}{\bkmkend AAAAAAAAZA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZB" }{}}{\fldrslt {\cs37\ul\cf2 00722}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(GraphTest, CreateGraph) \{\par
+{\bkmkstart AAAAAAAAZC}{\bkmkend AAAAAAAAZC}
+00723     Graph* graph = graph_create();\par
+{\bkmkstart AAAAAAAAZD}{\bkmkend AAAAAAAAZD}
+00724     ASSERT_NE(graph, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAZE}{\bkmkend AAAAAAAAZE}
+00725     EXPECT_EQ(graph->vertex_count, 0);\par
+{\bkmkstart AAAAAAAAZF}{\bkmkend AAAAAAAAZF}
+00726     graph_destroy(graph);\par
+{\bkmkstart AAAAAAAAZG}{\bkmkend AAAAAAAAZG}
+00727 \}\par
+{\bkmkstart AAAAAAAAZH}{\bkmkend AAAAAAAAZH}
+00728 \par
+{\bkmkstart AAAAAAAAZI}{\bkmkend AAAAAAAAZI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZJ" }{}}{\fldrslt {\cs37\ul\cf2 00732}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(GraphTest, AddVertexEdge) \{\par
+{\bkmkstart AAAAAAAAZK}{\bkmkend AAAAAAAAZK}
+00733     Graph* graph = graph_create();\par
+{\bkmkstart AAAAAAAAZL}{\bkmkend AAAAAAAAZL}
+00734     \par
+{\bkmkstart AAAAAAAAZM}{\bkmkend AAAAAAAAZM}
+00735     EXPECT_EQ(graph_add_vertex(graph, 1), 1);\par
+{\bkmkstart AAAAAAAAZN}{\bkmkend AAAAAAAAZN}
+00736     EXPECT_EQ(graph_add_vertex(graph, 2), 1);\par
+{\bkmkstart AAAAAAAAZO}{\bkmkend AAAAAAAAZO}
+00737     EXPECT_EQ(graph_add_vertex(graph, 3), 1);\par
+{\bkmkstart AAAAAAAAZP}{\bkmkend AAAAAAAAZP}
+00738     EXPECT_EQ(graph->vertex_count, 3);\par
+{\bkmkstart AAAAAAAAZQ}{\bkmkend AAAAAAAAZQ}
+00739     \par
+{\bkmkstart AAAAAAAAZR}{\bkmkend AAAAAAAAZR}
+00740     EXPECT_EQ(graph_add_edge(graph, 1, 2, {\cf22 "dough"}), 1);\par
+{\bkmkstart AAAAAAAAZS}{\bkmkend AAAAAAAAZS}
+00741     EXPECT_EQ(graph_add_edge(graph, 2, 3, {\cf22 "sauce"}), 1);\par
+{\bkmkstart AAAAAAAAZT}{\bkmkend AAAAAAAAZT}
+00742     \par
+{\bkmkstart AAAAAAAAZU}{\bkmkend AAAAAAAAZU}
+00743     GraphVertex* v = graph_find_vertex(graph, 1);\par
+{\bkmkstart AAAAAAAAZV}{\bkmkend AAAAAAAAZV}
+00744     ASSERT_NE(v, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAAAZW}{\bkmkend AAAAAAAAZW}
+00745     EXPECT_EQ(v->recipe_id, 1);\par
+{\bkmkstart AAAAAAAAZX}{\bkmkend AAAAAAAAZX}
+00746     \par
+{\bkmkstart AAAAAAAAZY}{\bkmkend AAAAAAAAZY}
+00747     graph_destroy(graph);\par
+{\bkmkstart AAAAAAAAZZ}{\bkmkend AAAAAAAAZZ}
+00748 \}\par
+{\bkmkstart AAAAAAABAA}{\bkmkend AAAAAAABAA}
+00749 \par
+{\bkmkstart AAAAAAABAB}{\bkmkend AAAAAAABAB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABAC" }{}}{\fldrslt {\cs37\ul\cf2 00753}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(GraphTest, BFSTraversal) \{\par
+{\bkmkstart AAAAAAABAD}{\bkmkend AAAAAAABAD}
+00754     Graph* graph = graph_create();\par
+{\bkmkstart AAAAAAABAE}{\bkmkend AAAAAAABAE}
+00755     \par
+{\bkmkstart AAAAAAABAF}{\bkmkend AAAAAAABAF}
+00756     graph_add_vertex(graph, 1);\par
+{\bkmkstart AAAAAAABAG}{\bkmkend AAAAAAABAG}
+00757     graph_add_vertex(graph, 2);\par
+{\bkmkstart AAAAAAABAH}{\bkmkend AAAAAAABAH}
+00758     graph_add_vertex(graph, 3);\par
+{\bkmkstart AAAAAAABAI}{\bkmkend AAAAAAABAI}
+00759     graph_add_vertex(graph, 4);\par
+{\bkmkstart AAAAAAABAJ}{\bkmkend AAAAAAABAJ}
+00760     \par
+{\bkmkstart AAAAAAABAK}{\bkmkend AAAAAAABAK}
+00761     graph_add_edge(graph, 1, 2, {\cf22 "edge1"});\par
+{\bkmkstart AAAAAAABAL}{\bkmkend AAAAAAABAL}
+00762     graph_add_edge(graph, 1, 3, {\cf22 "edge2"});\par
+{\bkmkstart AAAAAAABAM}{\bkmkend AAAAAAABAM}
+00763     graph_add_edge(graph, 2, 4, {\cf22 "edge3"});\par
+{\bkmkstart AAAAAAABAN}{\bkmkend AAAAAAABAN}
+00764     \par
+{\bkmkstart AAAAAAABAO}{\bkmkend AAAAAAABAO}
+00765     g_visited_order.clear();\par
+{\bkmkstart AAAAAAABAP}{\bkmkend AAAAAAABAP}
+00766     graph_bfs(graph, 1, graph_visit_func);\par
+{\bkmkstart AAAAAAABAQ}{\bkmkend AAAAAAABAQ}
+00767     \par
+{\bkmkstart AAAAAAABAR}{\bkmkend AAAAAAABAR}
+00768     {\cf20 // BFS should visit vertices level by level}\par
+{\bkmkstart AAAAAAABAS}{\bkmkend AAAAAAABAS}
+00769     EXPECT_GE(g_visited_order.size(), 1);\par
+{\bkmkstart AAAAAAABAT}{\bkmkend AAAAAAABAT}
+00770     EXPECT_EQ(g_visited_order[0], 1); {\cf20 // Start vertex}\par
+{\bkmkstart AAAAAAABAU}{\bkmkend AAAAAAABAU}
+00771     \par
+{\bkmkstart AAAAAAABAV}{\bkmkend AAAAAAABAV}
+00772     graph_destroy(graph);\par
+{\bkmkstart AAAAAAABAW}{\bkmkend AAAAAAABAW}
+00773 \}\par
+{\bkmkstart AAAAAAABAX}{\bkmkend AAAAAAABAX}
+00774 \par
+{\bkmkstart AAAAAAABAY}{\bkmkend AAAAAAABAY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABAZ" }{}}{\fldrslt {\cs37\ul\cf2 00778}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(GraphTest, DFSTraversal) \{\par
+{\bkmkstart AAAAAAABBA}{\bkmkend AAAAAAABBA}
+00779     Graph* graph = graph_create();\par
+{\bkmkstart AAAAAAABBB}{\bkmkend AAAAAAABBB}
+00780     \par
+{\bkmkstart AAAAAAABBC}{\bkmkend AAAAAAABBC}
+00781     graph_add_vertex(graph, 1);\par
+{\bkmkstart AAAAAAABBD}{\bkmkend AAAAAAABBD}
+00782     graph_add_vertex(graph, 2);\par
+{\bkmkstart AAAAAAABBE}{\bkmkend AAAAAAABBE}
+00783     graph_add_vertex(graph, 3);\par
+{\bkmkstart AAAAAAABBF}{\bkmkend AAAAAAABBF}
+00784     \par
+{\bkmkstart AAAAAAABBG}{\bkmkend AAAAAAABBG}
+00785     graph_add_edge(graph, 1, 2, {\cf22 "edge1"});\par
+{\bkmkstart AAAAAAABBH}{\bkmkend AAAAAAABBH}
+00786     graph_add_edge(graph, 2, 3, {\cf22 "edge2"});\par
+{\bkmkstart AAAAAAABBI}{\bkmkend AAAAAAABBI}
+00787     \par
+{\bkmkstart AAAAAAABBJ}{\bkmkend AAAAAAABBJ}
+00788     g_visited_order.clear();\par
+{\bkmkstart AAAAAAABBK}{\bkmkend AAAAAAABBK}
+00789     graph_dfs(graph, 1, graph_visit_func);\par
+{\bkmkstart AAAAAAABBL}{\bkmkend AAAAAAABBL}
+00790     \par
+{\bkmkstart AAAAAAABBM}{\bkmkend AAAAAAABBM}
+00791     {\cf20 // DFS should visit vertices depth-first}\par
+{\bkmkstart AAAAAAABBN}{\bkmkend AAAAAAABBN}
+00792     EXPECT_GE(g_visited_order.size(), 1);\par
+{\bkmkstart AAAAAAABBO}{\bkmkend AAAAAAABBO}
+00793     EXPECT_EQ(g_visited_order[0], 1); {\cf20 // Start vertex}\par
+{\bkmkstart AAAAAAABBP}{\bkmkend AAAAAAABBP}
+00794     \par
+{\bkmkstart AAAAAAABBQ}{\bkmkend AAAAAAABBQ}
+00795     graph_destroy(graph);\par
+{\bkmkstart AAAAAAABBR}{\bkmkend AAAAAAABBR}
+00796 \}\par
+{\bkmkstart AAAAAAABBS}{\bkmkend AAAAAAABBS}
+00797 \par
+{\bkmkstart AAAAAAABBT}{\bkmkend AAAAAAABBT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABBU" }{}}{\fldrslt {\cs37\ul\cf2 00801}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(GraphTest, CycleDetection) \{\par
+{\bkmkstart AAAAAAABBV}{\bkmkend AAAAAAABBV}
+00802     Graph* graph = graph_create();\par
+{\bkmkstart AAAAAAABBW}{\bkmkend AAAAAAABBW}
+00803     \par
+{\bkmkstart AAAAAAABBX}{\bkmkend AAAAAAABBX}
+00804     graph_add_vertex(graph, 1);\par
+{\bkmkstart AAAAAAABBY}{\bkmkend AAAAAAABBY}
+00805     graph_add_vertex(graph, 2);\par
+{\bkmkstart AAAAAAABBZ}{\bkmkend AAAAAAABBZ}
+00806     graph_add_vertex(graph, 3);\par
+{\bkmkstart AAAAAAABCA}{\bkmkend AAAAAAABCA}
+00807     \par
+{\bkmkstart AAAAAAABCB}{\bkmkend AAAAAAABCB}
+00808     graph_add_edge(graph, 1, 2, {\cf22 "edge1"});\par
+{\bkmkstart AAAAAAABCC}{\bkmkend AAAAAAABCC}
+00809     graph_add_edge(graph, 2, 3, {\cf22 "edge2"});\par
+{\bkmkstart AAAAAAABCD}{\bkmkend AAAAAAABCD}
+00810     {\cf20 // No cycle - should return 0}\par
+{\bkmkstart AAAAAAABCE}{\bkmkend AAAAAAABCE}
+00811     EXPECT_EQ(graph_has_cycle(graph), 0);\par
+{\bkmkstart AAAAAAABCF}{\bkmkend AAAAAAABCF}
+00812     \par
+{\bkmkstart AAAAAAABCG}{\bkmkend AAAAAAABCG}
+00813     {\cf20 // Add cycle}\par
+{\bkmkstart AAAAAAABCH}{\bkmkend AAAAAAABCH}
+00814     graph_add_edge(graph, 3, 1, {\cf22 "edge3"});\par
+{\bkmkstart AAAAAAABCI}{\bkmkend AAAAAAABCI}
+00815     EXPECT_EQ(graph_has_cycle(graph), 1);\par
+{\bkmkstart AAAAAAABCJ}{\bkmkend AAAAAAABCJ}
+00816     \par
+{\bkmkstart AAAAAAABCK}{\bkmkend AAAAAAABCK}
+00817     graph_destroy(graph);\par
+{\bkmkstart AAAAAAABCL}{\bkmkend AAAAAAABCL}
+00818 \}\par
+{\bkmkstart AAAAAAABCM}{\bkmkend AAAAAAABCM}
+00819 \par
+{\bkmkstart AAAAAAABCN}{\bkmkend AAAAAAABCN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABCO" }{}}{\fldrslt {\cs37\ul\cf2 00823}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(GraphTest, BinaryFileOperations) \{\par
+{\bkmkstart AAAAAAABCP}{\bkmkend AAAAAAABCP}
+00824     Graph* graph = graph_create();\par
+{\bkmkstart AAAAAAABCQ}{\bkmkend AAAAAAABCQ}
+00825     \par
+{\bkmkstart AAAAAAABCR}{\bkmkend AAAAAAABCR}
+00826     graph_add_vertex(graph, 1);\par
+{\bkmkstart AAAAAAABCS}{\bkmkend AAAAAAABCS}
+00827     graph_add_vertex(graph, 2);\par
+{\bkmkstart AAAAAAABCT}{\bkmkend AAAAAAABCT}
+00828     graph_add_edge(graph, 1, 2, {\cf22 "dough"});\par
+{\bkmkstart AAAAAAABCU}{\bkmkend AAAAAAABCU}
+00829     \par
+{\bkmkstart AAAAAAABCV}{\bkmkend AAAAAAABCV}
+00830     {\cf17 const} {\cf18 char}* filename = {\cf22 "test_graph.bin"};\par
+{\bkmkstart AAAAAAABCW}{\bkmkend AAAAAAABCW}
+00831     EXPECT_EQ(graph_save_binary(graph, filename), 1);\par
+{\bkmkstart AAAAAAABCX}{\bkmkend AAAAAAABCX}
+00832     \par
+{\bkmkstart AAAAAAABCY}{\bkmkend AAAAAAABCY}
+00833     Graph* loaded = graph_load_binary(filename);\par
+{\bkmkstart AAAAAAABCZ}{\bkmkend AAAAAAABCZ}
+00834     ASSERT_NE(loaded, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAABDA}{\bkmkend AAAAAAABDA}
+00835     EXPECT_EQ(loaded->vertex_count, 2);\par
+{\bkmkstart AAAAAAABDB}{\bkmkend AAAAAAABDB}
+00836     \par
+{\bkmkstart AAAAAAABDC}{\bkmkend AAAAAAABDC}
+00837     GraphVertex* v = graph_find_vertex(loaded, 1);\par
+{\bkmkstart AAAAAAABDD}{\bkmkend AAAAAAABDD}
+00838     ASSERT_NE(v, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAABDE}{\bkmkend AAAAAAABDE}
+00839     EXPECT_EQ(v->recipe_id, 1);\par
+{\bkmkstart AAAAAAABDF}{\bkmkend AAAAAAABDF}
+00840     \par
+{\bkmkstart AAAAAAABDG}{\bkmkend AAAAAAABDG}
+00841     remove(filename);\par
+{\bkmkstart AAAAAAABDH}{\bkmkend AAAAAAABDH}
+00842     graph_destroy(graph);\par
+{\bkmkstart AAAAAAABDI}{\bkmkend AAAAAAABDI}
+00843     graph_destroy(loaded);\par
+{\bkmkstart AAAAAAABDJ}{\bkmkend AAAAAAABDJ}
+00844 \}\par
+{\bkmkstart AAAAAAABDK}{\bkmkend AAAAAAABDK}
+00845 \par
+{\bkmkstart AAAAAAABDL}{\bkmkend AAAAAAABDL}
+00846 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAABDM}{\bkmkend AAAAAAABDM}
+00847 {\cf20 // HASH TABLE TESTS}\par
+{\bkmkstart AAAAAAABDN}{\bkmkend AAAAAAABDN}
+00848 {\cf20 // ============================================================================}\par
+{\bkmkstart AAAAAAABDO}{\bkmkend AAAAAAABDO}
+00849 \par
+{\bkmkstart AAAAAAABDP}{\bkmkend AAAAAAABDP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABDQ" }{}}{\fldrslt {\cs37\ul\cf2 00853}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(HashTableTest, CreateHashTable) \{\par
+{\bkmkstart AAAAAAABDR}{\bkmkend AAAAAAABDR}
+00854     HashTable* ht = hash_table_create(10);\par
+{\bkmkstart AAAAAAABDS}{\bkmkend AAAAAAABDS}
+00855     ASSERT_NE(ht, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAABDT}{\bkmkend AAAAAAABDT}
+00856     EXPECT_EQ(ht->size, 10);\par
+{\bkmkstart AAAAAAABDU}{\bkmkend AAAAAAABDU}
+00857     EXPECT_EQ(ht->count, 0);\par
+{\bkmkstart AAAAAAABDV}{\bkmkend AAAAAAABDV}
+00858     hash_table_destroy(ht);\par
+{\bkmkstart AAAAAAABDW}{\bkmkend AAAAAAABDW}
+00859 \}\par
+{\bkmkstart AAAAAAABDX}{\bkmkend AAAAAAABDX}
+00860 \par
+{\bkmkstart AAAAAAABDY}{\bkmkend AAAAAAABDY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABDZ" }{}}{\fldrslt {\cs37\ul\cf2 00864}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(HashTableTest, InsertSearch) \{\par
+{\bkmkstart AAAAAAABEA}{\bkmkend AAAAAAABEA}
+00865     HashTable* ht = hash_table_create(10);\par
+{\bkmkstart AAAAAAABEB}{\bkmkend AAAAAAABEB}
+00866     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAABEC}{\bkmkend AAAAAAABEC}
+00867     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAABED}{\bkmkend AAAAAAABED}
+00868     \par
+{\bkmkstart AAAAAAABEE}{\bkmkend AAAAAAABEE}
+00869     EXPECT_EQ(hash_table_insert(ht, r1), 1);\par
+{\bkmkstart AAAAAAABEF}{\bkmkend AAAAAAABEF}
+00870     EXPECT_EQ(hash_table_insert(ht, r2), 1);\par
+{\bkmkstart AAAAAAABEG}{\bkmkend AAAAAAABEG}
+00871     EXPECT_EQ(ht->count, 2);\par
+{\bkmkstart AAAAAAABEH}{\bkmkend AAAAAAABEH}
+00872     \par
+{\bkmkstart AAAAAAABEI}{\bkmkend AAAAAAABEI}
+00873     Recipe* found = hash_table_search(ht, 1);\par
+{\bkmkstart AAAAAAABEJ}{\bkmkend AAAAAAABEJ}
+00874     ASSERT_NE(found, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAABEK}{\bkmkend AAAAAAABEK}
+00875     EXPECT_EQ(found->id, 1);\par
+{\bkmkstart AAAAAAABEL}{\bkmkend AAAAAAABEL}
+00876     EXPECT_STREQ(found->name, {\cf22 "Pizza"});\par
+{\bkmkstart AAAAAAABEM}{\bkmkend AAAAAAABEM}
+00877     \par
+{\bkmkstart AAAAAAABEN}{\bkmkend AAAAAAABEN}
+00878     found = hash_table_search(ht, 2);\par
+{\bkmkstart AAAAAAABEO}{\bkmkend AAAAAAABEO}
+00879     ASSERT_NE(found, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAABEP}{\bkmkend AAAAAAABEP}
+00880     EXPECT_EQ(found->id, 2);\par
+{\bkmkstart AAAAAAABEQ}{\bkmkend AAAAAAABEQ}
+00881     \par
+{\bkmkstart AAAAAAABER}{\bkmkend AAAAAAABER}
+00882     found = hash_table_search(ht, 999);\par
+{\bkmkstart AAAAAAABES}{\bkmkend AAAAAAABES}
+00883     EXPECT_EQ(found, {\cf17 nullptr}); {\cf20 // Not found}\par
+{\bkmkstart AAAAAAABET}{\bkmkend AAAAAAABET}
+00884     \par
+{\bkmkstart AAAAAAABEU}{\bkmkend AAAAAAABEU}
+00885     hash_table_destroy(ht);\par
+{\bkmkstart AAAAAAABEV}{\bkmkend AAAAAAABEV}
+00886     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAABEW}{\bkmkend AAAAAAABEW}
+00887     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAABEX}{\bkmkend AAAAAAABEX}
+00888 \}\par
+{\bkmkstart AAAAAAABEY}{\bkmkend AAAAAAABEY}
+00889 \par
+{\bkmkstart AAAAAAABEZ}{\bkmkend AAAAAAABEZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABFA" }{}}{\fldrslt {\cs37\ul\cf2 00893}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(HashTableTest, Delete) \{\par
+{\bkmkstart AAAAAAABFB}{\bkmkend AAAAAAABFB}
+00894     HashTable* ht = hash_table_create(10);\par
+{\bkmkstart AAAAAAABFC}{\bkmkend AAAAAAABFC}
+00895     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAABFD}{\bkmkend AAAAAAABFD}
+00896     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAABFE}{\bkmkend AAAAAAABFE}
+00897     \par
+{\bkmkstart AAAAAAABFF}{\bkmkend AAAAAAABFF}
+00898     hash_table_insert(ht, r1);\par
+{\bkmkstart AAAAAAABFG}{\bkmkend AAAAAAABFG}
+00899     hash_table_insert(ht, r2);\par
+{\bkmkstart AAAAAAABFH}{\bkmkend AAAAAAABFH}
+00900     \par
+{\bkmkstart AAAAAAABFI}{\bkmkend AAAAAAABFI}
+00901     EXPECT_EQ(hash_table_delete(ht, 1), 1);\par
+{\bkmkstart AAAAAAABFJ}{\bkmkend AAAAAAABFJ}
+00902     EXPECT_EQ(ht->count, 1);\par
+{\bkmkstart AAAAAAABFK}{\bkmkend AAAAAAABFK}
+00903     \par
+{\bkmkstart AAAAAAABFL}{\bkmkend AAAAAAABFL}
+00904     Recipe* found = hash_table_search(ht, 1);\par
+{\bkmkstart AAAAAAABFM}{\bkmkend AAAAAAABFM}
+00905     EXPECT_EQ(found, {\cf17 nullptr}); {\cf20 // Should be deleted}\par
+{\bkmkstart AAAAAAABFN}{\bkmkend AAAAAAABFN}
+00906     \par
+{\bkmkstart AAAAAAABFO}{\bkmkend AAAAAAABFO}
+00907     found = hash_table_search(ht, 2);\par
+{\bkmkstart AAAAAAABFP}{\bkmkend AAAAAAABFP}
+00908     ASSERT_NE(found, {\cf17 nullptr}); {\cf20 // Should still exist}\par
+{\bkmkstart AAAAAAABFQ}{\bkmkend AAAAAAABFQ}
+00909     EXPECT_EQ(found->id, 2);\par
+{\bkmkstart AAAAAAABFR}{\bkmkend AAAAAAABFR}
+00910     \par
+{\bkmkstart AAAAAAABFS}{\bkmkend AAAAAAABFS}
+00911     hash_table_destroy(ht);\par
+{\bkmkstart AAAAAAABFT}{\bkmkend AAAAAAABFT}
+00912     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAABFU}{\bkmkend AAAAAAABFU}
+00913     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAABFV}{\bkmkend AAAAAAABFV}
+00914 \}\par
+{\bkmkstart AAAAAAABFW}{\bkmkend AAAAAAABFW}
+00915 \par
+{\bkmkstart AAAAAAABFX}{\bkmkend AAAAAAABFX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABFY" }{}}{\fldrslt {\cs37\ul\cf2 00919}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(HashTableTest, CollisionHandling) \{\par
+{\bkmkstart AAAAAAABFZ}{\bkmkend AAAAAAABFZ}
+00920     HashTable* ht = hash_table_create(5); {\cf20 // Small size to force collisions}\par
+{\bkmkstart AAAAAAABGA}{\bkmkend AAAAAAABGA}
+00921     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAABGB}{\bkmkend AAAAAAABGB}
+00922     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAABGC}{\bkmkend AAAAAAABGC}
+00923     Recipe* r3 = recipe_create(3, {\cf22 "Salad"}, {\cf22 "Lunch"}, 200, 10);\par
+{\bkmkstart AAAAAAABGD}{\bkmkend AAAAAAABGD}
+00924     \par
+{\bkmkstart AAAAAAABGE}{\bkmkend AAAAAAABGE}
+00925     {\cf20 // All should insert successfully even with collisions}\par
+{\bkmkstart AAAAAAABGF}{\bkmkend AAAAAAABGF}
+00926     EXPECT_EQ(hash_table_insert(ht, r1), 1);\par
+{\bkmkstart AAAAAAABGG}{\bkmkend AAAAAAABGG}
+00927     EXPECT_EQ(hash_table_insert(ht, r2), 1);\par
+{\bkmkstart AAAAAAABGH}{\bkmkend AAAAAAABGH}
+00928     EXPECT_EQ(hash_table_insert(ht, r3), 1);\par
+{\bkmkstart AAAAAAABGI}{\bkmkend AAAAAAABGI}
+00929     \par
+{\bkmkstart AAAAAAABGJ}{\bkmkend AAAAAAABGJ}
+00930     {\cf20 // All should be searchable}\par
+{\bkmkstart AAAAAAABGK}{\bkmkend AAAAAAABGK}
+00931     EXPECT_NE(hash_table_search(ht, 1), {\cf17 nullptr});\par
+{\bkmkstart AAAAAAABGL}{\bkmkend AAAAAAABGL}
+00932     EXPECT_NE(hash_table_search(ht, 2), {\cf17 nullptr});\par
+{\bkmkstart AAAAAAABGM}{\bkmkend AAAAAAABGM}
+00933     EXPECT_NE(hash_table_search(ht, 3), {\cf17 nullptr});\par
+{\bkmkstart AAAAAAABGN}{\bkmkend AAAAAAABGN}
+00934     \par
+{\bkmkstart AAAAAAABGO}{\bkmkend AAAAAAABGO}
+00935     hash_table_destroy(ht);\par
+{\bkmkstart AAAAAAABGP}{\bkmkend AAAAAAABGP}
+00936     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAABGQ}{\bkmkend AAAAAAABGQ}
+00937     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAABGR}{\bkmkend AAAAAAABGR}
+00938     recipe_destroy(r3);\par
+{\bkmkstart AAAAAAABGS}{\bkmkend AAAAAAABGS}
+00939 \}\par
+{\bkmkstart AAAAAAABGT}{\bkmkend AAAAAAABGT}
+00940 \par
+{\bkmkstart AAAAAAABGU}{\bkmkend AAAAAAABGU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABGV" }{}}{\fldrslt {\cs37\ul\cf2 00944}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(HashTableTest, BinaryFileOperations) \{\par
+{\bkmkstart AAAAAAABGW}{\bkmkend AAAAAAABGW}
+00945     HashTable* ht = hash_table_create(10);\par
+{\bkmkstart AAAAAAABGX}{\bkmkend AAAAAAABGX}
+00946     Recipe* r1 = recipe_create(1, {\cf22 "Pizza"}, {\cf22 "Lunch"}, 800, 45);\par
+{\bkmkstart AAAAAAABGY}{\bkmkend AAAAAAABGY}
+00947     Recipe* r2 = recipe_create(2, {\cf22 "Burger"}, {\cf22 "Lunch"}, 600, 30);\par
+{\bkmkstart AAAAAAABGZ}{\bkmkend AAAAAAABGZ}
+00948     \par
+{\bkmkstart AAAAAAABHA}{\bkmkend AAAAAAABHA}
+00949     hash_table_insert(ht, r1);\par
+{\bkmkstart AAAAAAABHB}{\bkmkend AAAAAAABHB}
+00950     hash_table_insert(ht, r2);\par
+{\bkmkstart AAAAAAABHC}{\bkmkend AAAAAAABHC}
+00951     \par
+{\bkmkstart AAAAAAABHD}{\bkmkend AAAAAAABHD}
+00952     {\cf17 const} {\cf18 char}* filename = {\cf22 "test_hash_table.bin"};\par
+{\bkmkstart AAAAAAABHE}{\bkmkend AAAAAAABHE}
+00953     EXPECT_EQ(hash_table_save_binary(ht, filename), 1);\par
+{\bkmkstart AAAAAAABHF}{\bkmkend AAAAAAABHF}
+00954     \par
+{\bkmkstart AAAAAAABHG}{\bkmkend AAAAAAABHG}
+00955     HashTable* loaded = hash_table_load_binary(filename);\par
+{\bkmkstart AAAAAAABHH}{\bkmkend AAAAAAABHH}
+00956     ASSERT_NE(loaded, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAABHI}{\bkmkend AAAAAAABHI}
+00957     EXPECT_EQ(loaded->count, 2);\par
+{\bkmkstart AAAAAAABHJ}{\bkmkend AAAAAAABHJ}
+00958     \par
+{\bkmkstart AAAAAAABHK}{\bkmkend AAAAAAABHK}
+00959     Recipe* found = hash_table_search(loaded, 1);\par
+{\bkmkstart AAAAAAABHL}{\bkmkend AAAAAAABHL}
+00960     ASSERT_NE(found, {\cf17 nullptr});\par
+{\bkmkstart AAAAAAABHM}{\bkmkend AAAAAAABHM}
+00961     EXPECT_EQ(found->id, 1);\par
+{\bkmkstart AAAAAAABHN}{\bkmkend AAAAAAABHN}
+00962     \par
+{\bkmkstart AAAAAAABHO}{\bkmkend AAAAAAABHO}
+00963     remove(filename);\par
+{\bkmkstart AAAAAAABHP}{\bkmkend AAAAAAABHP}
+00964     hash_table_destroy(ht);\par
+{\bkmkstart AAAAAAABHQ}{\bkmkend AAAAAAABHQ}
+00965     hash_table_destroy(loaded);\par
+{\bkmkstart AAAAAAABHR}{\bkmkend AAAAAAABHR}
+00966     recipe_destroy(r1);\par
+{\bkmkstart AAAAAAABHS}{\bkmkend AAAAAAABHS}
+00967     recipe_destroy(r2);\par
+{\bkmkstart AAAAAAABHT}{\bkmkend AAAAAAABHT}
+00968 \}\par
+{\bkmkstart AAAAAAABHU}{\bkmkend AAAAAAABHU}
+00969 \par
+}
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

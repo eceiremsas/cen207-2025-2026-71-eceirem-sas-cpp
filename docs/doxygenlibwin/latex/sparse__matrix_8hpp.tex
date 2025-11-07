@@ -1,0 +1,56 @@
+\doxysection{src/recipe/header/sparse\+\_\+matrix.hpp File Reference}
+\hypertarget{sparse__matrix_8hpp}{}\label{sparse__matrix_8hpp}\index{src/recipe/header/sparse\_matrix.hpp@{src/recipe/header/sparse\_matrix.hpp}}
+
+
+Sparse Matrix implementation for ingredient-\/recipe relationships (C++ version).  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include "{}recipe.\+hpp"{}}\newline
+Include dependency graph for sparse\+\_\+matrix.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sparse__matrix_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{sparse__matrix_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{struct_matrix_entry}{Matrix\+Entry}}
+\begin{DoxyCompactList}\small\item\em Represents a single non-\/zero entry in a sparse matrix. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}}
+\begin{DoxyCompactList}\small\item\em Represents a sparse matrix storing ingredient-\/recipe relationships. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr int \mbox{\hyperlink{sparse__matrix_8hpp_aabe8b04ee4fd802edbb42785a3629d70}{MAX\+\_\+\+INGREDIENT\+\_\+\+NAME}} = 50
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sparse Matrix implementation for ingredient-\/recipe relationships (C++ version). 
+
+Stores only non-\/zero entries (ingredient associations) in a linked-\/list–style structure. 
+
+\label{doc-var-members}
+\Hypertarget{sparse__matrix_8hpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{sparse__matrix_8hpp_aabe8b04ee4fd802edbb42785a3629d70}\index{sparse\_matrix.hpp@{sparse\_matrix.hpp}!MAX\_INGREDIENT\_NAME@{MAX\_INGREDIENT\_NAME}}
+\index{MAX\_INGREDIENT\_NAME@{MAX\_INGREDIENT\_NAME}!sparse\_matrix.hpp@{sparse\_matrix.hpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_INGREDIENT\_NAME}{MAX\_INGREDIENT\_NAME}}
+{\footnotesize\ttfamily \label{sparse__matrix_8hpp_aabe8b04ee4fd802edbb42785a3629d70} 
+int MAX\+\_\+\+INGREDIENT\+\_\+\+NAME = 50\hspace{0.3cm}{\ttfamily [constexpr]}}
+

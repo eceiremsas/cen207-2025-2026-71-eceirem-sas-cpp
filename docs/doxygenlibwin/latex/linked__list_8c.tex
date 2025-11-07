@@ -1,0 +1,250 @@
+\doxysection{src/linked\+\_\+list.c File Reference}
+\hypertarget{linked__list_8c}{}\label{linked__list_8c}\index{src/linked\_list.c@{src/linked\_list.c}}
+
+
+Singly linked list implementation for managing recipes.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}linked\+\_\+list.\+h"{}}\newline
+Include dependency graph for linked\+\_\+list.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{linked__list_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linked__list_8c_a8668cbe6c584fe11e610d2895f0f16c7}{list\+\_\+create}} (void)
+\begin{DoxyCompactList}\small\item\em Creates and initializes an empty linked list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{linked__list_8c_a9c722f2d382eca0c3e3795e3b4378503}{list\+\_\+insert\+\_\+head}} (\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe)
+\begin{DoxyCompactList}\small\item\em Inserts a recipe at the beginning of the list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{linked__list_8c_a07c42855eb19c2d8ec4018b5906837c6}{list\+\_\+insert\+\_\+tail}} (\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe)
+\begin{DoxyCompactList}\small\item\em Inserts a recipe at the end of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linked__list_8c_a5599c8d00dfcabf4126ed48c1e94232e}{list\+\_\+remove}} (\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list, int id)
+\begin{DoxyCompactList}\small\item\em Removes a recipe from the list by its ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linked__list_8c_ad748f2ad72e7c12e58fd1cff35bd9173}{list\+\_\+find}} (\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list, int id)
+\begin{DoxyCompactList}\small\item\em Searches for and returns a recipe by its ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{linked__list_8c_a0a0567bba92425d79f4cf96516b5438c}{list\+\_\+display}} (\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Displays all recipes in the list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{linked__list_8c_a2e0b573f5ab9221c82af4a5eb5a48379}{list\+\_\+size}} (\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Returns the number of recipes in the list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{linked__list_8c_a76fc18cf55979638bb5e37c25e00a3b2}{list\+\_\+is\+\_\+empty}} (\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Checks if the list is empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{linked__list_8c_ad720671a4abc61ed689060cacc592565}{list\+\_\+destroy}} (\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Frees all memory associated with the list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{linked__list_8c_a9ed842e32078faed4b0e1397af3b68a5}{list\+\_\+save\+\_\+binary}} (const \mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Saves the linked list to a binary file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linked__list_8c_aecca4f228ce4f8e976f86b1733204a0c}{list\+\_\+load\+\_\+binary}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Loads a linked list from a binary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singly linked list implementation for managing recipes. 
+
+Provides insertion, deletion, traversal, and search operations 
+
+\label{doc-func-members}
+\Hypertarget{linked__list_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{linked__list_8c_a8668cbe6c584fe11e610d2895f0f16c7}\index{linked\_list.c@{linked\_list.c}!list\_create@{list\_create}}
+\index{list\_create@{list\_create}!linked\_list.c@{linked\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_create()}{list\_create()}}
+{\footnotesize\ttfamily \label{linked__list_8c_a8668cbe6c584fe11e610d2895f0f16c7} 
+\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*} list\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Creates and initializes an empty linked list. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the created list, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{linked__list_8c_ad720671a4abc61ed689060cacc592565}\index{linked\_list.c@{linked\_list.c}!list\_destroy@{list\_destroy}}
+\index{list\_destroy@{list\_destroy}!linked\_list.c@{linked\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_destroy()}{list\_destroy()}}
+{\footnotesize\ttfamily \label{linked__list_8c_ad720671a4abc61ed689060cacc592565} 
+void list\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Frees all memory associated with the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the list \\
+\hline
+\end{DoxyParams}
+\Hypertarget{linked__list_8c_a0a0567bba92425d79f4cf96516b5438c}\index{linked\_list.c@{linked\_list.c}!list\_display@{list\_display}}
+\index{list\_display@{list\_display}!linked\_list.c@{linked\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_display()}{list\_display()}}
+{\footnotesize\ttfamily \label{linked__list_8c_a0a0567bba92425d79f4cf96516b5438c} 
+void list\+\_\+display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Displays all recipes in the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the list \\
+\hline
+\end{DoxyParams}
+\Hypertarget{linked__list_8c_ad748f2ad72e7c12e58fd1cff35bd9173}\index{linked\_list.c@{linked\_list.c}!list\_find@{list\_find}}
+\index{list\_find@{list\_find}!linked\_list.c@{linked\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_find()}{list\_find()}}
+{\footnotesize\ttfamily \label{linked__list_8c_ad748f2ad72e7c12e58fd1cff35bd9173} 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} list\+\_\+find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Searches for and returns a recipe by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the list \\
+\hline
+{\em id} & \doxylink{struct_recipe}{Recipe} ID to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the found recipe, or NULL if not found 
+\end{DoxyReturn}
+\Hypertarget{linked__list_8c_a9c722f2d382eca0c3e3795e3b4378503}\index{linked\_list.c@{linked\_list.c}!list\_insert\_head@{list\_insert\_head}}
+\index{list\_insert\_head@{list\_insert\_head}!linked\_list.c@{linked\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_insert\_head()}{list\_insert\_head()}}
+{\footnotesize\ttfamily \label{linked__list_8c_a9c722f2d382eca0c3e3795e3b4378503} 
+int list\+\_\+insert\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe}{}\end{DoxyParamCaption})}
+
+
+
+Inserts a recipe at the beginning of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the list \\
+\hline
+{\em recipe} & Pointer to the recipe to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{linked__list_8c_a07c42855eb19c2d8ec4018b5906837c6}\index{linked\_list.c@{linked\_list.c}!list\_insert\_tail@{list\_insert\_tail}}
+\index{list\_insert\_tail@{list\_insert\_tail}!linked\_list.c@{linked\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_insert\_tail()}{list\_insert\_tail()}}
+{\footnotesize\ttfamily \label{linked__list_8c_a07c42855eb19c2d8ec4018b5906837c6} 
+int list\+\_\+insert\+\_\+tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe}{}\end{DoxyParamCaption})}
+
+
+
+Inserts a recipe at the end of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the list \\
+\hline
+{\em recipe} & Pointer to the recipe to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{linked__list_8c_a76fc18cf55979638bb5e37c25e00a3b2}\index{linked\_list.c@{linked\_list.c}!list\_is\_empty@{list\_is\_empty}}
+\index{list\_is\_empty@{list\_is\_empty}!linked\_list.c@{linked\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_is\_empty()}{list\_is\_empty()}}
+{\footnotesize\ttfamily \label{linked__list_8c_a76fc18cf55979638bb5e37c25e00a3b2} 
+int list\+\_\+is\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the list is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if empty, 0 otherwise 
+\end{DoxyReturn}
+\Hypertarget{linked__list_8c_aecca4f228ce4f8e976f86b1733204a0c}\index{linked\_list.c@{linked\_list.c}!list\_load\_binary@{list\_load\_binary}}
+\index{list\_load\_binary@{list\_load\_binary}!linked\_list.c@{linked\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_load\_binary()}{list\_load\_binary()}}
+{\footnotesize\ttfamily \label{linked__list_8c_aecca4f228ce4f8e976f86b1733204a0c} 
+\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*} list\+\_\+load\+\_\+binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Loads a linked list from a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the loaded list, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{linked__list_8c_a5599c8d00dfcabf4126ed48c1e94232e}\index{linked\_list.c@{linked\_list.c}!list\_remove@{list\_remove}}
+\index{list\_remove@{list\_remove}!linked\_list.c@{linked\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_remove()}{list\_remove()}}
+{\footnotesize\ttfamily \label{linked__list_8c_a5599c8d00dfcabf4126ed48c1e94232e} 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} list\+\_\+remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Removes a recipe from the list by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the list \\
+\hline
+{\em id} & \doxylink{struct_recipe}{Recipe} ID to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the removed recipe, or NULL if not found 
+\end{DoxyReturn}
+\Hypertarget{linked__list_8c_a9ed842e32078faed4b0e1397af3b68a5}\index{linked\_list.c@{linked\_list.c}!list\_save\_binary@{list\_save\_binary}}
+\index{list\_save\_binary@{list\_save\_binary}!linked\_list.c@{linked\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_save\_binary()}{list\_save\_binary()}}
+{\footnotesize\ttfamily \label{linked__list_8c_a9ed842e32078faed4b0e1397af3b68a5} 
+int list\+\_\+save\+\_\+binary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Saves the linked list to a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the list \\
+\hline
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{linked__list_8c_a2e0b573f5ab9221c82af4a5eb5a48379}\index{linked\_list.c@{linked\_list.c}!list\_size@{list\_size}}
+\index{list\_size@{list\_size}!linked\_list.c@{linked\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_size()}{list\_size()}}
+{\footnotesize\ttfamily \label{linked__list_8c_a2e0b573f5ab9221c82af4a5eb5a48379} 
+int list\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Returns the number of recipes in the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of recipes 
+\end{DoxyReturn}

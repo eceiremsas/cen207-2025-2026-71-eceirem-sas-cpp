@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="struct_b_f_s_queue" kind="struct" language="C++" prot="public">
+    <compoundname>BFSQueue</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_b_f_s_queue_1aac3665589678d4e5439379decb2ab534" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BFSQueue::items[MAX_GRAPH_VERTICES]</definition>
+        <argsstring>[MAX_GRAPH_VERTICES]</argsstring>
+        <name>items</name>
+        <qualifiedname>BFSQueue::items</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/graph.c" line="14" column="9" bodyfile="src/graph.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_f_s_queue_1ace0b8e92907b815ea442162390dea06c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BFSQueue::front</definition>
+        <argsstring></argsstring>
+        <name>front</name>
+        <qualifiedname>BFSQueue::front</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/graph.c" line="15" column="9" bodyfile="src/graph.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_f_s_queue_1ab605d5fffae75ce089f5305d2b57047c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BFSQueue::rear</definition>
+        <argsstring></argsstring>
+        <name>rear</name>
+        <qualifiedname>BFSQueue::rear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/graph.c" line="16" column="9" bodyfile="src/graph.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>BFSQueue</label>
+        <link refid="struct_b_f_s_queue"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/graph.c" line="13" column="1" bodyfile="src/graph.c" bodystart="13" bodyend="17"/>
+    <listofallmembers>
+      <member refid="struct_b_f_s_queue_1ace0b8e92907b815ea442162390dea06c" prot="public" virt="non-virtual"><scope>BFSQueue</scope><name>front</name></member>
+      <member refid="struct_b_f_s_queue_1aac3665589678d4e5439379decb2ab534" prot="public" virt="non-virtual"><scope>BFSQueue</scope><name>items</name></member>
+      <member refid="struct_b_f_s_queue_1ab605d5fffae75ce089f5305d2b57047c" prot="public" virt="non-virtual"><scope>BFSQueue</scope><name>rear</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

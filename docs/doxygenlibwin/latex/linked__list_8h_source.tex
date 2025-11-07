@@ -1,0 +1,65 @@
+\doxysection{linked\+\_\+list.\+h}
+\hypertarget{linked__list_8h_source}{}\label{linked__list_8h_source}\index{include/linked\_list.h@{include/linked\_list.h}}
+\mbox{\hyperlink{linked__list_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LINKED\_LIST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LINKED\_LIST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{recipe_8h}{recipe.h}}"{}}\ \ \textcolor{comment}{//\ Using\ the\ Recipe\ structure}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ ===\ Structure\ Definitions\ ===}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ Represents\ a\ single\ node\ in\ the\ linked\ list}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_list_node_afea2f45ff47ed1ceef6a6d24d78033c0}{ListNode}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{struct_list_node_af098883f56bf066b15c37ea3f273482f}{recipe}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ recipe\ stored\ in\ this\ node}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_list_node_afea2f45ff47ed1ceef6a6d24d78033c0}{ListNode}}*\ \mbox{\hyperlink{struct_list_node_ac7af9e18e0586f13d59a52b3501ac4ca}{next}};\ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ next\ node\ in\ the\ list}}
+\DoxyCodeLine{00014\ \}\ \mbox{\hyperlink{struct_list_node}{ListNode}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ Represents\ the\ linked\ list\ structure}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{linked__list_8h_a3786f70ab7091247a621d0d253967e13}{ListNode}}*\ \mbox{\hyperlink{struct_list_a6c5449b1dd158368840801d0cdc86f5e}{head}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ first\ node\ in\ the\ list}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_list_a7d50f0a95a04faab8c250bc6ea28a67d}{count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Number\ of\ recipes\ currently\ stored}}
+\DoxyCodeLine{00020\ \}\ \mbox{\hyperlink{struct_list}{List}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ ===\ Function\ Declarations\ ===}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ Creates\ and\ initializes\ an\ empty\ linked\ list}}
+\DoxyCodeLine{00025\ \mbox{\hyperlink{struct_list}{List}}*\ \mbox{\hyperlink{linked__list_8h_a8668cbe6c584fe11e610d2895f0f16c7}{list\_create}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ Inserts\ a\ recipe\ at\ the\ beginning\ of\ the\ list}}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{linked__list_8h_a9c722f2d382eca0c3e3795e3b4378503}{list\_insert\_head}}(\mbox{\hyperlink{struct_list}{List}}*\ list,\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ Inserts\ a\ recipe\ at\ the\ end\ of\ the\ list}}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{linked__list_8h_a07c42855eb19c2d8ec4018b5906837c6}{list\_insert\_tail}}(\mbox{\hyperlink{struct_list}{List}}*\ list,\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ Removes\ a\ recipe\ from\ the\ list\ by\ its\ ID}}
+\DoxyCodeLine{00034\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{linked__list_8h_a5599c8d00dfcabf4126ed48c1e94232e}{list\_remove}}(\mbox{\hyperlink{struct_list}{List}}*\ list,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ Searches\ for\ and\ returns\ a\ recipe\ by\ its\ ID}}
+\DoxyCodeLine{00037\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{linked__list_8h_ad748f2ad72e7c12e58fd1cff35bd9173}{list\_find}}(\mbox{\hyperlink{struct_list}{List}}*\ list,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ Displays\ all\ recipes\ in\ the\ list}}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{linked__list_8h_a0a0567bba92425d79f4cf96516b5438c}{list\_display}}(\mbox{\hyperlink{struct_list}{List}}*\ list);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{//\ Returns\ the\ number\ of\ recipes\ in\ the\ list}}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{linked__list_8h_a2e0b573f5ab9221c82af4a5eb5a48379}{list\_size}}(\mbox{\hyperlink{struct_list}{List}}*\ list);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ Checks\ if\ the\ list\ is\ empty}}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{linked__list_8h_a76fc18cf55979638bb5e37c25e00a3b2}{list\_is\_empty}}(\mbox{\hyperlink{struct_list}{List}}*\ list);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{comment}{//\ Frees\ all\ memory\ associated\ with\ the\ list}}
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{linked__list_8h_ad720671a4abc61ed689060cacc592565}{list\_destroy}}(\mbox{\hyperlink{struct_list}{List}}*\ list);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ ===\ Binary\ File\ Operations\ ===}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ Saves\ the\ linked\ list\ to\ a\ binary\ file}}
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{linked__list_8h_a9ed842e32078faed4b0e1397af3b68a5}{list\_save\_binary}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_list}{List}}*\ list,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ Loads\ a\ linked\ list\ from\ a\ binary\ file}}
+\DoxyCodeLine{00057\ \mbox{\hyperlink{struct_list}{List}}*\ \mbox{\hyperlink{linked__list_8h_aecca4f228ce4f8e976f86b1733204a0c}{list\_load\_binary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LINKED\_LIST\_H}}
+
+\end{DoxyCode}

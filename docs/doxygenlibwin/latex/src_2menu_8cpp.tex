@@ -1,0 +1,112 @@
+\doxysection{src/recipe/src/menu.cpp File Reference}
+\hypertarget{src_2menu_8cpp}{}\label{src_2menu_8cpp}\index{src/recipe/src/menu.cpp@{src/recipe/src/menu.cpp}}
+
+
+\doxylink{class_menu}{Menu} system for \doxylink{struct_recipe}{Recipe} \& Nutrition Tracker (C++ version).  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include "{}menu.\+h"{}}\newline
+{\ttfamily \#include "{}recipe.\+h"{}}\newline
+Include dependency graph for menu.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src_2menu_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_menu}{Menu}}
+\begin{DoxyCompactList}\small\item\em Provides user interface operations for managing recipes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{src_2menu_8cpp_aff6c831918692405e75fc55c43424304}{clear\+Console}} ()
+\item 
+void \mbox{\hyperlink{src_2menu_8cpp_ab80f005039b55cdbdbea52bbbad3c622}{wait\+For\+Enter}} ()
+\item 
+std\+::string \mbox{\hyperlink{src_2menu_8cpp_a19cad918a5c50d77ebaa53ac53c56c6b}{safe\+String\+Input}} (const std\+::string \&prompt)
+\item 
+int \mbox{\hyperlink{src_2menu_8cpp_ab790bb98171d4a4ecc359895f72b482c}{safe\+Int\+Input}} (const std\+::string \&prompt="{}"{})
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_app_context}{App\+Context}} $>$ \mbox{\hyperlink{src_2menu_8cpp_a3526a651681886822cccec13250be5b4}{app\+\_\+context\+\_\+create}} ()
+\begin{DoxyCompactList}\small\item\em Creates and initializes the application context. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{src_2menu_8cpp_a47f43863a0d425d022a1c7df37d73ac9}{app\+\_\+context\+\_\+destroy}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\begin{DoxyCompactList}\small\item\em Frees all memory used by the application context. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{src_2menu_8cpp_a57464d54cf94f6b514c90b096e59997d}{create\+Menu}} (\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_menu}{Menu} system for \doxylink{struct_recipe}{Recipe} \& Nutrition Tracker (C++ version). 
+
+Provides application context creation, data loading, and user-\/driven operations such as adding, viewing, sorting, and searching recipes. 
+
+\label{doc-func-members}
+\Hypertarget{src_2menu_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{src_2menu_8cpp_a3526a651681886822cccec13250be5b4}\index{menu.cpp@{menu.cpp}!app\_context\_create@{app\_context\_create}}
+\index{app\_context\_create@{app\_context\_create}!menu.cpp@{menu.cpp}}
+\doxysubsubsection{\texorpdfstring{app\_context\_create()}{app\_context\_create()}}
+{\footnotesize\ttfamily \label{src_2menu_8cpp_a3526a651681886822cccec13250be5b4} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_app_context}{App\+Context}} $>$ app\+\_\+context\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Creates and initializes the application context. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the created context, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{src_2menu_8cpp_a47f43863a0d425d022a1c7df37d73ac9}\index{menu.cpp@{menu.cpp}!app\_context\_destroy@{app\_context\_destroy}}
+\index{app\_context\_destroy@{app\_context\_destroy}!menu.cpp@{menu.cpp}}
+\doxysubsubsection{\texorpdfstring{app\_context\_destroy()}{app\_context\_destroy()}}
+{\footnotesize\ttfamily \label{src_2menu_8cpp_a47f43863a0d425d022a1c7df37d73ac9} 
+void app\+\_\+context\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Frees all memory used by the application context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Pointer to the context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{src_2menu_8cpp_aff6c831918692405e75fc55c43424304}\index{menu.cpp@{menu.cpp}!clearConsole@{clearConsole}}
+\index{clearConsole@{clearConsole}!menu.cpp@{menu.cpp}}
+\doxysubsubsection{\texorpdfstring{clearConsole()}{clearConsole()}}
+{\footnotesize\ttfamily \label{src_2menu_8cpp_aff6c831918692405e75fc55c43424304} 
+void clear\+Console (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2menu_8cpp_a57464d54cf94f6b514c90b096e59997d}\index{menu.cpp@{menu.cpp}!createMenu@{createMenu}}
+\index{createMenu@{createMenu}!menu.cpp@{menu.cpp}}
+\doxysubsubsection{\texorpdfstring{createMenu()}{createMenu()}}
+{\footnotesize\ttfamily \label{src_2menu_8cpp_a57464d54cf94f6b514c90b096e59997d} 
+\mbox{\hyperlink{class_menu}{Menu}} \texorpdfstring{$\ast$}{*} create\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_app_context}{App\+Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2menu_8cpp_ab790bb98171d4a4ecc359895f72b482c}\index{menu.cpp@{menu.cpp}!safeIntInput@{safeIntInput}}
+\index{safeIntInput@{safeIntInput}!menu.cpp@{menu.cpp}}
+\doxysubsubsection{\texorpdfstring{safeIntInput()}{safeIntInput()}}
+{\footnotesize\ttfamily \label{src_2menu_8cpp_ab790bb98171d4a4ecc359895f72b482c} 
+int safe\+Int\+Input (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{prompt}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2menu_8cpp_a19cad918a5c50d77ebaa53ac53c56c6b}\index{menu.cpp@{menu.cpp}!safeStringInput@{safeStringInput}}
+\index{safeStringInput@{safeStringInput}!menu.cpp@{menu.cpp}}
+\doxysubsubsection{\texorpdfstring{safeStringInput()}{safeStringInput()}}
+{\footnotesize\ttfamily \label{src_2menu_8cpp_a19cad918a5c50d77ebaa53ac53c56c6b} 
+std\+::string safe\+String\+Input (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{prompt}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2menu_8cpp_ab80f005039b55cdbdbea52bbbad3c622}\index{menu.cpp@{menu.cpp}!waitForEnter@{waitForEnter}}
+\index{waitForEnter@{waitForEnter}!menu.cpp@{menu.cpp}}
+\doxysubsubsection{\texorpdfstring{waitForEnter()}{waitForEnter()}}
+{\footnotesize\ttfamily \label{src_2menu_8cpp_ab80f005039b55cdbdbea52bbbad3c622} 
+void wait\+For\+Enter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+

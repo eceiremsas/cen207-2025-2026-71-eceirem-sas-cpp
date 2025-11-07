@@ -1,0 +1,334 @@
+\doxysection{include/recipe.h File Reference}
+\hypertarget{recipe_8h}{}\label{recipe_8h}\index{include/recipe.h@{include/recipe.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for recipe.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{recipe_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{recipe_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{struct_recipe}{Recipe}}
+\begin{DoxyCompactList}\small\item\em Represents a recipe with its properties and related data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{recipe_8h_a0c397a708cec89c74029582574516b30}{MAX\+\_\+\+NAME\+\_\+\+LENGTH}}~100
+\item 
+\#define \mbox{\hyperlink{recipe_8h_af6b3fc0245cd2fea2335e352ea187c93}{MAX\+\_\+\+CATEGORY\+\_\+\+LENGTH}}~50
+\item 
+\#define \mbox{\hyperlink{recipe_8h_af928cf0c579d7c9386d5038cc1ce9562}{MAX\+\_\+\+INGREDIENTS}}~50
+\item 
+\#define \mbox{\hyperlink{recipe_8h_a9f7b9361b9cca9fce28143e517498def}{MAX\+\_\+\+INGREDIENT\+\_\+\+LENGTH}}~50
+\item 
+\#define \mbox{\hyperlink{recipe_8h_afe134ede9f4cac41559b2222b17a1a98}{MAX\+\_\+\+INSTRUCTIONS}}~500
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{recipe_8h_a3a010d7d14830ed5a0d045452478edb2}{recipe\+\_\+create}} (int id, const char \texorpdfstring{$\ast$}{*}name, const char \texorpdfstring{$\ast$}{*}category, int calories, int preparation\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Creates and initializes a new recipe. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{recipe_8h_a80d4dcf1f02dd97b365a11e06b05f0f3}{recipe\+\_\+add\+\_\+ingredient}} (\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe, const char \texorpdfstring{$\ast$}{*}ingredient)
+\begin{DoxyCompactList}\small\item\em Adds an ingredient to the recipe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{recipe_8h_a11c82a881ee301bff1d0fc0cbc2e1a46}{recipe\+\_\+set\+\_\+instructions}} (\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe, const char \texorpdfstring{$\ast$}{*}instructions)
+\begin{DoxyCompactList}\small\item\em Sets the preparation instructions for the recipe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{recipe_8h_a416ce862f5c4754ff9383005b6c92751}{recipe\+\_\+display}} (const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe)
+\begin{DoxyCompactList}\small\item\em Displays all details of the recipe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{recipe_8h_ad5f9bcd3d6eb320f9e9da7ce64f543f4}{recipe\+\_\+copy}} (const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe)
+\begin{DoxyCompactList}\small\item\em Creates and returns a deep copy of a recipe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{recipe_8h_aa21f3b4ca5007ba8fcfd404ac6ba5853}{recipe\+\_\+destroy}} (\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe)
+\begin{DoxyCompactList}\small\item\em Frees all memory associated with a recipe. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{recipe_8h_ad31022ebbbbdab7442de444dfc39b9e1}{recipe\+\_\+compare\+\_\+by\+\_\+id}} (const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe1, const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe2)
+\begin{DoxyCompactList}\small\item\em Compares two recipes by their IDs. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{recipe_8h_a3441a0ce7370e1d6145f708ce07f9987}{recipe\+\_\+compare\+\_\+by\+\_\+calories}} (const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe1, const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe2)
+\begin{DoxyCompactList}\small\item\em Compares two recipes by their calorie values. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{recipe_8h_a24eb43014a87a94cd86119d4b3c20a4f}{recipe\+\_\+save\+\_\+binary}} (const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Saves a recipe to a binary file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{recipe_8h_ad5ea6ba838614a3e9e344c0e36a362aa}{recipe\+\_\+load\+\_\+binary}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Loads a recipe from a binary file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{recipe_8h_af40abb2bd55f3cc7ddc1fc9e60b76317}{recipe\+\_\+save\+\_\+array\+\_\+binary}} (const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipes, int count, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Saves multiple recipes to a binary file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{recipe_8h_a74d3b71c4aeffbdd117722fa80d8c7c2}{recipe\+\_\+load\+\_\+array\+\_\+binary}} (const char \texorpdfstring{$\ast$}{*}filename, int \texorpdfstring{$\ast$}{*}count)
+\begin{DoxyCompactList}\small\item\em Loads multiple recipes from a binary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{recipe_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{recipe_8h_af6b3fc0245cd2fea2335e352ea187c93}\index{recipe.h@{recipe.h}!MAX\_CATEGORY\_LENGTH@{MAX\_CATEGORY\_LENGTH}}
+\index{MAX\_CATEGORY\_LENGTH@{MAX\_CATEGORY\_LENGTH}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_CATEGORY\_LENGTH}{MAX\_CATEGORY\_LENGTH}}
+{\footnotesize\ttfamily \label{recipe_8h_af6b3fc0245cd2fea2335e352ea187c93} 
+\#define MAX\+\_\+\+CATEGORY\+\_\+\+LENGTH~50}
+
+\Hypertarget{recipe_8h_a9f7b9361b9cca9fce28143e517498def}\index{recipe.h@{recipe.h}!MAX\_INGREDIENT\_LENGTH@{MAX\_INGREDIENT\_LENGTH}}
+\index{MAX\_INGREDIENT\_LENGTH@{MAX\_INGREDIENT\_LENGTH}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_INGREDIENT\_LENGTH}{MAX\_INGREDIENT\_LENGTH}}
+{\footnotesize\ttfamily \label{recipe_8h_a9f7b9361b9cca9fce28143e517498def} 
+\#define MAX\+\_\+\+INGREDIENT\+\_\+\+LENGTH~50}
+
+\Hypertarget{recipe_8h_af928cf0c579d7c9386d5038cc1ce9562}\index{recipe.h@{recipe.h}!MAX\_INGREDIENTS@{MAX\_INGREDIENTS}}
+\index{MAX\_INGREDIENTS@{MAX\_INGREDIENTS}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_INGREDIENTS}{MAX\_INGREDIENTS}}
+{\footnotesize\ttfamily \label{recipe_8h_af928cf0c579d7c9386d5038cc1ce9562} 
+\#define MAX\+\_\+\+INGREDIENTS~50}
+
+\Hypertarget{recipe_8h_afe134ede9f4cac41559b2222b17a1a98}\index{recipe.h@{recipe.h}!MAX\_INSTRUCTIONS@{MAX\_INSTRUCTIONS}}
+\index{MAX\_INSTRUCTIONS@{MAX\_INSTRUCTIONS}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_INSTRUCTIONS}{MAX\_INSTRUCTIONS}}
+{\footnotesize\ttfamily \label{recipe_8h_afe134ede9f4cac41559b2222b17a1a98} 
+\#define MAX\+\_\+\+INSTRUCTIONS~500}
+
+\Hypertarget{recipe_8h_a0c397a708cec89c74029582574516b30}\index{recipe.h@{recipe.h}!MAX\_NAME\_LENGTH@{MAX\_NAME\_LENGTH}}
+\index{MAX\_NAME\_LENGTH@{MAX\_NAME\_LENGTH}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_NAME\_LENGTH}{MAX\_NAME\_LENGTH}}
+{\footnotesize\ttfamily \label{recipe_8h_a0c397a708cec89c74029582574516b30} 
+\#define MAX\+\_\+\+NAME\+\_\+\+LENGTH~100}
+
+
+
+\label{doc-func-members}
+\Hypertarget{recipe_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{recipe_8h_a80d4dcf1f02dd97b365a11e06b05f0f3}\index{recipe.h@{recipe.h}!recipe\_add\_ingredient@{recipe\_add\_ingredient}}
+\index{recipe\_add\_ingredient@{recipe\_add\_ingredient}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{recipe\_add\_ingredient()}{recipe\_add\_ingredient()}}
+{\footnotesize\ttfamily \label{recipe_8h_a80d4dcf1f02dd97b365a11e06b05f0f3} 
+int recipe\+\_\+add\+\_\+ingredient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{ingredient}{}\end{DoxyParamCaption})}
+
+
+
+Adds an ingredient to the recipe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipe} & Pointer to the recipe \\
+\hline
+{\em ingredient} & Ingredient name to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{recipe_8h_a3441a0ce7370e1d6145f708ce07f9987}\index{recipe.h@{recipe.h}!recipe\_compare\_by\_calories@{recipe\_compare\_by\_calories}}
+\index{recipe\_compare\_by\_calories@{recipe\_compare\_by\_calories}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{recipe\_compare\_by\_calories()}{recipe\_compare\_by\_calories()}}
+{\footnotesize\ttfamily \label{recipe_8h_a3441a0ce7370e1d6145f708ce07f9987} 
+int recipe\+\_\+compare\+\_\+by\+\_\+calories (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe1}{, }\item[{const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe2}{}\end{DoxyParamCaption})}
+
+
+
+Compares two recipes by their calorie values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipe1} & First recipe \\
+\hline
+{\em recipe2} & Second recipe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Negative if recipe1 \texorpdfstring{$<$}{<} recipe2, positive if recipe1 \texorpdfstring{$>$}{>} recipe2, 0 if equal 
+\end{DoxyReturn}
+\Hypertarget{recipe_8h_ad31022ebbbbdab7442de444dfc39b9e1}\index{recipe.h@{recipe.h}!recipe\_compare\_by\_id@{recipe\_compare\_by\_id}}
+\index{recipe\_compare\_by\_id@{recipe\_compare\_by\_id}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{recipe\_compare\_by\_id()}{recipe\_compare\_by\_id()}}
+{\footnotesize\ttfamily \label{recipe_8h_ad31022ebbbbdab7442de444dfc39b9e1} 
+int recipe\+\_\+compare\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe1}{, }\item[{const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe2}{}\end{DoxyParamCaption})}
+
+
+
+Compares two recipes by their IDs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipe1} & First recipe \\
+\hline
+{\em recipe2} & Second recipe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Negative if recipe1 \texorpdfstring{$<$}{<} recipe2, positive if recipe1 \texorpdfstring{$>$}{>} recipe2, 0 if equal 
+\end{DoxyReturn}
+\Hypertarget{recipe_8h_ad5f9bcd3d6eb320f9e9da7ce64f543f4}\index{recipe.h@{recipe.h}!recipe\_copy@{recipe\_copy}}
+\index{recipe\_copy@{recipe\_copy}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{recipe\_copy()}{recipe\_copy()}}
+{\footnotesize\ttfamily \label{recipe_8h_ad5f9bcd3d6eb320f9e9da7ce64f543f4} 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} recipe\+\_\+copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe}{}\end{DoxyParamCaption})}
+
+
+
+Creates and returns a deep copy of a recipe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipe} & Pointer to the recipe to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the copied recipe, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{recipe_8h_a3a010d7d14830ed5a0d045452478edb2}\index{recipe.h@{recipe.h}!recipe\_create@{recipe\_create}}
+\index{recipe\_create@{recipe\_create}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{recipe\_create()}{recipe\_create()}}
+{\footnotesize\ttfamily \label{recipe_8h_a3a010d7d14830ed5a0d045452478edb2} 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} recipe\+\_\+create (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{category}{, }\item[{int}]{calories}{, }\item[{int}]{preparation\+\_\+time}{}\end{DoxyParamCaption})}
+
+
+
+Creates and initializes a new recipe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique recipe identifier \\
+\hline
+{\em name} & \doxylink{struct_recipe}{Recipe} name \\
+\hline
+{\em category} & \doxylink{struct_recipe}{Recipe} category \\
+\hline
+{\em calories} & Calorie count \\
+\hline
+{\em preparation\+\_\+time} & Preparation time in minutes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created recipe, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{recipe_8h_aa21f3b4ca5007ba8fcfd404ac6ba5853}\index{recipe.h@{recipe.h}!recipe\_destroy@{recipe\_destroy}}
+\index{recipe\_destroy@{recipe\_destroy}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{recipe\_destroy()}{recipe\_destroy()}}
+{\footnotesize\ttfamily \label{recipe_8h_aa21f3b4ca5007ba8fcfd404ac6ba5853} 
+void recipe\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe}{}\end{DoxyParamCaption})}
+
+
+
+Frees all memory associated with a recipe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipe} & Pointer to the recipe to destroy \\
+\hline
+\end{DoxyParams}
+\Hypertarget{recipe_8h_a416ce862f5c4754ff9383005b6c92751}\index{recipe.h@{recipe.h}!recipe\_display@{recipe\_display}}
+\index{recipe\_display@{recipe\_display}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{recipe\_display()}{recipe\_display()}}
+{\footnotesize\ttfamily \label{recipe_8h_a416ce862f5c4754ff9383005b6c92751} 
+void recipe\+\_\+display (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe}{}\end{DoxyParamCaption})}
+
+
+
+Displays all details of the recipe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipe} & Pointer to the recipe to display \\
+\hline
+\end{DoxyParams}
+\Hypertarget{recipe_8h_a74d3b71c4aeffbdd117722fa80d8c7c2}\index{recipe.h@{recipe.h}!recipe\_load\_array\_binary@{recipe\_load\_array\_binary}}
+\index{recipe\_load\_array\_binary@{recipe\_load\_array\_binary}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{recipe\_load\_array\_binary()}{recipe\_load\_array\_binary()}}
+{\footnotesize\ttfamily \label{recipe_8h_a74d3b71c4aeffbdd117722fa80d8c7c2} 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} recipe\+\_\+load\+\_\+array\+\_\+binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{count}{}\end{DoxyParamCaption})}
+
+
+
+Loads multiple recipes from a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the binary file \\
+\hline
+{\em count} & Pointer to store the number of recipes loaded \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to array of loaded recipes, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{recipe_8h_ad5ea6ba838614a3e9e344c0e36a362aa}\index{recipe.h@{recipe.h}!recipe\_load\_binary@{recipe\_load\_binary}}
+\index{recipe\_load\_binary@{recipe\_load\_binary}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{recipe\_load\_binary()}{recipe\_load\_binary()}}
+{\footnotesize\ttfamily \label{recipe_8h_ad5ea6ba838614a3e9e344c0e36a362aa} 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} recipe\+\_\+load\+\_\+binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Loads a recipe from a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the loaded recipe, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{recipe_8h_af40abb2bd55f3cc7ddc1fc9e60b76317}\index{recipe.h@{recipe.h}!recipe\_save\_array\_binary@{recipe\_save\_array\_binary}}
+\index{recipe\_save\_array\_binary@{recipe\_save\_array\_binary}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{recipe\_save\_array\_binary()}{recipe\_save\_array\_binary()}}
+{\footnotesize\ttfamily \label{recipe_8h_af40abb2bd55f3cc7ddc1fc9e60b76317} 
+int recipe\+\_\+save\+\_\+array\+\_\+binary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipes}{, }\item[{int}]{count}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Saves multiple recipes to a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipes} & Array of recipe pointers \\
+\hline
+{\em count} & Number of recipes \\
+\hline
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{recipe_8h_a24eb43014a87a94cd86119d4b3c20a4f}\index{recipe.h@{recipe.h}!recipe\_save\_binary@{recipe\_save\_binary}}
+\index{recipe\_save\_binary@{recipe\_save\_binary}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{recipe\_save\_binary()}{recipe\_save\_binary()}}
+{\footnotesize\ttfamily \label{recipe_8h_a24eb43014a87a94cd86119d4b3c20a4f} 
+int recipe\+\_\+save\+\_\+binary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Saves a recipe to a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipe} & Pointer to the recipe to save \\
+\hline
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{recipe_8h_a11c82a881ee301bff1d0fc0cbc2e1a46}\index{recipe.h@{recipe.h}!recipe\_set\_instructions@{recipe\_set\_instructions}}
+\index{recipe\_set\_instructions@{recipe\_set\_instructions}!recipe.h@{recipe.h}}
+\doxysubsubsection{\texorpdfstring{recipe\_set\_instructions()}{recipe\_set\_instructions()}}
+{\footnotesize\ttfamily \label{recipe_8h_a11c82a881ee301bff1d0fc0cbc2e1a46} 
+void recipe\+\_\+set\+\_\+instructions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{instructions}{}\end{DoxyParamCaption})}
+
+
+
+Sets the preparation instructions for the recipe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipe} & Pointer to the recipe \\
+\hline
+{\em instructions} & Instruction text \\
+\hline
+\end{DoxyParams}

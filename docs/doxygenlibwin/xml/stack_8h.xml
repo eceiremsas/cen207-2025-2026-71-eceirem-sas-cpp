@@ -1,0 +1,585 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="stack_8h" kind="file" language="C++">
+    <compoundname>stack.h</compoundname>
+    <includes refid="recipe_8h" local="yes">recipe.h</includes>
+    <includedby refid="menu_8h" local="yes">include/menu.h</includedby>
+    <includedby refid="stack_8c" local="yes">src/stack.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>recipe.h</label>
+        <link refid="recipe_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/stack.h</label>
+        <link refid="stack_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/menu.h</label>
+        <link refid="menu_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/stack.h</label>
+        <link refid="stack_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="4">
+        <label>src/menu.c</label>
+        <link refid="menu_8c"/>
+      </node>
+      <node id="5">
+        <label>src/recipe/src/main.cpp</label>
+        <link refid="src_2main_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/recipe/src/menu.cpp</label>
+        <link refid="src_2menu_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/recipeapp/src/main.cpp</label>
+        <link refid="pp_2src_2main_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/recipeapp/src/menu.cpp</label>
+        <link refid="pp_2src_2menu_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/stack.c</label>
+        <link refid="stack_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_stack_operation" prot="public">StackOperation</innerclass>
+    <innerclass refid="struct_stack" prot="public">Stack</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="stack_8h_1aec2864553519b450501f110ca0c3e3b7" prot="public" static="no">
+        <name>STACK_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stack.h" line="2" column="9" bodyfile="include/stack.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stack_8h_1af94d2c1547a19bc8afb8f08e48847d1c" prot="public" static="no">
+        <name>UNDO_STACK_SIZE</name>
+        <initializer>50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stack.h" line="6" column="9" bodyfile="include/stack.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047" prot="public" static="no" strong="no">
+        <type></type>
+        <name>OperationType</name>
+        <enumvalue id="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a96186829480e5b34b1373288e956b1c8" prot="public">
+          <name>OP_ADD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a2aee02a522cd2fb541ec508382fdc646" prot="public">
+          <name>OP_EDIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a4c629f6a90286b343e3f222ff96f94d5" prot="public">
+          <name>OP_DELETE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9" prot="public">
+          <name>Add</name>
+          <briefdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> addition. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35" prot="public">
+          <name>Edit</name>
+          <briefdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> modification. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18" prot="public">
+          <name>Delete</name>
+          <briefdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> deletion. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047ad3a0f825f42df18a5e4f006151a92edb" prot="public">
+          <name>OP_ADD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047ade36069b96f4e88cce87bb5c386cf900" prot="public">
+          <name>OP_EDIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a1f880f83d676db79c78a5f4952ff9a4c" prot="public">
+          <name>OP_DELETE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Represents the type of operation stored in the undo stack. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stack.h" line="14" column="1" bodyfile="include/stack.h" bodystart="14" bodyend="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="stack_8h_1ae5a3d0d7d18942221d081e0bffd143ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_stack" kindref="compound">Stack</ref> *</type>
+        <definition>Stack * stack_create</definition>
+        <argsstring>(void)</argsstring>
+        <name>stack_create</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Creates and initializes an empty stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the created stack, or NULL on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stack.h" line="45" column="7" bodyfile="src/stack.c" bodystart="16" bodyend="29" declfile="include/stack.h" declline="45" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="stack_8h_1ac23f75e620cc2a76c24293df4589b5b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int stack_push</definition>
+        <argsstring>(Stack *stack, OperationType type, Recipe *recipe)</argsstring>
+        <name>stack_push</name>
+        <param>
+          <type><ref refid="struct_stack" kindref="compound">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <param>
+          <type><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047" kindref="member">OperationType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+          <declname>recipe</declname>
+        </param>
+        <briefdescription>
+<para>Pushes a new operation onto the stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the stack </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the recipe </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stack.h" line="48" column="5" bodyfile="src/stack.c" bodystart="38" bodyend="56" declfile="include/stack.h" declline="48" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stack_8h_1a7e8112ce73793707d705d8e9e7db0921" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_stack_operation" kindref="compound">StackOperation</ref> *</type>
+        <definition>StackOperation * stack_pop</definition>
+        <argsstring>(Stack *stack)</argsstring>
+        <name>stack_pop</name>
+        <param>
+          <type><ref refid="struct_stack" kindref="compound">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+<para>Removes and returns the top operation from the stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the top operation, or NULL if stack is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stack.h" line="51" column="16" bodyfile="src/stack.c" bodystart="63" bodyend="73" declfile="include/stack.h" declline="51" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="stack_8h_1a7b52f4571b1420d83af2073b3e889850" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_stack_operation" kindref="compound">StackOperation</ref> *</type>
+        <definition>StackOperation * stack_peek</definition>
+        <argsstring>(Stack *stack)</argsstring>
+        <name>stack_peek</name>
+        <param>
+          <type><ref refid="struct_stack" kindref="compound">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+<para>Returns the top operation without removing it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the top operation, or NULL if stack is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stack.h" line="54" column="16" bodyfile="src/stack.c" bodystart="80" bodyend="86" declfile="include/stack.h" declline="54" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="stack_8h_1ac354159d81eee1ef4b0fcbb688e5723e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int stack_is_empty</definition>
+        <argsstring>(Stack *stack)</argsstring>
+        <name>stack_is_empty</name>
+        <param>
+          <type><ref refid="struct_stack" kindref="compound">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the stack is empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if empty, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stack.h" line="57" column="5" bodyfile="src/stack.c" bodystart="93" bodyend="95" declfile="include/stack.h" declline="57" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stack_8h_1ad606fb12d4acf6f88caf97f18e6e1acb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int stack_is_full</definition>
+        <argsstring>(Stack *stack)</argsstring>
+        <name>stack_is_full</name>
+        <param>
+          <type><ref refid="struct_stack" kindref="compound">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the stack is full. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if full, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stack.h" line="60" column="5" bodyfile="src/stack.c" bodystart="102" bodyend="104" declfile="include/stack.h" declline="60" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stack_8h_1a56c0c535d6e76d010500763370052972" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int stack_size</definition>
+        <argsstring>(Stack *stack)</argsstring>
+        <name>stack_size</name>
+        <param>
+          <type><ref refid="struct_stack" kindref="compound">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+<para>Returns the number of elements currently in the stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of elements </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stack.h" line="63" column="5" bodyfile="src/stack.c" bodystart="111" bodyend="113" declfile="include/stack.h" declline="63" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stack_8h_1a1c78193162bca5a7c494c0750a3d58ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stack_destroy</definition>
+        <argsstring>(Stack *stack)</argsstring>
+        <name>stack_destroy</name>
+        <param>
+          <type><ref refid="struct_stack" kindref="compound">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+<para>Frees all memory used by the stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stack.h" line="66" column="6" bodyfile="src/stack.c" bodystart="119" bodyend="132" declfile="include/stack.h" declline="66" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="stack_8h_1af167f136d150224afd6dc677166a397d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int stack_save_binary</definition>
+        <argsstring>(const Stack *stack, const char *filename)</argsstring>
+        <name>stack_save_binary</name>
+        <param>
+          <type>const <ref refid="struct_stack" kindref="compound">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Saves the stack to a binary file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the stack </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the binary file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stack.h" line="71" column="5" bodyfile="src/stack.c" bodystart="140" bodyend="171" declfile="include/stack.h" declline="71" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stack_8h_1a0bf22eef5c99ad7871927ece0984b3ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_stack" kindref="compound">Stack</ref> *</type>
+        <definition>Stack * stack_load_binary</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>stack_load_binary</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Loads a stack from a binary file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the binary file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the loaded stack, or NULL on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stack.h" line="74" column="7" bodyfile="src/stack.c" bodystart="178" bodyend="224" declfile="include/stack.h" declline="74" declcolumn="7"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>STACK_H<sp/><sp/></highlight><highlight class="comment">//<sp/>Include<sp/>guard<sp/>start</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="stack_8h_1aec2864553519b450501f110ca0c3e3b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STACK_H<sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>STACK_H<sp/>macro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="recipe_8h" kindref="compound">recipe.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>the<sp/>Recipe<sp/>data<sp/>structure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="stack_8h_1af94d2c1547a19bc8afb8f08e48847d1c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UNDO_STACK_SIZE<sp/>50<sp/><sp/></highlight><highlight class="comment">//<sp/>Maximum<sp/>number<sp/>of<sp/>undo<sp/>operations<sp/>stored<sp/>in<sp/>the<sp/>stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Enum<sp/>Definitions<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a96186829480e5b34b1373288e956b1c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a96186829480e5b34b1373288e956b1c8" kindref="member">OP_ADD</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Recipe<sp/>addition<sp/>operation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a2aee02a522cd2fb541ec508382fdc646" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a2aee02a522cd2fb541ec508382fdc646" kindref="member">OP_EDIT</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Recipe<sp/>editing<sp/>operation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a4c629f6a90286b343e3f222ff96f94d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a4c629f6a90286b343e3f222ff96f94d5" kindref="member">OP_DELETE</ref><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Recipe<sp/>deletion<sp/>operation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}<sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047" kindref="member">OperationType</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Structure<sp/>Definitions<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="struct_stack_operation" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="struct_stack_operation_1a9e5459b5f778ee92f661573b20fbe364" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_stack_operation_1a9e5459b5f778ee92f661573b20fbe364" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Operation<sp/>type<sp/>(e.g.,<sp/>OP_ADD,<sp/>OP_EDIT,<sp/>OP_DELETE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="struct_stack_operation_1a5b5bb536a85fc0f28b5e252a7dff617f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/><ref refid="struct_stack_operation_1a5b5bb536a85fc0f28b5e252a7dff617f" kindref="member">recipe</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>recipe<sp/>affected<sp/>by<sp/>the<sp/>operation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/><ref refid="struct_stack_operation" kindref="compound">StackOperation</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="struct_stack" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38" refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack_operation" kindref="compound">StackOperation</ref><sp/><ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>[<ref refid="stack_8cpp_1af302896a110a0713b53fca4e5e3529d8" kindref="member">UNDO_STACK_SIZE</ref>];<sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>holding<sp/>stored<sp/>operations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kindref="member">top</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Index<sp/>of<sp/>the<sp/>top<sp/>element<sp/>(-1<sp/>if<sp/>stack<sp/>is<sp/>empty)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}<sp/><ref refid="struct_stack" kindref="compound">Stack</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Function<sp/>Declarations<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Creates<sp/>and<sp/>initializes<sp/>an<sp/>empty<sp/>stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="struct_stack" kindref="compound">Stack</ref>*<sp/><ref refid="stack_8h_1ae5a3d0d7d18942221d081e0bffd143ff" kindref="member">stack_create</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Pushes<sp/>a<sp/>new<sp/>operation<sp/>onto<sp/>the<sp/>stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stack_8h_1ac23f75e620cc2a76c24293df4589b5b2" kindref="member">stack_push</ref>(<ref refid="struct_stack" kindref="compound">Stack</ref>*<sp/>stack,<sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047" kindref="member">OperationType</ref><sp/>type,<sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/>recipe);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Removes<sp/>and<sp/>returns<sp/>the<sp/>top<sp/>operation<sp/>from<sp/>the<sp/>stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><ref refid="struct_stack_operation" kindref="compound">StackOperation</ref>*<sp/><ref refid="stack_8h_1a7e8112ce73793707d705d8e9e7db0921" kindref="member">stack_pop</ref>(<ref refid="struct_stack" kindref="compound">Stack</ref>*<sp/>stack);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>the<sp/>top<sp/>operation<sp/>without<sp/>removing<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="struct_stack_operation" kindref="compound">StackOperation</ref>*<sp/><ref refid="stack_8h_1a7b52f4571b1420d83af2073b3e889850" kindref="member">stack_peek</ref>(<ref refid="struct_stack" kindref="compound">Stack</ref>*<sp/>stack);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Checks<sp/>if<sp/>the<sp/>stack<sp/>is<sp/>empty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stack_8h_1ac354159d81eee1ef4b0fcbb688e5723e" kindref="member">stack_is_empty</ref>(<ref refid="struct_stack" kindref="compound">Stack</ref>*<sp/>stack);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Checks<sp/>if<sp/>the<sp/>stack<sp/>is<sp/>full</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stack_8h_1ad606fb12d4acf6f88caf97f18e6e1acb" kindref="member">stack_is_full</ref>(<ref refid="struct_stack" kindref="compound">Stack</ref>*<sp/>stack);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>the<sp/>number<sp/>of<sp/>elements<sp/>currently<sp/>in<sp/>the<sp/>stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stack_8h_1a56c0c535d6e76d010500763370052972" kindref="member">stack_size</ref>(<ref refid="struct_stack" kindref="compound">Stack</ref>*<sp/>stack);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Frees<sp/>all<sp/>memory<sp/>used<sp/>by<sp/>the<sp/>stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="stack_8h_1a1c78193162bca5a7c494c0750a3d58ed" kindref="member">stack_destroy</ref>(<ref refid="struct_stack" kindref="compound">Stack</ref>*<sp/>stack);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Binary<sp/>File<sp/>Operations<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Saves<sp/>the<sp/>stack<sp/>to<sp/>a<sp/>binary<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stack_8h_1af167f136d150224afd6dc677166a397d" kindref="member">stack_save_binary</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_stack" kindref="compound">Stack</ref>*<sp/>stack,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Loads<sp/>a<sp/>stack<sp/>from<sp/>a<sp/>binary<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="struct_stack" kindref="compound">Stack</ref>*<sp/><ref refid="stack_8h_1a0bf22eef5c99ad7871927ece0984b3ce" kindref="member">stack_load_binary</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>STACK_H<sp/>-<sp/>Include<sp/>guard<sp/>end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/stack.h"/>
+  </compounddef>
+</doxygen>

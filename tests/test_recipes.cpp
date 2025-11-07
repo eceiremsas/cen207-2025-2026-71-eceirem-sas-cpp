@@ -1283,3 +1283,190 @@ TEST(MenuTest, ContextBinaryFileOperations) {
     recipe_destroy(r1);
 }
 
+/**
+ * @brief Test menu display function
+ */
+TEST(MenuTest, DisplayMenu) {
+    // Display should not crash
+    menu_display();
+}
+
+/**
+ * @brief Test menu search functions (non-interactive)
+ */
+TEST(MenuTest, SearchFunctions) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    hash_table_insert(ctx->hash_table, r1);
+    list_insert_tail(ctx->list, r1);
+    
+    // These functions should not crash even if they just print
+    menu_search_recipes(ctx);
+    menu_search_by_name(ctx);
+    menu_search_by_category(ctx);
+    menu_search_by_calorie_range(ctx);
+    
+    app_context_destroy(ctx);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test menu sort function
+ */
+TEST(MenuTest, SortByCalories) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Salad", "Lunch", 200, 10);
+    hash_table_insert(ctx->hash_table, r1);
+    hash_table_insert(ctx->hash_table, r2);
+    list_insert_tail(ctx->list, r1);
+    list_insert_tail(ctx->list, r2);
+    
+    // Should not crash
+    menu_sort_by_calories(ctx);
+    
+    app_context_destroy(ctx);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+}
+
+/**
+ * @brief Test menu weekly plan function
+ */
+TEST(MenuTest, CreateWeeklyPlan) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    // Should not crash
+    menu_create_weekly_plan(ctx);
+    
+    app_context_destroy(ctx);
+}
+
+/**
+ * @brief Test menu view dependencies function
+ */
+TEST(MenuTest, ViewDependencies) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    graph_add_vertex(ctx->graph, 1);
+    graph_add_vertex(ctx->graph, 2);
+    graph_add_edge(ctx->graph, 1, 2, "dough");
+    
+    // Should not crash
+    menu_view_dependencies(ctx);
+    
+    app_context_destroy(ctx);
+}
+
+/**
+ * @brief Test menu find by ingredient function
+ */
+TEST(MenuTest, FindByIngredient) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    sparse_matrix_add_entry(ctx->sparse_matrix, 0, 0, 5, "Flour");
+    
+    // Should not crash
+    menu_find_by_ingredient(ctx);
+    
+    app_context_destroy(ctx);
+}
+
+/**
+ * @brief Test menu undo function
+ */
+TEST(MenuTest, UndoOperation) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    stack_push(ctx->stack, OP_ADD, r1);
+    
+    // Should not crash
+    menu_undo(ctx);
+    
+    app_context_destroy(ctx);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test menu handle choice function
+ */
+TEST(MenuTest, HandleChoice) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    // Test various menu choices
+    menu_handle_choice(ctx, 5); // View all recipes
+    menu_handle_choice(ctx, 6); // Sort by calories
+    menu_handle_choice(ctx, 7); // Create weekly plan
+    menu_handle_choice(ctx, 8); // View dependencies
+    menu_handle_choice(ctx, 9); // Find by ingredient
+    menu_handle_choice(ctx, 10); // Undo
+    menu_handle_choice(ctx, 99); // Invalid choice
+    
+    app_context_destroy(ctx);
+}
+
+/**
+ * @brief Test graph find vertex function
+ */
+TEST(GraphTest, FindVertex) {
+    Graph* graph = graph_create();
+    ASSERT_NE(graph, nullptr);
+    
+    graph_add_vertex(graph, 1);
+    graph_add_vertex(graph, 2);
+    
+    GraphVertex* v1 = graph_find_vertex(graph, 1);
+    ASSERT_NE(v1, nullptr);
+    EXPECT_EQ(v1->recipe_id, 1);
+    
+    GraphVertex* v2 = graph_find_vertex(graph, 2);
+    ASSERT_NE(v2, nullptr);
+    EXPECT_EQ(v2->recipe_id, 2);
+    
+    GraphVertex* v3 = graph_find_vertex(graph, 999);
+    EXPECT_EQ(v3, nullptr); // Not found
+    
+    graph_destroy(graph);
+}
+
+/**
+ * @brief Test graph DFS cycle helper function
+ */
+TEST(GraphTest, DFSCycleHelper) {
+    Graph* graph = graph_create();
+    ASSERT_NE(graph, nullptr);
+    
+    graph_add_vertex(graph, 1);
+    graph_add_vertex(graph, 2);
+    graph_add_vertex(graph, 3);
+    
+    graph_add_edge(graph, 1, 2, "edge1");
+    graph_add_edge(graph, 2, 3, "edge2");
+    
+    int visited[MAX_GRAPH_VERTICES] = {0};
+    int rec_stack[MAX_GRAPH_VERTICES] = {0};
+    
+    // No cycle - should return 0
+    int has_cycle = graph_dfs_cycle_helper(graph, 1, visited, rec_stack);
+    EXPECT_EQ(has_cycle, 0);
+    
+    // Add cycle
+    graph_add_edge(graph, 3, 1, "edge3");
+    memset(visited, 0, sizeof(visited));
+    memset(rec_stack, 0, sizeof(rec_stack));
+    has_cycle = graph_dfs_cycle_helper(graph, 1, visited, rec_stack);
+    EXPECT_EQ(has_cycle, 1);
+    
+    graph_destroy(graph);
+}
+

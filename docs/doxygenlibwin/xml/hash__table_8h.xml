@@ -1,0 +1,452 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="hash__table_8h" kind="file" language="C++">
+    <compoundname>hash_table.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="recipe_8h" local="yes">recipe.h</includes>
+    <includedby refid="menu_8h" local="yes">include/menu.h</includedby>
+    <includedby refid="hash__table_8c" local="yes">src/hash_table.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/hash_table.h</label>
+        <link refid="hash__table_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>recipe.h</label>
+        <link refid="recipe_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/hash_table.h</label>
+        <link refid="hash__table_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/menu.h</label>
+        <link refid="menu_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>src/hash_table.c</label>
+        <link refid="hash__table_8c"/>
+      </node>
+      <node id="3">
+        <label>src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="4">
+        <label>src/menu.c</label>
+        <link refid="menu_8c"/>
+      </node>
+      <node id="5">
+        <label>src/recipe/src/main.cpp</label>
+        <link refid="src_2main_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/recipe/src/menu.cpp</label>
+        <link refid="src_2menu_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/recipeapp/src/main.cpp</label>
+        <link refid="pp_2src_2main_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/recipeapp/src/menu.cpp</label>
+        <link refid="pp_2src_2menu_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_hash_node" prot="public">HashNode</innerclass>
+    <innerclass refid="struct_hash_table" prot="public">HashTable</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="hash__table_8h_1a9a999a0999ddfe3f538476912add9107" prot="public" static="no">
+        <type>struct HashNode</type>
+        <definition>typedef struct HashNode HashNode</definition>
+        <argsstring></argsstring>
+        <name>HashNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/hash_table.h" line="14" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="hash__table_8h_1a6a646d3a96e37d37ce2b365a965c3ddd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_hash_table" kindref="compound">HashTable</ref> *</type>
+        <definition>HashTable * hash_table_create</definition>
+        <argsstring>(int size)</argsstring>
+        <name>hash_table_create</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Creates and initializes a new hash table with the given size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of buckets in the hash table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the created hash table, or NULL on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/hash_table.h" line="26" column="11" bodyfile="src/hash_table.c" bodystart="27" bodyend="46" declfile="include/hash_table.h" declline="26" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="hash__table_8h_1a4b9b4c9c1c914cfad355767e131dd1fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hash_table_insert</definition>
+        <argsstring>(HashTable *ht, Recipe *recipe)</argsstring>
+        <name>hash_table_insert</name>
+        <param>
+          <type><ref refid="struct_hash_table" kindref="compound">HashTable</ref> *</type>
+          <declname>ht</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+          <declname>recipe</declname>
+        </param>
+        <briefdescription>
+<para>Inserts a recipe into the hash table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ht</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the hash table </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the recipe to insert </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/hash_table.h" line="29" column="5" bodyfile="src/hash_table.c" bodystart="54" bodyend="71" declfile="include/hash_table.h" declline="29" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hash__table_8h_1a492aaf8bb9282349d9fc08a55efb3b18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+        <definition>Recipe * hash_table_search</definition>
+        <argsstring>(HashTable *ht, int id)</argsstring>
+        <name>hash_table_search</name>
+        <param>
+          <type><ref refid="struct_hash_table" kindref="compound">HashTable</ref> *</type>
+          <declname>ht</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Searches for a recipe by its ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ht</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the hash table </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> ID to search for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the found recipe, or NULL if not found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/hash_table.h" line="32" column="8" bodyfile="src/hash_table.c" bodystart="79" bodyend="95" declfile="include/hash_table.h" declline="32" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="hash__table_8h_1a4d8a2a9f4ac673a039f16bd5ba77b1a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hash_table_delete</definition>
+        <argsstring>(HashTable *ht, int id)</argsstring>
+        <name>hash_table_delete</name>
+        <param>
+          <type><ref refid="struct_hash_table" kindref="compound">HashTable</ref> *</type>
+          <declname>ht</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Deletes a recipe entry by its ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ht</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the hash table </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> ID to delete </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/hash_table.h" line="35" column="5" bodyfile="src/hash_table.c" bodystart="103" bodyend="128" declfile="include/hash_table.h" declline="35" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hash__table_8h_1a438fb6f1397da5b503c096b73fef1d80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hash_table_display</definition>
+        <argsstring>(HashTable *ht)</argsstring>
+        <name>hash_table_display</name>
+        <param>
+          <type><ref refid="struct_hash_table" kindref="compound">HashTable</ref> *</type>
+          <declname>ht</declname>
+        </param>
+        <briefdescription>
+<para>Displays all recipes currently stored in the hash table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ht</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the hash table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/hash_table.h" line="38" column="6" bodyfile="src/hash_table.c" bodystart="134" bodyend="161" declfile="include/hash_table.h" declline="38" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hash__table_8h_1ab64885ca531b5336f9cffd8169665c3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hash_table_destroy</definition>
+        <argsstring>(HashTable *ht)</argsstring>
+        <name>hash_table_destroy</name>
+        <param>
+          <type><ref refid="struct_hash_table" kindref="compound">HashTable</ref> *</type>
+          <declname>ht</declname>
+        </param>
+        <briefdescription>
+<para>Frees all memory used by the hash table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ht</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the hash table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/hash_table.h" line="41" column="6" bodyfile="src/hash_table.c" bodystart="167" bodyend="183" declfile="include/hash_table.h" declline="41" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hash__table_8h_1ab2d7a83c1729da70ed65010c15b212dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hash_table_save_binary</definition>
+        <argsstring>(const HashTable *ht, const char *filename)</argsstring>
+        <name>hash_table_save_binary</name>
+        <param>
+          <type>const <ref refid="struct_hash_table" kindref="compound">HashTable</ref> *</type>
+          <declname>ht</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Saves the hash table to a binary file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ht</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the hash table </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the binary file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/hash_table.h" line="46" column="5" bodyfile="src/hash_table.c" bodystart="191" bodyend="225" declfile="include/hash_table.h" declline="46" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hash__table_8h_1a138c22881c7f92e6a7a09c4a4140ffd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_hash_table" kindref="compound">HashTable</ref> *</type>
+        <definition>HashTable * hash_table_load_binary</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>hash_table_load_binary</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Loads a hash table from a binary file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the binary file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the loaded hash table, or NULL on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/hash_table.h" line="49" column="11" bodyfile="src/hash_table.c" bodystart="232" bodyend="272" declfile="include/hash_table.h" declline="49" declcolumn="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>HASH_TABLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HASH_TABLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="recipe_8h" kindref="compound">recipe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Structure<sp/>Definitions<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Represents<sp/>a<sp/>single<sp/>node<sp/>in<sp/>the<sp/>hash<sp/>table&apos;s<sp/>linked<sp/>list<sp/>(chaining<sp/>method)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="struct_hash_node" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_hash_node_1a23a0a3f59e07dbf7bcb46520ee7455f7" kindref="member">HashNode</ref><sp/>{</highlight></codeline>
+<codeline lineno="12" refid="struct_hash_node_1ad21df694c824c7c52cb5babc8bfc2375" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/><ref refid="struct_hash_node_1ad21df694c824c7c52cb5babc8bfc2375" kindref="member">recipe</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>recipe<sp/>stored<sp/>in<sp/>this<sp/>node</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="struct_hash_node_1a3213171b5cdc2bfab119ce74c9971e36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_hash_node_1a23a0a3f59e07dbf7bcb46520ee7455f7" kindref="member">HashNode</ref>*<sp/><ref refid="struct_hash_node_1a3213171b5cdc2bfab119ce74c9971e36" kindref="member">next</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>next<sp/>node<sp/>in<sp/>the<sp/>same<sp/>bucket</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="hash__table_8h_1a9a999a0999ddfe3f538476912add9107" refkind="member"><highlight class="normal">}<sp/><ref refid="struct_hash_node" kindref="compound">HashNode</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Represents<sp/>the<sp/>hash<sp/>table<sp/>structure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="struct_hash_table" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18" refid="struct_hash_table_1ad732056fce42df5162c810b4dd28fca1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_hash_table_1ad732056fce42df5162c810b4dd28fca1" kindref="member">size</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Total<sp/>number<sp/>of<sp/>buckets<sp/>in<sp/>the<sp/>hash<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="struct_hash_table_1a1136fdb10c41f4d0515d447e20d795e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_hash_table_1a1136fdb10c41f4d0515d447e20d795e7" kindref="member">count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>recipes<sp/>currently<sp/>stored</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="struct_hash_table_1a83630b321ea0c602db49745e4b6fec16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_hash_node" kindref="compound">HashNode</ref>**<sp/><ref refid="struct_hash_table_1a83630b321ea0c602db49745e4b6fec16" kindref="member">table</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>of<sp/>pointers<sp/>to<sp/>hash<sp/>buckets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}<sp/><ref refid="struct_hash_table" kindref="compound">HashTable</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Function<sp/>Declarations<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Creates<sp/>and<sp/>initializes<sp/>a<sp/>new<sp/>hash<sp/>table<sp/>with<sp/>the<sp/>given<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="struct_hash_table" kindref="compound">HashTable</ref>*<sp/><ref refid="hash__table_8h_1a6a646d3a96e37d37ce2b365a965c3ddd" kindref="member">hash_table_create</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Inserts<sp/>a<sp/>recipe<sp/>into<sp/>the<sp/>hash<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hash__table_8h_1a4b9b4c9c1c914cfad355767e131dd1fd" kindref="member">hash_table_insert</ref>(<ref refid="struct_hash_table" kindref="compound">HashTable</ref>*<sp/>ht,<sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/>recipe);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Searches<sp/>for<sp/>a<sp/>recipe<sp/>by<sp/>its<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/><ref refid="hash__table_8h_1a492aaf8bb9282349d9fc08a55efb3b18" kindref="member">hash_table_search</ref>(<ref refid="struct_hash_table" kindref="compound">HashTable</ref>*<sp/>ht,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Deletes<sp/>a<sp/>recipe<sp/>entry<sp/>by<sp/>its<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hash__table_8h_1a4d8a2a9f4ac673a039f16bd5ba77b1a4" kindref="member">hash_table_delete</ref>(<ref refid="struct_hash_table" kindref="compound">HashTable</ref>*<sp/>ht,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Displays<sp/>all<sp/>recipes<sp/>currently<sp/>stored<sp/>in<sp/>the<sp/>hash<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hash__table_8h_1a438fb6f1397da5b503c096b73fef1d80" kindref="member">hash_table_display</ref>(<ref refid="struct_hash_table" kindref="compound">HashTable</ref>*<sp/>ht);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Frees<sp/>all<sp/>memory<sp/>used<sp/>by<sp/>the<sp/>hash<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hash__table_8h_1ab64885ca531b5336f9cffd8169665c3b" kindref="member">hash_table_destroy</ref>(<ref refid="struct_hash_table" kindref="compound">HashTable</ref>*<sp/>ht);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Binary<sp/>File<sp/>Operations<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Saves<sp/>the<sp/>hash<sp/>table<sp/>to<sp/>a<sp/>binary<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hash__table_8h_1ab2d7a83c1729da70ed65010c15b212dd" kindref="member">hash_table_save_binary</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_hash_table" kindref="compound">HashTable</ref>*<sp/>ht,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Loads<sp/>a<sp/>hash<sp/>table<sp/>from<sp/>a<sp/>binary<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><ref refid="struct_hash_table" kindref="compound">HashTable</ref>*<sp/><ref refid="hash__table_8h_1a138c22881c7f92e6a7a09c4a4140ffd3" kindref="member">hash_table_load_binary</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>HASH_TABLE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/hash_table.h"/>
+  </compounddef>
+</doxygen>

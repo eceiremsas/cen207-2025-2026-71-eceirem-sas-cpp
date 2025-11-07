@@ -1,0 +1,57 @@
+\doxysection{hash\+\_\+table.\+hpp}
+\hypertarget{hash__table_8hpp_source}{}\label{hash__table_8hpp_source}\index{src/recipe/header/hash\_table.hpp@{src/recipe/header/hash\_table.hpp}}
+\mbox{\hyperlink{hash__table_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ HASH\_TABLE\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ HASH\_TABLE\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{recipe_8hpp}{recipe.hpp}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ ============================================================}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ Class:\ HashTable}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ ============================================================}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_hash_table}{HashTable}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_hash_table_1_1_node_ad6207fd5958ddc9a82fd16efc6d0a6d5}{Node}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::shared\_ptr<Recipe>\ \mbox{\hyperlink{struct_hash_table_1_1_node_ae70fae2827d503f6d6d9f043cdedbb9e}{recipe}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_hash_table_1_1_node_ad6207fd5958ddc9a82fd16efc6d0a6d5}{Node}}(std::shared\_ptr<Recipe>\ r)\ :\ \mbox{\hyperlink{struct_hash_table_1_1_node_ae70fae2827d503f6d6d9f043cdedbb9e}{recipe}}(std::move(r))\ \{\}}
+\DoxyCodeLine{00027\ \ \ \ \ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ std::vector<std::list<Node>>\ \mbox{\hyperlink{struct_hash_table_a83630b321ea0c602db49745e4b6fec16}{table}};\ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_hash_table_a1136fdb10c41f4d0515d447e20d795e7}{count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Simple\ hash\ function\ (ID\ mod\ table\ size)}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_hash_table_a7a7b1b2d04ce6043e640daf5145a04f3}{hashFunction}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(id)\ \%\ \mbox{\hyperlink{struct_hash_table_a83630b321ea0c602db49745e4b6fec16}{table}}.size();}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ ===\ Constructor\ \&\ Destructor\ ===}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{struct_hash_table_a1a49309ccc092281e537c742bfd7a9bd}{HashTable}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_hash_table_ad732056fce42df5162c810b4dd28fca1}{size}}\ =\ 101);}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{struct_hash_table_a5f9d7f9e9e46e525d13664cbeec3c7d2}{\string~HashTable}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ ===\ Core\ Operations\ ===}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_hash_table_a3015f7d579d1b39304769d985798ac64}{insert}}(std::shared\_ptr<Recipe>\ recipe);}
+\DoxyCodeLine{00044\ \ \ \ \ std::shared\_ptr<Recipe>\ \mbox{\hyperlink{struct_hash_table_af658ef016b27561d952b79e1679a1928}{search}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_hash_table_afea98443e6e36c6c7c8940fa515a301a}{remove}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ ===\ Display\ \&\ Utility\ ===}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_hash_table_a38ad7f2bd38958c5430f74d436d920c9}{display}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_hash_table_a0d18fa4de579365ad5d78a32bbe11119}{size}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_hash_table_a1136fdb10c41f4d0515d447e20d795e7}{count}};\ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_hash_table_a7f082f038dc7e2e3babf5ea5b2620ff7}{isEmpty}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_hash_table_a1136fdb10c41f4d0515d447e20d795e7}{count}}\ ==\ 0;\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ ===\ Clear\ all\ entries\ ===}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_hash_table_a94a35e0cf2ce6fa291d48138f58635ed}{clear}}();}
+\DoxyCodeLine{00054\ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HASH\_TABLE\_HPP}}
+
+\end{DoxyCode}

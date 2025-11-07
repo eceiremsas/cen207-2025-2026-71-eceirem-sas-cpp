@@ -1,0 +1,61 @@
+\doxysection{stack.\+hpp}
+\hypertarget{stack_8hpp_source}{}\label{stack_8hpp_source}\index{src/recipe/header/stack.hpp@{src/recipe/header/stack.hpp}}
+\mbox{\hyperlink{stack_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ STACK\_HPP}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ STACK\_HPP}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{recipe_8hpp}{recipe.hpp}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{stack_8h_af94d2c1547a19bc8afb8f08e48847d1c}{UNDO\_STACK\_SIZE}}\ =\ 50;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047}{OperationType}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9}{Add}},\ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35}{Edit}},\ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18}{Delete}}\ \ \ }
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_stack_operation}{StackOperation}}\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{OperationType}}\ \mbox{\hyperlink{struct_stack_operation_a9e5459b5f778ee92f661573b20fbe364}{type}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ std::shared\_ptr<Recipe>\ \mbox{\hyperlink{struct_stack_operation_a5b5bb536a85fc0f28b5e252a7dff617f}{recipe}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{struct_stack_operation_a3de1e4d65970189931c5be2aefc6c0a6}{StackOperation}}(\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{OperationType}}\ t,\ std::shared\_ptr<Recipe>\ r)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_stack_operation_a9e5459b5f778ee92f661573b20fbe364}{type}}(t),\ \mbox{\hyperlink{struct_stack_operation_a5b5bb536a85fc0f28b5e252a7dff617f}{recipe}}(std::move(r))\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_stack}{Stack}}\ \{}
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ \ \ std::vector<StackOperation>\ \mbox{\hyperlink{struct_stack_a6dac34556c1d3d06087ee1a015ce60a2}{operations}};\ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stack_ad62fb36816185f3eef3a6f735a61f54a}{top}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ ===\ Constructor\ /\ Destructor\ ===}}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{struct_stack_a14cd1cba325bead4ff0a91bc6eb0f6f5}{Stack}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{struct_stack_a29d57302f7d59ba0d5f55bf58b2eb6d2}{\string~Stack}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ ===\ Core\ Operations\ ===}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_stack_a18c60f37b9f4e46d0103e22a1d40fdf3}{push}}(\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{OperationType}}\ type,\ \textcolor{keyword}{const}\ std::shared\_ptr<Recipe>\&\ recipe);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ std::shared\_ptr<StackOperation>\ \mbox{\hyperlink{struct_stack_a49cb5580c63b60589bf271e1ea0d6f88}{pop}}();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ std::shared\_ptr<StackOperation>\ \mbox{\hyperlink{struct_stack_add7c70c1365bb71ea43f7d9b2df945ff}{peek}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//\ ===\ Status\ Queries\ ===}}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_stack_a8b137edba711ed0250dccf9ecdd52971}{isEmpty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_stack_a1b7baacfc1eabbb0554852a4ea02618d}{isFull}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stack_ac7a1567f2937ad328290387066c05c62}{size}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_stack_ad62fb36816185f3eef3a6f735a61f54a}{top}}\ +\ 1;\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//\ ===\ Utility\ ===}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_stack_adab1284b8929385d4020356fb52c8139}{clear}}();}
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ STACK\_HPP}}
+
+\end{DoxyCode}

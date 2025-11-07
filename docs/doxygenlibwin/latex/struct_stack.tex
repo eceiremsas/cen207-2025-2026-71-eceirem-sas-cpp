@@ -1,0 +1,262 @@
+\doxysection{Stack Class Reference}
+\hypertarget{struct_stack}{}\label{struct_stack}\index{Stack@{Stack}}
+
+
+Represents a fixed-\/size stack used for undo operations.  
+
+
+
+
+{\ttfamily \#include $<$stack.\+h$>$}
+
+
+
+Collaboration diagram for Stack\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{struct_stack__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_stack_a14cd1cba325bead4ff0a91bc6eb0f6f5}{Stack}} ()
+\item 
+\mbox{\hyperlink{struct_stack_a29d57302f7d59ba0d5f55bf58b2eb6d2}{\texorpdfstring{$\sim$}{\string~}\+Stack}} ()=default
+\item 
+bool \mbox{\hyperlink{struct_stack_a18c60f37b9f4e46d0103e22a1d40fdf3}{push}} (\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}} type, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&recipe)
+\begin{DoxyCompactList}\small\item\em Pushes a new operation onto the stack. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} $>$ \mbox{\hyperlink{struct_stack_a49cb5580c63b60589bf271e1ea0d6f88}{pop}} ()
+\begin{DoxyCompactList}\small\item\em Pops (removes) the most recent operation from the stack. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} $>$ \mbox{\hyperlink{struct_stack_add7c70c1365bb71ea43f7d9b2df945ff}{peek}} () const
+\begin{DoxyCompactList}\small\item\em Returns the top operation without removing it. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_stack_a8b137edba711ed0250dccf9ecdd52971}{is\+Empty}} () const
+\item 
+bool \mbox{\hyperlink{struct_stack_a1b7baacfc1eabbb0554852a4ea02618d}{is\+Full}} () const
+\item 
+int \mbox{\hyperlink{struct_stack_ac7a1567f2937ad328290387066c05c62}{size}} () const
+\item 
+void \mbox{\hyperlink{struct_stack_adab1284b8929385d4020356fb52c8139}{clear}} ()
+\item 
+\mbox{\hyperlink{struct_stack_a14cd1cba325bead4ff0a91bc6eb0f6f5}{Stack}} ()
+\item 
+bool \mbox{\hyperlink{struct_stack_a18c60f37b9f4e46d0103e22a1d40fdf3}{push}} (\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}} type, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&recipe)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} $>$ \mbox{\hyperlink{struct_stack_a49cb5580c63b60589bf271e1ea0d6f88}{pop}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} $>$ \mbox{\hyperlink{struct_stack_add7c70c1365bb71ea43f7d9b2df945ff}{peek}} () const
+\item 
+bool \mbox{\hyperlink{struct_stack_a8b137edba711ed0250dccf9ecdd52971}{is\+Empty}} () const
+\item 
+bool \mbox{\hyperlink{struct_stack_a1b7baacfc1eabbb0554852a4ea02618d}{is\+Full}} () const
+\item 
+int \mbox{\hyperlink{struct_stack_ac7a1567f2937ad328290387066c05c62}{size}} () const
+\item 
+void \mbox{\hyperlink{struct_stack_adab1284b8929385d4020356fb52c8139}{clear}} ()
+\item 
+void \mbox{\hyperlink{struct_stack_a886bdec007756716bdb7aac8b49fdb62}{display}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} \mbox{\hyperlink{struct_stack_a6dac34556c1d3d06087ee1a015ce60a2}{operations}} \mbox{[}\mbox{\hyperlink{stack_8cpp_af302896a110a0713b53fca4e5e3529d8}{UNDO\+\_\+\+STACK\+\_\+\+SIZE}}\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_stack_ad62fb36816185f3eef3a6f735a61f54a}{top}}
+\begin{DoxyCompactList}\small\item\em Index of the top element (-\/1 if empty). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} $>$ \mbox{\hyperlink{struct_stack_a21ac26c8065ee9b47769f62c4c4e9eb5}{operations}}
+\begin{DoxyCompactList}\small\item\em Dynamic array of operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a fixed-\/size stack used for undo operations. 
+
+Stores a list of recent recipe operations.
+
+Implements standard LIFO behavior for tracking recent actions. 
+
+\label{doc-constructors}
+\Hypertarget{struct_stack_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_stack_a14cd1cba325bead4ff0a91bc6eb0f6f5}\index{Stack@{Stack}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_stack_a14cd1cba325bead4ff0a91bc6eb0f6f5} 
+Stack\+::\+Stack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_stack_a29d57302f7d59ba0d5f55bf58b2eb6d2}\index{Stack@{Stack}!````~Stack@{\texorpdfstring{$\sim$}{\string~}Stack}}
+\index{````~Stack@{\texorpdfstring{$\sim$}{\string~}Stack}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Stack()}{\string~Stack()}}
+{\footnotesize\ttfamily \label{struct_stack_a29d57302f7d59ba0d5f55bf58b2eb6d2} 
+Stack\+::\texorpdfstring{$\sim$}{\string~}\+Stack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_stack_a14cd1cba325bead4ff0a91bc6eb0f6f5}\index{Stack@{Stack}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_stack_a14cd1cba325bead4ff0a91bc6eb0f6f5} 
+Stack\+::\+Stack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{struct_stack_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_stack_adab1284b8929385d4020356fb52c8139}\index{Stack@{Stack}!clear@{clear}}
+\index{clear@{clear}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_stack_adab1284b8929385d4020356fb52c8139} 
+void Stack\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_stack_adab1284b8929385d4020356fb52c8139}\index{Stack@{Stack}!clear@{clear}}
+\index{clear@{clear}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_stack_adab1284b8929385d4020356fb52c8139} 
+void Stack\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_stack_a886bdec007756716bdb7aac8b49fdb62}\index{Stack@{Stack}!display@{display}}
+\index{display@{display}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{struct_stack_a886bdec007756716bdb7aac8b49fdb62} 
+void Stack\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_stack_a8b137edba711ed0250dccf9ecdd52971}\index{Stack@{Stack}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_stack_a8b137edba711ed0250dccf9ecdd52971} 
+bool Stack\+::is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{struct_stack_a8b137edba711ed0250dccf9ecdd52971}\index{Stack@{Stack}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_stack_a8b137edba711ed0250dccf9ecdd52971} 
+bool Stack\+::is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_stack_a1b7baacfc1eabbb0554852a4ea02618d}\index{Stack@{Stack}!isFull@{isFull}}
+\index{isFull@{isFull}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_stack_a1b7baacfc1eabbb0554852a4ea02618d} 
+bool Stack\+::is\+Full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{struct_stack_a1b7baacfc1eabbb0554852a4ea02618d}\index{Stack@{Stack}!isFull@{isFull}}
+\index{isFull@{isFull}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_stack_a1b7baacfc1eabbb0554852a4ea02618d} 
+bool Stack\+::is\+Full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_stack_add7c70c1365bb71ea43f7d9b2df945ff}\index{Stack@{Stack}!peek@{peek}}
+\index{peek@{peek}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_stack_add7c70c1365bb71ea43f7d9b2df945ff} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} $>$ Stack\+::peek (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the top operation without removing it. 
+
+\begin{DoxyReturn}{Returns}
+Shared pointer to the top \doxylink{struct_stack_operation}{Stack\+Operation}, or nullptr if empty. 
+\end{DoxyReturn}
+\Hypertarget{struct_stack_add7c70c1365bb71ea43f7d9b2df945ff}\index{Stack@{Stack}!peek@{peek}}
+\index{peek@{peek}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_stack_add7c70c1365bb71ea43f7d9b2df945ff} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} $>$ Stack\+::peek (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_stack_a49cb5580c63b60589bf271e1ea0d6f88}\index{Stack@{Stack}!pop@{pop}}
+\index{pop@{pop}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_stack_a49cb5580c63b60589bf271e1ea0d6f88} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} $>$ Stack\+::pop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Pops (removes) the most recent operation from the stack. 
+
+\begin{DoxyReturn}{Returns}
+Shared pointer to the popped \doxylink{struct_stack_operation}{Stack\+Operation}, or nullptr if empty. 
+\end{DoxyReturn}
+\Hypertarget{struct_stack_a49cb5580c63b60589bf271e1ea0d6f88}\index{Stack@{Stack}!pop@{pop}}
+\index{pop@{pop}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_stack_a49cb5580c63b60589bf271e1ea0d6f88} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} $>$ Stack\+::pop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_stack_a18c60f37b9f4e46d0103e22a1d40fdf3}\index{Stack@{Stack}!push@{push}}
+\index{push@{push}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_stack_a18c60f37b9f4e46d0103e22a1d40fdf3} 
+bool Stack\+::push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}}}]{type}{, }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&}]{recipe}{}\end{DoxyParamCaption})}
+
+
+
+Pushes a new operation onto the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of the operation. \\
+\hline
+{\em recipe} & \doxylink{struct_recipe}{Recipe} associated with the operation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if operation successfully added; false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{struct_stack_a18c60f37b9f4e46d0103e22a1d40fdf3}\index{Stack@{Stack}!push@{push}}
+\index{push@{push}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_stack_a18c60f37b9f4e46d0103e22a1d40fdf3} 
+bool Stack\+::push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}}}]{type}{, }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&}]{recipe}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_stack_ac7a1567f2937ad328290387066c05c62}\index{Stack@{Stack}!size@{size}}
+\index{size@{size}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_stack_ac7a1567f2937ad328290387066c05c62} 
+int Stack\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_stack_ac7a1567f2937ad328290387066c05c62}\index{Stack@{Stack}!size@{size}}
+\index{size@{size}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_stack_ac7a1567f2937ad328290387066c05c62} 
+int Stack\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_stack_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_stack_a6dac34556c1d3d06087ee1a015ce60a2}\index{Stack@{Stack}!operations@{operations}}
+\index{operations@{operations}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{operations}{operations}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_stack_a6dac34556c1d3d06087ee1a015ce60a2} 
+std\+::vector$<$ \mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}} $>$ Stack\+::operations}
+
+\Hypertarget{struct_stack_a21ac26c8065ee9b47769f62c4c4e9eb5}\index{Stack@{Stack}!operations@{operations}}
+\index{operations@{operations}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{operations}{operations}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_stack_a21ac26c8065ee9b47769f62c4c4e9eb5} 
+std\+::vector$<$\mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}}$>$ Stack\+::operations\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dynamic array of operations. 
+
+\Hypertarget{struct_stack_ad62fb36816185f3eef3a6f735a61f54a}\index{Stack@{Stack}!top@{top}}
+\index{top@{top}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{top}{top}}
+{\footnotesize\ttfamily \label{struct_stack_ad62fb36816185f3eef3a6f735a61f54a} 
+int Stack\+::top}
+
+
+
+Index of the top element (-\/1 if empty). 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{stack_8h}{stack.\+h}}\item 
+src/recipe/header/\mbox{\hyperlink{stack_8hpp}{stack.\+hpp}}\item 
+src/recipe/src/\mbox{\hyperlink{stack_8cpp}{stack.\+cpp}}\end{DoxyCompactItemize}

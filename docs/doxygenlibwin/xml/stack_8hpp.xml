@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="stack_8hpp" kind="file" language="C++">
+    <compoundname>stack.hpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">memory</includes>
+    <includes refid="recipe_8hpp" local="yes">recipe.hpp</includes>
+    <includedby refid="header_2menu_8hpp" local="yes">src/recipe/header/menu.hpp</includedby>
+    <includedby refid="pp_2header_2menu_8hpp" local="yes">src/recipeapp/header/menu.hpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>recipe.hpp</label>
+        <link refid="recipe_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/recipe/header/stack.hpp</label>
+        <link refid="stack_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>algorithm</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/recipe/header/menu.hpp</label>
+        <link refid="header_2menu_8hpp"/>
+      </node>
+      <node id="1">
+        <label>src/recipe/header/stack.hpp</label>
+        <link refid="stack_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/recipeapp/header/menu.hpp</label>
+        <link refid="pp_2header_2menu_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_stack_operation" prot="public">StackOperation</innerclass>
+    <innerclass refid="struct_stack" prot="public">Stack</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="stack_8hpp_1a9a2c9c31d675b34f6ec35cc1ca89e047" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>OperationType</name>
+        <enumvalue id="stack_8hpp_1a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9" prot="public">
+          <name>Add</name>
+          <briefdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> addition. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8hpp_1a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35" prot="public">
+          <name>Edit</name>
+          <briefdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> modification. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8hpp_1a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18" prot="public">
+          <name>Delete</name>
+          <briefdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> deletion. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8hpp_1a9a2c9c31d675b34f6ec35cc1ca89e047ad3a0f825f42df18a5e4f006151a92edb" prot="public">
+          <name>OP_ADD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8hpp_1a9a2c9c31d675b34f6ec35cc1ca89e047ade36069b96f4e88cce87bb5c386cf900" prot="public">
+          <name>OP_EDIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8hpp_1a9a2c9c31d675b34f6ec35cc1ca89e047a1f880f83d676db79c78a5f4952ff9a4c" prot="public">
+          <name>OP_DELETE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Represents the type of operation recorded for undo functionality. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/stack.hpp" line="21" column="1" bodyfile="src/recipe/header/stack.hpp" bodystart="21" bodyend="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="stack_8hpp_1af302896a110a0713b53fca4e5e3529d8" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>int</type>
+        <definition>int UNDO_STACK_SIZE</definition>
+        <argsstring></argsstring>
+        <name>UNDO_STACK_SIZE</name>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/stack.hpp" line="15" column="15" bodyfile="src/recipe/header/stack.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Undo <ref refid="struct_stack" kindref="compound">Stack</ref> implementation for <ref refid="struct_recipe" kindref="compound">Recipe</ref> operations (C++ version). </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides a Last-In-First-Out (LIFO) structure to support undo functionality. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>STACK_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STACK_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="recipe_8hpp" kindref="compound">recipe.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="stack_8hpp_1af302896a110a0713b53fca4e5e3529d8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stack_8h_1af94d2c1547a19bc8afb8f08e48847d1c" kindref="member">UNDO_STACK_SIZE</ref><sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="stack_8hpp_1a9a2c9c31d675b34f6ec35cc1ca89e047" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047" kindref="member">OperationType</ref><sp/>{</highlight></codeline>
+<codeline lineno="22" refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9" kindref="member">Add</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35" kindref="member">Edit</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18" kindref="member">Delete</ref><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_stack_operation" kindref="compound">StackOperation</ref><sp/>{</highlight></codeline>
+<codeline lineno="32" refid="struct_stack_operation_1a9e5459b5f778ee92f661573b20fbe364" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047" kindref="member">OperationType</ref><sp/><ref refid="struct_stack_operation_1a9e5459b5f778ee92f661573b20fbe364" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33" refid="struct_stack_operation_1a2c97d5a48126f827e77e9f8628bf9acc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;Recipe&gt;<sp/><ref refid="struct_stack_operation_1a5b5bb536a85fc0f28b5e252a7dff617f" kindref="member">recipe</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="struct_stack_operation_1a3de1e4d65970189931c5be2aefc6c0a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack_operation_1a3de1e4d65970189931c5be2aefc6c0a6" kindref="member">StackOperation</ref>(<ref refid="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047" kindref="member">OperationType</ref><sp/>t,<sp/>std::shared_ptr&lt;Recipe&gt;<sp/>r)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="struct_stack_operation_1a9e5459b5f778ee92f661573b20fbe364" kindref="member">type</ref>(t),<sp/><ref refid="struct_stack_operation_1a5b5bb536a85fc0f28b5e252a7dff617f" kindref="member">recipe</ref>(std::move(r))<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="struct_stack" kindref="compound">Stack</ref><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47" refid="struct_stack_1a21ac26c8065ee9b47769f62c4c4e9eb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;StackOperation&gt;<sp/><ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kindref="member">top</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Constructor<sp/>/<sp/>Destructor<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="struct_stack_1a14cd1cba325bead4ff0a91bc6eb0f6f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack_1a14cd1cba325bead4ff0a91bc6eb0f6f5" kindref="member">Stack</ref>();</highlight></codeline>
+<codeline lineno="53" refid="struct_stack_1a29d57302f7d59ba0d5f55bf58b2eb6d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack_1a29d57302f7d59ba0d5f55bf58b2eb6d2" kindref="member">~Stack</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Core<sp/>Operations<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="struct_stack_1a18c60f37b9f4e46d0103e22a1d40fdf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1a18c60f37b9f4e46d0103e22a1d40fdf3" kindref="member">push</ref>(<ref refid="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047" kindref="member">OperationType</ref><sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;Recipe&gt;&amp;<sp/>recipe);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="struct_stack_1a49cb5580c63b60589bf271e1ea0d6f88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;StackOperation&gt;<sp/><ref refid="struct_stack_1a49cb5580c63b60589bf271e1ea0d6f88" kindref="member">pop</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="struct_stack_1add7c70c1365bb71ea43f7d9b2df945ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;StackOperation&gt;<sp/><ref refid="struct_stack_1add7c70c1365bb71ea43f7d9b2df945ff" kindref="member">peek</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Status<sp/>Queries<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="struct_stack_1a8b137edba711ed0250dccf9ecdd52971" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1a8b137edba711ed0250dccf9ecdd52971" kindref="member">isEmpty</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79" refid="struct_stack_1a1b7baacfc1eabbb0554852a4ea02618d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1a1b7baacfc1eabbb0554852a4ea02618d" kindref="member">isFull</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80" refid="struct_stack_1ac7a1567f2937ad328290387066c05c62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1ac7a1567f2937ad328290387066c05c62" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kindref="member">top</ref><sp/>+<sp/>1;<sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Utility<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="struct_stack_1adab1284b8929385d4020356fb52c8139" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1adab1284b8929385d4020356fb52c8139" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>STACK_HPP</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/recipe/header/stack.hpp"/>
+  </compounddef>
+</doxygen>

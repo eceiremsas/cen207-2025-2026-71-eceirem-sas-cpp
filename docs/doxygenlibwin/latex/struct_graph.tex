@@ -1,0 +1,233 @@
+\doxysection{Graph Class Reference}
+\hypertarget{struct_graph}{}\label{struct_graph}\index{Graph@{Graph}}
+
+
+{\ttfamily \#include $<$graph.\+h$>$}
+
+
+
+Collaboration diagram for Graph\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{struct_graph__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}} ()
+\item 
+bool \mbox{\hyperlink{struct_graph_a0b3b4e427b55bf0b61be72467924d8a7}{add\+Vertex}} (int recipe\+\_\+id)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_graph_vertex}{Graph\+Vertex}} $>$ \mbox{\hyperlink{struct_graph_a971d05259d030a81a36b809f14db04a7}{find\+Vertex}} (int recipe\+\_\+id) const
+\item 
+bool \mbox{\hyperlink{struct_graph_ad6a883b5623c30f2b9a011932fbb9f22}{add\+Edge}} (int from\+\_\+recipe\+\_\+id, int to\+\_\+recipe\+\_\+id, const std\+::string \&label)
+\item 
+void \mbox{\hyperlink{struct_graph_a52e448ac213c053062bfed6405ede84b}{display\+Dependencies}} (int recipe\+\_\+id, int depth=0)
+\item 
+void \mbox{\hyperlink{struct_graph_a00c89f9300992b2ac69104bb7ddcc868}{reset\+Visited}} ()
+\item 
+bool \mbox{\hyperlink{struct_graph_a5668aece8de3c0021417b8d00a1796ac}{has\+Cycle}} () const
+\item 
+int \mbox{\hyperlink{struct_graph_ac6dcb77084447618b65514ce25bd7d2a}{get\+Vertex\+Count}} () const
+\item 
+void \mbox{\hyperlink{struct_graph_ac6192a41101102ca8aa6acca607c84f3}{clear}} ()
+\item 
+\mbox{\hyperlink{struct_graph_a902c5b3eacb66d60752525ab23297a95}{\texorpdfstring{$\sim$}{\string~}\+Graph}} ()
+\item 
+\mbox{\hyperlink{struct_graph_a90961be426ad80001cbc103b6385df31}{Graph}} ()=default
+\item 
+bool \mbox{\hyperlink{struct_graph_a0b3b4e427b55bf0b61be72467924d8a7}{add\+Vertex}} (int recipe\+\_\+id)
+\item 
+bool \mbox{\hyperlink{struct_graph_a0e69376befb79f6f5dadececbcb2a01b}{add\+Edge}} (int from\+\_\+id, int to\+\_\+id, const std\+::string \&label)
+\item 
+void \mbox{\hyperlink{struct_graph_a00c89f9300992b2ac69104bb7ddcc868}{reset\+Visited}} ()
+\item 
+void \mbox{\hyperlink{struct_graph_a52e448ac213c053062bfed6405ede84b}{display\+Dependencies}} (int recipe\+\_\+id, int depth=0)
+\item 
+bool \mbox{\hyperlink{struct_graph_a5668aece8de3c0021417b8d00a1796ac}{has\+Cycle}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_graph_vertex}{Graph\+Vertex}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_graph_afac2bc7d92334c0692254392ca6464f4}{vertices}} \mbox{[}\mbox{\hyperlink{graph_8cpp_aa83461ae9374f00837b575180d2cd5e2}{MAX\+\_\+\+GRAPH\+\_\+\+VERTICES}}\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_graph_ab20e1f45cb2c2d3c26968eadd7290f4d}{vertex\+\_\+count}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_graph_a64096724a9157efc362ff7bd2ff99bd8}{dfs\+Cycle\+Helper}} (int vertex\+\_\+id, std\+::vector$<$ int $>$ \&visited, std\+::vector$<$ int $>$ \&rec\+\_\+stack) const
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_graph_vertex}{Graph\+Vertex}} $>$ \mbox{\hyperlink{struct_graph_a971d05259d030a81a36b809f14db04a7}{find\+Vertex}} (int recipe\+\_\+id) const
+\item 
+bool \mbox{\hyperlink{struct_graph_a21b21d38817f2c0ec05fb222f654e73a}{dfs\+Cycle\+Helper}} (int vertex\+\_\+id, std\+::vector$<$ bool $>$ \&visited, std\+::vector$<$ bool $>$ \&rec\+Stack) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::array$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_graph_vertex}{Graph\+Vertex}} $>$, \mbox{\hyperlink{graph_8cpp_aa83461ae9374f00837b575180d2cd5e2}{MAX\+\_\+\+GRAPH\+\_\+\+VERTICES}} $>$ \mbox{\hyperlink{struct_graph_a326a6f915243eebc59b606d5c79d8405}{vertices}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_graph_vertex}{Graph\+Vertex}} $>$ $>$ \mbox{\hyperlink{struct_graph_a0770e5be4cc3e8d77db32e34f8944e20}{vertices}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{struct_graph_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_graph_ae4c72b8ac4d693c49800a4c7e273654f}\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_graph_ae4c72b8ac4d693c49800a4c7e273654f} 
+Graph\+::\+Graph (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_graph_a902c5b3eacb66d60752525ab23297a95}\index{Graph@{Graph}!````~Graph@{\texorpdfstring{$\sim$}{\string~}Graph}}
+\index{````~Graph@{\texorpdfstring{$\sim$}{\string~}Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Graph()}{\string~Graph()}}
+{\footnotesize\ttfamily \label{struct_graph_a902c5b3eacb66d60752525ab23297a95} 
+Graph\+::\texorpdfstring{$\sim$}{\string~}\+Graph (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_graph_a90961be426ad80001cbc103b6385df31}\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_graph_a90961be426ad80001cbc103b6385df31} 
+Graph\+::\+Graph (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{struct_graph_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_graph_a0e69376befb79f6f5dadececbcb2a01b}\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_graph_a0e69376befb79f6f5dadececbcb2a01b} 
+bool Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{from\+\_\+id}{, }\item[{int}]{to\+\_\+id}{, }\item[{const std\+::string \&}]{label}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_graph_ad6a883b5623c30f2b9a011932fbb9f22}\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_graph_ad6a883b5623c30f2b9a011932fbb9f22} 
+bool Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{from\+\_\+recipe\+\_\+id}{, }\item[{int}]{to\+\_\+recipe\+\_\+id}{, }\item[{const std\+::string \&}]{label}{}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_graph_a0b3b4e427b55bf0b61be72467924d8a7}\index{Graph@{Graph}!addVertex@{addVertex}}
+\index{addVertex@{addVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addVertex()}{addVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_graph_a0b3b4e427b55bf0b61be72467924d8a7} 
+bool Graph\+::add\+Vertex (\begin{DoxyParamCaption}\item[{int}]{recipe\+\_\+id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_graph_a0b3b4e427b55bf0b61be72467924d8a7}\index{Graph@{Graph}!addVertex@{addVertex}}
+\index{addVertex@{addVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addVertex()}{addVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_graph_a0b3b4e427b55bf0b61be72467924d8a7} 
+bool Graph\+::add\+Vertex (\begin{DoxyParamCaption}\item[{int}]{recipe\+\_\+id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_graph_ac6192a41101102ca8aa6acca607c84f3}\index{Graph@{Graph}!clear@{clear}}
+\index{clear@{clear}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{struct_graph_ac6192a41101102ca8aa6acca607c84f3} 
+void Graph\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_graph_a21b21d38817f2c0ec05fb222f654e73a}\index{Graph@{Graph}!dfsCycleHelper@{dfsCycleHelper}}
+\index{dfsCycleHelper@{dfsCycleHelper}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{dfsCycleHelper()}{dfsCycleHelper()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_graph_a21b21d38817f2c0ec05fb222f654e73a} 
+bool Graph\+::dfs\+Cycle\+Helper (\begin{DoxyParamCaption}\item[{int}]{vertex\+\_\+id}{, }\item[{std\+::vector$<$ bool $>$ \&}]{visited}{, }\item[{std\+::vector$<$ bool $>$ \&}]{rec\+Stack}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{struct_graph_a64096724a9157efc362ff7bd2ff99bd8}\index{Graph@{Graph}!dfsCycleHelper@{dfsCycleHelper}}
+\index{dfsCycleHelper@{dfsCycleHelper}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{dfsCycleHelper()}{dfsCycleHelper()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_graph_a64096724a9157efc362ff7bd2ff99bd8} 
+bool Graph\+::dfs\+Cycle\+Helper (\begin{DoxyParamCaption}\item[{int}]{vertex\+\_\+id}{, }\item[{std\+::vector$<$ int $>$ \&}]{visited}{, }\item[{std\+::vector$<$ int $>$ \&}]{rec\+\_\+stack}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{struct_graph_a52e448ac213c053062bfed6405ede84b}\index{Graph@{Graph}!displayDependencies@{displayDependencies}}
+\index{displayDependencies@{displayDependencies}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{displayDependencies()}{displayDependencies()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_graph_a52e448ac213c053062bfed6405ede84b} 
+void Graph\+::display\+Dependencies (\begin{DoxyParamCaption}\item[{int}]{recipe\+\_\+id}{, }\item[{int}]{depth}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_graph_a52e448ac213c053062bfed6405ede84b}\index{Graph@{Graph}!displayDependencies@{displayDependencies}}
+\index{displayDependencies@{displayDependencies}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{displayDependencies()}{displayDependencies()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_graph_a52e448ac213c053062bfed6405ede84b} 
+void Graph\+::display\+Dependencies (\begin{DoxyParamCaption}\item[{int}]{recipe\+\_\+id}{, }\item[{int}]{depth}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_graph_a971d05259d030a81a36b809f14db04a7}\index{Graph@{Graph}!findVertex@{findVertex}}
+\index{findVertex@{findVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{findVertex()}{findVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_graph_a971d05259d030a81a36b809f14db04a7} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_graph_vertex}{Graph\+Vertex}} $>$ Graph\+::find\+Vertex (\begin{DoxyParamCaption}\item[{int}]{recipe\+\_\+id}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{struct_graph_a971d05259d030a81a36b809f14db04a7}\index{Graph@{Graph}!findVertex@{findVertex}}
+\index{findVertex@{findVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{findVertex()}{findVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_graph_a971d05259d030a81a36b809f14db04a7} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_graph_vertex}{Graph\+Vertex}} $>$ Graph\+::find\+Vertex (\begin{DoxyParamCaption}\item[{int}]{recipe\+\_\+id}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{struct_graph_ac6dcb77084447618b65514ce25bd7d2a}\index{Graph@{Graph}!getVertexCount@{getVertexCount}}
+\index{getVertexCount@{getVertexCount}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getVertexCount()}{getVertexCount()}}
+{\footnotesize\ttfamily \label{struct_graph_ac6dcb77084447618b65514ce25bd7d2a} 
+int Graph\+::get\+Vertex\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_graph_a5668aece8de3c0021417b8d00a1796ac}\index{Graph@{Graph}!hasCycle@{hasCycle}}
+\index{hasCycle@{hasCycle}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{hasCycle()}{hasCycle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_graph_a5668aece8de3c0021417b8d00a1796ac} 
+bool Graph\+::has\+Cycle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{struct_graph_a5668aece8de3c0021417b8d00a1796ac}\index{Graph@{Graph}!hasCycle@{hasCycle}}
+\index{hasCycle@{hasCycle}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{hasCycle()}{hasCycle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_graph_a5668aece8de3c0021417b8d00a1796ac} 
+bool Graph\+::has\+Cycle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_graph_a00c89f9300992b2ac69104bb7ddcc868}\index{Graph@{Graph}!resetVisited@{resetVisited}}
+\index{resetVisited@{resetVisited}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{resetVisited()}{resetVisited()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_graph_a00c89f9300992b2ac69104bb7ddcc868} 
+void Graph\+::reset\+Visited (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_graph_a00c89f9300992b2ac69104bb7ddcc868}\index{Graph@{Graph}!resetVisited@{resetVisited}}
+\index{resetVisited@{resetVisited}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{resetVisited()}{resetVisited()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_graph_a00c89f9300992b2ac69104bb7ddcc868} 
+void Graph\+::reset\+Visited (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_graph_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_graph_ab20e1f45cb2c2d3c26968eadd7290f4d}\index{Graph@{Graph}!vertex\_count@{vertex\_count}}
+\index{vertex\_count@{vertex\_count}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{vertex\_count}{vertex\_count}}
+{\footnotesize\ttfamily \label{struct_graph_ab20e1f45cb2c2d3c26968eadd7290f4d} 
+int Graph\+::vertex\+\_\+count}
+
+\Hypertarget{struct_graph_afac2bc7d92334c0692254392ca6464f4}\index{Graph@{Graph}!vertices@{vertices}}
+\index{vertices@{vertices}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{vertices}{vertices}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_graph_afac2bc7d92334c0692254392ca6464f4} 
+\mbox{\hyperlink{struct_graph_vertex}{Graph\+Vertex}}\texorpdfstring{$\ast$}{*} Graph\+::vertices\mbox{[}\mbox{\hyperlink{graph_8cpp_aa83461ae9374f00837b575180d2cd5e2}{MAX\+\_\+\+GRAPH\+\_\+\+VERTICES}}\mbox{]}}
+
+\Hypertarget{struct_graph_a326a6f915243eebc59b606d5c79d8405}\index{Graph@{Graph}!vertices@{vertices}}
+\index{vertices@{vertices}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{vertices}{vertices}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_graph_a326a6f915243eebc59b606d5c79d8405} 
+std\+::array$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{struct_graph_vertex}{Graph\+Vertex}}$>$, \mbox{\hyperlink{graph_8cpp_aa83461ae9374f00837b575180d2cd5e2}{MAX\+\_\+\+GRAPH\+\_\+\+VERTICES}}$>$ Graph\+::vertices\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{struct_graph_a0770e5be4cc3e8d77db32e34f8944e20}\index{Graph@{Graph}!vertices@{vertices}}
+\index{vertices@{vertices}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{vertices}{vertices}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_graph_a0770e5be4cc3e8d77db32e34f8944e20} 
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{struct_graph_vertex}{Graph\+Vertex}}$>$ $>$ Graph\+::vertices\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{graph_8h}{graph.\+h}}\item 
+src/recipe/header/\mbox{\hyperlink{graph_8hpp}{graph.\+hpp}}\item 
+src/recipe/src/\mbox{\hyperlink{graph_8cpp}{graph.\+cpp}}\end{DoxyCompactItemize}

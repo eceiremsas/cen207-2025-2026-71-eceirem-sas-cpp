@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="struct_hash_table_1_1_node" kind="struct" language="C++" prot="private">
+    <compoundname>HashTable::Node</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_hash_table_1_1_node_1ae70fae2827d503f6d6d9f043cdedbb9e" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Recipe&gt; HashTable::Node::recipe</definition>
+        <argsstring></argsstring>
+        <name>recipe</name>
+        <qualifiedname>HashTable::Node::recipe</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/hash_table.hpp" line="25" column="25" bodyfile="src/recipe/header/hash_table.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_hash_table_1_1_node_1ad6207fd5958ddc9a82fd16efc6d0a6d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HashTable::Node::Node</definition>
+        <argsstring>(std::shared_ptr&lt; Recipe &gt; r)</argsstring>
+        <name>Node</name>
+        <qualifiedname>HashTable::Node::Node</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/hash_table.hpp" line="26" column="9" bodyfile="src/recipe/header/hash_table.hpp" bodystart="26" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HashTable::Node</label>
+        <link refid="struct_hash_table_1_1_node"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/recipe/header/hash_table.hpp" line="24" column="5" bodyfile="src/recipe/header/hash_table.hpp" bodystart="24" bodyend="27"/>
+    <listofallmembers>
+      <member refid="struct_hash_table_1_1_node_1ad6207fd5958ddc9a82fd16efc6d0a6d5" prot="public" virt="non-virtual"><scope>HashTable::Node</scope><name>Node</name></member>
+      <member refid="struct_hash_table_1_1_node_1ae70fae2827d503f6d6d9f043cdedbb9e" prot="public" virt="non-virtual"><scope>HashTable::Node</scope><name>recipe</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+\doxysection{recipe.\+h}
+\hypertarget{recipe_8h_source}{}\label{recipe_8h_source}\index{include/recipe.h@{include/recipe.h}}
+\mbox{\hyperlink{recipe_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RECIPE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RECIPE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ MAX\_NAME\_LENGTH\ 100}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ MAX\_CATEGORY\_LENGTH\ 50}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MAX\_INGREDIENTS\ 50}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ MAX\_INGREDIENT\_LENGTH\ 50}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ MAX\_INSTRUCTIONS\ 500}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ ===\ Structure\ Definition\ ===}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_recipe_ad50e37749f923e4ff1db3571bcf173ba}{id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Unique\ recipe\ ID}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_recipe_a0feced1fd0c5dc7fca786dcf4455fd1c}{name}}[\mbox{\hyperlink{recipe_8h_a0c397a708cec89c74029582574516b30}{MAX\_NAME\_LENGTH}}];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Recipe\ name}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_recipe_a820764c4de5022a91ed0b1de33b70759}{category}}[\mbox{\hyperlink{recipe_8h_af6b3fc0245cd2fea2335e352ea187c93}{MAX\_CATEGORY\_LENGTH}}];\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Recipe\ category\ (e.g.,\ "{}Dessert"{},\ "{}Main\ Course"{})}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_recipe_a002bab56be7d0e7f3d959ed27648eaa0}{calories}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calorie\ count}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_recipe_aa25de8c204e9a9051492ee4c5d8d6467}{preparation\_time}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Preparation\ time\ in\ minutes}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_recipe_ae4275d8e6368c7fcb133e099057a919c}{ingredients}}[\mbox{\hyperlink{recipe_8cpp_aa56b94b810166b8fe1b458044a6ee14a}{MAX\_INGREDIENTS}}][\mbox{\hyperlink{recipe_8h_a9f7b9361b9cca9fce28143e517498def}{MAX\_INGREDIENT\_LENGTH}}];\ \ \textcolor{comment}{//\ Array\ of\ ingredient\ names}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_recipe_aac29ee4b38aeadc035e53537ce01780a}{ingredient\_count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Number\ of\ ingredients}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_recipe_a38f0e37ae413fbb8b9c72189d43b120f}{instructions}}[\mbox{\hyperlink{recipe_8h_afe134ede9f4cac41559b2222b17a1a98}{MAX\_INSTRUCTIONS}}];\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cooking\ instructions}}
+\DoxyCodeLine{00030\ \}\ \mbox{\hyperlink{struct_recipe}{Recipe}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ ===\ Function\ Declarations\ ===}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ Creates\ and\ initializes\ a\ new\ recipe}}
+\DoxyCodeLine{00035\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{recipe_8h_a3a010d7d14830ed5a0d045452478edb2}{recipe\_create}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ category,\ \textcolor{keywordtype}{int}\ calories,\ \textcolor{keywordtype}{int}\ preparation\_time);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ Adds\ an\ ingredient\ to\ the\ recipe}}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{recipe_8h_a80d4dcf1f02dd97b365a11e06b05f0f3}{recipe\_add\_ingredient}}(\mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ ingredient);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ Sets\ the\ preparation\ instructions\ for\ the\ recipe}}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{recipe_8h_a11c82a881ee301bff1d0fc0cbc2e1a46}{recipe\_set\_instructions}}(\mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ instructions);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//\ Displays\ all\ details\ of\ the\ recipe}}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{recipe_8h_a416ce862f5c4754ff9383005b6c92751}{recipe\_display}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ Creates\ and\ returns\ a\ deep\ copy\ of\ a\ recipe}}
+\DoxyCodeLine{00047\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{recipe_8h_ad5f9bcd3d6eb320f9e9da7ce64f543f4}{recipe\_copy}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{//\ Frees\ all\ memory\ associated\ with\ a\ recipe}}
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{recipe_8h_aa21f3b4ca5007ba8fcfd404ac6ba5853}{recipe\_destroy}}(\mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ Compares\ two\ recipes\ by\ their\ IDs}}
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{recipe_8h_ad31022ebbbbdab7442de444dfc39b9e1}{recipe\_compare\_by\_id}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe2);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ Compares\ two\ recipes\ by\ their\ calorie\ values}}
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{recipe_8h_a3441a0ce7370e1d6145f708ce07f9987}{recipe\_compare\_by\_calories}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe2);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{//\ ===\ Binary\ File\ Operations\ ===}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ Saves\ a\ recipe\ to\ a\ binary\ file}}
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{recipe_8h_a24eb43014a87a94cd86119d4b3c20a4f}{recipe\_save\_binary}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipe,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{comment}{//\ Loads\ a\ recipe\ from\ a\ binary\ file}}
+\DoxyCodeLine{00064\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{recipe_8h_ad5ea6ba838614a3e9e344c0e36a362aa}{recipe\_load\_binary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ Saves\ multiple\ recipes\ to\ a\ binary\ file}}
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{recipe_8h_af40abb2bd55f3cc7ddc1fc9e60b76317}{recipe\_save\_array\_binary}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ recipes,\ \textcolor{keywordtype}{int}\ count,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{comment}{//\ Loads\ multiple\ recipes\ from\ a\ binary\ file}}
+\DoxyCodeLine{00070\ \mbox{\hyperlink{struct_recipe}{Recipe}}*\ \mbox{\hyperlink{recipe_8h_a74d3b71c4aeffbdd117722fa80d8c7c2}{recipe\_load\_array\_binary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename,\ \textcolor{keywordtype}{int}*\ count);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ RECIPE\_H}}
+
+\end{DoxyCode}

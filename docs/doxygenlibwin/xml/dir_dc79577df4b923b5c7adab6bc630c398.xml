@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="dir_dc79577df4b923b5c7adab6bc630c398" kind="dir">
+    <compoundname>src/recipe/src</compoundname>
+    <innerfile refid="graph_8cpp">graph.cpp</innerfile>
+    <innerfile refid="hash__table_8cpp">hash_table.cpp</innerfile>
+    <innerfile refid="heap_8cpp">heap.cpp</innerfile>
+    <innerfile refid="linked__list_8cpp">linked_list.cpp</innerfile>
+    <innerfile refid="src_2main_8cpp">main.cpp</innerfile>
+    <innerfile refid="src_2menu_8cpp">menu.cpp</innerfile>
+    <innerfile refid="queue_8cpp">queue.cpp</innerfile>
+    <innerfile refid="recipe_8cpp">recipe.cpp</innerfile>
+    <innerfile refid="sparse__matrix_8cpp">sparse_matrix.cpp</innerfile>
+    <innerfile refid="stack_8cpp">stack.cpp</innerfile>
+    <innerfile refid="recipe_2src_2temp_code_runner_file_8cpp">tempCodeRunnerFile.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/recipe/src/"/>
+  </compounddef>
+</doxygen>

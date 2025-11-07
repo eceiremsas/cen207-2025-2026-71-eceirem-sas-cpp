@@ -1,0 +1,323 @@
+\doxysection{include/xor\+\_\+linked\+\_\+list.h File Reference}
+\hypertarget{xor__linked__list_8h}{}\label{xor__linked__list_8h}\index{include/xor\_linked\_list.h@{include/xor\_linked\_list.h}}
+
+
+XOR Linked \doxylink{struct_list}{List} implementation for memory-\/efficient bidirectional traversal.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}recipe.\+h"{}}\newline
+Include dependency graph for xor\+\_\+linked\+\_\+list.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{xor__linked__list_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{xor__linked__list_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_x_o_r_list_node}{XORList\+Node}}
+\begin{DoxyCompactList}\small\item\em Node in XOR linked list. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_x_o_r_list}{XORList}}
+\begin{DoxyCompactList}\small\item\em XOR Linked \doxylink{struct_list}{List} structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct XORList\+Node \mbox{\hyperlink{xor__linked__list_8h_a361597f25c4824188946050aa87d234b}{XORList\+Node}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{xor__linked__list_8h_a367636ea694da4b7ef3dac970e1d0ae1}{xor\+\_\+list\+\_\+create}} (void)
+\begin{DoxyCompactList}\small\item\em Creates and initializes an empty XOR linked list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{xor__linked__list_8h_af1dba2d420ad45bd3e9f755ae72f4f30}{xor\+\_\+list\+\_\+insert\+\_\+head}} (\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe)
+\begin{DoxyCompactList}\small\item\em Inserts a recipe at the beginning of the list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{xor__linked__list_8h_a9456fcc3cd8f6a6e433ceeca9a7809d8}{xor\+\_\+list\+\_\+insert\+\_\+tail}} (\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe)
+\begin{DoxyCompactList}\small\item\em Inserts a recipe at the end of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{xor__linked__list_8h_aed41953cab9c1ba248daae9303eb1a90}{xor\+\_\+list\+\_\+remove}} (\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}list, int id)
+\begin{DoxyCompactList}\small\item\em Removes a recipe from the list by its ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{xor__linked__list_8h_abb83e9e9645839eb39f62b50759d9ba2}{xor\+\_\+list\+\_\+find}} (\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}list, int id)
+\begin{DoxyCompactList}\small\item\em Searches for and returns a recipe by its ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xor__linked__list_8h_a0dbd50e0b8191802ac4c759ce0fc2527}{xor\+\_\+list\+\_\+traverse\+\_\+forward}} (\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}list, void(\texorpdfstring{$\ast$}{*}visit)(\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe))
+\begin{DoxyCompactList}\small\item\em Traverses the list forward (head to tail). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xor__linked__list_8h_ac75b2c97504ecc1fc60b6ca1eae75e2a}{xor\+\_\+list\+\_\+traverse\+\_\+backward}} (\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}list, void(\texorpdfstring{$\ast$}{*}visit)(\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe))
+\begin{DoxyCompactList}\small\item\em Traverses the list backward (tail to head). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{xor__linked__list_8h_a9d8c48af7a8bc99bb3eaa5709a95b738}{xor\+\_\+list\+\_\+size}} (const \mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Returns the number of recipes in the list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{xor__linked__list_8h_a0af0ffa3c653553453baf92ec5c9b350}{xor\+\_\+list\+\_\+is\+\_\+empty}} (const \mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Checks if the list is empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xor__linked__list_8h_a628f822f02458bb6dfaf16b5cbeac97f}{xor\+\_\+list\+\_\+destroy}} (\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Frees all memory associated with the list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{xor__linked__list_8h_abf6f9bb0bbc194d68b6d2d9b0e8e1da7}{xor\+\_\+list\+\_\+save\+\_\+binary}} (const \mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}list, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Saves the XOR linked list to a binary file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{xor__linked__list_8h_a3b669ba2dff4565088f8c0a73084b330}{xor\+\_\+list\+\_\+load\+\_\+binary}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Loads an XOR linked list from a binary file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_x_o_r_list_node}{XORList\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{xor__linked__list_8h_a2122361da74168635fd135ae4798473d}{xor\+\_\+list\+\_\+xor}} (\mbox{\hyperlink{struct_x_o_r_list_node}{XORList\+Node}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{struct_x_o_r_list_node}{XORList\+Node}} \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Computes XOR of two pointers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+XOR Linked \doxylink{struct_list}{List} implementation for memory-\/efficient bidirectional traversal. 
+
+Uses XOR pointer technique to store both next and previous pointers in a single field This reduces memory usage by half compared to a doubly linked list 
+
+\label{doc-typedef-members}
+\Hypertarget{xor__linked__list_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{xor__linked__list_8h_a361597f25c4824188946050aa87d234b}\index{xor\_linked\_list.h@{xor\_linked\_list.h}!XORListNode@{XORListNode}}
+\index{XORListNode@{XORListNode}!xor\_linked\_list.h@{xor\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{XORListNode}{XORListNode}}
+{\footnotesize\ttfamily \label{xor__linked__list_8h_a361597f25c4824188946050aa87d234b} 
+typedef struct XORList\+Node XORList\+Node}
+
+
+
+\label{doc-func-members}
+\Hypertarget{xor__linked__list_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{xor__linked__list_8h_a367636ea694da4b7ef3dac970e1d0ae1}\index{xor\_linked\_list.h@{xor\_linked\_list.h}!xor\_list\_create@{xor\_list\_create}}
+\index{xor\_list\_create@{xor\_list\_create}!xor\_linked\_list.h@{xor\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{xor\_list\_create()}{xor\_list\_create()}}
+{\footnotesize\ttfamily \label{xor__linked__list_8h_a367636ea694da4b7ef3dac970e1d0ae1} 
+\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*} xor\+\_\+list\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Creates and initializes an empty XOR linked list. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the created list, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{xor__linked__list_8h_a628f822f02458bb6dfaf16b5cbeac97f}\index{xor\_linked\_list.h@{xor\_linked\_list.h}!xor\_list\_destroy@{xor\_list\_destroy}}
+\index{xor\_list\_destroy@{xor\_list\_destroy}!xor\_linked\_list.h@{xor\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{xor\_list\_destroy()}{xor\_list\_destroy()}}
+{\footnotesize\ttfamily \label{xor__linked__list_8h_a628f822f02458bb6dfaf16b5cbeac97f} 
+void xor\+\_\+list\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Frees all memory associated with the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the XOR list \\
+\hline
+\end{DoxyParams}
+\Hypertarget{xor__linked__list_8h_abb83e9e9645839eb39f62b50759d9ba2}\index{xor\_linked\_list.h@{xor\_linked\_list.h}!xor\_list\_find@{xor\_list\_find}}
+\index{xor\_list\_find@{xor\_list\_find}!xor\_linked\_list.h@{xor\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{xor\_list\_find()}{xor\_list\_find()}}
+{\footnotesize\ttfamily \label{xor__linked__list_8h_abb83e9e9645839eb39f62b50759d9ba2} 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} xor\+\_\+list\+\_\+find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Searches for and returns a recipe by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the XOR list \\
+\hline
+{\em id} & \doxylink{struct_recipe}{Recipe} ID to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the found recipe, or NULL if not found 
+\end{DoxyReturn}
+\Hypertarget{xor__linked__list_8h_af1dba2d420ad45bd3e9f755ae72f4f30}\index{xor\_linked\_list.h@{xor\_linked\_list.h}!xor\_list\_insert\_head@{xor\_list\_insert\_head}}
+\index{xor\_list\_insert\_head@{xor\_list\_insert\_head}!xor\_linked\_list.h@{xor\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{xor\_list\_insert\_head()}{xor\_list\_insert\_head()}}
+{\footnotesize\ttfamily \label{xor__linked__list_8h_af1dba2d420ad45bd3e9f755ae72f4f30} 
+int xor\+\_\+list\+\_\+insert\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe}{}\end{DoxyParamCaption})}
+
+
+
+Inserts a recipe at the beginning of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the XOR list \\
+\hline
+{\em recipe} & Pointer to the recipe to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{xor__linked__list_8h_a9456fcc3cd8f6a6e433ceeca9a7809d8}\index{xor\_linked\_list.h@{xor\_linked\_list.h}!xor\_list\_insert\_tail@{xor\_list\_insert\_tail}}
+\index{xor\_list\_insert\_tail@{xor\_list\_insert\_tail}!xor\_linked\_list.h@{xor\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{xor\_list\_insert\_tail()}{xor\_list\_insert\_tail()}}
+{\footnotesize\ttfamily \label{xor__linked__list_8h_a9456fcc3cd8f6a6e433ceeca9a7809d8} 
+int xor\+\_\+list\+\_\+insert\+\_\+tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}}]{recipe}{}\end{DoxyParamCaption})}
+
+
+
+Inserts a recipe at the end of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the XOR list \\
+\hline
+{\em recipe} & Pointer to the recipe to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{xor__linked__list_8h_a0af0ffa3c653553453baf92ec5c9b350}\index{xor\_linked\_list.h@{xor\_linked\_list.h}!xor\_list\_is\_empty@{xor\_list\_is\_empty}}
+\index{xor\_list\_is\_empty@{xor\_list\_is\_empty}!xor\_linked\_list.h@{xor\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{xor\_list\_is\_empty()}{xor\_list\_is\_empty()}}
+{\footnotesize\ttfamily \label{xor__linked__list_8h_a0af0ffa3c653553453baf92ec5c9b350} 
+int xor\+\_\+list\+\_\+is\+\_\+empty (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the list is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the XOR list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if empty, 0 otherwise 
+\end{DoxyReturn}
+\Hypertarget{xor__linked__list_8h_a3b669ba2dff4565088f8c0a73084b330}\index{xor\_linked\_list.h@{xor\_linked\_list.h}!xor\_list\_load\_binary@{xor\_list\_load\_binary}}
+\index{xor\_list\_load\_binary@{xor\_list\_load\_binary}!xor\_linked\_list.h@{xor\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{xor\_list\_load\_binary()}{xor\_list\_load\_binary()}}
+{\footnotesize\ttfamily \label{xor__linked__list_8h_a3b669ba2dff4565088f8c0a73084b330} 
+\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*} xor\+\_\+list\+\_\+load\+\_\+binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Loads an XOR linked list from a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the loaded list, or NULL on failure 
+\end{DoxyReturn}
+\Hypertarget{xor__linked__list_8h_aed41953cab9c1ba248daae9303eb1a90}\index{xor\_linked\_list.h@{xor\_linked\_list.h}!xor\_list\_remove@{xor\_list\_remove}}
+\index{xor\_list\_remove@{xor\_list\_remove}!xor\_linked\_list.h@{xor\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{xor\_list\_remove()}{xor\_list\_remove()}}
+{\footnotesize\ttfamily \label{xor__linked__list_8h_aed41953cab9c1ba248daae9303eb1a90} 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} xor\+\_\+list\+\_\+remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Removes a recipe from the list by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the XOR list \\
+\hline
+{\em id} & \doxylink{struct_recipe}{Recipe} ID to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the removed recipe, or NULL if not found 
+\end{DoxyReturn}
+\Hypertarget{xor__linked__list_8h_abf6f9bb0bbc194d68b6d2d9b0e8e1da7}\index{xor\_linked\_list.h@{xor\_linked\_list.h}!xor\_list\_save\_binary@{xor\_list\_save\_binary}}
+\index{xor\_list\_save\_binary@{xor\_list\_save\_binary}!xor\_linked\_list.h@{xor\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{xor\_list\_save\_binary()}{xor\_list\_save\_binary()}}
+{\footnotesize\ttfamily \label{xor__linked__list_8h_abf6f9bb0bbc194d68b6d2d9b0e8e1da7} 
+int xor\+\_\+list\+\_\+save\+\_\+binary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Saves the XOR linked list to a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the XOR list \\
+\hline
+{\em filename} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{xor__linked__list_8h_a9d8c48af7a8bc99bb3eaa5709a95b738}\index{xor\_linked\_list.h@{xor\_linked\_list.h}!xor\_list\_size@{xor\_list\_size}}
+\index{xor\_list\_size@{xor\_list\_size}!xor\_linked\_list.h@{xor\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{xor\_list\_size()}{xor\_list\_size()}}
+{\footnotesize\ttfamily \label{xor__linked__list_8h_a9d8c48af7a8bc99bb3eaa5709a95b738} 
+int xor\+\_\+list\+\_\+size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Returns the number of recipes in the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the XOR list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of recipes 
+\end{DoxyReturn}
+\Hypertarget{xor__linked__list_8h_ac75b2c97504ecc1fc60b6ca1eae75e2a}\index{xor\_linked\_list.h@{xor\_linked\_list.h}!xor\_list\_traverse\_backward@{xor\_list\_traverse\_backward}}
+\index{xor\_list\_traverse\_backward@{xor\_list\_traverse\_backward}!xor\_linked\_list.h@{xor\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{xor\_list\_traverse\_backward()}{xor\_list\_traverse\_backward()}}
+{\footnotesize\ttfamily \label{xor__linked__list_8h_ac75b2c97504ecc1fc60b6ca1eae75e2a} 
+void xor\+\_\+list\+\_\+traverse\+\_\+backward (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{void(\texorpdfstring{$\ast$}{*}}]{visit~}{)(\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe)}\end{DoxyParamCaption})}
+
+
+
+Traverses the list backward (tail to head). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the XOR list \\
+\hline
+{\em visit} & Function pointer to call for each recipe \\
+\hline
+\end{DoxyParams}
+\Hypertarget{xor__linked__list_8h_a0dbd50e0b8191802ac4c759ce0fc2527}\index{xor\_linked\_list.h@{xor\_linked\_list.h}!xor\_list\_traverse\_forward@{xor\_list\_traverse\_forward}}
+\index{xor\_list\_traverse\_forward@{xor\_list\_traverse\_forward}!xor\_linked\_list.h@{xor\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{xor\_list\_traverse\_forward()}{xor\_list\_traverse\_forward()}}
+{\footnotesize\ttfamily \label{xor__linked__list_8h_a0dbd50e0b8191802ac4c759ce0fc2527} 
+void xor\+\_\+list\+\_\+traverse\+\_\+forward (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_x_o_r_list}{XORList}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{void(\texorpdfstring{$\ast$}{*}}]{visit~}{)(\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}recipe)}\end{DoxyParamCaption})}
+
+
+
+Traverses the list forward (head to tail). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the XOR list \\
+\hline
+{\em visit} & Function pointer to call for each recipe \\
+\hline
+\end{DoxyParams}
+\Hypertarget{xor__linked__list_8h_a2122361da74168635fd135ae4798473d}\index{xor\_linked\_list.h@{xor\_linked\_list.h}!xor\_list\_xor@{xor\_list\_xor}}
+\index{xor\_list\_xor@{xor\_list\_xor}!xor\_linked\_list.h@{xor\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{xor\_list\_xor()}{xor\_list\_xor()}}
+{\footnotesize\ttfamily \label{xor__linked__list_8h_a2122361da74168635fd135ae4798473d} 
+\mbox{\hyperlink{struct_x_o_r_list_node}{XORList\+Node}} \texorpdfstring{$\ast$}{*} xor\+\_\+list\+\_\+xor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_x_o_r_list_node}{XORList\+Node}} \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{\mbox{\hyperlink{struct_x_o_r_list_node}{XORList\+Node}} \texorpdfstring{$\ast$}{*}}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Computes XOR of two pointers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First pointer \\
+\hline
+{\em b} & Second pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+XOR of the two pointers 
+\end{DoxyReturn}

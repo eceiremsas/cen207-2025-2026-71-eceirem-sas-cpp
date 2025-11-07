@@ -1,0 +1,907 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="heap_8h" kind="file" language="C++">
+    <compoundname>heap.h</compoundname>
+    <includes refid="recipe_8h" local="yes">recipe.h</includes>
+    <includedby refid="menu_8h" local="yes">include/menu.h</includedby>
+    <includedby refid="heap_8c" local="yes">src/heap.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/heap.h</label>
+        <link refid="heap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>recipe.h</label>
+        <link refid="recipe_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/heap.h</label>
+        <link refid="heap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/menu.h</label>
+        <link refid="menu_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>src/heap.c</label>
+        <link refid="heap_8c"/>
+      </node>
+      <node id="3">
+        <label>src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="4">
+        <label>src/menu.c</label>
+        <link refid="menu_8c"/>
+      </node>
+      <node id="5">
+        <label>src/recipe/src/main.cpp</label>
+        <link refid="src_2main_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/recipe/src/menu.cpp</label>
+        <link refid="src_2menu_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/recipeapp/src/main.cpp</label>
+        <link refid="pp_2src_2main_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/recipeapp/src/menu.cpp</label>
+        <link refid="pp_2src_2menu_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_heap" prot="public">Heap</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="heap_8h_1a1896d6fe7648dcc9830c42174809d4c6" prot="public" static="no">
+        <name>HEAP_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="9" column="9" bodyfile="include/heap.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="heap_8h_1a8fe6b045ac2b4491f0c062395acac430" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_heap" kindref="compound">Heap</ref> *</type>
+        <definition>Heap * heap_create</definition>
+        <argsstring>(int capacity)</argsstring>
+        <name>heap_create</name>
+        <param>
+          <type>int</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new empty heap. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum capacity of the heap </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the created heap, or NULL on failure</para>
+</simplesect>
+Allocates memory for the recipe pointer array</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum capacity of the heap </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the created heap, or NULL on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="39" column="6" bodyfile="src/heap.c" bodystart="102" bodyend="122" declfile="include/heap.h" declline="39" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1a205d61f52bd64bb8ed9b738ab36af848" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int heap_insert</definition>
+        <argsstring>(Heap *heap, Recipe *recipe)</argsstring>
+        <name>heap_insert</name>
+        <param>
+          <type><ref refid="struct_heap" kindref="compound">Heap</ref> *</type>
+          <declname>heap</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+          <declname>recipe</declname>
+        </param>
+        <briefdescription>
+<para>Inserts a new recipe into the heap. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> to be inserted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure</para>
+</simplesect>
+The recipe is added at the end and repositioned using heapify_up</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> to be inserted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="48" column="5" bodyfile="src/heap.c" bodystart="130" bodyend="144" declfile="include/heap.h" declline="48" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1a6c39fc1e805cc98ee4d41e3fdad7161a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+        <definition>Recipe * heap_extract_min</definition>
+        <argsstring>(Heap *heap)</argsstring>
+        <name>heap_extract_min</name>
+        <param>
+          <type><ref refid="struct_heap" kindref="compound">Heap</ref> *</type>
+          <declname>heap</declname>
+        </param>
+        <briefdescription>
+<para>Removes and returns the recipe with the smallest calorie value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the recipe with the smallest calorie value, or NULL if heap is empty</para>
+</simplesect>
+The root element is removed, and heapify_down is called to maintain heap property</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the recipe with the smallest calorie value, or NULL if heap is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="56" column="8" bodyfile="src/heap.c" bodystart="151" bodyend="165" declfile="include/heap.h" declline="56" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1ae1a8c536a1afd85170a0244c568b18a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
+        <definition>Recipe * heap_peek</definition>
+        <argsstring>(Heap *heap)</argsstring>
+        <name>heap_peek</name>
+        <param>
+          <type><ref refid="struct_heap" kindref="compound">Heap</ref> *</type>
+          <declname>heap</declname>
+        </param>
+        <briefdescription>
+<para>Returns the root recipe without removing it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the recipe with the smallest calorie value, or NULL if heap is empty</para>
+</simplesect>
+Unlike extract_min, this function does not remove the recipe from the heap</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the recipe with the smallest calorie value, or NULL if heap is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="64" column="8" bodyfile="src/heap.c" bodystart="172" bodyend="178" declfile="include/heap.h" declline="64" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1a2f9f919fcbab3c57df84fa7db87d4af8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void heapify_up</definition>
+        <argsstring>(Heap *heap, int index)</argsstring>
+        <name>heapify_up</name>
+        <param>
+          <type><ref refid="struct_heap" kindref="compound">Heap</ref> *</type>
+          <declname>heap</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Restores the heap property by moving upward from a given index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting index</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Called after insertion. Swaps elements if the child is smaller than its parent.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="72" column="6" bodyfile="src/heap.c" bodystart="55" bodyend="65" declfile="include/heap.h" declline="72" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1aa33d7b3c74397a16d67a4f8b2ed301a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void heapify_down</definition>
+        <argsstring>(Heap *heap, int index)</argsstring>
+        <name>heapify_down</name>
+        <param>
+          <type><ref refid="struct_heap" kindref="compound">Heap</ref> *</type>
+          <declname>heap</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Restores the heap property by moving downward from a given index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting index</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Called after extraction. Swaps elements if the parent is larger than its children.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="80" column="6" bodyfile="src/heap.c" bodystart="72" bodyend="95" declfile="include/heap.h" declline="80" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1ac2fb89e79c07a9207780988bc6eff91b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void heap_swap</definition>
+        <argsstring>(Recipe **recipe1, Recipe **recipe2)</argsstring>
+        <name>heap_swap</name>
+        <param>
+          <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> **</type>
+          <declname>recipe1</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> **</type>
+          <declname>recipe2</declname>
+        </param>
+        <briefdescription>
+<para>Swaps two recipes in the heap. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>recipe1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the first recipe pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipe2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the second recipe pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Used during heapify operations</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>recipe1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the first recipe pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipe2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the second recipe pointer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="88" column="6" bodyfile="src/heap.c" bodystart="44" bodyend="48" declfile="include/heap.h" declline="88" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1ae360a8cd3262fa6a61f5a01c8090471c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void heap_sort_recipes</definition>
+        <argsstring>(Recipe **recipes, int count)</argsstring>
+        <name>heap_sort_recipes</name>
+        <param>
+          <type><ref refid="struct_recipe" kindref="compound">Recipe</ref> **</type>
+          <declname>recipes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Sorts recipes based on their calorie values using heap sort. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>recipes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of recipe pointers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of recipes in the array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Inserts all recipes into the heap and extracts them in sorted order</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>recipes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of recipe pointers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of recipes in the array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="96" column="6" bodyfile="src/heap.c" bodystart="185" bodyend="206" declfile="include/heap.h" declline="96" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1a62f0b32d4ae7ebfa9780dbda1fcc71d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int heap_is_empty</definition>
+        <argsstring>(Heap *heap)</argsstring>
+        <name>heap_is_empty</name>
+        <param>
+          <type><ref refid="struct_heap" kindref="compound">Heap</ref> *</type>
+          <declname>heap</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the heap is empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if the heap is empty, 0 otherwise</para>
+</simplesect>
+The heap is empty if its size equals 0</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if empty, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="104" column="5" bodyfile="src/heap.c" bodystart="213" bodyend="215" declfile="include/heap.h" declline="104" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1ab62b6464e8d5da1d06343441e1c36333" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int heap_is_full</definition>
+        <argsstring>(Heap *heap)</argsstring>
+        <name>heap_is_full</name>
+        <param>
+          <type><ref refid="struct_heap" kindref="compound">Heap</ref> *</type>
+          <declname>heap</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the heap is full. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if the heap is full, 0 otherwise</para>
+</simplesect>
+The heap is full if its size equals its capacity</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if full, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="112" column="5" bodyfile="src/heap.c" bodystart="222" bodyend="224" declfile="include/heap.h" declline="112" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1ae73ebec7e224ac8ea213a563985a1471" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void heap_destroy</definition>
+        <argsstring>(Heap *heap)</argsstring>
+        <name>heap_destroy</name>
+        <param>
+          <type><ref refid="struct_heap" kindref="compound">Heap</ref> *</type>
+          <declname>heap</declname>
+        </param>
+        <briefdescription>
+<para>Frees all memory used by the heap and its elements. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap structure</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Releases both the recipe array and the heap itself</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="119" column="6" bodyfile="src/heap.c" bodystart="230" bodyend="240" declfile="include/heap.h" declline="119" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1ac9c81831cfff46fe54d120b772a2e22c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int heap_parent</definition>
+        <argsstring>(int index)</argsstring>
+        <name>heap_parent</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Computes the index of a parent node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the child node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index of the parent node</para>
+</simplesect>
+Formula: (index - 1) / 2</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the child node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index of the parent node </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="127" column="5" bodyfile="src/heap.c" bodystart="17" bodyend="19" declfile="include/heap.h" declline="127" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1adf3fd90d8b5f71e543f780b6d61e6140" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int heap_left_child</definition>
+        <argsstring>(int index)</argsstring>
+        <name>heap_left_child</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Computes the index of the left child node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the parent node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index of the left child node</para>
+</simplesect>
+Formula: (2 * index) + 1</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the parent node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index of the left child node </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="135" column="5" bodyfile="src/heap.c" bodystart="26" bodyend="28" declfile="include/heap.h" declline="135" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1a7f6e4e28fbe87843db17da09ff5140d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int heap_right_child</definition>
+        <argsstring>(int index)</argsstring>
+        <name>heap_right_child</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Computes the index of the right child node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the parent node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index of the right child node</para>
+</simplesect>
+Formula: (2 * index) + 2</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the parent node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index of the right child node </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="143" column="5" bodyfile="src/heap.c" bodystart="35" bodyend="37" declfile="include/heap.h" declline="143" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1aecc5cdc687a35c01edc669e9dc6b918b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int heap_save_binary</definition>
+        <argsstring>(const Heap *heap, const char *filename)</argsstring>
+        <name>heap_save_binary</name>
+        <param>
+          <type>const <ref refid="struct_heap" kindref="compound">Heap</ref> *</type>
+          <declname>heap</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Saves the heap to a binary file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>heap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the heap </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the binary file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="148" column="5" bodyfile="src/heap.c" bodystart="248" bodyend="278" declfile="include/heap.h" declline="148" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="heap_8h_1ae859e93dbbf9c17e97b78d977896c1f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_heap" kindref="compound">Heap</ref> *</type>
+        <definition>Heap * heap_load_binary</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>heap_load_binary</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Loads a heap from a binary file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the binary file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the loaded heap, or NULL on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/heap.h" line="151" column="6" bodyfile="src/heap.c" bodystart="285" bodyend="325" declfile="include/heap.h" declline="151" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Header file for the Min-Heap data structure. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Used to sort recipes based on their calorie values. The recipe with the lowest calorie count is always at the top (root) of the heap. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HEAP_H<sp/><sp/></highlight><highlight class="comment">//<sp/>Include<sp/>guard<sp/>start</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="heap_8h_1a1896d6fe7648dcc9830c42174809d4c6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HEAP_H<sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>HEAP_H<sp/>macro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="recipe_8h" kindref="compound">recipe.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>the<sp/>Recipe<sp/>data<sp/>structure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>============================================================================</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>*<sp/>DATA<sp/>STRUCTURES</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>*<sp/>============================================================================<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="struct_heap" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24" refid="struct_heap_1ac3ae85552cef8633752a8de26d1f1184" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>**<sp/><ref refid="struct_heap_1ac3ae85552cef8633752a8de26d1f1184" kindref="member">recipes</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>Dynamic<sp/>array<sp/>of<sp/>recipe<sp/>pointers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="struct_heap_1ac291cf589f86e95198621d33e21a05a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_heap_1ac291cf589f86e95198621d33e21a05a6" kindref="member">size</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Current<sp/>number<sp/>of<sp/>elements<sp/>in<sp/>the<sp/>heap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="struct_heap_1a96f55831332665f95d0231ee59311246" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_heap_1a96f55831332665f95d0231ee59311246" kindref="member">capacity</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Maximum<sp/>capacity<sp/>of<sp/>the<sp/>heap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}<sp/><ref refid="struct_heap" kindref="compound">Heap</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>============================================================================</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>FUNCTION<sp/>DECLARATIONS</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>============================================================================<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="struct_heap" kindref="compound">Heap</ref>*<sp/><ref refid="heap_8h_1a8fe6b045ac2b4491f0c062395acac430" kindref="member">heap_create</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>capacity);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="heap_8h_1a205d61f52bd64bb8ed9b738ab36af848" kindref="member">heap_insert</ref>(<ref refid="struct_heap" kindref="compound">Heap</ref>*<sp/>heap,<sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/>recipe);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/><ref refid="heap_8h_1a6c39fc1e805cc98ee4d41e3fdad7161a" kindref="member">heap_extract_min</ref>(<ref refid="struct_heap" kindref="compound">Heap</ref>*<sp/>heap);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/><ref refid="heap_8h_1ae1a8c536a1afd85170a0244c568b18a2" kindref="member">heap_peek</ref>(<ref refid="struct_heap" kindref="compound">Heap</ref>*<sp/>heap);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="heap_8h_1a2f9f919fcbab3c57df84fa7db87d4af8" kindref="member">heapify_up</ref>(<ref refid="struct_heap" kindref="compound">Heap</ref>*<sp/>heap,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="heap_8h_1aa33d7b3c74397a16d67a4f8b2ed301a5" kindref="member">heapify_down</ref>(<ref refid="struct_heap" kindref="compound">Heap</ref>*<sp/>heap,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="heap_8h_1ac2fb89e79c07a9207780988bc6eff91b" kindref="member">heap_swap</ref>(<ref refid="struct_recipe" kindref="compound">Recipe</ref>**<sp/>recipe1,<sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>**<sp/>recipe2);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="heap_8h_1ae360a8cd3262fa6a61f5a01c8090471c" kindref="member">heap_sort_recipes</ref>(<ref refid="struct_recipe" kindref="compound">Recipe</ref>**<sp/>recipes,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="heap_8h_1a62f0b32d4ae7ebfa9780dbda1fcc71d6" kindref="member">heap_is_empty</ref>(<ref refid="struct_heap" kindref="compound">Heap</ref>*<sp/>heap);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="heap_8h_1ab62b6464e8d5da1d06343441e1c36333" kindref="member">heap_is_full</ref>(<ref refid="struct_heap" kindref="compound">Heap</ref>*<sp/>heap);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="heap_8h_1ae73ebec7e224ac8ea213a563985a1471" kindref="member">heap_destroy</ref>(<ref refid="struct_heap" kindref="compound">Heap</ref>*<sp/>heap);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="heap_8h_1ac9c81831cfff46fe54d120b772a2e22c" kindref="member">heap_parent</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="heap_8h_1adf3fd90d8b5f71e543f780b6d61e6140" kindref="member">heap_left_child</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="heap_8h_1a7f6e4e28fbe87843db17da09ff5140d1" kindref="member">heap_right_child</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Binary<sp/>File<sp/>Operations<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Saves<sp/>the<sp/>heap<sp/>to<sp/>a<sp/>binary<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="heap_8h_1aecc5cdc687a35c01edc669e9dc6b918b" kindref="member">heap_save_binary</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_heap" kindref="compound">Heap</ref>*<sp/>heap,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Loads<sp/>a<sp/>heap<sp/>from<sp/>a<sp/>binary<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><ref refid="struct_heap" kindref="compound">Heap</ref>*<sp/><ref refid="heap_8h_1ae859e93dbbf9c17e97b78d977896c1f8" kindref="member">heap_load_binary</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>HEAP_H<sp/>-<sp/>Include<sp/>guard<sp/>end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/heap.h"/>
+  </compounddef>
+</doxygen>

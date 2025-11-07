@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="recipe_2src_2temp_code_runner_file_8cpp" kind="file" language="C++">
+    <compoundname>tempCodeRunnerFile.cpp</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::cout&lt;&lt; &quot;[1/7] Creating application context...\n&quot;;std::unique_ptr&lt; <ref refid="struct_app_context" kindref="compound">AppContext</ref> &gt;</type>
+        <definition>std::cout&lt;&lt; &quot;[1/7] Creating application context...\n&quot;;std::unique_ptr&lt; AppContext &gt; ctx</definition>
+        <argsstring>(app_context_create())</argsstring>
+        <name>ctx</name>
+        <param>
+          <type><ref refid="menu_8h_1a5ebbf48427c43b83a94a321a1714bc2d" kindref="member">app_context_create</ref>()</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/tempCodeRunnerFile.cpp" line="2" column="2" declfile="src/recipe/src/tempCodeRunnerFile.cpp" declline="2" declcolumn="2"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;[1/7]<sp/>Creating<sp/>application<sp/>context...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">std::unique_ptr&lt;AppContext&gt;<sp/><ref refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kindref="member">ctx</ref>(<ref refid="menu_8h_1a5ebbf48427c43b83a94a321a1714bc2d" kindref="member">app_context_create</ref>());</highlight></codeline>
+    </programlisting>
+    <location file="src/recipe/src/tempCodeRunnerFile.cpp"/>
+  </compounddef>
+</doxygen>

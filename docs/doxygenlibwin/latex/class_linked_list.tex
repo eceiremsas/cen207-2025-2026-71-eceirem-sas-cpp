@@ -1,0 +1,311 @@
+\doxysection{Linked\+List Class Reference}
+\hypertarget{class_linked_list}{}\label{class_linked_list}\index{LinkedList@{LinkedList}}
+
+
+Singly linked list implementation for \doxylink{struct_recipe}{Recipe} objects.  
+
+
+
+
+{\ttfamily \#include $<$linked\+\_\+list.\+hpp$>$}
+
+
+
+Collaboration diagram for Linked\+List\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{class_linked_list__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_linked_list_1_1_node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_linked_list_afe7f78983e173f8018927cf2ad11a5aa}{Linked\+List}} ()
+\item 
+\mbox{\hyperlink{class_linked_list_a2ecd8f4fa22ab5d4b847e65dc416e3aa}{\texorpdfstring{$\sim$}{\string~}\+Linked\+List}} ()=default
+\item 
+bool \mbox{\hyperlink{class_linked_list_a438bae85ccf5bd93fc20e9ad14c5110a}{insert\+Head}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&recipe)
+\begin{DoxyCompactList}\small\item\em Inserts a recipe at the head of the list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_linked_list_ab1c4a80595da1890bb21fa25496cb5e3}{insert\+Tail}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&recipe)
+\begin{DoxyCompactList}\small\item\em Inserts a recipe at the tail of the list. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \mbox{\hyperlink{class_linked_list_a5fceea1644b23463e9219f28bb8513c4}{remove}} (int id)
+\begin{DoxyCompactList}\small\item\em Removes a recipe by its ID. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \mbox{\hyperlink{class_linked_list_a1ee42466cd5059defeeb0af1e053b880}{find}} (int id) const
+\begin{DoxyCompactList}\small\item\em Finds a recipe by its ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_linked_list_a5fc39fb2f7e7964f8556f4c3fe7b8464}{display}} () const
+\begin{DoxyCompactList}\small\item\em Displays all recipes in the list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_linked_list_a91532f0fd443112865b137ea29567522}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the total number of recipes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_linked_list_aae39e3aa7ab58912b8f672937027485b}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the list is empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_linked_list_a261977565e78dd74f288d47ba5865242}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears all nodes in the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_linked_list_afe7f78983e173f8018927cf2ad11a5aa}{Linked\+List}} ()
+\item 
+\mbox{\hyperlink{class_linked_list_a2ecd8f4fa22ab5d4b847e65dc416e3aa}{\texorpdfstring{$\sim$}{\string~}\+Linked\+List}} ()=default
+\item 
+bool \mbox{\hyperlink{class_linked_list_a242f7ceb7c12b9c6e504b26dc52a8a94}{insert\+Head}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ recipe)
+\item 
+bool \mbox{\hyperlink{class_linked_list_ae9e0c864c4ff69970ebe730261b4b336}{insert\+Tail}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ recipe)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \mbox{\hyperlink{class_linked_list_a5fceea1644b23463e9219f28bb8513c4}{remove}} (int id)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \mbox{\hyperlink{class_linked_list_a1ee42466cd5059defeeb0af1e053b880}{find}} (int id) const
+\item 
+void \mbox{\hyperlink{class_linked_list_a5fc39fb2f7e7964f8556f4c3fe7b8464}{display}} () const
+\item 
+int \mbox{\hyperlink{class_linked_list_a91532f0fd443112865b137ea29567522}{size}} () const
+\item 
+bool \mbox{\hyperlink{class_linked_list_aae39e3aa7ab58912b8f672937027485b}{is\+Empty}} () const
+\item 
+void \mbox{\hyperlink{class_linked_list_a261977565e78dd74f288d47ba5865242}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_linked_list_1_1_node}{Node}} $>$ \mbox{\hyperlink{class_linked_list_a0e86fc84176f6e0450b4b417806cc2e4}{head}}
+\begin{DoxyCompactList}\small\item\em Head pointer of the list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_linked_list_aee597464b822b053e03bafc8f6a2c7ed}{count}}
+\begin{DoxyCompactList}\small\item\em Total number of recipes. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_list_node}{List\+Node}} $>$ \mbox{\hyperlink{class_linked_list_af86e24d5c7a90cd5bacd0e9ae37dd131}{head}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singly linked list implementation for \doxylink{struct_recipe}{Recipe} objects. 
+
+\label{doc-constructors}
+\Hypertarget{class_linked_list_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_linked_list_afe7f78983e173f8018927cf2ad11a5aa}\index{LinkedList@{LinkedList}!LinkedList@{LinkedList}}
+\index{LinkedList@{LinkedList}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{LinkedList()}{LinkedList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_afe7f78983e173f8018927cf2ad11a5aa} 
+Linked\+List\+::\+Linked\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_linked_list_a2ecd8f4fa22ab5d4b847e65dc416e3aa}\index{LinkedList@{LinkedList}!````~LinkedList@{\texorpdfstring{$\sim$}{\string~}LinkedList}}
+\index{````~LinkedList@{\texorpdfstring{$\sim$}{\string~}LinkedList}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LinkedList()}{\string~LinkedList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a2ecd8f4fa22ab5d4b847e65dc416e3aa} 
+Linked\+List\+::\texorpdfstring{$\sim$}{\string~}\+Linked\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{class_linked_list_afe7f78983e173f8018927cf2ad11a5aa}\index{LinkedList@{LinkedList}!LinkedList@{LinkedList}}
+\index{LinkedList@{LinkedList}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{LinkedList()}{LinkedList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_afe7f78983e173f8018927cf2ad11a5aa} 
+Linked\+List\+::\+Linked\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_linked_list_a2ecd8f4fa22ab5d4b847e65dc416e3aa}\index{LinkedList@{LinkedList}!````~LinkedList@{\texorpdfstring{$\sim$}{\string~}LinkedList}}
+\index{````~LinkedList@{\texorpdfstring{$\sim$}{\string~}LinkedList}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LinkedList()}{\string~LinkedList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a2ecd8f4fa22ab5d4b847e65dc416e3aa} 
+Linked\+List\+::\texorpdfstring{$\sim$}{\string~}\+Linked\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_linked_list_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_linked_list_a261977565e78dd74f288d47ba5865242}\index{LinkedList@{LinkedList}!clear@{clear}}
+\index{clear@{clear}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a261977565e78dd74f288d47ba5865242} 
+void Linked\+List\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clears all nodes in the list. 
+
+\Hypertarget{class_linked_list_a261977565e78dd74f288d47ba5865242}\index{LinkedList@{LinkedList}!clear@{clear}}
+\index{clear@{clear}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a261977565e78dd74f288d47ba5865242} 
+void Linked\+List\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_linked_list_a5fc39fb2f7e7964f8556f4c3fe7b8464}\index{LinkedList@{LinkedList}!display@{display}}
+\index{display@{display}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a5fc39fb2f7e7964f8556f4c3fe7b8464} 
+void Linked\+List\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Displays all recipes in the list. 
+
+\Hypertarget{class_linked_list_a5fc39fb2f7e7964f8556f4c3fe7b8464}\index{LinkedList@{LinkedList}!display@{display}}
+\index{display@{display}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a5fc39fb2f7e7964f8556f4c3fe7b8464} 
+void Linked\+List\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_linked_list_a1ee42466cd5059defeeb0af1e053b880}\index{LinkedList@{LinkedList}!find@{find}}
+\index{find@{find}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a1ee42466cd5059defeeb0af1e053b880} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ Linked\+List\+::find (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption}) const}
+
+
+
+Finds a recipe by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \doxylink{struct_recipe}{Recipe} ID to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shared pointer to the found recipe, or nullptr if not found. 
+\end{DoxyReturn}
+\Hypertarget{class_linked_list_a1ee42466cd5059defeeb0af1e053b880}\index{LinkedList@{LinkedList}!find@{find}}
+\index{find@{find}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a1ee42466cd5059defeeb0af1e053b880} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ Linked\+List\+::find (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_linked_list_a438bae85ccf5bd93fc20e9ad14c5110a}\index{LinkedList@{LinkedList}!insertHead@{insertHead}}
+\index{insertHead@{insertHead}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{insertHead()}{insertHead()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a438bae85ccf5bd93fc20e9ad14c5110a} 
+bool Linked\+List\+::insert\+Head (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&}]{recipe}{}\end{DoxyParamCaption})}
+
+
+
+Inserts a recipe at the head of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipe} & Shared pointer to the recipe. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if insertion succeeded. 
+\end{DoxyReturn}
+\Hypertarget{class_linked_list_a242f7ceb7c12b9c6e504b26dc52a8a94}\index{LinkedList@{LinkedList}!insertHead@{insertHead}}
+\index{insertHead@{insertHead}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{insertHead()}{insertHead()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a242f7ceb7c12b9c6e504b26dc52a8a94} 
+bool Linked\+List\+::insert\+Head (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$}]{recipe}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_linked_list_ab1c4a80595da1890bb21fa25496cb5e3}\index{LinkedList@{LinkedList}!insertTail@{insertTail}}
+\index{insertTail@{insertTail}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{insertTail()}{insertTail()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_ab1c4a80595da1890bb21fa25496cb5e3} 
+bool Linked\+List\+::insert\+Tail (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&}]{recipe}{}\end{DoxyParamCaption})}
+
+
+
+Inserts a recipe at the tail of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipe} & Shared pointer to the recipe. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if insertion succeeded. 
+\end{DoxyReturn}
+\Hypertarget{class_linked_list_ae9e0c864c4ff69970ebe730261b4b336}\index{LinkedList@{LinkedList}!insertTail@{insertTail}}
+\index{insertTail@{insertTail}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{insertTail()}{insertTail()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_ae9e0c864c4ff69970ebe730261b4b336} 
+bool Linked\+List\+::insert\+Tail (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$}]{recipe}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_linked_list_aae39e3aa7ab58912b8f672937027485b}\index{LinkedList@{LinkedList}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_aae39e3aa7ab58912b8f672937027485b} 
+bool Linked\+List\+::is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks whether the list is empty. 
+
+\Hypertarget{class_linked_list_aae39e3aa7ab58912b8f672937027485b}\index{LinkedList@{LinkedList}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_aae39e3aa7ab58912b8f672937027485b} 
+bool Linked\+List\+::is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_linked_list_a5fceea1644b23463e9219f28bb8513c4}\index{LinkedList@{LinkedList}!remove@{remove}}
+\index{remove@{remove}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a5fceea1644b23463e9219f28bb8513c4} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ Linked\+List\+::remove (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Removes a recipe by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \doxylink{struct_recipe}{Recipe} ID to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shared pointer to the removed recipe, or nullptr if not found. 
+\end{DoxyReturn}
+\Hypertarget{class_linked_list_a5fceea1644b23463e9219f28bb8513c4}\index{LinkedList@{LinkedList}!remove@{remove}}
+\index{remove@{remove}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a5fceea1644b23463e9219f28bb8513c4} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ Linked\+List\+::remove (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_linked_list_a91532f0fd443112865b137ea29567522}\index{LinkedList@{LinkedList}!size@{size}}
+\index{size@{size}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a91532f0fd443112865b137ea29567522} 
+int Linked\+List\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the total number of recipes. 
+
+\Hypertarget{class_linked_list_a91532f0fd443112865b137ea29567522}\index{LinkedList@{LinkedList}!size@{size}}
+\index{size@{size}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a91532f0fd443112865b137ea29567522} 
+int Linked\+List\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_linked_list_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_linked_list_aee597464b822b053e03bafc8f6a2c7ed}\index{LinkedList@{LinkedList}!count@{count}}
+\index{count@{count}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily \label{class_linked_list_aee597464b822b053e03bafc8f6a2c7ed} 
+int Linked\+List\+::count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Total number of recipes. 
+
+\Hypertarget{class_linked_list_a0e86fc84176f6e0450b4b417806cc2e4}\index{LinkedList@{LinkedList}!head@{head}}
+\index{head@{head}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{head}{head}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_a0e86fc84176f6e0450b4b417806cc2e4} 
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{struct_linked_list_1_1_node}{Node}}$>$ Linked\+List\+::head\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Head pointer of the list. 
+
+\Hypertarget{class_linked_list_af86e24d5c7a90cd5bacd0e9ae37dd131}\index{LinkedList@{LinkedList}!head@{head}}
+\index{head@{head}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{head}{head}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_list_af86e24d5c7a90cd5bacd0e9ae37dd131} 
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{struct_list_node}{List\+Node}}$>$ Linked\+List\+::head\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/recipe/header/\mbox{\hyperlink{linked__list_8hpp}{linked\+\_\+list.\+hpp}}\item 
+src/recipe/src/\mbox{\hyperlink{linked__list_8cpp}{linked\+\_\+list.\+cpp}}\end{DoxyCompactItemize}

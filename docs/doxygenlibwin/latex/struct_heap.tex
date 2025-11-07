@@ -1,0 +1,357 @@
+\doxysection{Heap Class Reference}
+\hypertarget{struct_heap}{}\label{struct_heap}\index{Heap@{Heap}}
+
+
+Min-\/\+Heap structure.  
+
+
+
+
+{\ttfamily \#include $<$heap.\+h$>$}
+
+
+
+Collaboration diagram for Heap\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{struct_heap__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_heap_a817e70af29601d05a9c305f8a95e45a8}{Heap}} (int max\+Capacity=100)
+\item 
+bool \mbox{\hyperlink{struct_heap_a4ad004e8471499a2eb6c1062683057b4}{insert}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&recipe)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \mbox{\hyperlink{struct_heap_a74ee7f92c266e326080aee3295a94625}{extract\+Min}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \mbox{\hyperlink{struct_heap_a7e2e3f497068d28b08dcbdb1f69eced2}{peek}} () const
+\item 
+bool \mbox{\hyperlink{struct_heap_a0be15b94ddfdd9789ba7dfe54f814ff5}{is\+Empty}} () const
+\item 
+bool \mbox{\hyperlink{struct_heap_abec5205e1390e48661c50d9e437b0448}{is\+Full}} () const
+\item 
+int \mbox{\hyperlink{struct_heap_a672b1f9f5be335a29feb0d72ee5d61d7}{size}} () const
+\item 
+void \mbox{\hyperlink{struct_heap_a69c97af6f6bc2c61e92c9abc70d2f6c7}{display}} () const
+\item 
+\mbox{\hyperlink{struct_heap_a42e6cbed41247be900004a82d7f9de9a}{\texorpdfstring{$\sim$}{\string~}\+Heap}} ()=default
+\item 
+\mbox{\hyperlink{struct_heap_a6b0516bdc82092b0fa589e20dbe68ad2}{Heap}} (int cap)
+\item 
+bool \mbox{\hyperlink{struct_heap_a0be15b94ddfdd9789ba7dfe54f814ff5}{is\+Empty}} () const
+\item 
+bool \mbox{\hyperlink{struct_heap_abec5205e1390e48661c50d9e437b0448}{is\+Full}} () const
+\item 
+int \mbox{\hyperlink{struct_heap_a672b1f9f5be335a29feb0d72ee5d61d7}{size}} () const
+\item 
+bool \mbox{\hyperlink{struct_heap_aadb48dcfba5b8d34e29fca2df660c563}{insert}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ recipe)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \mbox{\hyperlink{struct_heap_a7e2e3f497068d28b08dcbdb1f69eced2}{peek}} () const
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \mbox{\hyperlink{struct_heap_a74ee7f92c266e326080aee3295a94625}{extract\+Min}} ()
+\item 
+\mbox{\hyperlink{struct_heap_a42e6cbed41247be900004a82d7f9de9a}{\texorpdfstring{$\sim$}{\string~}\+Heap}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{struct_heap_af7c247e8794a6e9b561b3cd080b16cf1}{sort\+Recipes}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ $>$ \&recipe\+List)
+\item 
+static void \mbox{\hyperlink{struct_heap_a5edd450baecf062227491ef34f292254}{heap\+Sort}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ $>$ \&recipe\+List)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_heap_ac3ae85552cef8633752a8de26d1f1184}{recipes}}
+\item 
+int \mbox{\hyperlink{struct_heap_ac291cf589f86e95198621d33e21a05a6}{size}}
+\item 
+int \mbox{\hyperlink{struct_heap_a96f55831332665f95d0231ee59311246}{capacity}}
+\begin{DoxyCompactList}\small\item\em Maximum allowed elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_heap_af8382600fed5fc3c18049e4bbbb958c6}{swap\+Nodes}} (int i, int j)
+\item 
+void \mbox{\hyperlink{struct_heap_a692cce19ba18f8e709358d335bbd5691}{heapify\+Up}} (int index)
+\item 
+void \mbox{\hyperlink{struct_heap_a1e77b23e735d8ef87753ae6ca2e11a39}{heapify\+Down}} (int index)
+\item 
+void \mbox{\hyperlink{struct_heap_a692cce19ba18f8e709358d335bbd5691}{heapify\+Up}} (int index)
+\item 
+void \mbox{\hyperlink{struct_heap_a1e77b23e735d8ef87753ae6ca2e11a39}{heapify\+Down}} (int index)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{struct_heap_a18d58b0aeb106c2f3f42e5dfeeecfef9}{parent}} (int index)
+\item 
+static int \mbox{\hyperlink{struct_heap_ab5202fa6c3b8a2149a7dc6b0d869e46f}{left\+Child}} (int index)
+\item 
+static int \mbox{\hyperlink{struct_heap_ac183568173ce7822c911b2bd39c1d516}{right\+Child}} (int index)
+\item 
+static int \mbox{\hyperlink{struct_heap_a18d58b0aeb106c2f3f42e5dfeeecfef9}{parent}} (int index)
+\item 
+static int \mbox{\hyperlink{struct_heap_ab5202fa6c3b8a2149a7dc6b0d869e46f}{left\+Child}} (int index)
+\item 
+static int \mbox{\hyperlink{struct_heap_ac183568173ce7822c911b2bd39c1d516}{right\+Child}} (int index)
+\item 
+static void \mbox{\hyperlink{struct_heap_ab2c4002145e854a213409c783bc3e5f3}{swap}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&a, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&b)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ $>$ \mbox{\hyperlink{struct_heap_ab613e8fe02e8e1c7a7cc95ef18e67ed8}{recipes}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_heap}{Heap} storage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Min-\/\+Heap structure. 
+
+Min-\/\+Heap implementation using a dynamic array (std\+::vector).
+
+Array-\/based implementation of a complete binary tree. The parent node always has a smaller calorie value than its child nodes.
+
+Maintains the heap property based on \doxylink{struct_recipe}{Recipe} calorie values. 
+
+\label{doc-constructors}
+\Hypertarget{struct_heap_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_heap_a817e70af29601d05a9c305f8a95e45a8}\index{Heap@{Heap}!Heap@{Heap}}
+\index{Heap@{Heap}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{Heap()}{Heap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a817e70af29601d05a9c305f8a95e45a8} 
+Heap\+::\+Heap (\begin{DoxyParamCaption}\item[{int}]{max\+Capacity}{ = {\ttfamily 100}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{struct_heap_a42e6cbed41247be900004a82d7f9de9a}\index{Heap@{Heap}!````~Heap@{\texorpdfstring{$\sim$}{\string~}Heap}}
+\index{````~Heap@{\texorpdfstring{$\sim$}{\string~}Heap}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Heap()}{\string~Heap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a42e6cbed41247be900004a82d7f9de9a} 
+Heap\+::\texorpdfstring{$\sim$}{\string~}\+Heap (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_heap_a6b0516bdc82092b0fa589e20dbe68ad2}\index{Heap@{Heap}!Heap@{Heap}}
+\index{Heap@{Heap}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{Heap()}{Heap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a6b0516bdc82092b0fa589e20dbe68ad2} 
+Heap\+::\+Heap (\begin{DoxyParamCaption}\item[{int}]{cap}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{struct_heap_a42e6cbed41247be900004a82d7f9de9a}\index{Heap@{Heap}!````~Heap@{\texorpdfstring{$\sim$}{\string~}Heap}}
+\index{````~Heap@{\texorpdfstring{$\sim$}{\string~}Heap}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Heap()}{\string~Heap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a42e6cbed41247be900004a82d7f9de9a} 
+Heap\+::\texorpdfstring{$\sim$}{\string~}\+Heap (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{struct_heap_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_heap_a69c97af6f6bc2c61e92c9abc70d2f6c7}\index{Heap@{Heap}!display@{display}}
+\index{display@{display}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{struct_heap_a69c97af6f6bc2c61e92c9abc70d2f6c7} 
+void Heap\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{struct_heap_a74ee7f92c266e326080aee3295a94625}\index{Heap@{Heap}!extractMin@{extractMin}}
+\index{extractMin@{extractMin}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{extractMin()}{extractMin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a74ee7f92c266e326080aee3295a94625} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ Heap\+::extract\+Min (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_heap_a74ee7f92c266e326080aee3295a94625}\index{Heap@{Heap}!extractMin@{extractMin}}
+\index{extractMin@{extractMin}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{extractMin()}{extractMin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a74ee7f92c266e326080aee3295a94625} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ Heap\+::extract\+Min (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_heap_a1e77b23e735d8ef87753ae6ca2e11a39}\index{Heap@{Heap}!heapifyDown@{heapifyDown}}
+\index{heapifyDown@{heapifyDown}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{heapifyDown()}{heapifyDown()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a1e77b23e735d8ef87753ae6ca2e11a39} 
+void Heap\+::heapify\+Down (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{struct_heap_a1e77b23e735d8ef87753ae6ca2e11a39}\index{Heap@{Heap}!heapifyDown@{heapifyDown}}
+\index{heapifyDown@{heapifyDown}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{heapifyDown()}{heapifyDown()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a1e77b23e735d8ef87753ae6ca2e11a39} 
+void Heap\+::heapify\+Down (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{struct_heap_a692cce19ba18f8e709358d335bbd5691}\index{Heap@{Heap}!heapifyUp@{heapifyUp}}
+\index{heapifyUp@{heapifyUp}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{heapifyUp()}{heapifyUp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a692cce19ba18f8e709358d335bbd5691} 
+void Heap\+::heapify\+Up (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{struct_heap_a692cce19ba18f8e709358d335bbd5691}\index{Heap@{Heap}!heapifyUp@{heapifyUp}}
+\index{heapifyUp@{heapifyUp}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{heapifyUp()}{heapifyUp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a692cce19ba18f8e709358d335bbd5691} 
+void Heap\+::heapify\+Up (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{struct_heap_a5edd450baecf062227491ef34f292254}\index{Heap@{Heap}!heapSort@{heapSort}}
+\index{heapSort@{heapSort}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{heapSort()}{heapSort()}}
+{\footnotesize\ttfamily \label{struct_heap_a5edd450baecf062227491ef34f292254} 
+void Heap\+::heap\+Sort (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ $>$ \&}]{recipe\+List}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{struct_heap_a4ad004e8471499a2eb6c1062683057b4}\index{Heap@{Heap}!insert@{insert}}
+\index{insert@{insert}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a4ad004e8471499a2eb6c1062683057b4} 
+bool Heap\+::insert (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&}]{recipe}{}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_heap_aadb48dcfba5b8d34e29fca2df660c563}\index{Heap@{Heap}!insert@{insert}}
+\index{insert@{insert}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_heap_aadb48dcfba5b8d34e29fca2df660c563} 
+bool Heap\+::insert (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$}]{recipe}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_heap_a0be15b94ddfdd9789ba7dfe54f814ff5}\index{Heap@{Heap}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a0be15b94ddfdd9789ba7dfe54f814ff5} 
+bool Heap\+::is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_heap_a0be15b94ddfdd9789ba7dfe54f814ff5}\index{Heap@{Heap}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a0be15b94ddfdd9789ba7dfe54f814ff5} 
+bool Heap\+::is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_heap_abec5205e1390e48661c50d9e437b0448}\index{Heap@{Heap}!isFull@{isFull}}
+\index{isFull@{isFull}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_heap_abec5205e1390e48661c50d9e437b0448} 
+bool Heap\+::is\+Full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_heap_abec5205e1390e48661c50d9e437b0448}\index{Heap@{Heap}!isFull@{isFull}}
+\index{isFull@{isFull}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_heap_abec5205e1390e48661c50d9e437b0448} 
+bool Heap\+::is\+Full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_heap_ab5202fa6c3b8a2149a7dc6b0d869e46f}\index{Heap@{Heap}!leftChild@{leftChild}}
+\index{leftChild@{leftChild}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{leftChild()}{leftChild()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_heap_ab5202fa6c3b8a2149a7dc6b0d869e46f} 
+int Heap\+::left\+Child (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{struct_heap_ab5202fa6c3b8a2149a7dc6b0d869e46f}\index{Heap@{Heap}!leftChild@{leftChild}}
+\index{leftChild@{leftChild}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{leftChild()}{leftChild()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_heap_ab5202fa6c3b8a2149a7dc6b0d869e46f} 
+int Heap\+::left\+Child (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{struct_heap_a18d58b0aeb106c2f3f42e5dfeeecfef9}\index{Heap@{Heap}!parent@{parent}}
+\index{parent@{parent}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a18d58b0aeb106c2f3f42e5dfeeecfef9} 
+int Heap\+::parent (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{struct_heap_a18d58b0aeb106c2f3f42e5dfeeecfef9}\index{Heap@{Heap}!parent@{parent}}
+\index{parent@{parent}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a18d58b0aeb106c2f3f42e5dfeeecfef9} 
+int Heap\+::parent (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{struct_heap_a7e2e3f497068d28b08dcbdb1f69eced2}\index{Heap@{Heap}!peek@{peek}}
+\index{peek@{peek}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a7e2e3f497068d28b08dcbdb1f69eced2} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ Heap\+::peek (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{struct_heap_a7e2e3f497068d28b08dcbdb1f69eced2}\index{Heap@{Heap}!peek@{peek}}
+\index{peek@{peek}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a7e2e3f497068d28b08dcbdb1f69eced2} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ Heap\+::peek (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_heap_ac183568173ce7822c911b2bd39c1d516}\index{Heap@{Heap}!rightChild@{rightChild}}
+\index{rightChild@{rightChild}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{rightChild()}{rightChild()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_heap_ac183568173ce7822c911b2bd39c1d516} 
+int Heap\+::right\+Child (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{struct_heap_ac183568173ce7822c911b2bd39c1d516}\index{Heap@{Heap}!rightChild@{rightChild}}
+\index{rightChild@{rightChild}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{rightChild()}{rightChild()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_heap_ac183568173ce7822c911b2bd39c1d516} 
+int Heap\+::right\+Child (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{struct_heap_a672b1f9f5be335a29feb0d72ee5d61d7}\index{Heap@{Heap}!size@{size}}
+\index{size@{size}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a672b1f9f5be335a29feb0d72ee5d61d7} 
+int Heap\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_heap_a672b1f9f5be335a29feb0d72ee5d61d7}\index{Heap@{Heap}!size@{size}}
+\index{size@{size}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_heap_a672b1f9f5be335a29feb0d72ee5d61d7} 
+int Heap\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_heap_af7c247e8794a6e9b561b3cd080b16cf1}\index{Heap@{Heap}!sortRecipes@{sortRecipes}}
+\index{sortRecipes@{sortRecipes}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{sortRecipes()}{sortRecipes()}}
+{\footnotesize\ttfamily \label{struct_heap_af7c247e8794a6e9b561b3cd080b16cf1} 
+void Heap\+::sort\+Recipes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ $>$ \&}]{recipe\+List}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{struct_heap_ab2c4002145e854a213409c783bc3e5f3}\index{Heap@{Heap}!swap@{swap}}
+\index{swap@{swap}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily \label{struct_heap_ab2c4002145e854a213409c783bc3e5f3} 
+void Heap\+::swap (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&}]{a}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{struct_heap_af8382600fed5fc3c18049e4bbbb958c6}\index{Heap@{Heap}!swapNodes@{swapNodes}}
+\index{swapNodes@{swapNodes}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{swapNodes()}{swapNodes()}}
+{\footnotesize\ttfamily \label{struct_heap_af8382600fed5fc3c18049e4bbbb958c6} 
+void Heap\+::swap\+Nodes (\begin{DoxyParamCaption}\item[{int}]{i}{, }\item[{int}]{j}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_heap_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_heap_a96f55831332665f95d0231ee59311246}\index{Heap@{Heap}!capacity@{capacity}}
+\index{capacity@{capacity}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily \label{struct_heap_a96f55831332665f95d0231ee59311246} 
+int Heap\+::capacity}
+
+
+
+Maximum allowed elements. 
+
+\Hypertarget{struct_heap_ac3ae85552cef8633752a8de26d1f1184}\index{Heap@{Heap}!recipes@{recipes}}
+\index{recipes@{recipes}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{recipes}{recipes}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_heap_ac3ae85552cef8633752a8de26d1f1184} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ $>$ Heap\+::recipes}
+
+\Hypertarget{struct_heap_ab613e8fe02e8e1c7a7cc95ef18e67ed8}\index{Heap@{Heap}!recipes@{recipes}}
+\index{recipes@{recipes}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{recipes}{recipes}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_heap_ab613e8fe02e8e1c7a7cc95ef18e67ed8} 
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{struct_recipe}{Recipe}}$>$ $>$ Heap\+::recipes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{struct_heap}{Heap} storage. 
+
+\Hypertarget{struct_heap_ac291cf589f86e95198621d33e21a05a6}\index{Heap@{Heap}!size@{size}}
+\index{size@{size}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \label{struct_heap_ac291cf589f86e95198621d33e21a05a6} 
+int Heap\+::size}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{heap_8h}{heap.\+h}}\item 
+src/recipe/header/\mbox{\hyperlink{heap_8hpp}{heap.\+hpp}}\item 
+src/recipe/src/\mbox{\hyperlink{heap_8cpp}{heap.\+cpp}}\end{DoxyCompactItemize}

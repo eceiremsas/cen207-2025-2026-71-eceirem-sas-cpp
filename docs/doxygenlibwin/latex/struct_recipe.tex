@@ -1,0 +1,437 @@
+\doxysection{Recipe Class Reference}
+\hypertarget{struct_recipe}{}\label{struct_recipe}\index{Recipe@{Recipe}}
+
+
+Represents a recipe with its properties and related data.  
+
+
+
+
+{\ttfamily \#include $<$recipe.\+h$>$}
+
+
+
+Collaboration diagram for Recipe\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{struct_recipe__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_recipe_a69257c85a87c134b5be816b3bf9f79c5}{Recipe}} ()=default
+\item 
+\mbox{\hyperlink{struct_recipe_a17fbaac388f7ce45f7b57f67999aa894}{Recipe}} (int \mbox{\hyperlink{struct_recipe_ad50e37749f923e4ff1db3571bcf173ba}{id}}, std\+::string \mbox{\hyperlink{struct_recipe_a0feced1fd0c5dc7fca786dcf4455fd1c}{name}}, std\+::string \mbox{\hyperlink{struct_recipe_a820764c4de5022a91ed0b1de33b70759}{category}}, int \mbox{\hyperlink{struct_recipe_a002bab56be7d0e7f3d959ed27648eaa0}{calories}}, int prep\+Time)
+\item 
+\mbox{\hyperlink{struct_recipe_a3eb528c2e2412a629e28a82960598aa7}{\texorpdfstring{$\sim$}{\string~}\+Recipe}} ()=default
+\item 
+int \mbox{\hyperlink{struct_recipe_a3fb4b986c7d092ca4b146f15b0093759}{get\+Id}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{struct_recipe_a2ca59542ac8bc5e83da4352d9cc8b940}{get\+Name}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{struct_recipe_a37f65cdf8588c156de3913cc68dd0ec7}{get\+Category}} () const
+\item 
+int \mbox{\hyperlink{struct_recipe_a48111ae50295a4d2d24e955fd85421d2}{get\+Calories}} () const
+\item 
+int \mbox{\hyperlink{struct_recipe_a8436982c8f5be417b9ad1f871fff2b02}{get\+Preparation\+Time}} () const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{struct_recipe_aa576268d75e51161dd453d20485e469c}{get\+Ingredients}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{struct_recipe_ac9cc7ae6eea2a46e94df8d823edfa307}{get\+Instructions}} () const
+\item 
+void \mbox{\hyperlink{struct_recipe_abeb7f55824c62097dfb686d50fcf2047}{set\+Name}} (const std\+::string \&n)
+\item 
+void \mbox{\hyperlink{struct_recipe_a43c8842b9887a7a05d72060a2c63fdb1}{set\+Category}} (const std\+::string \&c)
+\item 
+void \mbox{\hyperlink{struct_recipe_ae06dfab7449bb227907b75890ad1207b}{set\+Calories}} (int c)
+\item 
+void \mbox{\hyperlink{struct_recipe_a66bdee8ac5d502f388f485c23e4db16e}{set\+Preparation\+Time}} (int t)
+\item 
+void \mbox{\hyperlink{struct_recipe_aef3eefc56944f9483f51a35c3769aa7e}{set\+Instructions}} (const std\+::string \&instr)
+\item 
+void \mbox{\hyperlink{struct_recipe_ab012e2c461e55ebe05553b89714fe52d}{add\+Ingredient}} (const std\+::string \&ingredient)
+\begin{DoxyCompactList}\small\item\em Adds an ingredient to the recipe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_recipe_a06a0c4bd94fc0b1e285c839e45952f78}{display}} () const
+\begin{DoxyCompactList}\small\item\em Displays all recipe information to the console. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \mbox{\hyperlink{struct_recipe_ab05da34e3f9568e4ba2301157e9b56ef}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of the current recipe. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_recipe_af5b90cedae70a72d171f8fb6a5891d14}{operator$<$}} (const \mbox{\hyperlink{struct_recipe}{Recipe}} \&other) const
+\item 
+bool \mbox{\hyperlink{struct_recipe_a7d4b95637e8aabc4ca3c48d784832c5a}{operator$>$}} (const \mbox{\hyperlink{struct_recipe}{Recipe}} \&other) const
+\item 
+bool \mbox{\hyperlink{struct_recipe_aaef9304796bb72fc9f28724052203e80}{operator==}} (const \mbox{\hyperlink{struct_recipe}{Recipe}} \&other) const
+\item 
+\mbox{\hyperlink{struct_recipe_a69257c85a87c134b5be816b3bf9f79c5}{Recipe}} ()=default
+\item 
+\mbox{\hyperlink{struct_recipe_a3adb792b79eadbb5b7a49f77d38f9d35}{Recipe}} (int id\+\_\+, std\+::string name\+\_\+, std\+::string category\+\_\+, int cal, int prep)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \mbox{\hyperlink{struct_recipe_ab05da34e3f9568e4ba2301157e9b56ef}{clone}} () const
+\item 
+bool \mbox{\hyperlink{struct_recipe_ad6e9f08c24906ccff5bfbebf0bdeb433}{add\+Ingredient}} (const std\+::string \&ingredient)
+\item 
+void \mbox{\hyperlink{struct_recipe_ab85029ecefe164fb7d21548cfe1da91c}{set\+Instructions}} (const std\+::string \&text)
+\item 
+void \mbox{\hyperlink{struct_recipe_a06a0c4bd94fc0b1e285c839e45952f78}{display}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{struct_recipe_ad925848e2d1daf2c65f19083fe228d5d}{compare\+By\+Calories}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&a, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&b)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_recipe_ad50e37749f923e4ff1db3571bcf173ba}{id}} \{\}
+\begin{DoxyCompactList}\small\item\em Unique recipe ID. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_recipe_a0feced1fd0c5dc7fca786dcf4455fd1c}{name}} \mbox{[}\mbox{\hyperlink{recipe_8h_a0c397a708cec89c74029582574516b30}{MAX\+\_\+\+NAME\+\_\+\+LENGTH}}\mbox{]}
+\item 
+char \mbox{\hyperlink{struct_recipe_a820764c4de5022a91ed0b1de33b70759}{category}} \mbox{[}\mbox{\hyperlink{recipe_8h_af6b3fc0245cd2fea2335e352ea187c93}{MAX\+\_\+\+CATEGORY\+\_\+\+LENGTH}}\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_recipe_a002bab56be7d0e7f3d959ed27648eaa0}{calories}} \{\}
+\begin{DoxyCompactList}\small\item\em Calorie count. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_recipe_aa25de8c204e9a9051492ee4c5d8d6467}{preparation\+\_\+time}} \{\}
+\item 
+char \mbox{\hyperlink{struct_recipe_ae4275d8e6368c7fcb133e099057a919c}{ingredients}} \mbox{[}\mbox{\hyperlink{recipe_8cpp_aa56b94b810166b8fe1b458044a6ee14a}{MAX\+\_\+\+INGREDIENTS}}\mbox{]}\mbox{[}\mbox{\hyperlink{recipe_8h_a9f7b9361b9cca9fce28143e517498def}{MAX\+\_\+\+INGREDIENT\+\_\+\+LENGTH}}\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_recipe_aac29ee4b38aeadc035e53537ce01780a}{ingredient\+\_\+count}}
+\item 
+char \mbox{\hyperlink{struct_recipe_a38f0e37ae413fbb8b9c72189d43b120f}{instructions}} \mbox{[}\mbox{\hyperlink{recipe_8h_afe134ede9f4cac41559b2222b17a1a98}{MAX\+\_\+\+INSTRUCTIONS}}\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{struct_recipe_a50091cc91548be3bf3399bd0471667f1}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_recipe}{Recipe} name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{struct_recipe_a1f07e5fb045937bf62e5e66d3de679ea}{category}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_recipe}{Recipe} category (e.\+g., "{}\+Dessert"{}, "{}\+Main Course"{}). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_recipe_a76147c2557ad7c36b21f13a1a98e725b}{preparation\+Time}}
+\begin{DoxyCompactList}\small\item\em Preparation time in minutes. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{struct_recipe_a029737b52953e9b6519549d23ca54de0}{ingredients}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_list}{List} of ingredients. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{struct_recipe_afbcfa44d4c0b4867707e142889000938}{instructions}}
+\begin{DoxyCompactList}\small\item\em Cooking instructions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a recipe with its properties and related data. 
+
+Encapsulates all information related to a single recipe.
+
+Each recipe contains a unique ID, name, category, calorie count, preparation time, a list of ingredients, and preparation instructions. 
+
+\label{doc-constructors}
+\Hypertarget{struct_recipe_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_recipe_a69257c85a87c134b5be816b3bf9f79c5}\index{Recipe@{Recipe}!Recipe@{Recipe}}
+\index{Recipe@{Recipe}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{Recipe()}{Recipe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{struct_recipe_a69257c85a87c134b5be816b3bf9f79c5} 
+Recipe\+::\+Recipe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_recipe_a17fbaac388f7ce45f7b57f67999aa894}\index{Recipe@{Recipe}!Recipe@{Recipe}}
+\index{Recipe@{Recipe}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{Recipe()}{Recipe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{struct_recipe_a17fbaac388f7ce45f7b57f67999aa894} 
+Recipe\+::\+Recipe (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{std\+::string}]{name}{, }\item[{std\+::string}]{category}{, }\item[{int}]{calories}{, }\item[{int}]{prep\+Time}{}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_recipe_a3eb528c2e2412a629e28a82960598aa7}\index{Recipe@{Recipe}!````~Recipe@{\texorpdfstring{$\sim$}{\string~}Recipe}}
+\index{````~Recipe@{\texorpdfstring{$\sim$}{\string~}Recipe}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Recipe()}{\string~Recipe()}}
+{\footnotesize\ttfamily \label{struct_recipe_a3eb528c2e2412a629e28a82960598aa7} 
+Recipe\+::\texorpdfstring{$\sim$}{\string~}\+Recipe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_recipe_a69257c85a87c134b5be816b3bf9f79c5}\index{Recipe@{Recipe}!Recipe@{Recipe}}
+\index{Recipe@{Recipe}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{Recipe()}{Recipe()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{struct_recipe_a69257c85a87c134b5be816b3bf9f79c5} 
+Recipe\+::\+Recipe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_recipe_a3adb792b79eadbb5b7a49f77d38f9d35}\index{Recipe@{Recipe}!Recipe@{Recipe}}
+\index{Recipe@{Recipe}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{Recipe()}{Recipe()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{struct_recipe_a3adb792b79eadbb5b7a49f77d38f9d35} 
+Recipe\+::\+Recipe (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+}{, }\item[{std\+::string}]{name\+\_\+}{, }\item[{std\+::string}]{category\+\_\+}{, }\item[{int}]{cal}{, }\item[{int}]{prep}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{struct_recipe_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_recipe_ab012e2c461e55ebe05553b89714fe52d}\index{Recipe@{Recipe}!addIngredient@{addIngredient}}
+\index{addIngredient@{addIngredient}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{addIngredient()}{addIngredient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_ab012e2c461e55ebe05553b89714fe52d} 
+void Recipe\+::add\+Ingredient (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ingredient}{}\end{DoxyParamCaption})}
+
+
+
+Adds an ingredient to the recipe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ingredient} & Ingredient name to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_recipe_ad6e9f08c24906ccff5bfbebf0bdeb433}\index{Recipe@{Recipe}!addIngredient@{addIngredient}}
+\index{addIngredient@{addIngredient}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{addIngredient()}{addIngredient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_ad6e9f08c24906ccff5bfbebf0bdeb433} 
+bool Recipe\+::add\+Ingredient (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ingredient}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_ab05da34e3f9568e4ba2301157e9b56ef}\index{Recipe@{Recipe}!clone@{clone}}
+\index{clone@{clone}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_ab05da34e3f9568e4ba2301157e9b56ef} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ Recipe\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Creates a deep copy of the current recipe. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Recipe$>$ pointing to the cloned recipe. 
+\end{DoxyReturn}
+\Hypertarget{struct_recipe_ab05da34e3f9568e4ba2301157e9b56ef}\index{Recipe@{Recipe}!clone@{clone}}
+\index{clone@{clone}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_ab05da34e3f9568e4ba2301157e9b56ef} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ Recipe\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_ad925848e2d1daf2c65f19083fe228d5d}\index{Recipe@{Recipe}!compareByCalories@{compareByCalories}}
+\index{compareByCalories@{compareByCalories}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{compareByCalories()}{compareByCalories()}}
+{\footnotesize\ttfamily \label{struct_recipe_ad925848e2d1daf2c65f19083fe228d5d} 
+int Recipe\+::compare\+By\+Calories (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&}]{a}{, }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \&}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{struct_recipe_a06a0c4bd94fc0b1e285c839e45952f78}\index{Recipe@{Recipe}!display@{display}}
+\index{display@{display}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_a06a0c4bd94fc0b1e285c839e45952f78} 
+void Recipe\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Displays all recipe information to the console. 
+
+\Hypertarget{struct_recipe_a06a0c4bd94fc0b1e285c839e45952f78}\index{Recipe@{Recipe}!display@{display}}
+\index{display@{display}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_a06a0c4bd94fc0b1e285c839e45952f78} 
+void Recipe\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_a48111ae50295a4d2d24e955fd85421d2}\index{Recipe@{Recipe}!getCalories@{getCalories}}
+\index{getCalories@{getCalories}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{getCalories()}{getCalories()}}
+{\footnotesize\ttfamily \label{struct_recipe_a48111ae50295a4d2d24e955fd85421d2} 
+int Recipe\+::get\+Calories (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_a37f65cdf8588c156de3913cc68dd0ec7}\index{Recipe@{Recipe}!getCategory@{getCategory}}
+\index{getCategory@{getCategory}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{getCategory()}{getCategory()}}
+{\footnotesize\ttfamily \label{struct_recipe_a37f65cdf8588c156de3913cc68dd0ec7} 
+const std\+::string \& Recipe\+::get\+Category (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_a3fb4b986c7d092ca4b146f15b0093759}\index{Recipe@{Recipe}!getId@{getId}}
+\index{getId@{getId}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{struct_recipe_a3fb4b986c7d092ca4b146f15b0093759} 
+int Recipe\+::get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_aa576268d75e51161dd453d20485e469c}\index{Recipe@{Recipe}!getIngredients@{getIngredients}}
+\index{getIngredients@{getIngredients}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{getIngredients()}{getIngredients()}}
+{\footnotesize\ttfamily \label{struct_recipe_aa576268d75e51161dd453d20485e469c} 
+const std\+::vector$<$ std\+::string $>$ \& Recipe\+::get\+Ingredients (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_ac9cc7ae6eea2a46e94df8d823edfa307}\index{Recipe@{Recipe}!getInstructions@{getInstructions}}
+\index{getInstructions@{getInstructions}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{getInstructions()}{getInstructions()}}
+{\footnotesize\ttfamily \label{struct_recipe_ac9cc7ae6eea2a46e94df8d823edfa307} 
+const std\+::string \& Recipe\+::get\+Instructions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_a2ca59542ac8bc5e83da4352d9cc8b940}\index{Recipe@{Recipe}!getName@{getName}}
+\index{getName@{getName}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{struct_recipe_a2ca59542ac8bc5e83da4352d9cc8b940} 
+const std\+::string \& Recipe\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_a8436982c8f5be417b9ad1f871fff2b02}\index{Recipe@{Recipe}!getPreparationTime@{getPreparationTime}}
+\index{getPreparationTime@{getPreparationTime}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{getPreparationTime()}{getPreparationTime()}}
+{\footnotesize\ttfamily \label{struct_recipe_a8436982c8f5be417b9ad1f871fff2b02} 
+int Recipe\+::get\+Preparation\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_af5b90cedae70a72d171f8fb6a5891d14}\index{Recipe@{Recipe}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily \label{struct_recipe_af5b90cedae70a72d171f8fb6a5891d14} 
+bool Recipe\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_recipe}{Recipe}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_aaef9304796bb72fc9f28724052203e80}\index{Recipe@{Recipe}!operator==@{operator==}}
+\index{operator==@{operator==}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{struct_recipe_aaef9304796bb72fc9f28724052203e80} 
+bool Recipe\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_recipe}{Recipe}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_a7d4b95637e8aabc4ca3c48d784832c5a}\index{Recipe@{Recipe}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily \label{struct_recipe_a7d4b95637e8aabc4ca3c48d784832c5a} 
+bool Recipe\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_recipe}{Recipe}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_ae06dfab7449bb227907b75890ad1207b}\index{Recipe@{Recipe}!setCalories@{setCalories}}
+\index{setCalories@{setCalories}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{setCalories()}{setCalories()}}
+{\footnotesize\ttfamily \label{struct_recipe_ae06dfab7449bb227907b75890ad1207b} 
+void Recipe\+::set\+Calories (\begin{DoxyParamCaption}\item[{int}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_a43c8842b9887a7a05d72060a2c63fdb1}\index{Recipe@{Recipe}!setCategory@{setCategory}}
+\index{setCategory@{setCategory}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{setCategory()}{setCategory()}}
+{\footnotesize\ttfamily \label{struct_recipe_a43c8842b9887a7a05d72060a2c63fdb1} 
+void Recipe\+::set\+Category (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_aef3eefc56944f9483f51a35c3769aa7e}\index{Recipe@{Recipe}!setInstructions@{setInstructions}}
+\index{setInstructions@{setInstructions}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{setInstructions()}{setInstructions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_aef3eefc56944f9483f51a35c3769aa7e} 
+void Recipe\+::set\+Instructions (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{instr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_ab85029ecefe164fb7d21548cfe1da91c}\index{Recipe@{Recipe}!setInstructions@{setInstructions}}
+\index{setInstructions@{setInstructions}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{setInstructions()}{setInstructions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_ab85029ecefe164fb7d21548cfe1da91c} 
+void Recipe\+::set\+Instructions (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_abeb7f55824c62097dfb686d50fcf2047}\index{Recipe@{Recipe}!setName@{setName}}
+\index{setName@{setName}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{struct_recipe_abeb7f55824c62097dfb686d50fcf2047} 
+void Recipe\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_recipe_a66bdee8ac5d502f388f485c23e4db16e}\index{Recipe@{Recipe}!setPreparationTime@{setPreparationTime}}
+\index{setPreparationTime@{setPreparationTime}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{setPreparationTime()}{setPreparationTime()}}
+{\footnotesize\ttfamily \label{struct_recipe_a66bdee8ac5d502f388f485c23e4db16e} 
+void Recipe\+::set\+Preparation\+Time (\begin{DoxyParamCaption}\item[{int}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_recipe_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_recipe_a002bab56be7d0e7f3d959ed27648eaa0}\index{Recipe@{Recipe}!calories@{calories}}
+\index{calories@{calories}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{calories}{calories}}
+{\footnotesize\ttfamily \label{struct_recipe_a002bab56be7d0e7f3d959ed27648eaa0} 
+int Recipe\+::calories \{\}}
+
+
+
+Calorie count. 
+
+\Hypertarget{struct_recipe_a820764c4de5022a91ed0b1de33b70759}\index{Recipe@{Recipe}!category@{category}}
+\index{category@{category}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{category}{category}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_a820764c4de5022a91ed0b1de33b70759} 
+std\+::string Recipe\+::category}
+
+\Hypertarget{struct_recipe_a1f07e5fb045937bf62e5e66d3de679ea}\index{Recipe@{Recipe}!category@{category}}
+\index{category@{category}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{category}{category}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_a1f07e5fb045937bf62e5e66d3de679ea} 
+std\+::string Recipe\+::category\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{struct_recipe}{Recipe} category (e.\+g., "{}\+Dessert"{}, "{}\+Main Course"{}). 
+
+\Hypertarget{struct_recipe_ad50e37749f923e4ff1db3571bcf173ba}\index{Recipe@{Recipe}!id@{id}}
+\index{id@{id}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{struct_recipe_ad50e37749f923e4ff1db3571bcf173ba} 
+int Recipe\+::id \{\}}
+
+
+
+Unique recipe ID. 
+
+\Hypertarget{struct_recipe_aac29ee4b38aeadc035e53537ce01780a}\index{Recipe@{Recipe}!ingredient\_count@{ingredient\_count}}
+\index{ingredient\_count@{ingredient\_count}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{ingredient\_count}{ingredient\_count}}
+{\footnotesize\ttfamily \label{struct_recipe_aac29ee4b38aeadc035e53537ce01780a} 
+int Recipe\+::ingredient\+\_\+count}
+
+\Hypertarget{struct_recipe_ae4275d8e6368c7fcb133e099057a919c}\index{Recipe@{Recipe}!ingredients@{ingredients}}
+\index{ingredients@{ingredients}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{ingredients}{ingredients}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_ae4275d8e6368c7fcb133e099057a919c} 
+std\+::vector$<$ std\+::string $>$ Recipe\+::ingredients}
+
+\Hypertarget{struct_recipe_a029737b52953e9b6519549d23ca54de0}\index{Recipe@{Recipe}!ingredients@{ingredients}}
+\index{ingredients@{ingredients}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{ingredients}{ingredients}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_a029737b52953e9b6519549d23ca54de0} 
+std\+::vector$<$std\+::string$>$ Recipe\+::ingredients\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{struct_list}{List} of ingredients. 
+
+\Hypertarget{struct_recipe_a38f0e37ae413fbb8b9c72189d43b120f}\index{Recipe@{Recipe}!instructions@{instructions}}
+\index{instructions@{instructions}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{instructions}{instructions}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_a38f0e37ae413fbb8b9c72189d43b120f} 
+std\+::string Recipe\+::instructions}
+
+\Hypertarget{struct_recipe_afbcfa44d4c0b4867707e142889000938}\index{Recipe@{Recipe}!instructions@{instructions}}
+\index{instructions@{instructions}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{instructions}{instructions}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_afbcfa44d4c0b4867707e142889000938} 
+std\+::string Recipe\+::instructions\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cooking instructions. 
+
+\Hypertarget{struct_recipe_a0feced1fd0c5dc7fca786dcf4455fd1c}\index{Recipe@{Recipe}!name@{name}}
+\index{name@{name}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{name}{name}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_a0feced1fd0c5dc7fca786dcf4455fd1c} 
+std\+::string Recipe\+::name}
+
+\Hypertarget{struct_recipe_a50091cc91548be3bf3399bd0471667f1}\index{Recipe@{Recipe}!name@{name}}
+\index{name@{name}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{name}{name}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_recipe_a50091cc91548be3bf3399bd0471667f1} 
+std\+::string Recipe\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{struct_recipe}{Recipe} name. 
+
+\Hypertarget{struct_recipe_aa25de8c204e9a9051492ee4c5d8d6467}\index{Recipe@{Recipe}!preparation\_time@{preparation\_time}}
+\index{preparation\_time@{preparation\_time}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{preparation\_time}{preparation\_time}}
+{\footnotesize\ttfamily \label{struct_recipe_aa25de8c204e9a9051492ee4c5d8d6467} 
+int Recipe\+::preparation\+\_\+time \{\}}
+
+\Hypertarget{struct_recipe_a76147c2557ad7c36b21f13a1a98e725b}\index{Recipe@{Recipe}!preparationTime@{preparationTime}}
+\index{preparationTime@{preparationTime}!Recipe@{Recipe}}
+\doxysubsubsection{\texorpdfstring{preparationTime}{preparationTime}}
+{\footnotesize\ttfamily \label{struct_recipe_a76147c2557ad7c36b21f13a1a98e725b} 
+int Recipe\+::preparation\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Preparation time in minutes. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{recipe_8h}{recipe.\+h}}\item 
+src/recipe/header/\mbox{\hyperlink{recipe_8hpp}{recipe.\+hpp}}\item 
+src/recipe/src/\mbox{\hyperlink{recipe_8cpp}{recipe.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="struct_graph_vertex" kind="struct" language="C++" prot="public">
+    <compoundname>GraphVertex</compoundname>
+    <includes refid="graph_8h" local="no">graph.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_graph_vertex_1a7c3343f6f4297cddb96216cc41747bab" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GraphVertex::recipe_id</definition>
+        <argsstring></argsstring>
+        <name>recipe_id</name>
+        <qualifiedname>GraphVertex::recipe_id</qualifiedname>
+        <briefdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> ID represented by this vertex. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="21" column="9" bodyfile="include/graph.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_graph_vertex_1af0f4f598619135666912aaeffeb5383f" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_graph_edge" kindref="compound">GraphEdge</ref> *</type>
+        <definition>std::shared_ptr&lt; GraphEdge &gt; GraphVertex::edges</definition>
+        <argsstring></argsstring>
+        <name>edges</name>
+        <qualifiedname>GraphVertex::edges</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="22" column="15" bodyfile="include/graph.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_graph_vertex_1afef08c8d5ad632ed89c22e49c0a1ffb4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>bool GraphVertex::visited</definition>
+        <argsstring></argsstring>
+        <name>visited</name>
+        <qualifiedname>GraphVertex::visited</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/graph.h" line="23" column="9" bodyfile="include/graph.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_graph_vertex_1adf065c6b8adfdb6b6c008cf0077d30f3" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="struct_graph_edge" kindref="compound">GraphEdge</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;GraphEdge&gt; GraphVertex::edges</definition>
+        <argsstring></argsstring>
+        <name>edges</name>
+        <qualifiedname>GraphVertex::edges</qualifiedname>
+        <briefdescription>
+<para>Linked list of outgoing edges. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/graph.hpp" line="45" column="21" bodyfile="src/recipe/header/graph.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_graph_vertex_1afef08c8d5ad632ed89c22e49c0a1ffb4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GraphVertex::visited</definition>
+        <argsstring></argsstring>
+        <name>visited</name>
+        <qualifiedname>GraphVertex::visited</qualifiedname>
+        <briefdescription>
+<para>Visited flag for DFS/BFS. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/graph.hpp" line="46" column="10" bodyfile="src/recipe/header/graph.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_graph_vertex_1a36824e3dff00a9b2e77be09eb00bc6e8" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GraphVertex::GraphVertex</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GraphVertex</name>
+        <qualifiedname>GraphVertex::GraphVertex</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/graph.hpp" line="48" column="14" bodyfile="src/recipe/header/graph.hpp" bodystart="48" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_graph_vertex_1a36824e3dff00a9b2e77be09eb00bc6e8" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GraphVertex::GraphVertex</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GraphVertex</name>
+        <qualifiedname>GraphVertex::GraphVertex</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/graph.cpp" line="35" column="14" bodyfile="src/recipe/src/graph.cpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>GraphEdge</label>
+        <link refid="struct_graph_edge"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+next</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>GraphVertex</label>
+        <link refid="struct_graph_vertex"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+edges</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/graph.h" line="20" column="1" bodyfile="include/graph.h" bodystart="20" bodyend="24"/>
+    <listofallmembers>
+      <member refid="struct_graph_vertex_1af0f4f598619135666912aaeffeb5383f" prot="public" virt="non-virtual"><scope>GraphVertex</scope><name>edges</name></member>
+      <member refid="struct_graph_vertex_1adf065c6b8adfdb6b6c008cf0077d30f3" prot="public" virt="non-virtual"><scope>GraphVertex</scope><name>edges</name></member>
+      <member refid="struct_graph_vertex_1a36824e3dff00a9b2e77be09eb00bc6e8" prot="public" virt="non-virtual"><scope>GraphVertex</scope><name>GraphVertex</name></member>
+      <member refid="struct_graph_vertex_1a36824e3dff00a9b2e77be09eb00bc6e8" prot="public" virt="non-virtual"><scope>GraphVertex</scope><name>GraphVertex</name></member>
+      <member refid="struct_graph_vertex_1a7c3343f6f4297cddb96216cc41747bab" prot="public" virt="non-virtual"><scope>GraphVertex</scope><name>recipe_id</name></member>
+      <member refid="struct_graph_vertex_1afef08c8d5ad632ed89c22e49c0a1ffb4" prot="public" virt="non-virtual"><scope>GraphVertex</scope><name>visited</name></member>
+      <member refid="struct_graph_vertex_1afef08c8d5ad632ed89c22e49c0a1ffb4" prot="public" virt="non-virtual"><scope>GraphVertex</scope><name>visited</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

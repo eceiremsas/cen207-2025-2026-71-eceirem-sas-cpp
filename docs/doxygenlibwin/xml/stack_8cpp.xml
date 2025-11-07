@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="stack_8cpp" kind="file" language="C++">
+    <compoundname>stack.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">memory</includes>
+    <includes refid="recipe_8h" local="yes">recipe.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>recipe.h</label>
+        <link refid="recipe_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/recipe/src/stack.cpp</label>
+        <link refid="stack_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct_stack_operation" prot="public">StackOperation</innerclass>
+    <innerclass refid="struct_stack" prot="public">Stack</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>OperationType</name>
+        <enumvalue id="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9" prot="public">
+          <name>Add</name>
+          <briefdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> addition. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35" prot="public">
+          <name>Edit</name>
+          <briefdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> modification. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18" prot="public">
+          <name>Delete</name>
+          <briefdescription>
+<para><ref refid="struct_recipe" kindref="compound">Recipe</ref> deletion. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047ad3a0f825f42df18a5e4f006151a92edb" prot="public">
+          <name>OP_ADD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047ade36069b96f4e88cce87bb5c386cf900" prot="public">
+          <name>OP_EDIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047a1f880f83d676db79c78a5f4952ff9a4c" prot="public">
+          <name>OP_DELETE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/stack.cpp" line="17" column="1" bodyfile="src/recipe/src/stack.cpp" bodystart="17" bodyend="21"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="stack_8cpp_1af302896a110a0713b53fca4e5e3529d8" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>int</type>
+        <definition>int UNDO_STACK_SIZE</definition>
+        <argsstring></argsstring>
+        <name>UNDO_STACK_SIZE</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/src/stack.cpp" line="12" column="15" bodyfile="src/recipe/src/stack.cpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="struct_stack" kindref="compound">Stack</ref> implementation (C++ version). </para>
+    </briefdescription>
+    <detaileddescription>
+<para>LIFO structure used for undo operations in the <ref refid="struct_recipe" kindref="compound">Recipe</ref> &amp; Nutrition Tracker. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="recipe_8h" kindref="compound">recipe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stack_8h_1af94d2c1547a19bc8afb8f08e48847d1c" kindref="member">UNDO_STACK_SIZE</ref><sp/>=<sp/>10;<sp/><sp/></highlight><highlight class="comment">//<sp/>same<sp/>as<sp/>in<sp/>original<sp/>C<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Enum:<sp/>OperationType</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047" kindref="member">OperationType</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a96186829480e5b34b1373288e956b1c8" kindref="member">OP_ADD</ref>,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a2aee02a522cd2fb541ec508382fdc646" kindref="member">OP_EDIT</ref>,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a4c629f6a90286b343e3f222ff96f94d5" kindref="member">OP_DELETE</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Struct:<sp/>StackOperation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_stack_operation" kindref="compound">StackOperation</ref><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047" kindref="member">OperationType</ref><sp/><ref refid="struct_stack_operation_1a9e5459b5f778ee92f661573b20fbe364" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;Recipe&gt;<sp/><ref refid="struct_stack_operation_1a5b5bb536a85fc0f28b5e252a7dff617f" kindref="member">recipe</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack_operation_1a3de1e4d65970189931c5be2aefc6c0a6" kindref="member">StackOperation</ref>(<ref refid="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047" kindref="member">OperationType</ref><sp/>t,<sp/>std::shared_ptr&lt;Recipe&gt;<sp/>r)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="struct_stack_operation_1a9e5459b5f778ee92f661573b20fbe364" kindref="member">type</ref>(t),<sp/><ref refid="struct_stack_operation_1a5b5bb536a85fc0f28b5e252a7dff617f" kindref="member">recipe</ref>(std::move(r))<sp/>{}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Class:<sp/>Stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="struct_stack" kindref="compound">Stack</ref><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;StackOperation&gt;<sp/><ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kindref="member">top</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Constructor<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack_1a14cd1cba325bead4ff0a91bc6eb0f6f5" kindref="member">Stack</ref>()<sp/>:<sp/><ref refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kindref="member">top</ref>(-1)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>.reserve(<ref refid="stack_8cpp_1af302896a110a0713b53fca4e5e3529d8" kindref="member">UNDO_STACK_SIZE</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Push<sp/>an<sp/>Operation<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1a18c60f37b9f4e46d0103e22a1d40fdf3" kindref="member">push</ref>(<ref refid="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047" kindref="member">OperationType</ref><sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;Recipe&gt;&amp;<sp/>recipe)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!recipe)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="struct_stack_1a1b7baacfc1eabbb0554852a4ea02618d" kindref="member">isFull</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;WARNING:<sp/>Undo<sp/>stack<sp/>is<sp/>full<sp/>–<sp/>oldest<sp/>operation<sp/>will<sp/>be<sp/>removed.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>oldest<sp/>operation<sp/>(FIFO<sp/>behavior<sp/>inside<sp/>LIFO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>.erase(<ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>.begin());</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kindref="member">top</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>.size())<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>.emplace_back(type,<sp/>std::make_shared&lt;Recipe&gt;(*recipe));<sp/><sp/></highlight><highlight class="comment">//<sp/>deep<sp/>copy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kindref="member">top</ref>++;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Pop<sp/>Last<sp/>Operation<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;StackOperation&gt;<sp/><ref refid="struct_stack_1a49cb5580c63b60589bf271e1ea0d6f88" kindref="member">pop</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="struct_stack_1a8b137edba711ed0250dccf9ecdd52971" kindref="member">isEmpty</ref>())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>op<sp/>=<sp/>std::make_shared&lt;StackOperation&gt;(<ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>[<ref refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kindref="member">top</ref>]);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>.pop_back();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kindref="member">top</ref>--;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>op;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Peek<sp/>(View<sp/>Last<sp/>Operation)<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;StackOperation&gt;<sp/><ref refid="struct_stack_1add7c70c1365bb71ea43f7d9b2df945ff" kindref="member">peek</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="struct_stack_1a8b137edba711ed0250dccf9ecdd52971" kindref="member">isEmpty</ref>())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::make_shared&lt;StackOperation&gt;(<ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>[<ref refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kindref="member">top</ref>]);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Utility<sp/>Functions<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1a8b137edba711ed0250dccf9ecdd52971" kindref="member">isEmpty</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kindref="member">top</ref><sp/>==<sp/>-1;<sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1a1b7baacfc1eabbb0554852a4ea02618d" kindref="member">isFull</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>.size())<sp/>&gt;=<sp/><ref refid="stack_8cpp_1af302896a110a0713b53fca4e5e3529d8" kindref="member">UNDO_STACK_SIZE</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1ac7a1567f2937ad328290387066c05c62" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>.size());<sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Clear<sp/>the<sp/>Stack<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1adab1284b8929385d4020356fb52c8139" kindref="member">clear</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>.clear();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kindref="member">top</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Display<sp/>Stack<sp/>Content<sp/>(Debug)<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1a886bdec007756716bdb7aac8b49fdb62" kindref="member">display</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="struct_stack_1a8b137edba711ed0250dccf9ecdd52971" kindref="member">isEmpty</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nUndo<sp/>stack<sp/>is<sp/>empty.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n---<sp/>Undo<sp/>Stack<sp/>(Top<sp/>to<sp/>Bottom)<sp/>---\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/><ref refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kindref="member">top</ref>;<sp/>i<sp/>&gt;=<sp/>0;<sp/>--i)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>op<sp/>=<sp/><ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>[i];</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;[&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;]<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>(op.type<sp/>==<sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a96186829480e5b34b1373288e956b1c8" kindref="member">OperationType::OP_ADD</ref><sp/>?<sp/></highlight><highlight class="stringliteral">&quot;ADD&quot;</highlight><highlight class="normal"><sp/>:</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>op.type<sp/>==<sp/><ref refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a2aee02a522cd2fb541ec508382fdc646" kindref="member">OperationType::OP_EDIT</ref><sp/>?<sp/></highlight><highlight class="stringliteral">&quot;EDIT&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;DELETE&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>-&gt;<sp/>Recipe<sp/>#&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>op.recipe-&gt;id</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>op.recipe-&gt;name<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="src/recipe/src/stack.cpp"/>
+  </compounddef>
+</doxygen>

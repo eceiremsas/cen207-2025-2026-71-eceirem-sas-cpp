@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="graph_8hpp" kind="file" language="C++">
+    <compoundname>graph.hpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">array</includes>
+    <includes local="no">algorithm</includes>
+    <includes refid="recipe_8hpp" local="yes">recipe.hpp</includes>
+    <includedby refid="header_2menu_8hpp" local="yes">src/recipe/header/menu.hpp</includedby>
+    <includedby refid="pp_2header_2menu_8hpp" local="yes">src/recipeapp/header/menu.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/recipe/header/graph.hpp</label>
+        <link refid="graph_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>recipe.hpp</label>
+        <link refid="recipe_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>algorithm</label>
+      </node>
+      <node id="6">
+        <label>array</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/recipe/header/graph.hpp</label>
+        <link refid="graph_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/recipe/header/menu.hpp</label>
+        <link refid="header_2menu_8hpp"/>
+      </node>
+      <node id="3">
+        <label>src/recipeapp/header/menu.hpp</label>
+        <link refid="pp_2header_2menu_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_graph_edge" prot="public">GraphEdge</innerclass>
+    <innerclass refid="struct_graph_vertex" prot="public">GraphVertex</innerclass>
+    <innerclass refid="struct_graph" prot="public">Graph</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="graph_8hpp_1aa83461ae9374f00837b575180d2cd5e2" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>int</type>
+        <definition>int MAX_GRAPH_VERTICES</definition>
+        <argsstring></argsstring>
+        <name>MAX_GRAPH_VERTICES</name>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/recipe/header/graph.hpp" line="18" column="15" bodyfile="src/recipe/header/graph.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="struct_graph" kindref="compound">Graph</ref> implementation for recipe dependency tracking (C++ version). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GRAPH_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GRAPH_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="recipe_8hpp" kindref="compound">recipe.hpp</ref>&quot;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Include<sp/>Recipe<sp/>class<sp/>definition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="graph_8hpp_1aa83461ae9374f00837b575180d2cd5e2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1acd7f50a6afbef2093ca1f57eb3768f01" kindref="member">MAX_GRAPH_VERTICES</ref><sp/>=<sp/>100;<sp/><sp/></highlight><highlight class="comment">//<sp/>Maximum<sp/>number<sp/>of<sp/>vertices<sp/>allowed<sp/>in<sp/>the<sp/>graph</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Forward<sp/>Declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="struct_graph_edge" kindref="compound">GraphEdge</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="struct_graph_vertex" kindref="compound">GraphVertex</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Class:<sp/>GraphEdge</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="struct_graph_edge" kindref="compound">GraphEdge</ref><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_graph_edge_1a9e5446f687da912ce7016923b5bdd045" kindref="member">vertex_id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="struct_graph_edge_1a51926090dae6259f169165b9d4cd090b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct_graph_edge_1aa6e55cc398840ade9b2588ce3664651d" kindref="member">edge_label</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33" refid="struct_graph_edge_1aa45671570b3b7c527468351e39ae3135" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphEdge&gt;<sp/><ref refid="struct_graph_edge_1ab800f80484335c8fc96a5f093af6b6dc" kindref="member">next</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="struct_graph_edge_1a01ff1bab935fe7452b561defd17fd5b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_graph_edge_1a01ff1bab935fe7452b561defd17fd5b1" kindref="member">GraphEdge</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>label)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="struct_graph_edge_1a9e5446f687da912ce7016923b5bdd045" kindref="member">vertex_id</ref>(id),<sp/><ref refid="struct_graph_edge_1aa6e55cc398840ade9b2588ce3664651d" kindref="member">edge_label</ref>(label),<sp/><ref refid="struct_graph_edge_1ab800f80484335c8fc96a5f093af6b6dc" kindref="member">next</ref>(nullptr)<sp/>{}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Class:<sp/>GraphVertex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="struct_graph_vertex" kindref="compound">GraphVertex</ref><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_graph_vertex_1a7c3343f6f4297cddb96216cc41747bab" kindref="member">recipe_id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="struct_graph_vertex_1adf065c6b8adfdb6b6c008cf0077d30f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphEdge&gt;<sp/><ref refid="struct_graph_vertex_1af0f4f598619135666912aaeffeb5383f" kindref="member">edges</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="struct_graph_vertex_1afef08c8d5ad632ed89c22e49c0a1ffb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_graph_vertex_1afef08c8d5ad632ed89c22e49c0a1ffb4" kindref="member">visited</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="struct_graph_vertex_1a36824e3dff00a9b2e77be09eb00bc6e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="struct_graph_vertex_1a36824e3dff00a9b2e77be09eb00bc6e8" kindref="member">GraphVertex</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="struct_graph_vertex_1a7c3343f6f4297cddb96216cc41747bab" kindref="member">recipe_id</ref>(id),<sp/><ref refid="struct_graph_vertex_1af0f4f598619135666912aaeffeb5383f" kindref="member">edges</ref>(nullptr),<sp/><ref refid="struct_graph_vertex_1afef08c8d5ad632ed89c22e49c0a1ffb4" kindref="member">visited</ref>(false)<sp/>{}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Class:<sp/>Graph</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="struct_graph" kindref="compound">Graph</ref><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57" refid="struct_graph_1a326a6f915243eebc59b606d5c79d8405" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::array&lt;std::shared_ptr&lt;GraphVertex&gt;,<sp/><ref refid="graph_8cpp_1aa83461ae9374f00837b575180d2cd5e2" kindref="member">MAX_GRAPH_VERTICES</ref>&gt;<sp/><ref refid="struct_graph_1afac2bc7d92334c0692254392ca6464f4" kindref="member">vertices</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_graph_1ab20e1f45cb2c2d3c26968eadd7290f4d" kindref="member">vertex_count</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Helper<sp/>for<sp/>cycle<sp/>detection<sp/>(DFS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="struct_graph_1a64096724a9157efc362ff7bd2ff99bd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_graph_1a64096724a9157efc362ff7bd2ff99bd8" kindref="member">dfsCycleHelper</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vertex_id,<sp/>std::vector&lt;int&gt;&amp;<sp/>visited,<sp/>std::vector&lt;int&gt;&amp;<sp/>rec_stack)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64" refid="struct_graph_1ae4c72b8ac4d693c49800a4c7e273654f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_graph_1ae4c72b8ac4d693c49800a4c7e273654f" kindref="member">Graph</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Vertex<sp/>Operations<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="struct_graph_1a0b3b4e427b55bf0b61be72467924d8a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_graph_1a0b3b4e427b55bf0b61be72467924d8a7" kindref="member">addVertex</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recipe_id);</highlight></codeline>
+<codeline lineno="68" refid="struct_graph_1a971d05259d030a81a36b809f14db04a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphVertex&gt;<sp/><ref refid="struct_graph_1a971d05259d030a81a36b809f14db04a7" kindref="member">findVertex</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recipe_id)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Edge<sp/>Operations<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="struct_graph_1ad6a883b5623c30f2b9a011932fbb9f22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_graph_1ad6a883b5623c30f2b9a011932fbb9f22" kindref="member">addEdge</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>from_recipe_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>to_recipe_id,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>label);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Display<sp/>Operations<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="struct_graph_1a52e448ac213c053062bfed6405ede84b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_graph_1a52e448ac213c053062bfed6405ede84b" kindref="member">displayDependencies</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recipe_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>depth<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Utility<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="struct_graph_1a00c89f9300992b2ac69104bb7ddcc868" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_graph_1a00c89f9300992b2ac69104bb7ddcc868" kindref="member">resetVisited</ref>();</highlight></codeline>
+<codeline lineno="78" refid="struct_graph_1a5668aece8de3c0021417b8d00a1796ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_graph_1a5668aece8de3c0021417b8d00a1796ac" kindref="member">hasCycle</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Getters<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="struct_graph_1ac6dcb77084447618b65514ce25bd7d2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_graph_1ac6dcb77084447618b65514ce25bd7d2a" kindref="member">getVertexCount</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_graph_1ab20e1f45cb2c2d3c26968eadd7290f4d" kindref="member">vertex_count</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Destructor<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="struct_graph_1ac6192a41101102ca8aa6acca607c84f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_graph_1ac6192a41101102ca8aa6acca607c84f3" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="85" refid="struct_graph_1a902c5b3eacb66d60752525ab23297a95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_graph_1a902c5b3eacb66d60752525ab23297a95" kindref="member">~Graph</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>GRAPH_HPP</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/recipe/header/graph.hpp"/>
+  </compounddef>
+</doxygen>

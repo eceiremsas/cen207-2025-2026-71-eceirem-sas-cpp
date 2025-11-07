@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2025-11-06_20-17-42" tag="">
+  <assembly name="Default">
+    <class name="C:\Users\ASUS\Desktop\cursorunkicen207-2025-2026-71-eceirem-sas-cpp\tests\test_recipes.cpp" coveredlines="44" coverablelines="50" totallines="969" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+  </assembly>
+</coverage>

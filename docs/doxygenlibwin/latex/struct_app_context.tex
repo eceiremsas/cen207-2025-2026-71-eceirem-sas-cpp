@@ -1,0 +1,266 @@
+\doxysection{App\+Context Class Reference}
+\hypertarget{struct_app_context}{}\label{struct_app_context}\index{AppContext@{AppContext}}
+
+
+Centralized structure for managing all application data structures.  
+
+
+
+
+{\ttfamily \#include $<$menu.\+h$>$}
+
+
+
+Collaboration diagram for App\+Context\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{struct_app_context__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_app_context_acbbcd910e22c12d8c7325a3f95622b78}{App\+Context}} ()
+\item 
+\mbox{\hyperlink{struct_app_context_a784eed27ef924a71820bfd16d954371a}{\texorpdfstring{$\sim$}{\string~}\+App\+Context}} ()
+\item 
+\mbox{\hyperlink{struct_app_context_acbbcd910e22c12d8c7325a3f95622b78}{App\+Context}} ()
+\item 
+\mbox{\hyperlink{struct_app_context_a784eed27ef924a71820bfd16d954371a}{\texorpdfstring{$\sim$}{\string~}\+App\+Context}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_app_context}{App\+Context}} $>$ \mbox{\hyperlink{struct_app_context_ad9b9d7f6568ebee7074e35ae153089b7}{create}} ()
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_app_context}{App\+Context}} $>$ \mbox{\hyperlink{struct_app_context_ad9b9d7f6568ebee7074e35ae153089b7}{create}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_recipe}{Recipe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_app_context_a1357b3a35fff18323ba6960750d36e05}{recipes}}
+\item 
+\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_app_context_ae7266199366db47b74db3b4427e11953}{hash\+\_\+table}}
+\item 
+\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_app_context_a443e900763328e3118f34bf240089856}{list}}
+\begin{DoxyCompactList}\small\item\em Linked list for displaying recipes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_stack}{Stack}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_app_context_a2b04297ece2f796355c3eefad1f0b57f}{stack}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_stack}{Stack} for undo operations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_app_context_a3e670241d88dd7b219cdb6653b7844b9}{queue}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_queue}{Queue} for weekly meal planning. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_graph}{Graph}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_app_context_a081b5f9c7add607a935ac2892454e34e}{graph}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_graph}{Graph} for recipe dependencies. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_app_context_a5e21cd85dfb38fa553a87f6fcc858472}{sparse\+\_\+matrix}}
+\item 
+int \mbox{\hyperlink{struct_app_context_a2ccc2f2b7e30f21162944a544d1b0a65}{next\+\_\+recipe\+\_\+id}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_hash_table}{Hash\+Table}} $>$ \mbox{\hyperlink{struct_app_context_a91f2333ee98a18943768f9f36809c7df}{hash\+Table}}
+\begin{DoxyCompactList}\small\item\em Hash table for fast recipe lookup. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_linked_list}{Linked\+List}} $>$ \mbox{\hyperlink{struct_app_context_a0726471a5b927b087b91f0b1e032b79f}{list}}
+\begin{DoxyCompactList}\small\item\em Linked list for displaying recipes. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_stack}{Stack}} $>$ \mbox{\hyperlink{struct_app_context_a0f0f2c041401b4960bba96f489d692d0}{stack}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_stack}{Stack} for undo operations. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_queue}{Queue}} $>$ \mbox{\hyperlink{struct_app_context_ab589a7f99ef51dc9b1ead7512575a861}{queue}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_queue}{Queue} for weekly meal planning. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_graph}{Graph}} $>$ \mbox{\hyperlink{struct_app_context_a5b57d687e92a186c24a2c808e358e70e}{graph}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_graph}{Graph} for recipe dependencies. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} $>$ \mbox{\hyperlink{struct_app_context_a166b6bd5350bac0f79eef573b31b469d}{sparse\+Matrix}}
+\begin{DoxyCompactList}\small\item\em Sparse matrix for ingredient indexing. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_app_context_a80ef31a47c38ca99ed72cd8e20986529}{next\+Recipe\+Id}}
+\begin{DoxyCompactList}\small\item\em Next available recipe ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Centralized structure for managing all application data structures. 
+
+\label{doc-constructors}
+\Hypertarget{struct_app_context_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_app_context_acbbcd910e22c12d8c7325a3f95622b78}\index{AppContext@{AppContext}!AppContext@{AppContext}}
+\index{AppContext@{AppContext}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{AppContext()}{AppContext()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_app_context_acbbcd910e22c12d8c7325a3f95622b78} 
+App\+Context\+::\+App\+Context (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_app_context_a784eed27ef924a71820bfd16d954371a}\index{AppContext@{AppContext}!````~AppContext@{\texorpdfstring{$\sim$}{\string~}AppContext}}
+\index{````~AppContext@{\texorpdfstring{$\sim$}{\string~}AppContext}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AppContext()}{\string~AppContext()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_app_context_a784eed27ef924a71820bfd16d954371a} 
+App\+Context\+::\texorpdfstring{$\sim$}{\string~}\+App\+Context (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_app_context_acbbcd910e22c12d8c7325a3f95622b78}\index{AppContext@{AppContext}!AppContext@{AppContext}}
+\index{AppContext@{AppContext}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{AppContext()}{AppContext()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_app_context_acbbcd910e22c12d8c7325a3f95622b78} 
+App\+Context\+::\+App\+Context (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{struct_app_context_a784eed27ef924a71820bfd16d954371a}\index{AppContext@{AppContext}!````~AppContext@{\texorpdfstring{$\sim$}{\string~}AppContext}}
+\index{````~AppContext@{\texorpdfstring{$\sim$}{\string~}AppContext}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AppContext()}{\string~AppContext()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_app_context_a784eed27ef924a71820bfd16d954371a} 
+App\+Context\+::\texorpdfstring{$\sim$}{\string~}\+App\+Context (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{struct_app_context_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_app_context_ad9b9d7f6568ebee7074e35ae153089b7}\index{AppContext@{AppContext}!create@{create}}
+\index{create@{create}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_app_context_ad9b9d7f6568ebee7074e35ae153089b7} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_app_context}{App\+Context}} $>$ App\+Context\+::create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{struct_app_context_ad9b9d7f6568ebee7074e35ae153089b7}\index{AppContext@{AppContext}!create@{create}}
+\index{create@{create}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_app_context_ad9b9d7f6568ebee7074e35ae153089b7} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_app_context}{App\+Context}} $>$ App\+Context\+::create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_app_context_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_app_context_a081b5f9c7add607a935ac2892454e34e}\index{AppContext@{AppContext}!graph@{graph}}
+\index{graph@{graph}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{graph}{graph}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_app_context_a081b5f9c7add607a935ac2892454e34e} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_graph}{Graph}} $>$ App\+Context\+::graph}
+
+
+
+\doxylink{struct_graph}{Graph} for recipe dependencies. 
+
+\Hypertarget{struct_app_context_a5b57d687e92a186c24a2c808e358e70e}\index{AppContext@{AppContext}!graph@{graph}}
+\index{graph@{graph}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{graph}{graph}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_app_context_a5b57d687e92a186c24a2c808e358e70e} 
+std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{struct_graph}{Graph}}$>$ App\+Context\+::graph}
+
+
+
+\doxylink{struct_graph}{Graph} for recipe dependencies. 
+
+\Hypertarget{struct_app_context_ae7266199366db47b74db3b4427e11953}\index{AppContext@{AppContext}!hash\_table@{hash\_table}}
+\index{hash\_table@{hash\_table}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{hash\_table}{hash\_table}}
+{\footnotesize\ttfamily \label{struct_app_context_ae7266199366db47b74db3b4427e11953} 
+\mbox{\hyperlink{struct_hash_table}{Hash\+Table}}\texorpdfstring{$\ast$}{*} App\+Context\+::hash\+\_\+table}
+
+\Hypertarget{struct_app_context_a91f2333ee98a18943768f9f36809c7df}\index{AppContext@{AppContext}!hashTable@{hashTable}}
+\index{hashTable@{hashTable}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{hashTable}{hashTable}}
+{\footnotesize\ttfamily \label{struct_app_context_a91f2333ee98a18943768f9f36809c7df} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_hash_table}{Hash\+Table}} $>$ App\+Context\+::hash\+Table}
+
+
+
+Hash table for fast recipe lookup. 
+
+\Hypertarget{struct_app_context_a443e900763328e3118f34bf240089856}\index{AppContext@{AppContext}!list@{list}}
+\index{list@{list}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{list}{list}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_app_context_a443e900763328e3118f34bf240089856} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_linked_list}{Linked\+List}} $>$ App\+Context\+::list}
+
+
+
+Linked list for displaying recipes. 
+
+\Hypertarget{struct_app_context_a0726471a5b927b087b91f0b1e032b79f}\index{AppContext@{AppContext}!list@{list}}
+\index{list@{list}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{list}{list}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_app_context_a0726471a5b927b087b91f0b1e032b79f} 
+std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_linked_list}{Linked\+List}}$>$ App\+Context\+::list}
+
+
+
+Linked list for displaying recipes. 
+
+\Hypertarget{struct_app_context_a2ccc2f2b7e30f21162944a544d1b0a65}\index{AppContext@{AppContext}!next\_recipe\_id@{next\_recipe\_id}}
+\index{next\_recipe\_id@{next\_recipe\_id}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{next\_recipe\_id}{next\_recipe\_id}}
+{\footnotesize\ttfamily \label{struct_app_context_a2ccc2f2b7e30f21162944a544d1b0a65} 
+int App\+Context\+::next\+\_\+recipe\+\_\+id}
+
+\Hypertarget{struct_app_context_a80ef31a47c38ca99ed72cd8e20986529}\index{AppContext@{AppContext}!nextRecipeId@{nextRecipeId}}
+\index{nextRecipeId@{nextRecipeId}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{nextRecipeId}{nextRecipeId}}
+{\footnotesize\ttfamily \label{struct_app_context_a80ef31a47c38ca99ed72cd8e20986529} 
+int App\+Context\+::next\+Recipe\+Id}
+
+
+
+Next available recipe ID. 
+
+\Hypertarget{struct_app_context_a3e670241d88dd7b219cdb6653b7844b9}\index{AppContext@{AppContext}!queue@{queue}}
+\index{queue@{queue}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{queue}{queue}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_app_context_a3e670241d88dd7b219cdb6653b7844b9} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_queue}{Queue}} $>$ App\+Context\+::queue}
+
+
+
+\doxylink{struct_queue}{Queue} for weekly meal planning. 
+
+\Hypertarget{struct_app_context_ab589a7f99ef51dc9b1ead7512575a861}\index{AppContext@{AppContext}!queue@{queue}}
+\index{queue@{queue}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{queue}{queue}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_app_context_ab589a7f99ef51dc9b1ead7512575a861} 
+std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{struct_queue}{Queue}}$>$ App\+Context\+::queue}
+
+
+
+\doxylink{struct_queue}{Queue} for weekly meal planning. 
+
+\Hypertarget{struct_app_context_a1357b3a35fff18323ba6960750d36e05}\index{AppContext@{AppContext}!recipes@{recipes}}
+\index{recipes@{recipes}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{recipes}{recipes}}
+{\footnotesize\ttfamily \label{struct_app_context_a1357b3a35fff18323ba6960750d36e05} 
+\mbox{\hyperlink{struct_recipe}{Recipe}}\texorpdfstring{$\ast$}{*} App\+Context\+::recipes}
+
+\Hypertarget{struct_app_context_a5e21cd85dfb38fa553a87f6fcc858472}\index{AppContext@{AppContext}!sparse\_matrix@{sparse\_matrix}}
+\index{sparse\_matrix@{sparse\_matrix}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{sparse\_matrix}{sparse\_matrix}}
+{\footnotesize\ttfamily \label{struct_app_context_a5e21cd85dfb38fa553a87f6fcc858472} 
+\mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}}\texorpdfstring{$\ast$}{*} App\+Context\+::sparse\+\_\+matrix}
+
+\Hypertarget{struct_app_context_a166b6bd5350bac0f79eef573b31b469d}\index{AppContext@{AppContext}!sparseMatrix@{sparseMatrix}}
+\index{sparseMatrix@{sparseMatrix}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{sparseMatrix}{sparseMatrix}}
+{\footnotesize\ttfamily \label{struct_app_context_a166b6bd5350bac0f79eef573b31b469d} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}} $>$ App\+Context\+::sparse\+Matrix}
+
+
+
+Sparse matrix for ingredient indexing. 
+
+\Hypertarget{struct_app_context_a2b04297ece2f796355c3eefad1f0b57f}\index{AppContext@{AppContext}!stack@{stack}}
+\index{stack@{stack}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{stack}{stack}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_app_context_a2b04297ece2f796355c3eefad1f0b57f} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_stack}{Stack}} $>$ App\+Context\+::stack}
+
+
+
+\doxylink{struct_stack}{Stack} for undo operations. 
+
+\Hypertarget{struct_app_context_a0f0f2c041401b4960bba96f489d692d0}\index{AppContext@{AppContext}!stack@{stack}}
+\index{stack@{stack}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{stack}{stack}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_app_context_a0f0f2c041401b4960bba96f489d692d0} 
+std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{struct_stack}{Stack}}$>$ App\+Context\+::stack}
+
+
+
+\doxylink{struct_stack}{Stack} for undo operations. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{menu_8h}{menu.\+h}}\item 
+src/recipe/header/\mbox{\hyperlink{header_2menu_8hpp}{menu.\+hpp}}\item 
+src/recipeapp/header/\mbox{\hyperlink{pp_2header_2menu_8hpp}{menu.\+hpp}}\end{DoxyCompactItemize}
