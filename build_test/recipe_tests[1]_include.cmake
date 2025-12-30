@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/ACER/Desktop/c en son hali/cen207-2025-2026-71-eceirem-sas-cpp-1/build_test/recipe_tests[1]_tests.cmake")
+  include("C:/Users/ACER/Desktop/c en son hali/cen207-2025-2026-71-eceirem-sas-cpp-1/build_test/recipe_tests[1]_tests.cmake")
+else()
+  add_test(recipe_tests_NOT_BUILT recipe_tests_NOT_BUILT)
+endif()

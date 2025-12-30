@@ -7,7 +7,7 @@
 #include <vector>
 #include <memory>
 #include <stdexcept>
-#include "recipe.h"  // Must define Recipe struct/class and recipe_compare_by_calories()
+#include "recipe.hpp"  // Recipe class definition
 
 // === Heap Class Definition ===
 class Heap {
@@ -31,7 +31,7 @@ private:
     void heapifyUp(int index) {
         while (index > 0) {
             int p = parent(index);
-            if (recipe_compare_by_calories(recipes[index].get(), recipes[p].get()) < 0) {
+            if (*recipes[index] < *recipes[p]) {
                 swap(recipes[index], recipes[p]);
                 index = p;
             } else {
@@ -48,9 +48,9 @@ private:
             int right = rightChild(index);
             int smallest = index;
 
-            if (left < size && recipe_compare_by_calories(recipes[left].get(), recipes[smallest].get()) < 0)
+            if (left < size && *recipes[left] < *recipes[smallest])
                 smallest = left;
-            if (right < size && recipe_compare_by_calories(recipes[right].get(), recipes[smallest].get()) < 0)
+            if (right < size && *recipes[right] < *recipes[smallest])
                 smallest = right;
 
             if (smallest == index) break;

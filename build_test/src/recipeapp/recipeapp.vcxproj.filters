@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\src\recipeapp\src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\src\recipeapp\src\menu.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\src\recipeapp\header\menu.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\src\recipeapp\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="header">
+      <UniqueIdentifier>{2A25727B-0123-333A-A5FE-0F1AA0E09513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8156F78E-1D44-377E-B5C1-FEB771383621}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

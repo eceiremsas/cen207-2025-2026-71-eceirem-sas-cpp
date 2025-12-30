@@ -8,38 +8,15 @@
 #include <iostream>
 #include <memory>
 #include <limits>
-#include "menu.h"   // Contains AppContext, menu_display(), menu_handle_choice(), etc.
+#include "menu.hpp"   // Contains AppContext, Menu class, etc.
 
 static bool validateContext(const std::unique_ptr<AppContext>& ctx) {
     if (!ctx) return false;
-    return (ctx->recipes || ctx->hash_table || ctx->list ||
-            ctx->stack || ctx->queue || ctx->graph || ctx->sparse_matrix);
+    return (ctx->hashTable && ctx->list && ctx->stack &&
+            ctx->queue && ctx->graph && ctx->sparseMatrix);
 }
 
-// Clears console in a cross-platform way
-void clearConsole() {
-#if defined(_WIN32) || defined(_WIN64)
-    system("cls");
-#else
-    system("clear");
-#endif
-}
-
-// Safe integer input
-int safeIntInput() {
-    int value;
-    while (true) {
-        std::cout << "> ";
-        if (std::cin >> value) {
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            return value;
-        } else {
-            std::cout << "Invalid input. Please enter a number.\n";
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        }
-    }
-}
+// Note: clearConsole() and safeIntInput() are now static methods of Menu class
 
 int main() {
     std::cout << "\n=== RECIPE AND NUTRITION TRACKER ===\n";
@@ -48,7 +25,7 @@ int main() {
 
     // === 1. CREATE APPLICATION CONTEXT ===
     std::cout << "[1/7] Creating application context...\n";
-    std::unique_ptr<AppContext> ctx = app_context_create();
+    std::unique_ptr<AppContext> ctx = AppContext::create();
 
     if (!ctx) {
         std::cerr << "\nERROR: Insufficient memory! Failed to create AppContext.\n";
@@ -58,7 +35,6 @@ int main() {
     // === 2. VALIDATION CHECK ===
     if (!validateContext(ctx)) {
         std::cerr << "\nERROR: Data structures failed to initialize! Invalid context.\n";
-        app_context_destroy(ctx.release()); // manual cleanup
         return EXIT_FAILURE;
     }
 
@@ -71,7 +47,7 @@ int main() {
 
     // === 3. LOAD SAMPLE DATA ===
     std::cout << "Loading sample data...\n";
-    menu_load_sample_data(ctx.get());
+    Menu::loadSampleData(*ctx);
 
     std::cout << "\nSystem is ready!\n\nPress Enter to continue...";
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -79,16 +55,17 @@ int main() {
     // === 4. MAIN MENU LOOP ===
     int choice = -1;
     while (choice != 0) {
-        clearConsole();
-        menu_display();
-        choice = safeIntInput();
-        menu_handle_choice(ctx.get(), choice);
+        Menu::clearConsole();
+        Menu::displayMain();
+        choice = Menu::safeIntInput("Your choice: ");
+        Menu::handleChoice(*ctx, choice);
     }
 
     // === 5. SHUTDOWN ===
     std::cout << "\nShutting down program...\n";
     std::cout << "Cleaning up memory...\n";
-    app_context_destroy(ctx.release());  // release() passes raw pointer for legacy destroy function
+    // unique_ptr automatically handles cleanup
+    ctx.reset();
     std::cout << "Memory successfully released.\n\n";
     std::cout << "Thank you for using the program!\nGoodbye!\n\n";
 

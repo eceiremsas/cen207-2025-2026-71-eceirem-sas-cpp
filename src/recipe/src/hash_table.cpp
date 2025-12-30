@@ -10,123 +10,73 @@
 #include <memory>
 #include <string>
 #include <iomanip>
-#include "recipe.h"  // Must define Recipe class or struct
+#include "hash_table.hpp"
+#include "recipe.hpp"
 
- // --- HashNode: Linked list node for each hash slot ---
-struct HashNode {
-    std::shared_ptr<Recipe> recipe;
-    std::shared_ptr<HashNode> next;
+// === HashTable Constructor ===
+HashTable::HashTable(int size) : table(size), count(0) {
+}
 
-    explicit HashNode(std::shared_ptr<Recipe> r)
-        : recipe(std::move(r)), next(nullptr) {
-    }
-};
-
-// --- HashTable class ---
-class HashTable {
-private:
-    std::vector<std::shared_ptr<HashNode>> table;
-    int size;
-    int count;
-
-    // Hash function using modulo operation
-    int hashFunction(int id) const {
-        return id % size;
-    }
-
-public:
-    explicit HashTable(int s)
-        : table(s, nullptr), size(s), count(0) {
-    }
-
-    // Inserts a recipe into the hash table
-    bool insert(std::shared_ptr<Recipe> recipe) {
-        if (!recipe) {
-            std::cerr << "ERROR: Invalid recipe pointer!\n";
-            return false;
-        }
-
-        int index = hashFunction(recipe->id);
-        auto newNode = std::make_shared<HashNode>(recipe);
-        newNode->next = table[index];
-        table[index] = newNode;
-        count++;
-        return true;
-    }
-
-    // Searches for a recipe by ID
-    std::shared_ptr<Recipe> search(int id) const {
-        int index = hashFunction(id);
-        auto current = table[index];
-
-        while (current) {
-            if (current->recipe && current->recipe->id == id) {
-                return current->recipe;
-            }
-            current = current->next;
-        }
-        return nullptr;
-    }
-
-    // Deletes a recipe by ID
-    bool remove(int id) {
-        int index = hashFunction(id);
-        auto current = table[index];
-        std::shared_ptr<HashNode> prev = nullptr;
-
-        while (current) {
-            if (current->recipe && current->recipe->id == id) {
-                if (prev) {
-                    prev->next = current->next;
-                }
-                else {
-                    table[index] = current->next;
-                }
-                count--;
-                return true;
-            }
-            prev = current;
-            current = current->next;
-        }
-
-        std::cerr << "WARNING: Recipe to delete not found (ID: " << id << ")\n";
+// === HashTable::insert ===
+bool HashTable::insert(std::shared_ptr<Recipe> recipe) {
+    if (!recipe) {
+        std::cerr << "ERROR: Invalid recipe pointer!\n";
         return false;
     }
 
-    // Displays the contents of the hash table
-    void display() const {
-        std::cout << "\n=== HASH TABLE CONTENT ===\n";
-        std::cout << "Total Recipes: " << count << "\n\n";
+    size_t index = hashFunction(recipe->getId());
+    table[index].emplace_back(recipe);
+    count++;
+    return true;
+}
 
-        for (int i = 0; i < size; i++) {
-            if (table[i]) {
-                std::cout << "Slot " << i << ":\n";
-                int nodeCount = 0;
-
-                auto current = table[i];
-                while (current) {
-                    nodeCount++;
-                    std::cout << "  -> Recipe #" << current->recipe->id
-                        << ": " << current->recipe->name << "\n";
-                    current = current->next;
-                }
-                std::cout << "  (Total " << nodeCount << " recipes)\n\n";
-            }
+// === HashTable::search ===
+std::shared_ptr<Recipe> HashTable::search(int id) const {
+    size_t index = hashFunction(id);
+    for (const auto& node : table[index]) {
+        if (node.recipe && node.recipe->getId() == id) {
+            return node.recipe;
         }
     }
+    return nullptr;
+}
 
-    // Destroys all recipes and nodes (handled automatically by smart pointers)
-    void destroy() {
-        for (auto& slot : table) {
-            while (slot) {
-                slot = slot->next;  // Shared pointers free automatically
-            }
+// === HashTable::remove ===
+bool HashTable::remove(int id) {
+    size_t index = hashFunction(id);
+    auto& bucket = table[index];
+    for (auto it = bucket.begin(); it != bucket.end(); ++it) {
+        if (it->recipe && it->recipe->getId() == id) {
+            bucket.erase(it);
+            count--;
+            return true;
         }
-        table.clear();
-        count = 0;
-        std::cout << "HashTable destroyed successfully.\n";
     }
+    std::cerr << "WARNING: Recipe to delete not found (ID: " << id << ")\n";
+    return false;
+}
 
-    // Returns total count
-    int getCount() const { return count; }
-};
+// === HashTable::display ===
+void HashTable::display() const {
+    std::cout << "\n=== HASH TABLE CONTENT ===\n";
+    std::cout << "Total Recipes: " << count << "\n\n";
+
+    for (size_t i = 0; i < table.size(); i++) {
+        if (!table[i].empty()) {
+            std::cout << "Slot " << i << ":\n";
+            for (const auto& node : table[i]) {
+                std::cout << "  -> Recipe #" << node.recipe->getId()
+                    << ": " << node.recipe->getName() << "\n";
+            }
+            std::cout << "  (Total " << table[i].size() << " recipes)\n\n";
+        }
+    }
+}
+
+// === HashTable::clear ===
+void HashTable::clear() {
+    for (auto& bucket : table) {
+        bucket.clear();
+    }
+    count = 0;
+}

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\src\recipe.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\src\linked_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\src\xor_linked_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\src\stack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\src\queue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\src\hash_table.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\src\graph.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\src\heap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\src\sparse_matrix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\src\menu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D4E0E915-4B1C-3D13-A85C-F9F573674D24}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

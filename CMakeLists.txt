@@ -4,9 +4,11 @@ cmake_minimum_required(VERSION 3.12)
 # Project name - Recipe and Nutrition Tracker
 project(recipeapp C CXX)
 
-# Set C standard
+# Set C and C++ standards
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Print useful information
 message(STATUS "[ROOT] CMake version ${CMAKE_VERSION}")
@@ -71,7 +73,11 @@ endif()
 # Include directories
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
-# Source files for the library
+# Add C++ modules (recipe library and recipeapp)
+add_subdirectory(src/recipe)
+add_subdirectory(src/recipeapp)
+
+# Source files for the C library
 set(LIB_SOURCES
     src/recipe.c
     src/linked_list.c
@@ -85,22 +91,23 @@ set(LIB_SOURCES
     src/menu.c
 )
 
-# Source files for the application
+# Source files for the C library (legacy C version)
 set(APP_SOURCES
     src/main.c
     ${LIB_SOURCES}
 )
 
-# Create the library
+# Create the C library (legacy)
 add_library(recipe_lib STATIC ${LIB_SOURCES})
 target_include_directories(recipe_lib PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
-# Create the executable
-add_executable(recipeapp ${APP_SOURCES})
-target_link_libraries(recipeapp recipe_lib)
+# Note: C++ executable (recipeapp) is created in src/recipeapp/CMakeLists.txt
+# The C version executable is commented out to avoid conflicts
+# add_executable(recipeapp_c ${APP_SOURCES})
+# target_link_libraries(recipeapp_c recipe_lib)
 
-# Install targets
-install(TARGETS recipe_lib recipeapp
+# Install targets (C++ targets are installed by their respective CMakeLists.txt)
+install(TARGETS recipe_lib
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin)

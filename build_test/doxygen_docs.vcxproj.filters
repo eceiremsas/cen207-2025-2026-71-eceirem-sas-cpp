@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\build_test\CMakeFiles\ab4fddc26b3657242c05f9649aa06cb3\doxygen_docs.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\build_test\CMakeFiles\doxygen_docs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3B38B036-6EE4-3DBA-8B98-F47909035445}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

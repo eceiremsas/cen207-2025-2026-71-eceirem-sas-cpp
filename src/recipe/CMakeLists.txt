@@ -1,6 +1,6 @@
-# crypto/CMakeLists.txt
+# recipe/CMakeLists.txt
 set(ROOT src)
-set(LIBNAME calculator)
+set(LIBNAME recipe)
 
 message(STATUS "[${ROOT}/${LIBNAME}] Module Processing...")
 
@@ -17,29 +17,32 @@ file(GLOB LIB_SOURCES
 source_group("header" FILES ${LIB_HEADERS})
 source_group("src" FILES ${LIB_SOURCES})
 
-# Set Properties->General->Configuration Type to Dynamic Library (.dll/.so/.dylib)
-add_library(${LIBNAME} STATIC ${LIB_HEADERS} ${LIB_SOURCES}) # for dynamic library use SHARED
+# Set Properties->General->Configuration Type to Static Library
+add_library(${LIBNAME} STATIC ${LIB_HEADERS} ${LIB_SOURCES})
 
 target_include_directories(${LIBNAME} PUBLIC
-						   ${CMAKE_CURRENT_SOURCE_DIR}/../utility/header
 						   ${CMAKE_CURRENT_SOURCE_DIR}/header)
 
-# Add any dependencies or compile options specific to crypto
-target_link_libraries(${LIBNAME} PRIVATE utility)
+# Set C++ standard
+set_target_properties(${LIBNAME} PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
+)
 
 # creates preprocessor definition used for library exports
-add_compile_definitions("CORUH_CALCULATOR_LIB_EXPORTS")
+add_compile_definitions("RECIPE_LIB_EXPORTS")
 
 install(TARGETS ${LIBNAME}
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin )
 		
-# Copy required header to the installation include folder		
-install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/header/calculator.h
-        DESTINATION include)
+# Copy required headers to the installation include folder		
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/header/
+        DESTINATION include
+        FILES_MATCHING PATTERN "*.hpp" PATTERN "*.h")
 
-# Export the crypto target so other modules can use it
+# Export the recipe target so other modules can use it
 # export(TARGETS ${LIBNAME} FILE ${LIBNAME}Targets.cmake)
 
 message(STATUS "[${ROOT}/${LIBNAME}] Added library target: ${LIBNAME}")

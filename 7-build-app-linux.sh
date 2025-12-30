@@ -56,34 +56,49 @@ python3 -m coverxygen --xml-dir ./docs/doxygentestlinux/xml --src-dir ./ --forma
 
 
 echo "Run Documentation Coverage Report Generator for Library"
-reportgenerator "-title:Calculator Library Documentation Coverage Report (Linux)" "-reports:**/lcov_doxygen_lib_linux.info" "-targetdir:docs/coverxygenliblinux" "-reporttypes:Html" "-filefilters:-*.md;-*.xml;-*[generated];-*build*" "-historydir:report_doc_lib_hist_linux"
+reportgenerator "-title:Recipe Library Documentation Coverage Report (Linux)" "-reports:**/lcov_doxygen_lib_linux.info" "-targetdir:docs/coverxygenliblinux" "-reporttypes:Html" "-filefilters:-*.md;-*.xml;-*[generated];-*build*" "-historydir:report_doc_lib_hist_linux"
 reportgenerator "-reports:**/lcov_doxygen_lib_linux.info" "-targetdir:assets/doccoverageliblinux" "-reporttypes:Badges" "-filefilters:-*.md;-*.xml;-*[generated];-*build*"
 
 echo "Run Documentation Coverage Report Generator for Unit Tests"
-reportgenerator "-title:Calculator Library Test Documentation Coverage Report (Linux)" "-reports:**/lcov_doxygen_test_linux.info" "-targetdir:docs/coverxygentestlinux" "-reporttypes:Html" "-filefilters:-*.md;-*.xml;-*[generated];-*build*" "-historydir:report_doc_test_hist_linux"
+reportgenerator "-title:Recipe Library Test Documentation Coverage Report (Linux)" "-reports:**/lcov_doxygen_test_linux.info" "-targetdir:docs/coverxygentestlinux" "-reporttypes:Html" "-filefilters:-*.md;-*.xml;-*[generated];-*build*" "-historydir:report_doc_test_hist_linux"
 reportgenerator "-reports:**/lcov_doxygen_test_linux.info" "-targetdir:assets/doccoveragetestlinux" "-reporttypes:Badges" "-filefilters:-*.md;-*.xml;-*[generated];-*build*"
 
 
 echo "Testing Application with Coverage"
 echo "Configure CMAKE"
 cmake -B build_linux -DCMAKE_BUILD_TYPE=Debug -G "Ninja" -DCMAKE_INSTALL_PREFIX:PATH=publish_linux
-echo "Build CMAKE Debug/Release"
+echo "Build CMAKE Debug"
 cmake --build build_linux --config Debug -j4
+echo "Build CMAKE Release"
 cmake --build build_linux --config Release -j4
+echo "Install CMAKE"
 cmake --install build_linux --strip
 echo "Test CMAKE"
 cd build_linux
-# ctest -C Debug -j4 --output-on-failure --output-log test_results_linux.log
-ctest -C Debug -j4 --output-junit testResults_linux.xml --output-log test_results_linux.log
-junit2html testResults_linux.xml testResults_linux.html
-cp testResults_linux.html "../docs/testresultslinux/index.html"
+if command -v junit2html &> /dev/null; then
+    ctest -C Debug -j4 --output-junit testResults_linux.xml --output-log test_results_linux.log
+    junit2html testResults_linux.xml testResults_linux.html
+    cp testResults_linux.html "../docs/testresultslinux/index.html" 2>/dev/null || true
+else
+    ctest -C Debug -j4 --output-on-failure --output-log test_results_linux.log
+    cp test_results_linux.log "../docs/testresultslinux/test_results_linux.log" 2>/dev/null || true
+fi
 cd ..
 
 echo Running Test Executable
 
-./publish_linux/bin/utility_tests
-./publish_linux/bin/calculator_tests
-./publish_linux/bin/calculatorapp
+if [ -f "./publish_linux/bin/recipe_tests" ]; then
+    ./publish_linux/bin/recipe_tests
+else
+    echo "Warning: recipe_tests not found in publish_linux/bin"
+    if [ -f "./build_linux/build/Debug/recipe_tests" ]; then
+        ./build_linux/build/Debug/recipe_tests
+    fi
+fi
+
+if [ -f "./publish_linux/bin/recipeapp" ]; then
+    ./publish_linux/bin/recipeapp
+fi
 
 echo "Generate Test Coverage Data"
 lcov --rc lcov_branch_coverage=1 --capture --initial --directory . --output-file coverage_linux.info
@@ -93,10 +108,8 @@ lcov --rc lcov_branch_coverage=1 --remove coverage_linux.info 'tests/*' --output
 lcov --rc lcov_branch_coverage=1 --list coverage_linux.info
 
 echo "Generate Test Report"
-reportgenerator "-title:Calculator Library Unit Test Coverage Report (Linux)" "-reports:**/coverage_linux.info" "-targetdir:docs/coveragereportliblinux" "-reporttypes:Html" 
-
-"-sourcedirs:src/utility/src;src/utility/header;src/calculator/src;src/calculator/header;src/calculatorapp/src;src/calculatorapp/header;src/tests/utility;src/tests/calculator" "-filefilters:-*minkernel\*;-*gtest*;-*a\_work\*;-*gtest-*;-*gtest.cc;-*gtest.h;-*build*" "-historydir:report_test_hist_linux"
-reportgenerator "-reports:**/coverage_linux.info" "-targetdir:assets/codecoverageliblinux" "-reporttypes:Badges" "-sourcedirs:src/utility/src;src/utility/header;src/calculator/src;src/calculator/header;src/calculatorapp/src;src/calculatorapp/header;src/tests/utility;src/tests/calculator" "-filefilters:-*minkernel\*;-*gtest*;-*a\_work\*;-*gtest-*;-*gtest.cc;-*gtest.h;-*build*"
+reportgenerator "-title:Recipe Library Unit Test Coverage Report (Linux)" "-reports:**/coverage_linux.info" "-targetdir:docs/coveragereportliblinux" "-reporttypes:Html" "-sourcedirs:include;src;tests" "-filefilters:-*minkernel\*;-*gtest*;-*a\_work\*;-*gtest-*;-*gtest.cc;-*gtest.h;-*build*" "-historydir:report_test_hist_linux"
+reportgenerator "-reports:**/coverage_linux.info" "-targetdir:assets/codecoverageliblinux" "-reporttypes:Badges" "-sourcedirs:include;src;tests" "-filefilters:-*minkernel\*;-*gtest*;-*a\_work\*;-*gtest-*;-*gtest.cc;-*gtest.h;-*build*"
 
 echo "Copy the 'assets' folder and its contents to 'docs' recursively"
 cp -R assets "docs/assets"
@@ -114,14 +127,16 @@ tar -czvf release_linux/linux-publish-binaries.tar.gz -C publish_linux .
 
 echo "Package Publish Linux Binaries"
 mkdir -p build_linux/build/Release
-cp -R src/utility/header build_linux/build/Release
-cp -R src/calculator/header build_linux/build/Release
+if [ -d "include" ]; then
+    cp -R include build_linux/build/Release
+fi
 tar -czvf release_linux/linux-release-binaries.tar.gz -C build_linux/build/Release .
 
 echo "Package Publish Debug Linux Binaries"
 mkdir -p build_linux/build/Debug
-cp -R src/utility/header build_linux/build/Debug
-cp -R src/calculator/header build_linux/build/Debug
+if [ -d "include" ]; then
+    cp -R include build_linux/build/Debug
+fi
 tar -czvf release_linux/linux-debug-binaries.tar.gz -C build_linux/build/Debug .
 
 echo "Package Publish Test Coverage Report"

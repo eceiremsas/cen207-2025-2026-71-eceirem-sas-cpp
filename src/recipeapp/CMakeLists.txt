@@ -1,6 +1,6 @@
-# aka5g/CMakeLists.txt
+# recipeapp/CMakeLists.txt
 set(ROOT src)
-set(APPNAME calculatorapp)
+set(APPNAME recipeapp)
 
 message(STATUS "[${ROOT}/${APPNAME}] Module Processing...")
 
@@ -17,16 +17,21 @@ file(GLOB APP_SOURCES
 source_group("header" FILES ${APP_HEADERS})
 source_group("src" FILES ${APP_SOURCES})
 
-# Set Properties->General->Configuration Type to Dynamic Library (.dll/.so/.dylib)
-add_executable(${APPNAME} ${APP_HEADERS} ${APP_SOURCES}) # for dynamic library use SHARED
+# Set Properties->General->Configuration Type to Executable
+add_executable(${APPNAME} ${APP_HEADERS} ${APP_SOURCES})
 
 target_include_directories(${APPNAME} PUBLIC
-						   ${CMAKE_CURRENT_SOURCE_DIR}/../utility/header
-						   ${CMAKE_CURRENT_SOURCE_DIR}/../calculator/header
+						   ${CMAKE_CURRENT_SOURCE_DIR}/../recipe/header
 						   ${CMAKE_CURRENT_SOURCE_DIR}/header)
 
-# Add any dependencies or compile options specific to lock6g
-target_link_libraries(${APPNAME} PRIVATE calculator utility)
+# Add dependencies
+target_link_libraries(${APPNAME} PRIVATE recipe)
+
+# Set C++ standard
+set_target_properties(${APPNAME} PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
+)
 
 install(TARGETS ${APPNAME}
         LIBRARY DESTINATION lib

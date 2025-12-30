@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ACER\Desktop\c en son hali\cen207-2025-2026-71-eceirem-sas-cpp-1\build_test\CMakeFiles\09a8cdd9ae969a129ba926e9301e650c\RUN_TESTS_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3B38B036-6EE4-3DBA-8B98-F47909035445}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
