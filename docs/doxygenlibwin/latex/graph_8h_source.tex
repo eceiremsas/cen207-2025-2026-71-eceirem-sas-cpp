@@ -16,20 +16,20 @@
 \DoxyCodeLine{00012\ \textcolor{comment}{//\ Represents\ an\ edge\ in\ the\ graph\ (e.g.,\ "{}dough"{},\ "{}sauce"{}\ connection\ between\ recipes)}}
 \DoxyCodeLine{00013\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_graph_edge_a01ff1bab935fe7452b561defd17fd5b1}{GraphEdge}}\ \{}
 \DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_graph_edge_a9e5446f687da912ce7016923b5bdd045}{vertex\_id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Target\ vertex\ (recipe)\ ID}}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_graph_edge_aa6e55cc398840ade9b2588ce3664651d}{edge\_label}}[50];\ \ \ \ \ \ \ \textcolor{comment}{//\ Label\ of\ the\ edge\ (e.g.,\ "{}dough"{},\ "{}sauce"{})}}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_graph_edge_a01ff1bab935fe7452b561defd17fd5b1}{GraphEdge}}*\ \mbox{\hyperlink{struct_graph_edge_ab800f80484335c8fc96a5f093af6b6dc}{next}};\ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ next\ outgoing\ edge\ from\ the\ same\ vertex}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_graph_edge_ac618fccff0062d097f2d600b82985930}{edge\_label}}[50];\ \ \ \ \ \ \ \textcolor{comment}{//\ Label\ of\ the\ edge\ (e.g.,\ "{}dough"{},\ "{}sauce"{})}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_graph_edge_a01ff1bab935fe7452b561defd17fd5b1}{GraphEdge}}*\ \mbox{\hyperlink{struct_graph_edge_aaeefe441a9565de755ce32b2fc326a80}{next}};\ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ next\ outgoing\ edge\ from\ the\ same\ vertex}}
 \DoxyCodeLine{00017\ \}\ \mbox{\hyperlink{struct_graph_edge}{GraphEdge}};}
 \DoxyCodeLine{00018\ }
 \DoxyCodeLine{00019\ \textcolor{comment}{//\ Represents\ a\ vertex\ in\ the\ graph}}
 \DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_graph_vertex_a36824e3dff00a9b2e77be09eb00bc6e8}{GraphVertex}}\ \{}
 \DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_graph_vertex_a7c3343f6f4297cddb96216cc41747bab}{recipe\_id}};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ recipe\ ID\ represented\ by\ this\ vertex}}
-\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{struct_graph_edge}{GraphEdge}}*\ \mbox{\hyperlink{struct_graph_vertex_af0f4f598619135666912aaeffeb5383f}{edges}};\ \ \ \ \ \textcolor{comment}{//\ List\ of\ outgoing\ edges\ from\ this\ vertex}}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_graph_vertex_afef08c8d5ad632ed89c22e49c0a1ffb4}{visited}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Visited\ flag\ for\ DFS/BFS\ (0:\ not\ visited,\ 1:\ visited)}}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{struct_graph_edge}{GraphEdge}}*\ \mbox{\hyperlink{struct_graph_vertex_af71962137813dcd500d4cf3cdbb270a6}{edges}};\ \ \ \ \ \textcolor{comment}{//\ List\ of\ outgoing\ edges\ from\ this\ vertex}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_graph_vertex_acfcb2f536a9d0f15bdfa6b1b222d8f65}{visited}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Visited\ flag\ for\ DFS/BFS\ (0:\ not\ visited,\ 1:\ visited)}}
 \DoxyCodeLine{00024\ \}\ \mbox{\hyperlink{struct_graph_vertex}{GraphVertex}};}
 \DoxyCodeLine{00025\ }
 \DoxyCodeLine{00026\ \textcolor{comment}{//\ Represents\ the\ overall\ graph\ structure}}
 \DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
-\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{struct_graph_vertex}{GraphVertex}}*\ \mbox{\hyperlink{struct_graph_afac2bc7d92334c0692254392ca6464f4}{vertices}}[\mbox{\hyperlink{graph_8cpp_aa83461ae9374f00837b575180d2cd5e2}{MAX\_GRAPH\_VERTICES}}];\ \ \textcolor{comment}{//\ Array\ of\ vertex\ pointers}}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{struct_graph_vertex}{GraphVertex}}*\ \mbox{\hyperlink{struct_graph_afac2bc7d92334c0692254392ca6464f4}{vertices}}[\mbox{\hyperlink{graph_8hpp_aa83461ae9374f00837b575180d2cd5e2}{MAX\_GRAPH\_VERTICES}}];\ \ \textcolor{comment}{//\ Array\ of\ vertex\ pointers}}
 \DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_graph_ab20e1f45cb2c2d3c26968eadd7290f4d}{vertex\_count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Current\ number\ of\ vertices}}
 \DoxyCodeLine{00030\ \}\ \mbox{\hyperlink{struct_graph}{Graph}};}
 \DoxyCodeLine{00031\ }

@@ -1,4 +1,4 @@
-\doxysection{Graph\+Vertex Struct Reference}
+\doxysection{Graph\+Vertex Class Reference}
 \hypertarget{struct_graph_vertex}{}\label{struct_graph_vertex}\index{GraphVertex@{GraphVertex}}
 
 
@@ -17,17 +17,15 @@ Collaboration diagram for Graph\+Vertex\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_graph_vertex_a36824e3dff00a9b2e77be09eb00bc6e8}{Graph\+Vertex}} (int id)
-\item 
-\mbox{\hyperlink{struct_graph_vertex_a36824e3dff00a9b2e77be09eb00bc6e8}{Graph\+Vertex}} (int id)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{struct_graph_vertex_a7c3343f6f4297cddb96216cc41747bab}{recipe\+\_\+id}}
 \begin{DoxyCompactList}\small\item\em \doxylink{struct_recipe}{Recipe} ID represented by this vertex. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_graph_edge}{Graph\+Edge}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_graph_vertex_af0f4f598619135666912aaeffeb5383f}{edges}}
+\mbox{\hyperlink{struct_graph_edge}{Graph\+Edge}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_graph_vertex_af71962137813dcd500d4cf3cdbb270a6}{edges}}
 \item 
-int \mbox{\hyperlink{struct_graph_vertex_afef08c8d5ad632ed89c22e49c0a1ffb4}{visited}}
+int \mbox{\hyperlink{struct_graph_vertex_acfcb2f536a9d0f15bdfa6b1b222d8f65}{visited}}
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_graph_edge}{Graph\+Edge}} $>$ \mbox{\hyperlink{struct_graph_vertex_adf065c6b8adfdb6b6c008cf0077d30f3}{edges}}
 \begin{DoxyCompactList}\small\item\em Linked list of outgoing edges. \end{DoxyCompactList}\item 
@@ -40,13 +38,7 @@ bool \mbox{\hyperlink{struct_graph_vertex_afef08c8d5ad632ed89c22e49c0a1ffb4}{vis
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{struct_graph_vertex_a36824e3dff00a9b2e77be09eb00bc6e8}\index{GraphVertex@{GraphVertex}!GraphVertex@{GraphVertex}}
 \index{GraphVertex@{GraphVertex}!GraphVertex@{GraphVertex}}
-\doxysubsubsection{\texorpdfstring{GraphVertex()}{GraphVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \label{struct_graph_vertex_a36824e3dff00a9b2e77be09eb00bc6e8} 
-Graph\+Vertex\+::\+Graph\+Vertex (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
-
-\Hypertarget{struct_graph_vertex_a36824e3dff00a9b2e77be09eb00bc6e8}\index{GraphVertex@{GraphVertex}!GraphVertex@{GraphVertex}}
-\index{GraphVertex@{GraphVertex}!GraphVertex@{GraphVertex}}
-\doxysubsubsection{\texorpdfstring{GraphVertex()}{GraphVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{GraphVertex()}{GraphVertex()}}
 {\footnotesize\ttfamily \label{struct_graph_vertex_a36824e3dff00a9b2e77be09eb00bc6e8} 
 Graph\+Vertex\+::\+Graph\+Vertex (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
 
@@ -55,11 +47,11 @@ Graph\+Vertex\+::\+Graph\+Vertex (\begin{DoxyParamCaption}\item[{int}]{id}{}\end
 \label{doc-variable-members}
 \Hypertarget{struct_graph_vertex_doc-variable-members}
 \doxysubsection{Member Data Documentation}
-\Hypertarget{struct_graph_vertex_af0f4f598619135666912aaeffeb5383f}\index{GraphVertex@{GraphVertex}!edges@{edges}}
+\Hypertarget{struct_graph_vertex_af71962137813dcd500d4cf3cdbb270a6}\index{GraphVertex@{GraphVertex}!edges@{edges}}
 \index{edges@{edges}!GraphVertex@{GraphVertex}}
 \doxysubsubsection{\texorpdfstring{edges}{edges}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \label{struct_graph_vertex_af0f4f598619135666912aaeffeb5383f} 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_graph_edge}{Graph\+Edge}} $>$ Graph\+Vertex\+::edges}
+{\footnotesize\ttfamily \label{struct_graph_vertex_af71962137813dcd500d4cf3cdbb270a6} 
+\mbox{\hyperlink{struct_graph_edge}{Graph\+Edge}}\texorpdfstring{$\ast$}{*} Graph\+Vertex\+::edges}
 
 \Hypertarget{struct_graph_vertex_adf065c6b8adfdb6b6c008cf0077d30f3}\index{GraphVertex@{GraphVertex}!edges@{edges}}
 \index{edges@{edges}!GraphVertex@{GraphVertex}}
@@ -81,11 +73,11 @@ int Graph\+Vertex\+::recipe\+\_\+id}
 
 \doxylink{struct_recipe}{Recipe} ID represented by this vertex. 
 
-\Hypertarget{struct_graph_vertex_afef08c8d5ad632ed89c22e49c0a1ffb4}\index{GraphVertex@{GraphVertex}!visited@{visited}}
+\Hypertarget{struct_graph_vertex_acfcb2f536a9d0f15bdfa6b1b222d8f65}\index{GraphVertex@{GraphVertex}!visited@{visited}}
 \index{visited@{visited}!GraphVertex@{GraphVertex}}
 \doxysubsubsection{\texorpdfstring{visited}{visited}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \label{struct_graph_vertex_afef08c8d5ad632ed89c22e49c0a1ffb4} 
-bool Graph\+Vertex\+::visited}
+{\footnotesize\ttfamily \label{struct_graph_vertex_acfcb2f536a9d0f15bdfa6b1b222d8f65} 
+int Graph\+Vertex\+::visited}
 
 \Hypertarget{struct_graph_vertex_afef08c8d5ad632ed89c22e49c0a1ffb4}\index{GraphVertex@{GraphVertex}!visited@{visited}}
 \index{visited@{visited}!GraphVertex@{GraphVertex}}
@@ -99,8 +91,7 @@ Visited flag for DFS/\+BFS.
 
 
 
-The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 include/\mbox{\hyperlink{graph_8h}{graph.\+h}}\item 
-src/recipe/header/\mbox{\hyperlink{graph_8hpp}{graph.\+hpp}}\item 
-src/recipe/src/\mbox{\hyperlink{graph_8cpp}{graph.\+cpp}}\end{DoxyCompactItemize}
+src/recipe/header/\mbox{\hyperlink{graph_8hpp}{graph.\+hpp}}\end{DoxyCompactItemize}

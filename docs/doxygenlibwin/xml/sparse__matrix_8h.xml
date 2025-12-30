@@ -47,21 +47,13 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
       </node>
       <node id="1">
         <label>include/sparse_matrix.h</label>
         <link refid="sparse__matrix_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -73,22 +65,6 @@
         <link refid="menu_8c"/>
       </node>
       <node id="5">
-        <label>src/recipe/src/main.cpp</label>
-        <link refid="src_2main_8cpp"/>
-      </node>
-      <node id="6">
-        <label>src/recipe/src/menu.cpp</label>
-        <link refid="src_2menu_8cpp"/>
-      </node>
-      <node id="7">
-        <label>src/recipeapp/src/main.cpp</label>
-        <link refid="pp_2src_2main_8cpp"/>
-      </node>
-      <node id="8">
-        <label>src/recipeapp/src/menu.cpp</label>
-        <link refid="pp_2src_2menu_8cpp"/>
-      </node>
-      <node id="9">
         <label>src/sparse_matrix.c</label>
         <link refid="sparse__matrix_8c"/>
       </node>
@@ -532,12 +508,12 @@
 <codeline lineno="20" refid="struct_matrix_entry_1afe064054e73e474a808ad3015883b9c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_matrix_entry_1afe064054e73e474a808ad3015883b9c3" kindref="member">row</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Row<sp/>index<sp/>(typically<sp/>represents<sp/>recipe<sp/>ID)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21" refid="struct_matrix_entry_1ae084b6bb5422830be3ed2797ebbb617c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_matrix_entry_1ae084b6bb5422830be3ed2797ebbb617c" kindref="member">col</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Column<sp/>index<sp/>(typically<sp/>represents<sp/>ingredient<sp/>ID)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22" refid="struct_matrix_entry_1ad402a80ab39df62021e00a1890c6baf9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_matrix_entry_1ad402a80ab39df62021e00a1890c6baf9" kindref="member">value</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Non-zero<sp/>value<sp/>(e.g.,<sp/>occurrence<sp/>or<sp/>relation<sp/>weight)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="struct_matrix_entry_1ad8b53a80918f8cb3ab84cf0ea950dd5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_matrix_entry_1ad8b53a80918f8cb3ab84cf0ea950dd5c" kindref="member">ingredient</ref>[<ref refid="sparse__matrix_8cpp_1aabe8b04ee4fd802edbb42785a3629d70" kindref="member">MAX_INGREDIENT_NAME</ref>];<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ingredient<sp/>name</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24" refid="struct_matrix_entry_1ad84f7c9e34131569a4d31c09e2ce9f89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_matrix_entry_1aa9b7a9307fdce655f45ed7a90ab8ac7a" kindref="member">MatrixEntry</ref>*<sp/><ref refid="struct_matrix_entry_1ad84f7c9e34131569a4d31c09e2ce9f89" kindref="member">next</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>next<sp/>matrix<sp/>entry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="struct_matrix_entry_1aea1fe27750ad4dd4dfe7a3a1026711ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_matrix_entry_1aea1fe27750ad4dd4dfe7a3a1026711ce" kindref="member">ingredient</ref>[<ref refid="sparse__matrix_8hpp_1aabe8b04ee4fd802edbb42785a3629d70" kindref="member">MAX_INGREDIENT_NAME</ref>];<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ingredient<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="struct_matrix_entry_1a2d5094cdb87970568e00c20b1fe950ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_matrix_entry_1aa9b7a9307fdce655f45ed7a90ab8ac7a" kindref="member">MatrixEntry</ref>*<sp/><ref refid="struct_matrix_entry_1a2d5094cdb87970568e00c20b1fe950ec" kindref="member">next</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>next<sp/>matrix<sp/>entry</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25" refid="sparse__matrix_8h_1a2d03bba20771d6d95e131c7dd93812b8" refkind="member"><highlight class="normal">}<sp/><ref refid="struct_matrix_entry" kindref="compound">MatrixEntry</ref>;</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32" refid="struct_sparse_matrix" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="33" refid="struct_sparse_matrix_1a5079494b50c195eba794c73b6133e92a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_matrix_entry" kindref="compound">MatrixEntry</ref>*<sp/><ref refid="struct_sparse_matrix_1a5079494b50c195eba794c73b6133e92a" kindref="member">head</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>first<sp/>matrix<sp/>entry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="struct_sparse_matrix_1a6f1462037e7a711901135b67011a4ba3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_matrix_entry" kindref="compound">MatrixEntry</ref>*<sp/><ref refid="struct_sparse_matrix_1a6f1462037e7a711901135b67011a4ba3" kindref="member">head</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>first<sp/>matrix<sp/>entry</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34" refid="struct_sparse_matrix_1a36a390290bd0ad50690a46c0c120b6b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_sparse_matrix_1a36a390290bd0ad50690a46c0c120b6b4" kindref="member">row_count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>rows<sp/>(recipes)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35" refid="struct_sparse_matrix_1aea0a88b857ba065bfe367b547ac72a5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_sparse_matrix_1aea0a88b857ba065bfe367b547ac72a5a" kindref="member">col_count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>columns<sp/>(ingredients)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36" refid="struct_sparse_matrix_1a5d32364b49543c3ef09a1463488712c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_sparse_matrix_1a5d32364b49543c3ef09a1463488712c3" kindref="member">entry_count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Total<sp/>number<sp/>of<sp/>non-zero<sp/>entries</highlight><highlight class="normal"></highlight></codeline>

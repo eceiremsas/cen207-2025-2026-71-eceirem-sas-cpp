@@ -1470,3 +1470,1497 @@ TEST(GraphTest, DFSCycleHelper) {
     graph_destroy(graph);
 }
 
+/**
+ * @brief Test XOR linked list remove operation
+ */
+TEST(XORLinkedListTest, RemoveFromList) {
+    XORList* list = xor_list_create();
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Burger", "Lunch", 600, 30);
+    
+    xor_list_insert_tail(list, r1);
+    xor_list_insert_tail(list, r2);
+    
+    Recipe* removed = xor_list_remove(list, 1);
+    ASSERT_NE(removed, nullptr);
+    EXPECT_EQ(removed->id, 1);
+    EXPECT_EQ(xor_list_size(list), 1);
+    
+    recipe_destroy(removed);
+    xor_list_destroy(list);
+    recipe_destroy(r2);
+}
+
+/**
+ * @brief Test stack delete operation
+ */
+TEST(StackTest, DeleteOperation) {
+    Stack* stack = stack_create();
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    
+    EXPECT_EQ(stack_push(stack, OP_DELETE, r1), 1);
+    StackOperation* op = stack_pop(stack);
+    ASSERT_NE(op, nullptr);
+    EXPECT_EQ(op->type, OP_DELETE);
+    
+    stack_destroy(stack);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test heap helper functions
+ */
+TEST(HeapTest, HelperFunctions) {
+    EXPECT_EQ(heap_parent(1), 0);
+    EXPECT_EQ(heap_parent(2), 0);
+    EXPECT_EQ(heap_left_child(0), 1);
+    EXPECT_EQ(heap_right_child(0), 2);
+}
+
+/**
+ * @brief Test list remove non-existent
+ */
+TEST(LinkedListTest, RemoveNonExistent) {
+    List* list = list_create();
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    list_insert_head(list, r1);
+    
+    Recipe* removed = list_remove(list, 999);
+    EXPECT_EQ(removed, nullptr);
+    EXPECT_EQ(list_size(list), 1);
+    
+    list_destroy(list);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test queue peek empty
+ */
+TEST(QueueTest, PeekEmpty) {
+    Queue* queue = queue_create();
+    Recipe* peeked = queue_peek(queue);
+    EXPECT_EQ(peeked, nullptr);
+    queue_destroy(queue);
+}
+
+/**
+ * @brief Test heap peek empty
+ */
+TEST(HeapTest, PeekEmpty) {
+    Heap* heap = heap_create(10);
+    Recipe* peeked = heap_peek(heap);
+    EXPECT_EQ(peeked, nullptr);
+    heap_destroy(heap);
+}
+
+/**
+ * @brief Test stack pop empty
+ */
+TEST(StackTest, PopEmpty) {
+    Stack* stack = stack_create();
+    StackOperation* op = stack_pop(stack);
+    EXPECT_EQ(op, nullptr);
+    stack_destroy(stack);
+}
+
+/**
+ * @brief Test menu view all recipes
+ */
+TEST(MenuTest, ViewAllRecipes) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    list_insert_tail(ctx->list, r1);
+    
+    menu_view_all_recipes(ctx);
+    
+    app_context_destroy(ctx);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test recipe create with NULL parameters
+ */
+TEST(RecipeTest, CreateRecipeNullParams) {
+    Recipe* r = recipe_create(1, NULL, "Lunch", 800, 45);
+    EXPECT_EQ(r, nullptr);
+    
+    r = recipe_create(1, "Pizza", NULL, 800, 45);
+    EXPECT_EQ(r, nullptr);
+}
+
+/**
+ * @brief Test recipe add ingredient max limit
+ */
+TEST(RecipeTest, AddIngredientMaxLimit) {
+    Recipe* r = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    ASSERT_NE(r, nullptr);
+    
+    for (int i = 0; i < MAX_INGREDIENTS; i++) {
+        char ing[20];
+        sprintf(ing, "Ingredient%d", i);
+        EXPECT_EQ(recipe_add_ingredient(r, ing), 1);
+    }
+    
+    EXPECT_EQ(r->ingredient_count, MAX_INGREDIENTS);
+    EXPECT_EQ(recipe_add_ingredient(r, "Extra"), 0);
+    
+    recipe_destroy(r);
+}
+
+/**
+ * @brief Test list insert with NULL
+ */
+TEST(LinkedListTest, InsertNull) {
+    List* list = list_create();
+    ASSERT_NE(list, nullptr);
+    
+    EXPECT_EQ(list_insert_head(list, NULL), 0);
+    EXPECT_EQ(list_insert_tail(list, NULL), 0);
+    
+    list_destroy(list);
+}
+
+/**
+ * @brief Test XOR list find non-existent
+ */
+TEST(XORLinkedListTest, FindNonExistent) {
+    XORList* list = xor_list_create();
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    
+    xor_list_insert_tail(list, r1);
+    
+    Recipe* found = xor_list_find(list, 999);
+    EXPECT_EQ(found, nullptr);
+    
+    xor_list_destroy(list);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test XOR list remove non-existent
+ */
+TEST(XORLinkedListTest, RemoveNonExistent) {
+    XORList* list = xor_list_create();
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    
+    xor_list_insert_tail(list, r1);
+    
+    Recipe* removed = xor_list_remove(list, 999);
+    EXPECT_EQ(removed, nullptr);
+    EXPECT_EQ(xor_list_size(list), 1);
+    
+    xor_list_destroy(list);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test stack push with NULL
+ */
+TEST(StackTest, PushNull) {
+    Stack* stack = stack_create();
+    ASSERT_NE(stack, nullptr);
+    
+    EXPECT_EQ(stack_push(stack, OP_ADD, NULL), 0);
+    
+    stack_destroy(stack);
+}
+
+/**
+ * @brief Test queue enqueue with NULL
+ */
+TEST(QueueTest, EnqueueNull) {
+    Queue* queue = queue_create();
+    ASSERT_NE(queue, nullptr);
+    
+    EXPECT_EQ(queue_enqueue(queue, NULL), 0);
+    
+    queue_destroy(queue);
+}
+
+/**
+ * @brief Test queue dequeue empty
+ */
+TEST(QueueTest, DequeueEmpty) {
+    Queue* queue = queue_create();
+    Recipe* dequeued = queue_dequeue(queue);
+    EXPECT_EQ(dequeued, nullptr);
+    queue_destroy(queue);
+}
+
+/**
+ * @brief Test heap insert with NULL
+ */
+TEST(HeapTest, InsertNull) {
+    Heap* heap = heap_create(10);
+    ASSERT_NE(heap, nullptr);
+    
+    EXPECT_EQ(heap_insert(heap, NULL), 0);
+    
+    heap_destroy(heap);
+}
+
+/**
+ * @brief Test heap extract min empty
+ */
+TEST(HeapTest, ExtractMinEmpty) {
+    Heap* heap = heap_create(10);
+    Recipe* min = heap_extract_min(heap);
+    EXPECT_EQ(min, nullptr);
+    heap_destroy(heap);
+}
+
+/**
+ * @brief Test hash table insert NULL
+ */
+TEST(HashTableTest, InsertNull) {
+    HashTable* ht = hash_table_create(10);
+    ASSERT_NE(ht, nullptr);
+    
+    EXPECT_EQ(hash_table_insert(ht, NULL), 0);
+    
+    hash_table_destroy(ht);
+}
+
+/**
+ * @brief Test hash table delete non-existent
+ */
+TEST(HashTableTest, DeleteNonExistent) {
+    HashTable* ht = hash_table_create(10);
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    
+    hash_table_insert(ht, r1);
+    EXPECT_EQ(hash_table_delete(ht, 999), 0);
+    EXPECT_EQ(ht->count, 1);
+    
+    hash_table_destroy(ht);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test graph add edge with invalid vertices
+ */
+TEST(GraphTest, AddEdgeInvalidVertices) {
+    Graph* graph = graph_create();
+    
+    // graph_add_edge automatically creates vertices if they don't exist
+    EXPECT_EQ(graph_add_edge(graph, 1, 2, "edge1"), 1);
+    EXPECT_EQ(graph->vertex_count, 2);
+    
+    // Test with NULL label
+    EXPECT_EQ(graph_add_edge(graph, 1, 3, NULL), 0);
+    
+    graph_destroy(graph);
+}
+
+/**
+ * @brief Test sparse matrix get value non-existent
+ */
+TEST(SparseMatrixTest, GetValueNonExistent) {
+    SparseMatrix* matrix = sparse_matrix_create();
+    
+    EXPECT_EQ(sparse_matrix_get_value(matrix, 999, 999), 0);
+    
+    sparse_matrix_destroy(matrix);
+}
+
+/**
+ * @brief Test sparse matrix find recipes by ingredient empty
+ */
+TEST(SparseMatrixTest, FindRecipesByIngredientEmpty) {
+    SparseMatrix* matrix = sparse_matrix_create();
+    int recipe_ids[10];
+    
+    int count = sparse_matrix_find_recipes_by_ingredient(matrix, "Flour", recipe_ids, 10);
+    EXPECT_EQ(count, 0);
+    
+    sparse_matrix_destroy(matrix);
+}
+
+/**
+ * @brief Test menu add recipe
+ */
+TEST(MenuTest, AddRecipe) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    menu_add_recipe(ctx);
+    
+    app_context_destroy(ctx);
+}
+
+/**
+ * @brief Test menu edit recipe
+ */
+TEST(MenuTest, EditRecipe) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    menu_edit_recipe(ctx);
+    
+    app_context_destroy(ctx);
+}
+
+/**
+ * @brief Test menu delete recipe
+ */
+TEST(MenuTest, DeleteRecipe) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    menu_delete_recipe(ctx);
+    
+    app_context_destroy(ctx);
+}
+
+/**
+ * @brief Test menu view all recipes empty
+ */
+TEST(MenuTest, ViewAllRecipesEmpty) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    menu_view_all_recipes(ctx);
+    
+    app_context_destroy(ctx);
+}
+
+/**
+ * @brief Test heap sort single element
+ */
+TEST(HeapTest, SortSingleElement) {
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* recipes[] = {r1};
+    heap_sort_recipes(recipes, 1);
+    EXPECT_EQ(recipes[0]->id, 1);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test list find non-existent
+ */
+TEST(LinkedListTest, FindNonExistent) {
+    List* list = list_create();
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    list_insert_head(list, r1);
+    
+    Recipe* found = list_find(list, 999);
+    EXPECT_EQ(found, nullptr);
+    
+    list_destroy(list);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test graph BFS with non-existent vertex
+ */
+TEST(GraphTest, BFSNonExistent) {
+    Graph* graph = graph_create();
+    g_visited_order.clear();
+    graph_bfs(graph, 999, graph_visit_func);
+    EXPECT_EQ(g_visited_order.size(), 0);
+    graph_destroy(graph);
+}
+
+/**
+ * @brief Test graph DFS with non-existent vertex
+ */
+TEST(GraphTest, DFSNonExistent) {
+    Graph* graph = graph_create();
+    g_visited_order.clear();
+    graph_dfs(graph, 999, graph_visit_func);
+    EXPECT_EQ(g_visited_order.size(), 0);
+    graph_destroy(graph);
+}
+
+/**
+ * @brief Test graph has cycle empty
+ */
+TEST(GraphTest, HasCycleEmpty) {
+    Graph* graph = graph_create();
+    EXPECT_EQ(graph_has_cycle(graph), 0);
+    graph_destroy(graph);
+}
+
+/**
+ * @brief Test sparse matrix find ingredients by recipe non-existent
+ */
+TEST(SparseMatrixTest, FindIngredientsByRecipeNonExistent) {
+    SparseMatrix* matrix = sparse_matrix_create();
+    int count = sparse_matrix_find_ingredients_by_recipe(matrix, 999);
+    EXPECT_EQ(count, 0);
+    sparse_matrix_destroy(matrix);
+}
+
+/**
+ * @brief Test stack peek empty
+ */
+TEST(StackTest, PeekEmpty) {
+    Stack* stack = stack_create();
+    StackOperation* op = stack_peek(stack);
+    EXPECT_EQ(op, nullptr);
+    stack_destroy(stack);
+}
+
+/**
+ * @brief Test XOR list traverse empty
+ */
+TEST(XORLinkedListTest, TraverseEmpty) {
+    XORList* list = xor_list_create();
+    g_forward_count = 0;
+    xor_list_traverse_forward(list, forward_visit_counter);
+    EXPECT_EQ(g_forward_count, 0);
+    
+    g_backward_count = 0;
+    xor_list_traverse_backward(list, backward_visit_counter);
+    EXPECT_EQ(g_backward_count, 0);
+    
+    xor_list_destroy(list);
+}
+
+/**
+ * @brief Test heap create with zero capacity
+ */
+TEST(HeapTest, CreateZeroCapacity) {
+    Heap* heap = heap_create(0);
+    EXPECT_EQ(heap, nullptr);
+}
+
+/**
+ * @brief Test hash table create with zero size
+ */
+TEST(HashTableTest, CreateZeroSize) {
+    HashTable* ht = hash_table_create(0);
+    EXPECT_EQ(ht, nullptr);
+}
+
+/**
+ * @brief Test heapify operations through insert
+ */
+TEST(HeapTest, HeapifyUp) {
+    Heap* heap = heap_create(10);
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Salad", "Lunch", 200, 10);
+    Recipe* r3 = recipe_create(3, "Burger", "Lunch", 600, 30);
+    
+    heap_insert(heap, r1);
+    heap_insert(heap, r2);
+    heap_insert(heap, r3);
+    
+    Recipe* min = heap_peek(heap);
+    ASSERT_NE(min, nullptr);
+    EXPECT_EQ(min->id, 2);
+    
+    heap_destroy(heap);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+    recipe_destroy(r3);
+}
+
+/**
+ * @brief Test heapify down through extract
+ */
+TEST(HeapTest, HeapifyDown) {
+    Heap* heap = heap_create(10);
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Salad", "Lunch", 200, 10);
+    Recipe* r3 = recipe_create(3, "Burger", "Lunch", 600, 30);
+    Recipe* r4 = recipe_create(4, "Soup", "Lunch", 150, 5);
+    
+    heap_insert(heap, r1);
+    heap_insert(heap, r2);
+    heap_insert(heap, r3);
+    heap_insert(heap, r4);
+    
+    Recipe* min = heap_extract_min(heap);
+    ASSERT_NE(min, nullptr);
+    EXPECT_EQ(min->id, 4);
+    
+    min = heap_extract_min(heap);
+    ASSERT_NE(min, nullptr);
+    EXPECT_EQ(min->id, 2);
+    
+    heap_destroy(heap);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+    recipe_destroy(r3);
+    recipe_destroy(r4);
+}
+
+/**
+ * @brief Test recipe copy with ingredients
+ */
+TEST(RecipeTest, CopyRecipeWithIngredients) {
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    recipe_add_ingredient(r1, "Flour");
+    recipe_add_ingredient(r1, "Cheese");
+    recipe_add_ingredient(r1, "Tomato");
+    recipe_set_instructions(r1, "Bake for 20 minutes");
+    
+    Recipe* r2 = recipe_copy(r1);
+    ASSERT_NE(r2, nullptr);
+    EXPECT_EQ(r2->ingredient_count, 3);
+    EXPECT_STREQ(r2->ingredients[0], "Flour");
+    EXPECT_STREQ(r2->ingredients[1], "Cheese");
+    EXPECT_STREQ(r2->ingredients[2], "Tomato");
+    
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+}
+
+/**
+ * @brief Test recipe copy NULL
+ */
+TEST(RecipeTest, CopyRecipeNull) {
+    Recipe* r = recipe_copy(NULL);
+    EXPECT_EQ(r, nullptr);
+}
+
+/**
+ * @brief Test list destroy empty
+ */
+TEST(LinkedListTest, DestroyEmpty) {
+    List* list = list_create();
+    list_destroy(list);
+    EXPECT_TRUE(true);
+}
+
+/**
+ * @brief Test XOR list destroy empty
+ */
+TEST(XORLinkedListTest, DestroyEmpty) {
+    XORList* list = xor_list_create();
+    xor_list_destroy(list);
+    EXPECT_TRUE(true);
+}
+
+/**
+ * @brief Test stack destroy empty
+ */
+TEST(StackTest, DestroyEmpty) {
+    Stack* stack = stack_create();
+    stack_destroy(stack);
+    EXPECT_TRUE(true);
+}
+
+/**
+ * @brief Test queue destroy empty
+ */
+TEST(QueueTest, DestroyEmpty) {
+    Queue* queue = queue_create();
+    queue_destroy(queue);
+    EXPECT_TRUE(true);
+}
+
+/**
+ * @brief Test heap destroy empty
+ */
+TEST(HeapTest, DestroyEmpty) {
+    Heap* heap = heap_create(10);
+    heap_destroy(heap);
+    EXPECT_TRUE(true);
+}
+
+/**
+ * @brief Test graph destroy empty
+ */
+TEST(GraphTest, DestroyEmpty) {
+    Graph* graph = graph_create();
+    graph_destroy(graph);
+    EXPECT_TRUE(true);
+}
+
+/**
+ * @brief Test hash table destroy empty
+ */
+TEST(HashTableTest, DestroyEmpty) {
+    HashTable* ht = hash_table_create(10);
+    hash_table_destroy(ht);
+    EXPECT_TRUE(true);
+}
+
+/**
+ * @brief Test sparse matrix destroy empty
+ */
+TEST(SparseMatrixTest, DestroyEmpty) {
+    SparseMatrix* matrix = sparse_matrix_create();
+    sparse_matrix_destroy(matrix);
+    EXPECT_TRUE(true);
+}
+
+/**
+ * @brief Test graph add vertex duplicate
+ */
+TEST(GraphTest, AddVertexDuplicate) {
+    Graph* graph = graph_create();
+    EXPECT_EQ(graph_add_vertex(graph, 1), 1);
+    EXPECT_EQ(graph_add_vertex(graph, 1), 0);
+    EXPECT_EQ(graph->vertex_count, 1);
+    graph_destroy(graph);
+}
+
+/**
+ * @brief Test graph add vertex max limit
+ */
+TEST(GraphTest, AddVertexMaxLimit) {
+    Graph* graph = graph_create();
+    for (int i = 0; i < MAX_GRAPH_VERTICES; i++) {
+        EXPECT_EQ(graph_add_vertex(graph, i), 1);
+    }
+    EXPECT_EQ(graph_add_vertex(graph, MAX_GRAPH_VERTICES), 0);
+    graph_destroy(graph);
+}
+
+/**
+ * @brief Test sparse matrix add entry NULL
+ */
+TEST(SparseMatrixTest, AddEntryNull) {
+    SparseMatrix* matrix = sparse_matrix_create();
+    sparse_matrix_add_entry(matrix, 0, 0, 5, NULL);
+    EXPECT_EQ(matrix->entry_count, 0);
+    sparse_matrix_destroy(matrix);
+}
+
+/**
+ * @brief Test menu save context binary
+ */
+TEST(MenuTest, SaveContextBinary) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    hash_table_insert(ctx->hash_table, r1);
+    list_insert_tail(ctx->list, r1);
+    
+    const char* filename = "test_context_save.bin";
+    EXPECT_EQ(menu_save_context_binary(ctx, filename), 1);
+    
+    remove(filename);
+    app_context_destroy(ctx);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test menu load context binary
+ */
+TEST(MenuTest, LoadContextBinary) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    hash_table_insert(ctx->hash_table, r1);
+    list_insert_tail(ctx->list, r1);
+    
+    const char* filename = "test_context_load.bin";
+    menu_save_context_binary(ctx, filename);
+    
+    AppContext* loaded = menu_load_context_binary(filename);
+    if (loaded) {
+        EXPECT_NE(loaded->hash_table, nullptr);
+        app_context_destroy(loaded);
+    }
+    
+    remove(filename);
+    app_context_destroy(ctx);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test menu save context binary NULL
+ */
+TEST(MenuTest, SaveContextBinaryNull) {
+    EXPECT_EQ(menu_save_context_binary(NULL, "test.bin"), 0);
+}
+
+/**
+ * @brief Test menu load context binary non-existent
+ */
+TEST(MenuTest, LoadContextBinaryNonExistent) {
+    AppContext* loaded = menu_load_context_binary("non_existent_file.bin");
+    EXPECT_EQ(loaded, nullptr);
+}
+
+/**
+ * @brief Test recipe save binary NULL
+ */
+TEST(RecipeTest, SaveBinaryNull) {
+    EXPECT_EQ(recipe_save_binary(NULL, "test.bin"), 0);
+}
+
+/**
+ * @brief Test recipe load binary non-existent
+ */
+TEST(RecipeTest, LoadBinaryNonExistent) {
+    Recipe* r = recipe_load_binary("non_existent_file.bin");
+    EXPECT_EQ(r, nullptr);
+}
+
+/**
+ * @brief Test list save binary NULL
+ */
+TEST(LinkedListTest, SaveBinaryNull) {
+    EXPECT_EQ(list_save_binary(NULL, "test.bin"), 0);
+}
+
+/**
+ * @brief Test list load binary non-existent
+ */
+TEST(LinkedListTest, LoadBinaryNonExistent) {
+    List* list = list_load_binary("non_existent_file.bin");
+    EXPECT_EQ(list, nullptr);
+}
+
+/**
+ * @brief Test XOR list save binary NULL
+ */
+TEST(XORLinkedListTest, SaveBinaryNull) {
+    EXPECT_EQ(xor_list_save_binary(NULL, "test.bin"), 0);
+}
+
+/**
+ * @brief Test XOR list load binary non-existent
+ */
+TEST(XORLinkedListTest, LoadBinaryNonExistent) {
+    XORList* list = xor_list_load_binary("non_existent_file.bin");
+    EXPECT_EQ(list, nullptr);
+}
+
+/**
+ * @brief Test stack save binary NULL
+ */
+TEST(StackTest, SaveBinaryNull) {
+    EXPECT_EQ(stack_save_binary(NULL, "test.bin"), 0);
+}
+
+/**
+ * @brief Test stack load binary non-existent
+ */
+TEST(StackTest, LoadBinaryNonExistent) {
+    Stack* stack = stack_load_binary("non_existent_file.bin");
+    EXPECT_EQ(stack, nullptr);
+}
+
+/**
+ * @brief Test queue save binary NULL
+ */
+TEST(QueueTest, SaveBinaryNull) {
+    EXPECT_EQ(queue_save_binary(NULL, "test.bin"), 0);
+}
+
+/**
+ * @brief Test queue load binary non-existent
+ */
+TEST(QueueTest, LoadBinaryNonExistent) {
+    Queue* queue = queue_load_binary("non_existent_file.bin");
+    EXPECT_EQ(queue, nullptr);
+}
+
+/**
+ * @brief Test heap save binary NULL
+ */
+TEST(HeapTest, SaveBinaryNull) {
+    EXPECT_EQ(heap_save_binary(NULL, "test.bin"), 0);
+}
+
+/**
+ * @brief Test heap load binary non-existent
+ */
+TEST(HeapTest, LoadBinaryNonExistent) {
+    Heap* heap = heap_load_binary("non_existent_file.bin");
+    EXPECT_EQ(heap, nullptr);
+}
+
+/**
+ * @brief Test graph save binary NULL
+ */
+TEST(GraphTest, SaveBinaryNull) {
+    EXPECT_EQ(graph_save_binary(NULL, "test.bin"), 0);
+}
+
+/**
+ * @brief Test graph load binary non-existent
+ */
+TEST(GraphTest, LoadBinaryNonExistent) {
+    Graph* graph = graph_load_binary("non_existent_file.bin");
+    EXPECT_EQ(graph, nullptr);
+}
+
+/**
+ * @brief Test hash table save binary NULL
+ */
+TEST(HashTableTest, SaveBinaryNull) {
+    EXPECT_EQ(hash_table_save_binary(NULL, "test.bin"), 0);
+}
+
+/**
+ * @brief Test hash table load binary non-existent
+ */
+TEST(HashTableTest, LoadBinaryNonExistent) {
+    HashTable* ht = hash_table_load_binary("non_existent_file.bin");
+    EXPECT_EQ(ht, nullptr);
+}
+
+/**
+ * @brief Test sparse matrix save binary NULL
+ */
+TEST(SparseMatrixTest, SaveBinaryNull) {
+    EXPECT_EQ(sparse_matrix_save_binary(NULL, "test.bin"), 0);
+}
+
+/**
+ * @brief Test sparse matrix load binary non-existent
+ */
+TEST(SparseMatrixTest, LoadBinaryNonExistent) {
+    SparseMatrix* matrix = sparse_matrix_load_binary("non_existent_file.bin");
+    EXPECT_EQ(matrix, nullptr);
+}
+
+/**
+ * @brief Test recipe save array binary NULL
+ */
+TEST(RecipeTest, SaveArrayBinaryNull) {
+    EXPECT_EQ(recipe_save_array_binary(NULL, 0, "test.bin"), 0);
+}
+
+/**
+ * @brief Test recipe load array binary non-existent
+ */
+TEST(RecipeTest, LoadArrayBinaryNonExistent) {
+    int count = 0;
+    Recipe* recipes = recipe_load_array_binary("non_existent_file.bin", &count);
+    EXPECT_EQ(recipes, nullptr);
+    EXPECT_EQ(count, 0);
+}
+
+/**
+ * @brief Test graph add edge with same vertices
+ */
+TEST(GraphTest, AddEdgeSameVertices) {
+    Graph* graph = graph_create();
+    graph_add_vertex(graph, 1);
+    EXPECT_EQ(graph_add_edge(graph, 1, 1, "self"), 1);
+    graph_destroy(graph);
+}
+
+/**
+ * @brief Test graph display dependencies non-existent
+ */
+TEST(GraphTest, DisplayDependenciesNonExistent) {
+    Graph* graph = graph_create();
+    graph_display_dependencies(graph, 999, 0);
+    graph_destroy(graph);
+}
+
+/**
+ * @brief Test heap sort with two elements
+ */
+TEST(HeapTest, SortTwoElements) {
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Salad", "Lunch", 200, 10);
+    Recipe* recipes[] = {r1, r2};
+    heap_sort_recipes(recipes, 2);
+    EXPECT_EQ(recipes[0]->id, 2);
+    EXPECT_EQ(recipes[1]->id, 1);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+}
+
+/**
+ * @brief Test heap sort with equal calories
+ */
+TEST(HeapTest, SortEqualCalories) {
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Burger", "Lunch", 800, 30);
+    Recipe* recipes[] = {r1, r2};
+    heap_sort_recipes(recipes, 2);
+    EXPECT_TRUE(recipes[0]->calories == 800 && recipes[1]->calories == 800);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+}
+
+/**
+ * @brief Test list remove from empty
+ */
+TEST(LinkedListTest, RemoveFromEmpty) {
+    List* list = list_create();
+    Recipe* removed = list_remove(list, 1);
+    EXPECT_EQ(removed, nullptr);
+    list_destroy(list);
+}
+
+/**
+ * @brief Test XOR list remove from empty
+ */
+TEST(XORLinkedListTest, RemoveFromEmpty) {
+    XORList* list = xor_list_create();
+    Recipe* removed = xor_list_remove(list, 1);
+    EXPECT_EQ(removed, nullptr);
+    xor_list_destroy(list);
+}
+
+/**
+ * @brief Test stack push when full
+ */
+TEST(StackTest, PushWhenFull) {
+    Stack* stack = stack_create();
+    Recipe* r = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    
+    for (int i = 0; i < UNDO_STACK_SIZE; i++) {
+        stack_push(stack, OP_ADD, r);
+    }
+    
+    EXPECT_TRUE(stack_is_full(stack));
+    EXPECT_EQ(stack_push(stack, OP_ADD, r), 1);
+    EXPECT_EQ(stack_size(stack), UNDO_STACK_SIZE);
+    
+    stack_destroy(stack);
+    recipe_destroy(r);
+}
+
+/**
+ * @brief Test queue enqueue when full
+ */
+TEST(QueueTest, EnqueueWhenFull) {
+    Queue* queue = queue_create();
+    Recipe* r = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    
+    for (int i = 0; i < WEEKLY_PLAN_SIZE; i++) {
+        queue_enqueue(queue, r);
+    }
+    
+    EXPECT_TRUE(queue_is_full(queue));
+    EXPECT_EQ(queue_enqueue(queue, r), 0);
+    
+    queue_destroy(queue);
+    recipe_destroy(r);
+}
+
+/**
+ * @brief Test heap insert when full
+ */
+TEST(HeapTest, InsertWhenFull) {
+    Heap* heap = heap_create(2);
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Salad", "Lunch", 200, 10);
+    Recipe* r3 = recipe_create(3, "Burger", "Lunch", 600, 30);
+    
+    heap_insert(heap, r1);
+    heap_insert(heap, r2);
+    EXPECT_TRUE(heap_is_full(heap));
+    EXPECT_EQ(heap_insert(heap, r3), 0);
+    
+    heap_destroy(heap);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+    recipe_destroy(r3);
+}
+
+/**
+ * @brief Test graph reset visited with vertices
+ */
+TEST(GraphTest, ResetVisitedWithVertices) {
+    Graph* graph = graph_create();
+    graph_add_vertex(graph, 1);
+    graph_add_vertex(graph, 2);
+    
+    GraphVertex* v1 = graph_find_vertex(graph, 1);
+    GraphVertex* v2 = graph_find_vertex(graph, 2);
+    v1->visited = 1;
+    v2->visited = 1;
+    
+    graph_reset_visited(graph);
+    EXPECT_EQ(v1->visited, 0);
+    EXPECT_EQ(v2->visited, 0);
+    
+    graph_destroy(graph);
+}
+
+/**
+ * @brief Test sparse matrix add entry updates counts
+ */
+TEST(SparseMatrixTest, AddEntryUpdatesCounts) {
+    SparseMatrix* matrix = sparse_matrix_create();
+    sparse_matrix_add_entry(matrix, 5, 3, 10, "Flour");
+    EXPECT_EQ(matrix->row_count, 6);
+    EXPECT_EQ(matrix->col_count, 4);
+    EXPECT_EQ(matrix->entry_count, 1);
+    sparse_matrix_destroy(matrix);
+}
+
+/**
+ * @brief Test recipe compare by calories equal
+ */
+TEST(RecipeTest, CompareByCaloriesEqual) {
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Burger", "Lunch", 800, 30);
+    EXPECT_EQ(recipe_compare_by_calories(r1, r2), 0);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+}
+
+/**
+ * @brief Test recipe compare by ID equal
+ */
+TEST(RecipeTest, CompareByIDEqual) {
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(1, "Burger", "Lunch", 600, 30);
+    EXPECT_EQ(recipe_compare_by_id(r1, r2), 0);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+}
+
+/**
+ * @brief Test recipe save and load binary with full data
+ */
+TEST(RecipeTest, SaveLoadBinaryFullData) {
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    recipe_add_ingredient(r1, "Flour");
+    recipe_add_ingredient(r1, "Cheese");
+    recipe_set_instructions(r1, "Bake for 20 minutes");
+    
+    const char* filename = "test_recipe_full.bin";
+    EXPECT_EQ(recipe_save_binary(r1, filename), 1);
+    
+    Recipe* loaded = recipe_load_binary(filename);
+    ASSERT_NE(loaded, nullptr);
+    EXPECT_EQ(loaded->id, 1);
+    EXPECT_STREQ(loaded->name, "Pizza");
+    EXPECT_EQ(loaded->ingredient_count, 2);
+    EXPECT_STREQ(loaded->ingredients[0], "Flour");
+    
+    remove(filename);
+    recipe_destroy(r1);
+    recipe_destroy(loaded);
+}
+
+/**
+ * @brief Test recipe save array binary with multiple recipes
+ */
+TEST(RecipeTest, SaveLoadArrayBinaryMultiple) {
+    Recipe r1 = {1, "Pizza", "Lunch", 800, 45, {"Flour", "Cheese"}, 2, "Bake"};
+    Recipe r2 = {2, "Salad", "Lunch", 200, 10, {"Lettuce", "Tomato"}, 2, "Mix"};
+    Recipe recipes[] = {r1, r2};
+    
+    const char* filename = "test_recipes_array.bin";
+    EXPECT_EQ(recipe_save_array_binary(recipes, 2, filename), 1);
+    
+    int count = 0;
+    Recipe* loaded = recipe_load_array_binary(filename, &count);
+    ASSERT_NE(loaded, nullptr);
+    EXPECT_EQ(count, 2);
+    EXPECT_EQ(loaded[0].id, 1);
+    EXPECT_EQ(loaded[1].id, 2);
+    
+    remove(filename);
+    free(loaded);
+}
+
+/**
+ * @brief Test list save and load binary
+ */
+TEST(LinkedListTest, SaveLoadBinary) {
+    List* list = list_create();
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Salad", "Lunch", 200, 10);
+    list_insert_tail(list, r1);
+    list_insert_tail(list, r2);
+    
+    const char* filename = "test_list.bin";
+    EXPECT_EQ(list_save_binary(list, filename), 1);
+    
+    List* loaded = list_load_binary(filename);
+    ASSERT_NE(loaded, nullptr);
+    EXPECT_EQ(list_size(loaded), 2);
+    
+    remove(filename);
+    list_destroy(list);
+    list_destroy(loaded);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+}
+
+/**
+ * @brief Test XOR list save and load binary
+ */
+TEST(XORLinkedListTest, SaveLoadBinary) {
+    XORList* list = xor_list_create();
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Salad", "Lunch", 200, 10);
+    xor_list_insert_tail(list, r1);
+    xor_list_insert_tail(list, r2);
+    
+    const char* filename = "test_xor_list.bin";
+    EXPECT_EQ(xor_list_save_binary(list, filename), 1);
+    
+    XORList* loaded = xor_list_load_binary(filename);
+    ASSERT_NE(loaded, nullptr);
+    EXPECT_EQ(xor_list_size(loaded), 2);
+    
+    remove(filename);
+    xor_list_destroy(list);
+    xor_list_destroy(loaded);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+}
+
+/**
+ * @brief Test stack save and load binary
+ */
+TEST(StackTest, SaveLoadBinary) {
+    Stack* stack = stack_create();
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    stack_push(stack, OP_ADD, r1);
+    
+    const char* filename = "test_stack.bin";
+    EXPECT_EQ(stack_save_binary(stack, filename), 1);
+    
+    Stack* loaded = stack_load_binary(filename);
+    ASSERT_NE(loaded, nullptr);
+    EXPECT_EQ(stack_size(loaded), 1);
+    
+    remove(filename);
+    stack_destroy(stack);
+    stack_destroy(loaded);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test queue save and load binary
+ */
+TEST(QueueTest, SaveLoadBinary) {
+    Queue* queue = queue_create();
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    queue_enqueue(queue, r1);
+    
+    const char* filename = "test_queue.bin";
+    EXPECT_EQ(queue_save_binary(queue, filename), 1);
+    
+    Queue* loaded = queue_load_binary(filename);
+    ASSERT_NE(loaded, nullptr);
+    EXPECT_EQ(queue_size(loaded), 1);
+    
+    remove(filename);
+    queue_destroy(queue);
+    queue_destroy(loaded);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test heap save and load binary
+ */
+TEST(HeapTest, SaveLoadBinary) {
+    Heap* heap = heap_create(10);
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Salad", "Lunch", 200, 10);
+    heap_insert(heap, r1);
+    heap_insert(heap, r2);
+    
+    const char* filename = "test_heap.bin";
+    EXPECT_EQ(heap_save_binary(heap, filename), 1);
+    
+    Heap* loaded = heap_load_binary(filename);
+    ASSERT_NE(loaded, nullptr);
+    EXPECT_EQ(loaded->size, 2);
+    
+    remove(filename);
+    heap_destroy(heap);
+    heap_destroy(loaded);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+}
+
+/**
+ * @brief Test graph save and load binary
+ */
+TEST(GraphTest, SaveLoadBinary) {
+    Graph* graph = graph_create();
+    graph_add_vertex(graph, 1);
+    graph_add_vertex(graph, 2);
+    graph_add_edge(graph, 1, 2, "edge1");
+    
+    const char* filename = "test_graph.bin";
+    EXPECT_EQ(graph_save_binary(graph, filename), 1);
+    
+    Graph* loaded = graph_load_binary(filename);
+    ASSERT_NE(loaded, nullptr);
+    EXPECT_EQ(loaded->vertex_count, 2);
+    
+    remove(filename);
+    graph_destroy(graph);
+    graph_destroy(loaded);
+}
+
+/**
+ * @brief Test hash table save and load binary
+ */
+TEST(HashTableTest, SaveLoadBinary) {
+    HashTable* ht = hash_table_create(10);
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    hash_table_insert(ht, r1);
+    
+    const char* filename = "test_hash_table.bin";
+    EXPECT_EQ(hash_table_save_binary(ht, filename), 1);
+    
+    HashTable* loaded = hash_table_load_binary(filename);
+    ASSERT_NE(loaded, nullptr);
+    EXPECT_EQ(loaded->count, 1);
+    
+    remove(filename);
+    hash_table_destroy(ht);
+    hash_table_destroy(loaded);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test sparse matrix save and load binary
+ */
+TEST(SparseMatrixTest, SaveLoadBinary) {
+    SparseMatrix* matrix = sparse_matrix_create();
+    sparse_matrix_add_entry(matrix, 0, 0, 5, "Flour");
+    sparse_matrix_add_entry(matrix, 0, 1, 3, "Cheese");
+    
+    const char* filename = "test_sparse_matrix.bin";
+    EXPECT_EQ(sparse_matrix_save_binary(matrix, filename), 1);
+    
+    SparseMatrix* loaded = sparse_matrix_load_binary(filename);
+    ASSERT_NE(loaded, nullptr);
+    EXPECT_EQ(loaded->entry_count, 2);
+    
+    remove(filename);
+    sparse_matrix_destroy(matrix);
+    sparse_matrix_destroy(loaded);
+}
+
+/**
+ * @brief Test menu search by name with recipes
+ */
+TEST(MenuTest, SearchByNameWithRecipes) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    hash_table_insert(ctx->hash_table, r1);
+    list_insert_tail(ctx->list, r1);
+    
+    menu_search_by_name(ctx);
+    
+    app_context_destroy(ctx);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test menu search by category with recipes
+ */
+TEST(MenuTest, SearchByCategoryWithRecipes) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    hash_table_insert(ctx->hash_table, r1);
+    list_insert_tail(ctx->list, r1);
+    
+    menu_search_by_category(ctx);
+    
+    app_context_destroy(ctx);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test menu search by calorie range with recipes
+ */
+TEST(MenuTest, SearchByCalorieRangeWithRecipes) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    hash_table_insert(ctx->hash_table, r1);
+    list_insert_tail(ctx->list, r1);
+    
+    menu_search_by_calorie_range(ctx);
+    
+    app_context_destroy(ctx);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test menu sort by calories with recipes
+ */
+TEST(MenuTest, SortByCaloriesWithRecipes) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Salad", "Lunch", 200, 10);
+    hash_table_insert(ctx->hash_table, r1);
+    hash_table_insert(ctx->hash_table, r2);
+    list_insert_tail(ctx->list, r1);
+    list_insert_tail(ctx->list, r2);
+    
+    menu_sort_by_calories(ctx);
+    
+    app_context_destroy(ctx);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+}
+
+/**
+ * @brief Test menu create weekly plan with recipes
+ */
+TEST(MenuTest, CreateWeeklyPlanWithRecipes) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    hash_table_insert(ctx->hash_table, r1);
+    list_insert_tail(ctx->list, r1);
+    
+    menu_create_weekly_plan(ctx);
+    
+    app_context_destroy(ctx);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test menu view dependencies with graph
+ */
+TEST(MenuTest, ViewDependenciesWithGraph) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    graph_add_vertex(ctx->graph, 1);
+    graph_add_vertex(ctx->graph, 2);
+    graph_add_edge(ctx->graph, 1, 2, "edge1");
+    
+    menu_view_dependencies(ctx);
+    
+    app_context_destroy(ctx);
+}
+
+/**
+ * @brief Test menu find by ingredient with matrix
+ */
+TEST(MenuTest, FindByIngredientWithMatrix) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    sparse_matrix_add_entry(ctx->sparse_matrix, 0, 0, 5, "Flour");
+    
+    menu_find_by_ingredient(ctx);
+    
+    app_context_destroy(ctx);
+}
+
+/**
+ * @brief Test menu undo with operations
+ */
+TEST(MenuTest, UndoWithOperations) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    stack_push(ctx->stack, OP_ADD, r1);
+    
+    menu_undo(ctx);
+    
+    app_context_destroy(ctx);
+    recipe_destroy(r1);
+}
+
+/**
+ * @brief Test menu handle choice with all options
+ */
+TEST(MenuTest, HandleChoiceAllOptions) {
+    AppContext* ctx = app_context_create();
+    ASSERT_NE(ctx, nullptr);
+    
+    for (int i = 0; i <= 10; i++) {
+        menu_handle_choice(ctx, i);
+    }
+    
+    app_context_destroy(ctx);
+}
+
+
+/**
+ * @brief Test queue display with multiple items
+ */
+TEST(QueueTest, DisplayMultipleItems) {
+    Queue* queue = queue_create();
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Salad", "Lunch", 200, 10);
+    queue_enqueue(queue, r1);
+    queue_enqueue(queue, r2);
+    
+    queue_display(queue);
+    
+    queue_destroy(queue);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+}
+
+/**
+ * @brief Test hash table display with multiple items
+ */
+TEST(HashTableTest, DisplayMultipleItems) {
+    HashTable* ht = hash_table_create(10);
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Salad", "Lunch", 200, 10);
+    hash_table_insert(ht, r1);
+    hash_table_insert(ht, r2);
+    
+    hash_table_display(ht);
+    
+    hash_table_destroy(ht);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+}
+
+/**
+ * @brief Test sparse matrix display with entries
+ */
+TEST(SparseMatrixTest, DisplayWithEntries) {
+    SparseMatrix* matrix = sparse_matrix_create();
+    sparse_matrix_add_entry(matrix, 0, 0, 5, "Flour");
+    sparse_matrix_add_entry(matrix, 0, 1, 3, "Cheese");
+    sparse_matrix_add_entry(matrix, 1, 0, 2, "Flour");
+    
+    sparse_matrix_display(matrix);
+    
+    sparse_matrix_destroy(matrix);
+}
+
+/**
+ * @brief Test list display with multiple items
+ */
+TEST(LinkedListTest, DisplayMultipleItems) {
+    List* list = list_create();
+    Recipe* r1 = recipe_create(1, "Pizza", "Lunch", 800, 45);
+    Recipe* r2 = recipe_create(2, "Salad", "Lunch", 200, 10);
+    list_insert_tail(list, r1);
+    list_insert_tail(list, r2);
+    
+    list_display(list);
+    
+    list_destroy(list);
+    recipe_destroy(r1);
+    recipe_destroy(r2);
+}
+
+
+/**
+ * @brief Test graph display dependencies with depth
+ */
+TEST(GraphTest, DisplayDependenciesWithDepth) {
+    Graph* graph = graph_create();
+    graph_add_vertex(graph, 1);
+    graph_add_vertex(graph, 2);
+    graph_add_vertex(graph, 3);
+    graph_add_edge(graph, 1, 2, "edge1");
+    graph_add_edge(graph, 2, 3, "edge2");
+    
+    graph_display_dependencies(graph, 1, 2);
+    
+    graph_destroy(graph);
+}
+

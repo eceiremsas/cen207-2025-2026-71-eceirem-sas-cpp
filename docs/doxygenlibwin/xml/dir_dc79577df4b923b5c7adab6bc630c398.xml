@@ -12,7 +12,6 @@
     <innerfile refid="recipe_8cpp">recipe.cpp</innerfile>
     <innerfile refid="sparse__matrix_8cpp">sparse_matrix.cpp</innerfile>
     <innerfile refid="stack_8cpp">stack.cpp</innerfile>
-    <innerfile refid="recipe_2src_2temp_code_runner_file_8cpp">tempCodeRunnerFile.cpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -20,7 +20,7 @@
     <member refid="struct_app_context_1a784eed27ef924a71820bfd16d954371a" kind="function"><name>~AppContext</name></member>
     <member refid="struct_app_context_1acbbcd910e22c12d8c7325a3f95622b78" kind="function"><name>AppContext</name></member>
     <member refid="struct_app_context_1a784eed27ef924a71820bfd16d954371a" kind="function"><name>~AppContext</name></member>
-    <member refid="struct_app_context_1ad9b9d7f6568ebee7074e35ae153089b7" kind="function"><name>create</name></member>
+    <member refid="struct_app_context_1a8c3e317c40c822f1f2e0bdf0a7c70bf3" kind="function"><name>create</name></member>
     <member refid="struct_app_context_1ad9b9d7f6568ebee7074e35ae153089b7" kind="function"><name>create</name></member>
   </compound>
   <compound refid="struct_b_f_s_queue" kind="struct"><name>BFSQueue</name>
@@ -36,10 +36,7 @@
     <member refid="struct_graph_1afac2bc7d92334c0692254392ca6464f4" kind="variable"><name>vertices</name></member>
     <member refid="struct_graph_1ab20e1f45cb2c2d3c26968eadd7290f4d" kind="variable"><name>vertex_count</name></member>
     <member refid="struct_graph_1a326a6f915243eebc59b606d5c79d8405" kind="variable"><name>vertices</name></member>
-    <member refid="struct_graph_1a0770e5be4cc3e8d77db32e34f8944e20" kind="variable"><name>vertices</name></member>
     <member refid="struct_graph_1a64096724a9157efc362ff7bd2ff99bd8" kind="function"><name>dfsCycleHelper</name></member>
-    <member refid="struct_graph_1a971d05259d030a81a36b809f14db04a7" kind="function"><name>findVertex</name></member>
-    <member refid="struct_graph_1a21b21d38817f2c0ec05fb222f654e73a" kind="function"><name>dfsCycleHelper</name></member>
     <member refid="struct_graph_1ae4c72b8ac4d693c49800a4c7e273654f" kind="function"><name>Graph</name></member>
     <member refid="struct_graph_1a0b3b4e427b55bf0b61be72467924d8a7" kind="function"><name>addVertex</name></member>
     <member refid="struct_graph_1a971d05259d030a81a36b809f14db04a7" kind="function"><name>findVertex</name></member>
@@ -50,46 +47,33 @@
     <member refid="struct_graph_1ac6dcb77084447618b65514ce25bd7d2a" kind="function"><name>getVertexCount</name></member>
     <member refid="struct_graph_1ac6192a41101102ca8aa6acca607c84f3" kind="function"><name>clear</name></member>
     <member refid="struct_graph_1a902c5b3eacb66d60752525ab23297a95" kind="function"><name>~Graph</name></member>
-    <member refid="struct_graph_1a90961be426ad80001cbc103b6385df31" kind="function"><name>Graph</name></member>
-    <member refid="struct_graph_1a0b3b4e427b55bf0b61be72467924d8a7" kind="function"><name>addVertex</name></member>
-    <member refid="struct_graph_1a0e69376befb79f6f5dadececbcb2a01b" kind="function"><name>addEdge</name></member>
-    <member refid="struct_graph_1a00c89f9300992b2ac69104bb7ddcc868" kind="function"><name>resetVisited</name></member>
-    <member refid="struct_graph_1a52e448ac213c053062bfed6405ede84b" kind="function"><name>displayDependencies</name></member>
-    <member refid="struct_graph_1a5668aece8de3c0021417b8d00a1796ac" kind="function"><name>hasCycle</name></member>
   </compound>
-  <compound refid="struct_graph_edge" kind="struct"><name>GraphEdge</name>
+  <compound refid="struct_graph_edge" kind="class"><name>GraphEdge</name>
     <member refid="struct_graph_edge_1a9e5446f687da912ce7016923b5bdd045" kind="variable"><name>vertex_id</name></member>
-    <member refid="struct_graph_edge_1aa6e55cc398840ade9b2588ce3664651d" kind="variable"><name>edge_label</name></member>
-    <member refid="struct_graph_edge_1ab800f80484335c8fc96a5f093af6b6dc" kind="variable"><name>next</name></member>
+    <member refid="struct_graph_edge_1ac618fccff0062d097f2d600b82985930" kind="variable"><name>edge_label</name></member>
+    <member refid="struct_graph_edge_1aaeefe441a9565de755ce32b2fc326a80" kind="variable"><name>next</name></member>
     <member refid="struct_graph_edge_1a51926090dae6259f169165b9d4cd090b" kind="variable"><name>edge_label</name></member>
     <member refid="struct_graph_edge_1aa45671570b3b7c527468351e39ae3135" kind="variable"><name>next</name></member>
     <member refid="struct_graph_edge_1a01ff1bab935fe7452b561defd17fd5b1" kind="function"><name>GraphEdge</name></member>
-    <member refid="struct_graph_edge_1a01ff1bab935fe7452b561defd17fd5b1" kind="function"><name>GraphEdge</name></member>
   </compound>
-  <compound refid="struct_graph_vertex" kind="struct"><name>GraphVertex</name>
+  <compound refid="struct_graph_vertex" kind="class"><name>GraphVertex</name>
     <member refid="struct_graph_vertex_1a7c3343f6f4297cddb96216cc41747bab" kind="variable"><name>recipe_id</name></member>
-    <member refid="struct_graph_vertex_1af0f4f598619135666912aaeffeb5383f" kind="variable"><name>edges</name></member>
-    <member refid="struct_graph_vertex_1afef08c8d5ad632ed89c22e49c0a1ffb4" kind="variable"><name>visited</name></member>
+    <member refid="struct_graph_vertex_1af71962137813dcd500d4cf3cdbb270a6" kind="variable"><name>edges</name></member>
+    <member refid="struct_graph_vertex_1acfcb2f536a9d0f15bdfa6b1b222d8f65" kind="variable"><name>visited</name></member>
     <member refid="struct_graph_vertex_1adf065c6b8adfdb6b6c008cf0077d30f3" kind="variable"><name>edges</name></member>
     <member refid="struct_graph_vertex_1afef08c8d5ad632ed89c22e49c0a1ffb4" kind="variable"><name>visited</name></member>
-    <member refid="struct_graph_vertex_1a36824e3dff00a9b2e77be09eb00bc6e8" kind="function"><name>GraphVertex</name></member>
     <member refid="struct_graph_vertex_1a36824e3dff00a9b2e77be09eb00bc6e8" kind="function"><name>GraphVertex</name></member>
   </compound>
   <compound refid="struct_hash_node" kind="struct"><name>HashNode</name>
     <member refid="struct_hash_node_1ad21df694c824c7c52cb5babc8bfc2375" kind="variable"><name>recipe</name></member>
     <member refid="struct_hash_node_1a3213171b5cdc2bfab119ce74c9971e36" kind="variable"><name>next</name></member>
-    <member refid="struct_hash_node_1aaaaee66ddc529db28ba17f3a84542048" kind="variable"><name>recipe</name></member>
-    <member refid="struct_hash_node_1abf418a9d87dca4505cf61aedf0a4836a" kind="variable"><name>next</name></member>
-    <member refid="struct_hash_node_1a23a0a3f59e07dbf7bcb46520ee7455f7" kind="function"><name>HashNode</name></member>
   </compound>
   <compound refid="struct_hash_table" kind="class"><name>HashTable</name>
     <member refid="struct_hash_table_1ad732056fce42df5162c810b4dd28fca1" kind="variable"><name>size</name></member>
     <member refid="struct_hash_table_1a1136fdb10c41f4d0515d447e20d795e7" kind="variable"><name>count</name></member>
     <member refid="struct_hash_table_1a83630b321ea0c602db49745e4b6fec16" kind="variable"><name>table</name></member>
     <member refid="struct_hash_table_1a278f7b80e1d6027c5c2173b644abaf04" kind="variable"><name>table</name></member>
-    <member refid="struct_hash_table_1af12c85fccb60ea38c1e4ff279d70bf45" kind="variable"><name>table</name></member>
     <member refid="struct_hash_table_1a7a7b1b2d04ce6043e640daf5145a04f3" kind="function"><name>hashFunction</name></member>
-    <member refid="struct_hash_table_1a0f988dff5088bf4be4af1109031f30eb" kind="function"><name>hashFunction</name></member>
     <member refid="struct_hash_table_1a1a49309ccc092281e537c742bfd7a9bd" kind="function"><name>HashTable</name></member>
     <member refid="struct_hash_table_1a5f9d7f9e9e46e525d13664cbeec3c7d2" kind="function"><name>~HashTable</name></member>
     <member refid="struct_hash_table_1a3015f7d579d1b39304769d985798ac64" kind="function"><name>insert</name></member>
@@ -99,13 +83,6 @@
     <member refid="struct_hash_table_1a0d18fa4de579365ad5d78a32bbe11119" kind="function"><name>size</name></member>
     <member refid="struct_hash_table_1a7f082f038dc7e2e3babf5ea5b2620ff7" kind="function"><name>isEmpty</name></member>
     <member refid="struct_hash_table_1a94a35e0cf2ce6fa291d48138f58635ed" kind="function"><name>clear</name></member>
-    <member refid="struct_hash_table_1ac3daabe98dbe0ed77eb16f512535dec0" kind="function"><name>HashTable</name></member>
-    <member refid="struct_hash_table_1a3015f7d579d1b39304769d985798ac64" kind="function"><name>insert</name></member>
-    <member refid="struct_hash_table_1af658ef016b27561d952b79e1679a1928" kind="function"><name>search</name></member>
-    <member refid="struct_hash_table_1afea98443e6e36c6c7c8940fa515a301a" kind="function"><name>remove</name></member>
-    <member refid="struct_hash_table_1a38ad7f2bd38958c5430f74d436d920c9" kind="function"><name>display</name></member>
-    <member refid="struct_hash_table_1a816a5b28102c789b148066ef9778f64d" kind="function"><name>destroy</name></member>
-    <member refid="struct_hash_table_1ae0711d5ee5ee8379fb81a68d6a35a3bb" kind="function"><name>getCount</name></member>
   </compound>
   <compound refid="struct_heap" kind="class"><name>Heap</name>
     <member refid="struct_heap_1ac3ae85552cef8633752a8de26d1f1184" kind="variable"><name>recipes</name></member>
@@ -147,21 +124,10 @@
   <compound refid="class_linked_list" kind="class"><name>LinkedList</name>
     <member refid="class_linked_list_1a0e86fc84176f6e0450b4b417806cc2e4" kind="variable"><name>head</name></member>
     <member refid="class_linked_list_1aee597464b822b053e03bafc8f6a2c7ed" kind="variable"><name>count</name></member>
-    <member refid="class_linked_list_1af86e24d5c7a90cd5bacd0e9ae37dd131" kind="variable"><name>head</name></member>
     <member refid="class_linked_list_1afe7f78983e173f8018927cf2ad11a5aa" kind="function"><name>LinkedList</name></member>
     <member refid="class_linked_list_1a2ecd8f4fa22ab5d4b847e65dc416e3aa" kind="function"><name>~LinkedList</name></member>
     <member refid="class_linked_list_1a438bae85ccf5bd93fc20e9ad14c5110a" kind="function"><name>insertHead</name></member>
     <member refid="class_linked_list_1ab1c4a80595da1890bb21fa25496cb5e3" kind="function"><name>insertTail</name></member>
-    <member refid="class_linked_list_1a5fceea1644b23463e9219f28bb8513c4" kind="function"><name>remove</name></member>
-    <member refid="class_linked_list_1a1ee42466cd5059defeeb0af1e053b880" kind="function"><name>find</name></member>
-    <member refid="class_linked_list_1a5fc39fb2f7e7964f8556f4c3fe7b8464" kind="function"><name>display</name></member>
-    <member refid="class_linked_list_1a91532f0fd443112865b137ea29567522" kind="function"><name>size</name></member>
-    <member refid="class_linked_list_1aae39e3aa7ab58912b8f672937027485b" kind="function"><name>isEmpty</name></member>
-    <member refid="class_linked_list_1a261977565e78dd74f288d47ba5865242" kind="function"><name>clear</name></member>
-    <member refid="class_linked_list_1afe7f78983e173f8018927cf2ad11a5aa" kind="function"><name>LinkedList</name></member>
-    <member refid="class_linked_list_1a2ecd8f4fa22ab5d4b847e65dc416e3aa" kind="function"><name>~LinkedList</name></member>
-    <member refid="class_linked_list_1a242f7ceb7c12b9c6e504b26dc52a8a94" kind="function"><name>insertHead</name></member>
-    <member refid="class_linked_list_1ae9e0c864c4ff69970ebe730261b4b336" kind="function"><name>insertTail</name></member>
     <member refid="class_linked_list_1a5fceea1644b23463e9219f28bb8513c4" kind="function"><name>remove</name></member>
     <member refid="class_linked_list_1a1ee42466cd5059defeeb0af1e053b880" kind="function"><name>find</name></member>
     <member refid="class_linked_list_1a5fc39fb2f7e7964f8556f4c3fe7b8464" kind="function"><name>display</name></member>
@@ -176,9 +142,6 @@
   <compound refid="struct_list_node" kind="struct"><name>ListNode</name>
     <member refid="struct_list_node_1af098883f56bf066b15c37ea3f273482f" kind="variable"><name>recipe</name></member>
     <member refid="struct_list_node_1ac7af9e18e0586f13d59a52b3501ac4ca" kind="variable"><name>next</name></member>
-    <member refid="struct_list_node_1a830af1f8787a59b21b3219d0aaacedb2" kind="variable"><name>recipe</name></member>
-    <member refid="struct_list_node_1af44d939ae30cbeab3b37243d0b2c0ade" kind="variable"><name>next</name></member>
-    <member refid="struct_list_node_1afea2f45ff47ed1ceef6a6d24d78033c0" kind="function"><name>ListNode</name></member>
   </compound>
   <compound refid="class_coruh_1_1_utility_1_1_math_utility" kind="class"><name>Coruh::Utility::MathUtility</name>
     <member refid="class_coruh_1_1_utility_1_1_math_utility_1abe3d63ed2737ae3c006bcc5732a3d01f" kind="function"><name>calculateMean</name></member>
@@ -195,15 +158,33 @@
     <member refid="struct_matrix_entry_1afe064054e73e474a808ad3015883b9c3" kind="variable"><name>row</name></member>
     <member refid="struct_matrix_entry_1ae084b6bb5422830be3ed2797ebbb617c" kind="variable"><name>col</name></member>
     <member refid="struct_matrix_entry_1ad402a80ab39df62021e00a1890c6baf9" kind="variable"><name>value</name></member>
-    <member refid="struct_matrix_entry_1ad8b53a80918f8cb3ab84cf0ea950dd5c" kind="variable"><name>ingredient</name></member>
-    <member refid="struct_matrix_entry_1ad84f7c9e34131569a4d31c09e2ce9f89" kind="variable"><name>next</name></member>
+    <member refid="struct_matrix_entry_1aea1fe27750ad4dd4dfe7a3a1026711ce" kind="variable"><name>ingredient</name></member>
+    <member refid="struct_matrix_entry_1a2d5094cdb87970568e00c20b1fe950ec" kind="variable"><name>next</name></member>
     <member refid="struct_matrix_entry_1a45c86ecebd75c5c43fc07feb12572543" kind="variable"><name>ingredient</name></member>
     <member refid="struct_matrix_entry_1abe485e2ae6b118a94eb87e5ed906d14f" kind="variable"><name>next</name></member>
     <member refid="struct_matrix_entry_1aa9b7a9307fdce655f45ed7a90ab8ac7a" kind="function"><name>MatrixEntry</name></member>
-    <member refid="struct_matrix_entry_1aa22e36defc179467d6520ba2ffc332af" kind="function"><name>MatrixEntry</name></member>
   </compound>
   <compound refid="class_menu" kind="class"><name>Menu</name>
-    <member refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" kind="variable"><name>ctx</name></member>
+    <member refid="class_menu_1ad52027378d4a5d25c3431a2ff726ee07" kind="function"><name>clearConsole</name></member>
+    <member refid="class_menu_1a1443c99ceacc7ca955568f3fc69848d5" kind="function"><name>waitForEnter</name></member>
+    <member refid="class_menu_1ab5ba7d91a732c41831d220d8f01901c1" kind="function"><name>safeStringInput</name></member>
+    <member refid="class_menu_1a35fd14945c9e0e63f7a90a2a88c4f6e4" kind="function"><name>safeIntInput</name></member>
+    <member refid="class_menu_1a4ef90951f733fb953a6cde28b984b26c" kind="function"><name>displayMain</name></member>
+    <member refid="class_menu_1ace3d228e33ae62a9d8b0337b1cb83303" kind="function"><name>loadSampleData</name></member>
+    <member refid="class_menu_1ae6d75e6b642499c3b83857346dbbf4cd" kind="function"><name>addRecipe</name></member>
+    <member refid="class_menu_1a9768b02858482ba2136c4f3c7d0e000e" kind="function"><name>editRecipe</name></member>
+    <member refid="class_menu_1aac9c2b9a2d98f755c5b27c0adbffcdb8" kind="function"><name>deleteRecipe</name></member>
+    <member refid="class_menu_1a2442c3974c60a8110d0345605d7beefb" kind="function"><name>searchRecipes</name></member>
+    <member refid="class_menu_1ad263dec474591ad786ab095af00b7bfb" kind="function"><name>searchByName</name></member>
+    <member refid="class_menu_1a803b922854f52a653589127901d5acb7" kind="function"><name>searchByCategory</name></member>
+    <member refid="class_menu_1a1156350c533b70d8116bc3a57de33254" kind="function"><name>searchByCalorieRange</name></member>
+    <member refid="class_menu_1ab1fef8db5ccefb982d2a3fd5473f0f02" kind="function"><name>viewAllRecipes</name></member>
+    <member refid="class_menu_1ae0f3d83cdd7e6b4f462d25805f841300" kind="function"><name>sortByCalories</name></member>
+    <member refid="class_menu_1a52b4bc6c007f4181587beafa1f0298b5" kind="function"><name>createWeeklyPlan</name></member>
+    <member refid="class_menu_1ab6eadf086359f47773f22ac89606497b" kind="function"><name>viewDependencies</name></member>
+    <member refid="class_menu_1a1a0e0fae20f8b5b99ac1d91e9d430657" kind="function"><name>findByIngredient</name></member>
+    <member refid="class_menu_1add61b7795c85ed5652e3f3873efd25c4" kind="function"><name>undoLastOperation</name></member>
+    <member refid="class_menu_1ac822c7fa93fd9ed04ed2f070af5a3a1b" kind="function"><name>handleChoice</name></member>
     <member refid="class_menu_1a16bdb80a53c2d8ca16020f742eb2a422" kind="function"><name>clearConsole</name></member>
     <member refid="class_menu_1ac01b2958589ccecad9f3a0b64c73a30c" kind="function"><name>waitForEnter</name></member>
     <member refid="class_menu_1a5611bdcfb5da07ec6f7698abace2ed7b" kind="function"><name>safeStringInput</name></member>
@@ -224,48 +205,6 @@
     <member refid="class_menu_1a632004d5e9e8e571e55963cc37bb5172" kind="function"><name>findByIngredient</name></member>
     <member refid="class_menu_1a1f8445d50027ed0c2c3809d996a35367" kind="function"><name>undoLastOperation</name></member>
     <member refid="class_menu_1abde82cd0e32b36a6afd4a2a6e1f0551e" kind="function"><name>handleChoice</name></member>
-    <member refid="class_menu_1a16bdb80a53c2d8ca16020f742eb2a422" kind="function"><name>clearConsole</name></member>
-    <member refid="class_menu_1ac01b2958589ccecad9f3a0b64c73a30c" kind="function"><name>waitForEnter</name></member>
-    <member refid="class_menu_1a5611bdcfb5da07ec6f7698abace2ed7b" kind="function"><name>safeStringInput</name></member>
-    <member refid="class_menu_1a0b283e7b2906f7db9c05a05a0699303e" kind="function"><name>safeIntInput</name></member>
-    <member refid="class_menu_1aac422100403b122d7a00d2986fdace5e" kind="function"><name>displayMain</name></member>
-    <member refid="class_menu_1a037541da89d7a9e9931e621710720537" kind="function"><name>loadSampleData</name></member>
-    <member refid="class_menu_1a35aca9efc64e1695cacdadaf103fe315" kind="function"><name>addRecipe</name></member>
-    <member refid="class_menu_1acabdf8425b80fa9aad6cb0f66f0a3a8b" kind="function"><name>editRecipe</name></member>
-    <member refid="class_menu_1a1cc3c099c687a43da6d8111e97d47353" kind="function"><name>deleteRecipe</name></member>
-    <member refid="class_menu_1af1d403ece3e823927d318d1fefffbb20" kind="function"><name>searchRecipes</name></member>
-    <member refid="class_menu_1aff638fdf89ce1e11f1aa5957d49810b4" kind="function"><name>searchByName</name></member>
-    <member refid="class_menu_1a32dc85d9dca8c970e38d5107de99d497" kind="function"><name>searchByCategory</name></member>
-    <member refid="class_menu_1ac81bab3e70216dd2693accbb2fc132f3" kind="function"><name>searchByCalorieRange</name></member>
-    <member refid="class_menu_1a9ee79d31b076151f0f2a43e4ff56d5ea" kind="function"><name>viewAllRecipes</name></member>
-    <member refid="class_menu_1a730bc727dfd4c7f53158c86d2242185f" kind="function"><name>sortByCalories</name></member>
-    <member refid="class_menu_1a1cf2cb89188ce0f3efdc17c4bc1bbad5" kind="function"><name>createWeeklyPlan</name></member>
-    <member refid="class_menu_1a5e35ce862a1d691729353c4a260e8e20" kind="function"><name>viewDependencies</name></member>
-    <member refid="class_menu_1a632004d5e9e8e571e55963cc37bb5172" kind="function"><name>findByIngredient</name></member>
-    <member refid="class_menu_1a1f8445d50027ed0c2c3809d996a35367" kind="function"><name>undoLastOperation</name></member>
-    <member refid="class_menu_1abde82cd0e32b36a6afd4a2a6e1f0551e" kind="function"><name>handleChoice</name></member>
-    <member refid="class_menu_1af76eaa4a562a452b167705ad5fd87448" kind="function"><name>safeSparseAddRecipe</name></member>
-    <member refid="class_menu_1af76eaa4a562a452b167705ad5fd87448" kind="function"><name>safeSparseAddRecipe</name></member>
-    <member refid="class_menu_1af6564496c677fadcf4ad99d92b016335" kind="function"><name>Menu</name></member>
-    <member refid="class_menu_1abc5eb356f1b442b1e27c2a2912a579c8" kind="function"><name>display</name></member>
-    <member refid="class_menu_1a8657f8c69928d4898f2d6b587b8b76f0" kind="function"><name>loadSampleData</name></member>
-    <member refid="class_menu_1acddbb6fb0e281db41d099f69bdd4bcf7" kind="function"><name>addRecipe</name></member>
-    <member refid="class_menu_1aed724863673f9df5501223bcf19d16a1" kind="function"><name>viewAllRecipes</name></member>
-    <member refid="class_menu_1adafb832758ec8f2fc3763362efb65dcf" kind="function"><name>sortByCalories</name></member>
-    <member refid="class_menu_1a757734e223d510705850cbf445a7c57f" kind="function"><name>createWeeklyPlan</name></member>
-    <member refid="class_menu_1a04000a152cafd2c1147964745cde913e" kind="function"><name>viewDependencies</name></member>
-    <member refid="class_menu_1abbe8b9a0323c7a0430e2aa037f208e78" kind="function"><name>findByIngredient</name></member>
-    <member refid="class_menu_1aef4f931d2669ac9e977b2780c2697abc" kind="function"><name>handleChoice</name></member>
-    <member refid="class_menu_1af6564496c677fadcf4ad99d92b016335" kind="function"><name>Menu</name></member>
-    <member refid="class_menu_1abc5eb356f1b442b1e27c2a2912a579c8" kind="function"><name>display</name></member>
-    <member refid="class_menu_1a8657f8c69928d4898f2d6b587b8b76f0" kind="function"><name>loadSampleData</name></member>
-    <member refid="class_menu_1acddbb6fb0e281db41d099f69bdd4bcf7" kind="function"><name>addRecipe</name></member>
-    <member refid="class_menu_1aed724863673f9df5501223bcf19d16a1" kind="function"><name>viewAllRecipes</name></member>
-    <member refid="class_menu_1adafb832758ec8f2fc3763362efb65dcf" kind="function"><name>sortByCalories</name></member>
-    <member refid="class_menu_1a757734e223d510705850cbf445a7c57f" kind="function"><name>createWeeklyPlan</name></member>
-    <member refid="class_menu_1a04000a152cafd2c1147964745cde913e" kind="function"><name>viewDependencies</name></member>
-    <member refid="class_menu_1abbe8b9a0323c7a0430e2aa037f208e78" kind="function"><name>findByIngredient</name></member>
-    <member refid="class_menu_1aef4f931d2669ac9e977b2780c2697abc" kind="function"><name>handleChoice</name></member>
   </compound>
   <compound refid="struct_hash_table_1_1_node" kind="struct"><name>HashTable::Node</name>
     <member refid="struct_hash_table_1_1_node_1ae70fae2827d503f6d6d9f043cdedbb9e" kind="variable"><name>recipe</name></member>
@@ -295,13 +234,13 @@
   </compound>
   <compound refid="struct_recipe" kind="class"><name>Recipe</name>
     <member refid="struct_recipe_1ad50e37749f923e4ff1db3571bcf173ba" kind="variable"><name>id</name></member>
-    <member refid="struct_recipe_1a0feced1fd0c5dc7fca786dcf4455fd1c" kind="variable"><name>name</name></member>
-    <member refid="struct_recipe_1a820764c4de5022a91ed0b1de33b70759" kind="variable"><name>category</name></member>
+    <member refid="struct_recipe_1a714a9b5bae31983d6624a0cd71acec74" kind="variable"><name>name</name></member>
+    <member refid="struct_recipe_1af0f553e12b2265193ca139feb05640ef" kind="variable"><name>category</name></member>
     <member refid="struct_recipe_1a002bab56be7d0e7f3d959ed27648eaa0" kind="variable"><name>calories</name></member>
     <member refid="struct_recipe_1aa25de8c204e9a9051492ee4c5d8d6467" kind="variable"><name>preparation_time</name></member>
-    <member refid="struct_recipe_1ae4275d8e6368c7fcb133e099057a919c" kind="variable"><name>ingredients</name></member>
+    <member refid="struct_recipe_1a4ccae0473d3d28ed8277b4cb36c3d4fe" kind="variable"><name>ingredients</name></member>
     <member refid="struct_recipe_1aac29ee4b38aeadc035e53537ce01780a" kind="variable"><name>ingredient_count</name></member>
-    <member refid="struct_recipe_1a38f0e37ae413fbb8b9c72189d43b120f" kind="variable"><name>instructions</name></member>
+    <member refid="struct_recipe_1a65fc48f5f433d8276e667bdf90fda300" kind="variable"><name>instructions</name></member>
     <member refid="struct_recipe_1a50091cc91548be3bf3399bd0471667f1" kind="variable"><name>name</name></member>
     <member refid="struct_recipe_1a1f07e5fb045937bf62e5e66d3de679ea" kind="variable"><name>category</name></member>
     <member refid="struct_recipe_1a76147c2557ad7c36b21f13a1a98e725b" kind="variable"><name>preparationTime</name></member>
@@ -328,16 +267,9 @@
     <member refid="struct_recipe_1af5b90cedae70a72d171f8fb6a5891d14" kind="function"><name>operator&lt;</name></member>
     <member refid="struct_recipe_1a7d4b95637e8aabc4ca3c48d784832c5a" kind="function"><name>operator&gt;</name></member>
     <member refid="struct_recipe_1aaef9304796bb72fc9f28724052203e80" kind="function"><name>operator==</name></member>
-    <member refid="struct_recipe_1a69257c85a87c134b5be816b3bf9f79c5" kind="function"><name>Recipe</name></member>
-    <member refid="struct_recipe_1a3adb792b79eadbb5b7a49f77d38f9d35" kind="function"><name>Recipe</name></member>
-    <member refid="struct_recipe_1ab05da34e3f9568e4ba2301157e9b56ef" kind="function"><name>clone</name></member>
-    <member refid="struct_recipe_1ad6e9f08c24906ccff5bfbebf0bdeb433" kind="function"><name>addIngredient</name></member>
-    <member refid="struct_recipe_1ab85029ecefe164fb7d21548cfe1da91c" kind="function"><name>setInstructions</name></member>
-    <member refid="struct_recipe_1a06a0c4bd94fc0b1e285c839e45952f78" kind="function"><name>display</name></member>
-    <member refid="struct_recipe_1ad925848e2d1daf2c65f19083fe228d5d" kind="function"><name>compareByCalories</name></member>
   </compound>
   <compound refid="struct_sparse_matrix" kind="class"><name>SparseMatrix</name>
-    <member refid="struct_sparse_matrix_1a5079494b50c195eba794c73b6133e92a" kind="variable"><name>head</name></member>
+    <member refid="struct_sparse_matrix_1a6f1462037e7a711901135b67011a4ba3" kind="variable"><name>head</name></member>
     <member refid="struct_sparse_matrix_1a36a390290bd0ad50690a46c0c120b6b4" kind="variable"><name>row_count</name></member>
     <member refid="struct_sparse_matrix_1aea0a88b857ba065bfe367b547ac72a5a" kind="variable"><name>col_count</name></member>
     <member refid="struct_sparse_matrix_1a5d32364b49543c3ef09a1463488712c3" kind="variable"><name>entry_count</name></member>
@@ -356,18 +288,9 @@
     <member refid="struct_sparse_matrix_1ab40751e5749fb55d80bbaf03d4702252" kind="function"><name>getRowCount</name></member>
     <member refid="struct_sparse_matrix_1a781e02bb42e5ecda924cba746a41d581" kind="function"><name>getColCount</name></member>
     <member refid="struct_sparse_matrix_1a8624e99c23cc0d0d9f517909b85883f5" kind="function"><name>clear</name></member>
-    <member refid="struct_sparse_matrix_1ac010252479e500b34324cb10c9dd4e98" kind="function"><name>SparseMatrix</name></member>
-    <member refid="struct_sparse_matrix_1a9cf6a5df026171fb44e35b3808a8a45e" kind="function"><name>addEntry</name></member>
-    <member refid="struct_sparse_matrix_1a24047ad48b2611f81ad80eb5e049dace" kind="function"><name>getValue</name></member>
-    <member refid="struct_sparse_matrix_1a2636bc1381e384fbdcc4c030db5d1510" kind="function"><name>findRecipesByIngredient</name></member>
-    <member refid="struct_sparse_matrix_1a876ab3ed78dc29e3738446efdff06e27" kind="function"><name>countIngredientsByRecipe</name></member>
-    <member refid="struct_sparse_matrix_1ab32de7f94523a9d2561aaa33b7ba205e" kind="function"><name>display</name></member>
-    <member refid="struct_sparse_matrix_1a8624e99c23cc0d0d9f517909b85883f5" kind="function"><name>clear</name></member>
-    <member refid="struct_sparse_matrix_1a891aeef27fb5b625683b2b871fe683cc" kind="function"><name>getEntryCount</name></member>
-    <member refid="struct_sparse_matrix_1afbe2b3007c6c965952a1fbfd76870799" kind="function"><name>isEmpty</name></member>
   </compound>
   <compound refid="struct_stack" kind="class"><name>Stack</name>
-    <member refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kind="variable"><name>operations</name></member>
+    <member refid="struct_stack_1a7ccfd1fbad42b4c05ba9f90bf3be18ad" kind="variable"><name>operations</name></member>
     <member refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kind="variable"><name>top</name></member>
     <member refid="struct_stack_1a21ac26c8065ee9b47769f62c4c4e9eb5" kind="variable"><name>operations</name></member>
     <member refid="struct_stack_1a14cd1cba325bead4ff0a91bc6eb0f6f5" kind="function"><name>Stack</name></member>
@@ -379,22 +302,12 @@
     <member refid="struct_stack_1a1b7baacfc1eabbb0554852a4ea02618d" kind="function"><name>isFull</name></member>
     <member refid="struct_stack_1ac7a1567f2937ad328290387066c05c62" kind="function"><name>size</name></member>
     <member refid="struct_stack_1adab1284b8929385d4020356fb52c8139" kind="function"><name>clear</name></member>
-    <member refid="struct_stack_1a14cd1cba325bead4ff0a91bc6eb0f6f5" kind="function"><name>Stack</name></member>
-    <member refid="struct_stack_1a18c60f37b9f4e46d0103e22a1d40fdf3" kind="function"><name>push</name></member>
-    <member refid="struct_stack_1a49cb5580c63b60589bf271e1ea0d6f88" kind="function"><name>pop</name></member>
-    <member refid="struct_stack_1add7c70c1365bb71ea43f7d9b2df945ff" kind="function"><name>peek</name></member>
-    <member refid="struct_stack_1a8b137edba711ed0250dccf9ecdd52971" kind="function"><name>isEmpty</name></member>
-    <member refid="struct_stack_1a1b7baacfc1eabbb0554852a4ea02618d" kind="function"><name>isFull</name></member>
-    <member refid="struct_stack_1ac7a1567f2937ad328290387066c05c62" kind="function"><name>size</name></member>
-    <member refid="struct_stack_1adab1284b8929385d4020356fb52c8139" kind="function"><name>clear</name></member>
-    <member refid="struct_stack_1a886bdec007756716bdb7aac8b49fdb62" kind="function"><name>display</name></member>
   </compound>
   <compound refid="struct_stack_operation" kind="struct"><name>StackOperation</name>
-    <member refid="struct_stack_operation_1a9e5459b5f778ee92f661573b20fbe364" kind="variable"><name>type</name></member>
-    <member refid="struct_stack_operation_1a5b5bb536a85fc0f28b5e252a7dff617f" kind="variable"><name>recipe</name></member>
+    <member refid="struct_stack_operation_1aa236f54000de749c39b2e8db1b9cb054" kind="variable"><name>type</name></member>
+    <member refid="struct_stack_operation_1aa2c9739badb1349ad86abb6a8e3412a3" kind="variable"><name>recipe</name></member>
     <member refid="struct_stack_operation_1a9e5459b5f778ee92f661573b20fbe364" kind="variable"><name>type</name></member>
     <member refid="struct_stack_operation_1a2c97d5a48126f827e77e9f8628bf9acc" kind="variable"><name>recipe</name></member>
-    <member refid="struct_stack_operation_1a3de1e4d65970189931c5be2aefc6c0a6" kind="function"><name>StackOperation</name></member>
     <member refid="struct_stack_operation_1a3de1e4d65970189931c5be2aefc6c0a6" kind="function"><name>StackOperation</name></member>
   </compound>
   <compound refid="struct_x_o_r_list" kind="struct"><name>XORList</name>
@@ -561,9 +474,6 @@
     <member refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9" kind="enumvalue"><name>Add</name></member>
     <member refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35" kind="enumvalue"><name>Edit</name></member>
     <member refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18" kind="enumvalue"><name>Delete</name></member>
-    <member refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047ad3a0f825f42df18a5e4f006151a92edb" kind="enumvalue"><name>OP_ADD</name></member>
-    <member refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047ade36069b96f4e88cce87bb5c386cf900" kind="enumvalue"><name>OP_EDIT</name></member>
-    <member refid="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a1f880f83d676db79c78a5f4952ff9a4c" kind="enumvalue"><name>OP_DELETE</name></member>
     <member refid="stack_8h_1ae5a3d0d7d18942221d081e0bffd143ff" kind="function"><name>stack_create</name></member>
     <member refid="stack_8h_1ac23f75e620cc2a76c24293df4589b5b2" kind="function"><name>stack_push</name></member>
     <member refid="stack_8h_1a7e8112ce73793707d705d8e9e7db0921" kind="function"><name>stack_pop</name></member>
@@ -741,13 +651,9 @@
     <member refid="stack_8hpp_1a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9" kind="enumvalue"><name>Add</name></member>
     <member refid="stack_8hpp_1a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35" kind="enumvalue"><name>Edit</name></member>
     <member refid="stack_8hpp_1a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18" kind="enumvalue"><name>Delete</name></member>
-    <member refid="stack_8hpp_1a9a2c9c31d675b34f6ec35cc1ca89e047ad3a0f825f42df18a5e4f006151a92edb" kind="enumvalue"><name>OP_ADD</name></member>
-    <member refid="stack_8hpp_1a9a2c9c31d675b34f6ec35cc1ca89e047ade36069b96f4e88cce87bb5c386cf900" kind="enumvalue"><name>OP_EDIT</name></member>
-    <member refid="stack_8hpp_1a9a2c9c31d675b34f6ec35cc1ca89e047a1f880f83d676db79c78a5f4952ff9a4c" kind="enumvalue"><name>OP_DELETE</name></member>
     <member refid="stack_8hpp_1af302896a110a0713b53fca4e5e3529d8" kind="variable"><name>UNDO_STACK_SIZE</name></member>
   </compound>
   <compound refid="graph_8cpp" kind="file"><name>graph.cpp</name>
-    <member refid="graph_8cpp_1aa83461ae9374f00837b575180d2cd5e2" kind="variable"><name>MAX_GRAPH_VERTICES</name></member>
   </compound>
   <compound refid="hash__table_8cpp" kind="file"><name>hash_table.cpp</name>
   </compound>
@@ -757,67 +663,28 @@
   </compound>
   <compound refid="src_2main_8cpp" kind="file"><name>main.cpp</name>
     <member refid="src_2main_8cpp_1aa8b9c9908a9ef472d7a5a6cf35d99347" kind="function"><name>validateContext</name></member>
-    <member refid="src_2main_8cpp_1aff6c831918692405e75fc55c43424304" kind="function"><name>clearConsole</name></member>
-    <member refid="src_2main_8cpp_1a5c7c1d313663e545e15dc7118492596f" kind="function"><name>safeIntInput</name></member>
     <member refid="src_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
   <compound refid="pp_2src_2main_8cpp" kind="file"><name>main.cpp</name>
     <member refid="pp_2src_2main_8cpp_1aa8b9c9908a9ef472d7a5a6cf35d99347" kind="function"><name>validateContext</name></member>
-    <member refid="pp_2src_2main_8cpp_1aff6c831918692405e75fc55c43424304" kind="function"><name>clearConsole</name></member>
-    <member refid="pp_2src_2main_8cpp_1a5c7c1d313663e545e15dc7118492596f" kind="function"><name>safeIntInput</name></member>
     <member refid="pp_2src_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
   <compound refid="src_2menu_8cpp" kind="file"><name>menu.cpp</name>
-    <member refid="src_2menu_8cpp_1aff6c831918692405e75fc55c43424304" kind="function"><name>clearConsole</name></member>
-    <member refid="src_2menu_8cpp_1ab80f005039b55cdbdbea52bbbad3c622" kind="function"><name>waitForEnter</name></member>
-    <member refid="src_2menu_8cpp_1a19cad918a5c50d77ebaa53ac53c56c6b" kind="function"><name>safeStringInput</name></member>
-    <member refid="src_2menu_8cpp_1ab790bb98171d4a4ecc359895f72b482c" kind="function"><name>safeIntInput</name></member>
     <member refid="src_2menu_8cpp_1a3526a651681886822cccec13250be5b4" kind="function"><name>app_context_create</name></member>
     <member refid="src_2menu_8cpp_1a47f43863a0d425d022a1c7df37d73ac9" kind="function"><name>app_context_destroy</name></member>
-    <member refid="src_2menu_8cpp_1a57464d54cf94f6b514c90b096e59997d" kind="function"><name>createMenu</name></member>
   </compound>
   <compound refid="pp_2src_2menu_8cpp" kind="file"><name>menu.cpp</name>
-    <member refid="pp_2src_2menu_8cpp_1aff6c831918692405e75fc55c43424304" kind="function"><name>clearConsole</name></member>
-    <member refid="pp_2src_2menu_8cpp_1ab80f005039b55cdbdbea52bbbad3c622" kind="function"><name>waitForEnter</name></member>
-    <member refid="pp_2src_2menu_8cpp_1a19cad918a5c50d77ebaa53ac53c56c6b" kind="function"><name>safeStringInput</name></member>
-    <member refid="pp_2src_2menu_8cpp_1ab790bb98171d4a4ecc359895f72b482c" kind="function"><name>safeIntInput</name></member>
     <member refid="pp_2src_2menu_8cpp_1a3526a651681886822cccec13250be5b4" kind="function"><name>app_context_create</name></member>
     <member refid="pp_2src_2menu_8cpp_1a47f43863a0d425d022a1c7df37d73ac9" kind="function"><name>app_context_destroy</name></member>
-    <member refid="pp_2src_2menu_8cpp_1a57464d54cf94f6b514c90b096e59997d" kind="function"><name>createMenu</name></member>
   </compound>
   <compound refid="queue_8cpp" kind="file"><name>queue.cpp</name>
-    <member refid="queue_8cpp_1a9771bdb407a7026eb675edbac5809d31" kind="function"><name>queue_create</name></member>
-    <member refid="queue_8cpp_1a00a32b0e06376d1f4d1afa609b7bbd10" kind="function"><name>queue_enqueue</name></member>
-    <member refid="queue_8cpp_1a10a9464fc764a3362fa624aa6b619481" kind="function"><name>queue_dequeue</name></member>
-    <member refid="queue_8cpp_1a234b00afeb03cae5310caf13b752bd90" kind="function"><name>queue_peek</name></member>
-    <member refid="queue_8cpp_1a9ac9b90b97da28b8c1a98a5c4d784110" kind="function"><name>queue_is_empty</name></member>
-    <member refid="queue_8cpp_1ae48395a15f19bcae25ef49d99c5d551d" kind="function"><name>queue_is_full</name></member>
-    <member refid="queue_8cpp_1a325b018dee6bbc016b24698c8bcb040d" kind="function"><name>queue_display</name></member>
-    <member refid="queue_8cpp_1a85d100eab6e9830eb90e28fee9eec559" kind="function"><name>queue_size</name></member>
-    <member refid="queue_8cpp_1ad0429aac8d8b9595953b6e25e97797ce" kind="function"><name>queue_destroy</name></member>
   </compound>
   <compound refid="recipe_8cpp" kind="file"><name>recipe.cpp</name>
     <member refid="recipe_8cpp_1aa56b94b810166b8fe1b458044a6ee14a" kind="variable"><name>MAX_INGREDIENTS</name></member>
   </compound>
   <compound refid="sparse__matrix_8cpp" kind="file"><name>sparse_matrix.cpp</name>
-    <member refid="sparse__matrix_8cpp_1aabe8b04ee4fd802edbb42785a3629d70" kind="variable"><name>MAX_INGREDIENT_NAME</name></member>
-    <member refid="sparse__matrix_8cpp_1a11eccc585d69ed8b69d4f6d368a7e9ae" kind="variable"><name>MAX_RESULTS</name></member>
   </compound>
   <compound refid="stack_8cpp" kind="file"><name>stack.cpp</name>
-    <member refid="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047" kind="enum"><name>OperationType</name></member>
-    <member refid="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9" kind="enumvalue"><name>Add</name></member>
-    <member refid="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35" kind="enumvalue"><name>Edit</name></member>
-    <member refid="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18" kind="enumvalue"><name>Delete</name></member>
-    <member refid="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047ad3a0f825f42df18a5e4f006151a92edb" kind="enumvalue"><name>OP_ADD</name></member>
-    <member refid="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047ade36069b96f4e88cce87bb5c386cf900" kind="enumvalue"><name>OP_EDIT</name></member>
-    <member refid="stack_8cpp_1a9a2c9c31d675b34f6ec35cc1ca89e047a1f880f83d676db79c78a5f4952ff9a4c" kind="enumvalue"><name>OP_DELETE</name></member>
-    <member refid="stack_8cpp_1af302896a110a0713b53fca4e5e3529d8" kind="variable"><name>UNDO_STACK_SIZE</name></member>
-  </compound>
-  <compound refid="recipe_2src_2temp_code_runner_file_8cpp" kind="file"><name>tempCodeRunnerFile.cpp</name>
-    <member refid="recipe_2src_2temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kind="function"><name>ctx</name></member>
-  </compound>
-  <compound refid="temp_code_runner_file_8cpp" kind="file"><name>tempCodeRunnerFile.cpp</name>
-    <member refid="temp_code_runner_file_8cpp_1aec23fb55b8506ab613543153d8270bcd" kind="function"><name>ctx</name></member>
   </compound>
   <compound refid="sparse__matrix_8c" kind="file"><name>sparse_matrix.c</name>
     <member refid="sparse__matrix_8c_1ab766bcb718c51edfb2b98964ddd3ed9c" kind="function"><name>sparse_matrix_create</name></member>

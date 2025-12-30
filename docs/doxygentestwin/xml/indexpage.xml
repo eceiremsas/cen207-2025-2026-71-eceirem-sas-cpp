@@ -2,21 +2,22 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="indexpage" kind="page">
     <compoundname>index</compoundname>
-    <title>Calculator Project Library Generation and Testing Template</title>
+    <title>CEN207 Data Structures Project - Recipe and Nutrition Tracker</title>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para><anchor id="index_1md__r_e_a_d_m_e"/></para>
 <sect1 id="index_1autotoc_md1">
-<title>Overview</title><para>This project provides a suite of modules aimed to show how Cmake used with Ctest. Also combines doxygen documentation and test coverage reports</para>
+<title>Overview</title><para>This project implements 7 data structures and algorithms for the midterm phase of CEN207 Data Structures course. The project uses C language with CMake build system, GoogleTest for unit testing, and Doxygen for documentation.</para>
 </sect1>
 <sect1 id="index_1autotoc_md2">
 <title>Requirements</title><para><itemizedlist>
 <listitem><para>CMake &gt;= 3.12</para>
-</listitem><listitem><para>C++ Standard &gt;= 11</para>
-</listitem><listitem><para>GoogleTest (for testing modules)</para>
-</listitem><listitem><para>Visual Studio Communit Edition for Windows Generator</para>
+</listitem><listitem><para>C Standard &gt;= C99</para>
+</listitem><listitem><para>GoogleTest (automatically fetched by CMake)</para>
+</listitem><listitem><para>Visual Studio Community Edition for Windows Generator</para>
 </listitem><listitem><para>Ninja for WSL/Linux</para>
+</listitem><listitem><para>Doxygen (for documentation generation)</para>
 </listitem></itemizedlist>
 </para>
 </sect1>

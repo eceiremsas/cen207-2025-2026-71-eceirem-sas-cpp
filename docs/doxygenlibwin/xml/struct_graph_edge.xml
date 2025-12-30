@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
-  <compounddef id="struct_graph_edge" kind="struct" language="C++" prot="public">
+  <compounddef id="struct_graph_edge" kind="class" language="C++" prot="public">
     <compoundname>GraphEdge</compoundname>
     <includes refid="graph_8h" local="no">graph.h</includes>
     <sectiondef kind="public-attrib">
@@ -19,9 +19,9 @@
         </inbodydescription>
         <location file="include/graph.h" line="14" column="9" bodyfile="include/graph.h" bodystart="14" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct_graph_edge_1aa6e55cc398840ade9b2588ce3664651d" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct_graph_edge_1ac618fccff0062d097f2d600b82985930" prot="public" static="no" mutable="no">
         <type>char</type>
-        <definition>std::string GraphEdge::edge_label</definition>
+        <definition>char GraphEdge::edge_label[50]</definition>
         <argsstring>[50]</argsstring>
         <name>edge_label</name>
         <qualifiedname>GraphEdge::edge_label</qualifiedname>
@@ -33,9 +33,9 @@
         </inbodydescription>
         <location file="include/graph.h" line="15" column="10" bodyfile="include/graph.h" bodystart="15" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct_graph_edge_1ab800f80484335c8fc96a5f093af6b6dc" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct_graph_edge_1aaeefe441a9565de755ce32b2fc326a80" prot="public" static="no" mutable="no">
         <type>struct <ref refid="struct_graph_edge" kindref="compound">GraphEdge</ref> *</type>
-        <definition>std::shared_ptr&lt; GraphEdge &gt; GraphEdge::next</definition>
+        <definition>struct GraphEdge* GraphEdge::next</definition>
         <argsstring></argsstring>
         <name>next</name>
         <qualifiedname>GraphEdge::next</qualifiedname>
@@ -101,28 +101,6 @@
         </inbodydescription>
         <location file="src/recipe/header/graph.hpp" line="35" column="5" bodyfile="src/recipe/header/graph.hpp" bodystart="35" bodyend="36"/>
       </memberdef>
-      <memberdef kind="function" id="struct_graph_edge_1a01ff1bab935fe7452b561defd17fd5b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>GraphEdge::GraphEdge</definition>
-        <argsstring>(int id, const std::string &amp;label)</argsstring>
-        <name>GraphEdge</name>
-        <qualifiedname>GraphEdge::GraphEdge</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>id</declname>
-        </param>
-        <param>
-          <type>const std::string &amp;</type>
-          <declname>label</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/graph.cpp" line="24" column="5" bodyfile="src/recipe/src/graph.cpp" bodystart="24" bodyend="26"/>
-      </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
@@ -139,11 +117,10 @@
     </collaborationgraph>
     <location file="include/graph.h" line="13" column="1" bodyfile="include/graph.h" bodystart="13" bodyend="17"/>
     <listofallmembers>
-      <member refid="struct_graph_edge_1aa6e55cc398840ade9b2588ce3664651d" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>edge_label</name></member>
+      <member refid="struct_graph_edge_1ac618fccff0062d097f2d600b82985930" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>edge_label</name></member>
       <member refid="struct_graph_edge_1a51926090dae6259f169165b9d4cd090b" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>edge_label</name></member>
       <member refid="struct_graph_edge_1a01ff1bab935fe7452b561defd17fd5b1" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>GraphEdge</name></member>
-      <member refid="struct_graph_edge_1a01ff1bab935fe7452b561defd17fd5b1" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>GraphEdge</name></member>
-      <member refid="struct_graph_edge_1ab800f80484335c8fc96a5f093af6b6dc" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>next</name></member>
+      <member refid="struct_graph_edge_1aaeefe441a9565de755ce32b2fc326a80" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>next</name></member>
       <member refid="struct_graph_edge_1aa45671570b3b7c527468351e39ae3135" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>next</name></member>
       <member refid="struct_graph_edge_1a9e5446f687da912ce7016923b5bdd045" prot="public" virt="non-virtual"><scope>GraphEdge</scope><name>vertex_id</name></member>
     </listofallmembers>

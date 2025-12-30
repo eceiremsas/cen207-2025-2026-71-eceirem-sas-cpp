@@ -3,26 +3,10 @@
   <compounddef id="class_menu" kind="class" language="C++" prot="public">
     <compoundname>Menu</compoundname>
     <includes refid="header_2menu_8hpp" local="no">menu.hpp</includes>
-    <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" prot="private" static="no" mutable="no">
-        <type><ref refid="struct_app_context" kindref="compound">AppContext</ref> *</type>
-        <definition>AppContext * Menu::ctx</definition>
-        <argsstring></argsstring>
-        <name>ctx</name>
-        <qualifiedname>Menu::ctx</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/menu.cpp" line="97" column="16" bodyfile="src/recipe/src/menu.cpp" bodystart="97" bodyend="-1"/>
-      </memberdef>
-    </sectiondef>
     <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="class_menu_1a16bdb80a53c2d8ca16020f742eb2a422" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1ad52027378d4a5d25c3431a2ff726ee07" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::clearConsole</definition>
+        <definition>void Menu::clearConsole</definition>
         <argsstring>()</argsstring>
         <name>clearConsole</name>
         <qualifiedname>Menu::clearConsole</qualifiedname>
@@ -32,11 +16,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="57" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="57" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="69" bodyend="75"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1ac01b2958589ccecad9f3a0b64c73a30c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1a1443c99ceacc7ca955568f3fc69848d5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::waitForEnter</definition>
+        <definition>void Menu::waitForEnter</definition>
         <argsstring>()</argsstring>
         <name>waitForEnter</name>
         <qualifiedname>Menu::waitForEnter</qualifiedname>
@@ -46,11 +30,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="58" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="58" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="77" bodyend="80"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1a5611bdcfb5da07ec6f7698abace2ed7b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1ab5ba7d91a732c41831d220d8f01901c1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
-        <definition>static std::string Menu::safeStringInput</definition>
+        <definition>std::string Menu::safeStringInput</definition>
         <argsstring>(const std::string &amp;prompt)</argsstring>
         <name>safeStringInput</name>
         <qualifiedname>Menu::safeStringInput</qualifiedname>
@@ -64,11 +48,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="59" column="24"/>
+        <location file="src/recipe/header/menu.hpp" line="59" column="24" bodyfile="src/recipe/src/menu.cpp" bodystart="82" bodyend="87"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1a0b283e7b2906f7db9c05a05a0699303e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1a35fd14945c9e0e63f7a90a2a88c4f6e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
-        <definition>static int Menu::safeIntInput</definition>
+        <definition>int Menu::safeIntInput</definition>
         <argsstring>(const std::string &amp;prompt)</argsstring>
         <name>safeIntInput</name>
         <qualifiedname>Menu::safeIntInput</qualifiedname>
@@ -82,11 +66,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="60" column="16"/>
+        <location file="src/recipe/header/menu.hpp" line="60" column="16" bodyfile="src/recipe/src/menu.cpp" bodystart="89" bodyend="102"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1aac422100403b122d7a00d2986fdace5e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1a4ef90951f733fb953a6cde28b984b26c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::displayMain</definition>
+        <definition>void Menu::displayMain</definition>
         <argsstring>()</argsstring>
         <name>displayMain</name>
         <qualifiedname>Menu::displayMain</qualifiedname>
@@ -96,11 +80,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="63" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="63" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="104" bodyend="117"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1a037541da89d7a9e9931e621710720537" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1ace3d228e33ae62a9d8b0337b1cb83303" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::loadSampleData</definition>
+        <definition>void Menu::loadSampleData</definition>
         <argsstring>(AppContext &amp;ctx)</argsstring>
         <name>loadSampleData</name>
         <qualifiedname>Menu::loadSampleData</qualifiedname>
@@ -114,11 +98,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="64" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="64" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="119" bodyend="170"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1a35aca9efc64e1695cacdadaf103fe315" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1ae6d75e6b642499c3b83857346dbbf4cd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::addRecipe</definition>
+        <definition>void Menu::addRecipe</definition>
         <argsstring>(AppContext &amp;ctx)</argsstring>
         <name>addRecipe</name>
         <qualifiedname>Menu::addRecipe</qualifiedname>
@@ -132,11 +116,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="67" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="67" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="192" bodyend="197"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1acabdf8425b80fa9aad6cb0f66f0a3a8b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1a9768b02858482ba2136c4f3c7d0e000e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::editRecipe</definition>
+        <definition>void Menu::editRecipe</definition>
         <argsstring>(AppContext &amp;ctx)</argsstring>
         <name>editRecipe</name>
         <qualifiedname>Menu::editRecipe</qualifiedname>
@@ -150,11 +134,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="68" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="68" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="199" bodyend="204"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1a1cc3c099c687a43da6d8111e97d47353" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1aac9c2b9a2d98f755c5b27c0adbffcdb8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::deleteRecipe</definition>
+        <definition>void Menu::deleteRecipe</definition>
         <argsstring>(AppContext &amp;ctx)</argsstring>
         <name>deleteRecipe</name>
         <qualifiedname>Menu::deleteRecipe</qualifiedname>
@@ -168,11 +152,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="69" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="69" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="206" bodyend="211"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1af1d403ece3e823927d318d1fefffbb20" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1a2442c3974c60a8110d0345605d7beefb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::searchRecipes</definition>
+        <definition>void Menu::searchRecipes</definition>
         <argsstring>(AppContext &amp;ctx)</argsstring>
         <name>searchRecipes</name>
         <qualifiedname>Menu::searchRecipes</qualifiedname>
@@ -186,11 +170,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="71" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="71" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="213" bodyend="218"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1aff638fdf89ce1e11f1aa5957d49810b4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1ad263dec474591ad786ab095af00b7bfb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::searchByName</definition>
+        <definition>void Menu::searchByName</definition>
         <argsstring>(AppContext &amp;ctx)</argsstring>
         <name>searchByName</name>
         <qualifiedname>Menu::searchByName</qualifiedname>
@@ -204,11 +188,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="72" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="72" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="220" bodyend="225"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1a32dc85d9dca8c970e38d5107de99d497" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1a803b922854f52a653589127901d5acb7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::searchByCategory</definition>
+        <definition>void Menu::searchByCategory</definition>
         <argsstring>(AppContext &amp;ctx)</argsstring>
         <name>searchByCategory</name>
         <qualifiedname>Menu::searchByCategory</qualifiedname>
@@ -222,11 +206,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="73" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="73" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="227" bodyend="232"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1ac81bab3e70216dd2693accbb2fc132f3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1a1156350c533b70d8116bc3a57de33254" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::searchByCalorieRange</definition>
+        <definition>void Menu::searchByCalorieRange</definition>
         <argsstring>(AppContext &amp;ctx)</argsstring>
         <name>searchByCalorieRange</name>
         <qualifiedname>Menu::searchByCalorieRange</qualifiedname>
@@ -240,11 +224,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="74" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="74" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="234" bodyend="239"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1a9ee79d31b076151f0f2a43e4ff56d5ea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1ab1fef8db5ccefb982d2a3fd5473f0f02" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::viewAllRecipes</definition>
+        <definition>void Menu::viewAllRecipes</definition>
         <argsstring>(AppContext &amp;ctx)</argsstring>
         <name>viewAllRecipes</name>
         <qualifiedname>Menu::viewAllRecipes</qualifiedname>
@@ -258,11 +242,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="76" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="76" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="172" bodyend="176"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1a730bc727dfd4c7f53158c86d2242185f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1ae0f3d83cdd7e6b4f462d25805f841300" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::sortByCalories</definition>
+        <definition>void Menu::sortByCalories</definition>
         <argsstring>(AppContext &amp;ctx)</argsstring>
         <name>sortByCalories</name>
         <qualifiedname>Menu::sortByCalories</qualifiedname>
@@ -276,11 +260,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="77" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="77" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="241" bodyend="250"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1a1cf2cb89188ce0f3efdc17c4bc1bbad5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1a52b4bc6c007f4181587beafa1f0298b5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::createWeeklyPlan</definition>
+        <definition>void Menu::createWeeklyPlan</definition>
         <argsstring>(AppContext &amp;ctx)</argsstring>
         <name>createWeeklyPlan</name>
         <qualifiedname>Menu::createWeeklyPlan</qualifiedname>
@@ -294,11 +278,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="78" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="78" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="252" bodyend="257"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1a5e35ce862a1d691729353c4a260e8e20" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1ab6eadf086359f47773f22ac89606497b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::viewDependencies</definition>
+        <definition>void Menu::viewDependencies</definition>
         <argsstring>(AppContext &amp;ctx)</argsstring>
         <name>viewDependencies</name>
         <qualifiedname>Menu::viewDependencies</qualifiedname>
@@ -312,11 +296,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="79" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="79" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="259" bodyend="265"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1a632004d5e9e8e571e55963cc37bb5172" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1a1a0e0fae20f8b5b99ac1d91e9d430657" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::findByIngredient</definition>
+        <definition>void Menu::findByIngredient</definition>
         <argsstring>(AppContext &amp;ctx)</argsstring>
         <name>findByIngredient</name>
         <qualifiedname>Menu::findByIngredient</qualifiedname>
@@ -330,11 +314,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="80" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="80" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="267" bodyend="284"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1a1f8445d50027ed0c2c3809d996a35367" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1add61b7795c85ed5652e3f3873efd25c4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::undoLastOperation</definition>
+        <definition>void Menu::undoLastOperation</definition>
         <argsstring>(AppContext &amp;ctx)</argsstring>
         <name>undoLastOperation</name>
         <qualifiedname>Menu::undoLastOperation</qualifiedname>
@@ -348,11 +332,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="81" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="81" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="286" bodyend="291"/>
       </memberdef>
-      <memberdef kind="function" id="class_menu_1abde82cd0e32b36a6afd4a2a6e1f0551e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_menu_1ac822c7fa93fd9ed04ed2f070af5a3a1b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void Menu::handleChoice</definition>
+        <definition>void Menu::handleChoice</definition>
         <argsstring>(AppContext &amp;ctx, int choice)</argsstring>
         <name>handleChoice</name>
         <qualifiedname>Menu::handleChoice</qualifiedname>
@@ -370,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="84" column="17"/>
+        <location file="src/recipe/header/menu.hpp" line="84" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="178" bodyend="189"/>
       </memberdef>
       <memberdef kind="function" id="class_menu_1a16bdb80a53c2d8ca16020f742eb2a422" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -725,547 +709,58 @@
         <location file="src/recipeapp/header/menu.hpp" line="84" column="17"/>
       </memberdef>
     </sectiondef>
-    <sectiondef kind="private-static-func">
-      <memberdef kind="function" id="class_menu_1af76eaa4a562a452b167705ad5fd87448" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void Menu::safeSparseAddRecipe</definition>
-        <argsstring>(AppContext *ctx, const Recipe *r)</argsstring>
-        <name>safeSparseAddRecipe</name>
-        <qualifiedname>Menu::safeSparseAddRecipe</qualifiedname>
-        <param>
-          <type><ref refid="struct_app_context" kindref="compound">AppContext</ref> *</type>
-          <declname>ctx</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
-          <declname>r</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/menu.cpp" line="99" column="17" bodyfile="src/recipe/src/menu.cpp" bodystart="99" bodyend="113"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1af76eaa4a562a452b167705ad5fd87448" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void Menu::safeSparseAddRecipe</definition>
-        <argsstring>(AppContext *ctx, const Recipe *r)</argsstring>
-        <name>safeSparseAddRecipe</name>
-        <qualifiedname>Menu::safeSparseAddRecipe</qualifiedname>
-        <param>
-          <type><ref refid="struct_app_context" kindref="compound">AppContext</ref> *</type>
-          <declname>ctx</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_recipe" kindref="compound">Recipe</ref> *</type>
-          <declname>r</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipeapp/src/menu.cpp" line="99" column="17" bodyfile="src/recipeapp/src/menu.cpp" bodystart="99" bodyend="113"/>
-      </memberdef>
-    </sectiondef>
-    <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_menu_1af6564496c677fadcf4ad99d92b016335" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>Menu::Menu</definition>
-        <argsstring>(AppContext *context)</argsstring>
-        <name>Menu</name>
-        <qualifiedname>Menu::Menu</qualifiedname>
-        <param>
-          <type><ref refid="struct_app_context" kindref="compound">AppContext</ref> *</type>
-          <declname>context</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/menu.cpp" line="116" column="14" bodyfile="src/recipe/src/menu.cpp" bodystart="116" bodyend="116"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1abc5eb356f1b442b1e27c2a2912a579c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::display</definition>
-        <argsstring>() const</argsstring>
-        <name>display</name>
-        <qualifiedname>Menu::display</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/menu.cpp" line="119" column="10" bodyfile="src/recipe/src/menu.cpp" bodystart="119" bodyend="133"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1a8657f8c69928d4898f2d6b587b8b76f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::loadSampleData</definition>
-        <argsstring>()</argsstring>
-        <name>loadSampleData</name>
-        <qualifiedname>Menu::loadSampleData</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/menu.cpp" line="136" column="10" bodyfile="src/recipe/src/menu.cpp" bodystart="136" bodyend="178"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1acddbb6fb0e281db41d099f69bdd4bcf7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::addRecipe</definition>
-        <argsstring>()</argsstring>
-        <name>addRecipe</name>
-        <qualifiedname>Menu::addRecipe</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/menu.cpp" line="181" column="10" bodyfile="src/recipe/src/menu.cpp" bodystart="181" bodyend="210"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1aed724863673f9df5501223bcf19d16a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::viewAllRecipes</definition>
-        <argsstring>()</argsstring>
-        <name>viewAllRecipes</name>
-        <qualifiedname>Menu::viewAllRecipes</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/menu.cpp" line="213" column="10" bodyfile="src/recipe/src/menu.cpp" bodystart="213" bodyend="217"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1adafb832758ec8f2fc3763362efb65dcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::sortByCalories</definition>
-        <argsstring>()</argsstring>
-        <name>sortByCalories</name>
-        <qualifiedname>Menu::sortByCalories</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/menu.cpp" line="220" column="10" bodyfile="src/recipe/src/menu.cpp" bodystart="220" bodyend="243"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1a757734e223d510705850cbf445a7c57f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::createWeeklyPlan</definition>
-        <argsstring>()</argsstring>
-        <name>createWeeklyPlan</name>
-        <qualifiedname>Menu::createWeeklyPlan</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/menu.cpp" line="246" column="10" bodyfile="src/recipe/src/menu.cpp" bodystart="246" bodyend="261"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1a04000a152cafd2c1147964745cde913e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::viewDependencies</definition>
-        <argsstring>()</argsstring>
-        <name>viewDependencies</name>
-        <qualifiedname>Menu::viewDependencies</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/menu.cpp" line="264" column="10" bodyfile="src/recipe/src/menu.cpp" bodystart="264" bodyend="270"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1abbe8b9a0323c7a0430e2aa037f208e78" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::findByIngredient</definition>
-        <argsstring>()</argsstring>
-        <name>findByIngredient</name>
-        <qualifiedname>Menu::findByIngredient</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/menu.cpp" line="273" column="10" bodyfile="src/recipe/src/menu.cpp" bodystart="273" bodyend="288"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1aef4f931d2669ac9e977b2780c2697abc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::handleChoice</definition>
-        <argsstring>(int choice)</argsstring>
-        <name>handleChoice</name>
-        <qualifiedname>Menu::handleChoice</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>choice</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/menu.cpp" line="291" column="10" bodyfile="src/recipe/src/menu.cpp" bodystart="291" bodyend="302"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1af6564496c677fadcf4ad99d92b016335" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>Menu::Menu</definition>
-        <argsstring>(AppContext *context)</argsstring>
-        <name>Menu</name>
-        <qualifiedname>Menu::Menu</qualifiedname>
-        <param>
-          <type><ref refid="struct_app_context" kindref="compound">AppContext</ref> *</type>
-          <declname>context</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipeapp/src/menu.cpp" line="116" column="14" bodyfile="src/recipeapp/src/menu.cpp" bodystart="116" bodyend="116"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1abc5eb356f1b442b1e27c2a2912a579c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::display</definition>
-        <argsstring>() const</argsstring>
-        <name>display</name>
-        <qualifiedname>Menu::display</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipeapp/src/menu.cpp" line="119" column="10" bodyfile="src/recipeapp/src/menu.cpp" bodystart="119" bodyend="133"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1a8657f8c69928d4898f2d6b587b8b76f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::loadSampleData</definition>
-        <argsstring>()</argsstring>
-        <name>loadSampleData</name>
-        <qualifiedname>Menu::loadSampleData</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipeapp/src/menu.cpp" line="136" column="10" bodyfile="src/recipeapp/src/menu.cpp" bodystart="136" bodyend="178"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1acddbb6fb0e281db41d099f69bdd4bcf7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::addRecipe</definition>
-        <argsstring>()</argsstring>
-        <name>addRecipe</name>
-        <qualifiedname>Menu::addRecipe</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipeapp/src/menu.cpp" line="181" column="10" bodyfile="src/recipeapp/src/menu.cpp" bodystart="181" bodyend="210"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1aed724863673f9df5501223bcf19d16a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::viewAllRecipes</definition>
-        <argsstring>()</argsstring>
-        <name>viewAllRecipes</name>
-        <qualifiedname>Menu::viewAllRecipes</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipeapp/src/menu.cpp" line="213" column="10" bodyfile="src/recipeapp/src/menu.cpp" bodystart="213" bodyend="217"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1adafb832758ec8f2fc3763362efb65dcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::sortByCalories</definition>
-        <argsstring>()</argsstring>
-        <name>sortByCalories</name>
-        <qualifiedname>Menu::sortByCalories</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipeapp/src/menu.cpp" line="220" column="10" bodyfile="src/recipeapp/src/menu.cpp" bodystart="220" bodyend="243"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1a757734e223d510705850cbf445a7c57f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::createWeeklyPlan</definition>
-        <argsstring>()</argsstring>
-        <name>createWeeklyPlan</name>
-        <qualifiedname>Menu::createWeeklyPlan</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipeapp/src/menu.cpp" line="246" column="10" bodyfile="src/recipeapp/src/menu.cpp" bodystart="246" bodyend="261"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1a04000a152cafd2c1147964745cde913e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::viewDependencies</definition>
-        <argsstring>()</argsstring>
-        <name>viewDependencies</name>
-        <qualifiedname>Menu::viewDependencies</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipeapp/src/menu.cpp" line="264" column="10" bodyfile="src/recipeapp/src/menu.cpp" bodystart="264" bodyend="270"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1abbe8b9a0323c7a0430e2aa037f208e78" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::findByIngredient</definition>
-        <argsstring>()</argsstring>
-        <name>findByIngredient</name>
-        <qualifiedname>Menu::findByIngredient</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipeapp/src/menu.cpp" line="273" column="10" bodyfile="src/recipeapp/src/menu.cpp" bodystart="273" bodyend="288"/>
-      </memberdef>
-      <memberdef kind="function" id="class_menu_1aef4f931d2669ac9e977b2780c2697abc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Menu::handleChoice</definition>
-        <argsstring>(int choice)</argsstring>
-        <name>handleChoice</name>
-        <qualifiedname>Menu::handleChoice</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>choice</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipeapp/src/menu.cpp" line="291" column="10" bodyfile="src/recipeapp/src/menu.cpp" bodystart="291" bodyend="302"/>
-      </memberdef>
-    </sectiondef>
     <briefdescription>
 <para>Provides user interface operations for managing recipes. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="2">
-        <label>AppContext</label>
-        <link refid="struct_app_context"/>
-        <childnode refid="3" relation="usage">
-          <edgelabel>+recipes</edgelabel>
-        </childnode>
-        <childnode refid="4" relation="usage">
-          <edgelabel>+hash_table</edgelabel>
-        </childnode>
-        <childnode refid="6" relation="usage">
-          <edgelabel>+list</edgelabel>
-        </childnode>
-        <childnode refid="8" relation="usage">
-          <edgelabel>+stack</edgelabel>
-        </childnode>
-        <childnode refid="10" relation="usage">
-          <edgelabel>+queue</edgelabel>
-        </childnode>
-        <childnode refid="11" relation="usage">
-          <edgelabel>+graph</edgelabel>
-        </childnode>
-        <childnode refid="14" relation="usage">
-          <edgelabel>+sparse_matrix</edgelabel>
-        </childnode>
-      </node>
-      <node id="11">
-        <label>Graph</label>
-        <link refid="struct_graph"/>
-        <childnode refid="12" relation="usage">
-          <edgelabel>+vertices</edgelabel>
-        </childnode>
-      </node>
-      <node id="13">
-        <label>GraphEdge</label>
-        <link refid="struct_graph_edge"/>
-        <childnode refid="13" relation="usage">
-          <edgelabel>+next</edgelabel>
-        </childnode>
-      </node>
-      <node id="12">
-        <label>GraphVertex</label>
-        <link refid="struct_graph_vertex"/>
-        <childnode refid="13" relation="usage">
-          <edgelabel>+edges</edgelabel>
-        </childnode>
-      </node>
-      <node id="5">
-        <label>HashNode</label>
-        <link refid="struct_hash_node"/>
-        <childnode refid="3" relation="usage">
-          <edgelabel>+recipe</edgelabel>
-        </childnode>
-        <childnode refid="5" relation="usage">
-          <edgelabel>+next</edgelabel>
-        </childnode>
-      </node>
-      <node id="4">
-        <label>HashTable</label>
-        <link refid="struct_hash_table"/>
-        <childnode refid="5" relation="usage">
-          <edgelabel>+table</edgelabel>
-        </childnode>
-      </node>
-      <node id="6">
-        <label>List</label>
-        <link refid="struct_list"/>
-        <childnode refid="7" relation="usage">
-          <edgelabel>+head</edgelabel>
-        </childnode>
-      </node>
-      <node id="7">
-        <label>ListNode</label>
-        <link refid="struct_list_node"/>
-        <childnode refid="3" relation="usage">
-          <edgelabel>+recipe</edgelabel>
-        </childnode>
-        <childnode refid="7" relation="usage">
-          <edgelabel>+next</edgelabel>
-        </childnode>
-      </node>
-      <node id="15">
-        <label>MatrixEntry</label>
-        <link refid="struct_matrix_entry"/>
-        <childnode refid="15" relation="usage">
-          <edgelabel>+next</edgelabel>
-        </childnode>
-      </node>
       <node id="1">
         <label>Menu</label>
         <link refid="class_menu"/>
-        <childnode refid="2" relation="usage">
-          <edgelabel>-ctx</edgelabel>
-        </childnode>
-      </node>
-      <node id="10">
-        <label>Queue</label>
-        <link refid="struct_queue"/>
-        <childnode refid="3" relation="usage">
-          <edgelabel>+recipes</edgelabel>
-        </childnode>
-      </node>
-      <node id="3">
-        <label>Recipe</label>
-        <link refid="struct_recipe"/>
-      </node>
-      <node id="14">
-        <label>SparseMatrix</label>
-        <link refid="struct_sparse_matrix"/>
-        <childnode refid="15" relation="usage">
-          <edgelabel>+head</edgelabel>
-        </childnode>
-      </node>
-      <node id="8">
-        <label>Stack</label>
-        <link refid="struct_stack"/>
-        <childnode refid="9" relation="usage">
-          <edgelabel>+operations</edgelabel>
-        </childnode>
-      </node>
-      <node id="9">
-        <label>StackOperation</label>
-        <link refid="struct_stack_operation"/>
-        <childnode refid="3" relation="usage">
-          <edgelabel>+recipe</edgelabel>
-        </childnode>
       </node>
     </collaborationgraph>
     <location file="src/recipe/header/menu.hpp" line="54" column="1" bodyfile="src/recipe/header/menu.hpp" bodystart="54" bodyend="85"/>
     <listofallmembers>
+      <member refid="class_menu_1ae6d75e6b642499c3b83857346dbbf4cd" prot="public" virt="non-virtual"><scope>Menu</scope><name>addRecipe</name></member>
       <member refid="class_menu_1a35aca9efc64e1695cacdadaf103fe315" prot="public" virt="non-virtual"><scope>Menu</scope><name>addRecipe</name></member>
-      <member refid="class_menu_1acddbb6fb0e281db41d099f69bdd4bcf7" prot="public" virt="non-virtual"><scope>Menu</scope><name>addRecipe</name></member>
-      <member refid="class_menu_1a35aca9efc64e1695cacdadaf103fe315" prot="public" virt="non-virtual"><scope>Menu</scope><name>addRecipe</name></member>
-      <member refid="class_menu_1acddbb6fb0e281db41d099f69bdd4bcf7" prot="public" virt="non-virtual"><scope>Menu</scope><name>addRecipe</name></member>
+      <member refid="class_menu_1ad52027378d4a5d25c3431a2ff726ee07" prot="public" virt="non-virtual"><scope>Menu</scope><name>clearConsole</name></member>
       <member refid="class_menu_1a16bdb80a53c2d8ca16020f742eb2a422" prot="public" virt="non-virtual"><scope>Menu</scope><name>clearConsole</name></member>
-      <member refid="class_menu_1a16bdb80a53c2d8ca16020f742eb2a422" prot="public" virt="non-virtual"><scope>Menu</scope><name>clearConsole</name></member>
+      <member refid="class_menu_1a52b4bc6c007f4181587beafa1f0298b5" prot="public" virt="non-virtual"><scope>Menu</scope><name>createWeeklyPlan</name></member>
       <member refid="class_menu_1a1cf2cb89188ce0f3efdc17c4bc1bbad5" prot="public" virt="non-virtual"><scope>Menu</scope><name>createWeeklyPlan</name></member>
-      <member refid="class_menu_1a757734e223d510705850cbf445a7c57f" prot="public" virt="non-virtual"><scope>Menu</scope><name>createWeeklyPlan</name></member>
-      <member refid="class_menu_1a1cf2cb89188ce0f3efdc17c4bc1bbad5" prot="public" virt="non-virtual"><scope>Menu</scope><name>createWeeklyPlan</name></member>
-      <member refid="class_menu_1a757734e223d510705850cbf445a7c57f" prot="public" virt="non-virtual"><scope>Menu</scope><name>createWeeklyPlan</name></member>
-      <member refid="class_menu_1aab7ab6c6a7ac03571a1aecd2fabb1eb4" prot="private" virt="non-virtual"><scope>Menu</scope><name>ctx</name></member>
+      <member refid="class_menu_1aac9c2b9a2d98f755c5b27c0adbffcdb8" prot="public" virt="non-virtual"><scope>Menu</scope><name>deleteRecipe</name></member>
       <member refid="class_menu_1a1cc3c099c687a43da6d8111e97d47353" prot="public" virt="non-virtual"><scope>Menu</scope><name>deleteRecipe</name></member>
-      <member refid="class_menu_1a1cc3c099c687a43da6d8111e97d47353" prot="public" virt="non-virtual"><scope>Menu</scope><name>deleteRecipe</name></member>
-      <member refid="class_menu_1abc5eb356f1b442b1e27c2a2912a579c8" prot="public" virt="non-virtual"><scope>Menu</scope><name>display</name></member>
-      <member refid="class_menu_1abc5eb356f1b442b1e27c2a2912a579c8" prot="public" virt="non-virtual"><scope>Menu</scope><name>display</name></member>
+      <member refid="class_menu_1a4ef90951f733fb953a6cde28b984b26c" prot="public" virt="non-virtual"><scope>Menu</scope><name>displayMain</name></member>
       <member refid="class_menu_1aac422100403b122d7a00d2986fdace5e" prot="public" virt="non-virtual"><scope>Menu</scope><name>displayMain</name></member>
-      <member refid="class_menu_1aac422100403b122d7a00d2986fdace5e" prot="public" virt="non-virtual"><scope>Menu</scope><name>displayMain</name></member>
+      <member refid="class_menu_1a9768b02858482ba2136c4f3c7d0e000e" prot="public" virt="non-virtual"><scope>Menu</scope><name>editRecipe</name></member>
       <member refid="class_menu_1acabdf8425b80fa9aad6cb0f66f0a3a8b" prot="public" virt="non-virtual"><scope>Menu</scope><name>editRecipe</name></member>
-      <member refid="class_menu_1acabdf8425b80fa9aad6cb0f66f0a3a8b" prot="public" virt="non-virtual"><scope>Menu</scope><name>editRecipe</name></member>
+      <member refid="class_menu_1a1a0e0fae20f8b5b99ac1d91e9d430657" prot="public" virt="non-virtual"><scope>Menu</scope><name>findByIngredient</name></member>
       <member refid="class_menu_1a632004d5e9e8e571e55963cc37bb5172" prot="public" virt="non-virtual"><scope>Menu</scope><name>findByIngredient</name></member>
-      <member refid="class_menu_1abbe8b9a0323c7a0430e2aa037f208e78" prot="public" virt="non-virtual"><scope>Menu</scope><name>findByIngredient</name></member>
-      <member refid="class_menu_1a632004d5e9e8e571e55963cc37bb5172" prot="public" virt="non-virtual"><scope>Menu</scope><name>findByIngredient</name></member>
-      <member refid="class_menu_1abbe8b9a0323c7a0430e2aa037f208e78" prot="public" virt="non-virtual"><scope>Menu</scope><name>findByIngredient</name></member>
+      <member refid="class_menu_1ac822c7fa93fd9ed04ed2f070af5a3a1b" prot="public" virt="non-virtual"><scope>Menu</scope><name>handleChoice</name></member>
       <member refid="class_menu_1abde82cd0e32b36a6afd4a2a6e1f0551e" prot="public" virt="non-virtual"><scope>Menu</scope><name>handleChoice</name></member>
-      <member refid="class_menu_1aef4f931d2669ac9e977b2780c2697abc" prot="public" virt="non-virtual"><scope>Menu</scope><name>handleChoice</name></member>
-      <member refid="class_menu_1abde82cd0e32b36a6afd4a2a6e1f0551e" prot="public" virt="non-virtual"><scope>Menu</scope><name>handleChoice</name></member>
-      <member refid="class_menu_1aef4f931d2669ac9e977b2780c2697abc" prot="public" virt="non-virtual"><scope>Menu</scope><name>handleChoice</name></member>
+      <member refid="class_menu_1ace3d228e33ae62a9d8b0337b1cb83303" prot="public" virt="non-virtual"><scope>Menu</scope><name>loadSampleData</name></member>
       <member refid="class_menu_1a037541da89d7a9e9931e621710720537" prot="public" virt="non-virtual"><scope>Menu</scope><name>loadSampleData</name></member>
-      <member refid="class_menu_1a8657f8c69928d4898f2d6b587b8b76f0" prot="public" virt="non-virtual"><scope>Menu</scope><name>loadSampleData</name></member>
-      <member refid="class_menu_1a037541da89d7a9e9931e621710720537" prot="public" virt="non-virtual"><scope>Menu</scope><name>loadSampleData</name></member>
-      <member refid="class_menu_1a8657f8c69928d4898f2d6b587b8b76f0" prot="public" virt="non-virtual"><scope>Menu</scope><name>loadSampleData</name></member>
-      <member refid="class_menu_1af6564496c677fadcf4ad99d92b016335" prot="public" virt="non-virtual"><scope>Menu</scope><name>Menu</name></member>
-      <member refid="class_menu_1af6564496c677fadcf4ad99d92b016335" prot="public" virt="non-virtual"><scope>Menu</scope><name>Menu</name></member>
+      <member refid="class_menu_1a35fd14945c9e0e63f7a90a2a88c4f6e4" prot="public" virt="non-virtual"><scope>Menu</scope><name>safeIntInput</name></member>
       <member refid="class_menu_1a0b283e7b2906f7db9c05a05a0699303e" prot="public" virt="non-virtual"><scope>Menu</scope><name>safeIntInput</name></member>
-      <member refid="class_menu_1a0b283e7b2906f7db9c05a05a0699303e" prot="public" virt="non-virtual"><scope>Menu</scope><name>safeIntInput</name></member>
-      <member refid="class_menu_1af76eaa4a562a452b167705ad5fd87448" prot="private" virt="non-virtual"><scope>Menu</scope><name>safeSparseAddRecipe</name></member>
-      <member refid="class_menu_1af76eaa4a562a452b167705ad5fd87448" prot="private" virt="non-virtual"><scope>Menu</scope><name>safeSparseAddRecipe</name></member>
+      <member refid="class_menu_1ab5ba7d91a732c41831d220d8f01901c1" prot="public" virt="non-virtual"><scope>Menu</scope><name>safeStringInput</name></member>
       <member refid="class_menu_1a5611bdcfb5da07ec6f7698abace2ed7b" prot="public" virt="non-virtual"><scope>Menu</scope><name>safeStringInput</name></member>
-      <member refid="class_menu_1a5611bdcfb5da07ec6f7698abace2ed7b" prot="public" virt="non-virtual"><scope>Menu</scope><name>safeStringInput</name></member>
+      <member refid="class_menu_1a1156350c533b70d8116bc3a57de33254" prot="public" virt="non-virtual"><scope>Menu</scope><name>searchByCalorieRange</name></member>
       <member refid="class_menu_1ac81bab3e70216dd2693accbb2fc132f3" prot="public" virt="non-virtual"><scope>Menu</scope><name>searchByCalorieRange</name></member>
-      <member refid="class_menu_1ac81bab3e70216dd2693accbb2fc132f3" prot="public" virt="non-virtual"><scope>Menu</scope><name>searchByCalorieRange</name></member>
+      <member refid="class_menu_1a803b922854f52a653589127901d5acb7" prot="public" virt="non-virtual"><scope>Menu</scope><name>searchByCategory</name></member>
       <member refid="class_menu_1a32dc85d9dca8c970e38d5107de99d497" prot="public" virt="non-virtual"><scope>Menu</scope><name>searchByCategory</name></member>
-      <member refid="class_menu_1a32dc85d9dca8c970e38d5107de99d497" prot="public" virt="non-virtual"><scope>Menu</scope><name>searchByCategory</name></member>
+      <member refid="class_menu_1ad263dec474591ad786ab095af00b7bfb" prot="public" virt="non-virtual"><scope>Menu</scope><name>searchByName</name></member>
       <member refid="class_menu_1aff638fdf89ce1e11f1aa5957d49810b4" prot="public" virt="non-virtual"><scope>Menu</scope><name>searchByName</name></member>
-      <member refid="class_menu_1aff638fdf89ce1e11f1aa5957d49810b4" prot="public" virt="non-virtual"><scope>Menu</scope><name>searchByName</name></member>
+      <member refid="class_menu_1a2442c3974c60a8110d0345605d7beefb" prot="public" virt="non-virtual"><scope>Menu</scope><name>searchRecipes</name></member>
       <member refid="class_menu_1af1d403ece3e823927d318d1fefffbb20" prot="public" virt="non-virtual"><scope>Menu</scope><name>searchRecipes</name></member>
-      <member refid="class_menu_1af1d403ece3e823927d318d1fefffbb20" prot="public" virt="non-virtual"><scope>Menu</scope><name>searchRecipes</name></member>
+      <member refid="class_menu_1ae0f3d83cdd7e6b4f462d25805f841300" prot="public" virt="non-virtual"><scope>Menu</scope><name>sortByCalories</name></member>
       <member refid="class_menu_1a730bc727dfd4c7f53158c86d2242185f" prot="public" virt="non-virtual"><scope>Menu</scope><name>sortByCalories</name></member>
-      <member refid="class_menu_1adafb832758ec8f2fc3763362efb65dcf" prot="public" virt="non-virtual"><scope>Menu</scope><name>sortByCalories</name></member>
-      <member refid="class_menu_1a730bc727dfd4c7f53158c86d2242185f" prot="public" virt="non-virtual"><scope>Menu</scope><name>sortByCalories</name></member>
-      <member refid="class_menu_1adafb832758ec8f2fc3763362efb65dcf" prot="public" virt="non-virtual"><scope>Menu</scope><name>sortByCalories</name></member>
+      <member refid="class_menu_1add61b7795c85ed5652e3f3873efd25c4" prot="public" virt="non-virtual"><scope>Menu</scope><name>undoLastOperation</name></member>
       <member refid="class_menu_1a1f8445d50027ed0c2c3809d996a35367" prot="public" virt="non-virtual"><scope>Menu</scope><name>undoLastOperation</name></member>
-      <member refid="class_menu_1a1f8445d50027ed0c2c3809d996a35367" prot="public" virt="non-virtual"><scope>Menu</scope><name>undoLastOperation</name></member>
+      <member refid="class_menu_1ab1fef8db5ccefb982d2a3fd5473f0f02" prot="public" virt="non-virtual"><scope>Menu</scope><name>viewAllRecipes</name></member>
       <member refid="class_menu_1a9ee79d31b076151f0f2a43e4ff56d5ea" prot="public" virt="non-virtual"><scope>Menu</scope><name>viewAllRecipes</name></member>
-      <member refid="class_menu_1aed724863673f9df5501223bcf19d16a1" prot="public" virt="non-virtual"><scope>Menu</scope><name>viewAllRecipes</name></member>
-      <member refid="class_menu_1a9ee79d31b076151f0f2a43e4ff56d5ea" prot="public" virt="non-virtual"><scope>Menu</scope><name>viewAllRecipes</name></member>
-      <member refid="class_menu_1aed724863673f9df5501223bcf19d16a1" prot="public" virt="non-virtual"><scope>Menu</scope><name>viewAllRecipes</name></member>
+      <member refid="class_menu_1ab6eadf086359f47773f22ac89606497b" prot="public" virt="non-virtual"><scope>Menu</scope><name>viewDependencies</name></member>
       <member refid="class_menu_1a5e35ce862a1d691729353c4a260e8e20" prot="public" virt="non-virtual"><scope>Menu</scope><name>viewDependencies</name></member>
-      <member refid="class_menu_1a04000a152cafd2c1147964745cde913e" prot="public" virt="non-virtual"><scope>Menu</scope><name>viewDependencies</name></member>
-      <member refid="class_menu_1a5e35ce862a1d691729353c4a260e8e20" prot="public" virt="non-virtual"><scope>Menu</scope><name>viewDependencies</name></member>
-      <member refid="class_menu_1a04000a152cafd2c1147964745cde913e" prot="public" virt="non-virtual"><scope>Menu</scope><name>viewDependencies</name></member>
-      <member refid="class_menu_1ac01b2958589ccecad9f3a0b64c73a30c" prot="public" virt="non-virtual"><scope>Menu</scope><name>waitForEnter</name></member>
+      <member refid="class_menu_1a1443c99ceacc7ca955568f3fc69848d5" prot="public" virt="non-virtual"><scope>Menu</scope><name>waitForEnter</name></member>
       <member refid="class_menu_1ac01b2958589ccecad9f3a0b64c73a30c" prot="public" virt="non-virtual"><scope>Menu</scope><name>waitForEnter</name></member>
     </listofallmembers>
   </compounddef>

@@ -5,11 +5,7 @@
 Sparse Matrix implementation (C++ version).  
 
 
-{\ttfamily \#include $<$iostream$>$}\newline
-{\ttfamily \#include $<$memory$>$}\newline
-{\ttfamily \#include $<$string$>$}\newline
-{\ttfamily \#include $<$vector$>$}\newline
-{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include "{}sparse\+\_\+matrix.\+hpp"{}}\newline
 Include dependency graph for sparse\+\_\+matrix.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -17,39 +13,9 @@ Include dependency graph for sparse\+\_\+matrix.\+cpp\+:\nopagebreak
 \includegraphics[width=350pt]{sparse__matrix_8cpp__incl}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{struct_matrix_entry}{Matrix\+Entry}}
-\begin{DoxyCompactList}\small\item\em Represents a single non-\/zero entry in a sparse matrix. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{struct_sparse_matrix}{Sparse\+Matrix}}
-\begin{DoxyCompactList}\small\item\em Represents a sparse matrix storing ingredient-\/recipe relationships. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-constexpr int \mbox{\hyperlink{sparse__matrix_8cpp_aabe8b04ee4fd802edbb42785a3629d70}{MAX\+\_\+\+INGREDIENT\+\_\+\+NAME}} = 50
-\item 
-constexpr int \mbox{\hyperlink{sparse__matrix_8cpp_a11eccc585d69ed8b69d4f6d368a7e9ae}{MAX\+\_\+\+RESULTS}} = 100
-\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Sparse Matrix implementation (C++ version). 
 
 Represents a linked-\/list-\/based sparse matrix where each entry maps a recipe (column) and an ingredient (row) for efficient ingredient search. 
-
-\label{doc-var-members}
-\Hypertarget{sparse__matrix_8cpp_doc-var-members}
-\doxysubsection{Variable Documentation}
-\Hypertarget{sparse__matrix_8cpp_aabe8b04ee4fd802edbb42785a3629d70}\index{sparse\_matrix.cpp@{sparse\_matrix.cpp}!MAX\_INGREDIENT\_NAME@{MAX\_INGREDIENT\_NAME}}
-\index{MAX\_INGREDIENT\_NAME@{MAX\_INGREDIENT\_NAME}!sparse\_matrix.cpp@{sparse\_matrix.cpp}}
-\doxysubsubsection{\texorpdfstring{MAX\_INGREDIENT\_NAME}{MAX\_INGREDIENT\_NAME}}
-{\footnotesize\ttfamily \label{sparse__matrix_8cpp_aabe8b04ee4fd802edbb42785a3629d70} 
-int MAX\+\_\+\+INGREDIENT\+\_\+\+NAME = 50\hspace{0.3cm}{\ttfamily [constexpr]}}
-
-\Hypertarget{sparse__matrix_8cpp_a11eccc585d69ed8b69d4f6d368a7e9ae}\index{sparse\_matrix.cpp@{sparse\_matrix.cpp}!MAX\_RESULTS@{MAX\_RESULTS}}
-\index{MAX\_RESULTS@{MAX\_RESULTS}!sparse\_matrix.cpp@{sparse\_matrix.cpp}}
-\doxysubsubsection{\texorpdfstring{MAX\_RESULTS}{MAX\_RESULTS}}
-{\footnotesize\ttfamily \label{sparse__matrix_8cpp_a11eccc585d69ed8b69d4f6d368a7e9ae} 
-int MAX\+\_\+\+RESULTS = 100\hspace{0.3cm}{\ttfamily [constexpr]}}
-

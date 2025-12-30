@@ -35,7 +35,7 @@
     </sectiondef>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="struct_graph_1a326a6f915243eebc59b606d5c79d8405" prot="private" static="no" mutable="no">
-        <type>std::array&lt; std::shared_ptr&lt; <ref refid="struct_graph_vertex" kindref="compound">GraphVertex</ref> &gt;, <ref refid="graph_8cpp_1aa83461ae9374f00837b575180d2cd5e2" kindref="member">MAX_GRAPH_VERTICES</ref> &gt;</type>
+        <type>std::array&lt; std::shared_ptr&lt; <ref refid="struct_graph_vertex" kindref="compound">GraphVertex</ref> &gt;, <ref refid="graph_8hpp_1aa83461ae9374f00837b575180d2cd5e2" kindref="member">MAX_GRAPH_VERTICES</ref> &gt;</type>
         <definition>std::array&lt;std::shared_ptr&lt;GraphVertex&gt;, MAX_GRAPH_VERTICES&gt; Graph::vertices</definition>
         <argsstring></argsstring>
         <name>vertices</name>
@@ -47,20 +47,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/recipe/header/graph.hpp" line="57" column="16" bodyfile="src/recipe/header/graph.hpp" bodystart="57" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_graph_1a0770e5be4cc3e8d77db32e34f8944e20" prot="private" static="no" mutable="no">
-        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="struct_graph_vertex" kindref="compound">GraphVertex</ref> &gt; &gt;</type>
-        <definition>std::vector&lt;std::shared_ptr&lt;GraphVertex&gt; &gt; Graph::vertices</definition>
-        <argsstring></argsstring>
-        <name>vertices</name>
-        <qualifiedname>Graph::vertices</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/graph.cpp" line="43" column="17" bodyfile="src/recipe/src/graph.cpp" bodystart="43" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -88,51 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/graph.hpp" line="61" column="10"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_graph_1a971d05259d030a81a36b809f14db04a7" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::shared_ptr&lt; <ref refid="struct_graph_vertex" kindref="compound">GraphVertex</ref> &gt;</type>
-        <definition>std::shared_ptr&lt; GraphVertex &gt; Graph::findVertex</definition>
-        <argsstring>(int recipe_id) const</argsstring>
-        <name>findVertex</name>
-        <qualifiedname>Graph::findVertex</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>recipe_id</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/graph.cpp" line="45" column="21" bodyfile="src/recipe/src/graph.cpp" bodystart="45" bodyend="52"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_graph_1a21b21d38817f2c0ec05fb222f654e73a" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Graph::dfsCycleHelper</definition>
-        <argsstring>(int vertex_id, std::vector&lt; bool &gt; &amp;visited, std::vector&lt; bool &gt; &amp;recStack) const</argsstring>
-        <name>dfsCycleHelper</name>
-        <qualifiedname>Graph::dfsCycleHelper</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>vertex_id</declname>
-        </param>
-        <param>
-          <type>std::vector&lt; bool &gt; &amp;</type>
-          <declname>visited</declname>
-        </param>
-        <param>
-          <type>std::vector&lt; bool &gt; &amp;</type>
-          <declname>recStack</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/graph.cpp" line="54" column="10" bodyfile="src/recipe/src/graph.cpp" bodystart="54" bodyend="75"/>
+        <location file="src/recipe/header/graph.hpp" line="61" column="10" bodyfile="src/recipe/src/graph.cpp" bodystart="107" bodyend="128"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -148,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/graph.hpp" line="64" column="5"/>
+        <location file="src/recipe/header/graph.hpp" line="64" column="5" bodyfile="src/recipe/src/graph.cpp" bodystart="42" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="struct_graph_1a0b3b4e427b55bf0b61be72467924d8a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -166,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/graph.hpp" line="67" column="10"/>
+        <location file="src/recipe/header/graph.hpp" line="67" column="10" bodyfile="src/recipe/src/graph.cpp" bodystart="11" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="struct_graph_1a971d05259d030a81a36b809f14db04a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="struct_graph_vertex" kindref="compound">GraphVertex</ref> &gt;</type>
@@ -184,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/graph.hpp" line="68" column="21"/>
+        <location file="src/recipe/header/graph.hpp" line="68" column="21" bodyfile="src/recipe/src/graph.cpp" bodystart="46" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="struct_graph_1ad6a883b5623c30f2b9a011932fbb9f22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -210,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/graph.hpp" line="71" column="10"/>
+        <location file="src/recipe/header/graph.hpp" line="71" column="10" bodyfile="src/recipe/src/graph.cpp" bodystart="25" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="struct_graph_1a52e448ac213c053062bfed6405ede84b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -233,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/graph.hpp" line="74" column="10"/>
+        <location file="src/recipe/header/graph.hpp" line="74" column="10" bodyfile="src/recipe/src/graph.cpp" bodystart="65" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="struct_graph_1a00c89f9300992b2ac69104bb7ddcc868" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -247,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/graph.hpp" line="77" column="10"/>
+        <location file="src/recipe/header/graph.hpp" line="77" column="10" bodyfile="src/recipe/src/graph.cpp" bodystart="56" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="struct_graph_1a5668aece8de3c0021417b8d00a1796ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -261,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/graph.hpp" line="78" column="10"/>
+        <location file="src/recipe/header/graph.hpp" line="78" column="10" bodyfile="src/recipe/src/graph.cpp" bodystart="92" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="struct_graph_1ac6dcb77084447618b65514ce25bd7d2a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -289,7 +231,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/graph.hpp" line="84" column="10"/>
+        <location file="src/recipe/header/graph.hpp" line="84" column="10" bodyfile="src/recipe/src/graph.cpp" bodystart="131" bodyend="136"/>
       </memberdef>
       <memberdef kind="function" id="struct_graph_1a902c5b3eacb66d60752525ab23297a95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -303,116 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/graph.hpp" line="85" column="5"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_graph_1a90961be426ad80001cbc103b6385df31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Graph::Graph</definition>
-        <argsstring>()=default</argsstring>
-        <name>Graph</name>
-        <qualifiedname>Graph::Graph</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/graph.cpp" line="78" column="5"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_graph_1a0b3b4e427b55bf0b61be72467924d8a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Graph::addVertex</definition>
-        <argsstring>(int recipe_id)</argsstring>
-        <name>addVertex</name>
-        <qualifiedname>Graph::addVertex</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>recipe_id</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/graph.cpp" line="80" column="10" bodyfile="src/recipe/src/graph.cpp" bodystart="80" bodyend="90"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_graph_1a0e69376befb79f6f5dadececbcb2a01b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Graph::addEdge</definition>
-        <argsstring>(int from_id, int to_id, const std::string &amp;label)</argsstring>
-        <name>addEdge</name>
-        <qualifiedname>Graph::addEdge</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>from_id</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>to_id</declname>
-        </param>
-        <param>
-          <type>const std::string &amp;</type>
-          <declname>label</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/graph.cpp" line="92" column="10" bodyfile="src/recipe/src/graph.cpp" bodystart="92" bodyend="106"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_graph_1a00c89f9300992b2ac69104bb7ddcc868" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Graph::resetVisited</definition>
-        <argsstring>()</argsstring>
-        <name>resetVisited</name>
-        <qualifiedname>Graph::resetVisited</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/graph.cpp" line="108" column="10" bodyfile="src/recipe/src/graph.cpp" bodystart="108" bodyend="112"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_graph_1a52e448ac213c053062bfed6405ede84b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Graph::displayDependencies</definition>
-        <argsstring>(int recipe_id, int depth=0)</argsstring>
-        <name>displayDependencies</name>
-        <qualifiedname>Graph::displayDependencies</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>recipe_id</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>depth</declname>
-          <defval>0</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/graph.cpp" line="114" column="10" bodyfile="src/recipe/src/graph.cpp" bodystart="114" bodyend="138"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_graph_1a5668aece8de3c0021417b8d00a1796ac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Graph::hasCycle</definition>
-        <argsstring>() const</argsstring>
-        <name>hasCycle</name>
-        <qualifiedname>Graph::hasCycle</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/graph.cpp" line="140" column="10" bodyfile="src/recipe/src/graph.cpp" bodystart="140" bodyend="152"/>
+        <location file="src/recipe/header/graph.hpp" line="85" column="5" bodyfile="src/recipe/src/graph.cpp" bodystart="139" bodyend="141"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -445,27 +278,18 @@
     <location file="include/graph.h" line="27" column="1" bodyfile="include/graph.h" bodystart="27" bodyend="30"/>
     <listofallmembers>
       <member refid="struct_graph_1ad6a883b5623c30f2b9a011932fbb9f22" prot="public" virt="non-virtual"><scope>Graph</scope><name>addEdge</name></member>
-      <member refid="struct_graph_1a0e69376befb79f6f5dadececbcb2a01b" prot="public" virt="non-virtual"><scope>Graph</scope><name>addEdge</name></member>
-      <member refid="struct_graph_1a0b3b4e427b55bf0b61be72467924d8a7" prot="public" virt="non-virtual"><scope>Graph</scope><name>addVertex</name></member>
       <member refid="struct_graph_1a0b3b4e427b55bf0b61be72467924d8a7" prot="public" virt="non-virtual"><scope>Graph</scope><name>addVertex</name></member>
       <member refid="struct_graph_1ac6192a41101102ca8aa6acca607c84f3" prot="public" virt="non-virtual"><scope>Graph</scope><name>clear</name></member>
       <member refid="struct_graph_1a64096724a9157efc362ff7bd2ff99bd8" prot="private" virt="non-virtual"><scope>Graph</scope><name>dfsCycleHelper</name></member>
-      <member refid="struct_graph_1a21b21d38817f2c0ec05fb222f654e73a" prot="private" virt="non-virtual"><scope>Graph</scope><name>dfsCycleHelper</name></member>
-      <member refid="struct_graph_1a52e448ac213c053062bfed6405ede84b" prot="public" virt="non-virtual"><scope>Graph</scope><name>displayDependencies</name></member>
       <member refid="struct_graph_1a52e448ac213c053062bfed6405ede84b" prot="public" virt="non-virtual"><scope>Graph</scope><name>displayDependencies</name></member>
       <member refid="struct_graph_1a971d05259d030a81a36b809f14db04a7" prot="public" virt="non-virtual"><scope>Graph</scope><name>findVertex</name></member>
-      <member refid="struct_graph_1a971d05259d030a81a36b809f14db04a7" prot="private" virt="non-virtual"><scope>Graph</scope><name>findVertex</name></member>
       <member refid="struct_graph_1ac6dcb77084447618b65514ce25bd7d2a" prot="public" virt="non-virtual"><scope>Graph</scope><name>getVertexCount</name></member>
       <member refid="struct_graph_1ae4c72b8ac4d693c49800a4c7e273654f" prot="public" virt="non-virtual"><scope>Graph</scope><name>Graph</name></member>
-      <member refid="struct_graph_1a90961be426ad80001cbc103b6385df31" prot="public" virt="non-virtual"><scope>Graph</scope><name>Graph</name></member>
       <member refid="struct_graph_1a5668aece8de3c0021417b8d00a1796ac" prot="public" virt="non-virtual"><scope>Graph</scope><name>hasCycle</name></member>
-      <member refid="struct_graph_1a5668aece8de3c0021417b8d00a1796ac" prot="public" virt="non-virtual"><scope>Graph</scope><name>hasCycle</name></member>
-      <member refid="struct_graph_1a00c89f9300992b2ac69104bb7ddcc868" prot="public" virt="non-virtual"><scope>Graph</scope><name>resetVisited</name></member>
       <member refid="struct_graph_1a00c89f9300992b2ac69104bb7ddcc868" prot="public" virt="non-virtual"><scope>Graph</scope><name>resetVisited</name></member>
       <member refid="struct_graph_1ab20e1f45cb2c2d3c26968eadd7290f4d" prot="public" virt="non-virtual"><scope>Graph</scope><name>vertex_count</name></member>
       <member refid="struct_graph_1afac2bc7d92334c0692254392ca6464f4" prot="public" virt="non-virtual"><scope>Graph</scope><name>vertices</name></member>
       <member refid="struct_graph_1a326a6f915243eebc59b606d5c79d8405" prot="private" virt="non-virtual"><scope>Graph</scope><name>vertices</name></member>
-      <member refid="struct_graph_1a0770e5be4cc3e8d77db32e34f8944e20" prot="private" virt="non-virtual"><scope>Graph</scope><name>vertices</name></member>
       <member refid="struct_graph_1a902c5b3eacb66d60752525ab23297a95" prot="public" virt="non-virtual"><scope>Graph</scope><name>~Graph</name></member>
     </listofallmembers>
   </compounddef>

@@ -5,7 +5,7 @@
     <includes refid="linked__list_8h" local="no">linked_list.h</includes>
     <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct_list_1a6c5449b1dd158368840801d0cdc86f5e" prot="public" static="no" mutable="no">
-        <type><ref refid="linked__list_8h_1a3786f70ab7091247a621d0d253967e13" kindref="member">ListNode</ref><ref refid="struct_list_node" kindref="compound">ListNode</ref> *</type>
+        <type><ref refid="struct_list_node" kindref="compound">ListNode</ref> *</type>
         <definition>ListNode* List::head</definition>
         <argsstring></argsstring>
         <name>head</name>

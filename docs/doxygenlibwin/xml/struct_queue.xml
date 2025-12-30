@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/queue.hpp" line="32" column="5"/>
+        <location file="src/recipe/header/queue.hpp" line="32" column="5" bodyfile="src/recipe/src/queue.cpp" bodystart="11" bodyend="12"/>
       </memberdef>
       <memberdef kind="function" id="struct_queue_1a163f52a62cceb678725b810e7c20d8b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -139,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/queue.hpp" line="42" column="10"/>
+        <location file="src/recipe/header/queue.hpp" line="42" column="10" bodyfile="src/recipe/src/queue.cpp" bodystart="15" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="struct_queue_1a7b6ed7bf2c861972479c4e9c81f25831" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/queue.hpp" line="48" column="21"/>
+        <location file="src/recipe/header/queue.hpp" line="48" column="21" bodyfile="src/recipe/src/queue.cpp" bodystart="29" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="struct_queue_1a32a0d6d0f9741c4dc34b6229985e28e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
@@ -175,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/queue.hpp" line="54" column="21"/>
+        <location file="src/recipe/header/queue.hpp" line="54" column="21" bodyfile="src/recipe/src/queue.cpp" bodystart="39" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="struct_queue_1a7614672eed4a720bf0d78d94002bd022" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/queue.hpp" line="57" column="10"/>
+        <location file="src/recipe/header/queue.hpp" line="57" column="10" bodyfile="src/recipe/src/queue.cpp" bodystart="45" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="struct_queue_1a20268d0ce4bb6b9f9a98ad77d30a5a18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -203,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/queue.hpp" line="58" column="10"/>
+        <location file="src/recipe/header/queue.hpp" line="58" column="10" bodyfile="src/recipe/src/queue.cpp" bodystart="50" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="struct_queue_1a718803e822635006c843fc28e08041f0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -231,7 +231,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/queue.hpp" line="62" column="10"/>
+        <location file="src/recipe/header/queue.hpp" line="62" column="10" bodyfile="src/recipe/src/queue.cpp" bodystart="55" bodyend="76"/>
       </memberdef>
       <memberdef kind="function" id="struct_queue_1ab6eb2c745db2cbc5595eb2510da003cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -245,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/queue.hpp" line="65" column="10"/>
+        <location file="src/recipe/header/queue.hpp" line="65" column="10" bodyfile="src/recipe/src/queue.cpp" bodystart="79" bodyend="86"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

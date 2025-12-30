@@ -35,21 +35,13 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
       </node>
       <node id="1">
         <label>include/stack.h</label>
         <link refid="stack_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -61,22 +53,6 @@
         <link refid="menu_8c"/>
       </node>
       <node id="5">
-        <label>src/recipe/src/main.cpp</label>
-        <link refid="src_2main_8cpp"/>
-      </node>
-      <node id="6">
-        <label>src/recipe/src/menu.cpp</label>
-        <link refid="src_2menu_8cpp"/>
-      </node>
-      <node id="7">
-        <label>src/recipeapp/src/main.cpp</label>
-        <link refid="pp_2src_2main_8cpp"/>
-      </node>
-      <node id="8">
-        <label>src/recipeapp/src/menu.cpp</label>
-        <link refid="pp_2src_2menu_8cpp"/>
-      </node>
-      <node id="9">
         <label>src/stack.c</label>
         <link refid="stack_8c"/>
       </node>
@@ -151,27 +127,6 @@
           <name>Delete</name>
           <briefdescription>
 <para><ref refid="struct_recipe" kindref="compound">Recipe</ref> deletion. </para>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047ad3a0f825f42df18a5e4f006151a92edb" prot="public">
-          <name>OP_ADD</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047ade36069b96f4e88cce87bb5c386cf900" prot="public">
-          <name>OP_EDIT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="stack_8h_1a9a2c9c31d675b34f6ec35cc1ca89e047a1f880f83d676db79c78a5f4952ff9a4c" prot="public">
-          <name>OP_DELETE</name>
-          <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -535,12 +490,12 @@
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Structure<sp/>Definitions<sp/>===</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27" refid="struct_stack_operation" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="28" refid="struct_stack_operation_1a9e5459b5f778ee92f661573b20fbe364" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_stack_operation_1a9e5459b5f778ee92f661573b20fbe364" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Operation<sp/>type<sp/>(e.g.,<sp/>OP_ADD,<sp/>OP_EDIT,<sp/>OP_DELETE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="struct_stack_operation_1a5b5bb536a85fc0f28b5e252a7dff617f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/><ref refid="struct_stack_operation_1a5b5bb536a85fc0f28b5e252a7dff617f" kindref="member">recipe</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>recipe<sp/>affected<sp/>by<sp/>the<sp/>operation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="struct_stack_operation_1aa236f54000de749c39b2e8db1b9cb054" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_stack_operation_1aa236f54000de749c39b2e8db1b9cb054" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Operation<sp/>type<sp/>(e.g.,<sp/>OP_ADD,<sp/>OP_EDIT,<sp/>OP_DELETE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="struct_stack_operation_1aa2c9739badb1349ad86abb6a8e3412a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/><ref refid="struct_stack_operation_1aa2c9739badb1349ad86abb6a8e3412a3" kindref="member">recipe</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>recipe<sp/>affected<sp/>by<sp/>the<sp/>operation</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal">}<sp/><ref refid="struct_stack_operation" kindref="compound">StackOperation</ref>;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37" refid="struct_stack" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="38" refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack_operation" kindref="compound">StackOperation</ref><sp/><ref refid="struct_stack_1a6dac34556c1d3d06087ee1a015ce60a2" kindref="member">operations</ref>[<ref refid="stack_8cpp_1af302896a110a0713b53fca4e5e3529d8" kindref="member">UNDO_STACK_SIZE</ref>];<sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>holding<sp/>stored<sp/>operations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="struct_stack_1a7ccfd1fbad42b4c05ba9f90bf3be18ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack_operation" kindref="compound">StackOperation</ref><sp/><ref refid="struct_stack_1a7ccfd1fbad42b4c05ba9f90bf3be18ad" kindref="member">operations</ref>[<ref refid="stack_8hpp_1af302896a110a0713b53fca4e5e3529d8" kindref="member">UNDO_STACK_SIZE</ref>];<sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>holding<sp/>stored<sp/>operations</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39" refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_stack_1ad62fb36816185f3eef3a6f735a61f54a" kindref="member">top</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Index<sp/>of<sp/>the<sp/>top<sp/>element<sp/>(-1<sp/>if<sp/>stack<sp/>is<sp/>empty)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal">}<sp/><ref refid="struct_stack" kindref="compound">Stack</ref>;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>

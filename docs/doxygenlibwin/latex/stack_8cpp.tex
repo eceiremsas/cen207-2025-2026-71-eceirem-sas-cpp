@@ -5,10 +5,8 @@
 \doxylink{struct_stack}{Stack} implementation (C++ version).  
 
 
-{\ttfamily \#include $<$iostream$>$}\newline
-{\ttfamily \#include $<$vector$>$}\newline
-{\ttfamily \#include $<$memory$>$}\newline
-{\ttfamily \#include "{}recipe.\+h"{}}\newline
+{\ttfamily \#include "{}stack.\+hpp"{}}\newline
+{\ttfamily \#include "{}recipe.\+hpp"{}}\newline
 Include dependency graph for stack.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -16,81 +14,9 @@ Include dependency graph for stack.\+cpp\+:\nopagebreak
 \includegraphics[width=350pt]{stack_8cpp__incl}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-struct \mbox{\hyperlink{struct_stack_operation}{Stack\+Operation}}
-\begin{DoxyCompactList}\small\item\em Represents a single operation stored in the undo stack. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{struct_stack}{Stack}}
-\begin{DoxyCompactList}\small\item\em Represents a fixed-\/size stack used for undo operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Enumerations}
-\begin{DoxyCompactItemize}
-\item 
-enum class \mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}} \{ \newline
-\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9}{Add}}
-, \mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35}{Edit}}
-, \mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18}{Delete}}
-, \mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047ad3a0f825f42df18a5e4f006151a92edb}{OP\+\_\+\+ADD}}
-, \newline
-\mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047ade36069b96f4e88cce87bb5c386cf900}{OP\+\_\+\+EDIT}}
-, \mbox{\hyperlink{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047a1f880f83d676db79c78a5f4952ff9a4c}{OP\+\_\+\+DELETE}}
- \}
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-constexpr int \mbox{\hyperlink{stack_8cpp_af302896a110a0713b53fca4e5e3529d8}{UNDO\+\_\+\+STACK\+\_\+\+SIZE}} = 10
-\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \doxylink{struct_stack}{Stack} implementation (C++ version). 
 
 LIFO structure used for undo operations in the \doxylink{struct_recipe}{Recipe} \& Nutrition Tracker. 
-
-\label{doc-enum-members}
-\Hypertarget{stack_8cpp_doc-enum-members}
-\doxysubsection{Enumeration Type Documentation}
-\Hypertarget{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047}\index{stack.cpp@{stack.cpp}!OperationType@{OperationType}}
-\index{OperationType@{OperationType}!stack.cpp@{stack.cpp}}
-\doxysubsubsection{\texorpdfstring{OperationType}{OperationType}}
-{\footnotesize\ttfamily \label{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047} 
-enum class \mbox{\hyperlink{stack_8h_a9a2c9c31d675b34f6ec35cc1ca89e047}{Operation\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
-
-\begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Add@{Add}!stack.cpp@{stack.cpp}}\index{stack.cpp@{stack.cpp}!Add@{Add}}}\Hypertarget{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9}\label{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047aec211f7c20af43e742bf2570c3cb84f9} 
-Add&\doxylink{struct_recipe}{Recipe} addition. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Edit@{Edit}!stack.cpp@{stack.cpp}}\index{stack.cpp@{stack.cpp}!Edit@{Edit}}}\Hypertarget{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35}\label{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047a7dce122004969d56ae2e0245cb754d35} 
-Edit&\doxylink{struct_recipe}{Recipe} modification. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Delete@{Delete}!stack.cpp@{stack.cpp}}\index{stack.cpp@{stack.cpp}!Delete@{Delete}}}\Hypertarget{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18}\label{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047af2a6c498fb90ee345d997f888fce3b18} 
-Delete&\doxylink{struct_recipe}{Recipe} deletion. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{OP\_ADD@{OP\_ADD}!stack.cpp@{stack.cpp}}\index{stack.cpp@{stack.cpp}!OP\_ADD@{OP\_ADD}}}\Hypertarget{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047ad3a0f825f42df18a5e4f006151a92edb}\label{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047ad3a0f825f42df18a5e4f006151a92edb} 
-OP\+\_\+\+ADD&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{OP\_EDIT@{OP\_EDIT}!stack.cpp@{stack.cpp}}\index{stack.cpp@{stack.cpp}!OP\_EDIT@{OP\_EDIT}}}\Hypertarget{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047ade36069b96f4e88cce87bb5c386cf900}\label{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047ade36069b96f4e88cce87bb5c386cf900} 
-OP\+\_\+\+EDIT&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{OP\_DELETE@{OP\_DELETE}!stack.cpp@{stack.cpp}}\index{stack.cpp@{stack.cpp}!OP\_DELETE@{OP\_DELETE}}}\Hypertarget{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047a1f880f83d676db79c78a5f4952ff9a4c}\label{stack_8cpp_a9a2c9c31d675b34f6ec35cc1ca89e047a1f880f83d676db79c78a5f4952ff9a4c} 
-OP\+\_\+\+DELETE&\\
-\hline
-
-\end{DoxyEnumFields}
-
-
-\label{doc-var-members}
-\Hypertarget{stack_8cpp_doc-var-members}
-\doxysubsection{Variable Documentation}
-\Hypertarget{stack_8cpp_af302896a110a0713b53fca4e5e3529d8}\index{stack.cpp@{stack.cpp}!UNDO\_STACK\_SIZE@{UNDO\_STACK\_SIZE}}
-\index{UNDO\_STACK\_SIZE@{UNDO\_STACK\_SIZE}!stack.cpp@{stack.cpp}}
-\doxysubsubsection{\texorpdfstring{UNDO\_STACK\_SIZE}{UNDO\_STACK\_SIZE}}
-{\footnotesize\ttfamily \label{stack_8cpp_af302896a110a0713b53fca4e5e3529d8} 
-int UNDO\+\_\+\+STACK\+\_\+\+SIZE = 10\hspace{0.3cm}{\ttfamily [constexpr]}}
-
