@@ -165,12 +165,16 @@ endif()
 # Test sources (C++ for GoogleTest compatibility)
 set(TEST_SOURCES
     tests/test_recipes.cpp
+    tests/test_recipes_cpp.cpp
 )
 
 # Create test executable (C++ for GoogleTest)
 add_executable(recipe_tests ${TEST_SOURCES})
 target_link_libraries(recipe_tests recipe_lib gtest_main gtest)
-target_include_directories(recipe_tests PRIVATE ${PROJECT_SOURCE_DIR}/include)
+target_include_directories(recipe_tests PRIVATE 
+    ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/src/recipe/header
+)
 set_target_properties(recipe_tests PROPERTIES LINKER_LANGUAGE CXX)
 # Set runtime library to match the C library (MTd for Debug, MT for Release)
 if(MSVC)
