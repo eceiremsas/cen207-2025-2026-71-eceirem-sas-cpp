@@ -12,7 +12,7 @@ var searchData=
   ['hash_5ftable_5fsearch_9',['hash_table_search',['../hash__table_8h.html#a492aaf8bb9282349d9fc08a55efb3b18',1,'hash_table_search(HashTable *ht, int id):&#160;hash_table.c'],['../hash__table_8c.html#a492aaf8bb9282349d9fc08a55efb3b18',1,'hash_table_search(HashTable *ht, int id):&#160;hash_table.c']]],
   ['hashfunction_10',['hashFunction',['../struct_hash_table.html#a7a7b1b2d04ce6043e640daf5145a04f3',1,'HashTable']]],
   ['hashtable_11',['HashTable',['../struct_hash_table.html#a1a49309ccc092281e537c742bfd7a9bd',1,'HashTable']]],
-  ['heap_12',['Heap',['../struct_heap.html#a817e70af29601d05a9c305f8a95e45a8',1,'Heap::Heap(int maxCapacity=100)'],['../struct_heap.html#a6b0516bdc82092b0fa589e20dbe68ad2',1,'Heap::Heap(int cap)']]],
+  ['heap_12',['Heap',['../struct_heap.html#a817e70af29601d05a9c305f8a95e45a8',1,'Heap']]],
   ['heap_5fcreate_13',['heap_create',['../heap_8h.html#a8fe6b045ac2b4491f0c062395acac430',1,'heap_create(int capacity):&#160;heap.c'],['../heap_8c.html#a8fe6b045ac2b4491f0c062395acac430',1,'heap_create(int capacity):&#160;heap.c']]],
   ['heap_5fdestroy_14',['heap_destroy',['../heap_8h.html#ae73ebec7e224ac8ea213a563985a1471',1,'heap_destroy(Heap *heap):&#160;heap.c'],['../heap_8c.html#ae73ebec7e224ac8ea213a563985a1471',1,'heap_destroy(Heap *heap):&#160;heap.c']]],
   ['heap_5fextract_5fmin_15',['heap_extract_min',['../heap_8h.html#a6c39fc1e805cc98ee4d41e3fdad7161a',1,'heap_extract_min(Heap *heap):&#160;heap.c'],['../heap_8c.html#a6c39fc1e805cc98ee4d41e3fdad7161a',1,'heap_extract_min(Heap *heap):&#160;heap.c']]],
@@ -29,7 +29,6 @@ var searchData=
   ['heap_5fswap_26',['heap_swap',['../heap_8h.html#ac2fb89e79c07a9207780988bc6eff91b',1,'heap_swap(Recipe **recipe1, Recipe **recipe2):&#160;heap.c'],['../heap_8c.html#ac2fb89e79c07a9207780988bc6eff91b',1,'heap_swap(Recipe **recipe1, Recipe **recipe2):&#160;heap.c']]],
   ['heapify_5fdown_27',['heapify_down',['../heap_8h.html#aa33d7b3c74397a16d67a4f8b2ed301a5',1,'heapify_down(Heap *heap, int index):&#160;heap.c'],['../heap_8c.html#aa33d7b3c74397a16d67a4f8b2ed301a5',1,'heapify_down(Heap *heap, int index):&#160;heap.c']]],
   ['heapify_5fup_28',['heapify_up',['../heap_8h.html#a2f9f919fcbab3c57df84fa7db87d4af8',1,'heapify_up(Heap *heap, int index):&#160;heap.c'],['../heap_8c.html#a2f9f919fcbab3c57df84fa7db87d4af8',1,'heapify_up(Heap *heap, int index):&#160;heap.c']]],
-  ['heapifydown_29',['heapifyDown',['../struct_heap.html#a1e77b23e735d8ef87753ae6ca2e11a39',1,'Heap::heapifyDown(int index)'],['../struct_heap.html#a1e77b23e735d8ef87753ae6ca2e11a39',1,'Heap::heapifyDown(int index)']]],
-  ['heapifyup_30',['heapifyUp',['../struct_heap.html#a692cce19ba18f8e709358d335bbd5691',1,'Heap::heapifyUp(int index)'],['../struct_heap.html#a692cce19ba18f8e709358d335bbd5691',1,'Heap::heapifyUp(int index)']]],
-  ['heapsort_31',['heapSort',['../struct_heap.html#a5edd450baecf062227491ef34f292254',1,'Heap']]]
+  ['heapifydown_29',['heapifyDown',['../struct_heap.html#a1e77b23e735d8ef87753ae6ca2e11a39',1,'Heap']]],
+  ['heapifyup_30',['heapifyUp',['../struct_heap.html#a692cce19ba18f8e709358d335bbd5691',1,'Heap']]]
 ];

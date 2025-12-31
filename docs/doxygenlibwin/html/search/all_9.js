@@ -9,5 +9,5 @@ var searchData=
   ['entry_5fcount_6',['entry_count',['../struct_sparse_matrix.html#a5d32364b49543c3ef09a1463488712c3',1,'SparseMatrix']]],
   ['entrycount_7',['entryCount',['../struct_sparse_matrix.html#a30e236c39002837c6c028b4f609afcb0',1,'SparseMatrix']]],
   ['environment_8',['Environment',['../index.html#autotoc_md9',1,'Generate Development Environment'],['../index.html#autotoc_md3',1,'Setup Development Environment']]],
-  ['extractmin_9',['extractMin',['../struct_heap.html#a74ee7f92c266e326080aee3295a94625',1,'Heap::extractMin()'],['../struct_heap.html#a74ee7f92c266e326080aee3295a94625',1,'Heap::extractMin()']]]
+  ['extractmin_9',['extractMin',['../struct_heap.html#a74ee7f92c266e326080aee3295a94625',1,'Heap']]]
 ];

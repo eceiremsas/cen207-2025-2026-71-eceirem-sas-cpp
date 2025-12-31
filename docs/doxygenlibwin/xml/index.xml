@@ -85,20 +85,14 @@
     <member refid="struct_hash_table_1a94a35e0cf2ce6fa291d48138f58635ed" kind="function"><name>clear</name></member>
   </compound>
   <compound refid="struct_heap" kind="class"><name>Heap</name>
-    <member refid="struct_heap_1ac3ae85552cef8633752a8de26d1f1184" kind="variable"><name>recipes</name></member>
+    <member refid="struct_heap_1a4a57d247c759a7912f6621160fc593aa" kind="variable"><name>recipes</name></member>
     <member refid="struct_heap_1ac291cf589f86e95198621d33e21a05a6" kind="variable"><name>size</name></member>
     <member refid="struct_heap_1a96f55831332665f95d0231ee59311246" kind="variable"><name>capacity</name></member>
     <member refid="struct_heap_1ab613e8fe02e8e1c7a7cc95ef18e67ed8" kind="variable"><name>recipes</name></member>
     <member refid="struct_heap_1a18d58b0aeb106c2f3f42e5dfeeecfef9" kind="function"><name>parent</name></member>
     <member refid="struct_heap_1ab5202fa6c3b8a2149a7dc6b0d869e46f" kind="function"><name>leftChild</name></member>
     <member refid="struct_heap_1ac183568173ce7822c911b2bd39c1d516" kind="function"><name>rightChild</name></member>
-    <member refid="struct_heap_1a18d58b0aeb106c2f3f42e5dfeeecfef9" kind="function"><name>parent</name></member>
-    <member refid="struct_heap_1ab5202fa6c3b8a2149a7dc6b0d869e46f" kind="function"><name>leftChild</name></member>
-    <member refid="struct_heap_1ac183568173ce7822c911b2bd39c1d516" kind="function"><name>rightChild</name></member>
-    <member refid="struct_heap_1ab2c4002145e854a213409c783bc3e5f3" kind="function"><name>swap</name></member>
     <member refid="struct_heap_1af8382600fed5fc3c18049e4bbbb958c6" kind="function"><name>swapNodes</name></member>
-    <member refid="struct_heap_1a692cce19ba18f8e709358d335bbd5691" kind="function"><name>heapifyUp</name></member>
-    <member refid="struct_heap_1a1e77b23e735d8ef87753ae6ca2e11a39" kind="function"><name>heapifyDown</name></member>
     <member refid="struct_heap_1a692cce19ba18f8e709358d335bbd5691" kind="function"><name>heapifyUp</name></member>
     <member refid="struct_heap_1a1e77b23e735d8ef87753ae6ca2e11a39" kind="function"><name>heapifyDown</name></member>
     <member refid="struct_heap_1a817e70af29601d05a9c305f8a95e45a8" kind="function"><name>Heap</name></member>
@@ -110,16 +104,7 @@
     <member refid="struct_heap_1a672b1f9f5be335a29feb0d72ee5d61d7" kind="function"><name>size</name></member>
     <member refid="struct_heap_1a69c97af6f6bc2c61e92c9abc70d2f6c7" kind="function"><name>display</name></member>
     <member refid="struct_heap_1a42e6cbed41247be900004a82d7f9de9a" kind="function"><name>~Heap</name></member>
-    <member refid="struct_heap_1a6b0516bdc82092b0fa589e20dbe68ad2" kind="function"><name>Heap</name></member>
-    <member refid="struct_heap_1a0be15b94ddfdd9789ba7dfe54f814ff5" kind="function"><name>isEmpty</name></member>
-    <member refid="struct_heap_1abec5205e1390e48661c50d9e437b0448" kind="function"><name>isFull</name></member>
-    <member refid="struct_heap_1a672b1f9f5be335a29feb0d72ee5d61d7" kind="function"><name>size</name></member>
-    <member refid="struct_heap_1aadb48dcfba5b8d34e29fca2df660c563" kind="function"><name>insert</name></member>
-    <member refid="struct_heap_1a7e2e3f497068d28b08dcbdb1f69eced2" kind="function"><name>peek</name></member>
-    <member refid="struct_heap_1a74ee7f92c266e326080aee3295a94625" kind="function"><name>extractMin</name></member>
-    <member refid="struct_heap_1a42e6cbed41247be900004a82d7f9de9a" kind="function"><name>~Heap</name></member>
-    <member refid="struct_heap_1af7c247e8794a6e9b561b3cd080b16cf1" kind="function"><name>sortRecipes</name></member>
-    <member refid="struct_heap_1a5edd450baecf062227491ef34f292254" kind="function"><name>heapSort</name></member>
+    <member refid="struct_heap_1a7014befdce4133c6da726b39e7c9da30" kind="function"><name>sortRecipes</name></member>
   </compound>
   <compound refid="class_linked_list" kind="class"><name>LinkedList</name>
     <member refid="class_linked_list_1a0e86fc84176f6e0450b4b417806cc2e4" kind="variable"><name>head</name></member>

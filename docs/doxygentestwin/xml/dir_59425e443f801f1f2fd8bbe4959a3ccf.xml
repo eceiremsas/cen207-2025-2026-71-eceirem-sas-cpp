@@ -3,6 +3,7 @@
   <compounddef id="dir_59425e443f801f1f2fd8bbe4959a3ccf" kind="dir">
     <compoundname>tests</compoundname>
     <innerfile refid="test__recipes_8cpp">test_recipes.cpp</innerfile>
+    <innerfile refid="test__recipes__cpp_8cpp">test_recipes_cpp.cpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

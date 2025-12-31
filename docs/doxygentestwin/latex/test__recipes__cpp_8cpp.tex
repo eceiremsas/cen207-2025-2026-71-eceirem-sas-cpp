@@ -1,0 +1,1064 @@
+\doxysection{tests/test\+\_\+recipes\+\_\+cpp.cpp File Reference}
+\hypertarget{test__recipes__cpp_8cpp}{}\label{test__recipes__cpp_8cpp}\index{tests/test\_recipes\_cpp.cpp@{tests/test\_recipes\_cpp.cpp}}
+
+
+Comprehensive unit tests for C++ API using Google\+Test.  
+
+
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}recipe.\+hpp"{}}\newline
+{\ttfamily \#include "{}linked\+\_\+list.\+hpp"{}}\newline
+{\ttfamily \#include "{}stack.\+hpp"{}}\newline
+{\ttfamily \#include "{}queue.\+hpp"{}}\newline
+{\ttfamily \#include "{}heap.\+hpp"{}}\newline
+{\ttfamily \#include "{}graph.\+hpp"{}}\newline
+{\ttfamily \#include "{}hash\+\_\+table.\+hpp"{}}\newline
+{\ttfamily \#include "{}sparse\+\_\+matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}menu.\+hpp"{}}\newline
+Include dependency graph for test\+\_\+recipes\+\_\+cpp.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__recipes__cpp_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a9de184763516c542c3be713b6cba7d35}{TEST}} (Recipe\+Cpp\+Test, Create\+Recipe)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a62414d4183bc7252c4d6f2a093a7e0b4}{TEST}} (Recipe\+Cpp\+Test, Add\+Ingredient)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a1635ddc51c6c83ef0e8cf0fa7269ba5e}{TEST}} (Recipe\+Cpp\+Test, Set\+And\+Get\+Methods)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a24f615a3fd7990baad7f2924ae7f8f74}{TEST}} (Recipe\+Cpp\+Test, Comparison\+Operators)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a1b61736b40aea51aa4f5605b0800a574}{TEST}} (Recipe\+Cpp\+Test, Clone)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a54d862560fd3699de4eabe926918d46a}{TEST}} (Recipe\+Cpp\+Test, Display)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_af09e1f826ea013180c6b235f376345f9}{TEST}} (Linked\+List\+Cpp\+Test, Create\+List)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_aaefe059ac2e4ce26bf227e8fd6fb3dff}{TEST}} (Linked\+List\+Cpp\+Test, Insert\+Head)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a6d55a1879b398e94f4a264249db6b278}{TEST}} (Linked\+List\+Cpp\+Test, Insert\+Tail)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_abeb8042644347b8046622b23d212899a}{TEST}} (Linked\+List\+Cpp\+Test, Remove)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_aae48e8b6790aeb9708d399ff94731f41}{TEST}} (Linked\+List\+Cpp\+Test, Clear)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a590038c110a8fdada87ce69fff5a1fd4}{TEST}} (Linked\+List\+Cpp\+Test, Display)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_aa195b61ac0f4385d64604b8306f6303c}{TEST}} (Stack\+Cpp\+Test, Create\+Stack)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_ac356a3f7c9a813f0bde2adc63af08428}{TEST}} (Stack\+Cpp\+Test, Push\+Pop)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a9943d21b439edb30b92d651e1c647545}{TEST}} (Stack\+Cpp\+Test, Peek)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_ad2695f906e553fba7680277f828a633f}{TEST}} (Stack\+Cpp\+Test, Clear)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_aa71acb7a3462f9092c6c04a2d05d6a48}{TEST}} (Queue\+Cpp\+Test, Create\+Queue)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a0ff8263bc0e12c925c7fa39b3dc2a150}{TEST}} (Queue\+Cpp\+Test, Enqueue\+Dequeue)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a61fc34ac76e87da4be89f0a3eddaa554}{TEST}} (Queue\+Cpp\+Test, Peek)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a1bc279386c1564b545f4954c75fd289e}{TEST}} (Queue\+Cpp\+Test, Full\+Queue)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_afff60a5c12c8e1b78d1d3bf38d5f2ae2}{TEST}} (Queue\+Cpp\+Test, Clear)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a685710b56acf67fc575b57c437614ab4}{TEST}} (Queue\+Cpp\+Test, Display)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a64e9f38cf3d1952b6a5cc12e412068ff}{TEST}} (Heap\+Cpp\+Test, Create\+Heap)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a797740c1d02d73ed7d180e5bc1aa7113}{TEST}} (Heap\+Cpp\+Test, Insert\+Extract\+Min)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a921674ec3a831376a11094fdaf445ece}{TEST}} (Heap\+Cpp\+Test, Peek)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_ad6045fd4441786cbb142f8eeb83a5729}{TEST}} (Heap\+Cpp\+Test, Sort\+Recipes)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a10b6339ea6e57bf2088a5fcc2b8509dd}{TEST}} (Heap\+Cpp\+Test, Full\+Heap)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a373ec3582a57c6cc74d3040a063d4778}{TEST}} (Graph\+Cpp\+Test, Create\+Graph)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_aeb2bbbacc16c8829aecb9230507e4a3a}{TEST}} (Graph\+Cpp\+Test, Add\+Vertex)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_acd82855a26c8c7783286dec29e0dcb0a}{TEST}} (Graph\+Cpp\+Test, Find\+Vertex)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a4da5dab8421691a09e7c1dc9ffa8222c}{TEST}} (Graph\+Cpp\+Test, Add\+Edge)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a51708d6ba381d69d3f48779ed58f6c6f}{TEST}} (Graph\+Cpp\+Test, Has\+Cycle)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_af8fa30a4d2589ed969acd11fc9a372be}{TEST}} (Graph\+Cpp\+Test, Reset\+Visited)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a2b6bf8162a104b090982e263f2df6ace}{TEST}} (Graph\+Cpp\+Test, Display\+Dependencies)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_ada303deb9fdec1fc5c3d63d6b54b7ae4}{TEST}} (Graph\+Cpp\+Test, Clear)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_adad8dde4d31566106fa90c373cbb89fd}{TEST}} (Hash\+Table\+Cpp\+Test, Create\+Hash\+Table)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a0974e1c96cfbb5706512b700ad1e4764}{TEST}} (Hash\+Table\+Cpp\+Test, Insert\+Search)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_ae19f0a60e5e656591e3b0765f769e1d6}{TEST}} (Hash\+Table\+Cpp\+Test, Remove)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a63c74cf12b19654d204f59cd2a821743}{TEST}} (Hash\+Table\+Cpp\+Test, Collision\+Handling)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_abae539e194a0daf1666f884c82b3d5a8}{TEST}} (Hash\+Table\+Cpp\+Test, Clear)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a522b66499830b8ad9af160788325273e}{TEST}} (Hash\+Table\+Cpp\+Test, Display)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a652fd49e859c6159bab94594bb91d53b}{TEST}} (Sparse\+Matrix\+Cpp\+Test, Create\+Matrix)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a788e05f42119bf9693894cf577574a2a}{TEST}} (Sparse\+Matrix\+Cpp\+Test, Add\+Entry)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a0de7cb46f2656d7a7c50fcee3edc8a2d}{TEST}} (Sparse\+Matrix\+Cpp\+Test, Find\+Recipes\+By\+Ingredient)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a7c5906e0df8426257b6b65f9dc69f159}{TEST}} (Sparse\+Matrix\+Cpp\+Test, Find\+Ingredients\+By\+Recipe)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a22255db08ad8f7fb1650df1e8c5d5583}{TEST}} (Sparse\+Matrix\+Cpp\+Test, Display)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a3e2135140c7c73f7a6a7ffb781ba18a4}{TEST}} (Sparse\+Matrix\+Cpp\+Test, Clear)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_afc2539beac6388cf3e1510f70bb7103e}{TEST}} (App\+Context\+Cpp\+Test, Create\+Context)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_af43a519cd529627c509ac34366f8b1fa}{TEST}} (App\+Context\+Cpp\+Test, Context\+Operations)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_aeb597499edf285a65899e1a98cea38c6}{TEST}} (Menu\+Cpp\+Test, Load\+Sample\+Data)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a0f21ef4109dc87a3543885b8ee4e8918}{TEST}} (Menu\+Cpp\+Test, View\+All\+Recipes)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a20a34eaab747a63128b3bdbace611d60}{TEST}} (Menu\+Cpp\+Test, Handle\+Choice)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_ad9761c10f906aad19f4127f1fd12527c}{TEST}} (Menu\+Cpp\+Test, Sort\+By\+Calories)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a3d17591835c8b9076e4a4736d3c93517}{TEST}} (Menu\+Cpp\+Test, Create\+Weekly\+Plan)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a8a2413e1350ccd26e5e76b42ba539187}{TEST}} (Menu\+Cpp\+Test, View\+Dependencies)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_ace1b50faa311a1ff832cc9cc10cd88a9}{TEST}} (Menu\+Cpp\+Test, Find\+By\+Ingredient)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a56d4d3b10c951707421da250194f051f}{TEST}} (Menu\+Cpp\+Test, Undo\+Last\+Operation)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a63833e166a80b6e30ce7943f65bd0b60}{TEST}} (Menu\+Cpp\+Test, Add\+Recipe)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a4c7f489f4e514ac2f01c850fd538884e}{TEST}} (Menu\+Cpp\+Test, Edit\+Recipe)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_acb42dedcd7d082b532ef89e285cfb6f2}{TEST}} (Menu\+Cpp\+Test, Delete\+Recipe)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a86fb2120ba67d7af7adfeda814dfdd83}{TEST}} (Menu\+Cpp\+Test, Search\+Recipes)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a66da665665bb4dc1e7777d527d1d4a79}{TEST}} (Menu\+Cpp\+Test, Search\+By\+Name)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a518f83179b23e70c0604cea45c61994a}{TEST}} (Menu\+Cpp\+Test, Search\+By\+Category)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a4e02d68cc02377e6ed40c0eed5762827}{TEST}} (Menu\+Cpp\+Test, Search\+By\+Calorie\+Range)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a73d58e9c7aaacbe2e92b9b61ca6b68f7}{TEST}} (Menu\+Cpp\+Test, Sort\+By\+Calories\+Empty\+List)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_aa2223b6e445717a46d3b5c6f3e83881c}{TEST}} (Menu\+Cpp\+Test, Display\+Main)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_ab0c00d6c5e9d2bd1e28c6ea06468ebdc}{TEST}} (Menu\+Cpp\+Test, Clear\+Console)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a8ad325fe695c9f238d9192f1d8ae3e9f}{TEST}} (Edge\+Case\+Test, Hash\+Table\+Null\+Recipe)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a6545d7c0c4dbeb015866ad52760a89c2}{TEST}} (Edge\+Case\+Test, Linked\+List\+Null\+Recipe)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a057a7c2d0f55a631c677fe8ec1e47cf5}{TEST}} (Edge\+Case\+Test, Stack\+Null\+Recipe)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a7e7fff4d1b55b70949ca2ef16dcfc4f8}{TEST}} (Edge\+Case\+Test, Queue\+Null\+Recipe)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_aade3b1739d8eb6a0ee2f01291db371eb}{TEST}} (Edge\+Case\+Test, Heap\+Null\+Recipe)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_af500799552cb7ac8d2fda918990b516e}{TEST}} (Edge\+Case\+Test, Graph\+Duplicate\+Vertex)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a5e5fdd028fcd244a017a59235a4e1b7f}{TEST}} (Edge\+Case\+Test, Graph\+Edge\+To\+Non\+Existent\+Vertex)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a5e81a48e1c185c53d35eaa822c4f2fd6}{TEST}} (Edge\+Case\+Test, Sparse\+Matrix\+Empty\+Search)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a7709f42fb83b0260d755caa400e0229b}{TEST}} (Edge\+Case\+Test, Recipe\+Max\+Ingredients)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a6f3b7afbaff2a271f725fe97f0388a41}{TEST}} (Edge\+Case\+Test, Stack\+Full)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a208feb6be1bdd2ad29425a1702228c4f}{TEST}} (Edge\+Case\+Test, Queue\+Circular)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a7f0411a6182fb5c205543725692a144e}{TEST}} (Edge\+Case\+Test, Heap\+Extract\+From\+Empty)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a3d77f50ea3f4018982a73bb0e99535d8}{TEST}} (Edge\+Case\+Test, Linked\+List\+Remove\+Non\+Existent)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_aba7eea68c0bd194fb755d68e90f7bb41}{TEST}} (Edge\+Case\+Test, Hash\+Table\+Remove\+Non\+Existent)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_adcb534597881f821046acb713eb143c4}{TEST}} (Edge\+Case\+Test, Graph\+Cycle\+Detection\+No\+Cycle)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a6b2a500f44afba16a7e718dfb0c7bf12}{TEST}} (Edge\+Case\+Test, Graph\+Cycle\+Detection\+Self\+Loop)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a977b4d0369a8d5baa1170a5a392a181c}{TEST}} (Edge\+Case\+Test, App\+Context\+Create\+Failure)
+\item 
+\mbox{\hyperlink{test__recipes__cpp_8cpp_a9bcf6029cdec65b5dac3d233e1ac061d}{TEST}} (Integration\+Test, Full\+Workflow)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Comprehensive unit tests for C++ API using Google\+Test. 
+
+Tests all C++ classes\+: Recipe, Linked\+List, Stack, Queue, Heap, Graph, Hash\+Table, Sparse\+Matrix, App\+Context, Menu All tests run automatically without user interaction 
+
+Definition in file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{test__recipes__cpp_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{test__recipes__cpp_8cpp_af43a519cd529627c509ac34366f8b1fa}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_af43a519cd529627c509ac34366f8b1fa} 
+TEST (\begin{DoxyParamCaption}\item[{App\+Context\+Cpp\+Test}]{}{, }\item[{Context\+Operations}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00676}{676}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_afc2539beac6388cf3e1510f70bb7103e}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_afc2539beac6388cf3e1510f70bb7103e} 
+TEST (\begin{DoxyParamCaption}\item[{App\+Context\+Cpp\+Test}]{}{, }\item[{Create\+Context}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00664}{664}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a977b4d0369a8d5baa1170a5a392a181c}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a977b4d0369a8d5baa1170a5a392a181c} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{App\+Context\+Create\+Failure}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l01014}{1014}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_adcb534597881f821046acb713eb143c4}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_adcb534597881f821046acb713eb143c4} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Graph\+Cycle\+Detection\+No\+Cycle}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00995}{995}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a6b2a500f44afba16a7e718dfb0c7bf12}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a6b2a500f44afba16a7e718dfb0c7bf12} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Graph\+Cycle\+Detection\+Self\+Loop}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l01006}{1006}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_af500799552cb7ac8d2fda918990b516e}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_af500799552cb7ac8d2fda918990b516e} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Graph\+Duplicate\+Vertex}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00892}{892}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a5e5fdd028fcd244a017a59235a4e1b7f}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a5e5fdd028fcd244a017a59235a4e1b7f} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Graph\+Edge\+To\+Non\+Existent\+Vertex}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00899}{899}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a8ad325fe695c9f238d9192f1d8ae3e9f}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a8ad325fe695c9f238d9192f1d8ae3e9f} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Hash\+Table\+Null\+Recipe}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00861}{861}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_aba7eea68c0bd194fb755d68e90f7bb41}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_aba7eea68c0bd194fb755d68e90f7bb41} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Hash\+Table\+Remove\+Non\+Existent}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00986}{986}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a7f0411a6182fb5c205543725692a144e}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a7f0411a6182fb5c205543725692a144e} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Heap\+Extract\+From\+Empty}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00967}{967}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_aade3b1739d8eb6a0ee2f01291db371eb}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_aade3b1739d8eb6a0ee2f01291db371eb} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Heap\+Null\+Recipe}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00886}{886}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a6545d7c0c4dbeb015866ad52760a89c2}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a6545d7c0c4dbeb015866ad52760a89c2} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Linked\+List\+Null\+Recipe}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00867}{867}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a3d77f50ea3f4018982a73bb0e99535d8}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a3d77f50ea3f4018982a73bb0e99535d8} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Linked\+List\+Remove\+Non\+Existent}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00976}{976}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a208feb6be1bdd2ad29425a1702228c4f}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a208feb6be1bdd2ad29425a1702228c4f} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Queue\+Circular}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00948}{948}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a7e7fff4d1b55b70949ca2ef16dcfc4f8}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a7e7fff4d1b55b70949ca2ef16dcfc4f8} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Queue\+Null\+Recipe}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00880}{880}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a7709f42fb83b0260d755caa400e0229b}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [16/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a7709f42fb83b0260d755caa400e0229b} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Recipe\+Max\+Ingredients}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00916}{916}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a5e81a48e1c185c53d35eaa822c4f2fd6}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [17/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a5e81a48e1c185c53d35eaa822c4f2fd6} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Sparse\+Matrix\+Empty\+Search}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00907}{907}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a6f3b7afbaff2a271f725fe97f0388a41}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [18/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a6f3b7afbaff2a271f725fe97f0388a41} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Stack\+Full}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00931}{931}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a057a7c2d0f55a631c677fe8ec1e47cf5}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [19/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a057a7c2d0f55a631c677fe8ec1e47cf5} 
+TEST (\begin{DoxyParamCaption}\item[{Edge\+Case\+Test}]{}{, }\item[{Stack\+Null\+Recipe}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00874}{874}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a4da5dab8421691a09e7c1dc9ffa8222c}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [20/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a4da5dab8421691a09e7c1dc9ffa8222c} 
+TEST (\begin{DoxyParamCaption}\item[{Graph\+Cpp\+Test}]{}{, }\item[{Add\+Edge}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00434}{434}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_aeb2bbbacc16c8829aecb9230507e4a3a}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [21/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_aeb2bbbacc16c8829aecb9230507e4a3a} 
+TEST (\begin{DoxyParamCaption}\item[{Graph\+Cpp\+Test}]{}{, }\item[{Add\+Vertex}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00404}{404}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_ada303deb9fdec1fc5c3d63d6b54b7ae4}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [22/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_ada303deb9fdec1fc5c3d63d6b54b7ae4} 
+TEST (\begin{DoxyParamCaption}\item[{Graph\+Cpp\+Test}]{}{, }\item[{Clear}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00495}{495}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a373ec3582a57c6cc74d3040a063d4778}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [23/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a373ec3582a57c6cc74d3040a063d4778} 
+TEST (\begin{DoxyParamCaption}\item[{Graph\+Cpp\+Test}]{}{, }\item[{Create\+Graph}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00399}{399}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a2b6bf8162a104b090982e263f2df6ace}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [24/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a2b6bf8162a104b090982e263f2df6ace} 
+TEST (\begin{DoxyParamCaption}\item[{Graph\+Cpp\+Test}]{}{, }\item[{Display\+Dependencies}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00483}{483}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_acd82855a26c8c7783286dec29e0dcb0a}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [25/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_acd82855a26c8c7783286dec29e0dcb0a} 
+TEST (\begin{DoxyParamCaption}\item[{Graph\+Cpp\+Test}]{}{, }\item[{Find\+Vertex}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00417}{417}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a51708d6ba381d69d3f48779ed58f6c6f}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [26/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a51708d6ba381d69d3f48779ed58f6c6f} 
+TEST (\begin{DoxyParamCaption}\item[{Graph\+Cpp\+Test}]{}{, }\item[{Has\+Cycle}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00449}{449}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_af8fa30a4d2589ed969acd11fc9a372be}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [27/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_af8fa30a4d2589ed969acd11fc9a372be} 
+TEST (\begin{DoxyParamCaption}\item[{Graph\+Cpp\+Test}]{}{, }\item[{Reset\+Visited}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00466}{466}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_abae539e194a0daf1666f884c82b3d5a8}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [28/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_abae539e194a0daf1666f884c82b3d5a8} 
+TEST (\begin{DoxyParamCaption}\item[{Hash\+Table\+Cpp\+Test}]{}{, }\item[{Clear}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00572}{572}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a63c74cf12b19654d204f59cd2a821743}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [29/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a63c74cf12b19654d204f59cd2a821743} 
+TEST (\begin{DoxyParamCaption}\item[{Hash\+Table\+Cpp\+Test}]{}{, }\item[{Collision\+Handling}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00555}{555}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_adad8dde4d31566106fa90c373cbb89fd}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [30/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_adad8dde4d31566106fa90c373cbb89fd} 
+TEST (\begin{DoxyParamCaption}\item[{Hash\+Table\+Cpp\+Test}]{}{, }\item[{Create\+Hash\+Table}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00508}{508}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a522b66499830b8ad9af160788325273e}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [31/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a522b66499830b8ad9af160788325273e} 
+TEST (\begin{DoxyParamCaption}\item[{Hash\+Table\+Cpp\+Test}]{}{, }\item[{Display}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00582}{582}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a0974e1c96cfbb5706512b700ad1e4764}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [32/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a0974e1c96cfbb5706512b700ad1e4764} 
+TEST (\begin{DoxyParamCaption}\item[{Hash\+Table\+Cpp\+Test}]{}{, }\item[{Insert\+Search}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00514}{514}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_ae19f0a60e5e656591e3b0765f769e1d6}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [33/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_ae19f0a60e5e656591e3b0765f769e1d6} 
+TEST (\begin{DoxyParamCaption}\item[{Hash\+Table\+Cpp\+Test}]{}{, }\item[{Remove}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00536}{536}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a64e9f38cf3d1952b6a5cc12e412068ff}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [34/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a64e9f38cf3d1952b6a5cc12e412068ff} 
+TEST (\begin{DoxyParamCaption}\item[{Heap\+Cpp\+Test}]{}{, }\item[{Create\+Heap}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00321}{321}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a10b6339ea6e57bf2088a5fcc2b8509dd}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [35/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a10b6339ea6e57bf2088a5fcc2b8509dd} 
+TEST (\begin{DoxyParamCaption}\item[{Heap\+Cpp\+Test}]{}{, }\item[{Full\+Heap}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00381}{381}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a797740c1d02d73ed7d180e5bc1aa7113}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [36/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a797740c1d02d73ed7d180e5bc1aa7113} 
+TEST (\begin{DoxyParamCaption}\item[{Heap\+Cpp\+Test}]{}{, }\item[{Insert\+Extract\+Min}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00327}{327}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a921674ec3a831376a11094fdaf445ece}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [37/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a921674ec3a831376a11094fdaf445ece} 
+TEST (\begin{DoxyParamCaption}\item[{Heap\+Cpp\+Test}]{}{, }\item[{Peek}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00353}{353}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_ad6045fd4441786cbb142f8eeb83a5729}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [38/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_ad6045fd4441786cbb142f8eeb83a5729} 
+TEST (\begin{DoxyParamCaption}\item[{Heap\+Cpp\+Test}]{}{, }\item[{Sort\+Recipes}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00367}{367}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a9bcf6029cdec65b5dac3d233e1ac061d}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [39/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a9bcf6029cdec65b5dac3d233e1ac061d} 
+TEST (\begin{DoxyParamCaption}\item[{Integration\+Test}]{}{, }\item[{Full\+Workflow}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l01032}{1032}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_aae48e8b6790aeb9708d399ff94731f41}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [40/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_aae48e8b6790aeb9708d399ff94731f41} 
+TEST (\begin{DoxyParamCaption}\item[{Linked\+List\+Cpp\+Test}]{}{, }\item[{Clear}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00156}{156}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_af09e1f826ea013180c6b235f376345f9}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [41/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_af09e1f826ea013180c6b235f376345f9} 
+TEST (\begin{DoxyParamCaption}\item[{Linked\+List\+Cpp\+Test}]{}{, }\item[{Create\+List}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00104}{104}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a590038c110a8fdada87ce69fff5a1fd4}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [42/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a590038c110a8fdada87ce69fff5a1fd4} 
+TEST (\begin{DoxyParamCaption}\item[{Linked\+List\+Cpp\+Test}]{}{, }\item[{Display}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00166}{166}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_aaefe059ac2e4ce26bf227e8fd6fb3dff}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [43/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_aaefe059ac2e4ce26bf227e8fd6fb3dff} 
+TEST (\begin{DoxyParamCaption}\item[{Linked\+List\+Cpp\+Test}]{}{, }\item[{Insert\+Head}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00110}{110}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a6d55a1879b398e94f4a264249db6b278}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [44/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a6d55a1879b398e94f4a264249db6b278} 
+TEST (\begin{DoxyParamCaption}\item[{Linked\+List\+Cpp\+Test}]{}{, }\item[{Insert\+Tail}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00125}{125}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_abeb8042644347b8046622b23d212899a}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [45/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_abeb8042644347b8046622b23d212899a} 
+TEST (\begin{DoxyParamCaption}\item[{Linked\+List\+Cpp\+Test}]{}{, }\item[{Remove}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00139}{139}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a63833e166a80b6e30ce7943f65bd0b60}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [46/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a63833e166a80b6e30ce7943f65bd0b60} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Add\+Recipe}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00783}{783}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_ab0c00d6c5e9d2bd1e28c6ea06468ebdc}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [47/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_ab0c00d6c5e9d2bd1e28c6ea06468ebdc} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Clear\+Console}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00852}{852}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a3d17591835c8b9076e4a4736d3c93517}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [48/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a3d17591835c8b9076e4a4736d3c93517} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Create\+Weekly\+Plan}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00742}{742}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_acb42dedcd7d082b532ef89e285cfb6f2}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [49/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_acb42dedcd7d082b532ef89e285cfb6f2} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Delete\+Recipe}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00799}{799}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_aa2223b6e445717a46d3b5c6f3e83881c}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [50/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_aa2223b6e445717a46d3b5c6f3e83881c} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Display\+Main}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00847}{847}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a4c7f489f4e514ac2f01c850fd538884e}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [51/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a4c7f489f4e514ac2f01c850fd538884e} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Edit\+Recipe}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00791}{791}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_ace1b50faa311a1ff832cc9cc10cd88a9}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [52/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_ace1b50faa311a1ff832cc9cc10cd88a9} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Find\+By\+Ingredient}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00762}{762}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a20a34eaab747a63128b3bdbace611d60}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [53/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a20a34eaab747a63128b3bdbace611d60} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Handle\+Choice}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00714}{714}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_aeb597499edf285a65899e1a98cea38c6}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [54/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_aeb597499edf285a65899e1a98cea38c6} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Load\+Sample\+Data}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00692}{692}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a4e02d68cc02377e6ed40c0eed5762827}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [55/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a4e02d68cc02377e6ed40c0eed5762827} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Search\+By\+Calorie\+Range}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00831}{831}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a518f83179b23e70c0604cea45c61994a}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [56/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a518f83179b23e70c0604cea45c61994a} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Search\+By\+Category}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00823}{823}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a66da665665bb4dc1e7777d527d1d4a79}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [57/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a66da665665bb4dc1e7777d527d1d4a79} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Search\+By\+Name}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00815}{815}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a86fb2120ba67d7af7adfeda814dfdd83}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [58/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a86fb2120ba67d7af7adfeda814dfdd83} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Search\+Recipes}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00807}{807}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_ad9761c10f906aad19f4127f1fd12527c}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [59/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_ad9761c10f906aad19f4127f1fd12527c} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Sort\+By\+Calories}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00727}{727}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a73d58e9c7aaacbe2e92b9b61ca6b68f7}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [60/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a73d58e9c7aaacbe2e92b9b61ca6b68f7} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Sort\+By\+Calories\+Empty\+List}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00839}{839}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a56d4d3b10c951707421da250194f051f}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [61/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a56d4d3b10c951707421da250194f051f} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{Undo\+Last\+Operation}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00772}{772}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a0f21ef4109dc87a3543885b8ee4e8918}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [62/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a0f21ef4109dc87a3543885b8ee4e8918} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{View\+All\+Recipes}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00703}{703}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a8a2413e1350ccd26e5e76b42ba539187}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [63/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a8a2413e1350ccd26e5e76b42ba539187} 
+TEST (\begin{DoxyParamCaption}\item[{Menu\+Cpp\+Test}]{}{, }\item[{View\+Dependencies}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00750}{750}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_afff60a5c12c8e1b78d1d3bf38d5f2ae2}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [64/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_afff60a5c12c8e1b78d1d3bf38d5f2ae2} 
+TEST (\begin{DoxyParamCaption}\item[{Queue\+Cpp\+Test}]{}{, }\item[{Clear}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00295}{295}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_aa71acb7a3462f9092c6c04a2d05d6a48}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [65/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_aa71acb7a3462f9092c6c04a2d05d6a48} 
+TEST (\begin{DoxyParamCaption}\item[{Queue\+Cpp\+Test}]{}{, }\item[{Create\+Queue}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00238}{238}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a685710b56acf67fc575b57c437614ab4}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [66/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a685710b56acf67fc575b57c437614ab4} 
+TEST (\begin{DoxyParamCaption}\item[{Queue\+Cpp\+Test}]{}{, }\item[{Display}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00305}{305}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a0ff8263bc0e12c925c7fa39b3dc2a150}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [67/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a0ff8263bc0e12c925c7fa39b3dc2a150} 
+TEST (\begin{DoxyParamCaption}\item[{Queue\+Cpp\+Test}]{}{, }\item[{Enqueue\+Dequeue}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00245}{245}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a1bc279386c1564b545f4954c75fd289e}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [68/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a1bc279386c1564b545f4954c75fd289e} 
+TEST (\begin{DoxyParamCaption}\item[{Queue\+Cpp\+Test}]{}{, }\item[{Full\+Queue}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00278}{278}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a61fc34ac76e87da4be89f0a3eddaa554}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [69/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a61fc34ac76e87da4be89f0a3eddaa554} 
+TEST (\begin{DoxyParamCaption}\item[{Queue\+Cpp\+Test}]{}{, }\item[{Peek}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00266}{266}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a62414d4183bc7252c4d6f2a093a7e0b4}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [70/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a62414d4183bc7252c4d6f2a093a7e0b4} 
+TEST (\begin{DoxyParamCaption}\item[{Recipe\+Cpp\+Test}]{}{, }\item[{Add\+Ingredient}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a1b61736b40aea51aa4f5605b0800a574}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [71/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a1b61736b40aea51aa4f5605b0800a574} 
+TEST (\begin{DoxyParamCaption}\item[{Recipe\+Cpp\+Test}]{}{, }\item[{Clone}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a24f615a3fd7990baad7f2924ae7f8f74}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [72/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a24f615a3fd7990baad7f2924ae7f8f74} 
+TEST (\begin{DoxyParamCaption}\item[{Recipe\+Cpp\+Test}]{}{, }\item[{Comparison\+Operators}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a9de184763516c542c3be713b6cba7d35}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [73/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a9de184763516c542c3be713b6cba7d35} 
+TEST (\begin{DoxyParamCaption}\item[{Recipe\+Cpp\+Test}]{}{, }\item[{Create\+Recipe}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a54d862560fd3699de4eabe926918d46a}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [74/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a54d862560fd3699de4eabe926918d46a} 
+TEST (\begin{DoxyParamCaption}\item[{Recipe\+Cpp\+Test}]{}{, }\item[{Display}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a1635ddc51c6c83ef0e8cf0fa7269ba5e}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [75/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a1635ddc51c6c83ef0e8cf0fa7269ba5e} 
+TEST (\begin{DoxyParamCaption}\item[{Recipe\+Cpp\+Test}]{}{, }\item[{Set\+And\+Get\+Methods}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a788e05f42119bf9693894cf577574a2a}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [76/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a788e05f42119bf9693894cf577574a2a} 
+TEST (\begin{DoxyParamCaption}\item[{Sparse\+Matrix\+Cpp\+Test}]{}{, }\item[{Add\+Entry}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00603}{603}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a3e2135140c7c73f7a6a7ffb781ba18a4}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [77/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a3e2135140c7c73f7a6a7ffb781ba18a4} 
+TEST (\begin{DoxyParamCaption}\item[{Sparse\+Matrix\+Cpp\+Test}]{}{, }\item[{Clear}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00652}{652}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a652fd49e859c6159bab94594bb91d53b}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [78/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a652fd49e859c6159bab94594bb91d53b} 
+TEST (\begin{DoxyParamCaption}\item[{Sparse\+Matrix\+Cpp\+Test}]{}{, }\item[{Create\+Matrix}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00598}{598}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a22255db08ad8f7fb1650df1e8c5d5583}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [79/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a22255db08ad8f7fb1650df1e8c5d5583} 
+TEST (\begin{DoxyParamCaption}\item[{Sparse\+Matrix\+Cpp\+Test}]{}{, }\item[{Display}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00643}{643}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a7c5906e0df8426257b6b65f9dc69f159}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [80/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a7c5906e0df8426257b6b65f9dc69f159} 
+TEST (\begin{DoxyParamCaption}\item[{Sparse\+Matrix\+Cpp\+Test}]{}{, }\item[{Find\+Ingredients\+By\+Recipe}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00630}{630}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a0de7cb46f2656d7a7c50fcee3edc8a2d}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [81/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a0de7cb46f2656d7a7c50fcee3edc8a2d} 
+TEST (\begin{DoxyParamCaption}\item[{Sparse\+Matrix\+Cpp\+Test}]{}{, }\item[{Find\+Recipes\+By\+Ingredient}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00617}{617}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_ad2695f906e553fba7680277f828a633f}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [82/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_ad2695f906e553fba7680277f828a633f} 
+TEST (\begin{DoxyParamCaption}\item[{Stack\+Cpp\+Test}]{}{, }\item[{Clear}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00224}{224}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_aa195b61ac0f4385d64604b8306f6303c}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [83/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_aa195b61ac0f4385d64604b8306f6303c} 
+TEST (\begin{DoxyParamCaption}\item[{Stack\+Cpp\+Test}]{}{, }\item[{Create\+Stack}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00182}{182}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_a9943d21b439edb30b92d651e1c647545}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [84/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_a9943d21b439edb30b92d651e1c647545} 
+TEST (\begin{DoxyParamCaption}\item[{Stack\+Cpp\+Test}]{}{, }\item[{Peek}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00212}{212}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
+\Hypertarget{test__recipes__cpp_8cpp_ac356a3f7c9a813f0bde2adc63af08428}\index{test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_recipes\_cpp.cpp@{test\_recipes\_cpp.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [85/85]}}
+{\footnotesize\ttfamily \label{test__recipes__cpp_8cpp_ac356a3f7c9a813f0bde2adc63af08428} 
+TEST (\begin{DoxyParamCaption}\item[{Stack\+Cpp\+Test}]{}{, }\item[{Push\+Pop}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__recipes__cpp_8cpp_source_l00189}{189}} of file \mbox{\hyperlink{test__recipes__cpp_8cpp_source}{test\+\_\+recipes\+\_\+cpp.\+cpp}}.
+
