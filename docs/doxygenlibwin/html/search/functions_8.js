@@ -1,7 +1,7 @@
 var searchData=
 [
   ['leftchild_0',['leftChild',['../struct_heap.html#ab5202fa6c3b8a2149a7dc6b0d869e46f',1,'Heap::leftChild(int index)'],['../struct_heap.html#ab5202fa6c3b8a2149a7dc6b0d869e46f',1,'Heap::leftChild(int index)']]],
-  ['linkedlist_1',['LinkedList',['../class_linked_list.html#afe7f78983e173f8018927cf2ad11a5aa',1,'LinkedList::LinkedList()'],['../class_linked_list.html#afe7f78983e173f8018927cf2ad11a5aa',1,'LinkedList::LinkedList()']]],
+  ['linkedlist_1',['LinkedList',['../class_linked_list.html#afe7f78983e173f8018927cf2ad11a5aa',1,'LinkedList']]],
   ['list_5fcreate_2',['list_create',['../linked__list_8h.html#a8668cbe6c584fe11e610d2895f0f16c7',1,'list_create(void):&#160;linked_list.c'],['../linked__list_8c.html#a8668cbe6c584fe11e610d2895f0f16c7',1,'list_create(void):&#160;linked_list.c']]],
   ['list_5fdestroy_3',['list_destroy',['../linked__list_8h.html#ad720671a4abc61ed689060cacc592565',1,'list_destroy(List *list):&#160;linked_list.c'],['../linked__list_8c.html#ad720671a4abc61ed689060cacc592565',1,'list_destroy(List *list):&#160;linked_list.c']]],
   ['list_5fdisplay_4',['list_display',['../linked__list_8h.html#a0a0567bba92425d79f4cf96516b5438c',1,'list_display(List *list):&#160;linked_list.c'],['../linked__list_8c.html#a0a0567bba92425d79f4cf96516b5438c',1,'list_display(List *list):&#160;linked_list.c']]],
@@ -13,6 +13,5 @@ var searchData=
   ['list_5fremove_10',['list_remove',['../linked__list_8h.html#a5599c8d00dfcabf4126ed48c1e94232e',1,'list_remove(List *list, int id):&#160;linked_list.c'],['../linked__list_8c.html#a5599c8d00dfcabf4126ed48c1e94232e',1,'list_remove(List *list, int id):&#160;linked_list.c']]],
   ['list_5fsave_5fbinary_11',['list_save_binary',['../linked__list_8h.html#a9ed842e32078faed4b0e1397af3b68a5',1,'list_save_binary(const List *list, const char *filename):&#160;linked_list.c'],['../linked__list_8c.html#a9ed842e32078faed4b0e1397af3b68a5',1,'list_save_binary(const List *list, const char *filename):&#160;linked_list.c']]],
   ['list_5fsize_12',['list_size',['../linked__list_8h.html#a2e0b573f5ab9221c82af4a5eb5a48379',1,'list_size(List *list):&#160;linked_list.c'],['../linked__list_8c.html#a2e0b573f5ab9221c82af4a5eb5a48379',1,'list_size(List *list):&#160;linked_list.c']]],
-  ['listnode_13',['ListNode',['../struct_list_node.html#afea2f45ff47ed1ceef6a6d24d78033c0',1,'ListNode']]],
-  ['loadsampledata_14',['loadSampleData',['../class_menu.html#a037541da89d7a9e9931e621710720537',1,'Menu::loadSampleData(AppContext &amp;ctx)'],['../class_menu.html#a8657f8c69928d4898f2d6b587b8b76f0',1,'Menu::loadSampleData()'],['../class_menu.html#a037541da89d7a9e9931e621710720537',1,'Menu::loadSampleData(AppContext &amp;ctx)'],['../class_menu.html#a8657f8c69928d4898f2d6b587b8b76f0',1,'Menu::loadSampleData()']]]
+  ['loadsampledata_13',['loadSampleData',['../class_menu.html#ace3d228e33ae62a9d8b0337b1cb83303',1,'Menu::loadSampleData(AppContext &amp;ctx)'],['../class_menu.html#a037541da89d7a9e9931e621710720537',1,'Menu::loadSampleData(AppContext &amp;ctx)']]]
 ];

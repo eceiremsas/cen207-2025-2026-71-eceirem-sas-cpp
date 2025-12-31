@@ -389,8 +389,7 @@
 <para>Circular <ref refid="struct_queue" kindref="compound">Queue</ref> implementation for weekly meal planning. </para>
     </briefdescription>
     <detaileddescription>
-<para>Circular <ref refid="struct_queue" kindref="compound">Queue</ref> implementation – FIFO structure for a 7-day weekly meal plan.</para>
-<para>FIFO structure for managing a 7-day weekly meal plan</para>
+<para>FIFO structure for managing a 7-day weekly meal plan </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
@@ -483,7 +482,7 @@
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n%s:\n&quot;</highlight><highlight class="normal">,<sp/>days[i]);</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(queue-&gt;<ref refid="struct_queue_1ac938597c53e24ca6f36e0ec9bce41334" kindref="member">recipes</ref>[index])<sp/>{</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>-&gt;<sp/>%s<sp/>(%d<sp/>kcal)\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="struct_queue_1ac938597c53e24ca6f36e0ec9bce41334" kindref="member">recipes</ref>[index]-&gt;<ref refid="struct_recipe_1a0feced1fd0c5dc7fca786dcf4455fd1c" kindref="member">name</ref>,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="struct_queue_1ac938597c53e24ca6f36e0ec9bce41334" kindref="member">recipes</ref>[index]-&gt;<ref refid="struct_recipe_1a714a9b5bae31983d6624a0cd71acec74" kindref="member">name</ref>,</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="struct_queue_1ac938597c53e24ca6f36e0ec9bce41334" kindref="member">recipes</ref>[index]-&gt;<ref refid="struct_recipe_1a002bab56be7d0e7f3d959ed27648eaa0" kindref="member">calories</ref>);</highlight></codeline>
 <codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(index<sp/>+<sp/>1)<sp/>%<sp/><ref refid="queue_8h_1aaeb376445ddec378a36a6538f9e14090" kindref="member">WEEKLY_PLAN_SIZE</ref>;</highlight></codeline>

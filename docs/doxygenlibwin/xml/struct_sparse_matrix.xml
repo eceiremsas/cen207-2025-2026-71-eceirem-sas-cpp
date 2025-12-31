@@ -4,9 +4,9 @@
     <compoundname>SparseMatrix</compoundname>
     <includes refid="sparse__matrix_8h" local="no">sparse_matrix.h</includes>
     <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="struct_sparse_matrix_1a5079494b50c195eba794c73b6133e92a" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct_sparse_matrix_1a6f1462037e7a711901135b67011a4ba3" prot="public" static="no" mutable="no">
         <type><ref refid="struct_matrix_entry" kindref="compound">MatrixEntry</ref> *</type>
-        <definition>std::shared_ptr&lt; MatrixEntry &gt; SparseMatrix::head</definition>
+        <definition>MatrixEntry* SparseMatrix::head</definition>
         <argsstring></argsstring>
         <name>head</name>
         <qualifiedname>SparseMatrix::head</qualifiedname>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/sparse_matrix.hpp" line="54" column="5"/>
+        <location file="src/recipe/header/sparse_matrix.hpp" line="54" column="5" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="11" bodyend="12"/>
       </memberdef>
       <memberdef kind="function" id="struct_sparse_matrix_1a6f3f21c6e0343c80594808b470c798fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/sparse_matrix.hpp" line="58" column="10"/>
+        <location file="src/recipe/header/sparse_matrix.hpp" line="58" column="10" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="15" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="struct_sparse_matrix_1a24047ad48b2611f81ad80eb5e049dace" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/sparse_matrix.hpp" line="59" column="9"/>
+        <location file="src/recipe/header/sparse_matrix.hpp" line="59" column="9" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="23" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="struct_sparse_matrix_1a2636bc1381e384fbdcc4c030db5d1510" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; int &gt;</type>
@@ -220,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/sparse_matrix.hpp" line="62" column="17"/>
+        <location file="src/recipe/header/sparse_matrix.hpp" line="62" column="17" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="34" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="struct_sparse_matrix_1a88cceb27a6188be6ca5819ba4e8cf744" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; std::string &gt;</type>
@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/sparse_matrix.hpp" line="63" column="17"/>
+        <location file="src/recipe/header/sparse_matrix.hpp" line="63" column="17" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="46" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="struct_sparse_matrix_1ab32de7f94523a9d2561aaa33b7ba205e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -252,7 +252,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/sparse_matrix.hpp" line="66" column="10"/>
+        <location file="src/recipe/header/sparse_matrix.hpp" line="66" column="10" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="58" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="struct_sparse_matrix_1a891aeef27fb5b625683b2b871fe683cc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -308,165 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/sparse_matrix.hpp" line="72" column="10"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_sparse_matrix_1ac010252479e500b34324cb10c9dd4e98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>SparseMatrix::SparseMatrix</definition>
-        <argsstring>()</argsstring>
-        <name>SparseMatrix</name>
-        <qualifiedname>SparseMatrix::SparseMatrix</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/sparse_matrix.cpp" line="43" column="5" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="43" bodyend="43"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_sparse_matrix_1a9cf6a5df026171fb44e35b3808a8a45e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void SparseMatrix::addEntry</definition>
-        <argsstring>(int row, int col, int value, const std::string &amp;ingredient)</argsstring>
-        <name>addEntry</name>
-        <qualifiedname>SparseMatrix::addEntry</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>row</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>col</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>value</declname>
-        </param>
-        <param>
-          <type>const std::string &amp;</type>
-          <declname>ingredient</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/sparse_matrix.cpp" line="46" column="10" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="46" bodyend="51"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_sparse_matrix_1a24047ad48b2611f81ad80eb5e049dace" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int SparseMatrix::getValue</definition>
-        <argsstring>(int row, int col) const</argsstring>
-        <name>getValue</name>
-        <qualifiedname>SparseMatrix::getValue</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>row</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>col</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/sparse_matrix.cpp" line="54" column="9" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="54" bodyend="62"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_sparse_matrix_1a2636bc1381e384fbdcc4c030db5d1510" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; int &gt;</type>
-        <definition>std::vector&lt; int &gt; SparseMatrix::findRecipesByIngredient</definition>
-        <argsstring>(const std::string &amp;ingredient) const</argsstring>
-        <name>findRecipesByIngredient</name>
-        <qualifiedname>SparseMatrix::findRecipesByIngredient</qualifiedname>
-        <param>
-          <type>const std::string &amp;</type>
-          <declname>ingredient</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/sparse_matrix.cpp" line="65" column="17" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="65" bodyend="74"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_sparse_matrix_1a876ab3ed78dc29e3738446efdff06e27" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int SparseMatrix::countIngredientsByRecipe</definition>
-        <argsstring>(int recipe_id) const</argsstring>
-        <name>countIngredientsByRecipe</name>
-        <qualifiedname>SparseMatrix::countIngredientsByRecipe</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>recipe_id</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/sparse_matrix.cpp" line="77" column="9" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="77" bodyend="86"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_sparse_matrix_1ab32de7f94523a9d2561aaa33b7ba205e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void SparseMatrix::display</definition>
-        <argsstring>() const</argsstring>
-        <name>display</name>
-        <qualifiedname>SparseMatrix::display</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/sparse_matrix.cpp" line="89" column="10" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="89" bodyend="99"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_sparse_matrix_1a8624e99c23cc0d0d9f517909b85883f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void SparseMatrix::clear</definition>
-        <argsstring>()</argsstring>
-        <name>clear</name>
-        <qualifiedname>SparseMatrix::clear</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/sparse_matrix.cpp" line="102" column="10" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="102" bodyend="105"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_sparse_matrix_1a891aeef27fb5b625683b2b871fe683cc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int SparseMatrix::getEntryCount</definition>
-        <argsstring>() const</argsstring>
-        <name>getEntryCount</name>
-        <qualifiedname>SparseMatrix::getEntryCount</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/sparse_matrix.cpp" line="108" column="9" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="108" bodyend="108"/>
-      </memberdef>
-      <memberdef kind="function" id="struct_sparse_matrix_1afbe2b3007c6c965952a1fbfd76870799" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool SparseMatrix::isEmpty</definition>
-        <argsstring>() const</argsstring>
-        <name>isEmpty</name>
-        <qualifiedname>SparseMatrix::isEmpty</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/sparse_matrix.cpp" line="109" column="10" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="109" bodyend="109"/>
+        <location file="src/recipe/header/sparse_matrix.hpp" line="72" column="10" bodyfile="src/recipe/src/sparse_matrix.cpp" bodystart="71" bodyend="74"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -496,31 +338,22 @@
     <location file="include/sparse_matrix.h" line="32" column="1" bodyfile="include/sparse_matrix.h" bodystart="32" bodyend="37"/>
     <listofallmembers>
       <member refid="struct_sparse_matrix_1a9cf6a5df026171fb44e35b3808a8a45e" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>addEntry</name></member>
-      <member refid="struct_sparse_matrix_1a9cf6a5df026171fb44e35b3808a8a45e" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>addEntry</name></member>
-      <member refid="struct_sparse_matrix_1a8624e99c23cc0d0d9f517909b85883f5" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>clear</name></member>
       <member refid="struct_sparse_matrix_1a8624e99c23cc0d0d9f517909b85883f5" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>clear</name></member>
       <member refid="struct_sparse_matrix_1aea0a88b857ba065bfe367b547ac72a5a" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>col_count</name></member>
       <member refid="struct_sparse_matrix_1acebc561f9d8588fc524b560e1faa58bb" prot="private" virt="non-virtual"><scope>SparseMatrix</scope><name>colCount</name></member>
-      <member refid="struct_sparse_matrix_1a876ab3ed78dc29e3738446efdff06e27" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>countIngredientsByRecipe</name></member>
-      <member refid="struct_sparse_matrix_1ab32de7f94523a9d2561aaa33b7ba205e" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>display</name></member>
       <member refid="struct_sparse_matrix_1ab32de7f94523a9d2561aaa33b7ba205e" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>display</name></member>
       <member refid="struct_sparse_matrix_1a5d32364b49543c3ef09a1463488712c3" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>entry_count</name></member>
       <member refid="struct_sparse_matrix_1a30e236c39002837c6c028b4f609afcb0" prot="private" virt="non-virtual"><scope>SparseMatrix</scope><name>entryCount</name></member>
       <member refid="struct_sparse_matrix_1a88cceb27a6188be6ca5819ba4e8cf744" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>findIngredientsByRecipe</name></member>
       <member refid="struct_sparse_matrix_1a2636bc1381e384fbdcc4c030db5d1510" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>findRecipesByIngredient</name></member>
-      <member refid="struct_sparse_matrix_1a2636bc1381e384fbdcc4c030db5d1510" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>findRecipesByIngredient</name></member>
       <member refid="struct_sparse_matrix_1a781e02bb42e5ecda924cba746a41d581" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>getColCount</name></member>
-      <member refid="struct_sparse_matrix_1a891aeef27fb5b625683b2b871fe683cc" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>getEntryCount</name></member>
       <member refid="struct_sparse_matrix_1a891aeef27fb5b625683b2b871fe683cc" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>getEntryCount</name></member>
       <member refid="struct_sparse_matrix_1ab40751e5749fb55d80bbaf03d4702252" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>getRowCount</name></member>
       <member refid="struct_sparse_matrix_1a24047ad48b2611f81ad80eb5e049dace" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>getValue</name></member>
-      <member refid="struct_sparse_matrix_1a24047ad48b2611f81ad80eb5e049dace" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>getValue</name></member>
-      <member refid="struct_sparse_matrix_1a5079494b50c195eba794c73b6133e92a" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>head</name></member>
+      <member refid="struct_sparse_matrix_1a6f1462037e7a711901135b67011a4ba3" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>head</name></member>
       <member refid="struct_sparse_matrix_1a24398ba1f1f230640c1b20aef79918d4" prot="private" virt="non-virtual"><scope>SparseMatrix</scope><name>head</name></member>
-      <member refid="struct_sparse_matrix_1afbe2b3007c6c965952a1fbfd76870799" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>isEmpty</name></member>
       <member refid="struct_sparse_matrix_1a36a390290bd0ad50690a46c0c120b6b4" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>row_count</name></member>
       <member refid="struct_sparse_matrix_1a8b3f58407333a0c35e95ddae9bac9032" prot="private" virt="non-virtual"><scope>SparseMatrix</scope><name>rowCount</name></member>
-      <member refid="struct_sparse_matrix_1ac010252479e500b34324cb10c9dd4e98" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>SparseMatrix</name></member>
       <member refid="struct_sparse_matrix_1ac010252479e500b34324cb10c9dd4e98" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>SparseMatrix</name></member>
       <member refid="struct_sparse_matrix_1a6f3f21c6e0343c80594808b470c798fe" prot="public" virt="non-virtual"><scope>SparseMatrix</scope><name>~SparseMatrix</name></member>
     </listofallmembers>

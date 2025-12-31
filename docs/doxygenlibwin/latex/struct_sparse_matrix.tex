@@ -15,7 +15,7 @@ Collaboration diagram for Sparse\+Matrix\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{struct_sparse_matrix__coll__graph}
+\includegraphics[width=231pt]{struct_sparse_matrix__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -42,29 +42,11 @@ int \mbox{\hyperlink{struct_sparse_matrix_ab40751e5749fb55d80bbaf03d4702252}{get
 int \mbox{\hyperlink{struct_sparse_matrix_a781e02bb42e5ecda924cba746a41d581}{get\+Col\+Count}} () const
 \item 
 void \mbox{\hyperlink{struct_sparse_matrix_a8624e99c23cc0d0d9f517909b85883f5}{clear}} ()
-\item 
-\mbox{\hyperlink{struct_sparse_matrix_ac010252479e500b34324cb10c9dd4e98}{Sparse\+Matrix}} ()
-\item 
-void \mbox{\hyperlink{struct_sparse_matrix_a9cf6a5df026171fb44e35b3808a8a45e}{add\+Entry}} (int row, int col, int value, const std\+::string \&ingredient)
-\item 
-int \mbox{\hyperlink{struct_sparse_matrix_a24047ad48b2611f81ad80eb5e049dace}{get\+Value}} (int row, int col) const
-\item 
-std\+::vector$<$ int $>$ \mbox{\hyperlink{struct_sparse_matrix_a2636bc1381e384fbdcc4c030db5d1510}{find\+Recipes\+By\+Ingredient}} (const std\+::string \&ingredient) const
-\item 
-int \mbox{\hyperlink{struct_sparse_matrix_a876ab3ed78dc29e3738446efdff06e27}{count\+Ingredients\+By\+Recipe}} (int recipe\+\_\+id) const
-\item 
-void \mbox{\hyperlink{struct_sparse_matrix_ab32de7f94523a9d2561aaa33b7ba205e}{display}} () const
-\item 
-void \mbox{\hyperlink{struct_sparse_matrix_a8624e99c23cc0d0d9f517909b85883f5}{clear}} ()
-\item 
-int \mbox{\hyperlink{struct_sparse_matrix_a891aeef27fb5b625683b2b871fe683cc}{get\+Entry\+Count}} () const
-\item 
-bool \mbox{\hyperlink{struct_sparse_matrix_afbe2b3007c6c965952a1fbfd76870799}{is\+Empty}} () const
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{struct_matrix_entry}{Matrix\+Entry}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_sparse_matrix_a5079494b50c195eba794c73b6133e92a}{head}}
+\mbox{\hyperlink{struct_matrix_entry}{Matrix\+Entry}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_sparse_matrix_a6f1462037e7a711901135b67011a4ba3}{head}}
 \item 
 int \mbox{\hyperlink{struct_sparse_matrix_a36a390290bd0ad50690a46c0c120b6b4}{row\+\_\+count}}
 \item 
@@ -99,7 +81,7 @@ Each non-\/zero cell is represented as a \doxylink{struct_matrix_entry}{Matrix\+
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{struct_sparse_matrix_ac010252479e500b34324cb10c9dd4e98}\index{SparseMatrix@{SparseMatrix}!SparseMatrix@{SparseMatrix}}
 \index{SparseMatrix@{SparseMatrix}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{SparseMatrix()}{SparseMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{SparseMatrix()}{SparseMatrix()}}
 {\footnotesize\ttfamily \label{struct_sparse_matrix_ac010252479e500b34324cb10c9dd4e98} 
 Sparse\+Matrix\+::\+Sparse\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
@@ -109,12 +91,6 @@ Sparse\+Matrix\+::\+Sparse\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCa
 {\footnotesize\ttfamily \label{struct_sparse_matrix_a6f3f21c6e0343c80594808b470c798fe} 
 Sparse\+Matrix\+::\texorpdfstring{$\sim$}{\string~}\+Sparse\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
-\Hypertarget{struct_sparse_matrix_ac010252479e500b34324cb10c9dd4e98}\index{SparseMatrix@{SparseMatrix}!SparseMatrix@{SparseMatrix}}
-\index{SparseMatrix@{SparseMatrix}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{SparseMatrix()}{SparseMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{struct_sparse_matrix_ac010252479e500b34324cb10c9dd4e98} 
-Sparse\+Matrix\+::\+Sparse\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
 
 
 \label{doc-func-members}
@@ -122,45 +98,21 @@ Sparse\+Matrix\+::\+Sparse\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCa
 \doxysubsection{Member Function Documentation}
 \Hypertarget{struct_sparse_matrix_a9cf6a5df026171fb44e35b3808a8a45e}\index{SparseMatrix@{SparseMatrix}!addEntry@{addEntry}}
 \index{addEntry@{addEntry}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{addEntry()}{addEntry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{addEntry()}{addEntry()}}
 {\footnotesize\ttfamily \label{struct_sparse_matrix_a9cf6a5df026171fb44e35b3808a8a45e} 
 void Sparse\+Matrix\+::add\+Entry (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{col}{, }\item[{int}]{value}{, }\item[{const std\+::string \&}]{ingredient}{}\end{DoxyParamCaption})}
 
-\Hypertarget{struct_sparse_matrix_a9cf6a5df026171fb44e35b3808a8a45e}\index{SparseMatrix@{SparseMatrix}!addEntry@{addEntry}}
-\index{addEntry@{addEntry}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{addEntry()}{addEntry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{struct_sparse_matrix_a9cf6a5df026171fb44e35b3808a8a45e} 
-void Sparse\+Matrix\+::add\+Entry (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{col}{, }\item[{int}]{value}{, }\item[{const std\+::string \&}]{ingredient}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
 \Hypertarget{struct_sparse_matrix_a8624e99c23cc0d0d9f517909b85883f5}\index{SparseMatrix@{SparseMatrix}!clear@{clear}}
 \index{clear@{clear}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
 {\footnotesize\ttfamily \label{struct_sparse_matrix_a8624e99c23cc0d0d9f517909b85883f5} 
 void Sparse\+Matrix\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-\Hypertarget{struct_sparse_matrix_a8624e99c23cc0d0d9f517909b85883f5}\index{SparseMatrix@{SparseMatrix}!clear@{clear}}
-\index{clear@{clear}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{struct_sparse_matrix_a8624e99c23cc0d0d9f517909b85883f5} 
-void Sparse\+Matrix\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\Hypertarget{struct_sparse_matrix_a876ab3ed78dc29e3738446efdff06e27}\index{SparseMatrix@{SparseMatrix}!countIngredientsByRecipe@{countIngredientsByRecipe}}
-\index{countIngredientsByRecipe@{countIngredientsByRecipe}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{countIngredientsByRecipe()}{countIngredientsByRecipe()}}
-{\footnotesize\ttfamily \label{struct_sparse_matrix_a876ab3ed78dc29e3738446efdff06e27} 
-int Sparse\+Matrix\+::count\+Ingredients\+By\+Recipe (\begin{DoxyParamCaption}\item[{int}]{recipe\+\_\+id}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
-
 \Hypertarget{struct_sparse_matrix_ab32de7f94523a9d2561aaa33b7ba205e}\index{SparseMatrix@{SparseMatrix}!display@{display}}
 \index{display@{display}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
 {\footnotesize\ttfamily \label{struct_sparse_matrix_ab32de7f94523a9d2561aaa33b7ba205e} 
 void Sparse\+Matrix\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
-
-\Hypertarget{struct_sparse_matrix_ab32de7f94523a9d2561aaa33b7ba205e}\index{SparseMatrix@{SparseMatrix}!display@{display}}
-\index{display@{display}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{struct_sparse_matrix_ab32de7f94523a9d2561aaa33b7ba205e} 
-void Sparse\+Matrix\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 \Hypertarget{struct_sparse_matrix_a88cceb27a6188be6ca5819ba4e8cf744}\index{SparseMatrix@{SparseMatrix}!findIngredientsByRecipe@{findIngredientsByRecipe}}
 \index{findIngredientsByRecipe@{findIngredientsByRecipe}!SparseMatrix@{SparseMatrix}}
@@ -170,15 +122,9 @@ std\+::vector$<$ std\+::string $>$ Sparse\+Matrix\+::find\+Ingredients\+By\+Reci
 
 \Hypertarget{struct_sparse_matrix_a2636bc1381e384fbdcc4c030db5d1510}\index{SparseMatrix@{SparseMatrix}!findRecipesByIngredient@{findRecipesByIngredient}}
 \index{findRecipesByIngredient@{findRecipesByIngredient}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{findRecipesByIngredient()}{findRecipesByIngredient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{findRecipesByIngredient()}{findRecipesByIngredient()}}
 {\footnotesize\ttfamily \label{struct_sparse_matrix_a2636bc1381e384fbdcc4c030db5d1510} 
 std\+::vector$<$ int $>$ Sparse\+Matrix\+::find\+Recipes\+By\+Ingredient (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ingredient}{}\end{DoxyParamCaption}) const}
-
-\Hypertarget{struct_sparse_matrix_a2636bc1381e384fbdcc4c030db5d1510}\index{SparseMatrix@{SparseMatrix}!findRecipesByIngredient@{findRecipesByIngredient}}
-\index{findRecipesByIngredient@{findRecipesByIngredient}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{findRecipesByIngredient()}{findRecipesByIngredient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{struct_sparse_matrix_a2636bc1381e384fbdcc4c030db5d1510} 
-std\+::vector$<$ int $>$ Sparse\+Matrix\+::find\+Recipes\+By\+Ingredient (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ingredient}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 \Hypertarget{struct_sparse_matrix_a781e02bb42e5ecda924cba746a41d581}\index{SparseMatrix@{SparseMatrix}!getColCount@{getColCount}}
 \index{getColCount@{getColCount}!SparseMatrix@{SparseMatrix}}
@@ -188,13 +134,7 @@ int Sparse\+Matrix\+::get\+Col\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyPara
 
 \Hypertarget{struct_sparse_matrix_a891aeef27fb5b625683b2b871fe683cc}\index{SparseMatrix@{SparseMatrix}!getEntryCount@{getEntryCount}}
 \index{getEntryCount@{getEntryCount}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{getEntryCount()}{getEntryCount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \label{struct_sparse_matrix_a891aeef27fb5b625683b2b871fe683cc} 
-int Sparse\+Matrix\+::get\+Entry\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
-
-\Hypertarget{struct_sparse_matrix_a891aeef27fb5b625683b2b871fe683cc}\index{SparseMatrix@{SparseMatrix}!getEntryCount@{getEntryCount}}
-\index{getEntryCount@{getEntryCount}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{getEntryCount()}{getEntryCount()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{getEntryCount()}{getEntryCount()}}
 {\footnotesize\ttfamily \label{struct_sparse_matrix_a891aeef27fb5b625683b2b871fe683cc} 
 int Sparse\+Matrix\+::get\+Entry\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -206,21 +146,9 @@ int Sparse\+Matrix\+::get\+Row\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyPara
 
 \Hypertarget{struct_sparse_matrix_a24047ad48b2611f81ad80eb5e049dace}\index{SparseMatrix@{SparseMatrix}!getValue@{getValue}}
 \index{getValue@{getValue}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
 {\footnotesize\ttfamily \label{struct_sparse_matrix_a24047ad48b2611f81ad80eb5e049dace} 
 int Sparse\+Matrix\+::get\+Value (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{col}{}\end{DoxyParamCaption}) const}
-
-\Hypertarget{struct_sparse_matrix_a24047ad48b2611f81ad80eb5e049dace}\index{SparseMatrix@{SparseMatrix}!getValue@{getValue}}
-\index{getValue@{getValue}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{struct_sparse_matrix_a24047ad48b2611f81ad80eb5e049dace} 
-int Sparse\+Matrix\+::get\+Value (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{col}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
-
-\Hypertarget{struct_sparse_matrix_afbe2b3007c6c965952a1fbfd76870799}\index{SparseMatrix@{SparseMatrix}!isEmpty@{isEmpty}}
-\index{isEmpty@{isEmpty}!SparseMatrix@{SparseMatrix}}
-\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
-{\footnotesize\ttfamily \label{struct_sparse_matrix_afbe2b3007c6c965952a1fbfd76870799} 
-bool Sparse\+Matrix\+::is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -259,11 +187,11 @@ int Sparse\+Matrix\+::entry\+Count\hspace{0.3cm}{\ttfamily [private]}}
 
 Number of non-\/zero entries. 
 
-\Hypertarget{struct_sparse_matrix_a5079494b50c195eba794c73b6133e92a}\index{SparseMatrix@{SparseMatrix}!head@{head}}
+\Hypertarget{struct_sparse_matrix_a6f1462037e7a711901135b67011a4ba3}\index{SparseMatrix@{SparseMatrix}!head@{head}}
 \index{head@{head}!SparseMatrix@{SparseMatrix}}
 \doxysubsubsection{\texorpdfstring{head}{head}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \label{struct_sparse_matrix_a5079494b50c195eba794c73b6133e92a} 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_matrix_entry}{Matrix\+Entry}} $>$ Sparse\+Matrix\+::head}
+{\footnotesize\ttfamily \label{struct_sparse_matrix_a6f1462037e7a711901135b67011a4ba3} 
+\mbox{\hyperlink{struct_matrix_entry}{Matrix\+Entry}}\texorpdfstring{$\ast$}{*} Sparse\+Matrix\+::head}
 
 \Hypertarget{struct_sparse_matrix_a24398ba1f1f230640c1b20aef79918d4}\index{SparseMatrix@{SparseMatrix}!head@{head}}
 \index{head@{head}!SparseMatrix@{SparseMatrix}}

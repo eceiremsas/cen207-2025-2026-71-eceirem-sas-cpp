@@ -16,7 +16,6 @@
     <innerfile refid="recipe_8c">recipe.c</innerfile>
     <innerfile refid="sparse__matrix_8c">sparse_matrix.c</innerfile>
     <innerfile refid="stack_8c">stack.c</innerfile>
-    <innerfile refid="temp_code_runner_file_8cpp">tempCodeRunnerFile.cpp</innerfile>
     <innerfile refid="xor__linked__list_8c">xor_linked_list.c</innerfile>
     <briefdescription>
     </briefdescription>

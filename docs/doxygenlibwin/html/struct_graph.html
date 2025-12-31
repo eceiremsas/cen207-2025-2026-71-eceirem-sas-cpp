@@ -102,32 +102,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac6dcb77084447618b65514ce25bd7d2a" id="r_ac6dcb77084447618b65514ce25bd7d2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6dcb77084447618b65514ce25bd7d2a">getVertexCount</a> () const</td></tr>
 <tr class="memitem:ac6192a41101102ca8aa6acca607c84f3" id="r_ac6192a41101102ca8aa6acca607c84f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6192a41101102ca8aa6acca607c84f3">clear</a> ()</td></tr>
 <tr class="memitem:a902c5b3eacb66d60752525ab23297a95" id="r_a902c5b3eacb66d60752525ab23297a95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a902c5b3eacb66d60752525ab23297a95">~Graph</a> ()</td></tr>
-<tr class="memitem:a90961be426ad80001cbc103b6385df31" id="r_a90961be426ad80001cbc103b6385df31"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90961be426ad80001cbc103b6385df31">Graph</a> ()=default</td></tr>
-<tr class="memitem:a0b3b4e427b55bf0b61be72467924d8a7" id="r_a0b3b4e427b55bf0b61be72467924d8a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b3b4e427b55bf0b61be72467924d8a7">addVertex</a> (int recipe_id)</td></tr>
-<tr class="memitem:a0e69376befb79f6f5dadececbcb2a01b" id="r_a0e69376befb79f6f5dadececbcb2a01b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e69376befb79f6f5dadececbcb2a01b">addEdge</a> (int from_id, int to_id, const std::string &amp;label)</td></tr>
-<tr class="memitem:a00c89f9300992b2ac69104bb7ddcc868" id="r_a00c89f9300992b2ac69104bb7ddcc868"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00c89f9300992b2ac69104bb7ddcc868">resetVisited</a> ()</td></tr>
-<tr class="memitem:a52e448ac213c053062bfed6405ede84b" id="r_a52e448ac213c053062bfed6405ede84b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52e448ac213c053062bfed6405ede84b">displayDependencies</a> (int recipe_id, int depth=0)</td></tr>
-<tr class="memitem:a5668aece8de3c0021417b8d00a1796ac" id="r_a5668aece8de3c0021417b8d00a1796ac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5668aece8de3c0021417b8d00a1796ac">hasCycle</a> () const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:afac2bc7d92334c0692254392ca6464f4" id="r_afac2bc7d92334c0692254392ca6464f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_graph_vertex.html">GraphVertex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afac2bc7d92334c0692254392ca6464f4">vertices</a> [<a class="el" href="graph_8cpp.html#aa83461ae9374f00837b575180d2cd5e2">MAX_GRAPH_VERTICES</a>]</td></tr>
+<tr class="memitem:afac2bc7d92334c0692254392ca6464f4" id="r_afac2bc7d92334c0692254392ca6464f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_graph_vertex.html">GraphVertex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afac2bc7d92334c0692254392ca6464f4">vertices</a> [<a class="el" href="graph_8hpp.html#aa83461ae9374f00837b575180d2cd5e2">MAX_GRAPH_VERTICES</a>]</td></tr>
 <tr class="memitem:ab20e1f45cb2c2d3c26968eadd7290f4d" id="r_ab20e1f45cb2c2d3c26968eadd7290f4d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab20e1f45cb2c2d3c26968eadd7290f4d">vertex_count</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a64096724a9157efc362ff7bd2ff99bd8" id="r_a64096724a9157efc362ff7bd2ff99bd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64096724a9157efc362ff7bd2ff99bd8">dfsCycleHelper</a> (int vertex_id, std::vector&lt; int &gt; &amp;visited, std::vector&lt; int &gt; &amp;rec_stack) const</td></tr>
-<tr class="memitem:a971d05259d030a81a36b809f14db04a7" id="r_a971d05259d030a81a36b809f14db04a7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="struct_graph_vertex.html">GraphVertex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a971d05259d030a81a36b809f14db04a7">findVertex</a> (int recipe_id) const</td></tr>
-<tr class="memitem:a21b21d38817f2c0ec05fb222f654e73a" id="r_a21b21d38817f2c0ec05fb222f654e73a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21b21d38817f2c0ec05fb222f654e73a">dfsCycleHelper</a> (int vertex_id, std::vector&lt; bool &gt; &amp;visited, std::vector&lt; bool &gt; &amp;recStack) const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a326a6f915243eebc59b606d5c79d8405" id="r_a326a6f915243eebc59b606d5c79d8405"><td class="memItemLeft" align="right" valign="top">std::array&lt; std::shared_ptr&lt; <a class="el" href="struct_graph_vertex.html">GraphVertex</a> &gt;, <a class="el" href="graph_8cpp.html#aa83461ae9374f00837b575180d2cd5e2">MAX_GRAPH_VERTICES</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a326a6f915243eebc59b606d5c79d8405">vertices</a></td></tr>
-<tr class="memitem:a0770e5be4cc3e8d77db32e34f8944e20" id="r_a0770e5be4cc3e8d77db32e34f8944e20"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="struct_graph_vertex.html">GraphVertex</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0770e5be4cc3e8d77db32e34f8944e20">vertices</a></td></tr>
+<tr class="memitem:a326a6f915243eebc59b606d5c79d8405" id="r_a326a6f915243eebc59b606d5c79d8405"><td class="memItemLeft" align="right" valign="top">std::array&lt; std::shared_ptr&lt; <a class="el" href="struct_graph_vertex.html">GraphVertex</a> &gt;, <a class="el" href="graph_8hpp.html#aa83461ae9374f00837b575180d2cd5e2">MAX_GRAPH_VERTICES</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a326a6f915243eebc59b606d5c79d8405">vertices</a></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae4c72b8ac4d693c49800a4c7e273654f" name="ae4c72b8ac4d693c49800a4c7e273654f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4c72b8ac4d693c49800a4c7e273654f">&#9670;&#160;</a></span>Graph() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4c72b8ac4d693c49800a4c7e273654f">&#9670;&#160;</a></span>Graph()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,68 +151,9 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a90961be426ad80001cbc103b6385df31" name="a90961be426ad80001cbc103b6385df31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90961be426ad80001cbc103b6385df31">&#9670;&#160;</a></span>Graph() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Graph::Graph </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a0e69376befb79f6f5dadececbcb2a01b" name="a0e69376befb79f6f5dadececbcb2a01b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e69376befb79f6f5dadececbcb2a01b">&#9670;&#160;</a></span>addEdge() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Graph::addEdge </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>from_id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>to_id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>label</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ad6a883b5623c30f2b9a011932fbb9f22" name="ad6a883b5623c30f2b9a011932fbb9f22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6a883b5623c30f2b9a011932fbb9f22">&#9670;&#160;</a></span>addEdge() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a883b5623c30f2b9a011932fbb9f22">&#9670;&#160;</a></span>addEdge()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +179,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a0b3b4e427b55bf0b61be72467924d8a7" name="a0b3b4e427b55bf0b61be72467924d8a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b3b4e427b55bf0b61be72467924d8a7">&#9670;&#160;</a></span>addVertex() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3b4e427b55bf0b61be72467924d8a7">&#9670;&#160;</a></span>addVertex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,31 +191,6 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0b3b4e427b55bf0b61be72467924d8a7" name="a0b3b4e427b55bf0b61be72467924d8a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b3b4e427b55bf0b61be72467924d8a7">&#9670;&#160;</a></span>addVertex() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Graph::addVertex </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>recipe_id</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -305,42 +212,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a21b21d38817f2c0ec05fb222f654e73a" name="a21b21d38817f2c0ec05fb222f654e73a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21b21d38817f2c0ec05fb222f654e73a">&#9670;&#160;</a></span>dfsCycleHelper() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Graph::dfsCycleHelper </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>vertex_id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; bool &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>visited</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; bool &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>recStack</em></span>&#160;) const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a64096724a9157efc362ff7bd2ff99bd8" name="a64096724a9157efc362ff7bd2ff99bd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64096724a9157efc362ff7bd2ff99bd8">&#9670;&#160;</a></span>dfsCycleHelper() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a64096724a9157efc362ff7bd2ff99bd8">&#9670;&#160;</a></span>dfsCycleHelper()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,7 +247,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a52e448ac213c053062bfed6405ede84b" name="a52e448ac213c053062bfed6405ede84b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52e448ac213c053062bfed6405ede84b">&#9670;&#160;</a></span>displayDependencies() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a52e448ac213c053062bfed6405ede84b">&#9670;&#160;</a></span>displayDependencies()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -394,37 +267,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a52e448ac213c053062bfed6405ede84b" name="a52e448ac213c053062bfed6405ede84b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52e448ac213c053062bfed6405ede84b">&#9670;&#160;</a></span>displayDependencies() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Graph::displayDependencies </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>recipe_id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>depth</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a971d05259d030a81a36b809f14db04a7" name="a971d05259d030a81a36b809f14db04a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a971d05259d030a81a36b809f14db04a7">&#9670;&#160;</a></span>findVertex() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a971d05259d030a81a36b809f14db04a7">&#9670;&#160;</a></span>findVertex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -436,31 +280,6 @@ Private Attributes</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a971d05259d030a81a36b809f14db04a7" name="a971d05259d030a81a36b809f14db04a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a971d05259d030a81a36b809f14db04a7">&#9670;&#160;</a></span>findVertex() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="struct_graph_vertex.html">GraphVertex</a> &gt; Graph::findVertex </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>recipe_id</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -491,7 +310,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a5668aece8de3c0021417b8d00a1796ac" name="a5668aece8de3c0021417b8d00a1796ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5668aece8de3c0021417b8d00a1796ac">&#9670;&#160;</a></span>hasCycle() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5668aece8de3c0021417b8d00a1796ac">&#9670;&#160;</a></span>hasCycle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -507,33 +326,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a5668aece8de3c0021417b8d00a1796ac" name="a5668aece8de3c0021417b8d00a1796ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5668aece8de3c0021417b8d00a1796ac">&#9670;&#160;</a></span>hasCycle() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Graph::hasCycle </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a00c89f9300992b2ac69104bb7ddcc868" name="a00c89f9300992b2ac69104bb7ddcc868"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00c89f9300992b2ac69104bb7ddcc868">&#9670;&#160;</a></span>resetVisited() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c89f9300992b2ac69104bb7ddcc868">&#9670;&#160;</a></span>resetVisited()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -545,31 +339,6 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a00c89f9300992b2ac69104bb7ddcc868" name="a00c89f9300992b2ac69104bb7ddcc868"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00c89f9300992b2ac69104bb7ddcc868">&#9670;&#160;</a></span>resetVisited() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Graph::resetVisited </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -590,13 +359,13 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="afac2bc7d92334c0692254392ca6464f4" name="afac2bc7d92334c0692254392ca6464f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afac2bc7d92334c0692254392ca6464f4">&#9670;&#160;</a></span>vertices <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afac2bc7d92334c0692254392ca6464f4">&#9670;&#160;</a></span>vertices <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_graph_vertex.html">GraphVertex</a>* Graph::vertices[<a class="el" href="graph_8cpp.html#aa83461ae9374f00837b575180d2cd5e2">MAX_GRAPH_VERTICES</a>]</td>
+          <td class="memname"><a class="el" href="struct_graph_vertex.html">GraphVertex</a>* Graph::vertices[<a class="el" href="graph_8hpp.html#aa83461ae9374f00837b575180d2cd5e2">MAX_GRAPH_VERTICES</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -604,7 +373,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a326a6f915243eebc59b606d5c79d8405" name="a326a6f915243eebc59b606d5c79d8405"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a326a6f915243eebc59b606d5c79d8405">&#9670;&#160;</a></span>vertices <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a326a6f915243eebc59b606d5c79d8405">&#9670;&#160;</a></span>vertices <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -613,29 +382,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt;std::shared_ptr&lt;<a class="el" href="struct_graph_vertex.html">GraphVertex</a>&gt;, <a class="el" href="graph_8cpp.html#aa83461ae9374f00837b575180d2cd5e2">MAX_GRAPH_VERTICES</a>&gt; Graph::vertices</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0770e5be4cc3e8d77db32e34f8944e20" name="a0770e5be4cc3e8d77db32e34f8944e20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0770e5be4cc3e8d77db32e34f8944e20">&#9670;&#160;</a></span>vertices <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="struct_graph_vertex.html">GraphVertex</a>&gt; &gt; Graph::vertices</td>
+          <td class="memname">std::array&lt;std::shared_ptr&lt;<a class="el" href="struct_graph_vertex.html">GraphVertex</a>&gt;, <a class="el" href="graph_8hpp.html#aa83461ae9374f00837b575180d2cd5e2">MAX_GRAPH_VERTICES</a>&gt; Graph::vertices</td>
         </tr>
       </table>
   </td>

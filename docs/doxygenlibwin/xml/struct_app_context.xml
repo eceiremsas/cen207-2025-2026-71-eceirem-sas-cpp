@@ -239,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="43" column="5"/>
+        <location file="src/recipe/header/menu.hpp" line="43" column="5" bodyfile="src/recipe/src/menu.cpp" bodystart="28" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="struct_app_context_1a784eed27ef924a71820bfd16d954371a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -285,9 +285,9 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="struct_app_context_1ad9b9d7f6568ebee7074e35ae153089b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="struct_app_context_1a8c3e317c40c822f1f2e0bdf0a7c70bf3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::unique_ptr&lt; <ref refid="struct_app_context" kindref="compound">AppContext</ref> &gt;</type>
-        <definition>static std::unique_ptr&lt; AppContext &gt; AppContext::create</definition>
+        <definition>std::unique_ptr&lt; AppContext &gt; AppContext::create</definition>
         <argsstring>()</argsstring>
         <name>create</name>
         <qualifiedname>AppContext::create</qualifiedname>
@@ -297,7 +297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/menu.hpp" line="47" column="28"/>
+        <location file="src/recipe/header/menu.hpp" line="47" column="28" bodyfile="src/recipe/src/menu.cpp" bodystart="42" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="struct_app_context_1ad9b9d7f6568ebee7074e35ae153089b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::unique_ptr&lt; <ref refid="struct_app_context" kindref="compound">AppContext</ref> &gt;</type>
@@ -444,7 +444,7 @@
     <listofallmembers>
       <member refid="struct_app_context_1acbbcd910e22c12d8c7325a3f95622b78" prot="public" virt="non-virtual"><scope>AppContext</scope><name>AppContext</name></member>
       <member refid="struct_app_context_1acbbcd910e22c12d8c7325a3f95622b78" prot="public" virt="non-virtual"><scope>AppContext</scope><name>AppContext</name></member>
-      <member refid="struct_app_context_1ad9b9d7f6568ebee7074e35ae153089b7" prot="public" virt="non-virtual"><scope>AppContext</scope><name>create</name></member>
+      <member refid="struct_app_context_1a8c3e317c40c822f1f2e0bdf0a7c70bf3" prot="public" virt="non-virtual"><scope>AppContext</scope><name>create</name></member>
       <member refid="struct_app_context_1ad9b9d7f6568ebee7074e35ae153089b7" prot="public" virt="non-virtual"><scope>AppContext</scope><name>create</name></member>
       <member refid="struct_app_context_1a081b5f9c7add607a935ac2892454e34e" prot="public" virt="non-virtual"><scope>AppContext</scope><name>graph</name></member>
       <member refid="struct_app_context_1a5b57d687e92a186c24a2c808e358e70e" prot="public" virt="non-virtual"><scope>AppContext</scope><name>graph</name></member>

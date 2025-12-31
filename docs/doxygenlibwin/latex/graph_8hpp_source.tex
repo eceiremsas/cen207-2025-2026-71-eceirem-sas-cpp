@@ -18,9 +18,9 @@
 \DoxyCodeLine{00017\ }
 \DoxyCodeLine{00018\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{graph_8h_acd7f50a6afbef2093ca1f57eb3768f01}{MAX\_GRAPH\_VERTICES}}\ =\ 100;\ \ \textcolor{comment}{//\ Maximum\ number\ of\ vertices\ allowed\ in\ the\ graph}}
 \DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{comment}{//\ ============================================================}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ ===========================================================}}
 \DoxyCodeLine{00021\ \textcolor{comment}{//\ \ Forward\ Declarations}}
-\DoxyCodeLine{00022\ \textcolor{comment}{//\ ============================================================}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ ===========================================================}}
 \DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_graph_edge}{GraphEdge}};}
 \DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_graph_vertex}{GraphVertex}};}
 \DoxyCodeLine{00025\ }
@@ -30,11 +30,11 @@
 \DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_graph_edge}{GraphEdge}}\ \{}
 \DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_graph_edge_a9e5446f687da912ce7016923b5bdd045}{vertex\_id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00032\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_graph_edge_aa6e55cc398840ade9b2588ce3664651d}{edge\_label}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00033\ \ \ \ \ std::shared\_ptr<GraphEdge>\ \mbox{\hyperlink{struct_graph_edge_ab800f80484335c8fc96a5f093af6b6dc}{next}};\ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_graph_edge_ac618fccff0062d097f2d600b82985930}{edge\_label}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ std::shared\_ptr<GraphEdge>\ \mbox{\hyperlink{struct_graph_edge_aaeefe441a9565de755ce32b2fc326a80}{next}};\ \ \ \ }
 \DoxyCodeLine{00034\ }
 \DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{struct_graph_edge_a01ff1bab935fe7452b561defd17fd5b1}{GraphEdge}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ std::string\&\ label)}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_graph_edge_a9e5446f687da912ce7016923b5bdd045}{vertex\_id}}(id),\ \mbox{\hyperlink{struct_graph_edge_aa6e55cc398840ade9b2588ce3664651d}{edge\_label}}(label),\ \mbox{\hyperlink{struct_graph_edge_ab800f80484335c8fc96a5f093af6b6dc}{next}}(nullptr)\ \{\}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_graph_edge_a9e5446f687da912ce7016923b5bdd045}{vertex\_id}}(id),\ \mbox{\hyperlink{struct_graph_edge_ac618fccff0062d097f2d600b82985930}{edge\_label}}(label),\ \mbox{\hyperlink{struct_graph_edge_aaeefe441a9565de755ce32b2fc326a80}{next}}(nullptr)\ \{\}}
 \DoxyCodeLine{00037\ \};}
 \DoxyCodeLine{00038\ }
 \DoxyCodeLine{00039\ \textcolor{comment}{//\ ============================================================}}
@@ -43,11 +43,11 @@
 \DoxyCodeLine{00042\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_graph_vertex}{GraphVertex}}\ \{}
 \DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_graph_vertex_a7c3343f6f4297cddb96216cc41747bab}{recipe\_id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00045\ \ \ \ \ std::shared\_ptr<GraphEdge>\ \mbox{\hyperlink{struct_graph_vertex_af0f4f598619135666912aaeffeb5383f}{edges}};\ \ \ }
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_graph_vertex_afef08c8d5ad632ed89c22e49c0a1ffb4}{visited}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ std::shared\_ptr<GraphEdge>\ \mbox{\hyperlink{struct_graph_vertex_af71962137813dcd500d4cf3cdbb270a6}{edges}};\ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_graph_vertex_acfcb2f536a9d0f15bdfa6b1b222d8f65}{visited}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{00047\ }
 \DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{struct_graph_vertex_a36824e3dff00a9b2e77be09eb00bc6e8}{GraphVertex}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_graph_vertex_a7c3343f6f4297cddb96216cc41747bab}{recipe\_id}}(id),\ \mbox{\hyperlink{struct_graph_vertex_af0f4f598619135666912aaeffeb5383f}{edges}}(nullptr),\ \mbox{\hyperlink{struct_graph_vertex_afef08c8d5ad632ed89c22e49c0a1ffb4}{visited}}(false)\ \{\}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_graph_vertex_a7c3343f6f4297cddb96216cc41747bab}{recipe\_id}}(id),\ \mbox{\hyperlink{struct_graph_vertex_af71962137813dcd500d4cf3cdbb270a6}{edges}}(nullptr),\ \mbox{\hyperlink{struct_graph_vertex_acfcb2f536a9d0f15bdfa6b1b222d8f65}{visited}}(false)\ \{\}}
 \DoxyCodeLine{00050\ \};}
 \DoxyCodeLine{00051\ }
 \DoxyCodeLine{00052\ \textcolor{comment}{//\ ============================================================}}
@@ -55,7 +55,7 @@
 \DoxyCodeLine{00054\ \textcolor{comment}{//\ ============================================================}}
 \DoxyCodeLine{00055\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_graph}{Graph}}\ \{}
 \DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00057\ \ \ \ \ std::array<std::shared\_ptr<GraphVertex>,\ \mbox{\hyperlink{graph_8cpp_aa83461ae9374f00837b575180d2cd5e2}{MAX\_GRAPH\_VERTICES}}>\ \mbox{\hyperlink{struct_graph_afac2bc7d92334c0692254392ca6464f4}{vertices}};}
+\DoxyCodeLine{00057\ \ \ \ \ std::array<std::shared\_ptr<GraphVertex>,\ \mbox{\hyperlink{graph_8hpp_aa83461ae9374f00837b575180d2cd5e2}{MAX\_GRAPH\_VERTICES}}>\ \mbox{\hyperlink{struct_graph_afac2bc7d92334c0692254392ca6464f4}{vertices}};}
 \DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_graph_ab20e1f45cb2c2d3c26968eadd7290f4d}{vertex\_count}};}
 \DoxyCodeLine{00059\ }
 \DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ Helper\ for\ cycle\ detection\ (DFS)}}

@@ -7,19 +7,20 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline><highlight class="normal">#<sp/>Calculator<sp/>Project<sp/>Library<sp/>Generation<sp/>and<sp/>Testing<sp/>Template</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>CEN207<sp/>Data<sp/>Structures<sp/>Project<sp/>-<sp/>Recipe<sp/>and<sp/>Nutrition<sp/>Tracker</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Overview</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">This<sp/>project<sp/>provides<sp/>a<sp/>suite<sp/>of<sp/>modules<sp/>aimed<sp/>to<sp/>show<sp/>how<sp/>Cmake<sp/>used<sp/>with<sp/>Ctest.<sp/>Also<sp/>combines<sp/>doxygen<sp/>documentation<sp/>and<sp/>test<sp/>coverage<sp/>reports</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>project<sp/>implements<sp/>7<sp/>data<sp/>structures<sp/>and<sp/>algorithms<sp/>for<sp/>the<sp/>midterm<sp/>phase<sp/>of<sp/>CEN207<sp/>Data<sp/>Structures<sp/>course.<sp/>The<sp/>project<sp/>uses<sp/>C<sp/>language<sp/>with<sp/>CMake<sp/>build<sp/>system,<sp/>GoogleTest<sp/>for<sp/>unit<sp/>testing,<sp/>and<sp/>Doxygen<sp/>for<sp/>documentation.</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Requirements</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>CMake<sp/>&gt;=<sp/>3.12</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>C++<sp/>Standard<sp/>&gt;=<sp/>11</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>GoogleTest<sp/>(for<sp/>testing<sp/>modules)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>Visual<sp/>Studio<sp/>Communit<sp/>Edition<sp/>for<sp/>Windows<sp/>Generator</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>C<sp/>Standard<sp/>&gt;=<sp/>C99</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>GoogleTest<sp/>(automatically<sp/>fetched<sp/>by<sp/>CMake)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Visual<sp/>Studio<sp/>Community<sp/>Edition<sp/>for<sp/>Windows<sp/>Generator</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>Ninja<sp/>for<sp/>WSL/Linux</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Doxygen<sp/>(for<sp/>documentation<sp/>generation)</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Setup<sp/>Development<sp/>Environment</highlight></codeline>
 <codeline></codeline>

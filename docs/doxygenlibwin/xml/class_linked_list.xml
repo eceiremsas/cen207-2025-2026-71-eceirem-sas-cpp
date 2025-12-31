@@ -35,20 +35,6 @@
         </inbodydescription>
         <location file="src/recipe/header/linked_list.hpp" line="33" column="9" bodyfile="src/recipe/header/linked_list.hpp" bodystart="33" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_linked_list_1af86e24d5c7a90cd5bacd0e9ae37dd131" prot="private" static="no" mutable="no">
-        <type>std::shared_ptr&lt; <ref refid="struct_list_node" kindref="compound">ListNode</ref> &gt;</type>
-        <definition>std::shared_ptr&lt;ListNode&gt; LinkedList::head</definition>
-        <argsstring></argsstring>
-        <name>head</name>
-        <qualifiedname>LinkedList::head</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/linked_list.cpp" line="22" column="21" bodyfile="src/recipe/src/linked_list.cpp" bodystart="22" bodyend="-1"/>
-      </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="class_linked_list_1afe7f78983e173f8018927cf2ad11a5aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -108,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/linked_list.hpp" line="47" column="10"/>
+        <location file="src/recipe/header/linked_list.hpp" line="47" column="10" bodyfile="src/recipe/src/linked_list.cpp" bodystart="10" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="class_linked_list_1ab1c4a80595da1890bb21fa25496cb5e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -139,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/linked_list.hpp" line="54" column="10"/>
+        <location file="src/recipe/header/linked_list.hpp" line="54" column="10" bodyfile="src/recipe/src/linked_list.cpp" bodystart="20" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="class_linked_list_1a5fceea1644b23463e9219f28bb8513c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
@@ -170,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/linked_list.hpp" line="61" column="21"/>
+        <location file="src/recipe/header/linked_list.hpp" line="61" column="21" bodyfile="src/recipe/src/linked_list.cpp" bodystart="38" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="class_linked_list_1a1ee42466cd5059defeeb0af1e053b880" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
@@ -201,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/linked_list.hpp" line="68" column="21"/>
+        <location file="src/recipe/header/linked_list.hpp" line="68" column="21" bodyfile="src/recipe/src/linked_list.cpp" bodystart="61" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="class_linked_list_1a5fc39fb2f7e7964f8556f4c3fe7b8464" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -216,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/linked_list.hpp" line="73" column="10"/>
+        <location file="src/recipe/header/linked_list.hpp" line="73" column="10" bodyfile="src/recipe/src/linked_list.cpp" bodystart="73" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="class_linked_list_1a91532f0fd443112865b137ea29567522" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -261,163 +247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/recipe/header/linked_list.hpp" line="88" column="10"/>
-      </memberdef>
-      <memberdef kind="function" id="class_linked_list_1afe7f78983e173f8018927cf2ad11a5aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>LinkedList::LinkedList</definition>
-        <argsstring>()</argsstring>
-        <name>LinkedList</name>
-        <qualifiedname>LinkedList::LinkedList</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/linked_list.cpp" line="27" column="5" bodyfile="src/recipe/src/linked_list.cpp" bodystart="27" bodyend="27"/>
-      </memberdef>
-      <memberdef kind="function" id="class_linked_list_1a2ecd8f4fa22ab5d4b847e65dc416e3aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>LinkedList::~LinkedList</definition>
-        <argsstring>()=default</argsstring>
-        <name>~LinkedList</name>
-        <qualifiedname>LinkedList::~LinkedList</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/linked_list.cpp" line="28" column="5"/>
-      </memberdef>
-      <memberdef kind="function" id="class_linked_list_1a242f7ceb7c12b9c6e504b26dc52a8a94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool LinkedList::insertHead</definition>
-        <argsstring>(std::shared_ptr&lt; Recipe &gt; recipe)</argsstring>
-        <name>insertHead</name>
-        <qualifiedname>LinkedList::insertHead</qualifiedname>
-        <param>
-          <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
-          <declname>recipe</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/linked_list.cpp" line="31" column="10" bodyfile="src/recipe/src/linked_list.cpp" bodystart="31" bodyend="38"/>
-      </memberdef>
-      <memberdef kind="function" id="class_linked_list_1ae9e0c864c4ff69970ebe730261b4b336" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool LinkedList::insertTail</definition>
-        <argsstring>(std::shared_ptr&lt; Recipe &gt; recipe)</argsstring>
-        <name>insertTail</name>
-        <qualifiedname>LinkedList::insertTail</qualifiedname>
-        <param>
-          <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
-          <declname>recipe</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/linked_list.cpp" line="41" column="10" bodyfile="src/recipe/src/linked_list.cpp" bodystart="41" bodyend="56"/>
-      </memberdef>
-      <memberdef kind="function" id="class_linked_list_1a5fceea1644b23463e9219f28bb8513c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
-        <definition>std::shared_ptr&lt; Recipe &gt; LinkedList::remove</definition>
-        <argsstring>(int id)</argsstring>
-        <name>remove</name>
-        <qualifiedname>LinkedList::remove</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>id</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/linked_list.cpp" line="59" column="21" bodyfile="src/recipe/src/linked_list.cpp" bodystart="59" bodyend="79"/>
-      </memberdef>
-      <memberdef kind="function" id="class_linked_list_1a1ee42466cd5059defeeb0af1e053b880" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::shared_ptr&lt; <ref refid="struct_recipe" kindref="compound">Recipe</ref> &gt;</type>
-        <definition>std::shared_ptr&lt; Recipe &gt; LinkedList::find</definition>
-        <argsstring>(int id) const</argsstring>
-        <name>find</name>
-        <qualifiedname>LinkedList::find</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>id</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/linked_list.cpp" line="82" column="21" bodyfile="src/recipe/src/linked_list.cpp" bodystart="82" bodyend="91"/>
-      </memberdef>
-      <memberdef kind="function" id="class_linked_list_1a5fc39fb2f7e7964f8556f4c3fe7b8464" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void LinkedList::display</definition>
-        <argsstring>() const</argsstring>
-        <name>display</name>
-        <qualifiedname>LinkedList::display</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/linked_list.cpp" line="94" column="10" bodyfile="src/recipe/src/linked_list.cpp" bodystart="94" bodyend="109"/>
-      </memberdef>
-      <memberdef kind="function" id="class_linked_list_1a91532f0fd443112865b137ea29567522" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int LinkedList::size</definition>
-        <argsstring>() const</argsstring>
-        <name>size</name>
-        <qualifiedname>LinkedList::size</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/linked_list.cpp" line="112" column="9" bodyfile="src/recipe/src/linked_list.cpp" bodystart="112" bodyend="112"/>
-      </memberdef>
-      <memberdef kind="function" id="class_linked_list_1aae39e3aa7ab58912b8f672937027485b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool LinkedList::isEmpty</definition>
-        <argsstring>() const</argsstring>
-        <name>isEmpty</name>
-        <qualifiedname>LinkedList::isEmpty</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/linked_list.cpp" line="115" column="10" bodyfile="src/recipe/src/linked_list.cpp" bodystart="115" bodyend="115"/>
-      </memberdef>
-      <memberdef kind="function" id="class_linked_list_1a261977565e78dd74f288d47ba5865242" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void LinkedList::clear</definition>
-        <argsstring>()</argsstring>
-        <name>clear</name>
-        <qualifiedname>LinkedList::clear</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/recipe/src/linked_list.cpp" line="118" column="10" bodyfile="src/recipe/src/linked_list.cpp" bodystart="118" bodyend="121"/>
+        <location file="src/recipe/header/linked_list.hpp" line="88" column="10" bodyfile="src/recipe/src/linked_list.cpp" bodystart="91" bodyend="94"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -434,27 +264,16 @@
     <location file="src/recipe/header/linked_list.hpp" line="20" column="1" bodyfile="src/recipe/header/linked_list.hpp" bodystart="20" bodyend="89"/>
     <listofallmembers>
       <member refid="class_linked_list_1a261977565e78dd74f288d47ba5865242" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>clear</name></member>
-      <member refid="class_linked_list_1a261977565e78dd74f288d47ba5865242" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>clear</name></member>
       <member refid="class_linked_list_1aee597464b822b053e03bafc8f6a2c7ed" prot="private" virt="non-virtual"><scope>LinkedList</scope><name>count</name></member>
       <member refid="class_linked_list_1a5fc39fb2f7e7964f8556f4c3fe7b8464" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>display</name></member>
-      <member refid="class_linked_list_1a5fc39fb2f7e7964f8556f4c3fe7b8464" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>display</name></member>
-      <member refid="class_linked_list_1a1ee42466cd5059defeeb0af1e053b880" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>find</name></member>
       <member refid="class_linked_list_1a1ee42466cd5059defeeb0af1e053b880" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>find</name></member>
       <member refid="class_linked_list_1a0e86fc84176f6e0450b4b417806cc2e4" prot="private" virt="non-virtual"><scope>LinkedList</scope><name>head</name></member>
-      <member refid="class_linked_list_1af86e24d5c7a90cd5bacd0e9ae37dd131" prot="private" virt="non-virtual"><scope>LinkedList</scope><name>head</name></member>
       <member refid="class_linked_list_1a438bae85ccf5bd93fc20e9ad14c5110a" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>insertHead</name></member>
-      <member refid="class_linked_list_1a242f7ceb7c12b9c6e504b26dc52a8a94" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>insertHead</name></member>
       <member refid="class_linked_list_1ab1c4a80595da1890bb21fa25496cb5e3" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>insertTail</name></member>
-      <member refid="class_linked_list_1ae9e0c864c4ff69970ebe730261b4b336" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>insertTail</name></member>
-      <member refid="class_linked_list_1aae39e3aa7ab58912b8f672937027485b" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>isEmpty</name></member>
       <member refid="class_linked_list_1aae39e3aa7ab58912b8f672937027485b" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>isEmpty</name></member>
       <member refid="class_linked_list_1afe7f78983e173f8018927cf2ad11a5aa" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>LinkedList</name></member>
-      <member refid="class_linked_list_1afe7f78983e173f8018927cf2ad11a5aa" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>LinkedList</name></member>
-      <member refid="class_linked_list_1a5fceea1644b23463e9219f28bb8513c4" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>remove</name></member>
       <member refid="class_linked_list_1a5fceea1644b23463e9219f28bb8513c4" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>remove</name></member>
       <member refid="class_linked_list_1a91532f0fd443112865b137ea29567522" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>size</name></member>
-      <member refid="class_linked_list_1a91532f0fd443112865b137ea29567522" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>size</name></member>
-      <member refid="class_linked_list_1a2ecd8f4fa22ab5d4b847e65dc416e3aa" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>~LinkedList</name></member>
       <member refid="class_linked_list_1a2ecd8f4fa22ab5d4b847e65dc416e3aa" prot="public" virt="non-virtual"><scope>LinkedList</scope><name>~LinkedList</name></member>
     </listofallmembers>
   </compounddef>

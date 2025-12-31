@@ -38,20 +38,6 @@ int \mbox{\hyperlink{struct_hash_table_a0d18fa4de579365ad5d78a32bbe11119}{size}}
 bool \mbox{\hyperlink{struct_hash_table_a7f082f038dc7e2e3babf5ea5b2620ff7}{is\+Empty}} () const
 \item 
 void \mbox{\hyperlink{struct_hash_table_a94a35e0cf2ce6fa291d48138f58635ed}{clear}} ()
-\item 
-\mbox{\hyperlink{struct_hash_table_ac3daabe98dbe0ed77eb16f512535dec0}{Hash\+Table}} (int s)
-\item 
-bool \mbox{\hyperlink{struct_hash_table_a3015f7d579d1b39304769d985798ac64}{insert}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ recipe)
-\item 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ \mbox{\hyperlink{struct_hash_table_af658ef016b27561d952b79e1679a1928}{search}} (int id) const
-\item 
-bool \mbox{\hyperlink{struct_hash_table_afea98443e6e36c6c7c8940fa515a301a}{remove}} (int id)
-\item 
-void \mbox{\hyperlink{struct_hash_table_a38ad7f2bd38958c5430f74d436d920c9}{display}} () const
-\item 
-void \mbox{\hyperlink{struct_hash_table_a816a5b28102c789b148066ef9778f64d}{destroy}} ()
-\item 
-int \mbox{\hyperlink{struct_hash_table_ae0711d5ee5ee8379fb81a68d6a35a3bb}{get\+Count}} () const
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -66,16 +52,12 @@ int \mbox{\hyperlink{struct_hash_table_a1136fdb10c41f4d0515d447e20d795e7}{count}
 \begin{DoxyCompactItemize}
 \item 
 size\+\_\+t \mbox{\hyperlink{struct_hash_table_a7a7b1b2d04ce6043e640daf5145a04f3}{hash\+Function}} (int id) const
-\item 
-int \mbox{\hyperlink{struct_hash_table_a0f988dff5088bf4be4af1109031f30eb}{hash\+Function}} (int id) const
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\+::vector$<$ std\+::list$<$ \mbox{\hyperlink{struct_hash_table_1_1_node}{Node}} $>$ $>$ \mbox{\hyperlink{struct_hash_table_a278f7b80e1d6027c5c2173b644abaf04}{table}}
-\begin{DoxyCompactList}\small\item\em Buckets for separate chaining. \end{DoxyCompactList}\item 
-std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_hash_node}{Hash\+Node}} $>$ $>$ \mbox{\hyperlink{struct_hash_table_af12c85fccb60ea38c1e4ff279d70bf45}{table}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Buckets for separate chaining. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \label{doc-constructors}
@@ -83,7 +65,7 @@ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_hash_node}{Ha
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{struct_hash_table_a1a49309ccc092281e537c742bfd7a9bd}\index{HashTable@{HashTable}!HashTable@{HashTable}}
 \index{HashTable@{HashTable}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{HashTable()}{HashTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{HashTable()}{HashTable()}}
 {\footnotesize\ttfamily \label{struct_hash_table_a1a49309ccc092281e537c742bfd7a9bd} 
 Hash\+Table\+::\+Hash\+Table (\begin{DoxyParamCaption}\item[{int}]{size}{ = {\ttfamily 101}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
@@ -92,12 +74,6 @@ Hash\+Table\+::\+Hash\+Table (\begin{DoxyParamCaption}\item[{int}]{size}{ = {\tt
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}HashTable()}{\string~HashTable()}}
 {\footnotesize\ttfamily \label{struct_hash_table_a5f9d7f9e9e46e525d13664cbeec3c7d2} 
 Hash\+Table\+::\texorpdfstring{$\sim$}{\string~}\+Hash\+Table (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
-
-\Hypertarget{struct_hash_table_ac3daabe98dbe0ed77eb16f512535dec0}\index{HashTable@{HashTable}!HashTable@{HashTable}}
-\index{HashTable@{HashTable}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{HashTable()}{HashTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{struct_hash_table_ac3daabe98dbe0ed77eb16f512535dec0} 
-Hash\+Table\+::\+Hash\+Table (\begin{DoxyParamCaption}\item[{int}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
 
 
 
@@ -110,53 +86,23 @@ Hash\+Table\+::\+Hash\+Table (\begin{DoxyParamCaption}\item[{int}]{s}{}\end{Doxy
 {\footnotesize\ttfamily \label{struct_hash_table_a94a35e0cf2ce6fa291d48138f58635ed} 
 void Hash\+Table\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-\Hypertarget{struct_hash_table_a816a5b28102c789b148066ef9778f64d}\index{HashTable@{HashTable}!destroy@{destroy}}
-\index{destroy@{destroy}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
-{\footnotesize\ttfamily \label{struct_hash_table_a816a5b28102c789b148066ef9778f64d} 
-void Hash\+Table\+::destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
 \Hypertarget{struct_hash_table_a38ad7f2bd38958c5430f74d436d920c9}\index{HashTable@{HashTable}!display@{display}}
 \index{display@{display}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
 {\footnotesize\ttfamily \label{struct_hash_table_a38ad7f2bd38958c5430f74d436d920c9} 
 void Hash\+Table\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
 
-\Hypertarget{struct_hash_table_a38ad7f2bd38958c5430f74d436d920c9}\index{HashTable@{HashTable}!display@{display}}
-\index{display@{display}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{struct_hash_table_a38ad7f2bd38958c5430f74d436d920c9} 
-void Hash\+Table\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
-
-\Hypertarget{struct_hash_table_ae0711d5ee5ee8379fb81a68d6a35a3bb}\index{HashTable@{HashTable}!getCount@{getCount}}
-\index{getCount@{getCount}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
-{\footnotesize\ttfamily \label{struct_hash_table_ae0711d5ee5ee8379fb81a68d6a35a3bb} 
-int Hash\+Table\+::get\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
-
 \Hypertarget{struct_hash_table_a7a7b1b2d04ce6043e640daf5145a04f3}\index{HashTable@{HashTable}!hashFunction@{hashFunction}}
 \index{hashFunction@{hashFunction}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{hashFunction()}{hashFunction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{hashFunction()}{hashFunction()}}
 {\footnotesize\ttfamily \label{struct_hash_table_a7a7b1b2d04ce6043e640daf5145a04f3} 
 size\+\_\+t Hash\+Table\+::hash\+Function (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-\Hypertarget{struct_hash_table_a0f988dff5088bf4be4af1109031f30eb}\index{HashTable@{HashTable}!hashFunction@{hashFunction}}
-\index{hashFunction@{hashFunction}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{hashFunction()}{hashFunction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{struct_hash_table_a0f988dff5088bf4be4af1109031f30eb} 
-int Hash\+Table\+::hash\+Function (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
-
 \Hypertarget{struct_hash_table_a3015f7d579d1b39304769d985798ac64}\index{HashTable@{HashTable}!insert@{insert}}
 \index{insert@{insert}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
 {\footnotesize\ttfamily \label{struct_hash_table_a3015f7d579d1b39304769d985798ac64} 
 bool Hash\+Table\+::insert (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$}]{recipe}{}\end{DoxyParamCaption})}
-
-\Hypertarget{struct_hash_table_a3015f7d579d1b39304769d985798ac64}\index{HashTable@{HashTable}!insert@{insert}}
-\index{insert@{insert}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{struct_hash_table_a3015f7d579d1b39304769d985798ac64} 
-bool Hash\+Table\+::insert (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$}]{recipe}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \Hypertarget{struct_hash_table_a7f082f038dc7e2e3babf5ea5b2620ff7}\index{HashTable@{HashTable}!isEmpty@{isEmpty}}
 \index{isEmpty@{isEmpty}!HashTable@{HashTable}}
@@ -166,27 +112,15 @@ bool Hash\+Table\+::is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption
 
 \Hypertarget{struct_hash_table_afea98443e6e36c6c7c8940fa515a301a}\index{HashTable@{HashTable}!remove@{remove}}
 \index{remove@{remove}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
 {\footnotesize\ttfamily \label{struct_hash_table_afea98443e6e36c6c7c8940fa515a301a} 
 bool Hash\+Table\+::remove (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
 
-\Hypertarget{struct_hash_table_afea98443e6e36c6c7c8940fa515a301a}\index{HashTable@{HashTable}!remove@{remove}}
-\index{remove@{remove}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{struct_hash_table_afea98443e6e36c6c7c8940fa515a301a} 
-bool Hash\+Table\+::remove (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
 \Hypertarget{struct_hash_table_af658ef016b27561d952b79e1679a1928}\index{HashTable@{HashTable}!search@{search}}
 \index{search@{search}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{search()}{search()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
 {\footnotesize\ttfamily \label{struct_hash_table_af658ef016b27561d952b79e1679a1928} 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ Hash\+Table\+::search (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption}) const}
-
-\Hypertarget{struct_hash_table_af658ef016b27561d952b79e1679a1928}\index{HashTable@{HashTable}!search@{search}}
-\index{search@{search}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{search()}{search()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{struct_hash_table_af658ef016b27561d952b79e1679a1928} 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_recipe}{Recipe}} $>$ Hash\+Table\+::search (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 \Hypertarget{struct_hash_table_a0d18fa4de579365ad5d78a32bbe11119}\index{HashTable@{HashTable}!size@{size}}
 \index{size@{size}!HashTable@{HashTable}}
@@ -217,25 +151,19 @@ int Hash\+Table\+::size}
 
 \Hypertarget{struct_hash_table_a83630b321ea0c602db49745e4b6fec16}\index{HashTable@{HashTable}!table@{table}}
 \index{table@{table}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{table}{table}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\doxysubsubsection{\texorpdfstring{table}{table}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{struct_hash_table_a83630b321ea0c602db49745e4b6fec16} 
 \mbox{\hyperlink{struct_hash_node}{Hash\+Node}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Hash\+Table\+::table}
 
 \Hypertarget{struct_hash_table_a278f7b80e1d6027c5c2173b644abaf04}\index{HashTable@{HashTable}!table@{table}}
 \index{table@{table}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{table}{table}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\doxysubsubsection{\texorpdfstring{table}{table}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \label{struct_hash_table_a278f7b80e1d6027c5c2173b644abaf04} 
 std\+::vector$<$std\+::list$<$\mbox{\hyperlink{struct_hash_table_1_1_node}{Node}}$>$ $>$ Hash\+Table\+::table\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Buckets for separate chaining. 
-
-\Hypertarget{struct_hash_table_af12c85fccb60ea38c1e4ff279d70bf45}\index{HashTable@{HashTable}!table@{table}}
-\index{table@{table}!HashTable@{HashTable}}
-\doxysubsubsection{\texorpdfstring{table}{table}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily \label{struct_hash_table_af12c85fccb60ea38c1e4ff279d70bf45} 
-std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{struct_hash_node}{Hash\+Node}}$>$ $>$ Hash\+Table\+::table\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

@@ -39,7 +39,7 @@
         <link refid="linked__list_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -49,16 +49,8 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
       </node>
-      <node id="9">
+      <node id="5">
         <label>src/linked_list.c</label>
         <link refid="linked__list_8c"/>
       </node>
@@ -69,22 +61,6 @@
       <node id="4">
         <label>src/menu.c</label>
         <link refid="menu_8c"/>
-      </node>
-      <node id="5">
-        <label>src/recipe/src/main.cpp</label>
-        <link refid="src_2main_8cpp"/>
-      </node>
-      <node id="6">
-        <label>src/recipe/src/menu.cpp</label>
-        <link refid="src_2menu_8cpp"/>
-      </node>
-      <node id="7">
-        <label>src/recipeapp/src/main.cpp</label>
-        <link refid="pp_2src_2main_8cpp"/>
-      </node>
-      <node id="8">
-        <label>src/recipeapp/src/menu.cpp</label>
-        <link refid="pp_2src_2menu_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="struct_list_node" prot="public">ListNode</innerclass>
@@ -497,14 +473,14 @@
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Structure<sp/>Definitions<sp/>===</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Represents<sp/>a<sp/>single<sp/>node<sp/>in<sp/>the<sp/>linked<sp/>list</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="struct_list_node" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_list_node_1afea2f45ff47ed1ceef6a6d24d78033c0" kindref="member">ListNode</ref><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="struct_list_node" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_list_node" kindref="compound">ListNode</ref><sp/>{</highlight></codeline>
 <codeline lineno="12" refid="struct_list_node_1af098883f56bf066b15c37ea3f273482f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_recipe" kindref="compound">Recipe</ref>*<sp/><ref refid="struct_list_node_1af098883f56bf066b15c37ea3f273482f" kindref="member">recipe</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>recipe<sp/>stored<sp/>in<sp/>this<sp/>node</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13" refid="struct_list_node_1ac7af9e18e0586f13d59a52b3501ac4ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_list_node_1afea2f45ff47ed1ceef6a6d24d78033c0" kindref="member">ListNode</ref>*<sp/><ref refid="struct_list_node_1ac7af9e18e0586f13d59a52b3501ac4ca" kindref="member">next</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>next<sp/>node<sp/>in<sp/>the<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="struct_list_node_1ac7af9e18e0586f13d59a52b3501ac4ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_list_node" kindref="compound">ListNode</ref>*<sp/><ref refid="struct_list_node_1ac7af9e18e0586f13d59a52b3501ac4ca" kindref="member">next</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>next<sp/>node<sp/>in<sp/>the<sp/>list</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14" refid="linked__list_8h_1a3786f70ab7091247a621d0d253967e13" refkind="member"><highlight class="normal">}<sp/><ref refid="struct_list_node" kindref="compound">ListNode</ref>;</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Represents<sp/>the<sp/>linked<sp/>list<sp/>structure</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17" refid="struct_list" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="18" refid="struct_list_1a6c5449b1dd158368840801d0cdc86f5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="linked__list_8h_1a3786f70ab7091247a621d0d253967e13" kindref="member">ListNode</ref>*<sp/><ref refid="struct_list_1a6c5449b1dd158368840801d0cdc86f5e" kindref="member">head</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>first<sp/>node<sp/>in<sp/>the<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="struct_list_1a6c5449b1dd158368840801d0cdc86f5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_list_node" kindref="compound">ListNode</ref>*<sp/><ref refid="struct_list_1a6c5449b1dd158368840801d0cdc86f5e" kindref="member">head</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>first<sp/>node<sp/>in<sp/>the<sp/>list</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19" refid="struct_list_1a7d50f0a95a04faab8c250bc6ea28a67d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_list_1a7d50f0a95a04faab8c250bc6ea28a67d" kindref="member">count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>recipes<sp/>currently<sp/>stored</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal">}<sp/><ref refid="struct_list" kindref="compound">List</ref>;</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>

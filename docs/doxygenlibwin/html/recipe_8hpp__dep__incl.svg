@@ -47,7 +47,7 @@
   </g>
 </defs>
 <script type="application/ecmascript">
-var viewWidth = 1053;
+var viewWidth = 1817;
 var viewHeight = 164;
 var sectionId = 'dynsection-1';
 </script>
@@ -59,8 +59,8 @@ var sectionId = 'dynsection-1';
 <g id="Node000001" class="node">
 <title>Node1</title>
 <g id="a_Node000001"><a xlink:title="Represents a Recipe entity in the Recipe &amp; Nutrition Tracker (C++ version).">
-<polygon fill="#999999" stroke="#666666" points="594.66,-156 455.66,-156 455.66,-136 594.66,-136 594.66,-156"/>
-<text xml:space="preserve" text-anchor="middle" x="525.16" y="-142.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/recipe.hpp</text>
+<polygon fill="#999999" stroke="#666666" points="1029.12,-156 890.12,-156 890.12,-136 1029.12,-136 1029.12,-156"/>
+<text xml:space="preserve" text-anchor="middle" x="959.62" y="-142.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/recipe.hpp</text>
 </a>
 </g>
 </g>
@@ -68,8 +68,8 @@ var sectionId = 'dynsection-1';
 <g id="Node000002" class="node">
 <title>Node2</title>
 <g id="a_Node000002"><a xlink:href="graph_8hpp.html" target="_top" xlink:title="Graph implementation for recipe dependency tracking (C++ version).">
-<polygon fill="white" stroke="#666666" points="449.54,-94 312.79,-94 312.79,-74 449.54,-74 449.54,-94"/>
-<text xml:space="preserve" text-anchor="middle" x="381.16" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/graph.hpp</text>
+<polygon fill="white" stroke="#666666" points="305,-94 168.25,-94 168.25,-74 305,-74 305,-94"/>
+<text xml:space="preserve" text-anchor="middle" x="236.62" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/graph.hpp</text>
 </a>
 </g>
 </g>
@@ -77,8 +77,8 @@ var sectionId = 'dynsection-1';
 <g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
 <g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M492.11,-131.23C464.95,-119.91 427.22,-104.19 403.51,-94.31"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="490.69,-134.43 501.27,-135.04 493.38,-127.97 490.69,-134.43"/>
+<path fill="none" stroke="#63b8ff" d="M878.22,-142.18C756.21,-137.29 518.86,-125.26 318.62,-100 307.14,-98.55 294.82,-96.54 283.32,-94.47"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="878.02,-145.67 888.15,-142.57 878.29,-138.68 878.02,-145.67"/>
 </a>
 </g>
 </g>
@@ -86,147 +86,293 @@ var sectionId = 'dynsection-1';
 <g id="Node000003" class="node">
 <title>Node3</title>
 <g id="a_Node000003"><a xlink:href="header_2menu_8hpp.html" target="_top" xlink:title="Main application interface for the Recipe &amp; Nutrition Tracker (C++ version).">
-<polygon fill="white" stroke="#666666" points="522.54,-26 385.79,-26 385.79,-6 522.54,-6 522.54,-26"/>
-<text xml:space="preserve" text-anchor="middle" x="454.16" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/menu.hpp</text>
+<polygon fill="white" stroke="#666666" points="634,-26 497.25,-26 497.25,-6 634,-6 634,-26"/>
+<text xml:space="preserve" text-anchor="middle" x="565.62" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/menu.hpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge13_Node000001_Node000003" class="edge">
+<g id="edge16_Node000001_Node000003" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<g id="a_edge13_Node000001_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M443.88,-143.84C305.46,-141.01 36.04,-131.49 7.16,-100 -2.45,-89.52 -2.31,-78.61 7.16,-68 31.9,-40.28 266.75,-25.6 385.75,-19.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="443.66,-147.34 453.72,-144.03 443.8,-140.34 443.66,-147.34"/>
-</a>
-</g>
-</g>
-<!-- Node4 -->
-<g id="Node000004" class="node">
-<title>Node4</title>
-<g id="a_Node000004"><a xlink:href="pp_2header_2menu_8hpp.html" target="_top" xlink:title="Main application interface for the Recipe &amp; Nutrition Tracker (C++ version).">
-<polygon fill="white" stroke="#666666" points="649.54,-32 542.79,-32 542.79,0 649.54,0 649.54,-32"/>
-<text xml:space="preserve" text-anchor="start" x="550.79" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipeapp/header</text>
-<text xml:space="preserve" text-anchor="middle" x="596.16" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">/menu.hpp</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node4 -->
-<g id="edge23_Node000001_Node000004" class="edge">
-<title>Node1&#45;&gt;Node4</title>
-<g id="a_edge23_Node000001_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M606.19,-143.77C743.44,-140.84 1009.62,-131.16 1038.16,-100 1047.77,-89.51 1047.63,-78.62 1038.16,-68 1012.72,-39.46 762.23,-24.56 650.03,-19.27"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="606.37,-140.27 596.44,-143.97 606.51,-147.26 606.37,-140.27"/>
+<g id="a_edge16_Node000001_Node000003"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M878.19,-144.99C720.7,-144.12 386.72,-137.78 351.62,-100 341.95,-89.58 342.81,-79.16 351.62,-68 356.89,-61.33 458.29,-39.28 519.6,-26.46"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="878.14,-148.49 888.16,-145.04 878.18,-141.49 878.14,-148.49"/>
 </a>
 </g>
 </g>
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="hash__table_8hpp.html" target="_top" xlink:title="Hash Table implementation (C++ version).">
-<polygon fill="white" stroke="#666666" points="582.66,-100 467.66,-100 467.66,-68 582.66,-68 582.66,-100"/>
-<text xml:space="preserve" text-anchor="start" x="475.66" y="-86.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/hash</text>
-<text xml:space="preserve" text-anchor="middle" x="525.16" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_table.hpp</text>
+<g id="a_Node000005"><a xlink:href="pp_2header_2menu_8hpp.html" target="_top" xlink:title="Main application interface for the Recipe &amp; Nutrition Tracker (C++ version).">
+<polygon fill="white" stroke="#666666" points="763,-32 656.25,-32 656.25,0 763,0 763,-32"/>
+<text xml:space="preserve" text-anchor="start" x="664.25" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipeapp/header</text>
+<text xml:space="preserve" text-anchor="middle" x="709.62" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">/menu.hpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
-<g id="edge4_Node000001_Node000005" class="edge">
+<g id="edge36_Node000001_Node000005" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<g id="a_edge4_Node000001_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M525.16,-124.31C525.16,-116.37 525.16,-107.46 525.16,-100.14"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="521.66,-124.11 525.16,-134.11 528.66,-124.11 521.66,-124.11"/>
+<g id="a_edge36_Node000001_Node000005"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M960.17,-124.21C959.46,-106.81 955.54,-82.55 940.62,-68 915.86,-43.84 823.62,-29.39 763.46,-22.33"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="956.67,-124.18 960.22,-134.16 963.67,-124.14 956.67,-124.18"/>
 </a>
 </g>
 </g>
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="heap_8hpp.html" target="_top" xlink:title="Min&#45;Heap class for sorting recipes by calorie values (C++ version).">
-<polygon fill="white" stroke="#666666" points="734.04,-94 600.29,-94 600.29,-74 734.04,-74 734.04,-94"/>
-<text xml:space="preserve" text-anchor="middle" x="667.16" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/heap.hpp</text>
+<g id="a_Node000006"><a xlink:href="hash__table_8hpp.html" target="_top" xlink:title="Hash Table implementation (C++ version).">
+<polygon fill="white" stroke="#666666" points="150.12,-100 35.12,-100 35.12,-68 150.12,-68 150.12,-100"/>
+<text xml:space="preserve" text-anchor="start" x="43.12" y="-86.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/hash</text>
+<text xml:space="preserve" text-anchor="middle" x="92.62" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_table.hpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node6 -->
-<g id="edge7_Node000001_Node000006" class="edge">
+<g id="edge5_Node000001_Node000006" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<g id="a_edge7_Node000001_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M557.76,-131.23C584.54,-119.91 621.75,-104.19 645.13,-94.31"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="556.6,-127.92 548.75,-135.04 559.32,-134.37 556.6,-127.92"/>
+<g id="a_edge5_Node000001_Node000006"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M878.28,-144.82C733.21,-143.52 420.54,-136.3 159.62,-100 156.67,-99.59 153.66,-99.12 150.62,-98.6"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="878.15,-148.32 888.18,-144.9 878.21,-141.32 878.15,-148.32"/>
 </a>
 </g>
 </g>
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_Node000007"><a xlink:href="linked__list_8hpp.html" target="_top" xlink:title="Singly Linked List for managing recipes (C++ version).">
-<polygon fill="white" stroke="#666666" points="871.91,-100 752.41,-100 752.41,-68 871.91,-68 871.91,-100"/>
-<text xml:space="preserve" text-anchor="start" x="760.41" y="-86.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/linked</text>
-<text xml:space="preserve" text-anchor="middle" x="812.16" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_list.hpp</text>
+<g id="a_Node000007"><a xlink:href="hash__table_8cpp.html" target="_top" xlink:title="Hash Table implementation (C++ version).">
+<polygon fill="white" stroke="#666666" points="99.25,-32 0,-32 0,0 99.25,0 99.25,-32"/>
+<text xml:space="preserve" text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/src/hash</text>
+<text xml:space="preserve" text-anchor="middle" x="49.62" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">_table.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node7 -->
-<g id="edge10_Node000001_Node000007" class="edge">
+<g id="edge29_Node000001_Node000007" class="edge">
 <title>Node1&#45;&gt;Node7</title>
-<g id="a_edge10_Node000001_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M582.6,-133.31C626.58,-124.33 688.74,-111.53 743.16,-100 746.04,-99.39 748.99,-98.76 751.96,-98.13"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="582.13,-129.84 573.03,-135.27 583.53,-136.7 582.13,-129.84"/>
+<g id="a_edge29_Node000001_Node000007"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M878.58,-144.09C657.04,-141.22 55.8,-130.62 26.62,-100 8.99,-81.49 25.17,-50.67 37.87,-32.25"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="878.23,-147.59 888.28,-144.22 878.32,-140.59 878.23,-147.59"/>
 </a>
 </g>
 </g>
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_Node000008"><a xlink:href="queue_8hpp.html" target="_top" xlink:title="Circular Queue for Weekly Meal Planning (C++ version).">
-<polygon fill="white" stroke="#666666" points="1028.66,-94 889.66,-94 889.66,-74 1028.66,-74 1028.66,-94"/>
-<text xml:space="preserve" text-anchor="middle" x="959.16" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/queue.hpp</text>
+<g id="a_Node000008"><a xlink:href="heap_8hpp.html" target="_top" xlink:title="Min&#45;Heap class for sorting recipes by calorie values (C++ version).">
+<polygon fill="white" stroke="#666666" points="636.5,-94 502.75,-94 502.75,-74 636.5,-74 636.5,-94"/>
+<text xml:space="preserve" text-anchor="middle" x="569.62" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/heap.hpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node8 -->
-<g id="edge14_Node000001_Node000008" class="edge">
+<g id="edge9_Node000001_Node000008" class="edge">
 <title>Node1&#45;&gt;Node8</title>
-<g id="a_edge14_Node000001_Node000008"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M606.21,-136.26C678.51,-128.1 787.14,-114.97 881.16,-100 891.38,-98.37 902.3,-96.41 912.64,-94.45"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="605.98,-132.76 596.44,-137.35 606.76,-139.72 605.98,-132.76"/>
+<g id="a_edge9_Node000001_Node000008"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M878.79,-134.6C815.27,-126.15 724.62,-113.45 645.62,-100 635.81,-98.33 625.32,-96.37 615.37,-94.43"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="878.06,-138.04 888.43,-135.88 878.98,-131.1 878.06,-138.04"/>
 </a>
 </g>
 </g>
 <!-- Node9 -->
 <g id="Node000009" class="node">
 <title>Node9</title>
-<g id="a_Node000009"><a xlink:href="sparse__matrix_8hpp.html" target="_top" xlink:title="Sparse Matrix implementation for ingredient&#45;recipe relationships (C++ version).">
-<polygon fill="white" stroke="#666666" points="139.79,-100 16.54,-100 16.54,-68 139.79,-68 139.79,-100"/>
-<text xml:space="preserve" text-anchor="start" x="24.54" y="-86.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/sparse</text>
-<text xml:space="preserve" text-anchor="middle" x="78.16" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_matrix.hpp</text>
+<g id="a_Node000009"><a xlink:href="linked__list_8hpp.html" target="_top" xlink:title="Singly Linked List for managing recipes (C++ version).">
+<polygon fill="white" stroke="#666666" points="774.38,-100 654.88,-100 654.88,-68 774.38,-68 774.38,-100"/>
+<text xml:space="preserve" text-anchor="start" x="662.88" y="-86.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/linked</text>
+<text xml:space="preserve" text-anchor="middle" x="714.62" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_list.hpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node9 -->
-<g id="edge17_Node000001_Node000009" class="edge">
+<g id="edge12_Node000001_Node000009" class="edge">
 <title>Node1&#45;&gt;Node9</title>
-<g id="a_edge17_Node000001_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M443.83,-137.38C367.47,-129.72 250.19,-116.68 149.16,-100 146.18,-99.51 143.13,-98.98 140.06,-98.42"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="443.45,-140.86 453.75,-138.36 444.14,-133.89 443.45,-140.86"/>
+<g id="a_edge12_Node000001_Node000009"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M909.96,-132.84C870.78,-123.24 816.01,-109.83 774.42,-99.64"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="909.06,-136.22 919.6,-135.2 910.72,-129.42 909.06,-136.22"/>
 </a>
 </g>
 </g>
 <!-- Node10 -->
 <g id="Node000010" class="node">
 <title>Node10</title>
-<g id="a_Node000010"><a xlink:href="stack_8hpp.html" target="_top" xlink:title="Undo Stack implementation for Recipe operations (C++ version).">
-<polygon fill="white" stroke="#666666" points="294.54,-94 157.79,-94 157.79,-74 294.54,-74 294.54,-94"/>
-<text xml:space="preserve" text-anchor="middle" x="226.16" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/stack.hpp</text>
+<g id="a_Node000010"><a xlink:href="linked__list_8cpp.html" target="_top" xlink:title="Singly linked list implementation for storing Recipe objects (C++ version).">
+<polygon fill="white" stroke="#666666" points="945.5,-32 841.75,-32 841.75,0 945.5,0 945.5,-32"/>
+<text xml:space="preserve" text-anchor="start" x="849.75" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/src/linked</text>
+<text xml:space="preserve" text-anchor="middle" x="893.62" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">_list.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node10 -->
-<g id="edge20_Node000001_Node000010" class="edge">
+<g id="edge31_Node000001_Node000010" class="edge">
 <title>Node1&#45;&gt;Node10</title>
-<g id="a_edge20_Node000001_Node000010"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M466.87,-133.3C410.4,-121.97 325.83,-105 273.43,-94.48"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="466.14,-136.73 476.63,-135.26 467.52,-129.86 466.14,-136.73"/>
+<g id="a_edge31_Node000001_Node000010"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1040.74,-135.92C1099.46,-126.02 1163.51,-106.18 1132.62,-68 1126.71,-60.69 1014.41,-39.05 945.88,-26.43"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1040.3,-132.45 1030.97,-137.48 1041.4,-139.36 1040.3,-132.45"/>
+</a>
+</g>
+</g>
+<!-- Node11 -->
+<g id="Node000011" class="node">
+<title>Node11</title>
+<g id="a_Node000011"><a xlink:href="queue_8hpp.html" target="_top" xlink:title="Circular Queue for Weekly Meal Planning (C++ version).">
+<polygon fill="white" stroke="#666666" points="931.12,-94 792.12,-94 792.12,-74 931.12,-74 931.12,-94"/>
+<text xml:space="preserve" text-anchor="middle" x="861.62" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/queue.hpp</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node11 -->
+<g id="edge17_Node000001_Node000011" class="edge">
+<title>Node1&#45;&gt;Node11</title>
+<g id="a_edge17_Node000001_Node000011"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M934.62,-129.69C916.38,-118.52 892.25,-103.75 876.83,-94.31"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="932.67,-132.6 943.02,-134.83 936.32,-126.63 932.67,-132.6"/>
+</a>
+</g>
+</g>
+<!-- Node12 -->
+<g id="Node000012" class="node">
+<title>Node12</title>
+<g id="a_Node000012"><a xlink:href="queue_8cpp.html" target="_top" xlink:title="Circular Queue implementation (C++ version).">
+<polygon fill="white" stroke="#666666" points="1118.25,-26 995,-26 995,-6 1118.25,-6 1118.25,-26"/>
+<text xml:space="preserve" text-anchor="middle" x="1056.62" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/src/queue.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node12 -->
+<g id="edge33_Node000001_Node000012" class="edge">
+<title>Node1&#45;&gt;Node12</title>
+<g id="a_edge33_Node000001_Node000012"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1040.71,-135.98C1086.24,-129.06 1136.66,-117.64 1150.62,-100 1159.45,-88.85 1157.9,-80.22 1150.62,-68 1138.09,-46.94 1113.49,-34.04 1092.6,-26.48"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1040.47,-132.48 1031.07,-137.38 1041.47,-139.41 1040.47,-132.48"/>
+</a>
+</g>
+</g>
+<!-- Node13 -->
+<g id="Node000013" class="node">
+<title>Node13</title>
+<g id="a_Node000013"><a xlink:href="sparse__matrix_8hpp.html" target="_top" xlink:title="Sparse Matrix implementation for ingredient&#45;recipe relationships (C++ version).">
+<polygon fill="white" stroke="#666666" points="484.25,-100 361,-100 361,-68 484.25,-68 484.25,-100"/>
+<text xml:space="preserve" text-anchor="start" x="369" y="-86.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/sparse</text>
+<text xml:space="preserve" text-anchor="middle" x="422.62" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_matrix.hpp</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node13 -->
+<g id="edge21_Node000001_Node000013" class="edge">
+<title>Node1&#45;&gt;Node13</title>
+<g id="a_edge21_Node000001_Node000013"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M878.52,-139.93C785.28,-133.47 627.82,-120.59 493.62,-100 490.64,-99.54 487.58,-99.04 484.51,-98.5"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="878.12,-143.41 888.34,-140.6 878.6,-136.43 878.12,-143.41"/>
+</a>
+</g>
+</g>
+<!-- Node15 -->
+<g id="Node000015" class="node">
+<title>Node15</title>
+<g id="a_Node000015"><a xlink:href="stack_8hpp.html" target="_top" xlink:title="Undo Stack implementation for Recipe operations (C++ version).">
+<polygon fill="white" stroke="#666666" points="1124,-94 987.25,-94 987.25,-74 1124,-74 1124,-94"/>
+<text xml:space="preserve" text-anchor="middle" x="1055.62" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/header/stack.hpp</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node15 -->
+<g id="edge25_Node000001_Node000015" class="edge">
+<title>Node1&#45;&gt;Node15</title>
+<g id="a_edge25_Node000001_Node000015"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M984.37,-129.54C1002.21,-118.39 1025.69,-103.71 1040.73,-94.31"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="982.53,-126.55 975.91,-134.82 986.24,-132.49 982.53,-126.55"/>
+</a>
+</g>
+</g>
+<!-- Node16 -->
+<g id="Node000016" class="node">
+<title>Node16</title>
+<g id="a_Node000016"><a xlink:href="stack_8cpp.html" target="_top" xlink:title="Stack implementation (C++ version).">
+<polygon fill="white" stroke="#666666" points="1272.12,-26 1151.12,-26 1151.12,-6 1272.12,-6 1272.12,-26"/>
+<text xml:space="preserve" text-anchor="middle" x="1211.62" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/src/stack.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node16 -->
+<g id="edge35_Node000001_Node000016" class="edge">
+<title>Node1&#45;&gt;Node16</title>
+<g id="a_edge35_Node000001_Node000016"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1040.47,-134.64C1089.98,-126.96 1147.57,-115.19 1167.62,-100 1192.59,-81.09 1204.86,-43.86 1209.43,-26.42"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1040.26,-131.13 1030.89,-136.09 1041.3,-138.05 1040.26,-131.13"/>
+</a>
+</g>
+</g>
+<!-- Node17 -->
+<g id="Node000017" class="node">
+<title>Node17</title>
+<g id="a_Node000017"><a xlink:href="heap_8cpp.html" target="_top" xlink:title="Min&#45;Heap implementation used for sorting recipes by calorie values (C++ version).">
+<polygon fill="white" stroke="#666666" points="1373.62,-94 1255.62,-94 1255.62,-74 1373.62,-74 1373.62,-94"/>
+<text xml:space="preserve" text-anchor="middle" x="1314.62" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/src/heap.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node17 -->
+<g id="edge30_Node000001_Node000017" class="edge">
+<title>Node1&#45;&gt;Node17</title>
+<g id="a_edge30_Node000001_Node000017"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1035.22,-133.87C1092.1,-125.27 1171.9,-112.72 1241.62,-100 1250.92,-98.3 1260.85,-96.36 1270.29,-94.44"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1035.03,-130.36 1025.66,-135.31 1036.07,-137.28 1035.03,-130.36"/>
+</a>
+</g>
+</g>
+<!-- Node18 -->
+<g id="Node000018" class="node">
+<title>Node18</title>
+<g id="a_Node000018"><a xlink:href="src_2menu_8cpp.html" target="_top" xlink:title="Menu system for Recipe &amp; Nutrition Tracker (C++ version).">
+<polygon fill="white" stroke="#666666" points="1513.12,-94 1392.12,-94 1392.12,-74 1513.12,-74 1513.12,-94"/>
+<text xml:space="preserve" text-anchor="middle" x="1452.62" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/src/menu.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node18 -->
+<g id="edge32_Node000001_Node000018" class="edge">
+<title>Node1&#45;&gt;Node18</title>
+<g id="a_edge32_Node000001_Node000018"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1040.97,-138.9C1126.39,-131.9 1264.45,-118.89 1382.62,-100 1392.2,-98.47 1402.44,-96.48 1412.04,-94.45"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1040.73,-135.41 1031.04,-139.71 1041.29,-142.39 1040.73,-135.41"/>
+</a>
+</g>
+</g>
+<!-- Node19 -->
+<g id="Node000019" class="node">
+<title>Node19</title>
+<g id="a_Node000019"><a xlink:href="recipe_8cpp.html" target="_top" xlink:title="Recipe class implementation (C++ version).">
+<polygon fill="white" stroke="#666666" points="1654.25,-94 1531,-94 1531,-74 1654.25,-74 1654.25,-94"/>
+<text xml:space="preserve" text-anchor="middle" x="1592.62" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/src/recipe.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node19 -->
+<g id="edge34_Node000001_Node000019" class="edge">
+<title>Node1&#45;&gt;Node19</title>
+<g id="a_edge34_Node000001_Node000019"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1040.59,-141.87C1150.3,-136.87 1352.08,-124.98 1522.62,-100 1532.46,-98.56 1542.99,-96.55 1552.81,-94.48"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1040.64,-138.37 1030.81,-142.31 1040.95,-145.36 1040.64,-138.37"/>
+</a>
+</g>
+</g>
+<!-- Node20 -->
+<g id="Node000020" class="node">
+<title>Node20</title>
+<g id="a_Node000020"><a xlink:href="pp_2src_2menu_8cpp.html" target="_top" xlink:title="Menu system for Recipe &amp; Nutrition Tracker (C++ version).">
+<polygon fill="white" stroke="#666666" points="1809,-94 1672.25,-94 1672.25,-74 1809,-74 1809,-94"/>
+<text xml:space="preserve" text-anchor="middle" x="1740.62" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipeapp/src/menu.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node20 -->
+<g id="edge37_Node000001_Node000020" class="edge">
+<title>Node1&#45;&gt;Node20</title>
+<g id="a_edge37_Node000001_Node000020"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1040.48,-143.21C1171.73,-139.54 1439.08,-128.93 1663.62,-100 1674.57,-98.59 1686.29,-96.57 1697.21,-94.47"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1040.77,-139.7 1030.87,-143.47 1040.96,-146.7 1040.77,-139.7"/>
 </a>
 </g>
 </g>
@@ -234,8 +380,17 @@ var sectionId = 'dynsection-1';
 <g id="edge2_Node000002_Node000003" class="edge">
 <title>Node2&#45;&gt;Node3</title>
 <g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M400,-65.97C413.92,-53.39 432.35,-36.72 443.72,-26.44"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="397.82,-63.23 392.75,-72.53 402.51,-68.42 397.82,-63.23"/>
+<path fill="none" stroke="#63b8ff" d="M294.81,-71.33C358.48,-58.56 459.31,-38.33 518.31,-26.49"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="294.36,-67.85 285.25,-73.25 295.74,-74.71 294.36,-67.85"/>
+</a>
+</g>
+</g>
+<!-- Node4 -->
+<g id="Node000004" class="node">
+<title>Node4</title>
+<g id="a_Node000004"><a xlink:href="graph_8cpp.html" target="_top" xlink:title="Graph implementation using adjacency lists for recipe dependency tracking (C++ version).">
+<polygon fill="white" stroke="#666666" points="297.12,-26 176.12,-26 176.12,-6 297.12,-6 297.12,-26"/>
+<text xml:space="preserve" text-anchor="middle" x="236.62" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/src/graph.cpp</text>
 </a>
 </g>
 </g>
@@ -243,116 +398,180 @@ var sectionId = 'dynsection-1';
 <g id="edge3_Node000002_Node000004" class="edge">
 <title>Node2&#45;&gt;Node4</title>
 <g id="a_edge3_Node000002_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M422.82,-70.21C458,-59.41 508.49,-43.92 545.91,-32.43"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="421.95,-66.82 413.42,-73.1 424,-73.51 421.95,-66.82"/>
+<path fill="none" stroke="#63b8ff" d="M236.62,-62.28C236.62,-50.27 236.62,-35.74 236.62,-26.44"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="233.13,-62.03 236.63,-72.03 240.13,-62.03 233.13,-62.03"/>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node3 -->
-<g id="edge5_Node000005_Node000003" class="edge">
-<title>Node5&#45;&gt;Node3</title>
-<g id="a_edge5_Node000005_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M500.47,-60.04C488.01,-48.46 473.58,-35.05 464.19,-26.32"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="497.88,-62.42 507.59,-66.66 502.65,-57.29 497.88,-62.42"/>
-</a>
-</g>
-</g>
-<!-- Node5&#45;&gt;Node4 -->
-<g id="edge6_Node000005_Node000004" class="edge">
-<title>Node5&#45;&gt;Node4</title>
-<g id="a_edge6_Node000005_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M549.92,-59.99C559.81,-50.79 570.93,-40.46 579.79,-32.22"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="547.68,-57.29 542.74,-66.66 552.45,-62.42 547.68,-57.29"/>
+<!-- Node2&#45;&gt;Node5 -->
+<g id="edge4_Node000002_Node000005" class="edge">
+<title>Node2&#45;&gt;Node5</title>
+<g id="a_edge4_Node000002_Node000005"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M316.52,-72.51C328.29,-70.98 340.27,-69.44 351.62,-68 480.9,-51.57 514.22,-54.26 642.62,-32 646.97,-31.25 651.46,-30.4 655.96,-29.5"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="316.3,-69.01 306.83,-73.77 317.2,-75.95 316.3,-69.01"/>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node3 -->
-<g id="edge8_Node000006_Node000003" class="edge">
+<g id="edge6_Node000006_Node000003" class="edge">
 <title>Node6&#45;&gt;Node3</title>
-<g id="a_edge8_Node000006_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M625.83,-70.19C584.43,-57.37 521.69,-37.92 484.63,-26.44"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="624.61,-73.48 635.2,-73.1 626.68,-66.79 624.61,-73.48"/>
+<g id="a_edge6_Node000006_Node000003"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M161.3,-67.85C305.33,-44.48 344.96,-52.92 485.62,-32 496.25,-30.42 507.61,-28.46 518.35,-26.48"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="161.08,-64.34 151.78,-69.42 162.22,-71.25 161.08,-64.34"/>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node4 -->
-<g id="edge9_Node000006_Node000004" class="edge">
-<title>Node6&#45;&gt;Node4</title>
-<g id="a_edge9_Node000006_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M648.78,-65.91C637.6,-55.52 623.44,-42.35 612.62,-32.3"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="646.18,-68.27 655.88,-72.51 650.94,-63.14 646.18,-68.27"/>
+<!-- Node6&#45;&gt;Node5 -->
+<g id="edge8_Node000006_Node000005" class="edge">
+<title>Node6&#45;&gt;Node5</title>
+<g id="a_edge8_Node000006_Node000005"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M161.52,-67.89C374.55,-37.31 433.33,-63.06 642.62,-32 646.99,-31.35 651.49,-30.58 656,-29.73"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="161.15,-64.4 151.77,-69.32 162.17,-71.33 161.15,-64.4"/>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node3 -->
-<g id="edge11_Node000007_Node000003" class="edge">
-<title>Node7&#45;&gt;Node3</title>
-<g id="a_edge11_Node000007_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M740.74,-67.58C648.74,-49.86 623.4,-48.05 534.16,-32 524.43,-30.25 514.04,-28.33 504.07,-26.48"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="740.02,-71 750.5,-69.47 741.35,-64.13 740.02,-71"/>
-</a>
-</g>
-</g>
-<!-- Node7&#45;&gt;Node4 -->
-<g id="edge12_Node000007_Node000004" class="edge">
-<title>Node7&#45;&gt;Node4</title>
-<g id="a_edge12_Node000007_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M750.68,-64.21C717.84,-54.18 677.91,-41.98 646.86,-32.49"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="749.49,-67.51 760.07,-67.08 751.53,-60.81 749.49,-67.51"/>
+<!-- Node6&#45;&gt;Node7 -->
+<g id="edge7_Node000006_Node000007" class="edge">
+<title>Node6&#45;&gt;Node7</title>
+<g id="a_edge7_Node000006_Node000007"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M76.54,-58.3C70.83,-49.55 64.58,-39.96 59.54,-32.22"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="73.43,-59.96 81.83,-66.42 79.3,-56.14 73.43,-59.96"/>
 </a>
 </g>
 </g>
 <!-- Node8&#45;&gt;Node3 -->
-<g id="edge15_Node000008_Node000003" class="edge">
+<g id="edge10_Node000008_Node000003" class="edge">
 <title>Node8&#45;&gt;Node3</title>
-<g id="a_edge15_Node000008_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M902.4,-71.49C895.27,-70.22 888.06,-69.02 881.16,-68 727.78,-45.34 687.6,-54.31 534.16,-32 523.4,-30.43 511.87,-28.45 501.01,-26.45"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="901.54,-74.89 912.01,-73.26 902.81,-68.01 901.54,-74.89"/>
+<g id="a_edge10_Node000008_Node000003"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M568.37,-62.28C567.64,-50.27 566.76,-35.74 566.2,-26.44"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="564.86,-62.26 568.96,-72.03 571.85,-61.84 564.86,-62.26"/>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node4 -->
-<g id="edge16_Node000008_Node000004" class="edge">
-<title>Node8&#45;&gt;Node4</title>
-<g id="a_edge16_Node000008_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M899.45,-71.44C893.28,-70.26 887.1,-69.1 881.16,-68 800.61,-53.05 707.09,-36.46 649.78,-26.38"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="898.54,-74.82 909.01,-73.26 899.85,-67.95 898.54,-74.82"/>
+<!-- Node8&#45;&gt;Node5 -->
+<g id="edge11_Node000008_Node000005" class="edge">
+<title>Node8&#45;&gt;Node5</title>
+<g id="a_edge11_Node000008_Node000005"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M600.09,-68.64C622.77,-57.95 653.69,-43.37 676.9,-32.43"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="598.61,-65.47 591.05,-72.9 601.59,-71.8 598.61,-65.47"/>
 </a>
 </g>
 </g>
 <!-- Node9&#45;&gt;Node3 -->
-<g id="edge18_Node000009_Node000003" class="edge">
+<g id="edge13_Node000009_Node000003" class="edge">
 <title>Node9&#45;&gt;Node3</title>
-<g id="a_edge18_Node000009_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M151.3,-67.64C241.07,-50.82 333.46,-35.82 392.69,-26.49"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="150.76,-64.18 141.58,-69.48 152.05,-71.06 150.76,-64.18"/>
+<g id="a_edge13_Node000009_Node000003"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M669.18,-62.87C641.85,-50.76 608.34,-35.92 586.98,-26.46"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="667.75,-66.06 678.31,-66.91 670.58,-59.66 667.75,-66.06"/>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node4 -->
-<g id="edge19_Node000009_Node000004" class="edge">
-<title>Node9&#45;&gt;Node4</title>
-<g id="a_edge19_Node000009_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M151.32,-67.8C319.75,-43.04 366.44,-58.65 531.16,-32 534.82,-31.41 538.58,-30.73 542.36,-30"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="150.91,-64.32 141.54,-69.27 151.95,-71.25 150.91,-64.32"/>
+<!-- Node9&#45;&gt;Node5 -->
+<g id="edge15_Node000009_Node000005" class="edge">
+<title>Node9&#45;&gt;Node5</title>
+<g id="a_edge15_Node000009_Node000005"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M712.6,-56.31C711.98,-48.12 711.32,-39.38 710.78,-32.22"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="709.11,-56.48 713.35,-66.18 716.09,-55.95 709.11,-56.48"/>
 </a>
 </g>
 </g>
-<!-- Node10&#45;&gt;Node3 -->
-<g id="edge21_Node000010_Node000003" class="edge">
-<title>Node10&#45;&gt;Node3</title>
-<g id="a_edge21_Node000010_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M269.84,-70.36C314.15,-57.53 381.71,-37.97 421.56,-26.44"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="268.92,-66.98 260.28,-73.12 270.86,-73.7 268.92,-66.98"/>
+<!-- Node9&#45;&gt;Node10 -->
+<g id="edge14_Node000009_Node000010" class="edge">
+<title>Node9&#45;&gt;Node10</title>
+<g id="a_edge14_Node000009_Node000010"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M767.36,-63.56C794.23,-53.65 826.44,-41.77 851.61,-32.49"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="766.18,-60.26 758.01,-67 768.61,-66.83 766.18,-60.26"/>
 </a>
 </g>
 </g>
-<!-- Node10&#45;&gt;Node4 -->
-<g id="edge22_Node000010_Node000004" class="edge">
-<title>Node10&#45;&gt;Node4</title>
-<g id="a_edge22_Node000010_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M284.85,-71.5C291.36,-70.29 297.9,-69.1 304.16,-68 404.78,-50.35 430.89,-51.5 531.16,-32 534.8,-31.29 538.55,-30.53 542.31,-29.73"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="284.64,-67.98 275.46,-73.27 285.93,-74.86 284.64,-67.98"/>
+<!-- Node11&#45;&gt;Node3 -->
+<g id="edge18_Node000011_Node000003" class="edge">
+<title>Node11&#45;&gt;Node3</title>
+<g id="a_edge18_Node000011_Node000003"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M808.19,-71.08C750.77,-58.28 660.67,-38.19 607.96,-26.44"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="807.22,-74.45 817.74,-73.21 808.74,-67.62 807.22,-74.45"/>
+</a>
+</g>
+</g>
+<!-- Node11&#45;&gt;Node5 -->
+<g id="edge20_Node000011_Node000005" class="edge">
+<title>Node11&#45;&gt;Node5</title>
+<g id="a_edge20_Node000011_Node000005"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M829.55,-69.07C804.84,-58.34 770.7,-43.52 745.16,-32.43"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="827.89,-72.17 838.46,-72.94 830.68,-65.75 827.89,-72.17"/>
+</a>
+</g>
+</g>
+<!-- Node11&#45;&gt;Node12 -->
+<g id="edge19_Node000011_Node000012" class="edge">
+<title>Node11&#45;&gt;Node12</title>
+<g id="a_edge19_Node000011_Node000012"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M900.19,-69.95C938.1,-57.12 995.02,-37.85 1028.74,-26.44"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="899.35,-66.54 891,-73.06 901.59,-73.17 899.35,-66.54"/>
+</a>
+</g>
+</g>
+<!-- Node13&#45;&gt;Node3 -->
+<g id="edge22_Node000013_Node000003" class="edge">
+<title>Node13&#45;&gt;Node3</title>
+<g id="a_edge22_Node000013_Node000003"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M466.59,-62.71C492.75,-50.63 524.72,-35.88 545.13,-26.46"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="465.14,-59.52 457.53,-66.89 468.07,-65.88 465.14,-59.52"/>
+</a>
+</g>
+</g>
+<!-- Node13&#45;&gt;Node5 -->
+<g id="edge24_Node000013_Node000005" class="edge">
+<title>Node13&#45;&gt;Node5</title>
+<g id="a_edge24_Node000013_Node000005"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M495.61,-66.22C545.6,-54.72 610.79,-39.73 656.02,-29.33"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="494.98,-62.77 486.02,-68.42 496.55,-69.59 494.98,-62.77"/>
+</a>
+</g>
+</g>
+<!-- Node14 -->
+<g id="Node000014" class="node">
+<title>Node14</title>
+<g id="a_Node000014"><a xlink:href="sparse__matrix_8cpp.html" target="_top" xlink:title="Sparse Matrix implementation (C++ version).">
+<polygon fill="white" stroke="#666666" points="476.38,-32 368.88,-32 368.88,0 476.38,0 476.38,-32"/>
+<text xml:space="preserve" text-anchor="start" x="376.88" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/recipe/src/sparse</text>
+<text xml:space="preserve" text-anchor="middle" x="422.62" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">_matrix.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node13&#45;&gt;Node14 -->
+<g id="edge23_Node000013_Node000014" class="edge">
+<title>Node13&#45;&gt;Node14</title>
+<g id="a_edge23_Node000013_Node000014"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M422.62,-56.31C422.62,-48.12 422.62,-39.38 422.62,-32.22"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="419.13,-56.18 422.63,-66.18 426.13,-56.18 419.13,-56.18"/>
+</a>
+</g>
+</g>
+<!-- Node15&#45;&gt;Node3 -->
+<g id="edge26_Node000015_Node000003" class="edge">
+<title>Node15&#45;&gt;Node3</title>
+<g id="a_edge26_Node000015_Node000003"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M975.73,-72.5C963.96,-70.98 951.98,-69.44 940.62,-68 810.46,-51.52 777.32,-51.81 647.62,-32 636.9,-30.36 625.41,-28.39 614.54,-26.43"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="975.05,-75.94 985.42,-73.76 975.95,-69 975.05,-75.94"/>
+</a>
+</g>
+</g>
+<!-- Node15&#45;&gt;Node5 -->
+<g id="edge28_Node000015_Node000005" class="edge">
+<title>Node15&#45;&gt;Node5</title>
+<g id="a_edge28_Node000015_Node000005"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M995.08,-71.45C929.57,-58.95 826.1,-39.22 763.37,-27.25"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="994.09,-74.82 1004.56,-73.26 995.4,-67.95 994.09,-74.82"/>
+</a>
+</g>
+</g>
+<!-- Node15&#45;&gt;Node16 -->
+<g id="edge27_Node000015_Node000016" class="edge">
+<title>Node15&#45;&gt;Node16</title>
+<g id="a_edge27_Node000015_Node000016"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1088.45,-69.11C1118.75,-56.29 1162.92,-37.61 1189.32,-26.44"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1087.22,-65.83 1079.37,-72.95 1089.94,-72.28 1087.22,-65.83"/>
 </a>
 </g>
 </g>

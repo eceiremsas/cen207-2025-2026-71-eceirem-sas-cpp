@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2025-12-30_19-58-07" tag="">
+  <assembly name="Default">
+    <class name="C:\cen207-2025-2026-71-eceirem-sas-cpp\tests\test_recipes.cpp" coveredlines="107" coverablelines="113" totallines="1935" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+  </assembly>
+</coverage>

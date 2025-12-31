@@ -51,7 +51,7 @@
 \DoxyCodeLine{00047\ \mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{menu_8h_a5ebbf48427c43b83a94a321a1714bc2d}{app\_context\_create}}(\textcolor{keywordtype}{void});}
 \DoxyCodeLine{00048\ }
 \DoxyCodeLine{00049\ \textcolor{comment}{//\ Frees\ all\ memory\ used\ by\ the\ application\ context}}
-\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a47f43863a0d425d022a1c7df37d73ac9}{app\_context\_destroy}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a47f43863a0d425d022a1c7df37d73ac9}{app\_context\_destroy}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
 \DoxyCodeLine{00051\ }
 \DoxyCodeLine{00052\ \textcolor{comment}{//\ ===\ Menu\ Operations\ ===}}
 \DoxyCodeLine{00053\ }
@@ -59,48 +59,48 @@
 \DoxyCodeLine{00055\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a507138c5706ae00e0882cfa4fb5b6260}{menu\_display}}(\textcolor{keywordtype}{void});}
 \DoxyCodeLine{00056\ }
 \DoxyCodeLine{00057\ \textcolor{comment}{//\ Loads\ sample\ recipe\ data}}
-\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_ae2e67c2cb4a6f982994df8738767abfa}{menu\_load\_sample\_data}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_ae2e67c2cb4a6f982994df8738767abfa}{menu\_load\_sample\_data}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
 \DoxyCodeLine{00059\ }
 \DoxyCodeLine{00060\ \textcolor{comment}{//\ 1.\ Adds\ a\ new\ recipe}}
-\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_afab4bc71e52345d9369a9be827e7a488}{menu\_add\_recipe}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_afab4bc71e52345d9369a9be827e7a488}{menu\_add\_recipe}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
 \DoxyCodeLine{00062\ }
 \DoxyCodeLine{00063\ \textcolor{comment}{//\ 2.\ Edits\ an\ existing\ recipe}}
-\DoxyCodeLine{00064\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a3a4ca97b58c86009ff703d761d310eca}{menu\_edit\_recipe}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a3a4ca97b58c86009ff703d761d310eca}{menu\_edit\_recipe}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
 \DoxyCodeLine{00065\ }
 \DoxyCodeLine{00066\ \textcolor{comment}{//\ 3.\ Deletes\ a\ recipe}}
-\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a25745bbb89dbc0157a8a6a785f59435c}{menu\_delete\_recipe}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a25745bbb89dbc0157a8a6a785f59435c}{menu\_delete\_recipe}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
 \DoxyCodeLine{00068\ }
 \DoxyCodeLine{00069\ \textcolor{comment}{//\ 4.\ Search\ submenu}}
-\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a57ff4d96dc52c6556ad71c0c1f353681}{menu\_search\_recipes}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
-\DoxyCodeLine{00071\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a4fac6502ce9e46a0f43e514ef834364a}{menu\_search\_by\_name}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
-\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a2777890153059bfe5c9249f076112b7b}{menu\_search\_by\_category}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
-\DoxyCodeLine{00073\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a8109d2e2da7112863add2a6d82d477f6}{menu\_search\_by\_calorie\_range}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a57ff4d96dc52c6556ad71c0c1f353681}{menu\_search\_recipes}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a4fac6502ce9e46a0f43e514ef834364a}{menu\_search\_by\_name}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a2777890153059bfe5c9249f076112b7b}{menu\_search\_by\_category}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a8109d2e2da7112863add2a6d82d477f6}{menu\_search\_by\_calorie\_range}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
 \DoxyCodeLine{00074\ }
 \DoxyCodeLine{00075\ \textcolor{comment}{//\ 5.\ Displays\ all\ recipes}}
-\DoxyCodeLine{00076\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a2f23d198698731a0cd984ae9919d296b}{menu\_view\_all\_recipes}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
+\DoxyCodeLine{00076\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a2f23d198698731a0cd984ae9919d296b}{menu\_view\_all\_recipes}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
 \DoxyCodeLine{00077\ }
 \DoxyCodeLine{00078\ \textcolor{comment}{//\ 6.\ Sorts\ recipes\ by\ calorie\ count}}
-\DoxyCodeLine{00079\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a813d6e03175dda18b8c505b7d8fc36cb}{menu\_sort\_by\_calories}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a813d6e03175dda18b8c505b7d8fc36cb}{menu\_sort\_by\_calories}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
 \DoxyCodeLine{00080\ }
 \DoxyCodeLine{00081\ \textcolor{comment}{//\ 7.\ Creates\ a\ weekly\ meal\ plan}}
-\DoxyCodeLine{00082\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a569a11d7e2b7106c3b2bcfd9c82a4eed}{menu\_create\_weekly\_plan}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
+\DoxyCodeLine{00082\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a569a11d7e2b7106c3b2bcfd9c82a4eed}{menu\_create\_weekly\_plan}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
 \DoxyCodeLine{00083\ }
 \DoxyCodeLine{00084\ \textcolor{comment}{//\ 8.\ Displays\ recipe\ dependency\ graph}}
-\DoxyCodeLine{00085\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_afd6905a38a0ee313dd2d9bf560387d76}{menu\_view\_dependencies}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_afd6905a38a0ee313dd2d9bf560387d76}{menu\_view\_dependencies}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
 \DoxyCodeLine{00086\ }
 \DoxyCodeLine{00087\ \textcolor{comment}{//\ 9.\ Finds\ recipes\ containing\ a\ specific\ ingredient}}
-\DoxyCodeLine{00088\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a1b845c0abd7ce5f94ee5a835076d7aaa}{menu\_find\_by\_ingredient}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
+\DoxyCodeLine{00088\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a1b845c0abd7ce5f94ee5a835076d7aaa}{menu\_find\_by\_ingredient}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
 \DoxyCodeLine{00089\ }
 \DoxyCodeLine{00090\ \textcolor{comment}{//\ 10.\ Undoes\ the\ last\ operation}}
-\DoxyCodeLine{00091\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_af1905d874a4b35be85efb0e537c1c0fb}{menu\_undo}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}});}
+\DoxyCodeLine{00091\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_af1905d874a4b35be85efb0e537c1c0fb}{menu\_undo}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx);}
 \DoxyCodeLine{00092\ }
 \DoxyCodeLine{00093\ \textcolor{comment}{//\ Handles\ user\ menu\ choices}}
-\DoxyCodeLine{00094\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_ae504e5a396a5b84b8160cacfe82fc3b7}{menu\_handle\_choice}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}},\ \textcolor{keywordtype}{int}\ choice);}
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_ae504e5a396a5b84b8160cacfe82fc3b7}{menu\_handle\_choice}}(\mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx,\ \textcolor{keywordtype}{int}\ choice);}
 \DoxyCodeLine{00095\ }
 \DoxyCodeLine{00096\ \textcolor{comment}{//\ ===\ Binary\ File\ Operations\ ===}}
 \DoxyCodeLine{00097\ }
 \DoxyCodeLine{00098\ \textcolor{comment}{//\ Saves\ the\ entire\ application\ context\ to\ a\ binary\ file}}
-\DoxyCodeLine{00099\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{menu_8h_a391bd6d0228304fb91eafade11f32977}{menu\_save\_context\_binary}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{recipe_2src_2temp_code_runner_file_8cpp_aec23fb55b8506ab613543153d8270bcd}{ctx}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{menu_8h_a391bd6d0228304fb91eafade11f32977}{menu\_save\_context\_binary}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_app_context}{AppContext}}*\ ctx,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
 \DoxyCodeLine{00100\ }
 \DoxyCodeLine{00101\ \textcolor{comment}{//\ Loads\ the\ entire\ application\ context\ from\ a\ binary\ file}}
 \DoxyCodeLine{00102\ \mbox{\hyperlink{struct_app_context}{AppContext}}*\ \mbox{\hyperlink{menu_8h_a537e676a303a454ce785de30bd786eeb}{menu\_load\_context\_binary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
