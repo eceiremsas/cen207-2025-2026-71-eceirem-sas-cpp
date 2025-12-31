@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2026-01-01_00-46-06" tag="">
+  <assembly name="C:\cen207-2025-2026-71-eceirem-sas-cpp\build_win\build\Debug\recipe_tests.exe">
+    <class name="graph.c" coveredlines="232" coverablelines="272" totallines="491" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+    <class name="hash_table.c" coveredlines="114" coverablelines="149" totallines="273" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+    <class name="heap.c" coveredlines="123" coverablelines="154" totallines="326" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+    <class name="linked_list.c" coveredlines="122" coverablelines="153" totallines="290" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+    <class name="menu.c" coveredlines="167" coverablelines="204" totallines="398" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+    <class name="queue.c" coveredlines="96" coverablelines="128" totallines="254" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+    <class name="recipe.c" coveredlines="113" coverablelines="142" totallines="297" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+    <class name="sparse_matrix.c" coveredlines="117" coverablelines="159" totallines="295" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+    <class name="stack.c" coveredlines="81" coverablelines="106" totallines="225" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+    <class name="xor_linked_list.c" coveredlines="146" coverablelines="175" totallines="344" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+  </assembly>
+</coverage>

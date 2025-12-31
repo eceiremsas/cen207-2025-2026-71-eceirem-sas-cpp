@@ -271,7 +271,6 @@
     <member refid="test__recipes_8cpp_1aaa3b2a1b87b21994bf3cc46fd2cc8466" kind="function"><name>TEST</name></member>
     <member refid="test__recipes_8cpp_1a7e6e8af115d31a132c5d140823b8e99c" kind="function"><name>TEST</name></member>
     <member refid="test__recipes_8cpp_1a7d8029d22d19e55997824a429af88f20" kind="function"><name>TEST</name></member>
-    <member refid="test__recipes_8cpp_1af870912f3756b10cc9a901114413a0fc" kind="function"><name>TEST</name></member>
     <member refid="test__recipes_8cpp_1a7749977d81ff6d3872b82e4d70eb4131" kind="function"><name>TEST</name></member>
     <member refid="test__recipes_8cpp_1a174dd71ab8e542013651002820320bbf" kind="function"><name>TEST</name></member>
     <member refid="test__recipes_8cpp_1aebdedc3ab5f60ba7da3801713c3412ea" kind="function"><name>TEST</name></member>
@@ -319,6 +318,21 @@
     <member refid="test__recipes_8cpp_1a970d1ea2b3d87b533e6ed8039b36d46f" kind="function"><name>TEST</name></member>
     <member refid="test__recipes_8cpp_1a18ebc2a21d2ea04c2087229605e9e26e" kind="function"><name>TEST</name></member>
     <member refid="test__recipes_8cpp_1a5de85b15bb1a6152c0473f6632143f1b" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1aac2d961bde60da71fb8ffa393f177a7f" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1ab5195336e30ff4687cf999f9a45ebe0a" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1a37bf156a642ce5ac8bd7fae4ac25809f" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1af7fafa7ced9b08545b3110b6e90928b1" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1a7ea6aa33353888c7c22584fb19149450" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1a335f23e2e13f4e53d1fe601a04287dec" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1a5807ef727baa94a5cdcc8b1b7b672586" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1a4a095659fac8c7b6d1c97072da519ace" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1a62cb1414e33dbc4b5479804a7ea7b06b" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1a628cb164b4fcc16a467707394bad98bc" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1a8be6275cb9cdca6f319d7c36e6350d99" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1a611c3cd47acf76ee4e733cb40c737019" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1aedb738247a285416ae074a47959fb207" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1a5878cd91885ef5a2cb4fb85d6dc5985e" kind="function"><name>TEST</name></member>
+    <member refid="test__recipes_8cpp_1a633a2adc8e762d561c0a523f9a891289" kind="function"><name>TEST</name></member>
   </compound>
   <compound refid="test__recipes__cpp_8cpp" kind="file"><name>test_recipes_cpp.cpp</name>
     <member refid="test__recipes__cpp_8cpp_1a9de184763516c542c3be713b6cba7d35" kind="function"><name>TEST</name></member>
