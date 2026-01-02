@@ -15,9 +15,9 @@ var searchData=
   ['setname_12',['setName',['../struct_recipe.html#abeb7f55824c62097dfb686d50fcf2047',1,'Recipe']]],
   ['setpreparationtime_13',['setPreparationTime',['../struct_recipe.html#a66bdee8ac5d502f388f485c23e4db16e',1,'Recipe']]],
   ['setup_14',['SetUp',['../class_calculator_test.html#a16acabe39b00dc041fea47f1b99f9983',1,'CalculatorTest::SetUp()'],['../class_math_utility_test.html#ac05460de2c43e3005d1e4db0d530f58c',1,'MathUtilityTest::SetUp()']]],
-  ['size_15',['size',['../struct_hash_table.html#a0d18fa4de579365ad5d78a32bbe11119',1,'HashTable::size()'],['../struct_heap.html#a672b1f9f5be335a29feb0d72ee5d61d7',1,'Heap::size()'],['../class_linked_list.html#a91532f0fd443112865b137ea29567522',1,'LinkedList::size()'],['../struct_queue.html#a718803e822635006c843fc28e08041f0',1,'Queue::size()'],['../struct_stack.html#ac7a1567f2937ad328290387066c05c62',1,'Stack::size()'],['../struct_heap.html#a672b1f9f5be335a29feb0d72ee5d61d7',1,'Heap::size()']]],
+  ['size_15',['size',['../struct_hash_table.html#a0d18fa4de579365ad5d78a32bbe11119',1,'HashTable::size()'],['../struct_heap.html#a672b1f9f5be335a29feb0d72ee5d61d7',1,'Heap::size()'],['../class_linked_list.html#a91532f0fd443112865b137ea29567522',1,'LinkedList::size()'],['../struct_queue.html#a718803e822635006c843fc28e08041f0',1,'Queue::size()'],['../struct_stack.html#ac7a1567f2937ad328290387066c05c62',1,'Stack::size()']]],
   ['sortbycalories_16',['sortByCalories',['../class_menu.html#ae0f3d83cdd7e6b4f462d25805f841300',1,'Menu::sortByCalories(AppContext &amp;ctx)'],['../class_menu.html#a730bc727dfd4c7f53158c86d2242185f',1,'Menu::sortByCalories(AppContext &amp;ctx)']]],
-  ['sortrecipes_17',['sortRecipes',['../struct_heap.html#af7c247e8794a6e9b561b3cd080b16cf1',1,'Heap']]],
+  ['sortrecipes_17',['sortRecipes',['../struct_heap.html#a7014befdce4133c6da726b39e7c9da30',1,'Heap']]],
   ['sparse_5fmatrix_5fadd_5fentry_18',['sparse_matrix_add_entry',['../sparse__matrix_8h.html#ac6d33da768694dfab65e0740ffb72581',1,'sparse_matrix_add_entry(SparseMatrix *matrix, int row, int col, int value, const char *ingredient):&#160;sparse_matrix.c'],['../sparse__matrix_8c.html#ac6d33da768694dfab65e0740ffb72581',1,'sparse_matrix_add_entry(SparseMatrix *matrix, int row, int col, int value, const char *ingredient):&#160;sparse_matrix.c']]],
   ['sparse_5fmatrix_5fcreate_19',['sparse_matrix_create',['../sparse__matrix_8h.html#ab766bcb718c51edfb2b98964ddd3ed9c',1,'sparse_matrix_create(void):&#160;sparse_matrix.c'],['../sparse__matrix_8c.html#ab766bcb718c51edfb2b98964ddd3ed9c',1,'sparse_matrix_create(void):&#160;sparse_matrix.c']]],
   ['sparse_5fmatrix_5fdestroy_20',['sparse_matrix_destroy',['../sparse__matrix_8h.html#af6943df380c6b7afde192c0c1492d6e0',1,'sparse_matrix_destroy(SparseMatrix *matrix):&#160;sparse_matrix.c'],['../sparse__matrix_8c.html#af6943df380c6b7afde192c0c1492d6e0',1,'sparse_matrix_destroy(SparseMatrix *matrix):&#160;sparse_matrix.c']]],
@@ -40,6 +40,5 @@ var searchData=
   ['stack_5fsave_5fbinary_37',['stack_save_binary',['../stack_8h.html#af167f136d150224afd6dc677166a397d',1,'stack_save_binary(const Stack *stack, const char *filename):&#160;stack.c'],['../stack_8c.html#af167f136d150224afd6dc677166a397d',1,'stack_save_binary(const Stack *stack, const char *filename):&#160;stack.c']]],
   ['stack_5fsize_38',['stack_size',['../stack_8h.html#a56c0c535d6e76d010500763370052972',1,'stack_size(Stack *stack):&#160;stack.c'],['../stack_8c.html#a56c0c535d6e76d010500763370052972',1,'stack_size(Stack *stack):&#160;stack.c']]],
   ['stackoperation_39',['StackOperation',['../struct_stack_operation.html#a3de1e4d65970189931c5be2aefc6c0a6',1,'StackOperation']]],
-  ['swap_40',['swap',['../struct_heap.html#ab2c4002145e854a213409c783bc3e5f3',1,'Heap']]],
-  ['swapnodes_41',['swapNodes',['../struct_heap.html#af8382600fed5fc3c18049e4bbbb958c6',1,'Heap']]]
+  ['swapnodes_40',['swapNodes',['../struct_heap.html#af8382600fed5fc3c18049e4bbbb958c6',1,'Heap']]]
 ];

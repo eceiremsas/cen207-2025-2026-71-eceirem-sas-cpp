@@ -16,7 +16,6 @@
     <includedby refid="sparse__matrix_8hpp" local="yes">src/recipe/header/sparse_matrix.hpp</includedby>
     <includedby refid="stack_8hpp" local="yes">src/recipe/header/stack.hpp</includedby>
     <includedby refid="hash__table_8cpp" local="yes">src/recipe/src/hash_table.cpp</includedby>
-    <includedby refid="heap_8cpp" local="yes">src/recipe/src/heap.cpp</includedby>
     <includedby refid="linked__list_8cpp" local="yes">src/recipe/src/linked_list.cpp</includedby>
     <includedby refid="src_2menu_8cpp" local="yes">src/recipe/src/menu.cpp</includedby>
     <includedby refid="queue_8cpp" local="yes">src/recipe/src/queue.cpp</includedby>
@@ -81,15 +80,17 @@
         <link refid="heap_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="10">
         <label>src/recipe/header/linked_list.hpp</label>
         <link refid="linked__list_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
@@ -98,12 +99,12 @@
         <label>src/recipe/header/menu.hpp</label>
         <link refid="header_2menu_8hpp"/>
       </node>
-      <node id="11">
+      <node id="12">
         <label>src/recipe/header/queue.hpp</label>
         <link refid="queue_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
@@ -117,51 +118,49 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
       </node>
-      <node id="13">
+      <node id="14">
         <label>src/recipe/header/sparse_matrix.hpp</label>
         <link refid="sparse__matrix_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="15">
+      <node id="16">
         <label>src/recipe/header/stack.hpp</label>
         <link refid="stack_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
@@ -174,11 +173,11 @@
         <label>src/recipe/src/hash_table.cpp</label>
         <link refid="hash__table_8cpp"/>
       </node>
-      <node id="17">
+      <node id="9">
         <label>src/recipe/src/heap.cpp</label>
         <link refid="heap_8cpp"/>
       </node>
-      <node id="10">
+      <node id="11">
         <label>src/recipe/src/linked_list.cpp</label>
         <link refid="linked__list_8cpp"/>
       </node>
@@ -186,7 +185,7 @@
         <label>src/recipe/src/menu.cpp</label>
         <link refid="src_2menu_8cpp"/>
       </node>
-      <node id="12">
+      <node id="13">
         <label>src/recipe/src/queue.cpp</label>
         <link refid="queue_8cpp"/>
       </node>
@@ -194,11 +193,11 @@
         <label>src/recipe/src/recipe.cpp</label>
         <link refid="recipe_8cpp"/>
       </node>
-      <node id="14">
+      <node id="15">
         <label>src/recipe/src/sparse_matrix.cpp</label>
         <link refid="sparse__matrix_8cpp"/>
       </node>
-      <node id="16">
+      <node id="17">
         <label>src/recipe/src/stack.cpp</label>
         <link refid="stack_8cpp"/>
       </node>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['leftchild_0',['leftChild',['../struct_heap.html#ab5202fa6c3b8a2149a7dc6b0d869e46f',1,'Heap::leftChild(int index)'],['../struct_heap.html#ab5202fa6c3b8a2149a7dc6b0d869e46f',1,'Heap::leftChild(int index)']]],
+  ['leftchild_0',['leftChild',['../struct_heap.html#ab5202fa6c3b8a2149a7dc6b0d869e46f',1,'Heap']]],
   ['linked_5flist_2ec_1',['linked_list.c',['../linked__list_8c.html',1,'']]],
   ['linked_5flist_2ecpp_2',['linked_list.cpp',['../linked__list_8cpp.html',1,'']]],
   ['linked_5flist_2eh_3',['linked_list.h',['../linked__list_8h.html',1,'']]],

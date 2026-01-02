@@ -20,7 +20,7 @@ var searchData=
   ['hashtable_17',['HashTable',['../struct_hash_table.html',1,'HashTable'],['../struct_hash_table.html#a1a49309ccc092281e537c742bfd7a9bd',1,'HashTable::HashTable()']]],
   ['hashtable_18',['hashTable',['../struct_app_context.html#a91f2333ee98a18943768f9f36809c7df',1,'AppContext']]],
   ['head_19',['head',['../struct_list.html#a6c5449b1dd158368840801d0cdc86f5e',1,'List::head'],['../struct_sparse_matrix.html#a6f1462037e7a711901135b67011a4ba3',1,'SparseMatrix::head'],['../struct_x_o_r_list.html#a0c165a6987ec46f52ecc6781097f113a',1,'XORList::head'],['../class_linked_list.html#a0e86fc84176f6e0450b4b417806cc2e4',1,'LinkedList::head'],['../struct_sparse_matrix.html#a24398ba1f1f230640c1b20aef79918d4',1,'SparseMatrix::head']]],
-  ['heap_20',['Heap',['../struct_heap.html',1,'Heap'],['../struct_heap.html#a817e70af29601d05a9c305f8a95e45a8',1,'Heap::Heap(int maxCapacity=100)'],['../struct_heap.html#a6b0516bdc82092b0fa589e20dbe68ad2',1,'Heap::Heap(int cap)']]],
+  ['heap_20',['Heap',['../struct_heap.html',1,'Heap'],['../struct_heap.html#a817e70af29601d05a9c305f8a95e45a8',1,'Heap::Heap()']]],
   ['heap_2ec_21',['heap.c',['../heap_8c.html',1,'']]],
   ['heap_2ecpp_22',['heap.cpp',['../heap_8cpp.html',1,'']]],
   ['heap_2eh_23',['heap.h',['../heap_8h.html',1,'']]],
@@ -42,8 +42,7 @@ var searchData=
   ['heap_5fswap_39',['heap_swap',['../heap_8h.html#ac2fb89e79c07a9207780988bc6eff91b',1,'heap_swap(Recipe **recipe1, Recipe **recipe2):&#160;heap.c'],['../heap_8c.html#ac2fb89e79c07a9207780988bc6eff91b',1,'heap_swap(Recipe **recipe1, Recipe **recipe2):&#160;heap.c']]],
   ['heapify_5fdown_40',['heapify_down',['../heap_8h.html#aa33d7b3c74397a16d67a4f8b2ed301a5',1,'heapify_down(Heap *heap, int index):&#160;heap.c'],['../heap_8c.html#aa33d7b3c74397a16d67a4f8b2ed301a5',1,'heapify_down(Heap *heap, int index):&#160;heap.c']]],
   ['heapify_5fup_41',['heapify_up',['../heap_8h.html#a2f9f919fcbab3c57df84fa7db87d4af8',1,'heapify_up(Heap *heap, int index):&#160;heap.c'],['../heap_8c.html#a2f9f919fcbab3c57df84fa7db87d4af8',1,'heapify_up(Heap *heap, int index):&#160;heap.c']]],
-  ['heapifydown_42',['heapifyDown',['../struct_heap.html#a1e77b23e735d8ef87753ae6ca2e11a39',1,'Heap::heapifyDown(int index)'],['../struct_heap.html#a1e77b23e735d8ef87753ae6ca2e11a39',1,'Heap::heapifyDown(int index)']]],
-  ['heapifyup_43',['heapifyUp',['../struct_heap.html#a692cce19ba18f8e709358d335bbd5691',1,'Heap::heapifyUp(int index)'],['../struct_heap.html#a692cce19ba18f8e709358d335bbd5691',1,'Heap::heapifyUp(int index)']]],
-  ['heapsort_44',['heapSort',['../struct_heap.html#a5edd450baecf062227491ef34f292254',1,'Heap']]],
-  ['html_20converter_45',['Install Test Results to HTML Converter',['../index.html#autotoc_md16',1,'']]]
+  ['heapifydown_42',['heapifyDown',['../struct_heap.html#a1e77b23e735d8ef87753ae6ca2e11a39',1,'Heap']]],
+  ['heapifyup_43',['heapifyUp',['../struct_heap.html#a692cce19ba18f8e709358d335bbd5691',1,'Heap']]],
+  ['html_20converter_44',['Install Test Results to HTML Converter',['../index.html#autotoc_md16',1,'']]]
 ];

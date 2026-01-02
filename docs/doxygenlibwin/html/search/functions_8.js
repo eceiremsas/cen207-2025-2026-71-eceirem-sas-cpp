@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['leftchild_0',['leftChild',['../struct_heap.html#ab5202fa6c3b8a2149a7dc6b0d869e46f',1,'Heap::leftChild(int index)'],['../struct_heap.html#ab5202fa6c3b8a2149a7dc6b0d869e46f',1,'Heap::leftChild(int index)']]],
+  ['leftchild_0',['leftChild',['../struct_heap.html#ab5202fa6c3b8a2149a7dc6b0d869e46f',1,'Heap']]],
   ['linkedlist_1',['LinkedList',['../class_linked_list.html#afe7f78983e173f8018927cf2ad11a5aa',1,'LinkedList']]],
   ['list_5fcreate_2',['list_create',['../linked__list_8h.html#a8668cbe6c584fe11e610d2895f0f16c7',1,'list_create(void):&#160;linked_list.c'],['../linked__list_8c.html#a8668cbe6c584fe11e610d2895f0f16c7',1,'list_create(void):&#160;linked_list.c']]],
   ['list_5fdestroy_3',['list_destroy',['../linked__list_8h.html#ad720671a4abc61ed689060cacc592565',1,'list_destroy(List *list):&#160;linked_list.c'],['../linked__list_8c.html#ad720671a4abc61ed689060cacc592565',1,'list_destroy(List *list):&#160;linked_list.c']]],

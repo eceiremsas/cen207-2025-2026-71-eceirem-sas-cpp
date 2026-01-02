@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2025-12-31_22-36-07" tag="">
+  <assembly name="Default">
+    <class name="C:\Users\ASUS\Desktop\cursorunkicen207-2025-2026-71-eceirem-sas-cpp\src\utility\header\commonTypes.h" coveredlines="1" coverablelines="1" totallines="2" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+    <class name="C:\Users\ASUS\Desktop\cursorunkicen207-2025-2026-71-eceirem-sas-cpp\src\utility\header\mathUtility.h" coveredlines="6" coverablelines="8" totallines="73" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+    <class name="C:\Users\ASUS\Desktop\cursorunkicen207-2025-2026-71-eceirem-sas-cpp\src\utility\src\mathUtility.cpp" coveredlines="1" coverablelines="1" totallines="2" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+  </assembly>
+</coverage>

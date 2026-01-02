@@ -15,5 +15,5 @@ var searchData=
   ['recipe_5fset_5finstructions_12',['recipe_set_instructions',['../recipe_8h.html#a11c82a881ee301bff1d0fc0cbc2e1a46',1,'recipe_set_instructions(Recipe *recipe, const char *instructions):&#160;recipe.c'],['../recipe_8c.html#a11c82a881ee301bff1d0fc0cbc2e1a46',1,'recipe_set_instructions(Recipe *recipe, const char *instructions):&#160;recipe.c']]],
   ['remove_13',['remove',['../struct_hash_table.html#afea98443e6e36c6c7c8940fa515a301a',1,'HashTable::remove()'],['../class_linked_list.html#a5fceea1644b23463e9219f28bb8513c4',1,'LinkedList::remove()']]],
   ['resetvisited_14',['resetVisited',['../struct_graph.html#a00c89f9300992b2ac69104bb7ddcc868',1,'Graph']]],
-  ['rightchild_15',['rightChild',['../struct_heap.html#ac183568173ce7822c911b2bd39c1d516',1,'Heap::rightChild(int index)'],['../struct_heap.html#ac183568173ce7822c911b2bd39c1d516',1,'Heap::rightChild(int index)']]]
+  ['rightchild_15',['rightChild',['../struct_heap.html#ac183568173ce7822c911b2bd39c1d516',1,'Heap']]]
 ];

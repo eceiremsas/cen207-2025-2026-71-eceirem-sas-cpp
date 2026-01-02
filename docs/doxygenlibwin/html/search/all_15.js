@@ -16,9 +16,9 @@ var searchData=
   ['setpreparationtime_13',['setPreparationTime',['../struct_recipe.html#a66bdee8ac5d502f388f485c23e4db16e',1,'Recipe']]],
   ['setup_14',['SetUp',['../class_calculator_test.html#a16acabe39b00dc041fea47f1b99f9983',1,'CalculatorTest::SetUp()'],['../class_math_utility_test.html#ac05460de2c43e3005d1e4db0d530f58c',1,'MathUtilityTest::SetUp()']]],
   ['setup_20development_20environment_15',['Setup Development Environment',['../index.html#autotoc_md3',1,'']]],
-  ['size_16',['size',['../struct_hash_table.html#ad732056fce42df5162c810b4dd28fca1',1,'HashTable::size'],['../struct_heap.html#ac291cf589f86e95198621d33e21a05a6',1,'Heap::size'],['../struct_hash_table.html#a0d18fa4de579365ad5d78a32bbe11119',1,'HashTable::size()'],['../struct_heap.html#a672b1f9f5be335a29feb0d72ee5d61d7',1,'Heap::size()'],['../class_linked_list.html#a91532f0fd443112865b137ea29567522',1,'LinkedList::size()'],['../struct_queue.html#a718803e822635006c843fc28e08041f0',1,'Queue::size()'],['../struct_stack.html#ac7a1567f2937ad328290387066c05c62',1,'Stack::size()'],['../struct_heap.html#a672b1f9f5be335a29feb0d72ee5d61d7',1,'Heap::size()']]],
+  ['size_16',['size',['../struct_hash_table.html#ad732056fce42df5162c810b4dd28fca1',1,'HashTable::size'],['../struct_heap.html#ac291cf589f86e95198621d33e21a05a6',1,'Heap::size'],['../struct_hash_table.html#a0d18fa4de579365ad5d78a32bbe11119',1,'HashTable::size()'],['../struct_heap.html#a672b1f9f5be335a29feb0d72ee5d61d7',1,'Heap::size()'],['../class_linked_list.html#a91532f0fd443112865b137ea29567522',1,'LinkedList::size()'],['../struct_queue.html#a718803e822635006c843fc28e08041f0',1,'Queue::size()'],['../struct_stack.html#ac7a1567f2937ad328290387066c05c62',1,'Stack::size()']]],
   ['sortbycalories_17',['sortByCalories',['../class_menu.html#ae0f3d83cdd7e6b4f462d25805f841300',1,'Menu::sortByCalories(AppContext &amp;ctx)'],['../class_menu.html#a730bc727dfd4c7f53158c86d2242185f',1,'Menu::sortByCalories(AppContext &amp;ctx)']]],
-  ['sortrecipes_18',['sortRecipes',['../struct_heap.html#af7c247e8794a6e9b561b3cd080b16cf1',1,'Heap']]],
+  ['sortrecipes_18',['sortRecipes',['../struct_heap.html#a7014befdce4133c6da726b39e7c9da30',1,'Heap']]],
   ['sparse_5fmatrix_19',['sparse_matrix',['../struct_app_context.html#a5e21cd85dfb38fa553a87f6fcc858472',1,'AppContext']]],
   ['sparse_5fmatrix_2ec_20',['sparse_matrix.c',['../sparse__matrix_8c.html',1,'']]],
   ['sparse_5fmatrix_2ecpp_21',['sparse_matrix.cpp',['../sparse__matrix_8cpp.html',1,'']]],
@@ -60,6 +60,5 @@ var searchData=
   ['step_205_20only_20wsl_57',['Step-5 (Only WSL)',['../index.html#autotoc_md8',1,'']]],
   ['structures_20project_20recipe_20and_20nutrition_20tracker_58',['CEN207 Data Structures Project - Recipe and Nutrition Tracker',['../index.html',1,'']]],
   ['supported_20platforms_59',['Supported Platforms',['../index.html#autotoc_md13',1,'']]],
-  ['swap_60',['swap',['../struct_heap.html#ab2c4002145e854a213409c783bc3e5f3',1,'Heap']]],
-  ['swapnodes_61',['swapNodes',['../struct_heap.html#af8382600fed5fc3c18049e4bbbb958c6',1,'Heap']]]
+  ['swapnodes_60',['swapNodes',['../struct_heap.html#af8382600fed5fc3c18049e4bbbb958c6',1,'Heap']]]
 ];
