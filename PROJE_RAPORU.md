@@ -1,40 +1,40 @@
-# CEN207 Veri Yapıları Projesi - Tarif ve Beslenme Takip Uygulaması
-## Proje Raporu
+# CEN207 Data Structures Project - Recipe and Nutrition Tracker
+## Project Report
 
 ---
 
-## 1. PROJE ÖZETİ
+## 1. PROJECT SUMMARY
 
-### 1.1 Genel Bakış
-Bu proje, CEN207 Veri Yapıları dersinin ara sınav aşaması için geliştirilmiş kapsamlı bir **Tarif ve Beslenme Takip Uygulaması**dır. Proje, 7 farklı veri yapısı ve algoritmanın pratik uygulamasını içermektedir.
+### 1.1 Overview
+This project is a comprehensive **Recipe and Nutrition Tracker Application** developed for the midterm phase of the CEN207 Data Structures course. The project includes the practical implementation of 7 different data structures and algorithms.
 
-### 1.2 Proje Bilgileri
-- **Proje Adı:** Recipe and Nutrition Tracker (Tarif ve Beslenme Takip Uygulaması)
-- **Ders:** CEN207 Veri Yapıları
-- **Dönem:** 2025-2026
-- **Proje Tipi:** Ara Sınav Projesi
-- **Programlama Dilleri:** C (C99) ve C++ (C++17)
-- **Build Sistemi:** CMake (>= 3.12)
+### 1.2 Project Information
+- **Project Name:** Recipe and Nutrition Tracker
+- **Course:** CEN207 Data Structures
+- **Academic Year:** 2025-2026
+- **Project Type:** Midterm Project
+- **Programming Languages:** C (C99) and C++ (C++17)
+- **Build System:** CMake (>= 3.12)
 
-### 1.3 Proje Amacı
-Proje, aşağıdaki veri yapılarının ve algoritmaların gerçek dünya senaryosunda (tarif yönetimi) kullanımını göstermektedir:
-1. Bağlı Liste (Linked List)
-2. XOR Bağlı Liste (XOR Linked List)
-3. Yığın (Stack)
-4. Kuyruk (Queue)
-5. Hash Tablosu (Hash Table)
-6. Graf (Graph) - BFS ve DFS algoritmaları
-7. Yığın (Heap) - Min-Heap
-8. Seyrek Matris (Sparse Matrix)
+### 1.3 Project Objectives
+The project demonstrates the use of the following data structures and algorithms in a real-world scenario (recipe management):
+1. Linked List
+2. XOR Linked List
+3. Stack
+4. Queue
+5. Hash Table
+6. Graph - BFS and DFS algorithms
+7. Heap - Min-Heap
+8. Sparse Matrix
 
 ---
 
-## 2. PROJE YAPISI
+## 2. PROJECT STRUCTURE
 
-### 2.1 Dizin Yapısı
+### 2.1 Directory Structure
 ```
 cen207-2025-2026-71-eceirem-sas-cpp-1/
-├── include/              # C başlık dosyaları (.h)
+├── include/              # C header files (.h)
 │   ├── recipe.h
 │   ├── linked_list.h
 │   ├── xor_linked_list.h
@@ -45,431 +45,430 @@ cen207-2025-2026-71-eceirem-sas-cpp-1/
 │   ├── heap.h
 │   ├── sparse_matrix.h
 │   └── menu.h
-├── src/                  # Kaynak kod dosyaları
-│   ├── recipe.c          # Tarif yönetimi
-│   ├── linked_list.c     # Bağlı liste implementasyonu
-│   ├── xor_linked_list.c # XOR bağlı liste implementasyonu
-│   ├── stack.c           # Yığın implementasyonu
-│   ├── queue.c           # Kuyruk implementasyonu
-│   ├── hash_table.c      # Hash tablosu implementasyonu
-│   ├── graph.c           # Graf implementasyonu (BFS/DFS)
-│   ├── heap.c            # Min-Heap implementasyonu
-│   ├── sparse_matrix.c   # Seyrek matris implementasyonu
-│   ├── menu.c            # Menü yönetimi
-│   ├── main.c            # Ana C uygulaması
-│   ├── recipe/           # C++ tarif modülü
-│   │   ├── header/       # C++ başlık dosyaları
-│   │   └── src/          # C++ kaynak dosyaları
-│   ├── recipeapp/        # C++ uygulama modülü
-│   └── utility/          # Yardımcı fonksiyonlar
-├── tests/                # Test dosyaları
-│   ├── test_recipes.cpp  # GoogleTest testleri
+├── src/                  # Source code files
+│   ├── recipe.c          # Recipe management
+│   ├── linked_list.c     # Linked list implementation
+│   ├── xor_linked_list.c # XOR linked list implementation
+│   ├── stack.c           # Stack implementation
+│   ├── queue.c           # Queue implementation
+│   ├── hash_table.c      # Hash table implementation
+│   ├── graph.c           # Graph implementation (BFS/DFS)
+│   ├── heap.c            # Min-Heap implementation
+│   ├── sparse_matrix.c   # Sparse matrix implementation
+│   ├── menu.c            # Menu management
+│   ├── main.c            # Main C application
+│   ├── recipe/           # C++ recipe module
+│   │   ├── header/       # C++ header files
+│   │   └── src/          # C++ source files
+│   ├── recipeapp/         # C++ application module
+│   └── utility/          # Utility functions
+├── tests/                # Test files
+│   ├── test_recipes.cpp  # GoogleTest tests
 │   └── test_recipes_cpp.cpp
-├── docs/                 # Dokümantasyon
+├── docs/                 # Documentation
 │   ├── index.md
 │   ├── architecture.md
 │   ├── developers.md
 │   └── security.md
-├── build/                # Build çıktıları
-├── assets/               # Görseller ve rozetler
-└── CMakeLists.txt        # Ana CMake yapılandırması
+├── build/                # Build outputs
+├── assets/               # Images and badges
+└── CMakeLists.txt        # Main CMake configuration
 ```
 
-### 2.2 Dosya İstatistikleri
-- **C Kaynak Dosyaları:** 11 dosya (.c)
-- **C++ Kaynak Dosyaları:** 10 dosya (.cpp)
-- **Başlık Dosyaları:** 10 dosya (.h/.hpp)
-- **Test Dosyaları:** 2 dosya
-- **Toplam Kod Satırı:** Yaklaşık 3000+ satır
+### 2.2 File Statistics
+- **C Source Files:** 11 files (.c)
+- **C++ Source Files:** 10 files (.cpp)
+- **Header Files:** 10 files (.h/.hpp)
+- **Test Files:** 2 files
+- **Total Lines of Code:** Approximately 3000+ lines
 
 ---
 
-## 3. KULLANILAN VERİ YAPILARI VE ALGORİTMALAR
+## 3. DATA STRUCTURES AND ALGORITHMS USED
 
-### 3.1 Recipe (Tarif) Yapısı
-**Amaç:** Tarif bilgilerini saklamak için temel veri yapısı
+### 3.1 Recipe Structure
+**Purpose:** Basic data structure for storing recipe information
 
-**Özellikler:**
-- Benzersiz ID
-- Tarif adı
-- Kategori (örn: "Dessert", "Main Course")
-- Kalori sayısı
-- Hazırlık süresi (dakika)
-- Malzeme listesi (maksimum 50 malzeme)
-- Hazırlık talimatları
+**Features:**
+- Unique ID
+- Recipe name
+- Category (e.g., "Dessert", "Main Course")
+- Calorie count
+- Preparation time (minutes)
+- Ingredient list (maximum 50 ingredients)
+- Preparation instructions
 
-**Kullanılan Fonksiyonlar:**
-- `recipe_create()` - Yeni tarif oluşturma
-- `recipe_add_ingredient()` - Malzeme ekleme
-- `recipe_set_instructions()` - Talimatları ayarlama
-- `recipe_display()` - Tarif bilgilerini gösterme
-- `recipe_copy()` - Derin kopyalama
-- `recipe_destroy()` - Bellek temizleme
+**Functions Used:**
+- `recipe_create()` - Create new recipe
+- `recipe_add_ingredient()` - Add ingredient
+- `recipe_set_instructions()` - Set instructions
+- `recipe_display()` - Display recipe information
+- `recipe_copy()` - Deep copy
+- `recipe_destroy()` - Memory cleanup
 
-### 3.2 Linked List (Bağlı Liste)
-**Amaç:** Tarifleri sıralı bir şekilde saklamak
+### 3.2 Linked List
+**Purpose:** Store recipes in an ordered manner
 
-**Özellikler:**
-- Tek yönlü bağlı liste
-- Başa ve sona ekleme
-- Arama ve silme işlemleri
-- Traversal (gezinme) fonksiyonları
+**Features:**
+- Singly linked list
+- Insertion at head and tail
+- Search and delete operations
+- Traversal functions
 
-**Karmaşıklık:**
-- Ekleme: O(1) (başa/sona)
-- Arama: O(n)
-- Silme: O(n)
+**Complexity:**
+- Insertion: O(1) (at head/tail)
+- Search: O(n)
+- Deletion: O(n)
 
-### 3.3 XOR Linked List (XOR Bağlı Liste)
-**Amaç:** Bellek verimliliği için çift yönlü liste (tek pointer ile)
+### 3.3 XOR Linked List
+**Purpose:** Memory-efficient doubly linked list (with single pointer)
 
-**Özellikler:**
-- XOR pointer kullanarak önceki ve sonraki node'ları tek pointer'da saklama
-- İleri ve geri yönde gezinme
-- %50 bellek tasarrufu (çift yönlü liste için)
+**Features:**
+- XOR pointer to store previous and next nodes in a single pointer
+- Forward and backward traversal
+- 50% memory savings (for doubly linked list)
 
-**Karmaşıklık:**
-- Ekleme: O(1)
-- Gezinme: O(n)
+**Complexity:**
+- Insertion: O(1)
+- Traversal: O(n)
 
-### 3.4 Stack (Yığın)
-**Amaç:** Tarif işlemlerini LIFO (Last In First Out) prensibiyle yönetmek
+### 3.4 Stack
+**Purpose:** Manage recipe operations using LIFO (Last In First Out) principle
 
-**Özellikler:**
-- Push (ekleme) ve Pop (çıkarma) işlemleri
-- İşlem geçmişi takibi
-- Geri alma (undo) özelliği
+**Features:**
+- Push (insert) and Pop (remove) operations
+- Operation history tracking
+- Undo functionality
 
-**Kullanım Senaryosu:**
-- Tarif ekleme/silme işlemlerinin geri alınması
+**Use Case:**
+- Undoing recipe add/delete operations
 
-**Karmaşıklık:**
+**Complexity:**
 - Push: O(1)
 - Pop: O(1)
 - Peek: O(1)
 
-### 3.5 Queue (Kuyruk)
-**Amaç:** Haftalık yemek planlaması için FIFO (First In First Out) yapısı
+### 3.5 Queue
+**Purpose:** FIFO (First In First Out) structure for weekly meal planning
 
-**Özellikler:**
-- Dairesel kuyruk implementasyonu
-- Enqueue (ekleme) ve Dequeue (çıkarma) işlemleri
-- Haftalık tarif sıralaması
+**Features:**
+- Circular queue implementation
+- Enqueue (insert) and Dequeue (remove) operations
+- Weekly recipe scheduling
 
-**Kullanım Senaryosu:**
-- Haftalık yemek planı oluşturma
+**Use Case:**
+- Creating weekly meal plans
 
-**Karmaşıklık:**
+**Complexity:**
 - Enqueue: O(1)
 - Dequeue: O(1)
 
-### 3.6 Hash Table (Hash Tablosu)
-**Amaç:** Hızlı tarif arama ve kategorilere göre gruplama
+### 3.6 Hash Table
+**Purpose:** Fast recipe search and grouping by categories
 
-**Özellikler:**
-- Chaining (zincirleme) ile çakışma çözümü
-- Hash fonksiyonu ile hızlı erişim
-- Kategori bazlı gruplama
+**Features:**
+- Collision resolution with chaining
+- Fast access with hash function
+- Category-based grouping
 
-**Karmaşıklık:**
-- Ortalama: O(1)
-- En kötü durum: O(n)
+**Complexity:**
+- Average: O(1)
+- Worst case: O(n)
 
-### 3.7 Graph (Graf)
-**Amaç:** Tarifler arası ilişkileri modellemek (benzer malzemeler, benzer kategoriler)
+### 3.7 Graph
+**Purpose:** Model relationships between recipes (similar ingredients, similar categories)
 
-**Özellikler:**
-- Yönlü graf (directed graph)
-- BFS (Breadth-First Search) algoritması
-- DFS (Depth-First Search) algoritması
-- Komşu tarif bulma
+**Features:**
+- Directed graph
+- BFS (Breadth-First Search) algorithm
+- DFS (Depth-First Search) algorithm
+- Finding related recipes
 
-**Kullanım Senaryoları:**
-- Benzer tarif önerileri
-- Malzeme bazlı ilişki ağı
+**Use Cases:**
+- Similar recipe recommendations
+- Ingredient-based relationship network
 
-**Karmaşıklık:**
+**Complexity:**
 - BFS: O(V + E)
 - DFS: O(V + E)
-- V: Vertex (köşe) sayısı, E: Edge (kenar) sayısı
+- V: Number of vertices, E: Number of edges
 
-### 3.8 Heap (Yığın - Min-Heap)
-**Amaç:** Kalori veya hazırlık süresine göre sıralama
+### 3.8 Heap (Min-Heap)
+**Purpose:** Sorting by calories or preparation time
 
-**Özellikler:**
-- Min-Heap implementasyonu
-- En düşük kalorili/hazırlık süreli tarifleri önceliklendirme
-- Heapify işlemleri
+**Features:**
+- Min-Heap implementation
+- Prioritizing lowest calorie/preparation time recipes
+- Heapify operations
 
-**Kullanım Senaryosu:**
-- Düşük kalorili tarif önerileri
-- Hızlı hazırlanan tarifler
+**Use Case:**
+- Low-calorie recipe recommendations
+- Quick preparation recipes
 
-**Karmaşıklık:**
-- Ekleme: O(log n)
-- Minimum bulma: O(1)
-- Silme: O(log n)
+**Complexity:**
+- Insertion: O(log n)
+- Find minimum: O(1)
+- Deletion: O(log n)
 
-### 3.9 Sparse Matrix (Seyrek Matris)
-**Amaç:** Tarif-malzeme ilişkilerini verimli şekilde saklamak
+### 3.9 Sparse Matrix
+**Purpose:** Efficiently store recipe-ingredient relationships
 
-**Özellikler:**
-- Sadece sıfır olmayan değerleri saklama
-- Bellek verimliliği
-- Bağlı liste tabanlı implementasyon
+**Features:**
+- Store only non-zero values
+- Memory efficiency
+- Linked list-based implementation
 
-**Kullanım Senaryosu:**
-- Hangi tariflerde hangi malzemelerin kullanıldığını gösterme
+**Use Case:**
+- Showing which ingredients are used in which recipes
 
-**Karmaşıklık:**
-- Ekleme: O(1)
-- Arama: O(n)
+**Complexity:**
+- Insertion: O(1)
+- Search: O(n)
 
 ---
 
-## 4. TEKNİK DETAYLAR
+## 4. TECHNICAL DETAILS
 
-### 4.1 Programlama Dilleri ve Standartlar
-- **C Standardı:** C99
-- **C++ Standardı:** C++17
-- **Derleyici Uyarıları:** -Wall -Wextra -Wunused-function
+### 4.1 Programming Languages and Standards
+- **C Standard:** C99
+- **C++ Standard:** C++17
+- **Compiler Warnings:** -Wall -Wextra -Wunused-function
 
-### 4.2 Build Sistemi
-**CMake Yapılandırması:**
-- Minimum CMake versiyonu: 3.12
-- Platform desteği: Windows, Linux (WSL), macOS
-- Build tipleri: Debug ve Release
-- Otomatik GoogleTest entegrasyonu
-- Doxygen dokümantasyon desteği
+### 4.2 Build System
+**CMake Configuration:**
+- Minimum CMake version: 3.12
+- Platform support: Windows, Linux (WSL), macOS
+- Build types: Debug and Release
+- Automatic GoogleTest integration
+- Doxygen documentation support
 
-### 4.3 Test Altyapısı
+### 4.3 Testing Infrastructure
 **GoogleTest Framework:**
-- Otomatik test keşfi
-- Unit testler
-- Test coverage raporları
-- JUnit XML formatında çıktı
+- Automatic test discovery
+- Unit tests
+- Test coverage reports
+- JUnit XML format output
 
-**Test Kapsamı:**
-- Tüm veri yapıları için kapsamlı testler
-- Edge case'ler (sınır durumları)
-- Bellek yönetimi testleri
-- Algoritma doğrulama testleri
+**Test Coverage:**
+- Comprehensive tests for all data structures
+- Edge cases (boundary conditions)
+- Memory management tests
+- Algorithm validation tests
 
-### 4.4 Dokümantasyon
+### 4.4 Documentation
 **Doxygen:**
-- Otomatik API dokümantasyonu
-- Kod içi yorumlar
-- HTML ve LaTeX çıktıları
-- Dokümantasyon coverage raporları
+- Automatic API documentation
+- Inline code comments
+- HTML and LaTeX outputs
+- Documentation coverage reports
 
 **MkDocs:**
-- Web tabanlı dokümantasyon
-- Markdown desteği
-- Otomatik site oluşturma
+- Web-based documentation
+- Markdown support
+- Automatic site generation
 
-### 4.5 Kod Kalitesi
-**Araçlar:**
-- **AStyle:** Kod formatlama
+### 4.5 Code Quality
+**Tools:**
+- **AStyle:** Code formatting
 - **OpenCppCoverage (Windows):** Test coverage
 - **gcov/lcov (Linux):** Test coverage
-- **ReportGenerator:** Coverage raporları
+- **ReportGenerator:** Coverage reports
 
-**Coverage Metrikleri:**
-- Line Coverage (Satır kapsamı)
-- Branch Coverage (Dal kapsamı)
-- Method Coverage (Metod kapsamı)
+**Coverage Metrics:**
+- Line Coverage
+- Branch Coverage
+- Method Coverage
 
 ---
 
-## 5. PLATFORM DESTEĞİ
+## 5. PLATFORM SUPPORT
 
-### 5.1 Desteklenen Platformlar
+### 5.1 Supported Platforms
 - ✅ **Windows** (Visual Studio Community Edition)
 - ✅ **Linux** (WSL - Ubuntu 20.04)
 - ✅ **macOS** (Xcode/Clang)
 
 ### 5.2 Build Scripts
 **Windows:**
-- `7-build-app-windows.bat` - Tam build işlemi (11-15 dakika)
-- `7-build-doc-windows.bat` - Sadece dokümantasyon
-- `8-build-test-windows.bat` - Sadece testler
-- `9-clean-project.bat` - Proje temizleme
+- `7-build-app-windows.bat` - Full build process (11-15 minutes)
+- `7-build-doc-windows.bat` - Documentation only
+- `8-build-test-windows.bat` - Tests only
+- `9-clean-project.bat` - Project cleanup
 
 **Linux/WSL:**
-- `7-build-app-linux.sh` - Tam build işlemi
-- `8-build-test-linux.sh` - Test işlemleri
+- `7-build-app-linux.sh` - Full build process
+- `8-build-test-linux.sh` - Test operations
 
 ### 5.3 GitHub Actions
-- Otomatik CI/CD pipeline
-- Çoklu platform testleri
-- Windows, macOS, Linux desteği
+- Automatic CI/CD pipeline
+- Multi-platform testing
+- Windows, macOS, Linux support
 
 ---
 
-## 6. UYGULAMA ÖZELLİKLERİ
+## 6. APPLICATION FEATURES
 
-### 6.1 Ana Menü Özellikleri
-1. **Tarif Ekleme:** Yeni tarif oluşturma ve kaydetme
-2. **Tarif Arama:** ID, isim veya kategoriye göre arama
-3. **Tarif Listeleme:** Tüm tarifleri görüntüleme
-4. **Tarif Silme:** Tarif silme işlemleri
-5. **Kategori Filtreleme:** Kategoriye göre filtreleme
-6. **Kalori Bazlı Sıralama:** Heap kullanarak sıralama
-7. **Graf Gezinme:** BFS/DFS ile benzer tarif bulma
-8. **Hash Tablosu İşlemleri:** Hızlı arama ve gruplama
-9. **Haftalık Plan:** Queue kullanarak haftalık plan
-10. **İşlem Geçmişi:** Stack ile undo özelliği
+### 6.1 Main Menu Features
+1. **Add Recipe:** Create and save new recipes
+2. **Search Recipe:** Search by ID, name, or category
+3. **List Recipes:** Display all recipes
+4. **Delete Recipe:** Remove recipe operations
+5. **Category Filtering:** Filter by category
+6. **Calorie-based Sorting:** Sorting using Heap
+7. **Graph Traversal:** Find similar recipes using BFS/DFS
+8. **Hash Table Operations:** Fast search and grouping
+9. **Weekly Plan:** Weekly planning using Queue
+10. **Operation History:** Undo functionality using Stack
 
-### 6.2 Kullanıcı Arayüzü
-- Konsol tabanlı interaktif menü
-- Renkli çıktılar (platform bağımlı)
-- Hata mesajları ve validasyon
-- Kullanıcı dostu prompt'lar
+### 6.2 User Interface
+- Console-based interactive menu
+- Colored output (platform-dependent)
+- Error messages and validation
+- User-friendly prompts
 
 ---
 
-## 7. TEST SONUÇLARI
+## 7. TEST RESULTS
 
-### 7.1 Test Kapsamı
-Proje, tüm veri yapıları için kapsamlı unit testler içermektedir:
+### 7.1 Test Coverage
+The project includes comprehensive unit tests for all data structures:
 
-**Test Edilen Bileşenler:**
-- ✅ Recipe yapısı ve fonksiyonları
-- ✅ Linked List tüm işlemleri
+**Tested Components:**
+- ✅ Recipe structure and functions
+- ✅ Linked List all operations
 - ✅ XOR Linked List traversal
-- ✅ Stack push/pop işlemleri
-- ✅ Queue enqueue/dequeue işlemleri
-- ✅ Hash Table ekleme/arama
-- ✅ Graph BFS/DFS algoritmaları
-- ✅ Heap ekleme/silme/peek
-- ✅ Sparse Matrix işlemleri
+- ✅ Stack push/pop operations
+- ✅ Queue enqueue/dequeue operations
+- ✅ Hash Table insertion/search
+- ✅ Graph BFS/DFS algorithms
+- ✅ Heap insertion/deletion/peek
+- ✅ Sparse Matrix operations
 
-**Test Senaryoları:**
-- Normal durumlar (happy path)
-- Edge case'ler (boş liste, tek eleman, vb.)
-- Bellek yönetimi (memory leaks)
-- Hata durumları (null pointer, overflow, vb.)
+**Test Scenarios:**
+- Normal cases (happy path)
+- Edge cases (empty list, single element, etc.)
+- Memory management (memory leaks)
+- Error conditions (null pointer, overflow, etc.)
 
-### 7.2 Coverage Metrikleri
-Coverage raporları Windows ve Linux platformları için ayrı ayrı oluşturulmaktadır. Detaylı coverage bilgileri `assets/` klasöründeki rozetlerde görülebilir.
-
----
-
-## 8. PROJE GELİŞTİRME SÜRECİ
-
-### 8.1 Geliştirme Ortamı Kurulumu
-1. **Git Hooks Yapılandırması:** Pre-commit ve pre-push kontrolleri
-2. **Paket Yöneticileri:** Chocolatey ve Scoop (Windows)
-3. **Gerekli Araçlar:** CMake, Doxygen, GoogleTest, vb.
-4. **WSL Kurulumu:** Linux geliştirme ortamı
-
-### 8.2 Geliştirme Akışı
-1. Kod yazma (C/C++)
-2. Kod formatlama (AStyle)
-3. Build ve test
-4. Coverage analizi
-5. Dokümantasyon güncelleme
-6. Commit ve push
-
-### 8.3 Kalite Kontrol
-- Pre-commit hook'ları ile otomatik kontrol
-- Kod formatlama zorunluluğu
-- Test zorunluluğu
-- Dokümantasyon kontrolü
+### 7.2 Coverage Metrics
+Coverage reports are generated separately for Windows and Linux platforms. Detailed coverage information can be viewed in the badges in the `assets/` folder.
 
 ---
 
-## 9. SONUÇ VE DEĞERLENDİRME
+## 8. PROJECT DEVELOPMENT PROCESS
 
-### 9.1 Proje Başarıları
-✅ **7 veri yapısı başarıyla implemente edildi**
-✅ **Kapsamlı test coverage sağlandı**
-✅ **Çoklu platform desteği eklendi**
-✅ **Profesyonel dokümantasyon hazırlandı**
-✅ **CI/CD pipeline kuruldu**
-✅ **Bellek yönetimi doğru yapıldı**
-✅ **Kod kalitesi yüksek seviyede**
+### 8.1 Development Environment Setup
+1. **Git Hooks Configuration:** Pre-commit and pre-push checks
+2. **Package Managers:** Chocolatey and Scoop (Windows)
+3. **Required Tools:** CMake, Doxygen, GoogleTest, etc.
+4. **WSL Setup:** Linux development environment
 
-### 9.2 Öğrenilen Kavramlar
-- Veri yapılarının pratik uygulamaları
-- Algoritma karmaşıklığı analizi
-- Bellek yönetimi (malloc/free)
+### 8.2 Development Workflow
+1. Code writing (C/C++)
+2. Code formatting (AStyle)
+3. Build and test
+4. Coverage analysis
+5. Documentation update
+6. Commit and push
+
+### 8.3 Quality Control
+- Automatic checks with pre-commit hooks
+- Mandatory code formatting
+- Mandatory testing
+- Documentation checks
+
+---
+
+## 9. CONCLUSION AND EVALUATION
+
+### 9.1 Project Achievements
+✅ **7 data structures successfully implemented**
+✅ **Comprehensive test coverage achieved**
+✅ **Multi-platform support added**
+✅ **Professional documentation prepared**
+✅ **CI/CD pipeline established**
+✅ **Memory management correctly implemented**
+✅ **High code quality maintained**
+
+### 9.2 Concepts Learned
+- Practical applications of data structures
+- Algorithm complexity analysis
+- Memory management (malloc/free)
 - Test-driven development
-- Dokümantasyon standartları
-- Cross-platform geliştirme
-- Build sistemleri (CMake)
+- Documentation standards
+- Cross-platform development
+- Build systems (CMake)
 - Version control (Git)
 
-### 9.3 Teknik Kazanımlar
-- C ve C++ dillerinde ileri seviye programlama
-- Veri yapıları ve algoritmaların gerçek dünya uygulamaları
-- Profesyonel yazılım geliştirme süreçleri
-- Test ve dokümantasyon kültürü
-- Build otomasyonu ve CI/CD
+### 9.3 Technical Gains
+- Advanced programming in C and C++ languages
+- Real-world applications of data structures and algorithms
+- Professional software development processes
+- Testing and documentation culture
+- Build automation and CI/CD
 
-### 9.4 Gelecek Geliştirmeler
-- GUI (Graphical User Interface) eklenebilir
-- Veritabanı entegrasyonu
-- Web API desteği
-- Mobil uygulama
-- Kullanıcı kimlik doğrulama
-- Çoklu dil desteği
+### 9.4 Future Improvements
+- GUI (Graphical User Interface) can be added
+- Database integration
+- Web API support
+- Mobile application
+- User authentication
+- Multi-language support
 
 ---
 
-## 10. KAYNAKLAR VE REFERANSLAR
+## 10. RESOURCES AND REFERENCES
 
-### 10.1 Kullanılan Kütüphaneler
+### 10.1 Libraries Used
 - **GoogleTest:** Unit testing framework
 - **Doxygen:** API documentation generator
 - **CMake:** Build system generator
 - **MkDocs:** Documentation site generator
 
-### 10.2 Referanslar
-- CEN207 Veri Yapıları ders notları
+### 10.2 References
+- CEN207 Data Structures course notes
 - Cormen, Leiserson, Rivest, Stein - "Introduction to Algorithms"
-- Doxygen dokümantasyonu
-- CMake dokümantasyonu
-- GoogleTest dokümantasyonu
+- Doxygen documentation
+- CMake documentation
+- GoogleTest documentation
 
 ---
 
-## 11. EK BİLGİLER
+## 11. ADDITIONAL INFORMATION
 
-### 11.1 Proje Dosyaları
-- **README.md:** Proje genel bilgileri
-- **CMakeLists.txt:** Build yapılandırması
-- **Doxyfile:** Dokümantasyon ayarları
-- **mkdocs.yml:** Web dokümantasyon ayarları
+### 11.1 Project Files
+- **README.md:** General project information
+- **CMakeLists.txt:** Build configuration
+- **Doxyfile:** Documentation settings
+- **mkdocs.yml:** Web documentation settings
 
-### 11.2 Build Çıktıları
-- **release_win/:** Windows release dosyaları
-- **release_linux/:** Linux release dosyaları
-- **docs/:** HTML dokümantasyon
-- **site/:** MkDocs web sitesi
+### 11.2 Build Outputs
+- **release_win/:** Windows release files
+- **release_linux/:** Linux release files
+- **docs/:** HTML documentation
+- **site/:** MkDocs website
 
-### 11.3 Test Raporları
-- **report_test_hist_win/:** Windows test geçmişi
-- **report_test_hist_linux/:** Linux test geçmişi
-- **recipe_tests_unit_win_cobertura.xml:** Coverage raporu
+### 11.3 Test Reports
+- **report_test_hist_win/:** Windows test history
+- **report_test_hist_linux/:** Linux test history
+- **recipe_tests_unit_win_cobertura.xml:** Coverage report
 
 ---
 
-## 12. PROJE EKİBİ
+## 12. PROJECT TEAM
 
-**Danışman:**
+**Advisor:**
 - Dr. Uğur CORUH - R&D Engineer and System Architecture
 
-**Geliştirici:**
-- Ece İrem ŞAŞ - Proje Geliştiricisi
+**Developer:**
+- Ece İrem ŞAŞ - Project Developer
 
 ---
 
-**Rapor Tarihi:** 2025
-**Proje Versiyonu:** 1.0
-**Durum:** Tamamlandı ✅
+**Report Date:** 2025
+**Project Version:** 1.0
+**Status:** Completed ✅
 
 ---
 
-*Bu rapor, CEN207 Veri Yapıları dersi ara sınav projesi için hazırlanmıştır.*
-
+*This report was prepared for the CEN207 Data Structures course midterm project.*
